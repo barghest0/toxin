@@ -1,0 +1,19 @@
+@use 'sass:math';
+
+
+@function rem($pixel, $context: $main-font-size) {
+    @if (unitless($pixel)) {
+        $pixel: $pixel * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return (math.div($pixel, $context) * 1rem);
+}
+
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
