@@ -1,6 +1,7 @@
 @import './utils/_vars.scss';
 @import './utils/_mixins';
-
+@import './modules/uikit/basic-forms.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 html {
     line-height: $main-line-height;
     font-size: $main-font-size;
@@ -24,6 +25,10 @@ html {
 *::before {
     margin: 0;
     box-sizing: border-box;
+}
+
+.kit-wrapper {
+    padding-top: 145px;
 }
 
 .container {

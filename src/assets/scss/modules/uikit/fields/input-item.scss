@@ -1,0 +1,25 @@
+.input-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 320px;
+
+
+
+    &__field {
+        height: 44px;
+        border: 1px solid $shadow-25;
+        border-radius: 4px;
+        padding: 13px 15px;
+        outline: none;
+        &::placeholder {
+            color: $shadow-25;
+        }
+        &:hover {
+            border: 1px solid $shadow-50;
+        }
+        &:focus {
+            border: 1px solid $shadow-50;
+        }
+    }
+}

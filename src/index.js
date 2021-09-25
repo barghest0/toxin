@@ -1,3 +1,6 @@
+//libraries
+import '../node_modules/jquery'
+
 //JS
 import './js/'
 

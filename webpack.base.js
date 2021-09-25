@@ -3,6 +3,8 @@ const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin')
+const webpack = require('webpack')
 
 const PATHS = {
     src: path.join(__dirname, './src'),
@@ -10,7 +12,7 @@ const PATHS = {
     assets: 'assets/',
 }
 //директория со страницами
-const PAGES_DIR = `${PATHS.src}/templates/pages/`
+const PAGES_DIR = `${PATHS.src}/views/pages/`
 //считываем все pug файлы
 const PAGES = fs
     .readdirSync(PAGES_DIR)
@@ -30,6 +32,19 @@ module.exports = {
         filename: `${PATHS.assets}js/[name].[fullhash].js`,
         path: PATHS.dist,
         publicPath: '/',
+    },
+
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    name: 'vendors',
+                    test: /node_modules/,
+                    chunks: 'all',
+                    enforce: true,
+                },
+            },
+        },
     },
 
     //кросс-браузерная совместимость
@@ -101,12 +116,23 @@ module.exports = {
                 },
             ],
         }),
+
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+          }),
+
+        new HtmlWebpackPlugin({
+            template: `${PATHS.src}/views/index.pug`,
+            filename: `./index.html`,
+        }),
+
         //перебираем страницы и меняем pug на html
         ...PAGES.map(
             page =>
                 new HtmlWebpackPlugin({
-                    template: `${PAGES_DIR}/${page}`,
-                    filename: `./${page.replace(/\.pug/, '.html')}`,
+                    template: `${PAGES_DIR}${page}`,
+                    filename: `./${page.replace(/\.pug$/, '.html')}`,
                     minify: false,
                 })
         ),
