@@ -1,5 +1,6 @@
 .dropdown {
-    
+    display: flex;
+    flex-direction: column;
     &.menu-open {
         border: 1px solid $shadow-50;
     }

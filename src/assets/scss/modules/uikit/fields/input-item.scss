@@ -1,6 +1,8 @@
 .input-item {
     width: 320px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
     & form {
         display: flex;
         flex-direction: column;
@@ -10,13 +12,14 @@
         width: 320px;
     }
     &_md {
-        width: 265px;
+        width: 266px;
     }
     &_sm {
         width: 150px;
     }
 
     &__field {
+        font-family: inherit;
         height: 44px;
         border: 1px solid $shadow-25;
         border-radius: 4px;
@@ -30,6 +33,13 @@
         }
         &:focus {
             border: 1px solid $shadow-50;
+        }
+
+        &_date {
+            cursor: pointer;
+            &::placeholder {
+                color: $shadow-75;
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 @import './utils/_vars.scss';
 @import './utils/_mixins';
+@import './utils/_datepicker.scss';
 @import './modules/uikit/basic-forms.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 html {
@@ -35,4 +36,3 @@ html {
     max-width: 1160px;
     margin: 0 auto;
 }
-

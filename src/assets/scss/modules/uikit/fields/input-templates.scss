@@ -2,12 +2,16 @@
     display: flex;
     flex-direction: column;
     width: 320px;
-    &__large {
+    &__text,
+    &__filter-date {
         display: flex;
         flex-direction: column;
+        margin-bottom: 40px;
     }
-    &__small {
+
+    &__date {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 40px;
     }
 }

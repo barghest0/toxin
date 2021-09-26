@@ -1,6 +1,5 @@
 @use 'sass:math';
 
-
 @function rem($pixel, $context: $main-font-size) {
     @if (unitless($pixel)) {
         $pixel: $pixel * 1px;
@@ -12,9 +11,20 @@
     @return (math.div($pixel, $context) * 1rem);
 }
 
-
 @mixin size($width, $height: $width) {
     width: $width;
-    height: $height;
+    min-height: $height;
 }
 
+@mixin main-gradient-to-bottom(
+    $color: $main-color,
+    $second-color: $gradient-main-color
+) {
+    background: linear-gradient(to bottom, $color, $second-color);
+}
+@mixin second-gradient-to-bottom(
+    $color: $second-color,
+    $second-color: $gradient-second-color
+) {
+    background: linear-gradient(to bottom, $color, $second-color);
+}
