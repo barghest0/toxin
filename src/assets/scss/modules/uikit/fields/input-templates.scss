@@ -1,4 +1,13 @@
 .input-templates {
     display: flex;
     flex-direction: column;
+    width: 320px;
+    &__large {
+        display: flex;
+        flex-direction: column;
+    }
+    &__small {
+        display: flex;
+        justify-content: space-between;
+    }
 }

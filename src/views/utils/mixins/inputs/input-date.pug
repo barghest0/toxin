@@ -1,0 +1,16 @@
+mixin inputRangeDate(labelFromName,labelTolName )
+    .input-item.input-item_sm
+        form
+            label(for="datepicker-from").input-label=labelFromName
+            input.input-item__field.datepicker-here(id="datepicker-from"  data-range="true")
+
+    .input-item.input-item_sm
+        form
+            label(for="datepicker-to").input-label=labelFromName
+            input.input-item__field.datepicker-here(id="datepicker-to" data-range="true")
+
+mixin inputFilterRangeDate(labelName)
+    .input-item.input-item_md
+        form
+            label(for="range-datepicker").input-label=labelName
+            input.input-item__field.iqdropdown-menu.datepicker-here(id="range-datepicker" data-range="true")

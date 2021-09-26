@@ -1,0 +1,19 @@
+- let id = 0
+
+mixin inputText(labelName,name,placeholder, type='text', value="")
+    .input-item.input-item_lg
+        form
+            label(for="input-text").input-label=labelName
+            input(type=type, name=name id=`input-text-${id++}` placeholder=placeholder value=value).input-item__field
+
+mixin inputMaskedText(labelName,name,placeholder,type='text',value="")
+    .input-item.input-item_lg
+        form
+            label(for="input-text-masked").input-label=labelName
+            input.input-item__field.input-item__field_masked(type=type, name=name id="input-text-masked" placeholder=placeholder value=value)
+
+mixin inputSend(labelName,placeholder)
+    .input-item.input-item_md
+        form
+            label(for="input-send").input-label=labelName
+            input.input-item__field(type="email", name="send-email" id="input-send" placeholder=placeholder)

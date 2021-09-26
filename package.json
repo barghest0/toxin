@@ -50,6 +50,7 @@
         "webpack-merge": "^5.8.0"
     },
     "dependencies": {
+        "air-datepicker": "^2.2.3",
         "item-quantity-dropdown": "^2.1.0",
         "jquery": "^3.6.0",
         "jquery.maskedinput": "^1.4.1",

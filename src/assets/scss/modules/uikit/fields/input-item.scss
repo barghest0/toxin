@@ -1,10 +1,20 @@
 .input-item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
     width: 320px;
+    margin-bottom: 20px;
+    & form {
+        display: flex;
+        flex-direction: column;
+    }
 
-
+    &_lg {
+        width: 320px;
+    }
+    &_md {
+        width: 265px;
+    }
+    &_sm {
+        width: 150px;
+    }
 
     &__field {
         height: 44px;

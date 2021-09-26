@@ -1,5 +1,5 @@
-import '../../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min'
-import '../../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css'
+import 'item-quantity-dropdown/lib/item-quantity-dropdown.min'
+import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css'
 
 $('.iqdropdown').iqDropdown({
     maxItems: 20,
