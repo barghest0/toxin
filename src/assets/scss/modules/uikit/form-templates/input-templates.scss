@@ -1,7 +1,14 @@
 .input-templates {
     display: flex;
     flex-direction: column;
-    width: 320px;
+
+    &_field {
+        width: 320px;
+    }
+    &_selections {
+        width: 260px;
+    }
+
     &__text,
     &__filter-date {
         display: flex;

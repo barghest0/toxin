@@ -56,6 +56,8 @@ $('.datepicker--button_close').on('click', () => {
     $('.datepicker').toggleClass('active')
 })
 
+$('.input-item__arrow_down').on('click', e => e.preventDefault)
+
 $('#range-datepicker').datepicker({
     dateFormat: 'dd M',
     multipleDatesSeparator: ' - ',

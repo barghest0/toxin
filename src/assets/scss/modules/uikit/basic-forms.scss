@@ -1,7 +1,10 @@
-@import './fields/input-item';
-@import './fields/input-templates';
-@import './fields/dropdown.scss';
-@import './fields/input-label';
+@import './form-templates/input-item';
+@import './form-templates/input-templates';
+@import './form-templates/dropdown';
+
+@import './form-templates/labels/input-label';
+
+
 
 .basic-forms {
 }
