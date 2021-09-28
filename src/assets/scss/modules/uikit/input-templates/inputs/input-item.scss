@@ -3,22 +3,6 @@
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-
-    &_lg {
-        width: 320px;
-    }
-    &_md {
-        width: 266px;
-    }
-    &_sm {
-        width: 150px;
-    }
-
-    &_cb {
-        width: 222px;
-        margin-bottom: 40px;
-    }
-
     &__field {
         position: relative;
         height: 44px;

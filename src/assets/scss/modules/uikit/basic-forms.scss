@@ -1,11 +1,12 @@
-@import './form-templates/fields/input-item';
-@import './form-templates/fields/input-templates';
+@import './input-templates/input-templates';
 
-@import './form-templates/selections/checkbox.scss';
+@import './input-templates/inputs/input-item';
+@import './input-templates/inputs/input-item_mod';
 
-@import './form-templates/dropdown';
+@import './input-templates/inputs/dropdowns/dropdown.scss';
+@import './input-templates/inputs/selections/selection';
 
-@import './form-templates/labels/input-label';
+@import './input-templates/labels/label';
 
 .basic-forms {
 }

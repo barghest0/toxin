@@ -2,20 +2,20 @@
 
 mixin inputText(labelName,name,placeholder, type='text', value="")
     .input-item.input-item_lg
-            label.input-label(for="input-text")=labelName
+            label.label(for="input-text")=labelName
             .input-item__field
                 input.input-item__input(type=type, name=name id=`input-text-${id++}` placeholder=placeholder value=value)
                 
 
 mixin inputMaskedText(labelName,name,placeholder,type='text',value="")
     .input-item.input-item_lg
-        label(for="input-text-masked").input-label=labelName
+        label(for="input-text-masked").label=labelName
         .input-item__field
             input.input-item__input.input-item__input_masked(type=type, name=name id="input-text-masked" placeholder=placeholder value=value)
 
 mixin inputSendEmail(labelName,placeholder)
     .input-item.input-item_md
-        label(for="input-send").input-label=labelName
+        label(for="input-send").label=labelName
         .input-item__field.input-item__field_send-email
             input.input-item__input.input-item__input_send-email(type="email", name="send-email" id="input-send" placeholder=placeholder)
             button.input-item__arrow(type="submit")

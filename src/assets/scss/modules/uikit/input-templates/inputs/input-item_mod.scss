@@ -1,0 +1,33 @@
+.input-item {
+    &_lg {
+        width: 320px;
+    }
+    &_md {
+        width: 266px;
+    }
+    &_sm {
+        width: 150px;
+    }
+
+    &_checkbox {
+        width: 222px;
+        margin-bottom: 10px;
+    }
+
+    &_radio {
+        width: 100px;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    &_toggle {
+        width: 260px;
+        margin-bottom: 10px;
+    }
+
+    &_like {
+        width: 40px;
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+}

@@ -1,6 +1,6 @@
 
 .input-templates.input-templates_field
-    .input-templates__text
+    .input-templates__text-field
         +inputText('Text field','email','Email','email')
         +inputText('Text field','email','Email','text','This is pretty awesome')
         +inputDropDown('Dropdown')
@@ -14,13 +14,19 @@
 
 .input-templates.input-templates_selection
     .input-templates__checkbox
-        +inputCheckbox(["Можно курить","Можно с питомцами", "Можно пригласить гостей (до 10 человек)"],"Checkbox Buttons")
+        .label.label_mb_16 Checkbox Buttons
+        +inputCheckbox({smoke:"Можно курить",animal: "Можно с питомцами", guests: "Можно пригласить гостей (до 10 человек)"})
     .input-templates__radio
-
+        .label.label_mb_16 Radio Buttons
+        +inputRadio(["Мужчина", "Женщина"],"gender")
     .input-templates__toggle
-
+        .label.label_mb_16 Toggle
+        +inputToggle("Получать спецпредложения","offer")
+        +inputToggle("Получать спецпредложения","offer")
     .input-templates__like
-
+        .label.label_mb_16 Like button
+        +inputLike(2)
+        +inputLike(12)
     .input-templates__rate
 
 .input-templates.input-templates_buttons

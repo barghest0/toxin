@@ -13,7 +13,7 @@
         width: 320px;
     }
 
-    &__text,
+    &__text-field,
     &__filter-date {
         display: flex;
         flex-direction: column;
@@ -23,6 +23,17 @@
     &__date {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    &__checkbox {
+        margin-bottom: 40px;
+    }
+
+    &__radio {
+        margin-bottom: 36px;
+    }
+    &__toggle {
         margin-bottom: 40px;
     }
 }
