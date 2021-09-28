@@ -4,11 +4,6 @@
     display: flex;
     flex-direction: column;
 
-    & form {
-        display: flex;
-        flex-direction: column;
-    }
-
     &_lg {
         width: 320px;
     }
@@ -17,6 +12,11 @@
     }
     &_sm {
         width: 150px;
+    }
+
+    &_cb {
+        width: 222px;
+        margin-bottom: 40px;
     }
 
     &__field {

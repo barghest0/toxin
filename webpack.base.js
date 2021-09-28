@@ -3,7 +3,6 @@ const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin')
 const webpack = require('webpack')
 
 const PATHS = {
@@ -70,7 +69,6 @@ module.exports = {
                     {
                         loader: 'postcss-loader',
                         options: {
-                            sourceMap: true,
                             postcssOptions: { config: 'postcss.config.js' },
                         },
                     },
@@ -119,8 +117,8 @@ module.exports = {
 
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery'
-          }),
+            jQuery: 'jquery',
+        }),
 
         new HtmlWebpackPlugin({
             template: `${PATHS.src}/views/index.pug`,

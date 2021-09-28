@@ -1,0 +1,12 @@
+- let idCheckbox=0
+
+mixin inputCheckbox(titles,labelName)
+    .input-item.input-item_cb
+        label.input-label.input-label_mb_16=labelName
+        .checkboxes
+            each title in titles  
+                label(for=`checkbox${++idCheckbox}`).checkboxes__item
+                    input(type="checkbox" id=`checkbox${idCheckbox}`).checkboxes__field
+                    span(style="").checkboxes__field_custom
+                    #{title}
+                    

@@ -1,10 +1,16 @@
-@import './form-templates/input-item';
-@import './form-templates/input-templates';
+@import './form-templates/fields/input-item';
+@import './form-templates/fields/input-templates';
+
+@import './form-templates/selections/checkbox.scss';
+
 @import './form-templates/dropdown';
 
 @import './form-templates/labels/input-label';
 
-
-
 .basic-forms {
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
 }
