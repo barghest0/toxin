@@ -1,5 +1,5 @@
 
-.input-templates.input-templates_field
+.input-templates.input-templates_input-text
     .input-templates__text-field
         +inputText('Text field','email','Email','email')
         +inputText('Text field','email','Email','text','This is pretty awesome')
@@ -12,7 +12,7 @@
     .input-templates__send-email
         +inputSendEmail('Filter Date Dropdown','Email')
 
-.input-templates.input-templates_selection
+.input-templates.input-templates_input-selection
     .input-templates__checkbox
         .label.label_mb_16 Checkbox Buttons
         +inputCheckbox({smoke:"Можно курить",animal: "Можно с питомцами", guests: "Можно пригласить гостей (до 10 человек)"})
@@ -21,15 +21,21 @@
         +inputRadio(["Мужчина", "Женщина"],"gender")
     .input-templates__toggle
         .label.label_mb_16 Toggle
-        +inputToggle("Получать спецпредложения","offer")
-        +inputToggle("Получать спецпредложения","offer")
+        .input-selection.input-selection_toggle
+            +inputToggle("Получать спецпредложения","offer")
+            +inputToggle("Получать спецпредложения","offer")
     .input-templates__like
         .label.label_mb_16 Like button
-        +inputLike(2)
-        +inputLike(12)
+        .input-selection.input-selection_like
+            +inputLike(2)
+            +inputLike(12)
     .input-templates__rate
+        .label.label_mb_16 Rate button
+        .input-selection.input-selection_rate
+            +inputRate()
+            +inputRate()
 
-.input-templates.input-templates_buttons
+.input-templates.input-templates_input-button
     .input-templates__range
         +inputRange('Range Slider')
         

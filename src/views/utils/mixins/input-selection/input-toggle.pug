@@ -1,0 +1,7 @@
+-let idToggle = 0
+mixin inputToggle(title,name)
+        label(for=`toggle${++idToggle}`).input-selection__item.input-selection__item_toggle
+            input(type="checkbox" name=name id=`toggle${idToggle}`).input-selection__field
+            span(style="").input-selection__field-custom.input-selection__field-custom_toggle
+            =title
+                    

@@ -1,0 +1,10 @@
+- let idRadio = 0
+
+mixin inputRadio(titles,name)
+        .input-selection.input-selection_radio
+            each title in titles
+                label(for=`radio${++idRadio}`).input-selection__item.input-selection__item_radio
+                    input(type="radio" name=name id=`radio${idRadio}`).input-selection__field
+                    span(style="").input-selection__field-custom.input-selection__field-custom_radio
+                    =title
+                    

@@ -1,10 +1,9 @@
 @import './input-templates/input-templates';
 
-@import './input-templates/inputs/input-item';
-@import './input-templates/inputs/input-item_mod';
+@import './input-templates/inputs/input-text/input-text';
+@import './input-templates/inputs/input-text/dropdown';
 
-@import './input-templates/inputs/dropdowns/dropdown.scss';
-@import './input-templates/inputs/selections/selection';
+@import './input-templates/inputs/input-selection/input-selection';
 
 @import './input-templates/labels/label';
 

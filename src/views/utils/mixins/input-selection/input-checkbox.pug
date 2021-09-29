@@ -1,0 +1,10 @@
+- let idCheckbox=0
+
+mixin inputCheckbox(names)
+    .input-selection.input-selection_checkbox
+        each title, name in names
+                label(for=`checkbox${++idCheckbox}`).input-selection__item.input-selection__item_checkbox
+                    input(type="checkbox" name=name id=`checkbox${idCheckbox}`).input-selection__field
+                    span.input-selection__field-custom.input-selection__field-custom_checkbox
+                    =title
+                    

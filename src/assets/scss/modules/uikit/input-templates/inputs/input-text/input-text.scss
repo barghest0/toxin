@@ -1,8 +1,21 @@
-.input-item {
+.input-text {
     width: 320px;
-    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
+
+    &_lg {
+        width: 320px;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    &_md {
+        width: 266px;
+    }
+    &_sm {
+        width: 150px;
+    }
+
     &__field {
         position: relative;
         height: 44px;
@@ -17,6 +30,7 @@
             &::after {
                 content: '';
                 position: absolute;
+                cursor: pointer;
                 width: 8px;
                 height: 8px;
                 right: 15px;

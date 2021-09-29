@@ -2,14 +2,15 @@
     display: flex;
     flex-direction: column;
 
-    &_field {
+    &_input-text {
         width: 320px;
     }
-    &_selection {
+    
+    &_input-selection {
         width: 260px;
     }
 
-    &_buttons {
+    &_input-button {
         width: 320px;
     }
 
@@ -26,14 +27,13 @@
         margin-bottom: 40px;
     }
 
-    &__checkbox {
+    &__checkbox,
+    &__toggle,
+    &__like {
         margin-bottom: 40px;
     }
 
     &__radio {
         margin-bottom: 36px;
-    }
-    &__toggle {
-        margin-bottom: 40px;
     }
 }
