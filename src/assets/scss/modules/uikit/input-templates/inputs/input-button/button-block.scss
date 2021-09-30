@@ -1,0 +1,19 @@
+.button-block {
+    display: grid;
+    margin-bottom: 30px;
+    &_bordered {
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(2, 44px);
+        grid-gap: 30px 20px;
+    }
+
+    &_no-bordered {
+        grid-template-columns: 60px 60px;
+        grid-template-rows: 15px;
+        grid-gap: 30px;
+    }
+
+    &_long{
+        margin-bottom: 40px;
+    }
+}

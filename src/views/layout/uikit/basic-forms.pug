@@ -40,15 +40,19 @@
         +inputRange('Range Slider')
     .input-templates__button
         .label.label_mb_16 Buttons
-        .button-row
-            +inputButton('Click Me')
-            +inputButton('Click Me')
-    
-        
-        
-        
-        
-        
+        .button-block.button-block_bordered
+            +inputBorderButton('Click Me',false)
+            +inputBorderButton('Click Me',false)
+            +inputBorderButton('Click Me')
+            +inputBorderButton('Click Me')
+        .button-block.button-block_no-bordered
+            +inputNoBorderButton('Click Me',false)
+            +inputNoBorderButton('Click Me',false)
+        .button-block.button-block_long
+            +inputBorderButton('Перейти к оплате',false,true)
+    .input-templates__pagination
+        .label.label_mb_16 Pagination
+        +pagination
         
         
         

@@ -31,6 +31,6 @@ function fillColor() {
     p2 = (finalSlider.val() / maxValue) * 100
 
     sliderTrack.css({
-        background: `linear-gradient(to right, #fff ${p1}%,  #6FCF97 ${p1}%,  #6FCF97 ${p2}%, #fff ${p2}%)`,
+        background: `linear-gradient(to right, #fff ${p1}%,  #6FCF97 ${p1}%, #6FCF97, ${p2}%, #fff ${p2}%)`,
     })
 }
