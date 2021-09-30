@@ -32,13 +32,18 @@
     .input-templates__rate
         .label.label_mb_16 Rate button
         .input-selection.input-selection_rate
-            +inputRate()
-            +inputRate()
+            +inputRate('rate-one')
+            +inputRate('rate-two')
 
 .input-templates.input-templates_input-button
     .input-templates__range
         +inputRange('Range Slider')
-        
+    .input-templates__button
+        .label.label_mb_16 Buttons
+        .button-row
+            +inputButton('Click Me')
+            +inputButton('Click Me')
+    
         
         
         

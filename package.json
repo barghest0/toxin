@@ -54,7 +54,9 @@
         "air-datepicker": "^2.2.3",
         "item-quantity-dropdown": "^2.1.0",
         "jquery": "^3.6.0",
+        "jquery-ui": "^1.12.1",
         "jquery.maskedinput": "^1.4.1",
+        "nouislider": "^15.4.0",
         "pug-runtime": "^3.0.1",
         "sass": "^1.42.1"
     }

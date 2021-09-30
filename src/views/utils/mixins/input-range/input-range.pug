@@ -1,0 +1,14 @@
+
+
+mixin inputRange(labelName)
+    .input-range
+        .input-range__label.label.label_mb_20
+            label.input-range__label-name(for="price")=labelName
+            label.input-range__value(for="price" id="price")
+                span#initialValue 5000₽
+                span  &dash; 
+                span#finalValue 10000₽
+        .input-range__multi-range
+            .input-range__multi-range-track
+            input(type="range" min="0" max="15000" name="price" step="100" id="price" value="5000").input-range__initial-value
+            input(type="range" min="0" max="15000" name="price" step="100" id="price" value="10000").input-range__final-value
