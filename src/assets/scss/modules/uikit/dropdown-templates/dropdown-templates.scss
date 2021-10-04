@@ -1,0 +1,11 @@
+.dropdown-templates {
+    display: flex;
+    &__guests {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__apartments {
+        margin-right: 180px;
+    }
+}

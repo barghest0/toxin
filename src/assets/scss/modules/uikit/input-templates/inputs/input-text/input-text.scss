@@ -3,11 +3,16 @@
     display: flex;
     flex-direction: column;
 
-    &_lg {
-        width: 320px;
+    &_lg,
+    &_md,
+    &_sm {
         &:not(:last-child) {
             margin-bottom: 20px;
         }
+    }
+
+    &_lg {
+        width: 320px;
     }
     &_md {
         width: 266px;
@@ -19,6 +24,7 @@
     &__field {
         position: relative;
         height: 44px;
+        border-radius: 4px 4px 0px 0px;
         &_send-email {
             display: flex;
             align-items: center;

@@ -1,6 +1,14 @@
-mixin inputDropDown(labelName)
-    .input-text.input-text_lg
-        label.label(for="dropdown")=labelName
-        div.input-text__field.dropdown.iqdropdown(id="dropdown") 
-            p.dropdown__selection.iqdropdown-selection
 
+mixin inputDropDown(labelName, data, classForAppeal, size)
+    .input-text(class=`input-text_${size}`)
+        label.label(for=classForAppeal)=labelName
+        .input-text__field.iqdropdown(class=classForAppeal)
+                p.iqdropdown-selection(class=`iqdropdown-selection_${classForAppeal}`)
+                .iqdropdown-menu
+                    each val, key in data
+                        .iqdropdown-menu-option(class=`iqdropdown-menu-option_${classForAppeal}` data-id=key )
+                            p.iqdropdown-itemItem=val
+                    if size === "lg"
+                        .iqdropdown-menu-buttons    
+                            button.iqdropdown-button.iqdropdown-button_clear Очистить 
+                            button.iqdropdown-button Применить

@@ -12,10 +12,12 @@
 @import './input-templates/inputs/input-button/input-button';
 @import './input-templates/inputs/input-button/button-block.scss';
 
-.basic-forms {
-}
+@import './dropdown-templates/dropdown-templates.scss';
 
-.inputs {
-    display: flex;
-    justify-content: space-between;
+.basic-forms {
+    &__input {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
 }
