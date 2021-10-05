@@ -1,10 +1,12 @@
-@import './input-templates/input-templates';
+@import './input-template/input-template';
 
 @import './labels/label';
 
-@import './dropdown-templates/dropdown-templates';
+@import './dropdown-template/dropdown-template';
 
-@import './checkbox-templates/checkbox-templates';
+@import './checkbox-template/checkbox-template';
+
+@import './review-template/review-template.scss';
 
 @import './list/bullet-list.scss';
 

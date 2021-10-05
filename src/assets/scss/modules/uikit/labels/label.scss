@@ -27,5 +27,10 @@
             transform: rotate(-45deg);
             width: 8px;
         }
+        &.active::before {
+            -webkit-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
     }
 }

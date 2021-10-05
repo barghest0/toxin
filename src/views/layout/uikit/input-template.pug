@@ -1,44 +1,44 @@
 
-.input-templates.input-templates_input-text
-    .input-templates__text-field
+.input-template.input-template_input-text
+    .input-template__text-field
         +inputText('Text field','email','Email','email')
         +inputText('Text field','email','Email','text','This is pretty awesome')
         +inputDropDown('Dropdown',{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},'guests','lg')
         +inputMaskedText('Masked Text field','date','ДД.ММ.ГГГГ','text')
-    .input-templates__date
+    .input-template__date
         +inputRangeDate('Date Dropdown','Date Dropdown')
-    .input-templates__filter-date
+    .input-template__filter-date
         +inputFilterRangeDate('Filter Date Dropdown')
-    .input-templates__send-email
+    .input-template__send-email
         +inputSendEmail('Filter Date Dropdown','Email')
 
-.input-templates.input-templates_input-selection
-    .input-templates__checkbox
+.input-template.input-template_input-selection
+    .input-template__checkbox
         .label.label_mb_16 Checkbox Buttons
         +inputCheckbox({smoke:"Можно курить",animal: "Можно с питомцами", guests: "Можно пригласить гостей (до 10 человек)"})
-    .input-templates__radio
+    .input-template__radio
         .label.label_mb_16 Radio Buttons
         +inputRadio(["Мужчина", "Женщина"],"gender")
-    .input-templates__toggle
+    .input-template__toggle
         .label.label_mb_16 Toggle
         .input-selection.input-selection_toggle
             +inputToggle("Получать спецпредложения","offer")
             +inputToggle("Получать спецпредложения","offer")
-    .input-templates__like
+    .input-template__like
         .label.label_mb_16 Like button
         .input-selection.input-selection_like
             +inputLike(2)
             +inputLike(12)
-    .input-templates__rate
+    .input-template__rate
         .label.label_mb_16 Rate button
         .input-selection.input-selection_rate
             +inputRate('rate-one')
             +inputRate('rate-two')
 
-.input-templates.input-templates_input-button
-    .input-templates__range
+.input-template.input-template_input-button
+    .input-template__range
         +inputRange('Range Slider')
-    .input-templates__button
+    .input-template__button
         .label.label_mb_16 Buttons
         .button-block.button-block_bordered
             +inputBorderButton('Click Me',false)
@@ -50,13 +50,11 @@
             +inputNoBorderButton('Click Me',false)
         .button-block.button-block_long
             +inputBorderButton('Перейти к оплате',false,true)
-    .input-templates__pagination
+    .input-template__pagination
         .label.label_mb_16 Pagination
         +pagination
         
         
 
-        
-//-  я тебя люплю и я тепя люблю
 
 
