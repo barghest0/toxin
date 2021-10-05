@@ -1,0 +1,15 @@
+- let idRichCheckbox=0
+
+mixin inputRichCheckbox(names)
+    .label.label_mb_16 rich checkbox buttons
+    .input-selection.input-selection_checkbox
+        each name, item in names
+                label(for=`richCheckbox${++idRichCheckbox}`).input-selection__item.input-selection__item_checkbox
+                    input(type="checkbox" name=name id=`richCheckbox${idRichCheckbox}`).input-selection__field
+                    span.input-selection__field-custom.input-selection__field-custom_checkbox
+                    .input-selection__text
+                        .input-selection__title.input-selection__title_rich=name['title']
+                        .input-selection__description=name['desc']
+                    
+                    
+        

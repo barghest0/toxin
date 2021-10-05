@@ -1,3 +1,13 @@
+@import './inputs/input-text/input-text';
+@import './inputs/input-text/dropdown';
+
+@import './inputs/input-selection/input-selection';
+
+@import './inputs/input-range/input-range';
+
+@import './inputs/input-button/input-button';
+@import './inputs/input-button/button-block.scss';
+
 .input-templates {
     display: flex;
     flex-direction: column;

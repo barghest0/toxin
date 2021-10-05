@@ -4,9 +4,13 @@ import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css'
 $('.guests').iqDropdown({
     maxItems: 20,
     setSelectionText: (itemCount, totalItems) => {
-        if (totalItems == 0) {
-            return `Сколько гостей`
-        } else if (totalItems[totalItems.length - 1] == 1 || totalItems == 1) {
+        if (!totalItems) {
+            $('.button-decrement').prop('disabled', true)
+            return `Сколько комнат`
+        } else {
+            $('.button-decrement').prop('disabled', false)
+        }
+        if (totalItems[totalItems.length - 1] == 1 || totalItems == 1) {
             return `${
                 itemCount['adult'] + itemCount['child'] + itemCount['newborns']
             } Гость`
@@ -24,9 +28,11 @@ $('.guests').iqDropdown({
 $('.apartments').iqDropdown({
     maxItems: 20,
     setSelectionText: (itemCount, totalItems) => {
-        console.log(itemCount)
-        if (totalItems == 0) {
+        if (!totalItems) {
+            $('.button-decrement').prop('disabled', true)
             return `Сколько комнат`
+        } else {
+            $('.button-decrement').prop('disabled', false)
         }
         let res = []
         for (const key in itemCount) {

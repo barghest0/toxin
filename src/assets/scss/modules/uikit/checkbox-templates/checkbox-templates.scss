@@ -1,0 +1,16 @@
+.checkbox-templates {
+    display: flex;
+    margin-bottom: 40px;
+    &__list,
+    &__rich-buttons,
+    &__bullet-list {
+        width: 266px;
+    }
+
+    &__list {
+        margin-right: 180px;
+    }
+    &__rich-buttons {
+        margin-right: 125px;
+    }
+}

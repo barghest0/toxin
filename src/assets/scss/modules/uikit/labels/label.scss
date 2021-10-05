@@ -1,0 +1,31 @@
+.label {
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: $shadow-100;
+    &_mb_16 {
+        margin-bottom: 16px;
+    }
+
+    &_mb_20 {
+        margin-bottom: 20px;
+    }
+
+    &_checkbox-list {
+        cursor: pointer;
+        position: relative;
+        &::before {
+            border-bottom: 2px solid rgba(31, 32, 67, 0.5);
+            border-left: 2px solid rgba(31, 32, 67, 0.5);
+            content: '';
+            height: 8px;
+            position: absolute;
+            right: 5px;
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            width: 8px;
+        }
+    }
+}

@@ -1,5 +1,7 @@
 .iqdropdown.menu-open {
     border-color: $shadow-50;
+    z-index: 1000;
+    background-color: #fff;
 }
 
 .iqdropdown .iqdropdown-menu {
@@ -13,11 +15,14 @@
     color: $shadow-100;
     top: 45px;
     box-shadow: 0 10px 20px rgba(#1f2041, 0.05);
+    z-index: 1000;
 }
 
 .iqdropdown .iqdropdown-selection {
     font-family: inherit;
     font-size: 14px;
+    align-items: center;
+    display: flex;
 }
 
 .iqdropdown .iqdropdown-menu-option {
@@ -26,6 +31,10 @@
     padding: 0;
     height: 30px;
     margin-bottom: 7px;
+}
+
+.iqdropdown .iqdropdown-menu-option:last-child {
+    margin-bottom: 0;
 }
 
 .iqdropdown .iqdropdown-item-controls {
@@ -47,6 +56,7 @@
     padding: 0;
     text-align: center;
 }
+
 .iqdropdown .iqdropdown-item-controls button.button-decrement,
 .iqdropdown .iqdropdown-item-controls button.button-increment {
     border: 1px solid $shadow-25;
@@ -55,6 +65,12 @@
     width: 30px;
     padding: 0;
 }
+
+.iqdropdown .iqdropdown-item-controls button.button-decrement:disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
 
 .iqdropdown .icon-decrement {
     display: flex;
