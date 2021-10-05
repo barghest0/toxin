@@ -15,6 +15,8 @@
     text-transform: uppercase;
 
     transition: 0.2s ease-in-out;
+
+    font-family: inherit;
     &:hover {
         @include main-gradient-to-bottom;
         opacity: 0.5;
@@ -44,7 +46,7 @@
     }
 
     &_no-bordered {
-        width: 60px;
+        width: 65px;
         height: 15px;
         background: transparent;
         color: $main-color;

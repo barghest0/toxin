@@ -2,13 +2,8 @@
     width: 320px;
     display: flex;
     flex-direction: column;
-
-    &_lg,
-    &_md,
-    &_sm {
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
+    &_range-date{
+        display: flex;
     }
 
     &_lg {

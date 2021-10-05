@@ -1,0 +1,43 @@
+.card {
+    width: 380px;
+    padding-top: 40px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 25px rgba($color: $black, $alpha: 0.2);
+    border-radius: 4px;
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+        color: $shadow-100;
+        margin-bottom: 20px;
+    }
+
+    &__date {
+        margin-bottom: 20px;
+    }
+    &__guests {
+        margin-bottom: 30px;
+    }
+
+    &__field {
+        margin-bottom: 10px;
+    }
+
+    &__gender,
+    &__offer,
+    &__field_masked {
+        margin-bottom: 20px;
+    }
+
+    &__btn {
+        &_account {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__account-action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

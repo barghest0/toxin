@@ -24,17 +24,18 @@
         width: 320px;
     }
 
-    &__text-field,
-    &__filter-date {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 40px;
+    &__text-field {
+        margin-bottom: 20px;
+        &_masked,
+        &_date,
+        &_filter-date {
+            margin-bottom: 40px;
+        }
     }
 
-    &__date {
+    &__range-date {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 40px;
     }
 
     &__checkbox,

@@ -2,14 +2,18 @@
 .input-template.input-template_input-text
     .input-template__text-field
         +inputText('Text field','email','Email','email')
+    .input-template__text-field    
         +inputText('Text field','email','Email','text','This is pretty awesome')
+    .input-template__text-field
         +inputDropDown('Dropdown',{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},'guests','lg')
-        +inputMaskedText('Masked Text field','date','ДД.ММ.ГГГГ','text')
-    .input-template__date
+    .input-template__text-field.input-template__text-field_masked
+        +inputMaskedText('Masked Text field','date','ДД.ММ.ГГГГ')
+    .input-template__text-field.input-template__text-field_date
         +inputRangeDate('Date Dropdown','Date Dropdown')
-    .input-template__filter-date
+    .input-template__text-field.input-template__text-field_filter-date
         +inputFilterRangeDate('Filter Date Dropdown')
-    .input-template__send-email
+    .input-template__text-field.input-template__text-field_send-email
+        .label subscription text field
         +inputSendEmail('Filter Date Dropdown','Email')
 
 .input-template.input-template_input-selection

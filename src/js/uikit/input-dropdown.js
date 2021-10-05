@@ -6,9 +6,9 @@ $('.guests').iqDropdown({
     setSelectionText: (itemCount, totalItems) => {
         if (!totalItems) {
             $('.button-decrement').prop('disabled', true)
-            return `Сколько комнат`
+            return `Сколько гостей`
         } else {
-            $('.button-decrement').prop('disabled', false)
+            $('.guests').find('.button-decrement').prop('disabled', false)
         }
         if (totalItems[totalItems.length - 1] == 1 || totalItems == 1) {
             return `${
@@ -32,7 +32,7 @@ $('.apartments').iqDropdown({
             $('.button-decrement').prop('disabled', true)
             return `Сколько комнат`
         } else {
-            $('.button-decrement').prop('disabled', false)
+            $('.apartments').find('.button-decrement').prop('disabled', false)
         }
         let res = []
         for (const key in itemCount) {

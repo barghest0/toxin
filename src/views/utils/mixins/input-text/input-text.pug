@@ -2,7 +2,8 @@
 
 mixin inputText(labelName,name,placeholder, type='text', value="")
     .input-text.input-text_lg
-            label.label(for="input-text")=labelName
+            if labelName
+                label.label(for="input-text")=labelName
             .input-text__field
                 input.input-text__input(type=type, name=name id=`input-text-${id++}` placeholder=placeholder value=value)
                 
@@ -15,7 +16,6 @@ mixin inputMaskedText(labelName,name,placeholder,type='text',value="")
 
 mixin inputSendEmail(labelName,placeholder)
     .input-text.input-text_md
-        label(for="input-send").label=labelName
         .input-text__field.input-text__field_send-email
             input.input-text__input.input-text__input_send-email(type="email", name="send-email" id="input-send" placeholder=placeholder)
             button.input-text__arrow(type="submit")

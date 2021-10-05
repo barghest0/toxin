@@ -2,10 +2,14 @@
 
 
 .dropdown-template__apartments
-    +inputDropDown('Dropdown',{bedrooms:'Комнаты',beds:'Кровати',bathrooms:'Ванные комнаты'},'apartments','md')
-    +inputDropDown('Dropdown',{bedrooms:'Комнаты',beds:'Кровати',bathrooms:'Ванные комнаты'},'apartments','md')
+    .dropdown-template__apartments-item
+        +inputDropDown('Dropdown',{bedrooms:'Комнаты',beds:'Кровати',bathrooms:'Ванные комнаты'},'apartments','md')
+    .dropdown-template__apartments-item
+        +inputDropDown('Dropdown',{bedrooms:'Комнаты',beds:'Кровати',bathrooms:'Ванные комнаты'},'apartments','md')
 .dropdown-template__guests
-    +inputDropDown('Dropdown',{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},'guests','lg')
-    +inputDropDown('Dropdown',{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},'guests','lg')
+    .dropdown-template__guests-item
+        +inputDropDown('Dropdown',{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},'guests','lg')
+    .dropdown-template__guests-item
+        +inputDropDown('Dropdown',{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},'guests','lg')
 
 

@@ -1,17 +1,18 @@
 
 
 
-mixin inputRangeDate(labelFromName,labelTolName)
-    .input-text.input-text_sm
-        label.label(for="datepicker-from")=labelFromName
-        .input-text__field.input-text__field_dropdown
-            input.input-text__input.input-text__input_date(id="datepicker-from"  data-range="true" placeholder="ДД.ММ.ГГГГ" )
-            
+mixin inputRangeDate(labelFromName,labelToName)
+    .input-template__range-date
+        .input-text.input-text_sm
+            label.label(for="datepicker-from")=labelFromName
+            .input-text__field.input-text__field_dropdown
+                input.input-text__input.input-text__input_date(id="datepicker-from"  data-range="true" placeholder="ДД.ММ.ГГГГ" )
+                
 
-    .input-text.input-text_sm
-        label.label(for="datepicker-to")=labelFromName
-        .input-text__field.input-text__field_dropdown
-            input.input-text__input.input-text__input_date(id="datepicker-to" data-range="true" placeholder="ДД.ММ.ГГГГ")
+        .input-text.input-text_sm
+            label.label(for="datepicker-to")=labelToName
+            .input-text__field.input-text__field_dropdown
+                input.input-text__input.input-text__input_date(id="datepicker-to" data-range="true" placeholder="ДД.ММ.ГГГГ")
             
 
 mixin inputFilterRangeDate(labelName)
