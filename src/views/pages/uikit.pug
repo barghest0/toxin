@@ -19,6 +19,22 @@ html(lang="en")
                         include ../layout/uikit/checkbox-template.pug
                     .basic-forms__review.review-template
                         include ../layout/uikit/review-template.pug
-                .cards 
-                    include ../blocks/search-room.pug
-                    include ../blocks/register.pug
+                .cards
+                    .cards__first-block 
+                        include ../blocks/search-room.pug
+                        include ../blocks/register.pug
+                    .cards__second-block     
+                        include ../blocks/booking.pug
+                        include ../blocks/login.pug
+                    .cards__third-block    
+                        include ../blocks/datepicker.pug
+                        .card.card_preview-room
+                            +roomImg('../../assets/img/Preview-room1.png')
+                            .card__preview-room-content
+                                +roomHeader(888,9900,true,true)
+                                +roomFeedback('feedback-rate',145)
+                        .card.card_preview-room
+                            +roomImg('../../assets/img/Preview-room2.png')
+                            .card__preview-room-content
+                                +roomHeader(888,9900,true,true)
+                                +roomFeedback('feedback-rate',65)

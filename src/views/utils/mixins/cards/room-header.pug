@@ -1,0 +1,11 @@
+
+
+
+mixin roomHeader(roomNumber,price,isLuxury,isSmall)
+    .card__header(class=isSmall ? 'card__header_sm' :null)
+            .card__title(class=isSmall ? 'card__title_sm' :null)
+                span.number № 
+                =roomNumber
+                if isLuxury
+                    span.luxury люкс
+            .card__daily-price <b> #{price}₽ </b> в сутки

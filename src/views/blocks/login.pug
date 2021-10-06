@@ -1,0 +1,15 @@
+
+.card.card_login
+    .card__header 
+        .card__title Войти
+    form.card__login-form    
+        .card__field
+                +inputText('','email','Email')
+        .card__field.card__field_login
+            +inputText('','password','Пароль','password')
+        .card__btn.card__btn_account
+            +inputBorderButton('Войти', false, true)
+    .card__account-action
+        .card__is-account Уже есть аккаунт на Toxin?
+        +inputBorderButton('Войти')
+    

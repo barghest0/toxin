@@ -1,0 +1,8 @@
+.cards {
+    display: flex;
+
+    &__first-block,
+    &__second-block {
+        margin-right: 40px;
+    }
+}

@@ -1,25 +1,27 @@
 
 
 .card.card_register
-    .card__title Регистрация аккаунта
-    .card__field
-        +inputText('','name','Имя')
-    .card__field
-        +inputText('','lastname','Фамилия')
-    .card__gender
-        +inputRadio(["Мужчина", "Женщина"],"gender")
-    .card__field.card__field_masked 
-        +inputMaskedText('Дата рождения','birthday','ДД.ММ.ГГГГ')
-    .card__login-info
-        .label данные для входа в сервис
+    .card__header 
+        .card__title Регистрация аккаунта
+    form.card__register-form      
         .card__field
-            +inputText('','email','Email')
+            +inputText('','name','Имя')
         .card__field
-            +inputText('','password','Пароль')
-    .card__offer
-        +inputToggle('Получать спецпредложения','offers')
-    .card__btn.card__btn_account
-        +inputBorderButton('Зарегистрироваться', false, true)
+            +inputText('','lastname','Фамилия')
+        .card__gender
+            +inputRadio(["Мужчина", "Женщина"],"gender")
+        .card__field.card__field_masked 
+            +inputMaskedText('Дата рождения','birthday','ДД.ММ.ГГГГ')
+        .card__login-info
+            .label данные для входа в сервис
+            .card__field
+                +inputText('','email','Email')
+            .card__field
+                +inputText('','password','Пароль','password')
+        .card__offer
+            +inputToggle('Получать спецпредложения','offers')
+        .card__btn.card__btn_account
+            +inputBorderButton('Зарегистрироваться', false, true)
     .card__account-action
         .card__is-account Уже есть аккаунт на Toxin?
         +inputBorderButton('Войти')

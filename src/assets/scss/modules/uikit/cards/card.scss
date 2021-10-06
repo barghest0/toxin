@@ -1,0 +1,131 @@
+.card {
+    width: 380px;
+    padding-top: 40px;
+    padding: 30px;
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    box-shadow: 0 0 25px rgba($color: $black, $alpha: 0.2);
+    border-radius: 4px;
+
+    &_preview-room {
+        width: 270px;
+        padding: 0;
+    }
+
+    &_datepicker {
+        width: auto;
+        padding: 0;
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+        color: $shadow-100;
+
+        & .number {
+            font-size: 12px;
+        }
+        & .luxury {
+            margin-left: 8px;
+            color: $main-color;
+            font-size: 12px;
+        }
+        &_sm {
+            font-size: 19px;
+            & .luxury {
+                margin-left: 2px;
+            }
+        }
+    }
+
+    &__date {
+        margin-bottom: 20px;
+    }
+    &__guests {
+        margin-bottom: 30px;
+    }
+
+    &__field {
+        margin-bottom: 10px;
+        &_login {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__login-form {
+        margin-bottom: 20px;
+    }
+
+    &__gender,
+    &__offer,
+    &__field_masked {
+        margin-bottom: 20px;
+    }
+
+    &__btn {
+        &_account {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__account-action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        &_sm {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba($color: $shadow-100, $alpha: 0.1);
+        }
+    }
+
+    &__cost {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        &-services {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 240px;
+            span.top {
+                align-self: flex-start;
+            }
+        }
+    }
+
+    &__final-booking {
+        font-weight: bold;
+        font-size: 19px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+    &__expenses {
+        margin-bottom: 30px;
+    }
+
+    &__img {
+        border-radius: 4px 4px 0 0;
+        height: 150px;
+        background-position: center;
+    }
+
+    &__preview-room-content {
+        padding: 20px;
+    }
+
+    &__feedback {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
