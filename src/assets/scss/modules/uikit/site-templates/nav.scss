@@ -1,0 +1,27 @@
+.nav {
+    display: flex;
+    &__item {
+        cursor: pointer;
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+        display: flex;
+        align-items: center;
+        &_list {
+            &::after {
+                border-bottom: 2px solid rgba(31, 32, 67, 0.5);
+                border-left: 2px solid rgba(31, 32, 67, 0.5);
+                content: '';
+                cursor: pointer;
+                height: 6px;
+                display: inline-block;
+                margin-left: 8px;
+                width: 6px;
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

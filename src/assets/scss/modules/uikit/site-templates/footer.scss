@@ -1,0 +1,55 @@
+.footer {
+    box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0;
+    }
+    &__company {
+        display: flex;
+        flex-direction: column;
+        width: 260px;
+        &-description {
+            line-height: 1.7;
+        }
+        &-logo {
+            margin-bottom: 20px;
+        }
+    }
+    &__helper {
+        display: flex;
+    }
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-width: 150px;
+        &-title {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__subscribe-desc {
+        width: 260px;
+        margin-bottom: 20px;
+    }
+
+    &__bottom {
+        padding: 13px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__messengers {
+        display: flex;
+    }
+    &__messenger-item {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}

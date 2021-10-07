@@ -1,5 +1,5 @@
 include ../utils/mixins/mixins.pug
-
+-let headerCount = ['loginUser','guest']
 doctype html
 html(lang="en")
     head
@@ -9,6 +9,14 @@ html(lang="en")
         title Document
     body 
         .kit-wrapper
+            .site-templates
+                .site-templates__header
+                    include ../blocks/header.pug
+                .site-templates__header
+                    include ../blocks/header.pug
+                .site-templates__footer
+                    include ../blocks/footer.pug
+                
             .container
                 .basic-forms
                     .basic-forms__input
@@ -38,3 +46,4 @@ html(lang="en")
                             .card__preview-room-content
                                 +roomHeader(888,9900,true,true)
                                 +roomFeedback('feedback-rate',65)
+                

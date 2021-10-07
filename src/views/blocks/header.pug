@@ -1,0 +1,20 @@
+
+
+
+
+
+header.header
+    .container
+        .header__inner
+            .header__logo
+                img(src="../../assets/img/Logo.png", alt="logo")
+            nav.header__nav.nav
+                a.nav__item О нас
+                a.nav__item.nav__item_list Услуги
+                a.nav__item Вакансии
+                a.nav__item Новости
+                a.nav__item.nav__item_list Соглашения
+                a.nav__item
+                    +inputBorderButton('Войти')
+                a.nav__item
+                    +inputBorderButton('Зарегистрироваться',false,true)

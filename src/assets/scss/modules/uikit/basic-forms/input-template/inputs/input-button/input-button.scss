@@ -31,17 +31,10 @@
         position: relative;
         width: 96px;
         height: 40px;
-        &::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            bottom: -2px;
-            left: -2px;
-            right: -2px;
-            background: linear-gradient($main-color, $gradient-main-color);
-            border-radius: 30px;
-            z-index: -1;
-            transition: 0.2s ease-in-out;
+        border: 2px solid $main-color;
+        &:hover {
+            background: transparent;
+            opacity: 0.5;
         }
     }
 
