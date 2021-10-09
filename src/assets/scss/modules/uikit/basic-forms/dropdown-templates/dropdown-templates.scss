@@ -1,0 +1,18 @@
+.dropdown-templates {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 160px;
+    &__guests {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        width: 700px;
+    }
+    &__apartments {
+        &-dropdown {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

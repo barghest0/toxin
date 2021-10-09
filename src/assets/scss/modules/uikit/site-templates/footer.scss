@@ -1,10 +1,12 @@
 .footer {
     box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
+    background-color: $white;
     &__top {
         display: flex;
         justify-content: space-between;
         padding: 100px 0;
     }
+
     &__company {
         display: flex;
         flex-direction: column;
@@ -16,9 +18,7 @@
             margin-bottom: 20px;
         }
     }
-    &__helper {
-        display: flex;
-    }
+
     &__nav {
         display: flex;
         flex-direction: column;
@@ -27,26 +27,36 @@
         &-title {
             font-weight: bold;
             margin-bottom: 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: $shadow-100;
         }
         &-item {
+            color: inherit;
+            text-decoration: none;
             &:not(:last-child) {
                 margin-bottom: 20px;
             }
         }
     }
-    &__subscribe-desc {
+
+    &__subscribe-description {
         width: 260px;
         margin-bottom: 20px;
     }
 
     &__bottom {
-        padding: 13px 0;
+        padding: 23px 0;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
     }
+
     &__messengers {
         display: flex;
     }
+
     &__messenger-item {
         &:not(:last-child) {
             margin-right: 20px;

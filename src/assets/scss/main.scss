@@ -1,6 +1,7 @@
 @import './utils/_vars.scss';
 @import './utils/_mixins';
 @import './utils/_datepicker.scss';
+@import './utils/_pagination.scss';
 @import './utils/dropdown';
 @import './modules/uikit/basic-forms/basic-forms.scss';
 
@@ -38,6 +39,7 @@ html {
 
 .kit-wrapper {
     padding-top: 145px;
+    background-color: $shadow-25;
 }
 
 .container {

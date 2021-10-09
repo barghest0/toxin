@@ -1,5 +1,5 @@
 //libraries
-import '../node_modules/jquery'
+import 'jquery'
 
 //JS
 import './js/'

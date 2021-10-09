@@ -1,11 +1,11 @@
-- let id = 0
+- let inputId = 0
 
 mixin inputText(labelName,name,placeholder, type='text', value="")
     .input-text.input-text_lg
             if labelName
                 label.label(for="input-text")=labelName
             .input-text__field
-                input.input-text__input(type=type, name=name id=`input-text-${id++}` placeholder=placeholder value=value)
+                input.input-text__input(type=type, name=name id=`input-text-${inputId++}` placeholder=placeholder value=value)
                 
 
 mixin inputMaskedText(labelName,name,placeholder,type='text',value="")
@@ -14,11 +14,12 @@ mixin inputMaskedText(labelName,name,placeholder,type='text',value="")
         .input-text__field
             input.input-text__input.input-text__input_masked(type=type, name=name id="input-text-masked" placeholder=placeholder value=value)
 
+
 mixin inputSendEmail(labelName,placeholder)
     .input-text.input-text_md
-        .input-text__field.input-text__field_send-email
-            input.input-text__input.input-text__input_send-email(type="email", name="send-email" id="input-send" placeholder=placeholder)
-            button.input-text__arrow(type="submit")
-                <svg width="17" height="18" viewBox="0 0 17 18">
-                    <path d="M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z" fill="#BC9CFF"/>
-                </svg>
+        form.input-text__field.input-text__field_send-email
+                input.input-text__input.input-text__input_send-email(type="email", name="send-email" id="input-send" placeholder=placeholder)
+                button.input-text__arrow(type="submit")
+                    <svg width="17" height="18" viewBox="0 0 17 18">
+                        <path d="M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z" fill="#BC9CFF"/>
+                    </svg>

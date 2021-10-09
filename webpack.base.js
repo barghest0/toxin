@@ -121,7 +121,7 @@ module.exports = {
         }),
 
         new HtmlWebpackPlugin({
-            template: `${PATHS.src}/views/index.pug`,
+            template: `${PATHS.src}/views/pages/index.pug`,
             filename: `./index.html`,
         }),
 

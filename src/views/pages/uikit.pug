@@ -1,49 +1,50 @@
-include ../utils/mixins/mixins.pug
--let headerCount = ['loginUser','guest']
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body 
-        .kit-wrapper
-            .site-templates
-                .site-templates__header
-                    include ../blocks/header.pug
-                .site-templates__header
-                    include ../blocks/header.pug
-                .site-templates__footer
-                    include ../blocks/footer.pug
+extends ../layout/uikit-layout.pug
+
+
+
+
+block basic-forms
+    .basic-forms
+        .basic-forms__input
+            include ../templates/input-templates/input-templates.pug
+        .basic-forms__dropdown.dropdown-templates
+            include ../templates/input-templates/dropdown-templates.pug
+        .basic-forms__checkbox.checkbox-templates
+            include ../templates/input-templates/checkbox-templates.pug
+        .basic-forms__review.review-templates
+            include ../templates/site-templates/review-templates.pug
+
+
+    
+block site-templates
+    .site-templates
+        .site-templates__header
+            +header()
+        .site-templates__header
+            +header(true,'Юлий Цезарь')
+        .site-templates__footer
+            include ../templates/site-templates/footer-template.pug
+
+
+block cards 
+    .cards
+        .cards__first-block 
+            include ../templates/card-templates/search-room-card-template.pug
+            include ../templates/card-templates/register-card-template.pug
+        .cards__second-block     
+            include ../templates/card-templates/booking-card-template.pug
+            include ../templates/card-templates/login-card-template.pug
+        .cards__third-block    
+            include ../templates/card-templates/datepicker-card-template.pug
+            +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145)
+            +previewRoom('../../assets/img/Preview-room2.png',840,9990,false,true,65)
+            
+
+
+
+
+
+
+
                 
-            .container
-                .basic-forms
-                    .basic-forms__input
-                        include ../layout/uikit/input-template.pug
-                    .basic-forms__dropdown.dropdown-template
-                        include ../layout/uikit/dropdown-template.pug
-                    .basic-forms__checkbox.checkbox-template
-                        include ../layout/uikit/checkbox-template.pug
-                    .basic-forms__review.review-template
-                        include ../layout/uikit/review-template.pug
-                .cards
-                    .cards__first-block 
-                        include ../blocks/search-room.pug
-                        include ../blocks/register.pug
-                    .cards__second-block     
-                        include ../blocks/booking.pug
-                        include ../blocks/login.pug
-                    .cards__third-block    
-                        include ../blocks/datepicker.pug
-                        .card.card_preview-room
-                            +roomImg('../../assets/img/Preview-room1.png')
-                            .card__preview-room-content
-                                +roomHeader(888,9900,true,true)
-                                +roomFeedback('feedback-rate',145)
-                        .card.card_preview-room
-                            +roomImg('../../assets/img/Preview-room2.png')
-                            .card__preview-room-content
-                                +roomHeader(888,9900,true,true)
-                                +roomFeedback('feedback-rate',65)
                 
