@@ -1,17 +1,22 @@
+//------------------UTILS IMPORTS--------------
+
 @import './utils/_vars.scss';
 @import './utils/_mixins';
 @import './utils/_datepicker.scss';
 @import './utils/_pagination.scss';
 @import './utils/_dropdown';
 
-@import './modules/uikit/basic-forms/basic-forms.scss';
+//------------------UIKIT IMPORTS--------------
 
-@import './modules/uikit/cards/cards.scss';
-@import './modules/uikit/cards/card.scss';
+@import './modules/uikit-page/basic-forms/basic-forms.scss';
+@import './modules/uikit-page/cards/cards.scss';
+@import './modules/uikit-page/cards/card.scss';
+@import './modules/uikit-page/site-templates/site-templates';
+@import './modules/uikit-page/basic-styles/basic-styles.scss';
 
-@import './modules/uikit/site-templates/site-templates';
+//------------------MAIN PAGES IMPORTS--------------
 
-@import './modules/uikit/basic-styles/basic-styles.scss';
+@import './modules/main-pages/intro';
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 html {
@@ -39,12 +44,8 @@ html {
     box-sizing: border-box;
 }
 
-.kit-wrapper {
-    padding-top: 145px;
-    
-}
-
 .container {
-    max-width: 1160px;
+    max-width: 1140px;
+    padding: 0 10px;
     margin: 0 auto;
 }

@@ -3,9 +3,10 @@
 .card.card_search-room
     .card__header 
         .card__title Найдём номера под ваши пожелания
-    .card__date
-        +inputRangeDate('Прибытие','Выезд')
-    .card__guests
-        +inputDropDown('Dropdown',{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},'guests','lg')
-    .card__btn
-        +inputBorderButton('Подобрать номер', false,true)
+    form.card__form
+        .card__date
+            +inputRangeDate('Прибытие','Выезд')
+        .card__guests
+            +inputDropDown('Dropdown',{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},'guests','lg')
+        .card__btn
+            +inputBorderButton('Подобрать номер', false,true)

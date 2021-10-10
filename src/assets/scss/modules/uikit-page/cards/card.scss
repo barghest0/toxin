@@ -54,8 +54,10 @@
         }
     }
 
-    &__login-form {
-        margin-bottom: 20px;
+    &__form {
+        &_mb_20 {
+            margin-bottom: 20px;
+        }
     }
 
     &__gender,
