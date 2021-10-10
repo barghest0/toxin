@@ -1,0 +1,66 @@
+- let idRichCheckbox=0
+- let idRate = 0
+- let idLike = 0
+- let idRadio = 0
+- let idCheckbox = 0
+- let idToggle = 0
+
+mixin inputRichCheckbox(names)
+    .label.label_mb_16 rich checkbox buttons
+    .input-selection.input-selection_checkbox
+        each name, item in names
+                label(for=`richCheckbox${++idRichCheckbox}`).input-selection__item.input-selection__item_checkbox
+                    input(type="checkbox" name=item id=`richCheckbox${idRichCheckbox}`).input-selection__field
+                    span.input-selection__field-custom.input-selection__field-custom_checkbox
+                    .input-selection__text
+                        .input-selection__title.input-selection__title_rich=name['title']
+                        .input-selection__description=name['desc']
+                              
+mixin inputRate(name)
+        label(for=`rate${++idRate}`).input-selection__item.input-selection__item_rate
+            each val in [1, 2, 3, 4, 5]
+                input(type="radio" name=name id=`rate${idRate}` value=val).input-selection__field.input-selection__field-custom_rate
+
+mixin inputLike(count)
+        label(for=`like${++idLike}`).input-selection__item.input-selection__item_like
+            input(type="checkbox" name='like' id=`like${idLike}`).input-selection__field
+            span.input-selection__field-custom.input-selection__field-custom_like
+                =count
+                    
+mixin inputRadio(titles,name)
+        .input-selection.input-selection_radio
+            each title in titles
+                label(for=`radio${++idRadio}`).input-selection__item.input-selection__item_radio
+                    input(type="radio" name=name id=`radio${idRadio}`).input-selection__field
+                    span(style="").input-selection__field-custom.input-selection__field-custom_radio
+                    =title
+                    
+mixin inputRange(labelName)
+    .input-range
+        .input-range__label.label.label_mb_20
+            label.input-range__label-name(for="price")=labelName
+            label.input-range__value(for="price" id="price")
+                span#initialValue 5000₽
+                span  &dash; 
+                span#finalValue 10000₽
+        .input-range__multi-range
+            .input-range__multi-range-track
+            input(type="range" min="0" max="15000" name="price" step="100" id="price" value="5000").input-range__initial-value
+            input(type="range" min="0" max="15000" name="price" step="100" id="price" value="10000").input-range__final-value
+
+mixin inputCheckbox(names,isOpening)
+    if isOpening
+        .label.label_mb_16(class=isOpening ? 'label_checkbox-list' : null) expandable checkbox list
+    .input-selection.input-selection_checkbox(class=isOpening ? 'input-selection_checkbox-list' : null)
+        each title, name in names
+                label(for=`checkbox${++idCheckbox}`).input-selection__item.input-selection__item_checkbox
+                    input(type="checkbox" name=name id=`checkbox${idCheckbox}`).input-selection__field
+                    span.input-selection__field-custom.input-selection__field-custom_checkbox
+                    .input-selection__title=title
+                    
+mixin inputToggle(title,name)
+        label(for=`toggle${++idToggle}`).input-selection__item.input-selection__item_toggle
+            input(type="checkbox" name=name id=`toggle${idToggle}`).input-selection__field
+            span(style="").input-selection__field-custom.input-selection__field-custom_toggle
+            =title
+                    

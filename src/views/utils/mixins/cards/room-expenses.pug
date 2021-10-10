@@ -4,16 +4,16 @@
 mixin roomExpenses(price)
     .card__expenses 
             .card__cost 
-                .card__cost-days #{price} x #[span#booking-days 0 суток]
-                .card__cost-sum #[span#booking-price 0₽]
+                .card__cost-days #{price} x #[span#booking-days 0] суток
+                .card__cost-sum #[span#booking-price 0] ₽
             .card__cost
                 .card__cost-services 
                     .card__cost-services-discount Сбор за услуги: скидка #[span#services-discount 2179₽]
                     span
                         img(src="../../assets/img/Services.svg", alt="alt")
-                .card__cost-sum #[span#services-price 0₽]
+                .card__cost-sum #[span#services-price 0] ₽
             .card__cost
-                .card__cost-services Сбор за дополнительные услуги #[span#services-AddDiscount]
+                .card__cost-services Сбор за дополнительные услуги #[span#addServices-Discount]
                     span.top
                         img(src="../../assets/img/Services.svg", alt="alt")
-                .card__cost-sum #[span#services-price 300₽]
+                .card__cost-sum #[span#addServices-price 300] ₽

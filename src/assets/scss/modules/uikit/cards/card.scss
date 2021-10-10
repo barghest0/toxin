@@ -1,7 +1,8 @@
 .card {
     width: 380px;
-    padding-top: 40px;
+
     padding: 30px;
+    padding-top: 40px;
     background-color: $white;
     &:not(:last-child) {
         margin-bottom: 40px;
@@ -90,7 +91,10 @@
     &__cost {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 10px;
+        line-height: 1.6;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
         &-services {
             display: flex;
             align-items: center;
@@ -102,12 +106,17 @@
         }
     }
 
-    &__final-booking {
+    &__final-price {
         font-weight: bold;
         font-size: 19px;
         display: flex;
         justify-content: space-between;
         margin-bottom: 25px;
+        color: $shadow-100;
+    }
+    &__points {
+        border-bottom: 1px dotted $shadow-25;
+        width: 180px;
     }
 
     &__expenses {

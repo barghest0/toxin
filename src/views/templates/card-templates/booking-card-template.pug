@@ -7,8 +7,9 @@
     .card__guests
         +inputDropDown('Dropdown',{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},'guests','lg')
     +roomExpenses(9990)
-    .card__final-booking
+    .card__final-price
         .card__final-booking-title Итого
+        .card__points
         .card__final-booking-sum #[span#final-booking-sum 38 081₽]
     .card__btn
         +inputBorderButton('Подобрать номер', false,true)    

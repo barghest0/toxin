@@ -1,6 +1,22 @@
 extends ../layout/uikit-layout.pug
 
+    
+block site-templates
+    .site-templates
+        .site-templates__header
+            +header(false)
+        .site-templates__header
+            +header(true,'Юлий Цезарь')
+        .site-templates__footer
+            include ../templates/site-templates/footer-template.pug
 
+
+block basic-styles
+    .basic-styles
+        .basic-styles__colors
+            +color([{hex: '#1F2041', title:'Dark Shade 100%',opacity:1},{ hex: '#1F2041', title:'Dark Shade 75%',opacity:0.75},{ hex: '#1F2041', title:'Dark Shade 50%',opacity:0.5},{ hex: '#1F2041', title:'Dark Shade 25%', opacity:0.25},{ hex: '#1F2041', title:'Dark Shade 5%',opacity:0.05},{ hex: '#BC9CFF', title:'Purple',opacity:1},{ hex: '#6FCF97', title:'Green',opacity:1}])
+        .basic-styles__fonts
+            +font([{tag:'h1', text:'This one is the sub-section or widget title', weight:'bold', size:'24'},{tag:'h2', text:'Next one is the item title inside widgets', weight:'bold', size:'19'},{tag:'h3', text:'This is a label or CTA text', weight:'bold', size:'12'},{tag:'body', text:'This is the body text which is used for most of the design, like paragraphs, lists, etc.', weight:'regular', size:'14'}])
 
 
 block basic-forms
@@ -14,16 +30,6 @@ block basic-forms
         .basic-forms__review.review-templates
             include ../templates/site-templates/review-templates.pug
 
-
-    
-block site-templates
-    .site-templates
-        .site-templates__header
-            +header()
-        .site-templates__header
-            +header(true,'Юлий Цезарь')
-        .site-templates__footer
-            include ../templates/site-templates/footer-template.pug
 
 
 block cards 

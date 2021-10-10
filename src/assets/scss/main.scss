@@ -2,13 +2,16 @@
 @import './utils/_mixins';
 @import './utils/_datepicker.scss';
 @import './utils/_pagination.scss';
-@import './utils/dropdown';
+@import './utils/_dropdown';
+
 @import './modules/uikit/basic-forms/basic-forms.scss';
 
 @import './modules/uikit/cards/cards.scss';
 @import './modules/uikit/cards/card.scss';
 
 @import './modules/uikit/site-templates/site-templates';
+
+@import './modules/uikit/basic-styles/basic-styles.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 html {
@@ -34,12 +37,11 @@ html {
 *::before {
     margin: 0;
     box-sizing: border-box;
-    // padding: 0;
 }
 
 .kit-wrapper {
     padding-top: 145px;
-    background-color: $shadow-25;
+    
 }
 
 .container {
