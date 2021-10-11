@@ -8,20 +8,33 @@ $('.guests').iqDropdown({
             $('.button-decrement').prop('disabled', true)
             return `Сколько гостей`
         } else {
+            $('input[name=guests]').val(
+                itemCount['adult'] + itemCount['child'] + itemCount['newborns']
+            )
             $('.guests').find('.button-decrement').prop('disabled', false)
         }
-        if (totalItems[totalItems.length - 1] == 1 || totalItems == 1) {
-            return `${
-                itemCount['adult'] + itemCount['child'] + itemCount['newborns']
-            } Гость`
-        } else if (totalItems > 1 && totalItems < 5) {
-            return `${
-                itemCount['adult'] + itemCount['child'] + itemCount['newborns']
-            } Гостя`
-        }
-        return `${
+
+        let resString =
             itemCount['adult'] + itemCount['child'] + itemCount['newborns']
-        } Гостей`
+        if (totalItems[totalItems.length - 1] == 1 || totalItems == 1) {
+            resString += ' Гость'
+        } else if (totalItems > 1 && totalItems < 5) {
+            resString += ' Гостя'
+        } else {
+            resString += ' Гостей'
+        }
+
+        if (itemCount['newborns']) {
+            if (itemCount['newborns'] == 1) {
+                resString += ` , ${itemCount['newborns']} Младенец`
+            } else if (itemCount['newborns'] > 1 && itemCount['newborns'] < 5) {
+                resString += ` , ${itemCount['newborns']} Младенца`
+            } else {
+                resString += ` , ${itemCount['newborns']} Младенцев`
+            }
+        }
+
+        return resString
     },
 })
 
@@ -51,3 +64,8 @@ $('.apartments').iqDropdown({
         return res
     },
 })
+
+$('.iqdropdown-button, .button-increment, .button-decrement').prop(
+    'type',
+    'button'
+)

@@ -1,6 +1,6 @@
 .iqdropdown.menu-open {
     border-color: $shadow-50;
-    z-index: 1000;
+    z-index: 50;
     background-color: #fff;
 }
 
@@ -71,7 +71,6 @@
     opacity: 0.4;
 }
 
-
 .iqdropdown .icon-decrement {
     display: flex;
     justify-content: center;
@@ -93,4 +92,22 @@
     font-family: inherit;
     text-transform: uppercase;
     color: $main-color;
+}
+
+.iqdropdown .iqdropdown-item-controls {
+    display: flex;
+    height: 45px;
+}
+
+.iqdropdown .iqdropdown-item-controls button {
+    align-items: center;
+    border: 1px solid #e2e2e2;
+    display: flex;
+    height: 45px;
+    padding: 0 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.iqdropdown .iqdropdown-item-controls button:hover {
+    background-color: #eee;
 }

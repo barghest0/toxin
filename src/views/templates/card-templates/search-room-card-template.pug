@@ -1,12 +1,16 @@
 
 
+
+
 .card.card_search-room
     .card__header 
         .card__title Найдём номера под ваши пожелания
-    form.card__form
+    form(action="catalog.html").card__form
         .card__date
             +inputRangeDate('Прибытие','Выезд')
         .card__guests
+            input(type="hidden", name="guests")
             +inputDropDown('Dropdown',{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},'guests','lg')
         .card__btn
             +inputBorderButton('Подобрать номер', false,true)
+

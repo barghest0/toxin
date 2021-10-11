@@ -100,14 +100,16 @@ class Pagination {
     }
 }
 
-;(() => {
-    new Pagination(document.querySelector('#pagination'), {
-        curr: 1,
-        slots: 7,
-        total: 15,
-    })
-})()
+if (document.querySelector('#pagination')) {
+    ;(() => {
+        new Pagination(document.querySelector('#pagination'), {
+            curr: 1,
+            slots: 7,
+            total: 15,
+        })
+    })()
 
-$('.pagination__item_next').append(
-    `<img src="../../assets/img/PaginationArrow.svg">`
-)
+    $('.pagination__item_next').append(
+        `<img src="../../assets/img/PaginationArrow.svg">`
+    )
+}

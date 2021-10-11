@@ -5,7 +5,7 @@
     font-family: inherit;
     @include size(320px, 370px);
     padding: 20px;
-
+    z-index: 100;
     &-inline {
         box-shadow: 0 0 25px rgba($color: $black, $alpha: 0.2);
     }
