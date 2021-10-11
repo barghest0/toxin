@@ -1,6 +1,6 @@
-mixin previewRoom(img,roomNumber,price,isLuxury,isSmall,reviews)
+mixin previewRoom(img,roomNumber,price,isLuxury,isSmall,reviews,rate)
     .card.card_preview-room
         +roomImg(img)
         .card__preview-room-content
             +roomHeader(roomNumber,price,isLuxury,true)
-            +roomFeedback('feedback-rate',reviews)
+            +roomFeedback('feedback-rate',reviews,rate)

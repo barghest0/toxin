@@ -17,6 +17,7 @@
 //------------------MAIN PAGES IMPORTS--------------
 
 @import './modules/main-pages/intro';
+@import './modules/main-pages/catalog';
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 html {
@@ -44,8 +45,12 @@ html {
     box-sizing: border-box;
 }
 
+*::placeholder {
+    font-size: 14px;
+}
+
 .container {
-    max-width: 1140px;
+    max-width: 1180px;
     padding: 0 10px;
     margin: 0 auto;
 }

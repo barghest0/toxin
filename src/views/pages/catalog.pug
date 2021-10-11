@@ -1,8 +1,42 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Catalog
-    body 
+extends ../layout/catalog-layout.pug
+
+
+block catalog
+    .catalog
+        .container
+            .catalog__inner
+                form.catalog__filters
+                    .catalog__filters-item.catalog__filters-item_date
+                        +inputFilterRangeDate('Даты пребывания в отеле','Выберите дату')
+                    .catalog__filters-item
+                        input(type="hidden", name="guests")
+                        +inputDropDown('Dropdown',{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},'guests','md')
+                    .catalog__filters-item
+                        +inputRange('диапазон цены')
+                        .catalog__price-description Стоимость за сутки пребывания в номере
+                    .catalog__filters-item
+                        .label.label_mb_16 Правила дома
+                        +inputCheckbox({smoke:"Можно курить",animal: "Можно с питомцами", guests: "Можно пригласить гостей (до 10 человек)"})
+                    .catalog__filters-item
+                        +inputRichCheckbox({hallway:{title:'Широкий коридор', desc:'Ширина коридоров в номере не менее 91 см.'},invalidHelper:  {title:'Помощник для инвалидов', desc:'На 1 этаже вас встретит специалист  и проводит до номера.'}},'доступность')
+                    .catalog__filters-item
+                        +inputDropDown('удобства номера',{bedrooms:'Комнаты',beds:'Кровати',bathrooms:'Ванные комнаты'},'apartments','md')
+                    .catalog__filters-item
+                        +inputCheckbox({breakfast:'Завтрак',table:'Письменный стол',childChair:'Стул для кормления',childBed:'Кроватка',tv:'Телевизор',shampoo:'Шампунь'},true)
+                .catalog__rooms 
+                    .catalog__title Номера, которые мы для вас подобрали
+                    .catalog__rooms-inner
+                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
+                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
+                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
+                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
+                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
+                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
+                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
+                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
+                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
+                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
+                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
+                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
+                    .catalog__pagination
+                        +pagination()   

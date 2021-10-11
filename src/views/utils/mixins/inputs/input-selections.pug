@@ -5,8 +5,8 @@
 - let idCheckbox = 0
 - let idToggle = 0
 
-mixin inputRichCheckbox(names)
-    .label.label_mb_16 rich checkbox buttons
+mixin inputRichCheckbox(names,title)
+    .label.label_mb_16=title 
     .input-selection.input-selection_checkbox
         each name, item in names
                 label(for=`richCheckbox${++idRichCheckbox}`).input-selection__item.input-selection__item_checkbox
@@ -16,9 +16,11 @@ mixin inputRichCheckbox(names)
                         .input-selection__title.input-selection__title_rich=name['title']
                         .input-selection__description=name['desc']
                               
-mixin inputRate(name)
+mixin inputRate(name,rate)
         label(for=`rate${++idRate}`).input-selection__item.input-selection__item_rate
             each val in [1, 2, 3, 4, 5]
+                if val === rate
+                    input(type="radio" name=name id=`rate${idRate}` value=val checked).input-selection__field.input-selection__field-custom_rate
                 input(type="radio" name=name id=`rate${idRate}` value=val).input-selection__field.input-selection__field-custom_rate
 
 mixin inputLike(count)
@@ -31,7 +33,7 @@ mixin inputRadio(titles,name)
         .input-selection.input-selection_radio
             each title in titles
                 label(for=`radio${++idRadio}`).input-selection__item.input-selection__item_radio
-                    input(type="radio" name=name id=`radio${idRadio}`).input-selection__field
+                    input(type="radio" name=name id=`radio${idRadio}` ).input-selection__field
                     span(style="").input-selection__field-custom.input-selection__field-custom_radio
                     =title
                     

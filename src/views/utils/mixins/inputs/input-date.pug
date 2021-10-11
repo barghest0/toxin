@@ -15,8 +15,8 @@ mixin inputRangeDate(labelFromName,labelToName)
                 input.input-text__input.input-text__input_date(id="datepicker-to" name="dateTo" data-range="true" placeholder="ДД.ММ.ГГГГ")
             
 
-mixin inputFilterRangeDate(labelName)
+mixin inputFilterRangeDate(labelName,placeholder)
     .input-text.input-text_md
         label.label(for="range-datepicker")=labelName
         .input-text__field.input-text__field_dropdown
-            input.input-text__input.input-text__input_date(id="range-datepicker" data-range="true" placeholder="Select the date")
+            input.input-text__input.input-text__input_date(id="range-datepicker" data-range="true" placeholder=placeholder)

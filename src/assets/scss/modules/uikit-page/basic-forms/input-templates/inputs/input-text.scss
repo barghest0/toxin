@@ -20,6 +20,7 @@
         position: relative;
         height: 44px;
         border-radius: 4px;
+
         background-color: $white;
         &_send-email {
             display: flex;
@@ -51,7 +52,7 @@
     &__input {
         height: 44px;
         width: 100%;
-        padding: 13px 15px;
+        padding: 0 15px;
 
         border: none;
         border: 1px solid $shadow-25;
@@ -62,6 +63,8 @@
 
         &::placeholder {
             color: $shadow-25;
+
+            
         }
         &:hover {
             border: 1px solid $shadow-50;

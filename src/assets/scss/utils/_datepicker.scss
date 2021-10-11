@@ -169,17 +169,24 @@
     }
 
     &_md {
-        padding: 7px;
+        padding: 15px;
         @include size(266px, 300px);
         .datepicker--content {
             margin-bottom: 10px;
+            padding: 0 12px;
         }
+
+        .datepicker--day-name {
+            @include size(30px);
+        }
+
         .datepicker--nav {
             margin-bottom: 10px;
             &-action svg {
                 @include size(18px);
             }
         }
+
         .datepicker--cell {
             &-day {
                 @include size(30px);

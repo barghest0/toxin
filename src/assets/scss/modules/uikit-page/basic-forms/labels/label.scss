@@ -15,6 +15,7 @@
     &_checkbox-list {
         cursor: pointer;
         position: relative;
+
         &::before {
             border-bottom: 2px solid rgba(31, 32, 67, 0.5);
             border-left: 2px solid rgba(31, 32, 67, 0.5);
@@ -26,6 +27,7 @@
             -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
             width: 8px;
+            right: 20px;
         }
         &.active::before {
             -webkit-transform: rotate(135deg);

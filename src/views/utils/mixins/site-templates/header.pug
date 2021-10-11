@@ -5,7 +5,8 @@ mixin header(isLogin=false,name=null)
         .container
             .header__inner(class=isLogin ? 'header__inner_login' : null)
                 .header__logo
-                    img(src="../../assets/img/Logo.png", alt="logo")
+                    a(href='/')
+                        img(src="../../assets/img/Logo.png", alt="logo")
                 nav.header__nav.nav
                     a(href="/aboutUs").nav__item О нас
                     ul.nav__item.nav__item_list Услуги
