@@ -1,6 +1,7 @@
 .footer {
     box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
     background-color: $white;
+    border-top: 1px solid #e5e5e5;
     &__top {
         display: flex;
         justify-content: space-between;

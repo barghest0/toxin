@@ -1,0 +1,69 @@
+.room {
+    &__intro {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__second-image {
+        height: calc(485px / 2);
+    }
+
+    &__second-images {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__inner {
+        padding: 70px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__review {
+        display: grid;
+        grid-template-columns: 290px 350px;
+        grid-template-rows: 300px 300px 160px;
+        justify-content: space-between;
+        grid-template-areas:
+            'about impressions'
+            'feedbacks feedbacks'
+            'rules cancel';
+        grid-column-gap: 80px;
+        grid-row-gap: 30px;
+    }
+
+    &__about {
+        grid-area: about;
+    }
+
+    &__impressions {
+        &-chart {
+            @include size(280px);
+            margin-top: -60px;
+        }
+        grid-area: impressions;
+    }
+    &__feedbacks {
+        grid-area: feedbacks;
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+        &-header {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__rules {
+        grid-area: rules;
+    }
+    &__cancel {
+        grid-area: cancel;
+
+        &-info {
+            line-height: 1.7;
+        }
+    }
+}

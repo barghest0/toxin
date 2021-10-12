@@ -53,6 +53,7 @@
     "dependencies": {
         "air-datepicker": "^2.2.3",
         "bootpag": "^1.0.7",
+        "chart.js": "^3.5.1",
         "i": "^0.3.7",
         "item-quantity-dropdown": "^2.1.0",
         "jquery": "^3.6.0",

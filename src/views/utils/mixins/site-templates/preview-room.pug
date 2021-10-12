@@ -1,5 +1,5 @@
 mixin previewRoom(img,roomNumber,price,isLuxury,isSmall,reviews,rate)
-    .card.card_preview-room
+    a(href="/room.html").card.card_preview-room
         +roomImg(img)
         .card__preview-room-content
             +roomHeader(roomNumber,price,isLuxury,true)

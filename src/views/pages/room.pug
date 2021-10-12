@@ -1,0 +1,39 @@
+extends ../layout/room-layout.pug
+
+
+
+block room 
+    .room
+        .room__intro
+            .room__main-images
+                img(src="../../assets/img/MainImageRoom.jpg", alt="Room photo").room__main-image
+            .room__second-images    
+                img(src="../../assets/img/SecondImageRoom1.jpg", alt="Room photo").room__second-image
+                img(src="../../assets/img/SecondImageRoom2.jpg", alt="Room photo").room__second-image
+        .container 
+            .room__inner 
+                .room__review 
+                    .room__about
+                       .label.label_mb_20.label_md  Сведения о номере
+                       +reviewList([{img:'../../../assets/img/ReviewImage1.svg',alt:'Комфорт',title:'Комфорт',desc:'Шумопоглощающие стены'},{img:'../../../assets/img/ReviewImage2.svg', alt:'Комфорт',title:'Удобство',desc:'Окно в каждой из спален'},{img:'../../../assets/img/ReviewImage3.svg', alt:'Уют',title:'Уют',desc:'Номер оснащён камином'}])
+                    .room__impressions
+                       .label.label_mb_20.label_md Впечатления от номера
+                       .room__impressions-chart
+                           canvas#impressions()
+                    .room__feedbacks
+                        .room__feedbacks-header
+                            .label.label_mb_20.label_md Отзывы посетителей номера
+                            .room__feedbacks-count 2 отзыва
+                        .room__feedbacks-items
+                            .room__feedbacks-item
+                                +feedback({avatar:'../../../assets/img/Avatar.svg',alt:'Аватар',name:'Мурад Сарафанов',lastVisit:'5 дней назад',    likesCount:'12',comment:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,    действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})  
+                            .room__feedbacks-item    
+                                +feedback({avatar:'../../../assets/img/Avatar.svg',alt:'Аватар',name:'Патрисия Стёклышкова',lastVisit:'Неделю назад',  likesCount:'2',comment:'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})  
+                    .room__rules            
+                        .label.label_mb_20.label_md Правила
+                        +bulletList(['Нельзя с питомцами','Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+                    .room__cancel
+                        .label.label_mb_20.label_md Отмена
+                        .room__cancel-info Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+                .room__booking
+                    include ../templates/card-templates/booking-card-template.pug

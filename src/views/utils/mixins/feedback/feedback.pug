@@ -10,5 +10,5 @@ mixin feedback(data)
                 .feedback-item__user-visit=data['lastVisit']
         .feedback-item__content
             .feedback-item__like
-                +inputLike(12)
+                +inputLike(data['likesCount'])
             .feedback-item__text=data['comment']

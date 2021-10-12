@@ -5,6 +5,10 @@
         margin-bottom: 10px;
     }
 
+    &__title {
+        text-align: center;
+    }
+
     &__item {
         cursor: pointer;
         color: $shadow-50;
