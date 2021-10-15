@@ -14,10 +14,10 @@ mixin header(isLogin=false,name=null)
                     a(href="/news").nav__item Новости
                     ul.nav__item.nav__item_list Соглашения
                     if isLogin
-                        a(href="/profile").nav__item.nav__item_profile=name
+                        a(href="/profile.html").nav__item.nav__item_profile=name
                     else
-                        a(href="/login").nav__item
+                        a(href="/login.html").nav__item
                             +inputBorderButton('Войти')
-                        a(href="/register").nav__item
+                        a(href="/register.html").nav__item
                             +inputBorderButton('Зарегистрироваться',false,true)
                 
