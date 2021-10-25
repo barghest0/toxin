@@ -2,4 +2,21 @@
 
 
 mixin roomImg(img)
-    .card__img(style=`background:url(${img})`)
+    .swiper
+        .swiper-wrapper
+            .swiper-slide 
+                img.card__img(src=img)
+            .swiper-slide 
+                img.card__img(src=img)
+            .swiper-slide 
+                img.card__img(src=img)
+            .swiper-slide 
+                img.card__img(src=img)
+        .swiper-button-next 
+        .swiper-button-prev 
+        .swiper-pagination
+            span.swiper-pagination-bullet.swiper-pagination-bullet-active
+            span.swiper-pagination-bullet
+            span.swiper-pagination-bullet
+            span.swiper-pagination-bullet
+        

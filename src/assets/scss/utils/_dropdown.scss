@@ -1,3 +1,7 @@
+.iqdropdown {
+    border: 1px solid $shadow-25;
+}
+
 .iqdropdown.menu-open {
     border-color: $shadow-50;
     z-index: 50;

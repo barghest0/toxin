@@ -1,6 +1,8 @@
 extends ../layout/catalog-layout.pug
 
 
+
+
 block catalog
     .catalog
         .container
@@ -26,17 +28,19 @@ block catalog
                 .catalog__rooms 
                     .catalog__title Номера, которые мы для вас подобрали
                     .catalog__rooms-inner
-                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
-                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
-                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
-                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
-                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
-                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
-                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
-                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
-                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
-                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
-                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
-                        +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145,5)
+                        +previewRoom([
+                            {img: '../../assets/img/Preview-room1.png',number: 888,price: 9990,isLuxury: true, feedbacks: 145,rate: 5},
+                            {img: '../../assets/img/Preview-room2.png',number: 840,price: 9990,isLuxury: false,feedbacks: 65,rate: 4},
+                            {img: '../../assets/img/Preview-room3.png',number: 980,price: 8500,isLuxury: true,feedbacks: 35,rate: 3},
+                            {img: '../../assets/img/Preview-room1.png',number: 888,price: 9990,isLuxury: true, feedbacks: 145,rate: 5},
+                            {img: '../../assets/img/Preview-room2.png',number: 840,price: 9990,isLuxury: false,feedbacks: 65,rate: 4},
+                            {img: '../../assets/img/Preview-room3.png',number: 980,price: 8500,isLuxury: true,feedbacks: 35,rate: 3},
+                            {img: '../../assets/img/Preview-room1.png',number: 888,price: 9990,isLuxury: true, feedbacks: 145,rate: 5},
+                            {img: '../../assets/img/Preview-room2.png',number: 840,price: 9990,isLuxury: false,feedbacks: 65,rate: 4},
+                            {img: '../../assets/img/Preview-room3.png',number: 980,price: 8500,isLuxury: true,feedbacks: 35,rate: 3},
+                            {img: '../../assets/img/Preview-room1.png',number: 888,price: 9990,isLuxury: true, feedbacks: 145,rate: 5},
+                            {img: '../../assets/img/Preview-room2.png',number: 840,price: 9990,isLuxury: false,feedbacks: 65,rate: 4},
+                            {img: '../../assets/img/Preview-room3.png',number: 980,price: 8500,isLuxury: true,feedbacks: 35,rate: 3},
+                            ])
                     .catalog__pagination
                         +pagination()   

@@ -55,5 +55,8 @@ const chart = new Chart(ctx, {
         },
     ],
 })
-chart.canvas.parentNode.style.height = '120px'
-chart.canvas.parentNode.style.width = '120px'
+
+if (chart.canvas) {
+    chart.canvas.parentNode.style.height = '120px'
+    chart.canvas.parentNode.style.width = '120px'
+}

@@ -1,6 +1,17 @@
-mixin previewRoom(img,roomNumber,price,isLuxury,isSmall,reviews,rate)
-    a(href="/room.html").card.card_preview-room
-        +roomImg(img)
-        .card__preview-room-content
-            +roomHeader(roomNumber,price,isLuxury,true)
-            +roomFeedback('feedback-rate',reviews,rate)
+- let feedbackRateId = 0
+mixin previewRoom(data)
+    each item in data
+        a(href="/room.html").card.card_preview-room
+            +roomImg(item['img'])
+            .card__preview-room-content
+                +roomHeader(item['number'],item['price'],item['isLuxury'],true)
+                +roomFeedback(`feedback-rate${++feedbackRateId}`, item['feedbacks'] , item['rate'])
+
+
+
+
+
+
+
+
+    
