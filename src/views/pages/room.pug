@@ -19,7 +19,12 @@ block room
                     .room__impressions
                        .label.label_mb_20.label_md Впечатления от номера
                        .room__impressions-chart
-                           canvas#impressions()
+                            canvas(width="100px" hight="100px")#impressions()
+                            .room__impressions-votes#impressions-votes()
+                                .room__impressions-vote.room__impressions-vote_great Великолепно
+                                .room__impressions-vote.room__impressions-vote_good Хорошо
+                                .room__impressions-vote.room__impressions-vote_satisfied Удовлетворительно
+                                .room__impressions-vote.room__impressions-vote_disappointed Разочарован
                     .room__feedbacks
                         .room__feedbacks-header
                             .label.label_mb_20.label_md Отзывы посетителей номера

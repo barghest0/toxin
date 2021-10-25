@@ -25,9 +25,9 @@
         grid-template-rows: 300px 300px 160px;
         justify-content: space-between;
         grid-template-areas:
-            'about impressions'
-            'feedbacks feedbacks'
-            'rules cancel';
+            "about impressions"
+            "feedbacks feedbacks"
+            "rules cancel";
         grid-column-gap: 80px;
         grid-row-gap: 30px;
     }
@@ -37,10 +37,53 @@
     }
 
     &__impressions {
+        justify-self: center;
+        width: 100%;
         &-chart {
-            @include size(280px);
-            margin-top: -60px;
+            display: flex;
         }
+        &-votes {
+            align-self: flex-end;
+            margin-left: 30px;
+            padding-bottom: 5px;
+        }
+        &-vote {
+            list-style-type: none;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+            width: 170px;
+            &::before {
+                content: "";
+                display: inline-block;
+                background-color: #000;
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+                margin-right: 10px;
+            }
+            &_great {
+                &::before {
+                    background: linear-gradient(to bottom, #ffe39c, #ffba9c);
+                }
+            }
+            &_good {
+                &::before {
+                    background: linear-gradient(to bottom, #6FCF97, #66D2EA);
+                }
+            }
+            &_satisfied {
+                &::before {
+                    background: linear-gradient(to bottom, #BC9CFF, #8BA4F9);
+                }
+            }
+            &_disappointed {
+                &::before {
+                    background: linear-gradient(to bottom, #909090, #3D4975);
+                }
+            }
+        }
+
         grid-area: impressions;
     }
     &__feedbacks {
