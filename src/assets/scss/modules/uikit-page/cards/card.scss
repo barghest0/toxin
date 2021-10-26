@@ -128,8 +128,33 @@
 
     &__img {
         border-radius: 4px 4px 0 0;
-        height: 150px;
+        display: block;
         width: 100%;
+        transition: opacity 0.2s linear;
+        opacity: 1;
+    }
+
+    .card__preview-img {
+        border-radius: 4px 4px 0 0;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0) 50%,
+            rgba(0, 0, 0, 1) 100%
+        );
+    }
+
+    .swiper:hover {
+        .card__img {
+            opacity: 0.85;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            opacity: 1;
+            pointer-events: all;
+        }
     }
 
     &__preview-room-content {

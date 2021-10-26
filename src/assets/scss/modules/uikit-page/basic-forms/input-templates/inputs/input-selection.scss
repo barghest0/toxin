@@ -11,7 +11,10 @@
     &_checkbox-list {
         max-height: 0;
         overflow: hidden;
-        transition: all 0.4s linear;
+
+        &.active {
+            max-height: 100%;
+        }
 
         &:not(:last-child) {
             margin-bottom: 20px;

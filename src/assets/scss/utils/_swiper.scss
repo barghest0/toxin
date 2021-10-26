@@ -21,4 +21,11 @@
         font-size: 14px;
         font-weight: bold;
     }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        transition: 0.2s linear;
+        opacity: 0;
+        pointer-events: none;
+    }
 }
