@@ -1,19 +1,19 @@
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min'
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css'
+let test = 0
 
 $('.guests').iqDropdown({
     maxItems: 20,
-    setSelectionText: (itemCount, totalItems) => {
+    setSelectionText: function (itemCount, totalItems) {
         if (!totalItems) {
-            $('.button-decrement').prop('disabled', true)
             return `Сколько гостей`
         } else {
             $('input[name=guests]').val(
                 itemCount['adult'] + itemCount['child'] + itemCount['newborns']
             )
-            $('.guests').find('.button-decrement').prop('disabled', false)
         }
 
+        console.log(this)
         let resString =
             itemCount['adult'] + itemCount['child'] + itemCount['newborns']
         if (totalItems[totalItems.length - 1] == 1 || totalItems == 1) {
@@ -42,10 +42,7 @@ $('.apartments').iqDropdown({
     maxItems: 20,
     setSelectionText: (itemCount, totalItems) => {
         if (!totalItems) {
-            $('.button-decrement').prop('disabled', true)
             return `Сколько комнат`
-        } else {
-            $('.apartments').find('.button-decrement').prop('disabled', false)
         }
         let res = []
         for (const key in itemCount) {
@@ -69,3 +66,22 @@ $('.iqdropdown-button, .button-increment, .button-decrement').prop(
     'type',
     'button'
 )
+
+$('.button-decrement').prop('disabled', true)
+
+$('.button-increment').on('click', function () {
+    if ($(this).prev().html() > 0) {
+        $(this).prev().prev().prop('disabled', false)
+    }
+})
+$('.button-decrement').on('click', function () {
+    if ($(this).next().html() == 0) {
+        $(this).prop('disabled', true)
+    }
+})
+
+$('.iqdropdown-button_clear').on('click', function () {
+    $('.counter').html(0)
+    $('.button-decrement').prop('disabled', true)
+    $('.iqdropdown-selection').html('Сколько гостей')
+})

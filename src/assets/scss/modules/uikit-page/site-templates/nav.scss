@@ -1,5 +1,7 @@
 .nav {
     display: flex;
+
+   
     &__item {
         cursor: pointer;
         position: relative;
@@ -7,6 +9,7 @@
         text-decoration: none;
         &:not(:last-child) {
             margin-right: 20px;
+            
         }
         display: flex;
         align-items: center;

@@ -5,11 +5,12 @@ extends ../layout/room-layout.pug
 block room 
     .room
         .room__intro
-            .room__main-images
-                img(src="../../assets/img/MainImageRoom.jpg", alt="Room photo").room__main-image
-            .room__second-images    
-                img(src="../../assets/img/SecondImageRoom1.jpg", alt="Room photo").room__second-image
-                img(src="../../assets/img/SecondImageRoom2.jpg", alt="Room photo").room__second-image
+            .room__main-image
+                img(src="../../assets/img/MainImageRoom.jpg", alt="Room photo")
+            .room__second-image.room__second-image_top
+                img(src="../../assets/img/SecondImageRoom1.jpg", alt="Room photo")
+            .room__second-image.room__second-image_bottom
+                img(src="../../assets/img/SecondImageRoom2.jpg", alt="Room photo")
         .container 
             .room__inner 
                 .room__review 

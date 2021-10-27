@@ -51,7 +51,7 @@ $('.datepicker--buttons').append(
 )
 
 $('.datepicker--button_close').on('click', () => {
-    $('.input-item__field_date').blur()
+    $('.input-text__input_date').blur()
     $('.datepicker').toggleClass('active')
 })
 

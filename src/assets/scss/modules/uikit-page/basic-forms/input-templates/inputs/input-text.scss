@@ -1,5 +1,5 @@
 .input-text {
-    width: 320px;
+    max-width: 320px;
     display: flex;
     flex-direction: column;
     &_range-date {
@@ -7,18 +7,18 @@
     }
 
     &_lg {
-        width: 320px;
+        max-width: 320px;
     }
     &_md {
-        width: 266px;
+        max-width: 266px;
     }
     &_sm {
-        width: 150px;
+        max-width: 150px;
     }
 
     &__field {
         position: relative;
-        height: 44px;
+        height: 45px;
         border-radius: 4px;
 
         background-color: $white;
@@ -38,6 +38,7 @@
             &::after {
                 content: '';
                 position: absolute;
+                pointer-events: none;
                 cursor: pointer;
                 width: 8px;
                 height: 8px;
@@ -50,7 +51,7 @@
     }
 
     &__input {
-        height: 44px;
+        height: 45px;
         width: 100%;
         padding: 0 15px;
 
@@ -63,8 +64,6 @@
 
         &::placeholder {
             color: $shadow-25;
-
-            
         }
         &:hover {
             border: 1px solid $shadow-50;

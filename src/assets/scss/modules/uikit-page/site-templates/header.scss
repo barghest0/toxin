@@ -1,24 +1,40 @@
 .header {
     width: 100%;
-    padding: 13px 0;
+    padding: 15px 0;
     background-color: $white;
-    height: 70px;
     box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
 
     &_login {
-        padding: 20px 0;
+        padding: 15px 0;
     }
     &__logo {
         display: flex;
         align-items: center;
+        a {
+            height: 40px;
+        }
     }
     &__inner {
         display: flex;
         justify-content: space-between;
         background-color: $white;
+    }
 
-        &_login {
-            height: 30px;
+    &__nav {
+        @include tablet-landscape {
+            display: none;
+        }
+    }
+
+    &__burger {
+        display: none;
+
+        @include tablet-landscape {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 70px;
         }
     }
 }

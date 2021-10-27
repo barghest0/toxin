@@ -7,7 +7,6 @@
 @import './utils/_dropdown';
 @import './utils/_swiper';
 
-
 //------------------UIKIT IMPORTS--------------
 
 @import './modules/uikit-page/basic-forms/basic-forms.scss';
@@ -54,7 +53,7 @@ html {
 }
 
 .container {
-    max-width: 1180px;
-    padding: 0 10px;
+    max-width: 1200px;
+    padding: 0 20px;
     margin: 0 auto;
 }
