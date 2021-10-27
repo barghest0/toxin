@@ -1,51 +1,117 @@
 .room {
     &__intro {
-        display: flex;
-        justify-content: center;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 65% 35%;
+        grid-template-rows: repeat(2, minmax(min-content, 100px));
+        grid-template-areas:
+            'main-image second-image-top'
+            'main-image second-image-bottom';
+        @include tablet-portrait {
+            grid-template-areas: 'main-image main-image';
+        }
+    }
+
+    &__main-image {
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+        grid-area: main-image;
     }
 
     &__second-image {
-        height: calc(485px / 2);
-    }
+        & img {
+            width: 100%;
+            display: block;
+        }
 
-    &__second-images {
-        display: flex;
-        flex-direction: column;
+        &_bottom {
+            grid-area: second-image-bottom;
+        }
+
+        &_top {
+            grid-area: second-image-top;
+        }
     }
 
     &__inner {
         padding: 70px 0;
         display: flex;
-        justify-content: space-between;
+        column-gap: 70px;
+
+        @include tablet-landscape {
+            padding: 40px 0;
+            flex-direction: column;
+        }
     }
 
     &__review {
         display: grid;
-        grid-template-columns: 290px 350px;
-        grid-template-rows: 300px 300px 160px;
+        grid-template-columns: minmax(min-content, 290px) minmax(
+                min-content,
+                350px
+            );
+        grid-template-rows: repeat(2, minmax(min-content, 300px));
         justify-content: space-between;
         grid-template-areas:
-            "about impressions"
-            "feedbacks feedbacks"
-            "rules cancel";
+            'about impressions'
+            'feedbacks feedbacks'
+            'rules cancel';
         grid-column-gap: 80px;
         grid-row-gap: 30px;
+
+        @include phone {
+            grid-column-gap: 40px;
+            grid-template-areas:
+                'about about'
+                'impressions impressions'
+                'feedbacks feedbacks'
+                'rules rules'
+                'cancel cancel';
+        }
     }
 
     &__about {
+        justify-self: center;
         grid-area: about;
     }
 
+    &__booking {
+        @include tablet-landscape {
+            margin-top: 30px;
+            align-self: center;
+        }
+    }
+
     &__impressions {
-        justify-self: center;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-self: start;
+        align-items: flex-start;
+        @include phone {
+            align-items: center;
+        }
+        @include md-desktop {
+            align-items: center;
+        }
         &-chart {
             display: flex;
+            @include md-desktop {
+                flex-direction: column;
+            }
         }
         &-votes {
             align-self: flex-end;
-            margin-left: 30px;
+
+            margin-left: 10%;
             padding-bottom: 5px;
+            @include md-desktop {
+                align-self: start;
+                margin-top: 10px;
+                margin-left: 0;
+            }
         }
         &-vote {
             list-style-type: none;
@@ -54,7 +120,7 @@
             }
             width: 170px;
             &::before {
-                content: "";
+                content: '';
                 display: inline-block;
                 background-color: #000;
                 border-radius: 50%;
@@ -69,17 +135,17 @@
             }
             &_good {
                 &::before {
-                    background: linear-gradient(to bottom, #6FCF97, #66D2EA);
+                    background: linear-gradient(to bottom, #6fcf97, #66d2ea);
                 }
             }
             &_satisfied {
                 &::before {
-                    background: linear-gradient(to bottom, #BC9CFF, #8BA4F9);
+                    background: linear-gradient(to bottom, #bc9cff, #8ba4f9);
                 }
             }
             &_disappointed {
                 &::before {
-                    background: linear-gradient(to bottom, #909090, #3D4975);
+                    background: linear-gradient(to bottom, #909090, #3d4975);
                 }
             }
         }
@@ -96,6 +162,10 @@
         &-header {
             display: flex;
             justify-content: space-between;
+        }
+
+        &-count {
+            text-align: center;
         }
     }
 

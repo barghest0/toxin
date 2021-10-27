@@ -4,7 +4,10 @@
     &__inner {
         display: grid;
         grid-template-columns: 266px 1fr;
-        grid-column-gap: 60px;
+        grid-column-gap: 5%;
+        @include tablet-portrait {
+            display: block;
+        }
     }
     &__title {
         font-size: 24px;
@@ -14,6 +17,9 @@
     }
 
     &__filters {
+        @include tablet-portrait {
+            display: none;
+        }
         &-item {
             margin-bottom: 30px;
 
@@ -28,14 +34,18 @@
         margin-top: 10px;
     }
 
-    &__rooms-inner {
+    &__rooms {
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 270px));
-        grid-template-rows: repeat(auto-fill, minmax(200px, 254px));
-        grid-column-gap: 10px;
-        grid-row-gap: 20px;
-        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        &-inner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+            grid-column-gap: 10px;
+            grid-row-gap: 20px;
+            margin-bottom: 40px;
+        }
     }
 
     &__pagination {

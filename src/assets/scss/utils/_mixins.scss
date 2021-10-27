@@ -28,3 +28,31 @@
 ) {
     background: linear-gradient(to bottom, $color, $second-color);
 }
+
+@mixin phone {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+@mixin tablet-portrait {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin tablet-landscape {
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin sm-desktop {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin md-desktop {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}

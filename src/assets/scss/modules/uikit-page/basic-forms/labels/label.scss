@@ -4,6 +4,7 @@
     text-transform: uppercase;
     margin-bottom: 5px;
     color: $shadow-100;
+
     &_mb_16 {
         margin-bottom: 16px;
     }
@@ -15,6 +16,9 @@
     &_md {
         font-size: 19px;
         text-transform: initial;
+        @include sm-desktop {
+            font-size: 16px;
+        }
     }
 
     &_checkbox-list {

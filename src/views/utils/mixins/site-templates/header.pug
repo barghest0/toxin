@@ -17,7 +17,8 @@ mixin header(isLogin=false,name=null)
                         a(href="/profile.html").nav__item.nav__item_profile=name
                     else
                         a(href="/login.html").nav__item
-                            +inputBorderButton('Войти')
+                            +inputBorderButton('Войти',true,false,true)
                         a(href="/register.html").nav__item
-                            +inputBorderButton('Зарегистрироваться',false,true)
-                
+                            +inputBorderButton('Зарегистрироваться',false,true,true)
+                .header__burger
+                    .header__burger-block Burger

@@ -35,15 +35,24 @@ block basic-forms
 block cards 
     .cards
         .cards__first-block 
-            include ../templates/card-templates/search-room-card-template.pug
-            include ../templates/card-templates/register-card-template.pug
-        .cards__second-block     
-            include ../templates/card-templates/booking-card-template.pug
-            include ../templates/card-templates/login-card-template.pug
-        .cards__third-block    
-            include ../templates/card-templates/datepicker-card-template.pug
-            +previewRoom('../../assets/img/Preview-room1.png',888,9990,true,true,145)
-            +previewRoom('../../assets/img/Preview-room2.png',840,9990,false,true,65)
+            .cards__item
+                include ../templates/card-templates/search-room-card-template.pug
+            .cards__item
+                include ../templates/card-templates/register-card-template.pug
+        .cards__second-block   
+            .cards__item  
+                include ../templates/card-templates/booking-card-template.pug
+            .cards__item  
+                include ../templates/card-templates/login-card-template.pug
+        .cards__third-block
+            .cards__item  
+                include ../templates/card-templates/datepicker-card-template.pug
+            .cards__item.cards__item_preview-room
+                +previewRoom([
+                    {img: '../../assets/img/Preview-room1.png',number: 888,price: 9990,isLuxury: true, feedbacks: 145,rate: 5},
+                    {img: '../../assets/img/Preview-room2.png',number: 840,price: 9990,isLuxury: false,feedbacks: 65,rate: 4}
+                ])
+            
             
 
 

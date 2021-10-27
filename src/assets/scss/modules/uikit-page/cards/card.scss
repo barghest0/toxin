@@ -1,20 +1,21 @@
 .card {
-    width: 380px;
+    &:not(&_preview-room) {
+        width: 380px;
+        padding: 30px;
+        padding-top: 40px;
+    }
+
+    @include md-desktop {
+        &:not(&_preview-room) {
+            width: 350px;
+        }
+    }
     text-decoration: none;
     color: inherit;
-    padding: 30px;
-    padding-top: 40px;
     background-color: $white;
-    // &:not(:last-child) {
-    //     margin-bottom: 40px;
-    // }
+
     box-shadow: 0 0 25px rgba($color: $black, $alpha: 0.2);
     border-radius: 4px;
-
-    &_preview-room {
-        width: 270px;
-        padding: 0;
-    }
 
     &_datepicker {
         width: auto;
@@ -68,6 +69,9 @@
     }
 
     &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &_account {
             margin-bottom: 30px;
         }
@@ -119,7 +123,7 @@
     }
     &__points {
         border-bottom: 1px dotted $shadow-25;
-        width: 180px;
+        max-width: 180px;
     }
 
     &__expenses {
@@ -134,7 +138,7 @@
         opacity: 1;
     }
 
-    .card__preview-img {
+    &__preview-img {
         border-radius: 4px 4px 0 0;
         background: rgb(0, 0, 0);
         background: linear-gradient(
@@ -157,8 +161,13 @@
         }
     }
 
-    &__preview-room-content {
-        padding: 20px;
+    &__preview-room {
+        width: inherit;
+        height: inherit;
+
+        &-content {
+            padding: 20px;
+        }
     }
 
     &__feedback {

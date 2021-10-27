@@ -2,8 +2,7 @@
     font-weight: bold;
     border: none;
     border-radius: 22px;
-    width: 100px;
-    height: 44px;
+    height: 45px;
     justify-self: center;
     padding: 0;
     @include main-gradient-to-bottom;
@@ -29,9 +28,16 @@
         background: #fff;
         color: $main-color;
         position: relative;
-        width: 96px;
-        height: 40px;
+        width: 100px;
         border: 2px solid $main-color;
+        &.input-button_in-header {
+            width: 85px;
+            height: 40px;
+
+            &::before {
+                display: none;
+            }
+        }
         &:hover {
             background: $white;
             opacity: 0.5;
@@ -43,7 +49,7 @@
     }
 
     &_no-bordered {
-        width: 65px;
+        width: 60px;
         height: 15px;
         background: transparent;
         color: $main-color;
@@ -57,10 +63,20 @@
     &_long {
         width: 320px;
         position: relative;
+
+        &.input-button_in-header {
+            width: 200px;
+            height: 40px;
+
+            &::before {
+                display: none;
+            }
+        }
+
         &::before {
             content: '';
-            width: 44px;
-            height: 44px;
+            width: 45px;
+            height: 45px;
             position: absolute;
             top: 50%;
             right: 0;
