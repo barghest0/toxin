@@ -5,11 +5,6 @@
         padding-top: 40px;
     }
 
-    @include md-desktop {
-        &:not(&_preview-room) {
-            width: 350px;
-        }
-    }
     text-decoration: none;
     color: inherit;
     background-color: $white;
@@ -22,10 +17,6 @@
         padding: 0;
     }
     &__title {
-        font-size: 24px;
-        font-weight: bold;
-        color: $shadow-100;
-
         & .number {
             font-size: 12px;
         }
@@ -174,5 +165,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    @include sm-desktop {
+        &:not(&_preview-room) {
+            width: 320px;
+            padding: 20px;
+        }
     }
 }

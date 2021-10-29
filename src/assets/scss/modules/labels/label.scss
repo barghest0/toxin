@@ -1,9 +1,23 @@
+h1.title {
+    font-size: 24px;
+    color: $shadow-100;
+}
+
+h2.title {
+    font-size: 19px;
+    color: $shadow-100;
+}
+
+label.label {
+    font-size: 12px;
+}
+
 .label {
     font-weight: bold;
-    font-size: 12px;
     text-transform: uppercase;
     margin-bottom: 5px;
     color: $shadow-100;
+    font-size: 12px;
 
     &_mb_16 {
         margin-bottom: 16px;

@@ -3,7 +3,7 @@
 
 mixin roomHeader(roomNumber,price,isLuxury,isSmall)
     .card__header(class=isSmall ? 'card__header_sm' :null)
-            .card__title(class=isSmall ? 'card__title_sm' :null)
+            h1.card__title.title(class=isSmall ? 'card__title_sm' :null)
                 span.number № 
                 =roomNumber
                 if isLuxury

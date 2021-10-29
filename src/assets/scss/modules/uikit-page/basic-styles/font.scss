@@ -1,6 +1,5 @@
 .font {
     display: grid;
-    // width: 475px;
     grid-template-columns: 40px 370px;
     grid-column-gap: 20px;
     margin-bottom: 40px;
@@ -32,6 +31,8 @@
     }
 
     &__tag {
+        font-size: inherit;
+        font-weight: normal;
         color: $shadow-25;
         justify-self: end;
         text-transform: uppercase;
