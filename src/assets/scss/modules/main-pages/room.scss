@@ -9,7 +9,7 @@
             'main-image second-image-bottom';
         @include tablet-portrait {
             grid-template-areas: 'main-image main-image';
-        grid-template-rows:  minmax(min-content, 100px);
+            grid-template-rows:  minmax(min-content, 100px);
 
         }
     }
