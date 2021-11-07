@@ -2,7 +2,7 @@
 import 'jquery'
 
 //JS
-import './js/'
+import './js/index'
 
 //CSS
 import './assets/css/main.css'

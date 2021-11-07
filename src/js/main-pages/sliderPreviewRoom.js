@@ -3,7 +3,6 @@ import Swiper from 'swiper'
 import 'swiper/css'
 import 'swiper/scss/pagination'
 import 'swiper/scss/navigation'
-
 import SwiperCore, { Pagination, Navigation } from 'swiper'
 
 SwiperCore.use([Pagination, Navigation])

@@ -40,20 +40,18 @@ mixin inputRadio(titles,name)
                     
 mixin inputRange(labelName)
     .input-range
-        .input-range__label.label.label_mb_20
+        h3.input-range__label.label.label_mb_20
             label.input-range__label-name(for="price")=labelName
             label.input-range__value(for="price" id="price")
                 span#initialValue 5000₽
                 span  &dash; 
                 span#finalValue 10000₽
-        .input-range__multi-range
-            .input-range__multi-range-track
-            input(type="range" min="0" max="15000" name="price" step="100" id="price" value="5000").input-range__initial-value
-            input(type="range" min="0" max="15000" name="price" step="100" id="price" value="10000").input-range__final-value
+        input(type="text" name="price"  id="price-slider" ).input-range__track 
+
 
 mixin inputCheckbox(names,isOpening)
     if isOpening
-        .label.label_mb_16(class=isOpening ? 'label_checkbox-list' : null) expandable checkbox list
+        h3.label.label_mb_16(class=isOpening ? 'label_checkbox-list' : null) expandable checkbox list
     .input-selection.input-selection_checkbox(class=isOpening ? 'input-selection_checkbox-list' : null)
         each title, name in names
                 label(for=`checkbox${++idCheckbox}`).input-selection__item.input-selection__item_checkbox

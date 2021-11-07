@@ -4,21 +4,22 @@ Chart.register(...registerables)
 
 const ctx = document.querySelector('#impressions').getContext('2d')
 
-const purpleGradient = ctx.createLinearGradient(0, 0, 0, 200)
-purpleGradient.addColorStop(0, '#BC9CFF')
-purpleGradient.addColorStop(1, '#8BA4F9')
+    const purpleGradient = ctx.createLinearGradient(0, 0, 0, 200)
+    purpleGradient.addColorStop(0, '#BC9CFF')
+    purpleGradient.addColorStop(1, '#8BA4F9')
 
-const greenGradient = ctx.createLinearGradient(0, 0, 0, 200)
-greenGradient.addColorStop(0, '#6FCF97')
-greenGradient.addColorStop(1, '#66D2EA')
+    const greenGradient = ctx.createLinearGradient(0, 0, 0, 200)
+    greenGradient.addColorStop(0, '#6FCF97')
+    greenGradient.addColorStop(1, '#66D2EA')
 
-const yellowGradient = ctx.createLinearGradient(0, 0, 0, 200)
-yellowGradient.addColorStop(0, '#FFE39C')
-yellowGradient.addColorStop(1, '#FFBA9C')
+    const yellowGradient = ctx.createLinearGradient(0, 0, 0, 200)
+    yellowGradient.addColorStop(0, '#FFE39C')
+    yellowGradient.addColorStop(1, '#FFBA9C')
 
-const blackGradient = ctx.createLinearGradient(0, 0, 0, 200)
-blackGradient.addColorStop(0, '#909090')
-blackGradient.addColorStop(1, '#3D4975')
+    const blackGradient = ctx.createLinearGradient(0, 0, 0, 200)
+    blackGradient.addColorStop(0, '#909090')
+    blackGradient.addColorStop(1, '#3D4975')
+
 
 const votesCount = 260
 const data = {

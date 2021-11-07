@@ -1,0 +1,42 @@
+.irs {
+    width: 266px;
+    height: 10px;
+}
+
+.irs--round .irs-line {
+    top: 0;
+    background-color: $white;
+    border: 1px solid $shadow-25;
+    height: 6px;
+}
+
+.irs--round .irs-bar {
+    background: linear-gradient(to bottom, #6fcf97, #66d2e8);
+    height: 6px;
+    top: 0;
+}
+
+.irs--round .irs-handle {
+    @include second-gradient-to-bottom;
+    border: 2px solid $white;
+    box-shadow: none;
+}
+
+.irs--round .irs-handle.state_hover,
+.irs--round .irs-handle:hover {
+    background-color: #00c2c0;
+}
+
+.irs--round .irs-handle {
+    width: 16px;
+    height: 16px;
+    top: -5px;
+}
+
+.irs--round .irs-from:before,
+.irs--round .irs-to:before,
+.irs--round .irs-single:before,
+.irs--round .irs-min,
+.irs--round .irs-max {
+    display: none;
+}

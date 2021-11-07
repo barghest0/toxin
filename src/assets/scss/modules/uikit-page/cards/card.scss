@@ -1,9 +1,7 @@
 .card {
-    &:not(&_preview-room) {
-        width: 380px;
-        padding: 30px;
-        padding-top: 40px;
-    }
+    width: 380px;
+    padding: 30px;
+    padding-top: 40px;
 
     text-decoration: none;
     color: inherit;
@@ -12,10 +10,15 @@
     box-shadow: 0 0 25px rgba($color: $black, $alpha: 0.2);
     border-radius: 4px;
 
+    &_preview-room {
+        width: auto;
+        padding: 0;
+    }
     &_datepicker {
         width: auto;
         padding: 0;
     }
+
     &__title {
         & .number {
             font-size: 12px;
@@ -168,9 +171,9 @@
     }
 
     @include sm-desktop {
-        &:not(&_preview-room) {
-            width: 320px;
-            padding: 20px;
-        }
+        width: 320px;
+        padding: 20px;
+
+
     }
 }

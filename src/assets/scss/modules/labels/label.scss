@@ -40,8 +40,8 @@ label.label {
         position: relative;
 
         &::before {
-            border-bottom: 2px solid rgba(31, 32, 67, 0.5);
-            border-left: 2px solid rgba(31, 32, 67, 0.5);
+            border-bottom: 2px solid $shadow-50;
+            border-left: 2px solid $shadow-50;
             content: '';
             height: 8px;
             position: absolute;
