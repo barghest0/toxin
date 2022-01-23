@@ -1,1 +1,14 @@
 
+.bullet-list {
+    &__list {
+        padding-left: 16px;
+    }
+    &__item {
+        list-style-image: url('http://localhost:8080/assets/img/List-item.svg');
+        padding-inline-start: 1ch;
+        line-height: 2;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}

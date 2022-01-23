@@ -1,0 +1,103 @@
+.input-button {
+    font-weight: bold;
+    border: none;
+    border-radius: 22px;
+    height: 45px;
+    justify-self: center;
+    padding: 0;
+    width: 100%;
+    @include main-gradient-to-bottom;
+    color: $white;
+
+    cursor: pointer;
+
+    font-size: 12px;
+    text-transform: uppercase;
+
+    transition: 0.2s ease-in-out;
+
+    font-family: inherit;
+    &:hover {
+        @include main-gradient-to-bottom;
+        opacity: 0.5;
+    }
+    &:active {
+        opacity: 1;
+    }
+
+    &_empty {
+        color: $main-color;
+        position: relative;
+        width: 100px;
+        border: 2px solid transparent;
+        border-radius: 80px;
+        background-image: linear-gradient(white, white),
+            linear-gradient(to bottom, $main-color, $gradient-main-color);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        transition: all 0.1s linear;
+        &.input-button_in-header {
+            width: 85px;
+            height: 40px;
+
+            &::before {
+                display: none;
+            }
+        }
+        &:hover {
+            opacity: 0.8;
+            border: 2px solid transparent;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(white, white),
+                linear-gradient(
+                    to bottom,
+                    rgba($main-color, 0.5),
+                    rgba($gradient-main-color, 0.5)
+                );
+        }
+        &:active {
+            opacity: 1;
+        }
+    }
+
+    &_no-bordered {
+        width: 61px;
+        height: 15px;
+        background: transparent;
+        color: $main-color;
+        &:hover {
+            background: transparent;
+            font-weight: bold;
+            color: $shadow-50;
+        }
+    }
+
+    &_long {
+        width: 320px;
+        position: relative;
+
+        &.input-button_in-header {
+            width: 200px;
+            height: 40px;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: '';
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            z-index: 10;
+            transform: translate(0, -50%);
+            background: url('http://localhost:8080/assets/img/NextArrow.png')
+                no-repeat center;
+        }
+    }
+}
+

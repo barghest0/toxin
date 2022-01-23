@@ -8,7 +8,9 @@ block site-templates
         .site-templates__header
             +header(true,'Юлий Цезарь')
         .site-templates__footer
-            include ../templates/site-templates/footer-template.pug
+            +footer(true)
+        .site-templates__footer
+            +footer(false)
 
 
 block basic-styles

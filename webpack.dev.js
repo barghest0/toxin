@@ -11,10 +11,10 @@ const devConfig = merge(baseConfig, {
             directory: baseConfig.externals.path.dist,
             watch: true,
         },
+        watchFiles: ['src/**/*.pug', 'src/**/*.scss'],
         port: 8080,
         open: true,
     },
-
 })
 
 module.exports = new Promise((resolve, reject) => {
