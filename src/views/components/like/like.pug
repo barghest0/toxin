@@ -1,1 +1,7 @@
+- let idLike = 0
 
+mixin like(count)
+        label(for=`like${++idLike}`).input-selection__item.input-selection__item_like
+            input(type="checkbox" name='like' id=`like${idLike}`).input-selection__field
+            span.input-selection__field-custom.input-selection__field-custom_like
+                =count

@@ -1,0 +1,8 @@
+
+mixin reviewList(data)
+    each item in data
+        .review-item
+            img(src=item['img'], alt=item['alt']).review-item__img
+            .review-item__text
+                .review-item__title=item['title']
+                .review-item__description=item['desc']

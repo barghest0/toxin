@@ -1,0 +1,8 @@
+- let inputId = 0
+
+mixin text-field(labelName,name,placeholder, type='text', value="")
+    .input-text.input-text_lg
+            if labelName
+                label.label(for=`input-text-${++inputId}`)=labelName
+            .input-text__field
+                input.input-text__input(type=type, name=name id=`input-text-${inputId}` placeholder=placeholder value=value)

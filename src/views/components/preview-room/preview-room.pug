@@ -1,0 +1,9 @@
+- let feedbackRateId = 0
+
+mixin preview-room(data)
+    each item in data
+        a(href="/room.html").card.card_preview-room
+            +roomImg(item['img'])
+            .card__preview-room-content
+                +roomHeader(item['number'],item['price'],item['isLuxury'],true)
+                +roomFeedback(`feedback-rate${++feedbackRateId}`, item['feedbacks'] , item['rate'])

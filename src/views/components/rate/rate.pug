@@ -1,1 +1,9 @@
+- let idRate = 0
 
+mixin rate(name,rate)
+        label(for=`rate${++idRate}`).input-selection__item.input-selection__item_rate
+            each val in [1, 2, 3, 4, 5]
+                if val === rate
+                    input(type="radio" name=name id=`rate${idRate}` value=val checked).input-selection__field.input-selection__field-custom_rate
+                else
+                    input(type="radio" name=name id=`rate${idRate}` value=val).input-selection__field.input-selection__field-custom_rate

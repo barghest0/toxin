@@ -1,0 +1,13 @@
+
+mixin range-date(labelFromName,labelToName)
+    .input-templates__range-date
+        .input-text
+            label.label(for="datepicker-from")=labelFromName
+            .input-text__field.input-text__field_dropdown
+                input.input-text__input.input-text__input_date(id="datepicker-from"  name="dateFrom" data-range="true" placeholder="ДД.ММ.ГГГГ" )
+                
+
+        .input-text
+            label.label(for="datepicker-to")=labelToName
+            .input-text__field.input-text__field_dropdown
+                input.input-text__input.input-text__input_date(id="datepicker-to" name="dateTo" data-range="true" placeholder="ДД.ММ.ГГГГ")

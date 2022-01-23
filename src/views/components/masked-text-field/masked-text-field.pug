@@ -1,0 +1,7 @@
+
+
+mixin masked-text-field(labelName,name,placeholder,type='text',value="")
+    .input-text.input-text_lg
+        label(for="input-text-masked").label=labelName
+        .input-text__field
+            input.input-text__input.input-text__input_masked(type=type, name=name id="input-text-masked" placeholder=placeholder value=value)
