@@ -2,10 +2,8 @@ const webpack = require('webpack')
 const { merge } = require('webpack-merge')
 const baseConfig = require('./webpack.base')
 
-//делаем слияние с base конфигом
 const devConfig = merge(baseConfig, {
     mode: 'development',
-    //настройка сервера
     output: {
         filename: `${baseConfig.externals.path.assets}js/[name].[fullhash].js`,
         path: baseConfig.externals.path.dist,
@@ -16,7 +14,11 @@ const devConfig = merge(baseConfig, {
             directory: baseConfig.externals.path.dist,
             watch: true,
         },
-        watchFiles: ['src/views/pages/*.pug', 'src/**/*.scss'],
+        watchFiles: [
+            'src/views/pages/*/*.pug',
+            'src/views/components/*/*.pug',
+            'src/**/*.scss',
+        ],
         port: 8080,
         open: false,
     },

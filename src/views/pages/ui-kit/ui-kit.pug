@@ -1,28 +1,25 @@
-extends ../../layout/uikit-layout.pug
+extends ../../layout/ui-kit-layout.pug
 
     
-block site-templates
-    .site-templates
-        .site-templates__header
-            +header(false)
-        .site-templates__header
-            +header(true,'Юлий Цезарь')
-        .site-templates__footer
-            +footer(true)
-        .site-templates__footer
-            +footer(false)
+block headers-footers
+    .headers-footers
+        .headers-footers__header
+            +header({isLogin:false})
+        .headers-footers__header
+            +header({isLogin:true, name:'Юлий цезарь'})
+        .headers-footers__footer
+            +footer()
 
 
 block colors-fonts
-    .basic-styles
-        .basic-styles__colors
+    .colors-fonts
+        .colors-fonts__colors
             +color([{hex: '#1F2041', title:'Dark Shade 100%',opacity:1},{ hex: '#1F2041', title:'Dark Shade 75%',opacity:0.75},{ hex: '#1F2041', title:'Dark Shade 50%',opacity:0.5},{ hex: '#1F2041', title:'Dark Shade 25%', opacity:0.25},{ hex: '#1F2041', title:'Dark Shade 5%',opacity:0.05},{ hex: '#BC9CFF', title:'Purple',opacity:1},{ hex: '#6FCF97', title:'Green',opacity:1}])
-        .basic-styles__text-styles
+        .colors-fonts__fonts
             +font([{tag:'h1', text:'This one is the sub-section or widget title', weight:'bold', size:'24'},{tag:'h2', text:'Next one is the item title inside widgets', weight:'bold', size:'19'},{tag:'h3', text:'This is a label or CTA text', weight:'bold', size:'12'},{tag:'body', text:'This is the body text which is used for most of the design, like paragraphs, lists, etc.', weight:'regular', size:'14'}])
 
 
 
-            
 
 
 

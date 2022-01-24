@@ -9,7 +9,7 @@ const PATHS = {
     dist: path.join(__dirname, './dist'),
     assets: 'assets/',
 }
-let pagesBlocks = ['uikit']
+let pagesBlocks = ['ui-kit']
 const PAGES_DIR = `${PATHS.src}/views/pages/`
 
 const PAGES = pagesBlocks.map(
@@ -88,14 +88,6 @@ module.exports = {
                         options: {
                             name: '[name].[ext]',
                         },
-                    },
-                ],
-            },
-            {
-                test: /\.pug$/,
-                use: [
-                    {
-                        loader: 'pug-html-loader',
                     },
                 ],
             },

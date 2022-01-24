@@ -1,13 +1,11 @@
 
 
 
-mixin header(isLogin=false,name=null)
-    header.header(class=isLogin ? 'header_login' : null)
+mixin header({isLogin=false,name=null})
+    header.header(class=isLogin ? 'header_authorized' : null)
         .container
-            .header__inner(class=isLogin ? 'header__inner_login' : null)
-                .header__logo
-                    a(href='/')
-                        img(src="../../assets/img/Logo.png", alt="logo")
-                +nav(isLogin)
+            .header__inner(class=isLogin ? 'header__inner_authorized' : null)
+                +logo()
+                +nav({isLogin,name})
                 .header__burger
                     .header__burger-block Burger

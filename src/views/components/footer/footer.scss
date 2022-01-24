@@ -4,10 +4,13 @@
     border-top: 1px solid #e5e5e5;
     margin: 0 auto;
     &_small {
+        height: 365px;
+        max-width: 768px;
         display: none;
     }
 
     @include tablet-portrait {
+        display: none;
         &__top,
         &__bottom {
             display: none;
@@ -20,11 +23,7 @@
         &__copyright {
             text-align: center;
         }
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 365px;
-        max-width: 768px;
+
         &_small {
             display: flex;
             justify-content: center;
