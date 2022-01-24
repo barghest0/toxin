@@ -27,11 +27,7 @@ module.exports = {
         app: PATHS.src,
     },
     //точка выхода
-    output: {
-        filename: `${PATHS.assets}js/[name].[fullhash].js`,
-        path: PATHS.dist,
-        publicPath: '/',
-    },
+    
 
     optimization: {
         splitChunks: {
