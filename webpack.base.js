@@ -4,29 +4,30 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
-
 const PATHS = {
     src: path.join(__dirname, './src'),
     dist: path.join(__dirname, './dist'),
     assets: 'assets/',
 }
-//директория со страницами
+let pagesBlocks = ['uikit']
 const PAGES_DIR = `${PATHS.src}/views/pages/`
-//считываем все pug файлы
-const PAGES = fs
-    .readdirSync(PAGES_DIR)
-    .filter(fileName => fileName.endsWith('.pug'))
+
+const PAGES = pagesBlocks.map(
+    item =>
+        `${PAGES_DIR}${item}/` +
+        fs
+            .readdirSync(`${PAGES_DIR}${item}/`)
+            .filter(fileName => fileName.endsWith('.pug'))
+)
 
 module.exports = {
-    //объект с путями для merge конфигов
     externals: {
         path: PATHS,
     },
-    //точка входа
+
     entry: {
         app: PATHS.src,
     },
-    //точка выхода
 
     optimization: {
         splitChunks: {
@@ -41,15 +42,13 @@ module.exports = {
         },
     },
 
-    //кросс-браузерная совместимость
     module: {
         rules: [
             {
-                //файлы
                 test: /\.js$/,
-                //лоадеры (транспилируют файлы)
+
                 use: ['babel-loader'],
-                //исключения
+
                 exclude: '/node_modules/',
             },
             {
@@ -103,7 +102,6 @@ module.exports = {
         ],
     },
 
-    //прописываем все плагины, которые подключаем
     plugins: [
         new MiniCssExtractPlugin({
             filename: `${PATHS.assets}css/[name].[fullhash].css`,
@@ -131,14 +129,16 @@ module.exports = {
             filename: `./index.html`,
         }),
 
-        //перебираем страницы и меняем pug на html
-        ...PAGES.map(
-            page =>
-                new HtmlWebpackPlugin({
-                    template: `${PAGES_DIR}${page}`,
-                    filename: `./${page.replace(/\.pug$/, '.html')}`,
-                    minify: false,
-                })
-        ),
+        ...PAGES.map(page => {
+            console.log(page)
+            return new HtmlWebpackPlugin({
+                template: page,
+                filename: `${page
+                    .split('/')
+                    .at(-1)
+                    .replace(/\.pug$/, '.html')}`,
+                minify: false,
+            })
+        }),
     ],
 }
