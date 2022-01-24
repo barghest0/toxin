@@ -5,7 +5,7 @@ import 'jquery'
 import './js/index'
 
 //CSS
-import './assets/css/main.css'
+import './assets/css/index.css'
 
 //SCSS
-import './assets/scss/main.scss'
+import './assets/scss/index.scss'

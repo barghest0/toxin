@@ -16,9 +16,9 @@ const devConfig = merge(baseConfig, {
             directory: baseConfig.externals.path.dist,
             watch: true,
         },
-        watchFiles: ['src/**/*.pug', 'src/**/*.scss'],
+        watchFiles: ['src/views/pages/*.pug', 'src/**/*.scss'],
         port: 8080,
-        open: true,
+        open: false,
     },
 })
 

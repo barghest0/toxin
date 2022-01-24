@@ -27,7 +27,6 @@ module.exports = {
         app: PATHS.src,
     },
     //точка выхода
-    
 
     optimization: {
         splitChunks: {

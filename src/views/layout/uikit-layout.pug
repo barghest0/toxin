@@ -1,4 +1,7 @@
-include ../utils/mixins/mixins.pug
+include ../../pug/mixins.pug
+
+
+
 doctype html
 html(lang="en")
     head
@@ -7,9 +10,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Ui kit
     body 
-        .kit-wrapper
+        .uikit
             block site-templates
             .container
-                block basic-styles
-                block basic-forms
-                block cards
+                block colors-fonts
