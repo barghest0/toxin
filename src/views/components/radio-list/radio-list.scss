@@ -1,0 +1,38 @@
+.radio-list {
+    display: flex;
+    &__radio {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    &__item {
+        display: flex;
+        cursor: pointer;
+        width: 100px;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    &__custom-radio {
+        align-self: flex-start;
+        min-width: 20px;
+        margin-right: 10px;
+        height: 20px;
+        transition: 0.1s ease-in-out;
+        background: url('http://localhost:8080/assets/img/EmptyRadio.svg');
+
+        .input-selection__field:hover + & {
+            background: url('http://localhost:8080/assets/img/FillRadio.svg');
+            opacity: 0.6;
+        }
+
+        .input-selection__field:checked + & {
+            background: url('http://localhost:8080/assets/img/FillRadio.svg');
+        }
+    }
+
+    &__title {
+        font-size: 14px;
+    }
+}

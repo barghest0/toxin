@@ -68,7 +68,28 @@ block form-elements
                 .form-elements__field-labels
                     +block-label({text:'subscription text field'})
                 +subscribe-text-field({placeholder:'Email',name:'email'})
-        
+                
+
+
+                
+        .form-elements__selections
+            .form-elements__checkboxes
+                +checkbox-list({label:'checkboxes', items:
+                    {smoking:'Можно курить',animals:'Можно с животными',guests:'Можно пригласить гостей (до 10 человек)'},
+                })
+            .form-elements__radio
+                .form-elements__selection-label
+                    +block-label({text:'radio button'})
+                +radio-list({male:'Мужчина',famele:'Женщина'})
+
+
+
+
+
+        .form-elements__other
+            .form-elements__slider
+                .form-elements__slider-label
+                    +block-label({text:'slider'})
         
 
 

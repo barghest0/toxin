@@ -43,10 +43,12 @@
     display: flex;
     justify-content: space-between;
     &__fields {
-        width: 320px;
+        max-width: 320px;
     }
-    &__dropdown {
-        margin-bottom: 20px;
+    &__field-labels {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
     }
     &__text-field {
         margin-bottom: 20px;
@@ -54,21 +56,35 @@
     &__masked-text-field {
         margin-bottom: 40px;
     }
+    &__subscribe-field {
+        max-width: 266px;
+    }
+    &__dropdown {
+        margin-bottom: 20px;
+    }
 
     &__range-date {
         margin-bottom: 40px;
     }
+
     &__filter-date {
         margin-bottom: 40px;
         max-width: 266px;
     }
-    &__subscribe-field {
-        max-width: 266px;
+
+    &__selections {
+        max-width: 260px;
     }
 
-    &__field-labels {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 5px;
+    &__selection-label {
+        margin-bottom: 16px;
+    }
+
+    &__checkboxes {
+        margin-bottom: 40px;
+    }
+
+    &__other {
+        max-width: 320px;
     }
 }

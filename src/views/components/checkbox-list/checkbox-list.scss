@@ -1,40 +1,16 @@
-.input-selection {
+.checkbox-list {
     display: flex;
     flex-direction: column;
-    text-align: left;
-    &_like,
-    &_rate,
-    &_radio {
-        flex-direction: row;
-    }
 
-    &_checkbox-list {
-        max-height: 0;
-        overflow: hidden;
-
-        &.active {
-            max-height: 100%;
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
+    &__label {
+        margin-bottom: 16px;
     }
 
     &__item {
+        cursor: pointer;
         display: flex;
         align-items: center;
-
-        &_checkbox {
-            width: 220px;
-            margin-bottom: 10px;
-        }
-
-        &_radio {
-            width: 100px;
-            margin-bottom: 0;
-            margin-right: 20px;
-        }
+        margin-bottom: 10px;
 
         &_toggle {
             width: 260px;
@@ -61,66 +37,37 @@
         }
     }
 
-    &__field {
+    &__title {
+        font-size: 14px;
+        max-width: 192px;
+    }
+
+    &__checkbox {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
     }
 
-    &__text {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__title {
-        font-size: 14px;
-        width: 266px;
-        &_rich {
-            font-weight: bold;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-    }
-
-    &__description {
-        font-size: 12px;
-        width: 230px;
-        color: $shadow-50;
-    }
-
-    &__field-custom {
+    &__custom-checkbox {
         align-self: flex-start;
         min-width: 20px;
         margin-right: 10px;
         height: 20px;
         transition: 0.1s ease-in-out;
 
-        &_checkbox {
-            background: url('http://localhost:8080/assets/img/EmptyCheckbox.svg');
+        background: url('http://localhost:8080/assets/img/EmptyCheckbox.svg');
 
-            .input-selection__field:hover + & {
-                background: url('http://localhost:8080/assets/img/FillCheckbox.svg');
-                opacity: 0.6;
-            }
-
-            .input-selection__field:checked + & {
-                background: url('http://localhost:8080/assets/img/FillCheckbox.svg');
-            }
+        .input-selection__field:hover + & {
+            background: url('http://localhost:8080/assets/img/FillCheckbox.svg');
+            opacity: 0.6;
         }
 
-        &_radio {
-            background: url('http://localhost:8080/assets/img/EmptyRadio.svg');
-
-            .input-selection__field:hover + & {
-                background: url('http://localhost:8080/assets/img/FillRadio.svg');
-                opacity: 0.6;
-            }
-
-            .input-selection__field:checked + & {
-                background: url('http://localhost:8080/assets/img/FillRadio.svg');
-            }
+        .input-selection__field:checked + & {
+            background: url('http://localhost:8080/assets/img/FillCheckbox.svg');
         }
+    }
 
+    &__field-custom {
         &_toggle {
             transition: none;
             min-width: 40px;
@@ -188,3 +135,26 @@
         }
     }
 }
+
+// max-height: 0;
+// overflow: hidden;
+
+// &.active {
+//     max-height: 100%;
+// }
+
+// &:not(:last-child) {
+//     margin-bottom: 20px;
+// }
+
+// &_rich {
+//     font-weight: bold;
+//     line-height: 1.5;
+//     margin-bottom: 5px;
+// }
+
+// &__description {
+//     font-size: 12px;
+//     width: 230px;
+//     color: $shadow-50;
+// }
