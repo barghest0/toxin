@@ -10,7 +10,7 @@ mixin nav({isLogin=false,name=''})
         if isLogin
             a(href="/profile.html").nav__item.nav__item_profile=name
         else
-            a(href="/login.html").nav__item
-                +button({text:'Войти',isOutlined:true,size:'sm'})
-            a(href="/register.html").nav__item
-                +button({text:'Зарегистрироваться',isOutlined:false,size:'md'})
+            a(href="/login.html").nav__item.nav__item_sign
+                +button({text:'Войти', type:'outlined', })
+            a(href="/register.html").nav__item.nav__item_register
+                +button({text:'Зарегистрироваться',type:'filled'})

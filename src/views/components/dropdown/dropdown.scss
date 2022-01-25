@@ -1,9 +1,7 @@
 .dropdown {
     display: flex;
     flex-direction: column;
-    &:hover {
-        border: 1px solid $shadow-50;
-    }
+
     &.menu-open {
         border: 1px solid $shadow-50;
     }

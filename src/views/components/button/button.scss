@@ -2,13 +2,10 @@
     font-weight: bold;
     border: none;
     border-radius: 22px;
-    height: 44px;
+    height: 100%;
+    width: 100%;
     justify-self: center;
     padding: 0;
-    width: 100%;
-    @include main-gradient-to-bottom;
-    color: $white;
-
     cursor: pointer;
 
     font-size: 12px;
@@ -18,30 +15,24 @@
 
     font-family: inherit;
 
-    &_in-header {
-        height: 34px;
-    }
-
-    &_in-header.button_outlined {
-        width: 87px;
-    }
-
-    .label {
-        color: #fff;
-    }
-    &:hover {
+    &_filled {
         @include main-gradient-to-bottom;
-        opacity: 0.5;
+        color: $white;
+        &:hover {
+            @include main-gradient-to-bottom;
+            opacity: 0.5;
+        }
+        &:active {
+            opacity: 1;
+        }
     }
-    &:active {
-        opacity: 1;
+
+    &_no-bordered {
+        color: $main-color;
     }
 
     &_outlined {
-        .label {
-            color: $main-color;
-        }
-
+        color: $main-color;
         position: relative;
         border: 2px solid transparent;
         border-radius: 80px;
@@ -75,16 +66,7 @@
         }
     }
 
-    &_sm {
-        width: 100px;
-    }
-
-    &_md {
-        width: 196px;
-    }
-
-    &_lg {
-        width: 320px;
+    &_largest {
         position: relative;
 
         &::before {

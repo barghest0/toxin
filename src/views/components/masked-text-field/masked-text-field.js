@@ -1,2 +1,3 @@
 import 'jquery.maskedinput/src/jquery.maskedinput'
-$('.input-text__input_masked').mask('99.99.9999')
+
+$('.js-masked-text-field').mask('99.99.9999')

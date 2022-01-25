@@ -1,19 +1,26 @@
-.section-title {
+.widget-title {
     color: $shadow-100;
     font-weight: bold;
     font-size: 24px;
 }
-.item-title {
+.title-inside-widget {
     color: $shadow-100;
-
     font-weight: bold;
     font-size: 19px;
 }
 
-.label {
+.block-label {
     color: $shadow-100;
     font-weight: bold;
     font-size: 12px;
+    text-transform: uppercase;
+}
+
+.block-sub-label {
+    color: $shadow-100;
+    font-weight: normal;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 .body-text {

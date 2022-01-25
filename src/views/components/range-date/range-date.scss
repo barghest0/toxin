@@ -1,0 +1,10 @@
+.range-date {
+    display: flex;
+    column-gap: 20px;
+    &_date {
+        cursor: pointer;
+        &::placeholder {
+            color: $shadow-75;
+        }
+    }
+}

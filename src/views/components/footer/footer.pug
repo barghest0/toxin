@@ -9,29 +9,29 @@ mixin footer()
                         .footer__company-description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»  
                     nav.footer__nav 
                         .footer__nav-title 
-                            +label({text:"Навигация"}) 
+                            +block-label({text:"Навигация"}) 
                         a(href="/about.html").footer__nav-item О нас
                         a(href="/news.html").footer__nav-item Новости
                         a(href="/support.html").footer__nav-item Служба поддержки
                         a(href="/services.html").footer__nav-item Услуги
                     nav.footer__nav 
                         .footer__nav-title 
-                            +label({text:"О нас"}) 
+                            +block-label({text:"О нас"}) 
                         a(href="/aboutService.html").footer__nav-item О сервисе
                         a(href="/ourTeam.html").footer__nav-item Наша команда
                         a(href="/jobs.html").footer__nav-item Вакансии
                         a(href="/investors.html").footer__nav-item Инвесторы
                     nav.footer__nav
                         .footer__nav-title 
-                            +label({text:"Служба поддержки"})
+                            +block-label({text:"Служба поддержки"})
                         a(href="/agreements.html").footer__nav-item Соглашения
                         a(href="/communities.html").footer__nav-item Сообщества
                         a(href="/connection.html").footer__nav-item Связь с нами
                     .footer__subscribe
                         .footer__nav-title 
-                            +label({text:"Подписка"}) 
+                            +block-label({text:"Подписка"}) 
                         .footer__subscribe-description Получайте специальные предложения и новости сервиса
-                        +subscribe-text-field('','Email')
+                        +subscribe-text-field({id:'subscribe-field',name:'email',placeholder:'Email'})
                 .footer__bottom
                     .footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
                     .footer__messengers

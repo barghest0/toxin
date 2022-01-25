@@ -136,19 +136,19 @@
     top: auto;
 }
 
-// .iqdropdown .iqdropdown-selection:after {
-//     content: '';
-//     border-bottom: 2 px solid rgba(31, 32, 67, 0.5);
-//     border-left: 2 px solid rgba(31, 32, 67, 0.5);
-//     height: 8 px;
-//     position: absolute;
-//     right: 5 px;
-//     transform: rotate(-45deg);
-//     width: 8 px;
-// }
+.iqdropdown .iqdropdown-selection:after {
+    content: '';
+    border-bottom: 2 px solid rgba(31, 32, 67, 0.5);
+    border-left: 2 px solid rgba(31, 32, 67, 0.5);
+    height: 8 px;
+    position: absolute;
+    right: 5 px;
+    // transform: rotate(-45deg);
+    width: 8 px;
+}
 
 .iqdropdown .iqdropdown-selection:after {
-    background-image: url('http://localhost:8080/assets/img/DropDownArrow.png');
+    // background-image: url('http://localhost:8080/assets/img/DropDownArrow.png');
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -162,6 +162,6 @@
 }
 
 .iqdropdown.menu-open .iqdropdown-selection:after {
-    background-image: url('http://localhost:8080/assets/img/DropDownArrow.png');
+    // background-image: url('http://localhost:8080/assets/img/DropDownArrow.png');
     transform: rotate(180deg);
 }

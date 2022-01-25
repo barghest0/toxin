@@ -24,24 +24,52 @@ block colors-fonts
         .colors-fonts__fonts
             .colors-fonts__font
                 .colors-fonts__tag.colors-fonts__tag_type_section h1
-                +section-title({text:'This one is the sub-section or widget title'})
+                +widget-title({text:'This one is the sub-section or widget title'})
             .colors-fonts__font
                 .colors-fonts__tag.colors-fonts__tag_type_item h2
-                +item-title({text:'Next one is the item title inside widgets'})
+                +title-inside-widget({text:'Next one is the item title inside widgets'})
             .colors-fonts__font
                 .colors-fonts__tag.colors-fonts__tag_type_label h3
-                +label({text:'This is a label or CTA text'})
+                +block-label({text:'This is a label or CTA text'})
             .colors-fonts__font
                 .colors-fonts__tag.colors-fonts__tag_type_text Body
                 +body-text({text:'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
             
 
 
-
-
-
-
-
+block form-elements
+    .form-elements
+        .form-elements__fields
+            .form-elements__text-field
+                .form-elements__field-labels
+                    +block-label({text:'text field'})
+                    +block-sub-label({text:'default'})
+                +text-field({id:'default-field', name:"email", placeholder:"Email", type:'email'})
+            .form-elements__text-field
+                .form-elements__field-labels
+                    +block-label({text:'text field'})
+                    +block-sub-label({text:'hover / focus'})
+                +text-field({id:'focused-field', name:"email", placeholder:"Email", type:'email', value:'This is pretty awesome'})
+            .form-elements__dropdown
+                .form-elements__field-labels
+                    +block-label({text:'dropdown'})
+                +dropdown({items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
+            .form-elements__masked-text-field
+                .form-elements__field-labels
+                    +block-label({text:'masked text field'})
+                +masked-text-field({id:'masked-field', name:"email", placeholder:"ДД.ММ.ГГГГ", type:'email'})
+            .form-elements__range-date
+                +range-date({from:'date dropdown',to:'date dropdown'})
+            .form-elements__filter-date
+                .form-elements__field-labels
+                    +block-label({text:'filter date dropdown'})
+                +filter-date({value:'19 авг - 23 авг'})
+            .form-elements__subscribe-field
+                .form-elements__field-labels
+                    +block-label({text:'subscription text field'})
+                +subscribe-text-field({placeholder:'Email',name:'email'})
+        
+        
 
 
 

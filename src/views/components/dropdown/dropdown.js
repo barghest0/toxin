@@ -1,7 +1,7 @@
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min'
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css'
 
-$('.guests').iqDropdown({
+$('.iqdropdown_guests').iqDropdown({
     maxItems: 20,
     setSelectionText: function (itemCount, totalItems) {
         if (!totalItems) {
@@ -37,7 +37,7 @@ $('.guests').iqDropdown({
     },
 })
 
-$('.apartments').iqDropdown({
+$('.dropdown_guests').iqDropdown({
     maxItems: 20,
     setSelectionText: (itemCount, totalItems) => {
         if (!totalItems) {

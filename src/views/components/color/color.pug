@@ -3,5 +3,5 @@ mixin color({hex='#000', text='', opacity='100', color='dark'})
             .color__box(class=color === 'dark' ? `color__box_opacity_${opacity}` : `color__box_${color}`)
             .color__description
                 .color__title
-                    +item-title({text})
+                    +title-inside-widget({text})
                 .color__hex=hex

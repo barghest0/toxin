@@ -1,10 +1,7 @@
 
 
-mixin button({text="",isOutlined=false,size='sm',inHeader=true})
-        if isOutlined
-                button.button.button_outlined(class=inHeader ? `button_in-header button_${size}` : `button_${size}` type="submit")
-                        +label({text})
-        else
-                button.button(class=inHeader ? `button_in-header button_${size}` : `button_${size}` type="submit")
-                        +label({text})
+mixin button({text="",type='outlined',isLargest=false})
+        button.button(class=`button_${type}` type="submit")=text
+        if isLargest
+                button.button.button_largest(type="submit")=text
 

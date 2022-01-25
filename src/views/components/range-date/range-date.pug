@@ -1,13 +1,14 @@
 
-mixin range-date(labelFromName,labelToName)
-    .input-templates__range-date
-        .input-text
-            label.label(for="datepicker-from")=labelFromName
-            .input-text__field.input-text__field_dropdown
-                input.input-text__input.input-text__input_date(id="datepicker-from"  name="dateFrom" data-range="true" placeholder="ДД.ММ.ГГГГ" )
+mixin range-date({from='Прибытие', to='Выезд'})
+    .range-date
+        .text-field
+            .text-field__label
+                +block-label({text:from})
+            .text-field__container
+                input.text-field__input.text-field__input_date(id="datepicker-from" name="date-from" data-range="true" placeholder="ДД.ММ.ГГГГ")
                 
-
-        .input-text
-            label.label(for="datepicker-to")=labelToName
-            .input-text__field.input-text__field_dropdown
-                input.input-text__input.input-text__input_date(id="datepicker-to" name="dateTo" data-range="true" placeholder="ДД.ММ.ГГГГ")
+        .text-field
+            .text-field__label
+                +block-label({text:to})
+            .text-field__container
+                input.text-field__input.text-field__input_date(id="datepicker-to" name="date-to" data-range="true" placeholder="ДД.ММ.ГГГГ")

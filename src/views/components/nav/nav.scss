@@ -8,6 +8,15 @@
         display: flex;
         align-items: center;
         transition: all 0.1s linear;
+
+        &_sign {
+            width: 84px;
+            height: 34px;
+        }
+        &_register {
+            width: 196px;
+            height: 34px;
+        }
         &:not(:last-child) {
             margin-right: 20px;
         }
