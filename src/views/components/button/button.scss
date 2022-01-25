@@ -1,8 +1,8 @@
-.input-button {
+.button {
     font-weight: bold;
     border: none;
     border-radius: 22px;
-    height: 45px;
+    height: 44px;
     justify-self: center;
     padding: 0;
     width: 100%;
@@ -17,6 +17,18 @@
     transition: 0.2s ease-in-out;
 
     font-family: inherit;
+
+    &_in-header {
+        height: 34px;
+    }
+
+    &_in-header.button_outlined {
+        width: 87px;
+    }
+
+    .label {
+        color: #fff;
+    }
     &:hover {
         @include main-gradient-to-bottom;
         opacity: 0.5;
@@ -25,10 +37,12 @@
         opacity: 1;
     }
 
-    &_empty {
-        color: $main-color;
+    &_outlined {
+        .label {
+            color: $main-color;
+        }
+
         position: relative;
-        width: 100px;
         border: 2px solid transparent;
         border-radius: 80px;
         background-image: linear-gradient(white, white),
@@ -36,14 +50,7 @@
         background-origin: border-box;
         background-clip: content-box, border-box;
         transition: all 0.1s linear;
-        &.input-button_in-header {
-            width: 85px;
-            height: 40px;
 
-            &::before {
-                display: none;
-            }
-        }
         &:hover {
             opacity: 0.8;
             border: 2px solid transparent;
@@ -56,35 +63,29 @@
                     rgba($gradient-main-color, 0.5)
                 );
         }
+
         &:active {
             opacity: 1;
+            background-image: linear-gradient(white, white),
+                linear-gradient(
+                    to bottom,
+                    rgba($main-color, 1),
+                    rgba($gradient-main-color, 1)
+                );
         }
     }
 
-    &_no-bordered {
-        width: 61px;
-        height: 15px;
-        background: transparent;
-        color: $main-color;
-        &:hover {
-            background: transparent;
-            font-weight: bold;
-            color: $shadow-50;
-        }
+    &_sm {
+        width: 100px;
     }
 
-    &_long {
+    &_md {
+        width: 196px;
+    }
+
+    &_lg {
         width: 320px;
         position: relative;
-
-        &.input-button_in-header {
-            width: 200px;
-            height: 40px;
-
-            &::before {
-                display: none;
-            }
-        }
 
         &::before {
             content: '';
@@ -100,4 +101,3 @@
         }
     }
 }
-

@@ -1,8 +1,0 @@
-mixin font(data)
-    each item in data
-        .font(class=`font_fs_${item['size']}`)
-            if item['tag'] === 'body'
-                .font__tag=item['tag']
-            else
-                #{item['tag']}.font__tag=item['tag']
-            .font__text(class=item['weight'] === 'bold' ? 'font__text_bold' : 'font__text')=item['text']

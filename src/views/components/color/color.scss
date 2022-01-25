@@ -7,12 +7,32 @@
         background-color: $shadow-100;
         border-radius: 6px;
         @include size(70px);
+        &_opacity_1 {
+            opacity: 1;
+        }
+        &_opacity_75 {
+            opacity: 0.75;
+        }
+        &_opacity_50 {
+            opacity: 0.5;
+        }
+        &_opacity_25 {
+            opacity: 0.25;
+        }
+        &_opacity_5 {
+            opacity: 0.05;
+        }
+        &_purple {
+            background-color: #bc9cff;
+        }
+        &_green {
+            background-color: #6fcf97;
+        }
     }
     &__description {
         line-height: 1.5;
-        color: $shadow-100;
     }
-    &__title {
-        font-weight: bold;
+    &__hex {
+        font-size: 19px;
     }
 }

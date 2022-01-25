@@ -1,12 +1,10 @@
 
 
-mixin button(text,isEmpty=true,isLong=false,inHeader=false)
-        if isEmpty
-                button.input-button.input-button_empty(type="submit" class=inHeader ? 'input-button_in-header' : 'null' )=text
-        else if isLong
-                button.input-button.input-button_long(type="submit" class=inHeader ? 'input-button_in-header' : 'null')=text
+mixin button({text="",isOutlined=false,size='sm',inHeader=true})
+        if isOutlined
+                button.button.button_outlined(class=inHeader ? `button_in-header button_${size}` : `button_${size}` type="submit")
+                        +label({text})
         else
-                button.input-button(type="submit")=text
+                button.button(class=inHeader ? `button_in-header button_${size}` : `button_${size}` type="submit")
+                        +label({text})
 
-mixin no-bordered-button(text)
-        button.input-button.input-button_no-bordered(type="submit")=text

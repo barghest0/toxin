@@ -11,10 +11,6 @@
 
     @include tablet-portrait {
         display: none;
-        &__top,
-        &__bottom {
-            display: none;
-        }
 
         &__company-logo {
             text-align: center;
@@ -47,7 +43,6 @@
 
         @include md-desktop {
             padding: 50px 0;
-            grid-column: 1 / main-end;
             grid-template-columns: repeat(3, minmax(150px, 1fr));
         }
     }
@@ -76,6 +71,7 @@
         min-width: 150px;
         &-title {
             text-transform: uppercase;
+            margin-bottom: 20px;
         }
         &-item {
             color: inherit;

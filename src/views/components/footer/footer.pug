@@ -1,5 +1,5 @@
 
-mixin footer(isSmall)
+mixin footer()
         footer.footer
             .container
                 .footer__top
@@ -8,24 +8,28 @@ mixin footer(isSmall)
                             +logo()
                         .footer__company-description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»  
                     nav.footer__nav 
-                        .footer__nav-title.label.label_mb_20 Навигация
-                        a(href="/aboutUs").footer__nav-item О нас
-                        a(href="/news").footer__nav-item Новости
-                        a(href="/support").footer__nav-item Служба поддержки
-                        a(href="/services").footer__nav-item Услуги
+                        .footer__nav-title 
+                            +label({text:"Навигация"}) 
+                        a(href="/about.html").footer__nav-item О нас
+                        a(href="/news.html").footer__nav-item Новости
+                        a(href="/support.html").footer__nav-item Служба поддержки
+                        a(href="/services.html").footer__nav-item Услуги
                     nav.footer__nav 
-                        .footer__nav-title.label.label_mb_20 О нас
-                        a(href="/aboutService").footer__nav-item О сервисе
-                        a(href="/ourTeam").footer__nav-item Наша команда
-                        a(href="/jobs").footer__nav-item Вакансии
-                        a(href="/investors").footer__nav-item Инвесторы
+                        .footer__nav-title 
+                            +label({text:"О нас"}) 
+                        a(href="/aboutService.html").footer__nav-item О сервисе
+                        a(href="/ourTeam.html").footer__nav-item Наша команда
+                        a(href="/jobs.html").footer__nav-item Вакансии
+                        a(href="/investors.html").footer__nav-item Инвесторы
                     nav.footer__nav
-                        .footer__nav-title.label.label_mb_20 Служба поддержки
-                        a(href="/agreements").footer__nav-item Соглашения
-                        a(href="/communities").footer__nav-item Сообщества
-                        a(href="/connection").footer__nav-item Связь с нами
+                        .footer__nav-title 
+                            +label({text:"Служба поддержки"})
+                        a(href="/agreements.html").footer__nav-item Соглашения
+                        a(href="/communities.html").footer__nav-item Сообщества
+                        a(href="/connection.html").footer__nav-item Связь с нами
                     .footer__subscribe
-                        .footer__nav-title.label.label_mb_20 Подписка
+                        .footer__nav-title 
+                            +label({text:"Подписка"}) 
                         .footer__subscribe-description Получайте специальные предложения и новости сервиса
                         +subscribe-text-field('','Email')
                 .footer__bottom

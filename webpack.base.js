@@ -81,15 +81,11 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|jpg|gif|svg)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                        },
-                    },
-                ],
+                test: /\.(png|jpe?g|gif|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: `${PATHS.assets}/images/[name].[ext]`,
+                },
             },
         ],
     },
@@ -100,10 +96,6 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                {
-                    from: `${PATHS.src}/${PATHS.assets}img`,
-                    to: `${PATHS.assets}/img`,
-                },
                 {
                     from: `${PATHS.src}/static`,
                     to: '',
@@ -122,7 +114,6 @@ module.exports = {
         }),
 
         ...PAGES.map(page => {
-            console.log(page)
             return new HtmlWebpackPlugin({
                 template: page,
                 filename: `${page

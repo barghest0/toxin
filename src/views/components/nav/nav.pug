@@ -2,15 +2,15 @@
 
 mixin nav({isLogin=false,name=''})
     nav.header__nav.nav
-        a(href="/aboutUs").nav__item О нас
+        a(href="/about.html").nav__item О нас
         ul.nav__item.nav__item_list Услуги
-        a(href="/jobs").nav__item Вакансии
-        a(href="/news").nav__item Новости
+        a(href="/jobs.html").nav__item Вакансии
+        a(href="/news.html").nav__item Новости
         ul.nav__item.nav__item_list Соглашения
         if isLogin
             a(href="/profile.html").nav__item.nav__item_profile=name
         else
             a(href="/login.html").nav__item
-                +button('Войти',true,false,true)
+                +button({text:'Войти',isOutlined:true,size:'sm'})
             a(href="/register.html").nav__item
-                +button('Зарегистрироваться',false,true,true)
+                +button({text:'Зарегистрироваться',isOutlined:false,size:'md'})

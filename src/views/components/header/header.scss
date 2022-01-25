@@ -1,22 +1,26 @@
 .header {
     width: 100%;
+
     padding: 15px 0;
     background-color: $white;
     box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
 
-    &_authorized {
-        padding: 15px 0;
-    }
     &__logo {
+        height: 40px;
         display: flex;
+        justify-content: center;
         align-items: center;
-        a {
-            height: 40px;
-        }
     }
+
+    &__nav {
+        height: 30px;
+    }
+
     &__inner {
+        height: inherit;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         background-color: $white;
     }
 
@@ -33,7 +37,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
             width: 70px;
         }
     }
