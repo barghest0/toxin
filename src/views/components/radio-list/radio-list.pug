@@ -1,11 +1,14 @@
 
-mixin radio-list(items={})
+mixin radio-list({items=[]})
         .radio-list
-            each text, name in items
+            each item in items
                 label.radio-list__item
-                    input(type="radio" name=name id=name).radio-list__input
+                    if item['state'] === 'checked'
+                        input(type="radio" name=item['name'] id=item['id'] checked).radio-list__input
+                    else
+                        input(type="radio" name=item['name'] id=item['id']).radio-list__input
                     span.radio-list__custom-input
                     .radio-list__title
-                        +body-text({text})
+                        +body-text({text: item['text']})
                 
 

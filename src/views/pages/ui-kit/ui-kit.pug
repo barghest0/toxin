@@ -73,13 +73,17 @@ block form-elements
         //-поменять объекты на массивы                
         .form-elements__selections
             .form-elements__checkboxes
-                +checkbox-list({label:'checkbox buttons', items:
-                    {smoking:'Можно курить',animals:'Можно с животными',guests:'Можно пригласить гостей (до 10 человек)'},
+                +checkbox-list({label:'checkbox buttons', items:[
+                    {id:'smoking', name:'smoking', text:'Можно курить'},
+                    {id:'animals', name:'animals', text:'Можно с животными',state:'checked'},
+                    {id:'guests', name:'guests', text:'Можно пригласить гостей (до 10 человек)',state:'checked'},
+                    ]
+
                 })
             .form-elements__radio
                 .form-elements__selection-label
                     +block-label({text:'radio button'})
-                +radio-list({male:'Мужчина',famele:'Женщина'})
+                +radio-list({items:[{id:'male', name:'make', text:'Мужчина', state:'checked'}, {id:'female', name:'female', text:'Женщина'}] })
             .form-elements__toggle
                 .form-elements__selection-label
                     +block-label({text:'toggle'})
@@ -99,8 +103,6 @@ block form-elements
                     +rate({id:'first-rate',name:'first-rate',rate:4})
                     +rate({id:'second-rate',name:'second-rate',rate:5})
                 
-
-
 
         .form-elements__other
             .form-elements__slider

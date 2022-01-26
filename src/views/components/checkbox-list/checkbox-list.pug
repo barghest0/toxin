@@ -4,9 +4,12 @@ mixin checkbox-list({label='checkboxes',items=[]})
         .checkbox-list
             .checkbox-list__label
                 +block-label({text:label})
-            each text, name in items
+            each item in items
                 label.checkbox-list__item
-                    input(type="checkbox" name=name id=name).checkbox-list__input
+                    if item['state'] === 'checked'
+                        input(type="radio" name=item['name'] id=item['id'] checked).checkbox-list__input
+                    else
+                        input(type="radio" name=item['name'] id=item['id']).checkbox-list__input
                     span.checkbox-list__custom-input
                     .checkbox-list__title
-                        +body-text({text})
+                        +body-text({text:item['text']})
