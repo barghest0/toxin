@@ -5,7 +5,7 @@
     &__label {
         margin-bottom: 16px;
     }
-    
+
     &__item {
         cursor: pointer;
         display: flex;
@@ -27,15 +27,15 @@
         transition: 0.1s ease-in-out;
 
         background: url('./images/empty-checkbox.svg');
+    }
 
-        .checkbox-list__input:hover + & {
-            background: url('./images/fill-checkbox.svg');
-            opacity: 0.6;
-        }
-
-        .checkbox-list__input:checked + & {
-            background: url('./images/fill-checkbox.svg');
-        }
+    &__input:hover + &__custom-input {
+        background: url('./images/fill-checkbox.svg');
+        opacity: 0.6;
+    }
+    
+    &__input:checked + &__custom-input {
+        background: url('./images/fill-checkbox.svg');
     }
 
     &__title {

@@ -8,6 +8,7 @@ const devConfig = merge(baseConfig, {
         filename: `${baseConfig.externals.path.assets}js/[name].[fullhash].js`,
         path: baseConfig.externals.path.dist,
         publicPath: '/',
+        assetModuleFilename: 'assets/images/[name][ext]',
     },
     devServer: {
         static: {

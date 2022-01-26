@@ -6,7 +6,8 @@ const prodConfig = merge(baseConfig, {
     output: {
         filename: `${baseConfig.externals.path.assets}js/[name].[fullhash].js`,
         path: baseConfig.externals.path.dist,
-        publicPath: './',
+        publicPath: '',
+        assetModuleFilename: 'assets/images/[name][ext]',
     },
 })
 

@@ -1,7 +1,8 @@
 .toggle {
     cursor: pointer;
     display: flex;
-
+    height: 20px;
+    
     &__input {
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -10,9 +11,15 @@
 
     &__custom-input {
         min-width: 40px;
-        background: url('./images/inactive-toggle.svg');
-        .toggle___input:checked + & {
-            background: url('./images/active-toggle.svg');
-        }
+        margin-right: 10px;
+        background: url('images/inactive-toggle.svg');
+    }
+
+    &__input:checked + &__custom-input {
+        background: url('images/active-toggle.svg');
+    }
+    &__title {
+        display: flex;
+        align-items: center;
     }
 }

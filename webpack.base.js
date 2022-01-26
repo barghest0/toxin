@@ -56,6 +56,10 @@ module.exports = {
                 use: ['pug-loader'],
             },
             {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+            {
                 test: /\.(scss|css)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
@@ -79,13 +83,6 @@ module.exports = {
                         },
                     },
                 ],
-            },
-            {
-                test: /\.(png|jpe?g|gif|svg)$/,
-                loader: 'file-loader',
-                options: {
-                    name: `${PATHS.assets}/images/[name].[ext]`,
-                },
             },
         ],
     },

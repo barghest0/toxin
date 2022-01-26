@@ -78,12 +78,11 @@ block form-elements
                     {id:'animals', name:'animals', text:'Можно с животными',state:'checked'},
                     {id:'guests', name:'guests', text:'Можно пригласить гостей (до 10 человек)',state:'checked'},
                     ]
-
                 })
             .form-elements__radio
                 .form-elements__selection-label
                     +block-label({text:'radio button'})
-                +radio-list({items:[{id:'male', name:'make', text:'Мужчина', state:'checked'}, {id:'female', name:'female', text:'Женщина'}] })
+                +radio-list({items:[{id:'male', name:'gender', text:'Мужчина', state:'checked'}, {id:'female', name:'gender', text:'Женщина'}] })
             .form-elements__toggle
                 .form-elements__selection-label
                     +block-label({text:'toggle'})
@@ -94,8 +93,8 @@ block form-elements
                 .form-elements__selection-label
                     +block-label({text:'like button'})
                 .form-elements__like-row
-                    +like({id:'like-1',name:'like',count:2,state:'checked'})
-                    +like({id:'like-2',name:'like',count:12,state:'unchecked'})
+                    +like({id:'like-1',name:'like',count:2,state:'unchecked'})
+                    +like({id:'like-2',name:'like',count:12,state:'checked'})
             .form-elements__rate
                 .form-elements__selection-label
                     +block-label({text:'rate button'})

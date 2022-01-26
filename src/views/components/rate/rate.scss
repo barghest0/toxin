@@ -1,16 +1,16 @@
 .rate {
-    cursor: pointer;
     position: relative;
     width: 120px;
     height: 24px;
 
-    background: url('./images/inactive-rate.svg');
+    background: url('images/inactive-rate.svg');
 
     &__input {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
 
+        cursor: pointer;
         min-width: 24px;
         height: 24px;
         position: absolute;
@@ -20,11 +20,11 @@
         transition: all 0.2s ease-in-out;
 
         &:checked {
-            background: url('./images/active-rate.svg');
+            background: url('images/active-rate.svg');
         }
 
         &:hover {
-            background: url('./images/active-rate.svg');
+            background: url('images/active-rate.svg');
             opacity: 0.6;
         }
 

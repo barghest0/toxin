@@ -110,6 +110,6 @@ if (document.querySelector('#pagination')) {
     })()
 
     $('.pagination-item__next').append(
-        `<img src="../../assets/img/pagination-arrow.svg">`
+        `<img src="./images/pagination-arrow.svg">`
     )
 }
