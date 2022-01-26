@@ -69,8 +69,7 @@ block form-elements
                     +block-label({text:'subscription text field'})
                 +subscribe-text-field({placeholder:'Email',name:'email'})
                 
-
-        //-поменять объекты на массивы                
+         
         .form-elements__selections
             .form-elements__checkboxes
                 +checkbox-list({label:'checkbox buttons', items:[
@@ -128,4 +127,25 @@ block form-elements
 
 
                 
-                
+block dropdowns 
+    .dropdowns
+        .dropdowns__apartments
+            .dropdowns__apartments-item
+                .dropdowns__labels
+                    +block-label({text:'dropdown'})
+                    +block-sub-label({text:'default'})
+                +dropdown({items:{bedrooms:'Спальни',beds:'Кровати',bathrooms:'Ванные комнаты'},kind:'apartments', size:'sm'})
+            .dropdowns__apartments-item
+                .dropdowns__labels
+                    +block-label({text:'dropdown'})
+                    +block-sub-label({text:'expanded'})
+                +dropdown({items:{bedrooms:'Спальни',beds:'Кровати',bathrooms:'Ванные комнаты'},kind:'apartments', size:'sm'})
+        .dropdowns__guests
+            .dropdowns__guests-item
+                .dropdowns__labels
+                    +block-label({text:'dropdown'})
+                +dropdown({items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
+            .dropdowns__guests-item
+                .dropdowns__labels
+                    +block-label({text:'dropdown'})
+                +dropdown({items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})

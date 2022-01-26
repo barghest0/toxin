@@ -37,7 +37,7 @@ $('.iqdropdown_guests').iqDropdown({
     },
 })
 
-$('.dropdown_guests').iqDropdown({
+$('.iqdropdown_apartments').iqDropdown({
     maxItems: 20,
     setSelectionText: (itemCount, totalItems) => {
         if (!totalItems) {

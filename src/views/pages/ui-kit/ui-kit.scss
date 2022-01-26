@@ -42,6 +42,7 @@
 .form-elements {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
     &__fields {
         max-width: 320px;
     }
@@ -116,7 +117,7 @@
     }
 
     &__other {
-        max-width: 320px;
+        width: 320px;
     }
 
     &__other-label {
@@ -141,6 +142,32 @@
 
         &-largest {
             height: 44px;
+        }
+    }
+}
+
+.dropdowns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    &__apartments {
+        &-item {
+            width: 266px;
+            margin-bottom: 20px;
+        }
+    }
+    &__labels {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+
+    &__guests {
+        display: flex;
+        column-gap: 72px;
+        &-item {
+            width: 320px;
+            margin-bottom: 20px;
         }
     }
 }
