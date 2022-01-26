@@ -28,7 +28,16 @@
     }
 
     &_no-bordered {
+        width: inherit;
+        height: inherit;
         color: $main-color;
+
+        &:hover {
+            color: $shadow-50;
+        }
+        &:active {
+            color: $main-color;
+        }
     }
 
     &_outlined {
@@ -78,8 +87,7 @@
             right: 0;
             z-index: 10;
             transform: translate(0, -50%);
-            background: url('http://localhost:8080/assets/img/NextArrow.png')
-                no-repeat center;
+            background: url('./images/next-arrow.png') no-repeat center;
         }
     }
 }

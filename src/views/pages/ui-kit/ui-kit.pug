@@ -70,8 +70,7 @@ block form-elements
                 +subscribe-text-field({placeholder:'Email',name:'email'})
                 
 
-
-                
+        //-поменять объекты на массивы                
         .form-elements__selections
             .form-elements__checkboxes
                 +checkbox-list({label:'checkbox buttons', items:
@@ -105,10 +104,26 @@ block form-elements
 
         .form-elements__other
             .form-elements__slider
-                .form-elements__slider-label
+                .form-elements__other-label
                     +block-label({text:'slider'})
-        
-
+                +range-slider()
+            .form-elements__buttons
+                .form-elements__other-label
+                    +block-label({text:'buttons'})
+                .form-elements__buttons-small
+                    +button({text:'click me',type:'filled'})
+                    +button({text:'click me',type:'filled'})
+                    +button({text:'click me',type:'outlined'})
+                    +button({text:'click me',type:'outlined'})
+                .form-elements__buttons-no-bordered
+                    +button({text:'click me',type:'no-bordered'})
+                    +button({text:'click me',type:'no-bordered'})
+                .form-elements__buttons-largest
+                    +button({text:'перейти к оплате',type:'filled',isLargest:true})
+            .form-elements__pagination
+                .form-elements__other-label
+                    +block-label({text:'pagination'})
+                +pagination()
 
 
                 

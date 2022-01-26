@@ -1,7 +1,6 @@
 
 
 mixin button({text="",type='outlined',isLargest=false})
-        button.button(class=`button_${type}` type="submit")=text
-        if isLargest
-                button.button.button_largest(type="submit")=text
+        button.button(class=isLargest ? `button_largest button_${type}` : `button_${type}`  type="submit")=text
+
 
