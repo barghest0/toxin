@@ -1,6 +1,7 @@
 .radio-list {
     display: flex;
-    &__radio {
+    
+    &__input {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
@@ -10,29 +11,24 @@
         display: flex;
         cursor: pointer;
         width: 100px;
-        margin-bottom: 0;
         margin-right: 20px;
     }
 
-    &__custom-radio {
+    &__custom-input {
         align-self: flex-start;
         min-width: 20px;
         margin-right: 10px;
         height: 20px;
         transition: 0.1s ease-in-out;
-        background: url('http://localhost:8080/assets/img/EmptyRadio.svg');
+        background: url('./images/empty-radio.svg');
 
-        .input-selection__field:hover + & {
-            background: url('http://localhost:8080/assets/img/FillRadio.svg');
+        :hover + & {
+            background: url('./images/fill-radio.svg');
             opacity: 0.6;
         }
 
-        .input-selection__field:checked + & {
-            background: url('http://localhost:8080/assets/img/FillRadio.svg');
+        .radio-list___input:checked + & {
+            background: url('./images/fill-radio.svg');
         }
-    }
-
-    &__title {
-        font-size: 14px;
     }
 }

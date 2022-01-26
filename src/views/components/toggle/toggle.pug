@@ -1,7 +1,11 @@
 
-- let idToggle = 0
-mixin toggle(title,name)
-        label(for=`toggle${++idToggle}`).input-selection__item.input-selection__item_toggle
-            input(type="checkbox" name=name id=`toggle${idToggle}`).input-selection__field
-            span(style="").input-selection__field-custom.input-selection__field-custom_toggle
-            =title
+
+mixin toggle({id='toggle',text='',name='offers',state='unchecked'})
+        label.toggle
+            if state === 'checked'
+                input(type="checkbox" name=name id=id checked).toggle__input
+            else 
+                input(type="checkbox" name=name id=id).toggle__input
+            span(style="").toggle__custom-input
+            .toggle__title
+                +body-text({text})

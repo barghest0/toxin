@@ -6,6 +6,7 @@ mixin checkbox-list({label='checkboxes',items=[]})
                 +block-label({text:label})
             each text, name in items
                 label.checkbox-list__item
-                    input(type="checkbox" name=name id=name).checkbox-list__checkbox
-                    span.checkbox-list__custom-checkbox
-                    .checkbox-list__title=text
+                    input(type="checkbox" name=name id=name).checkbox-list__input
+                    span.checkbox-list__custom-input
+                    .checkbox-list__title
+                        +body-text({text})

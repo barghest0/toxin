@@ -1,19 +1,11 @@
 
 mixin radio-list(items={})
         .radio-list
-            each title, name in items
+            each text, name in items
                 label.radio-list__item
-                    input(type="radio" name=name id=name).radio-list__radio
-                    span.radio-list__custom-radio
-                    .radio-list__title=title
+                    input(type="radio" name=name id=name).radio-list__input
+                    span.radio-list__custom-input
+                    .radio-list__title
+                        +body-text({text})
                 
 
-//- mixin checkbox-list({label='checkboxes',items=[]})
-//-         .checkbox-list
-//-             .checkbox-list__label
-//-                 +block-label({text:label})
-//-             each name, id in items
-//-                 .checkbox-list__item
-//-                     input(type="checkbox" name=id id=id).checkbox-list__checkbox
-//-                     span.checkbox-list__custom-checkbox
-//-                     .checkbox-list__title=name

@@ -1,1 +1,52 @@
+.rate {
+    cursor: pointer;
+    position: relative;
+    width: 120px;
+    height: 24px;
 
+    background: url('./images/inactive-rate.svg');
+
+    &__input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        min-width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: inherit;
+        transition: all 0.2s ease-in-out;
+
+        &:checked {
+            background: url('./images/active-rate.svg');
+        }
+
+        &:hover {
+            background: url('./images/active-rate.svg');
+            opacity: 0.6;
+        }
+
+        &:nth-of-type(1) {
+            z-index: 5;
+            min-width: 24px;
+        }
+        &:nth-of-type(2) {
+            z-index: 4;
+            min-width: 48px;
+        }
+        &:nth-of-type(3) {
+            z-index: 3;
+            min-width: 72px;
+        }
+        &:nth-of-type(4) {
+            z-index: 2;
+            min-width: 96px;
+        }
+        &:nth-of-type(5) {
+            z-index: 1;
+            min-width: 120px;
+        }
+    }
+}

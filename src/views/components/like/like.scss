@@ -1,1 +1,27 @@
+.like {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 40px;
 
+    &__input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    &__custom-input {
+        background: url('http://localhost:8080/assets/img/unlike-button.svg');
+        min-width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 10px;
+        font-size: 10px;
+        color: $shadow-25;
+        .like__input:checked + & {
+            color: $main-color;
+            background: url('http://localhost:8080/assets/img/likebutton.svg');
+        }
+    }
+}

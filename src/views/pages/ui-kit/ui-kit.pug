@@ -23,10 +23,10 @@ block colors-fonts
             +color({ hex: '#6FCF97', text:'Green', color:'green'})
         .colors-fonts__fonts
             .colors-fonts__font
-                .colors-fonts__tag.colors-fonts__tag_type_section h1
+                .colors-fonts__tag.colors-fonts__tag_type_widget h1
                 +widget-title({text:'This one is the sub-section or widget title'})
             .colors-fonts__font
-                .colors-fonts__tag.colors-fonts__tag_type_item h2
+                .colors-fonts__tag.colors-fonts__tag_type_inside-widget h2
                 +title-inside-widget({text:'Next one is the item title inside widgets'})
             .colors-fonts__font
                 .colors-fonts__tag.colors-fonts__tag_type_label h3
@@ -74,15 +74,32 @@ block form-elements
                 
         .form-elements__selections
             .form-elements__checkboxes
-                +checkbox-list({label:'checkboxes', items:
+                +checkbox-list({label:'checkbox buttons', items:
                     {smoking:'Можно курить',animals:'Можно с животными',guests:'Можно пригласить гостей (до 10 человек)'},
                 })
             .form-elements__radio
                 .form-elements__selection-label
                     +block-label({text:'radio button'})
                 +radio-list({male:'Мужчина',famele:'Женщина'})
-
-
+            .form-elements__toggle
+                .form-elements__selection-label
+                    +block-label({text:'toggle'})
+                .form-elements__toggle-column
+                    +toggle({id:'toggle-offers',text:'Получать спецпредложения',name:'toggle-offers',state:'checked'})
+                    +toggle({id:'toggle-offers',text:'Получать спецпредложения',name:'toggle-offers'})
+            .form-elements__like
+                .form-elements__selection-label
+                    +block-label({text:'like button'})
+                .form-elements__like-row
+                    +like({id:'like-1',name:'like',count:2,state:'checked'})
+                    +like({id:'like-2',name:'like',count:12,state:'unchecked'})
+            .form-elements__rate
+                .form-elements__selection-label
+                    +block-label({text:'rate button'})
+                .form-elements__rate-row
+                    +rate({id:'first-rate',name:'first-rate',rate:4})
+                    +rate({id:'second-rate',name:'second-rate',rate:5})
+                
 
 
 
