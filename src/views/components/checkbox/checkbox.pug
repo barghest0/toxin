@@ -3,7 +3,7 @@
 mixin checkbox({text='',state='',name='',id=''})
     label.checkbox
         if state === 'checked'
-            input(type="checkbox" name=name id=id checked).checkbox__input
+            input(type="checkbox" name=name id=id checked=state).checkbox__input
         else
             input(type="checkbox" name=name id=id).checkbox__input
         span.checkbox__custom-input

@@ -1,13 +1,16 @@
 
 
-mixin feedback(data)
-    .feedback-item
-        .feedback-item__user
-            img(src=data['avatar'], alt=data['alt']).feedback-item__user-avatar
-            .feedback-item__user-info
-                .feedback-item__user-name=data['name']
-                .feedback-item__user-visit=data['lastVisit']
-        .feedback-item__content
-            .feedback-item__like
-                +inputLike(data['likesCount'])
-            .feedback-item__text=data['comment']
+mixin feedback({avatar='', alt='',name='',lastVisit='', likesCount='', comment='',likeState=''})
+    .feedback
+        .feedback__user
+            img(src=`assets/images/${avatar}`, alt=alt).feedback__user-avatar
+            .feedback__user-info
+                .feedback__user-name
+                    +body-text({text:name,weight:'bold'})
+                .feedback__user-visit
+                     +body-text({text:lastVisit})
+        .feedback__content
+            .feedback__like
+                +like({id:'like-feedback', name:'like-feedback', count:likesCount, state:likeState})
+            .feedback__comment
+                +body-text({text:comment})
