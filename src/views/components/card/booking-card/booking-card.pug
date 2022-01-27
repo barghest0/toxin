@@ -1,2 +1,6 @@
 
-mixin booking-card()
+mixin booking-card({room=0})
+    +card()
+        .booking-card
+            .booking-card__room-info 
+                +card-room-info()
