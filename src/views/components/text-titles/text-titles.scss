@@ -26,4 +26,7 @@
 .body-text {
     color: $shadow-75;
     font-size: 14px;
+    &_bold {
+        font-weight: bold;
+    }
 }

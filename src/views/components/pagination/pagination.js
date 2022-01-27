@@ -79,7 +79,7 @@ class Pagination {
                 this.current = value
                 this.render()
                 $('.pagination__item_next').append(
-                    `<img src="./images/pagination-arrow.svg">`
+                    `<img src="assets/images/pagination-arrow.svg">`
                 )
             })
 
@@ -95,7 +95,7 @@ class Pagination {
                 this.current = this.current + 1
                 this.render()
                 $('.pagination__item__next').append(
-                    `<img src="./images/pagination-arrow.svg">`
+                    `<img src="assets/images/pagination-arrow.svg">`
                 )
             })
         }
@@ -114,6 +114,6 @@ if (document.querySelector('#pagination')) {
     })()
 
     $('.pagination__item_next').append(
-        `<img src="./images/pagination-arrow.svg">`
+        `<img src="assets/images/pagination-arrow.svg">`
     )
 }

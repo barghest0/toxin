@@ -175,6 +175,7 @@
 .lists {
     display: grid;
     grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
+    margin-bottom: 40px;
     &__label {
         margin-bottom: 16px;
     }
@@ -191,5 +192,16 @@
 
     &__bullet-list {
         grid-column-start: 5;
+    }
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: 280px minmax(10px, 167px) 1fr;
+    &__reviews-list {
+        grid-column-start: 1;
+    }
+    &__feedback {
+        grid-column-start: 3;
     }
 }

@@ -1,8 +1,11 @@
 
-mixin reviewList(data)
-    each item in data
-        .review-item
-            img(src=item['img'], alt=item['alt']).review-item__img
-            .review-item__text
-                .review-item__title=item['title']
-                .review-item__description=item['desc']
+mixin review-list({items=[]})
+    .review-list
+        each item in items
+            .review-list__item
+                img(src=`assets/images/${item['img']}`, alt=item['alt']).review-list__img
+                .review-list__text
+                    .review-list__title
+                        +body-text({text:item['title'],weight:'bold'})
+                    .review-list__subtitle 
+                        +body-text({text:item['subtitle']})

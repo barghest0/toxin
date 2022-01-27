@@ -183,3 +183,9 @@ block lists
             .lists__label
                 +block-label({text:'bullet list'})
             +bullet-list({items:[{text:'Нельзя с питомцами'},{text:'Без вечеринок и мероприятий'},{text:'Время прибытия — после 13:00, а выезд до 12:00'} ]})
+
+
+block reviews 
+    .reviews 
+        .reviews__review-list
+            +review-list({items:[{img:'review-image1.svg', alt:'comfort', title:'Комфорт',subtitle:'Шумопоглощающие стены'},{img:'review-image2.svg', alt:'convenience', title:'Удобство',subtitle:'Окно в каждой из спален'}]})

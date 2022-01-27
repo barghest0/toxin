@@ -29,6 +29,12 @@ module.exports = {
         app: PATHS.src,
     },
 
+    output: {
+        filename: `${PATHS.assets}js/[name].[fullhash].js`,
+        path: PATHS.dist,
+        assetModuleFilename: 'assets/images/[name][ext]',
+    },
+
     optimization: {
         splitChunks: {
             cacheGroups: {
@@ -56,7 +62,7 @@ module.exports = {
                 use: ['pug-loader'],
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                test: /\.(png|svg|jpg|jpeg|gif)$/,
                 type: 'asset/resource',
             },
             {

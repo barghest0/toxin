@@ -1,14 +1,15 @@
-.review-item {
-    display: flex;
-    align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba($color: #1f2041, $alpha: 0.1);
-    max-width: 290px;
-    overflow-wrap: break-word;
-    background-color: $white;
-    &:not(:last-child) {
-        margin-bottom: 20px;
+.review-list {
+    &__item {
+        display: flex;
+        align-items: center;
+        padding-bottom: 17px;
+        border-bottom: 1px solid rgba($color: #1f2041, $alpha: 0.1);
+        background-color: $white;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
     }
+
     &__img {
         @include size(48px);
         margin-right: 10px;
@@ -18,8 +19,6 @@
     }
 
     &__title {
-        font-weight: bold;
         margin-bottom: 15px;
     }
 }
-
