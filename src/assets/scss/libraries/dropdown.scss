@@ -143,12 +143,11 @@
     height: 8 px;
     position: absolute;
     right: 5 px;
-    // transform: rotate(-45deg);
     width: 8 px;
 }
 
 .iqdropdown .iqdropdown-selection:after {
-    // background-image: url('http://localhost:8080/assets/img/DropDownArrow.png');
+    background-image: url('../../../views/components/dropdown/images/drop-down-arrow.png');
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -162,6 +161,6 @@
 }
 
 .iqdropdown.menu-open .iqdropdown-selection:after {
-    // background-image: url('http://localhost:8080/assets/img/DropDownArrow.png');
+    background-image: url('../../../views/components/dropdown/images/drop-down-arrow.png');
     transform: rotate(180deg);
 }

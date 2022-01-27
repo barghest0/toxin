@@ -67,15 +67,18 @@ class Pagination {
         const isPage = typeof value === 'number'
         const isNext = !value
         const el = document.createElement(isPage ? 'button' : 'span')
-        el.classList.add('pagination-item')
+        if (el.nodeName === 'SPAN') {
+            el.classList.add('pagination__item')
+            el.classList.add('pagination__points')
+        } else el.classList.add('pagination__item')
         el.textContent = value
 
         if (isPage) {
-            el.classList.add('pagination-item__button')
+            el.classList.add('pagination__item')
             el.addEventListener('click', () => {
                 this.current = value
                 this.render()
-                $('.pagination-item__next').append(
+                $('.pagination__item_next').append(
                     `<img src="./images/pagination-arrow.svg">`
                 )
             })
@@ -85,12 +88,13 @@ class Pagination {
             }
         }
         if (isNext) {
-            el.classList.add('pagination-item__next')
+            el.classList.add('pagination__item')
+            el.classList.add('pagination__item_next')
 
             el.addEventListener('click', () => {
                 this.current = this.current + 1
                 this.render()
-                $('.pagination-item__next').append(
+                $('.pagination__item__next').append(
                     `<img src="./images/pagination-arrow.svg">`
                 )
             })
@@ -109,7 +113,7 @@ if (document.querySelector('#pagination')) {
         })
     })()
 
-    $('.pagination-item__next').append(
+    $('.pagination__item_next').append(
         `<img src="./images/pagination-arrow.svg">`
     )
 }

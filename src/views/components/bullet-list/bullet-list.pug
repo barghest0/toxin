@@ -1,7 +1,8 @@
 
 
-mixin bullet-list(names)
+mixin bullet-list({items={}})
     .bullet-list
         ul.bullet-list__list
-            each name in names
-                li.bullet-list__item=name
+            each item in items
+                li.bullet-list__item
+                    +body-text({text:item['text']})

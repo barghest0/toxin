@@ -1,1 +1,18 @@
+.expand-list {
+    &__label {
+        margin-bottom: 17px;
+        cursor: pointer;
+    }
 
+    &__item {
+        margin-bottom: 10px;
+    }
+
+    &__items {
+        max-height: 0;
+        overflow: hidden;
+        &.active {
+            max-height: 100%;
+        }
+    }
+}

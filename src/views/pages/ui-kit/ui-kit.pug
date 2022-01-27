@@ -140,12 +140,46 @@ block dropdowns
                     +block-label({text:'dropdown'})
                     +block-sub-label({text:'expanded'})
                 +dropdown({items:{bedrooms:'Спальни',beds:'Кровати',bathrooms:'Ванные комнаты'},kind:'apartments', size:'sm'})
+        .dropdowns__guests-expand
+            .dropdowns__guests-item
+                .dropdowns__labels
+                    +block-label({text:'dropdown'})
+                +dropdown({items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
         .dropdowns__guests
             .dropdowns__guests-item
                 .dropdowns__labels
                     +block-label({text:'dropdown'})
                 +dropdown({items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
-            .dropdowns__guests-item
-                .dropdowns__labels
-                    +block-label({text:'dropdown'})
-                +dropdown({items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
+
+block lists
+    .lists 
+        .lists__expand-checkbox
+            +expand-list({label:'expandable checkbox list',  items:[
+                    {id:'breakfast', name:'breakfast', text:'Завтрак'},
+                    {id:'table', name:'table', text:'Письменный стол',state:'checked'},
+                    {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'},
+                    {id:'bed', name:'bed', text:'Кроватка',state:'checked'},
+                    {id:'tv', name:'tv', text:'Телевизор'},
+                    {id:'shampoo', name:'shampoo', text:'Шампунь'},
+                    {id:'tv', name:'tv', text:'Телевизор'},
+                    {id:'shampoo', name:'shampoo', text:'Шампунь'},
+                    ]})
+            +expand-list({label:'expandable checkbox list',isActive:'active', items:[
+                    {id:'breakfast', name:'breakfast', text:'Завтрак'},
+                    {id:'table', name:'table', text:'Письменный стол',state:'checked'},
+                    {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'},
+                    {id:'bed', name:'bed', text:'Кроватка',state:'checked'},
+                    {id:'tv', name:'tv', text:'Телевизор'},
+                    {id:'shampoo', name:'shampoo', text:'Шампунь'},
+                    {id:'tv', name:'tv', text:'Телевизор'},
+                    {id:'shampoo', name:'shampoo', text:'Шампунь'},
+                    ]})
+        .lists__rich-checkbox
+            +rich-checkbox-list({label:'rich checkbox buttons',  items:[
+                {id:'corridor', name:'corridor', text:'Широкий коридор', subtext:'Ширина коридоров в номере не менее 91 см.'},
+                {id:'invalid-helper', name:'invalid-helper', text:'Помощник для инвалидов',subtext:'На 1 этаже вас встретит специалист  и проводит до номера.'},
+                ]})
+        .lists__bullet-list
+            .lists__label
+                +block-label({text:'bullet list'})
+            +bullet-list({items:[{text:'Нельзя с питомцами'},{text:'Без вечеринок и мероприятий'},{text:'Время прибытия — после 13:00, а выезд до 12:00'} ]})

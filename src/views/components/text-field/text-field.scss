@@ -1,7 +1,7 @@
 .text-field {
-    max-width: 320px;
     display: flex;
     flex-direction: column;
+    height: 100%;
 
     &__label {
         margin-bottom: 5px;
@@ -9,7 +9,7 @@
 
     &__container {
         position: relative;
-        height: 45px;
+        height: 44px;
         border-radius: 4px;
 
         background-color: $white;
@@ -24,7 +24,7 @@
     }
 
     &__input {
-        height: 45px;
+        height: 44px;
         width: 100%;
         padding: 0 15px;
 

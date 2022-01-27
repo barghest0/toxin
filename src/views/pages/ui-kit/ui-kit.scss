@@ -40,11 +40,11 @@
 }
 
 .form-elements {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 320px minmax(10px, 126px) 320px minmax(10px, 70px) 320px;
     margin-bottom: 100px;
     &__fields {
-        max-width: 320px;
+        grid-column-start: 1;
     }
 
     &__field-labels {
@@ -52,6 +52,7 @@
         justify-content: space-between;
         margin-bottom: 5px;
     }
+
     &__text-field {
         margin-bottom: 20px;
     }
@@ -78,7 +79,7 @@
     }
 
     &__selections {
-        max-width: 260px;
+        grid-column-start: 3;
     }
 
     &__selection-label {
@@ -88,6 +89,7 @@
     &__checkboxes {
         margin-bottom: 40px;
     }
+
     &__radio {
         margin-bottom: 40px;
     }
@@ -117,7 +119,7 @@
     }
 
     &__other {
-        width: 320px;
+        grid-column-start: 5;
     }
 
     &__other-label {
@@ -147,27 +149,47 @@
 }
 
 .dropdowns {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
     margin-bottom: 40px;
-    &__apartments {
-        &-item {
-            width: 266px;
-            margin-bottom: 20px;
-        }
-    }
     &__labels {
         display: flex;
         justify-content: space-between;
         margin-bottom: 5px;
     }
-
-    &__guests {
-        display: flex;
-        column-gap: 72px;
+    &__apartments {
+        grid-column-start: 1;
         &-item {
-            width: 320px;
             margin-bottom: 20px;
         }
+    }
+
+    &__guests-expand {
+        grid-column-start: 3;
+    }
+    &__guests {
+        grid-column-start: 5;
+    }
+}
+
+.lists {
+    display: grid;
+    grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
+    &__label {
+        margin-bottom: 16px;
+    }
+    &__expand-checkbox {
+        grid-column-start: 1;
+        display: flex;
+        flex-direction: column;
+        row-gap: 35px;
+    }
+
+    &__rich-checkbox {
+        grid-column-start: 3;
+    }
+
+    &__bullet-list {
+        grid-column-start: 5;
     }
 }
