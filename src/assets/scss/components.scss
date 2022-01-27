@@ -24,11 +24,14 @@
 @import '../../views/components/review-list/review-list.scss';
 @import '../../views/components/rich-checkbox/rich-checkbox.scss';
 @import '../../views/components/rich-checkbox-list/rich-checkbox-list.scss';
-
+@import '../../views/components/preview-room/swiper.scss';
+@import '../../views/components/dropdown/iqdropdown.scss';
 @import '../../views/components/subscribe-text-field/subscribe-text-field.scss';
 @import '../../views/components/text-field/text-field.scss';
 @import '../../views/components/toggle/toggle.scss';
 @import '../../views/components/checkbox/checkbox.scss';
-
-@import './libraries/dropdown.scss';
-@import './libraries/swiper.scss';
+@import '../../views/components/card/card.scss';
+@import '../../views/components/card/search-room-card/search-room-card.scss';
+@import '../../views/components/card/booking-card/booking-card.scss';
+@import '../../views/components/card/login-card/login-card.scss';
+@import '../../views/components/card/register-card/register-card.scss';

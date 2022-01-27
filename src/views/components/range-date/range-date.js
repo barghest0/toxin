@@ -1,7 +1,7 @@
 import 'air-datepicker/dist/css/datepicker.min.css'
 import 'air-datepicker/dist/js/datepicker.min'
 
-$('#datepicker-from').datepicker({
+$('.text-field__input_date-from').datepicker({
     onSelect: function (fd) {
         const [first, second] = fd.split('-')
         $('#datepicker-from').val(first)
@@ -15,5 +15,3 @@ $('#datepicker-from').datepicker({
     nextHtml:
         '<svg width="17" height="18" viewBox="0 0 17 18" ><path d="M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z" /></svg>',
 })
-
-

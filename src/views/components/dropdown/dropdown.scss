@@ -1,7 +1,14 @@
 .dropdown {
     display: flex;
     flex-direction: column;
-    height: 44px;
+    &__labels {
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__field {
+        height: 44px;
+    }
     &.menu-open {
         border: 1px solid $shadow-50;
     }

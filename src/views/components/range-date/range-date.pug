@@ -5,7 +5,7 @@ mixin range-date({from='Прибытие', to='Выезд'})
             .text-field__label
                 +block-label({text:from})
             .text-field__container
-                input.text-field__input.text-field__input_date(id="datepicker-from" name="date-from" data-range="true" placeholder="ДД.ММ.ГГГГ")
+                input.text-field__input.text-field__input_date.text-field__input_date-from(id="datepicker-from" name="date-from" data-range="true" placeholder="ДД.ММ.ГГГГ")
                 
         .text-field
             .text-field__label

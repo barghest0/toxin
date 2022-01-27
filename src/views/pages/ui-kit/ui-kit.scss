@@ -198,10 +198,17 @@
 .reviews {
     display: grid;
     grid-template-columns: 280px minmax(10px, 167px) 1fr;
+    margin-bottom: 100px;
     &__reviews-list {
         grid-column-start: 1;
     }
     &__feedback {
         grid-column-start: 3;
     }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 380px 380px 320px;
+    grid-column-gap: 40px;
 }

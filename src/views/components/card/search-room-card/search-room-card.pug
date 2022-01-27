@@ -1,0 +1,12 @@
+mixin search-room-card({title=''})
+    +card()
+        .search-room-card 
+            .search-room-card__title 
+                +widget-title({text:title})
+            form.search-room-card__search-form
+                .search-room-card__date 
+                    +range-date({from:'Прибытие',to:'Выезд'})
+                .search-room-card__guests 
+                    +dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
+                .search-room-card__button(action="search-room.html") 
+                    +button({text:'Подобрать номер',type:'filled',isLargest:true})
