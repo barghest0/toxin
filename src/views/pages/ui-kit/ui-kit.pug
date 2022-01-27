@@ -44,12 +44,12 @@ block form-elements
                 .form-elements__field-labels
                     +block-label({text:'text field'})
                     +block-sub-label({text:'default'})
-                +text-field({id:'default-field', name:"email", placeholder:"Email", type:'email'})
+                +text-field({ name:"email", placeholder:"Email", type:'email'})
             .form-elements__text-field
                 .form-elements__field-labels
                     +block-label({text:'text field'})
                     +block-sub-label({text:'hover / focus'})
-                +text-field({id:'focused-field', name:"email", placeholder:"Email", type:'email', value:'This is pretty awesome'})
+                +text-field({ name:"email", placeholder:"Email", type:'email', value:'This is pretty awesome'})
             .form-elements__dropdown
                 .form-elements__field-labels
                     +block-label({text:'dropdown'})
@@ -57,7 +57,7 @@ block form-elements
             .form-elements__masked-text-field
                 .form-elements__field-labels
                     +block-label({text:'masked text field'})
-                +masked-text-field({id:'masked-field', name:"email", placeholder:"ДД.ММ.ГГГГ", type:'email'})
+                +masked-text-field({ name:"email", placeholder:"ДД.ММ.ГГГГ", type:'email'})
             .form-elements__range-date
                 +range-date({from:'date dropdown',to:'date dropdown'})
             .form-elements__filter-date
@@ -189,7 +189,8 @@ block reviews
 block cards            
     .cards 
         .cards__column 
-            +search-room-card({title:'Найдем номер под ваш пожелания'})
+            +search-room-card({})
+            +register-card({})
         .cards__column 
-
+            
         .cards__column
