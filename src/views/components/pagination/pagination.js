@@ -94,7 +94,7 @@ class Pagination {
             el.addEventListener('click', () => {
                 this.current = this.current + 1
                 this.render()
-                $('.pagination__item__next').append(
+                $('.pagination__item_next').append(
                     `<img src="assets/images/pagination-arrow.svg">`
                 )
             })
@@ -105,13 +105,11 @@ class Pagination {
 }
 
 if (document.querySelector('#pagination')) {
-    ;(() => {
-        new Pagination(document.querySelector('#pagination'), {
-            curr: 1,
-            slots: 7,
-            total: 15,
-        })
-    })()
+    new Pagination(document.querySelector('#pagination'), {
+        curr: 1,
+        slots: 7,
+        total: 15,
+    })
 
     $('.pagination__item_next').append(
         `<img src="assets/images/pagination-arrow.svg">`
