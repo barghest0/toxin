@@ -57,13 +57,13 @@ block form-elements
             .form-elements__masked-text-field
                 .form-elements__field-labels
                     +block-label({text:'masked text field'})
-                +masked-text-field({ name:"email", placeholder:"ДД.ММ.ГГГГ", type:'email'})
+                +masked-text-field({ name:"birthday", placeholder:"ДД.ММ.ГГГГ", type:'text', id:'masked-text-field-1'})
             .form-elements__range-date
-                +range-date({from:'date dropdown',to:'date dropdown'})
+                +range-date({from:'date dropdown',to:'date dropdown', idFrom:'date-from-1', idTo:'date-to-1'})
             .form-elements__filter-date
                 .form-elements__field-labels
                     +block-label({text:'filter date dropdown'})
-                +filter-date({value:'19 авг - 23 авг'})
+                +filter-date({value:'19 авг - 23 авг',id:'filter-date-1'})
             .form-elements__subscribe-field
                 .form-elements__field-labels
                     +block-label({text:'subscription text field'})

@@ -1,14 +1,15 @@
 
-mixin range-date({from='Прибытие', to='Выезд'})
+mixin range-date({from='Прибытие', to='Выезд', idTo='date-from', idFrom='date-to'})
     .range-date
         .text-field
             .text-field__label
                 +block-label({text:from})
             .text-field__container
-                input.text-field__input.text-field__input_date.text-field__input_date-from(id="datepicker-from" name="date-from" data-range="true" placeholder="ДД.ММ.ГГГГ")
-                
+                input.text-field__input.text-field__input_date(id=idFrom name=name data-range="true" placeholder='ДД.ММ.ГГГГ')
         .text-field
             .text-field__label
                 +block-label({text:to})
             .text-field__container
-                input.text-field__input.text-field__input_date(id="datepicker-to" name="date-to" data-range="true" placeholder="ДД.ММ.ГГГГ")
+                input.text-field__input.text-field__input_date(id=idTo name=name data-range="true" placeholder='ДД.ММ.ГГГГ')
+        .range-date__datepicker-container
+            +datepicker-container({})

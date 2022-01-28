@@ -5,7 +5,7 @@ mixin search-room-card({title='Найдем номер под ваш пожел�
                 +widget-title({text:title})
             form.search-room-card__search-form
                 .search-room-card__date 
-                    +range-date({from:'Прибытие',to:'Выезд'})
+                    +range-date({from:'Прибытие',to:'Выезд',idFrom:'date-from-2',idTo:'date-to-2'})
                 .search-room-card__guests 
                     +dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
                 .search-room-card__button(action="search-room.html") 

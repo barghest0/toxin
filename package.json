@@ -52,7 +52,7 @@
         "webpack-merge": "^5.8.0"
     },
     "dependencies": {
-        "air-datepicker": "^2.2.3",
+        "air-datepicker": "^3.1.1",
         "chart.js": "^3.5.1",
         "ion-rangeslider": "^2.3.1",
         "item-quantity-dropdown": "^2.1.0",

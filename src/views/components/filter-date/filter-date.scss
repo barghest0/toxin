@@ -1,0 +1,8 @@
+.filter-date {
+    position: relative;
+    &__datepicker-container {
+        position: absolute;
+        top: 50px;
+        z-index: 100;
+    }
+}
