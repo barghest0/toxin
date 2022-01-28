@@ -38,6 +38,8 @@ $('.filter-date').each(() => {
     })
 })
 
+
+
 $('.range-date')
     .find('.text-field__input_date')
     .on('click', () => {

@@ -1,0 +1,30 @@
+.preview-room {
+    text-decoration: none;
+    color: $shadow-100;
+    background-color: #fff;
+    width: 100%;
+
+    &__image {
+        display: block;
+        border-radius: 4px 4px 0 0;
+    }
+    &__content {
+        padding: 20px;
+        padding-bottom: 0;
+    }
+    &__info {
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba($color: $shadow-100, $alpha: 0.1);
+    }
+    &__reviews {
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+        justify-content: space-between;
+        &-value {
+            color: $shadow-50;
+        }
+    }
+
+    
+}

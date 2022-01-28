@@ -17,13 +17,16 @@
 
     &-button-next:after,
     &-button-prev:after {
+        z-index: 1000;
         color: #fff;
         font-size: 14px;
         font-weight: bold;
     }
 
-    .swiper-button-next,
-    .swiper-button-prev {
+    &-button-next,
+    &-button-prev {
+        z-index: 1000;
+
         transition: 0.2s linear;
         opacity: 0;
         pointer-events: none;

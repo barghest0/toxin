@@ -1,9 +1,18 @@
-- let feedbackRateId = 0
 
-mixin preview-room(data)
-    each item in data
-        a(href="/room.html").card.card_preview-room
-            //- +roomImg(item['img'])
-            //- .card__preview-room-content
-            //-     +roomHeader(item['number'],item['price'],item['isLuxury'],true)
-            //-     +roomFeedback(`feedback-rate${++feedbackRateId}`, item['feedbacks'] , item['rate'])
+mixin preview-room({roomNumber='',images=[],isLuxury=false,rate=0,price=0,reviews=''})
+    +card('sm')
+        a(href="/room.html").preview-room
+            .preview-room__carousel.swiper
+                .preview-room__carousel-container.swiper-wrapper 
+                    each image in images
+                        img(src=`assets/images/${image}`, alt="").preview-room__image.swiper-slide
+                .swiper-pagination 
+                .swiper-button-next 
+                .swiper-button-prev
+            .preview-room__content 
+                .preview-room__info
+                    +preview-room-info({roomNumber,isLuxury,price,size:'sm'})
+                .preview-room__reviews
+                    +rate({id:`${roomNumber}-rate`,name:`${roomNumber}-rate`,rate})
+                    .preview-room__reviews-value #{reviews} Отзывов
+                    

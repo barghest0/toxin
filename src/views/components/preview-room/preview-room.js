@@ -3,14 +3,12 @@ import Swiper from 'swiper'
 import 'swiper/css'
 import 'swiper/scss/pagination'
 import 'swiper/scss/navigation'
-import SwiperCore, { Pagination, Navigation } from 'swiper'
-
-SwiperCore.use([Pagination, Navigation])
+import { Pagination, Navigation } from 'swiper'
 
 new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
-
+    modules: [Pagination, Navigation],
     pagination: {
         el: '.swiper-pagination',
     },

@@ -1,0 +1,15 @@
+
+
+mixin preview-room-info({roomNumber='',isLuxury='',price='',size=''})
+    .preview-room-info(class=`preview-room-info_${size}`)
+        .preview-room-info__room
+            .preview-room-info__room-number №
+                if size === 'lg'
+                    +widget-title({text:roomNumber})
+                else 
+                    +title-inside-widget({text:roomNumber})
+            if isLuxury 
+                .preview-room-info__room-luxury Люкс
+        .preview-room-info__price
+            .preview-room-info__price-value #{price}₽
+            .preview-room-info__price-in-time в сутки

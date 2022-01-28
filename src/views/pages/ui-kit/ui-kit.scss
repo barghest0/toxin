@@ -216,4 +216,10 @@
         flex-direction: column;
         row-gap: 40px;
     }
+    &__datepicker .datepicker-container {
+        display: block;
+    }
+    &__preview-room{
+        width: 270px;
+    }
 }

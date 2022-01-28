@@ -1,0 +1,39 @@
+.preview-room-info {
+    display: flex;
+    justify-content: space-between;
+    &__room {
+        display: flex;
+        align-items: flex-end;
+        &-number {
+            display: flex;
+            align-items: flex-end;
+            font-size: 14px;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        &-luxury {
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: $main-color;
+        }
+    }
+
+    &_sm &__room-number {
+        margin-right: 1px;
+    }
+
+    &__price {
+        color: $shadow-50;
+        display: flex;
+        align-items: flex-end;
+        &-value {
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        &-in-time {
+            font-size: 12px;
+        }
+    }
+}
