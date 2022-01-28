@@ -1,6 +1,7 @@
-.preview-room-info {
+.card-room-info {
     display: flex;
     justify-content: space-between;
+    color: $shadow-100;
     &__room {
         display: flex;
         align-items: flex-end;

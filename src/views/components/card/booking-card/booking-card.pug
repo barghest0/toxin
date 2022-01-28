@@ -1,6 +1,30 @@
 
-mixin booking-card({room=0})
+mixin booking-card({roomNumber='', price='', isLuxury=false})
     +card()
         .booking-card
             .booking-card__room-info 
-                +card-room-info()
+                +card-room-info({roomNumber, price, isLuxury,size:'lg'})
+            .booking-card__date 
+                +range-date({from:'Прибытие',to:'Выезд',idFrom:'date-from-2',idTo:'date-to-2'})
+            .booking-card__guests 
+                +dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
+            .booking-card__cost 
+                .booking-card__day 
+                    +body-text({text:'9 990₽ х 4 суток'}) 
+                .booking-card__day-price 
+                    +body-text({text:'39 960₽'}) 
+                .booking-card__service 
+                    +body-text({text:'Сбор за услуги: скидка 2 179₽'}) 
+                    img(src="assets/images/services.svg", weight=20,height=20 alt="")
+                .booking-card__service-price 
+                    +body-text({text:'0₽'}) 
+                .booking-card__add-service 
+                    +body-text({text:'Сбор за дополнительные услуги'}) 
+                    img(src="assets/images/services.svg", weight=20,height=20 alt="")
+                .booking-card__add-service-price 
+                    +body-text({text:'300₽'}) 
+            .booking-card__final-cost 
+                +title-inside-widget({text:'Итого'})
+                +title-inside-widget({text:'38 081₽'})
+            .booking-card__button 
+                +button({text:'Забронировать',type:'filled',isLargest:true})

@@ -17,3 +17,5 @@ import '../views/components/preview-room/images/preview-room3.png'
 
 import '../views/components/pagination/images/pagination-arrow.svg'
 import '../views/components/feedback/images/avatar.svg'
+
+import '../views/components/card/booking-card/images/services.svg'
