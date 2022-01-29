@@ -1,0 +1,15 @@
+extends ../../layout/landing-layout.pug
+
+block landing 
+  .landing
+    .landing__header 
+      +header({})
+      .landing__intro
+        .container
+          .landing__inner
+            .landing__search-card
+              +search-room-card({})
+            .landing__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
+        .landing__footer
+          +footer({})
+          
