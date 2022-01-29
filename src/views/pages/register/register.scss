@@ -1,0 +1,17 @@
+.register {
+    &__intro {
+        height: 684px;
+        background: url('./images/auth-background.jpg') center no-repeat;
+        background-size: cover;
+    }
+    &__inner {
+        height: 684px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__card {
+        height: 646px;
+        width: 380px;
+    }
+}

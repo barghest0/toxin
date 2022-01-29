@@ -1,7 +1,7 @@
 
 
 
-mixin header({isLogin=false,name=null})
+mixin header({isLogin=false,name=''}={})
     header.header(class=isLogin ? 'header_authorized' : null)
         .container
             .header__inner(class=isLogin ? 'header__inner_authorized' : null)
