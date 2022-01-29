@@ -5,7 +5,7 @@ mixin booking-card({roomNumber='', price='', isLuxury=false})
             .booking-card__room-info 
                 +card-room-info({roomNumber, price, isLuxury,size:'lg'})
             .booking-card__date 
-                +range-date({from:'Прибытие',to:'Выезд',idFrom:'date-from-2',idTo:'date-to-2'})
+                +range-date({from:'Прибытие',to:'Выезд',idFrom:'date-from-3',idTo:'date-to-3'})
             .booking-card__guests 
                 +dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
             .booking-card__cost 

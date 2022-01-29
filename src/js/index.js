@@ -4,7 +4,6 @@ import '../views/components/filter-date/filter-date'
 import '../views/components/range-slider/range-slider'
 import '../views/components/pagination/pagination'
 import '../views/components/expand-list/expand-list'
-import '../views/components/datepicker-container/datepicker-container'
 import '../views/components/preview-room/preview-room'
 
 import '../views/components/logo/images/logo.png'
