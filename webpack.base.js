@@ -1,16 +1,16 @@
-const path = require('path')
-const fs = require('fs')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const webpack = require('webpack')
+const path = require('path');
+const fs = require('fs');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const PATHS = {
     src: path.join(__dirname, './src'),
     dist: path.join(__dirname, './dist'),
     assets: 'assets/',
-}
-let pagesBlocks = ['ui-kit']
-const PAGES_DIR = `${PATHS.src}/views/pages/`
+};
+let pagesBlocks = ['ui-kit', 'landing', 'landing'];
+const PAGES_DIR = `${PATHS.src}/views/pages/`;
 
 const PAGES = pagesBlocks.map(
     item =>
@@ -18,7 +18,7 @@ const PAGES = pagesBlocks.map(
         fs
             .readdirSync(`${PAGES_DIR}${item}/`)
             .filter(fileName => fileName.endsWith('.pug'))
-)
+);
 
 module.exports = {
     externals: {
@@ -124,7 +124,7 @@ module.exports = {
                     .at(-1)
                     .replace(/\.pug$/, '.html')}`,
                 minify: false,
-            })
+            });
         }),
     ],
-}
+};

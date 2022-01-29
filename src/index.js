@@ -1,11 +1,11 @@
 //libraries
-import 'jquery'
+import 'jquery';
 
 //JS
-import './js/index'
+import './js/index';
 
 //CSS
-import './assets/css/index.css'
+import './style/css/index.css';
 
 //SCSS
-import './assets/scss/index.scss'
+import './style/scss/index.scss';
