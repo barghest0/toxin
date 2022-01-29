@@ -1,0 +1,67 @@
+extends ../../layout/search-room-layout.pug
+
+block search-room 
+  .search-room
+    +header({})
+    .container
+      .search-room__inner 
+        .search-room__filters
+          .search-room__filter
+            +filter-date({label:'Дата пребывания в отеле'})
+          .search-room__filter
+            +dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'sm'})
+          .search-room__filter 
+            //- +range-slider({label:'Диапазон цены',subLabel:'5 000₽ - 10 000₽'})
+          .search-room__filter 
+            +checkbox-list({label:'checkbox buttons', items:[
+                    {id:'smoking', name:'smoking', text:'Можно курить'},
+                    {id:'animals', name:'animals', text:'Можно с животными',state:'checked'},
+                    {id:'guests', name:'guests', text:'Можно пригласить гостей (до 10 человек)',state:'checked'},
+                    ]
+                })
+          .search-room__filter 
+            +rich-checkbox-list({label:'rich checkbox buttons',  items:[
+                {id:'corridor', name:'corridor', text:'Широкий коридор', subtext:'Ширина коридоров в номере не менее 91 см.'},
+                {id:'invalid-helper', name:'invalid-helper', text:'Помощник для инвалидов',subtext:'На 1 этаже вас встретит специалист  и проводит до номера.'},
+                ]})
+          .search-room__filter
+            +dropdown({label:'dropdown',items:{bedrooms:'Спальни',beds:'Кровати',bathrooms:'Ванные комнаты'},kind:'apartments', size:'sm'})
+          .search-room__filter
+            +expand-list({label:'expandable checkbox list',  items:[
+                    {id:'breakfast', name:'breakfast', text:'Завтрак'},
+                    {id:'table', name:'table', text:'Письменный стол',state:'checked'},
+                    {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'},
+                    {id:'bed', name:'bed', text:'Кроватка',state:'checked'},
+                    {id:'tv', name:'tv', text:'Телевизор'},
+                    {id:'shampoo', name:'shampoo', text:'Шампунь'},
+                    {id:'tv', name:'tv', text:'Телевизор'},
+                    {id:'shampoo', name:'shampoo', text:'Шампунь'},
+                    ]})
+        .search-room__cards
+          .search-room__card
+            +preview-room({roomNumber:888,id:'1', images:['preview-room1.png','preview-room1.png','preview-room1.png','preview-room1.png'],price:9900,rate:5,isLuxury:true,reviews:145})
+          .search-room__card
+            +preview-room({roomNumber:840,id:'2', images:['preview-room2.png','preview-room2.png','preview-room2.png','preview-room2.png'],price:9900,rate:4,isLuxury:false,reviews:65})
+          .search-room__card
+            +preview-room({roomNumber:880,id:'3', images:['preview-room3.png','preview-room3.png','preview-room3.png','preview-room3.png'],price:850,rate:3,isLuxury:true,reviews:35})
+          .search-room__card
+            +preview-room({roomNumber:888,id:'4', images:['preview-room1.png','preview-room1.png','preview-room1.png','preview-room1.png'],price:9900,rate:5,isLuxury:true,reviews:145})
+          .search-room__card
+            +preview-room({roomNumber:840,id:'5', images:['preview-room2.png','preview-room2.png','preview-room2.png','preview-room2.png'],price:9900,rate:4,isLuxury:false,reviews:65})
+          .search-room__card
+            +preview-room({roomNumber:880,id:'6', images:['preview-room3.png','preview-room3.png','preview-room3.png','preview-room3.png'],price:850,rate:3,isLuxury:true,reviews:35})
+          .search-room__card
+            +preview-room({roomNumber:888,id:'7', images:['preview-room1.png','preview-room1.png','preview-room1.png','preview-room1.png'],price:9900,rate:5,isLuxury:true,reviews:145})
+          .search-room__card
+            +preview-room({roomNumber:840,id:'8', images:['preview-room2.png','preview-room2.png','preview-room2.png','preview-room2.png'],price:9900,rate:4,isLuxury:false,reviews:65})
+          .search-room__card
+            +preview-room({roomNumber:880,id:'9', images:['preview-room3.png','preview-room3.png','preview-room3.png','preview-room3.png'],price:850,rate:3,isLuxury:true,reviews:35})
+          .search-room__card
+            +preview-room({roomNumber:888,id:'10', images:['preview-room1.png','preview-room1.png','preview-room1.png','preview-room1.png'],price:9900,rate:5,isLuxury:true,reviews:145})
+          .search-room__card
+            +preview-room({roomNumber:840,id:'11', images:['preview-room2.png','preview-room2.png','preview-room2.png','preview-room2.png'],price:9900,rate:4,isLuxury:false,reviews:65})
+          .search-room__card
+            +preview-room({roomNumber:880,id:'12', images:['preview-room3.png','preview-room3.png','preview-room3.png','preview-room3.png'],price:850,rate:3,isLuxury:true,reviews:35})
+        .search-room__pagination
+          +pagination({})
+    +footer({})

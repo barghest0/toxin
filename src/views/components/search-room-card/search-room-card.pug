@@ -3,7 +3,7 @@ mixin search-room-card({title='Найдем номер под ваш пожел�
         .search-room-card 
             .search-room-card__title 
                 +widget-title({text:title})
-            form.search-room-card__search-form
+            form.search-room-card__search-form(action="search-room.html")
                 .search-room-card__date 
                     +range-date({from:'Прибытие',to:'Выезд',idFrom:'date-from-2',idTo:'date-to-2'})
                 .search-room-card__guests 

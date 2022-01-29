@@ -9,7 +9,14 @@ const PATHS = {
     dist: path.join(__dirname, './dist'),
     assets: 'assets/',
 };
-let pagesBlocks = ['ui-kit', 'landing', 'landing'];
+let pagesBlocks = [
+    'ui-kit',
+    'landing',
+    'search-room',
+    'login',
+    'register',
+    'room',
+];
 const PAGES_DIR = `${PATHS.src}/views/pages/`;
 
 const PAGES = pagesBlocks.map(

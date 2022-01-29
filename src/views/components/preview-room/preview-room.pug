@@ -1,5 +1,5 @@
 
-mixin preview-room({roomNumber='',images=[],isLuxury=false,rate=0,price=0,reviews=''})
+mixin preview-room({roomNumber='',id='',images=[],isLuxury=false,rate=0,price=0,reviews=''})
     +card('sm')
         a(href="/room.html").preview-room
             .preview-room__carousel.swiper
@@ -13,6 +13,6 @@ mixin preview-room({roomNumber='',images=[],isLuxury=false,rate=0,price=0,review
                 .preview-room__info
                     +card-room-info({roomNumber,isLuxury,price,size:'sm'})
                 .preview-room__reviews
-                    +rate({id:`${roomNumber}-rate`,name:`${roomNumber}-rate`,rate})
+                    +rate({id:`${id}-rate`,name:`${id}-rate`,rate})
                     .preview-room__reviews-value #{reviews} Отзывов
                     

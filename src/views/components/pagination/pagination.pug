@@ -1,6 +1,6 @@
 
 
-mixin pagination()
+mixin pagination({pageCount='12',count='100'}={})
     .pagination
         .pagination__items#pagination
-        .pagination__title 1 – 12 из 100+ вариантов аренды
+        .pagination__title 1 – #{pageCount} из #{count[0]}00+ вариантов аренды

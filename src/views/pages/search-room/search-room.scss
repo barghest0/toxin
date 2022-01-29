@@ -1,0 +1,29 @@
+.search-room {
+    &__inner {
+        padding-top: 30px;
+        padding-bottom: 70px;
+        display: grid;
+        grid-template-columns: 266px minmax(10px, 60px) 1fr;
+    }
+
+    &__filter {
+        margin-bottom: 30px;
+        &:first-child {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__cards {
+        grid-column-start: 3;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+        grid-column-gap: 10px;
+        grid-row-gap: 20px;
+        margin-bottom: 40px;
+    }
+    &__pagination {
+        grid-column-start: 3;
+        justify-self: center;
+    }
+}
