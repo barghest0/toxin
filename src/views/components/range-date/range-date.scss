@@ -1,7 +1,10 @@
 .range-date {
-    display: flex;
-    column-gap: 20px;
     position: relative;
+    &__text-fields {
+        display: flex;
+        column-gap: 20px;
+        justify-content: space-between;
+    }
     &__datepicker-container {
         position: absolute;
         top: 70px;
