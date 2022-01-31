@@ -10,4 +10,7 @@ mixin header({isLogin=false,name=''}={})
                 .header__nav
                     +nav({isLogin,name})
                 .header__burger
-                    .header__burger-block Burger
+                    .header__burger-block
+                        .header__burger-line
+                    .header__burger-nav
+                        +nav({isLogin,name,burger:true})

@@ -1,5 +1,6 @@
 .nav {
     display: flex;
+    position: relative;
     &__item {
         cursor: pointer;
         position: relative;
@@ -45,5 +46,25 @@
         &:hover {
             font-weight: bold;
         }
+    }
+
+    &_burger {
+        height: inherit;
+        z-index: 200;
+        background-color: $white;
+        position: absolute;
+        flex-direction: column;
+        top: 70px;
+        right: 0;
+        row-gap: 20px;
+        padding: 10px;
+        border-radius: 0px 0px 0px 7px;
+        box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
+    }
+    &_burger &__item {
+        display: flex;
+        justify-content: center;
+        margin-right: 0;
+        width: 200px;
     }
 }

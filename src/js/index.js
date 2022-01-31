@@ -6,6 +6,7 @@ import '../views/components/pagination/pagination';
 import '../views/components/expand-list/expand-list';
 import '../views/components/preview-room/preview-room';
 import '../views/components/chart/chart';
+import '../views/components/header/header';
 
 import '../views/components/logo/images/logo.png';
 import '../views/components/review-list/images/review-image1.svg';

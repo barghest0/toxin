@@ -1,7 +1,7 @@
 
 
-mixin nav({isLogin=false,name=''})
-    nav.header__nav.nav
+mixin nav({isLogin=false,name='',burger=false}={})
+    nav.nav(class=burger ? 'nav_burger' : null)
         a(href="/about.html").nav__item О нас
         ul.nav__item.nav__item_list Услуги
         a(href="/jobs.html").nav__item Вакансии
