@@ -47,8 +47,11 @@
         grid-template-columns: 1fr 70px 380px;
         @include sm-desktop {
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 1fr 0.5fr;
             row-gap: 30px;
+        }
+        @include sm-tablet-portrait {
+            grid-template-rows: 1fr 0.3fr;
         }
     }
     &__booking {
@@ -57,7 +60,7 @@
         @include sm-desktop {
             grid-column: 1;
             grid-row: 2;
-            grid-template-columns: 1fr;
+            justify-self: center;
         }
     }
 
@@ -72,36 +75,73 @@
         grid-template-rows: 290px minmax(300px, 1fr) 270px;
         row-gap: 30px;
         @include sm-desktop {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 10px;
+        }
+        @include sm-tablet-portrait {
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 290px 290px minmax(300px, 1fr) repeat(2, 180px);
+            column-gap: 0px;
+        }
+    }
+
+    &__about {
+        @include sm-tablet-portrait {
+            grid-column-start: 1;
+            grid-row-start: 1;
         }
     }
 
     &__impressions {
-        grid-column: 3;
+        grid-column-start: 3;
         display: flex;
         flex-direction: column;
         @include md-desktop {
             align-items: center;
         }
+        @include sm-desktop {
+            grid-column-start: 2;
+        }
+        @include sm-tablet-portrait {
+            grid-column-start: 1;
+            grid-row-start: 2;
+        }
     }
     &__feedback {
         grid-column: 1/4;
-        grid-row: 2;
+        grid-row-start: 2;
         display: flex;
         flex-direction: column;
         row-gap: 22px;
+        @include sm-tablet-portrait {
+            grid-column-start: 1;
+            grid-row-start: 3;
+        }
     }
 
     &__rules {
-        grid-row: 3;
+        grid-row-start: 3;
+        @include sm-desktop {
+            grid-column-start: 1;
+        }
+        @include sm-tablet-portrait {
+            grid-column-start: 1;
+            grid-row-start: 4;
+        }
     }
 
     &__cancel {
-        grid-column: 3;
-        grid-row: 3;
+        grid-column-start: 3;
+        grid-row-start: 3;
         &-text {
             line-height: 1.7;
+        }
+        @include sm-desktop {
+            grid-column-start: 2;
+        }
+        @include sm-tablet-portrait {
+            grid-column-start: 1;
+            grid-row-start: 5;
         }
     }
 }
