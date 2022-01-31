@@ -4,12 +4,44 @@
         padding-bottom: 70px;
         display: grid;
         grid-template-columns: 266px minmax(10px, 60px) 1fr;
+        @include sm-tablet-portrait {
+            grid-template-columns: 1fr;
+            padding-top: 50px;
+        }
+    }
+
+    &__filters {
+        z-index: 100;
+        background-color: $white;
+        transition: all 0.3s linear;
+
+        @include sm-tablet-portrait {
+            position: absolute;
+            transform: translateX(-300px);
+            // height: 100vh;
+            left: 0;
+            &.active {
+                padding: 20px;
+
+                transform: translateX(0);
+            }
+        }
     }
 
     &__filter {
         margin-bottom: 30px;
         &:first-child {
             margin-bottom: 20px;
+        }
+        &-icon {
+            z-index: 110;
+            cursor: pointer;
+            position: absolute;
+            top: 85px;
+            display: none;
+            @include sm-tablet-portrait {
+                display: block;
+            }
         }
     }
 

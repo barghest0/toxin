@@ -11,11 +11,14 @@
         display: grid;
         grid-template-columns: minmax(300px, 380px) 1fr minmax(0, 260px);
         grid-template-rows: 374px 1fr;
+        @include phone {
+            grid-template-columns: 1fr;
+        }
     }
+
 
     &__slogan {
         grid-column-start: 3;
-
         grid-row-start: 2;
         align-self: end;
         text-align: end;

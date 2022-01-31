@@ -30,13 +30,13 @@
 }
 
 @mixin phone {
-    @media (max-width: 400px) {
+    @media (max-width: 450px) {
         @content;
     }
 }
 
 @mixin sm-tablet-portrait {
-    @media (max-width: 620px) {
+    @media (max-width: 650px) {
         @content;
     }
 }

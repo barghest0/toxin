@@ -8,6 +8,8 @@ import '../views/components/preview-room/preview-room';
 import '../views/components/chart/chart';
 import '../views/components/header/header';
 
+import '../views/pages/search-room/search-room';
+
 import '../views/components/logo/images/logo.png';
 import '../views/components/review-list/images/review-image1.svg';
 import '../views/components/review-list/images/review-image2.svg';
@@ -21,3 +23,4 @@ import '../views/components/booking-card/images/services.svg';
 import '../views/pages/room/images/main-image-room.jpg';
 import '../views/pages/room/images/second-image-room.jpg';
 import '../views/pages/room/images/third-image-room.jpg';
+import '../views/pages/search-room/images/filter-icon.svg';

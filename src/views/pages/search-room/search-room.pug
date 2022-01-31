@@ -4,7 +4,9 @@ block search-room
   .search-room
     +header({})
     .container
-      .search-room__inner 
+      .search-room__inner
+        .search-room__filter-icon 
+          img(src="assets/images/filter-icon.svg", alt="alt")
         .search-room__filters
           .search-room__filter
             +filter-date({label:'Дата пребывания в отеле'})
