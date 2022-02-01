@@ -67,7 +67,7 @@
         margin-right: 0;
         width: 300px;
         @include phone {
-            width: calc(100vw - 20px);
+            width: calc(100vw - 30px);
         }
     }
 }
