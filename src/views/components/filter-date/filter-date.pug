@@ -4,11 +4,11 @@ mixin filter-date({label='', id='filter-date', placeholder=''}={})
 			+block-label({text:label})
 		.text-field
 			.text-field__container
-				input.text-field__input.text-field__input_date(
+				input.text-field__input.text-field__input_filter-date(
 					id=id,
 					name=name,
 					data-range='true',
 					value='19 авг - 23 авг'
 				)
-		.filter-date__datepicker-container 
-			//- +datepicker-container({size:'md'})
+		.filter-date__datepicker
+			+datepicker

@@ -1,3 +1,4 @@
+//components files
 import '../views/components/dropdown/dropdown';
 import '../views/components/masked-text-field/masked-text-field';
 import '../views/components/filter-date/filter-date';
@@ -7,9 +8,14 @@ import '../views/components/expand-list/expand-list';
 import '../views/components/preview-room/preview-room';
 import '../views/components/chart/chart';
 import '../views/components/header/header';
+import '../views/components/datepicker/datepicker';
+import '../views/components/range-date/range-date';
+import '../views/components/filter-date/filter-date';
 
+//pages files
 import '../views/pages/search-room/search-room';
 
+//components images
 import '../views/components/logo/images/logo.png';
 import '../views/components/review-list/images/review-image1.svg';
 import '../views/components/review-list/images/review-image2.svg';

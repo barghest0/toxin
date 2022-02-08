@@ -45,7 +45,8 @@
 			border: 1px solid $shadow-50;
 		}
 
-		&_date {
+		&_range-date,
+		&_filter-date {
 			cursor: pointer;
 			&::placeholder {
 				color: $shadow-75;

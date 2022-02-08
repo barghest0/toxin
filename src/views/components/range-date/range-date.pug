@@ -5,7 +5,7 @@ mixin range-date({from='Прибытие', to='Выезд', idTo='date-from', id
 				.text-field__label
 					+block-label({text:from})
 				.text-field__container
-					input.text-field__input.text-field__input_date(
+					input.text-field__input.text-field__input_range-date(
 						id=idFrom,
 						name=name,
 						data-range='true',
@@ -15,11 +15,11 @@ mixin range-date({from='Прибытие', to='Выезд', idTo='date-from', id
 				.text-field__label
 					+block-label({text:to})
 				.text-field__container
-					input.text-field__input.text-field__input_date(
+					input.text-field__input.text-field__input_range-date(
 						id=idTo,
 						name=name,
 						data-range='true',
 						placeholder='ДД.ММ.ГГГГ'
 					)
-		.range-date__datepicker-container
-			//- +datepicker-container({})
+		.range-date__datepicker
+			+datepicker
