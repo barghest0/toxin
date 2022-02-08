@@ -1,4 +1,4 @@
-mixin button({text="",type="outlined",isLargest=false})
+mixin button({text="",type="outlined",isLargest=false}={})
 	button.button(
 		class=isLargest ? `button_largest button_${type}` : `button_${type}`,
 		type=type === 'no-bordered' ? 'button' : 'submit'

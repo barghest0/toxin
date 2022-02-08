@@ -1,4 +1,4 @@
-mixin color({hex='#000', text='', opacity='100', color='dark'})
+mixin color({hex='#000', text='', opacity='100', color='dark'}={})
 	.color
 		.color__box(class=color === 'dark' ? `color__box_opacity_${opacity}` : `color__box_${color}`)
 		.color__description

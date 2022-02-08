@@ -1,4 +1,4 @@
-mixin rich-checkbox({text='',subtext='', name='', id='', state=''})
+mixin rich-checkbox({text='',subtext='', name='', id='', state=''}={})
 	label.rich-checkbox
 		if state === 'checked'
 			input.rich-checkbox__input(type='checkbox', name=name, id=id, checked)

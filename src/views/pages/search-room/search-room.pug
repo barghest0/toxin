@@ -2,7 +2,7 @@ extends ../../layout/search-room-layout.pug
 
 block search-room
 	.search-room
-		+header({})
+		+header
 		.container
 			.search-room__inner
 				.search-room__filter-icon 
@@ -48,5 +48,5 @@ block search-room
 					.search-room__card
 						+preview-room({roomNumber:880,id:'12', images:['preview-room3.png','preview-room3.png','preview-room3.png','preview-room3.png'],price:850,rate:3,isLuxury:true,reviews:35})
 				.search-room__pagination
-					+pagination({})
-		+footer({})
+					+pagination
+		+footer
