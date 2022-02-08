@@ -1,53 +1,53 @@
 .chart {
-    display: flex;
-    @include md-desktop {
-        flex-direction: column;
-    }
-    &__votes {
-        align-self: flex-end;
-        margin-left: 10%;
-        padding-bottom: 5px;
-        @include md-desktop {
-            align-self: start;
-            margin-top: 10px;
-            margin-left: 0;
-        }
-    }
-    &__vote {
-        cursor: pointer;
-        list-style-type: none;
-        &:not(:last-child) {
-            margin-bottom: 10px;
-        }
-        width: 170px;
-        &::before {
-            content: '';
-            display: inline-block;
-            background-color: #000;
-            border-radius: 50%;
-            width: 10px;
-            height: 10px;
-            margin-right: 10px;
-        }
-        &_great {
-            &::before {
-                background: linear-gradient(to bottom, #ffe39c, #ffba9c);
-            }
-        }
-        &_good {
-            &::before {
-                background: linear-gradient(to bottom, #6fcf97, #66d2ea);
-            }
-        }
-        &_satisfied {
-            &::before {
-                background: linear-gradient(to bottom, #bc9cff, #8ba4f9);
-            }
-        }
-        &_disappointed {
-            &::before {
-                background: linear-gradient(to bottom, #909090, #3d4975);
-            }
-        }
-    }
+	display: flex;
+	@include md-desktop {
+		flex-direction: column;
+	}
+	&__votes {
+		align-self: flex-end;
+		margin-left: 10%;
+		padding-bottom: 5px;
+		@include md-desktop {
+			align-self: start;
+			margin-top: 10px;
+			margin-left: 0;
+		}
+	}
+	&__vote {
+		cursor: pointer;
+		list-style-type: none;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		width: 170px;
+		&::before {
+			content: '';
+			display: inline-block;
+			background-color: #000;
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+			margin-right: 10px;
+		}
+		&_great {
+			&::before {
+				background: linear-gradient(to bottom, #ffe39c, #ffba9c);
+			}
+		}
+		&_good {
+			&::before {
+				background: linear-gradient(to bottom, #6fcf97, #66d2ea);
+			}
+		}
+		&_satisfied {
+			&::before {
+				background: linear-gradient(to bottom, #bc9cff, #8ba4f9);
+			}
+		}
+		&_disappointed {
+			&::before {
+				background: linear-gradient(to bottom, #909090, #3d4975);
+			}
+		}
+	}
 }

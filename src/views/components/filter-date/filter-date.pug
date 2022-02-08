@@ -1,10 +1,14 @@
-
 mixin filter-date({label='', id='filter-date', placeholder=''})
-    .filter-date
-        .filter-date__label 
-            +block-label({text:label})
-        .text-field
-            .text-field__container
-                input.text-field__input.text-field__input_date(id=id name=name data-range="true" value="19 авг - 23 авг")
-        .filter-date__datepicker-container 
-            //- +datepicker-container({size:'md'})
+	.filter-date
+		.filter-date__label 
+			+block-label({text:label})
+		.text-field
+			.text-field__container
+				input.text-field__input.text-field__input_date(
+					id=id,
+					name=name,
+					data-range='true',
+					value='19 авг - 23 авг'
+				)
+		.filter-date__datepicker-container 
+			//- +datepicker-container({size:'md'})

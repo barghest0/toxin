@@ -1,27 +1,27 @@
 .like {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
 
-    &__input {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-    }
+	&__input {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
 
-    &__custom-input {
-        background: url('./images/unlike-button.svg');
-        height: 20px;
-        min-width: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        padding-right: 10px;
-        font-size: 10px;
-        color: $shadow-25;
-    }
-    &__input:checked + &__custom-input {
-        color: $main-color;
-        background: url('./images/like-button.svg');
-    }
+	&__custom-input {
+		background: url('./images/unlike-button.svg');
+		height: 20px;
+		min-width: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding-right: 10px;
+		font-size: 10px;
+		color: $shadow-25;
+	}
+	&__input:checked + &__custom-input {
+		color: $main-color;
+		background: url('./images/like-button.svg');
+	}
 }

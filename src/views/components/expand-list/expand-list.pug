@@ -1,10 +1,8 @@
-
-
 mixin expand-list({label='',isActive='',items={}})
-    .expand-list
-        .expand-list__label
-            +block-label({text:label})
-        .expand-list__items(class=isActive)
-            each item in items 
-                .expand-list__item
-                    +checkbox({text:item['text'],state:item['state'],name:item['name'],id:item['id']})
+	.expand-list
+		.expand-list__label
+			+block-label({text:label})
+		.expand-list__items(class=isActive)
+			each item in items 
+				.expand-list__item
+					+checkbox({text:item['text'],state:item['state'],name:item['name'],id:item['id']})

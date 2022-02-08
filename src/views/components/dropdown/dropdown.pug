@@ -1,18 +1,16 @@
-
 mixin dropdown({label='', subLabel='', items={}, kind='guests', size="lg"})
-    .dropdown
-        .dropdown__labels
-            +block-label({text:label})
-            if subLabel 
-                +block-sub-label({text:subLabel})
-        .dropdown__field.iqdropdown(class=`iqdropdown_${kind}`)
-            p.iqdropdown-selection(class=`iqdropdown-selection_${kind}`)
-            .iqdropdown-menu
-                each val, key in items
-                    .iqdropdown-menu-option(class=`iqdropdown-menu-option_${kind}` data-id=key )
-                        p.iqdropdown-itemItem=val
-                if size === "lg"
-                    .iqdropdown-menu-buttons    
-                        +button({text:'Очистить',type:'no-bordered'})
-                        +button({text:'Применить',type:'no-bordered'})
-
+	.dropdown
+		.dropdown__labels
+			+block-label({text:label})
+			if subLabel
+				+block-sub-label({text:subLabel})
+		.dropdown__field.iqdropdown(class=`iqdropdown_${kind}`)
+			p.iqdropdown-selection(class=`iqdropdown-selection_${kind}`)
+			.iqdropdown-menu
+				each val, key in items
+					.iqdropdown-menu-option(class=`iqdropdown-menu-option_${kind}`, data-id=key)
+						p.iqdropdown-itemItem= val
+				if size === "lg"
+					.iqdropdown-menu-buttons 
+						+button({text:'Очистить',type:'no-bordered'})
+						+button({text:'Применить',type:'no-bordered'})

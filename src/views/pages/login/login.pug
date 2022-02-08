@@ -1,12 +1,11 @@
 extends ../../layout/login-layout.pug
 
-
-block login 
-    .login 
-        +header()
-        .login__intro
-            .container
-                .login__inner
-                    .login__card 
-                        +login-card
-        +footer()
+block login
+	.login 
+		+header
+		.login__intro
+			.container
+				.login__inner
+					.login__card 
+						+login-card
+		+footer

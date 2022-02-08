@@ -1,17 +1,16 @@
 .checkbox-list {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-    &__label {
-        margin-bottom: 16px;
-        
-    }
+	&__label {
+		margin-bottom: 16px;
+	}
 
-    &__item {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-        max-width: 222px;
-    }
+	&__item {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+		max-width: 222px;
+	}
 }

@@ -1,18 +1,18 @@
 mixin login-card({title='Войти'}={})
-    +card()
-        .login-card 
-            .login-card__title
-                +widget-title({text:title})
-            form.login-card__login-form
-                .login-card__block 
-                    .login-card__block-field 
-                        +text-field({placeholder:'Email', type:'email', name:'email'})
-                    .login-card__block-field 
-                        +text-field({placeholder:'Пароль', type:'password', name:'password'})
-                .login-card__button
-                    +button({text:'Войти', type:'filled', isLargest:true})
-            .login-card__profile-action 
-                .login-card__profile-action-text
-                    +body-text({text:'Уже есть аккаунт на Toxin'})
-                .login-card__profile-action-button
-                    +button({text:'Войти',type:'outlined'})
+	+card
+		.login-card 
+			.login-card__title
+				+widget-title({text:title})
+			form.login-card__login-form
+				.login-card__block 
+					.login-card__block-field 
+						+text-field({placeholder:'Email', type:'email', name:'email'})
+					.login-card__block-field 
+						+text-field({placeholder:'Пароль', type:'password', name:'password'})
+				.login-card__button
+					+button({text:'Войти', type:'filled', isLargest:true})
+			.login-card__profile-action 
+				.login-card__profile-action-text
+					+body-text({text:'Уже есть аккаунт на Toxin'})
+				.login-card__profile-action-button
+					+button({text:'Войти',type:'outlined'})

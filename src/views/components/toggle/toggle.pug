@@ -1,11 +1,9 @@
-
-
 mixin toggle({id='toggle',text='',name='offers',state='unchecked'})
-        label.toggle
-            if state === 'checked'
-                input(type="checkbox" name=name id=id checked).toggle__input
-            else 
-                input(type="checkbox" name=name id=id).toggle__input
-            span(style="").toggle__custom-input
-            .toggle__title
-                +body-text({text})
+	label.toggle
+		if state === 'checked'
+			input.toggle__input(type='checkbox', name=name, id=id, checked)
+		else
+			input.toggle__input(type='checkbox', name=name, id=id)
+		span.toggle__custom-input(style='')
+		.toggle__title
+			+body-text({text})

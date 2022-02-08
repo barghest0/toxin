@@ -1,21 +1,20 @@
-const webpack = require('webpack')
-const { merge } = require('webpack-merge')
-const baseConfig = require('./webpack.base')
+const { merge } = require('webpack-merge');
+const baseConfig = require('./webpack.base');
 
 const devConfig = merge(baseConfig, {
-    mode: 'development',
+	mode: 'development',
 
-    devServer: {
-        static: {
-            directory: baseConfig.externals.path.dist,
-            watch: true,
-        },
+	devServer: {
+		static: {
+			directory: baseConfig.externals.path.dist,
+			watch: true,
+		},
 
-        port: 8080,
-        open: false,
-    },
-})
+		port: 8080,
+		open: false,
+	},
+});
 
 module.exports = new Promise((resolve, reject) => {
-    resolve(devConfig)
-})
+	resolve(devConfig);
+});

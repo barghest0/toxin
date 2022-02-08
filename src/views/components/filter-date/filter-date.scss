@@ -1,11 +1,11 @@
 .filter-date {
-    position: relative;
-    &__label{
-        margin-bottom: 5px;
-    }
-    &__datepicker-container {
-        position: absolute;
-        top: 50px;
-        z-index: 100;
-    }
+	position: relative;
+	&__label {
+		margin-bottom: 5px;
+	}
+	&__datepicker-container {
+		position: absolute;
+		top: 50px;
+		z-index: 100;
+	}
 }

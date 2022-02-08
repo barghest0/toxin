@@ -1,3 +1,3 @@
 $('.expand-list__label').on('click', function () {
-    $(this).next().toggleClass('active')
-})
+	$(this).next().toggleClass('active');
+});

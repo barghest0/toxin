@@ -1,22 +1,22 @@
 .dropdown {
-    display: flex;
-    flex-direction: column;
-    &__labels {
-        margin-bottom: 5px;
-        display: flex;
-        justify-content: space-between;
-    }
-    &__field {
-        height: 44px;
-        border-radius: 4px 4px 0 0;
-    }
-    &.menu-open {
-        border: 1px solid $shadow-50;
-    }
+	display: flex;
+	flex-direction: column;
+	&__labels {
+		margin-bottom: 5px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__field {
+		height: 44px;
+		border-radius: 4px 4px 0 0;
+	}
+	&.menu-open {
+		border: 1px solid $shadow-50;
+	}
 
-    &__selection {
-        display: flex;
-        width: 100%;
-        align-items: center;
-    }
+	&__selection {
+		display: flex;
+		width: 100%;
+		align-items: center;
+	}
 }

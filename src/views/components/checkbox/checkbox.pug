@@ -1,11 +1,9 @@
-
-
 mixin checkbox({text='',state='',name='',id=''})
-    label.checkbox
-        if state === 'checked'
-            input(type="checkbox" name=name id=id checked=state).checkbox__input
-        else
-            input(type="checkbox" name=name id=id).checkbox__input
-        span.checkbox__custom-input
-        .checkbox__title
-            +body-text({text})
+	label.checkbox
+		if state === 'checked'
+			input.checkbox__input(type='checkbox', name=name, id=id, checked=state)
+		else
+			input.checkbox__input(type='checkbox', name=name, id=id)
+		span.checkbox__custom-input
+		.checkbox__title
+			+body-text({text})

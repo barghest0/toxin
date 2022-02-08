@@ -1,16 +1,16 @@
 .login {
-    &__intro {
-        height: 684px;
-        background: url('./images/auth-background.jpg') center no-repeat;
-        background-size: cover;
-    }
-    &__inner {
-        height: 684px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &__card {
-        width: 380px;
-    }
+	&__intro {
+		height: 684px;
+		background: url('./images/auth-background.jpg') center no-repeat;
+		background-size: cover;
+	}
+	&__inner {
+		height: 684px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__card {
+		width: 380px;
+	}
 }

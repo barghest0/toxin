@@ -1,13 +1,12 @@
 extends ../../layout/landing-layout.pug
 
-block landing 
-  .landing
-    +header({})
-    .landing__intro
-      .container
-        .landing__inner
-          .landing__search-card
-            +search-room-card({})
-          .landing__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
-      +footer({})
-          
+block landing
+	.landing
+		+header({})
+		.landing__intro
+			.container
+				.landing__inner
+					.landing__search-card
+						+search-room-card({})
+					.landing__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
+			+footer({})

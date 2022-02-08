@@ -1,30 +1,30 @@
 .checkbox {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
 
-    &__input {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-    }
+	&__input {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
 
-    &__custom-input {
-        align-self: flex-start;
-        min-width: 20px;
-        margin-right: 10px;
-        height: 20px;
-        transition: 0.1s ease-in-out;
+	&__custom-input {
+		align-self: flex-start;
+		min-width: 20px;
+		margin-right: 10px;
+		height: 20px;
+		transition: 0.1s ease-in-out;
 
-        background: url('./images/empty-checkbox.svg');
-    }
+		background: url('./images/empty-checkbox.svg');
+	}
 
-    &__input:hover + &__custom-input {
-        background: url('./images/fill-checkbox.svg');
-        opacity: 0.6;
-    }
+	&__input:hover + &__custom-input {
+		background: url('./images/fill-checkbox.svg');
+		opacity: 0.6;
+	}
 
-    &__input:checked + &__custom-input {
-        background: url('./images/fill-checkbox.svg');
-    }
+	&__input:checked + &__custom-input {
+		background: url('./images/fill-checkbox.svg');
+	}
 }

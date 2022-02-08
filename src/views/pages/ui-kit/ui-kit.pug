@@ -1,205 +1,166 @@
 extends ../../layout/ui-kit-layout.pug
 
-    
 block headers-footers
-    .headers-footers
-        .headers-footers__header
-            +header({isLogin:false})
-        .headers-footers__header
-            +header({isLogin:true, name:'Юлий цезарь'})
-        .headers-footers__footer
-            +footer()
-
+	.headers-footers
+		.headers-footers__header
+			+header({isLogin:false})
+		.headers-footers__header
+			+header({isLogin:true, name:'Юлий цезарь'})
+		.headers-footers__footer
+			+footer
 
 block colors-fonts
-    .colors-fonts
-        .colors-fonts__colors
-            +color({ hex: '#1F2041', text:'Dark Shade 100%', opacity:100})
-            +color({ hex: '#1F2041', text:'Dark Shade 75%', opacity:75})
-            +color({ hex: '#1F2041', text:'Dark Shade 50%', opacity:50})
-            +color({ hex: '#1F2041', text:'Dark Shade 25%', opacity:25})
-            +color({ hex: '#1F2041', text:'Dark Shade 5%', opacity:5})
-            +color({ hex: '#BC9CFF', text:'Purple', color:'purple'})
-            +color({ hex: '#6FCF97', text:'Green', color:'green'})
-        .colors-fonts__fonts
-            .colors-fonts__font
-                .colors-fonts__tag.colors-fonts__tag_type_widget h1
-                +widget-title({text:'This one is the sub-section or widget title'})
-            .colors-fonts__font
-                .colors-fonts__tag.colors-fonts__tag_type_inside-widget h2
-                +title-inside-widget({text:'Next one is the item title inside widgets'})
-            .colors-fonts__font
-                .colors-fonts__tag.colors-fonts__tag_type_label h3
-                +block-label({text:'This is a label or CTA text'})
-            .colors-fonts__font
-                .colors-fonts__tag.colors-fonts__tag_type_text Body
-                +body-text({text:'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
-            
-
+	.colors-fonts
+		.colors-fonts__colors
+			+color({ hex: '#1F2041', text:'Dark Shade 100%', opacity:100})
+			+color({ hex: '#1F2041', text:'Dark Shade 75%', opacity:75})
+			+color({ hex: '#1F2041', text:'Dark Shade 50%', opacity:50})
+			+color({ hex: '#1F2041', text:'Dark Shade 25%', opacity:25})
+			+color({ hex: '#1F2041', text:'Dark Shade 5%', opacity:5})
+			+color({ hex: '#BC9CFF', text:'Purple', color:'purple'})
+			+color({ hex: '#6FCF97', text:'Green', color:'green'})
+		.colors-fonts__fonts
+			.colors-fonts__font
+				.colors-fonts__tag.colors-fonts__tag_type_widget h1
+				+widget-title({text:'This one is the sub-section or widget title'})
+			.colors-fonts__font
+				.colors-fonts__tag.colors-fonts__tag_type_inside-widget h2
+				+title-inside-widget({text:'Next one is the item title inside widgets'})
+			.colors-fonts__font
+				.colors-fonts__tag.colors-fonts__tag_type_label h3
+				+block-label({text:'This is a label or CTA text'})
+			.colors-fonts__font
+				.colors-fonts__tag.colors-fonts__tag_type_text Body
+				+body-text({text:'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
 
 block form-elements
-    .form-elements
-        .form-elements__fields
-            .form-elements__text-field
-                .form-elements__field-labels
-                    +block-label({text:'text field'})
-                    +block-sub-label({text:'default'})
-                +text-field({ name:"email", placeholder:"Email", type:'email'})
-            .form-elements__text-field
-                .form-elements__field-labels
-                    +block-label({text:'text field'})
-                    +block-sub-label({text:'hover / focus'})
-                +text-field({ name:"email", placeholder:"Email", type:'email', value:'This is pretty awesome'})
-            .form-elements__dropdown
-                .form-elements__field-labels
-                    +block-label({text:'dropdown'})
-                +dropdown({items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
-            .form-elements__masked-text-field
-                .form-elements__field-labels
-                    +block-label({text:'masked text field'})
-                +masked-text-field({ name:"birthday", placeholder:"ДД.ММ.ГГГГ", type:'text', id:'masked-text-field-1'})
-            .form-elements__range-date
-                +range-date({from:'date dropdown',to:'date dropdown', idFrom:'date-from-1', idTo:'date-to-1'})
-            .form-elements__filter-date
-                +filter-date({label:'filter date dropdown', value:'19 авг - 23 авг',id:'filter-date-1'})
-            .form-elements__subscribe-field
-                .form-elements__field-labels
-                    +block-label({text:'subscription text field'})
-                +subscribe-text-field({placeholder:'Email',name:'email'})
-                
-         
-        .form-elements__selections
-            .form-elements__checkboxes
-                +checkbox-list({label:'checkbox buttons', items:[
-                    {id:'smoking', name:'smoking', text:'Можно курить'},
-                    {id:'animals', name:'animals', text:'Можно с животными',state:'checked'},
-                    {id:'guests', name:'guests', text:'Можно пригласить гостей (до 10 человек)',state:'checked'},
-                    ]
-                })
-            .form-elements__radio
-                .form-elements__selection-label
-                    +block-label({text:'radio button'})
-                +radio-list({items:[{id:'male', name:'gender', text:'Мужчина', state:'checked'}, {id:'female', name:'gender', text:'Женщина'}] })
-            .form-elements__toggle
-                .form-elements__selection-label
-                    +block-label({text:'toggle'})
-                .form-elements__toggle-column
-                    +toggle({id:'toggle-offers',text:'Получать спецпредложения',name:'toggle-offers',state:'checked'})
-                    +toggle({id:'toggle-offers',text:'Получать спецпредложения',name:'toggle-offers'})
-            .form-elements__like
-                .form-elements__selection-label
-                    +block-label({text:'like button'})
-                .form-elements__like-row
-                    +like({id:'like-1',name:'like',count:2,state:'unchecked'})
-                    +like({id:'like-2',name:'like',count:12,state:'checked'})
-            .form-elements__rate
-                .form-elements__selection-label
-                    +block-label({text:'rate button'})
-                .form-elements__rate-row
-                    +rate({id:'first-rate',name:'first-rate',rate:4})
-                    +rate({id:'second-rate',name:'second-rate',rate:5})
-                
+	.form-elements
+		.form-elements__fields
+			.form-elements__text-field
+				.form-elements__field-labels
+					+block-label({text:'text field'})
+					+block-sub-label({text:'default'})
+				+text-field({ name:"email", placeholder:"Email", type:'email'})
+			.form-elements__text-field
+				.form-elements__field-labels
+					+block-label({text:'text field'})
+					+block-sub-label({text:'hover / focus'})
+				+text-field({ name:"email", placeholder:"Email", type:'email', value:'This is pretty awesome'})
+			.form-elements__dropdown
+				.form-elements__field-labels
+					+block-label({text:'dropdown'})
+				+dropdown({items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
+			.form-elements__masked-text-field
+				.form-elements__field-labels
+					+block-label({text:'masked text field'})
+				+masked-text-field({ name:"birthday", placeholder:"ДД.ММ.ГГГГ", type:'text', id:'masked-text-field-1'})
+			.form-elements__range-date
+				+range-date({from:'date dropdown',to:'date dropdown', idFrom:'date-from-1', idTo:'date-to-1'})
+			.form-elements__filter-date
+				+filter-date({label:'filter date dropdown', value:'19 авг - 23 авг',id:'filter-date-1'})
+			.form-elements__subscribe-field
+				.form-elements__field-labels
+					+block-label({text:'subscription text field'})
+				+subscribe-text-field({placeholder:'Email',name:'email'})
 
-        .form-elements__other
-            .form-elements__slider
-                .form-elements__other-label
-                    +block-label({text:'slider'})
-                +range-slider()
-            .form-elements__buttons
-                .form-elements__other-label
-                    +block-label({text:'buttons'})
-                .form-elements__buttons-small
-                    +button({text:'click me',type:'filled'})
-                    +button({text:'click me',type:'filled'})
-                    +button({text:'click me',type:'outlined'})
-                    +button({text:'click me',type:'outlined'})
-                .form-elements__buttons-no-bordered
-                    +button({text:'click me',type:'no-bordered'})
-                    +button({text:'click me',type:'no-bordered'})
-                .form-elements__buttons-largest
-                    +button({text:'перейти к оплате',type:'filled',isLargest:true})
-            .form-elements__pagination
-                .form-elements__other-label
-                    +block-label({text:'pagination'})
-                +pagination()
+		.form-elements__selections
+			.form-elements__checkboxes
+				+checkbox-list({label:'checkbox buttons', items:[ {id:'smoking', name:'smoking', text:'Можно курить'}, {id:'animals', name:'animals', text:'Можно с животными',state:'checked'}, {id:'guests', name:'guests', text:'Можно пригласить гостей (до 10 человек)',state:'checked'}, ] })
+			.form-elements__radio
+				.form-elements__selection-label
+					+block-label({text:'radio button'})
+				+radio-list({items:[{id:'male', name:'gender', text:'Мужчина', state:'checked'}, {id:'female', name:'gender', text:'Женщина'}] })
+			.form-elements__toggle
+				.form-elements__selection-label
+					+block-label({text:'toggle'})
+				.form-elements__toggle-column
+					+toggle({id:'toggle-offers',text:'Получать спецпредложения',name:'toggle-offers',state:'checked'})
+					+toggle({id:'toggle-offers',text:'Получать спецпредложения',name:'toggle-offers'})
+			.form-elements__like
+				.form-elements__selection-label
+					+block-label({text:'like button'})
+				.form-elements__like-row
+					+like({id:'like-1',name:'like',count:2,state:'unchecked'})
+					+like({id:'like-2',name:'like',count:12,state:'checked'})
+			.form-elements__rate
+				.form-elements__selection-label
+					+block-label({text:'rate button'})
+				.form-elements__rate-row
+					+rate({id:'first-rate',name:'first-rate',rate:4})
+					+rate({id:'second-rate',name:'second-rate',rate:5})
 
+		.form-elements__other
+			.form-elements__slider
+				.form-elements__other-label
+					+block-label({text:'slider'})
+				+range-slider
+			.form-elements__buttons
+				.form-elements__other-label
+					+block-label({text:'buttons'})
+				.form-elements__buttons-small
+					+button({text:'click me',type:'filled'})
+					+button({text:'click me',type:'filled'})
+					+button({text:'click me',type:'outlined'})
+					+button({text:'click me',type:'outlined'})
+				.form-elements__buttons-no-bordered
+					+button({text:'click me',type:'no-bordered'})
+					+button({text:'click me',type:'no-bordered'})
+				.form-elements__buttons-largest
+					+button({text:'перейти к оплате',type:'filled',isLargest:true})
+			.form-elements__pagination
+				.form-elements__other-label
+					+block-label({text:'pagination'})
+				+pagination
 
-                
-block dropdowns 
-    .dropdowns
-        .dropdowns__apartments
-            .dropdowns__apartments-item
-                +dropdown({label:'dropdown',subLabel:'default',items:{bedrooms:'Спальни',beds:'Кровати',bathrooms:'Ванные комнаты'},kind:'apartments', size:'sm'})
-            .dropdowns__apartments-item
-                +dropdown({label:'dropdown',subLabel:'expanded', items:{bedrooms:'Спальни',beds:'Кровати',bathrooms:'Ванные комнаты'},kind:'apartments', size:'sm'})
-        .dropdowns__guests-expand
-            .dropdowns__guests-item
-                +dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
-        .dropdowns__guests
-            .dropdowns__guests-item
-                +dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
+block dropdowns
+	.dropdowns
+		.dropdowns__apartments
+			.dropdowns__apartments-item
+				+dropdown({label:'dropdown',subLabel:'default',items:{bedrooms:'Спальни',beds:'Кровати',bathrooms:'Ванные комнаты'},kind:'apartments', size:'sm'})
+			.dropdowns__apartments-item
+				+dropdown({label:'dropdown',subLabel:'expanded', items:{bedrooms:'Спальни',beds:'Кровати',bathrooms:'Ванные комнаты'},kind:'apartments', size:'sm'})
+		.dropdowns__guests-expand
+			.dropdowns__guests-item
+				+dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
+		.dropdowns__guests
+			.dropdowns__guests-item
+				+dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
 
 block lists
-    .lists 
-        .lists__expand-checkbox
-            +expand-list({label:'expandable checkbox list',  items:[
-                    {id:'breakfast', name:'breakfast', text:'Завтрак'},
-                    {id:'table', name:'table', text:'Письменный стол',state:'checked'},
-                    {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'},
-                    {id:'bed', name:'bed', text:'Кроватка',state:'checked'},
-                    {id:'tv', name:'tv', text:'Телевизор'},
-                    {id:'shampoo', name:'shampoo', text:'Шампунь'},
-                    {id:'tv', name:'tv', text:'Телевизор'},
-                    {id:'shampoo', name:'shampoo', text:'Шампунь'},
-                    ]})
-            +expand-list({label:'expandable checkbox list',isActive:'active', items:[
-                    {id:'breakfast', name:'breakfast', text:'Завтрак'},
-                    {id:'table', name:'table', text:'Письменный стол',state:'checked'},
-                    {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'},
-                    {id:'bed', name:'bed', text:'Кроватка',state:'checked'},
-                    {id:'tv', name:'tv', text:'Телевизор'},
-                    {id:'shampoo', name:'shampoo', text:'Шампунь'},
-                    {id:'tv', name:'tv', text:'Телевизор'},
-                    {id:'shampoo', name:'shampoo', text:'Шампунь'},
-                    ]})
-        .lists__rich-checkbox
-            +rich-checkbox-list({label:'rich checkbox buttons',  items:[
-                {id:'corridor', name:'corridor', text:'Широкий коридор', subtext:'Ширина коридоров в номере не менее 91 см.'},
-                {id:'invalid-helper', name:'invalid-helper', text:'Помощник для инвалидов',subtext:'На 1 этаже вас встретит специалист  и проводит до номера.'},
-                ]})
-        .lists__bullet-list
-            .lists__label
-                +block-label({text:'bullet list'})
-            +bullet-list({items:[{text:'Нельзя с питомцами'},{text:'Без вечеринок и мероприятий'},{text:'Время прибытия — после 13:00, а выезд до 12:00'} ]})
+	.lists 
+		.lists__expand-checkbox
+			+expand-list({label:'expandable checkbox list', items:[ {id:'breakfast', name:'breakfast', text:'Завтрак'}, {id:'table', name:'table', text:'Письменный стол',state:'checked'}, {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'}, {id:'bed', name:'bed', text:'Кроватка',state:'checked'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, ]})
+			+expand-list({label:'expandable checkbox list',isActive:'active', items:[ {id:'breakfast', name:'breakfast', text:'Завтрак'}, {id:'table', name:'table', text:'Письменный стол',state:'checked'}, {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'}, {id:'bed', name:'bed', text:'Кроватка',state:'checked'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, ]})
+		.lists__rich-checkbox
+			+rich-checkbox-list({label:'rich checkbox buttons', items:[ {id:'corridor', name:'corridor', text:'Широкий коридор', subtext:'Ширина коридоров в номере не менее 91 см.'}, {id:'invalid-helper', name:'invalid-helper', text:'Помощник для инвалидов',subtext:'На 1 этаже вас встретит специалист и проводит до номера.'}, ]})
+		.lists__bullet-list
+			.lists__label
+				+block-label({text:'bullet list'})
+			+bullet-list({items:[{text:'Нельзя с питомцами'},{text:'Без вечеринок и мероприятий'},{text:'Время прибытия — после 13:00, а выезд до 12:00'} ]})
 
+block reviews
+	.reviews 
+		.reviews__review-list
+			+review-list({items:[ {img:'review-image1.svg', alt:'comfort', title:'Комфорт',subtitle:'Шумопоглощающие стены'}, {img:'review-image2.svg', alt:'convenience', title:'Удобство',subtitle:'Окно в каждой из спален'}] })
+		.reviews__feedback 
+			+feedback({avatar:'avatar.svg',alt:'avatar',name:'Мурад Сарафанов', lastVisit:'5 дней назад', comment:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',likeState:'checked',likesCount:12})
 
-block reviews 
-    .reviews 
-        .reviews__review-list
-            +review-list({items:[
-                {img:'review-image1.svg', alt:'comfort', title:'Комфорт',subtitle:'Шумопоглощающие стены'},
-                {img:'review-image2.svg', alt:'convenience', title:'Удобство',subtitle:'Окно в каждой из спален'}]
-            })
-        .reviews__feedback 
-            +feedback({avatar:'avatar.svg',alt:'avatar',name:'Мурад Сарафанов', lastVisit:'5 дней назад', comment:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',likeState:'checked',likesCount:12})
-
-
-block cards            
-    .cards 
-        .cards__column 
-            .cards__search-room-card
-                +search-room-card({})
-            .cards__register-card
-                +register-card({})
-        .cards__column 
-            .cards__booking-card
-                +booking-card({roomNumber:888, price:9900,isLuxury:true})
-            .cards__login-card
-                +login-card({})
-        .cards__column
-            .cards__datepicker
-                //- +datepicker-container({})
-            .cards__preview-room 
-                +preview-room({roomNumber:888,images:['preview-room1.png','preview-room1.png','preview-room1.png','preview-room1.png'],price:9900,rate:5,isLuxury:true,reviews:145})
-            .cards__preview-room 
-                +preview-room({roomNumber:840,images:['preview-room2.png','preview-room2.png','preview-room2.png','preview-room2.png'],price:9900,rate:4,isLuxury:false,reviews:65})
+block cards
+	.cards 
+		.cards__column 
+			.cards__search-room-card
+				+search-room-card({})
+			.cards__register-card
+				+register-card({})
+		.cards__column 
+			.cards__booking-card
+				+booking-card({roomNumber:888, price:9900,isLuxury:true})
+			.cards__login-card
+				+login-card({})
+		.cards__column
+			.cards__datepicker
+				//- +datepicker-container({})
+			.cards__preview-room 
+				+preview-room({roomNumber:888,images:['preview-room1.png','preview-room1.png','preview-room1.png','preview-room1.png'],price:9900,rate:5,isLuxury:true,reviews:145})
+			.cards__preview-room 
+				+preview-room({roomNumber:840,images:['preview-room2.png','preview-room2.png','preview-room2.png','preview-room2.png'],price:9900,rate:4,isLuxury:false,reviews:65})

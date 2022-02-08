@@ -1,8 +1,7 @@
-
 mixin rate({id='', name='', rate='1'})
-        label.rate
-            each val in [1, 2, 3, 4, 5]
-                if val === rate
-                    input(type="radio" name=name id=id value=val checked).rate__input
-                else
-                    input(type="radio" name=name id=id value=val).rate__input
+	label.rate
+		each val in [1, 2, 3, 4, 5]
+			if val === rate
+				input.rate__input(type='radio', name=name, id=id, value=val, checked)
+			else
+				input.rate__input(type='radio', name=name, id=id, value=val)

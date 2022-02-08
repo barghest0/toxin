@@ -1,16 +1,13 @@
-
-
-
 mixin header({isLogin=false,name=''}={})
-    header.header(class=isLogin ? 'header_authorized' : null)
-        .container
-            .header__inner(class=isLogin ? 'header__inner_authorized' : null)
-                .header__logo
-                    +logo()
-                .header__nav
-                    +nav({isLogin,name})
-                .header__burger
-                    .header__burger-block
-                        .header__burger-line
-                    .header__burger-nav
-                        +nav({isLogin,name,burger:true})
+	header.header(class=isLogin ? 'header_authorized' : null)
+		.container
+			.header__inner(class=isLogin ? 'header__inner_authorized' : null)
+				.header__logo
+					+logo
+				.header__nav
+					+nav({isLogin,name})
+				.header__burger
+					.header__burger-block
+						.header__burger-line
+					.header__burger-nav
+						+nav({isLogin,name,burger:true})

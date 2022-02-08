@@ -1,31 +1,31 @@
 .feedback {
-    display: flex;
-    flex-direction: column;
-    background-color: $white;
-    &__user {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-        &-avatar {
-            border-radius: 50%;
-            border: 2px solid $white;
-            box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.1);
-            margin-right: 10px;
-        }
+	display: flex;
+	flex-direction: column;
+	background-color: $white;
+	&__user {
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+		&-avatar {
+			border-radius: 50%;
+			border: 2px solid $white;
+			box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.1);
+			margin-right: 10px;
+		}
 
-        &-name {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-    }
+		&-name {
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+	}
 
-    &__like {
-        margin-right: 14px;
-    }
+	&__like {
+		margin-right: 14px;
+	}
 
-    &__content {
-        display: flex;
-        align-items: flex-start;
-        line-height: 1.7;
-    }
+	&__content {
+		display: flex;
+		align-items: flex-start;
+		line-height: 1.7;
+	}
 }

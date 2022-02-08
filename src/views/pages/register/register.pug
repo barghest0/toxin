@@ -1,13 +1,11 @@
 extends ../../layout/register-layout.pug
 
-
-block register 
-    .register 
-        +header()
-        .register__intro
-            .container
-                .register__inner
-                    .register__card
-                        +register-card()
-        +footer()
-        
+block register
+	.register 
+		+header
+		.register__intro
+			.container
+				.register__inner
+					.register__card
+						+register-card
+		+footer

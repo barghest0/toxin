@@ -1,25 +1,25 @@
 .toggle {
-    cursor: pointer;
-    display: flex;
-    height: 20px;
-    
-    &__input {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-    }
+	cursor: pointer;
+	display: flex;
+	height: 20px;
 
-    &__custom-input {
-        min-width: 40px;
-        margin-right: 10px;
-        background: url('images/inactive-toggle.svg');
-    }
+	&__input {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
 
-    &__input:checked + &__custom-input {
-        background: url('images/active-toggle.svg');
-    }
-    &__title {
-        display: flex;
-        align-items: center;
-    }
+	&__custom-input {
+		min-width: 40px;
+		margin-right: 10px;
+		background: url('images/inactive-toggle.svg');
+	}
+
+	&__input:checked + &__custom-input {
+		background: url('images/active-toggle.svg');
+	}
+	&__title {
+		display: flex;
+		align-items: center;
+	}
 }

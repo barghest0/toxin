@@ -1,37 +1,37 @@
 .register-card {
-    &__title {
-        margin-bottom: 20px;
-    }
-    &__label {
-        margin-bottom: 5px;
-    }
+	&__title {
+		margin-bottom: 20px;
+	}
+	&__label {
+		margin-bottom: 5px;
+	}
 
-    &__register-form {
-        margin-bottom: 30px;
-    }
+	&__register-form {
+		margin-bottom: 30px;
+	}
 
-    &__block {
-        margin-bottom: 20px;
-        &-field {
-            &:not(:last-child) {
-                margin-bottom: 10px;
-            }
-        }
-    }
+	&__block {
+		margin-bottom: 20px;
+		&-field {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
 
-    &__button {
-        margin-bottom: 20px;
-        height: 44px;
-    }
+	&__button {
+		margin-bottom: 20px;
+		height: 44px;
+	}
 
-    &__profile-action {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 44px;
-        &-button {
-            width: 100px;
-            height: 100%;
-        }
-    }
+	&__profile-action {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 44px;
+		&-button {
+			width: 100px;
+			height: 100%;
+		}
+	}
 }

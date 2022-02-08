@@ -1,24 +1,24 @@
 .review-list {
-    &__item {
-        display: flex;
-        align-items: center;
-        padding-bottom: 17px;
-        border-bottom: 1px solid rgba($color: #1f2041, $alpha: 0.1);
-        background-color: $white;
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
-    }
+	&__item {
+		display: flex;
+		align-items: center;
+		padding-bottom: 17px;
+		border-bottom: 1px solid rgba($color: #1f2041, $alpha: 0.1);
+		background-color: $white;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
 
-    &__img {
-        @include size(48px);
-        margin-right: 10px;
-        @include md-desktop {
-            @include size(35px);
-        }
-    }
+	&__img {
+		@include size(48px);
+		margin-right: 10px;
+		@include md-desktop {
+			@include size(35px);
+		}
+	}
 
-    &__title {
-        margin-bottom: 15px;
-    }
+	&__title {
+		margin-bottom: 15px;
+	}
 }
