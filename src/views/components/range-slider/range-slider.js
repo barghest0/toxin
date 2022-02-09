@@ -6,4 +6,3 @@ const slider = new Slider('.slider', {
 	hasScale: false,
 	onChange: data => console.log(data.value),
 });
-

@@ -29,7 +29,6 @@
 	border-radius: 20px;
 	cursor: pointer;
 	height: 4px;
-	position: absolute;
 	width: 100%
 }
 
@@ -151,9 +150,7 @@
 	margin-bottom: 30px
 }
 
-.slider {
-	margin-bottom: 50px
-}
+
 
 .panel {
 	background-color: hsla(0, 0%, 9%, .667);

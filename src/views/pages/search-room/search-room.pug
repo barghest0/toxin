@@ -13,7 +13,7 @@ block search-room
 					.search-room__filter
 						+dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'sm'})
 					.search-room__filter 
-						//- +range-slider({label:'Диапазон цены',subLabel:'5 000₽ - 10 000₽'})
+						+range-slider()
 					.search-room__filter 
 						+checkbox-list({label:'checkbox buttons', items:[ {id:'smoking', name:'smoking', text:'Можно курить'}, {id:'animals', name:'animals', text:'Можно с животными',state:'checked'}, {id:'guests', name:'guests', text:'Можно пригласить гостей (до 10 человек)',state:'checked'}, ] })
 					.search-room__filter 
