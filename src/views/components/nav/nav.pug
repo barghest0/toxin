@@ -1,3 +1,5 @@
+include ../button/button.pug
+
 mixin nav({isLogin=false,name='',burger=false}={})
 	nav.nav(class=burger ? 'nav_burger' : null)
 		a.nav__item(href='/about.html') О нас

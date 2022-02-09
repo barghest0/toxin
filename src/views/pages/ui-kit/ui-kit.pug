@@ -1,6 +1,8 @@
 extends ../../layout/ui-kit-layout.pug
 
 block headers-footers
+
+
 	.headers-footers
 		.headers-footers__header
 			+header({isLogin:false})
@@ -91,8 +93,6 @@ block form-elements
 
 		.form-elements__other
 			.form-elements__slider
-				.form-elements__other-label
-					+block-label({text:'slider'})
 				+range-slider
 			.form-elements__buttons
 				.form-elements__other-label
@@ -159,7 +159,7 @@ block cards
 				+login-card
 		.cards__column
 			.cards__datepicker
-				//- +datepicker-container
+				+datepicker
 			.cards__preview-room 
 				+preview-room({roomNumber:888,images:['preview-room1.png','preview-room1.png','preview-room1.png','preview-room1.png'],price:9900,rate:5,isLuxury:true,reviews:145})
 			.cards__preview-room 

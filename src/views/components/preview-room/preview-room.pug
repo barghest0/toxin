@@ -1,3 +1,10 @@
+include ../card/card.pug
+include ../card-room-info/card-room-info.pug
+include ../rate/rate.pug
+include ../dropdown/dropdown.pug
+include ../button/button.pug
+
+
 mixin preview-room({roomNumber='',id='',images=[],isLuxury=false,rate=0,price=0,reviews=''}={})
 	+card('sm')
 		a.preview-room(href='/room.html')

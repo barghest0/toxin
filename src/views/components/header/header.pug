@@ -1,3 +1,6 @@
+include ../logo/logo.pug
+include ../nav/nav.pug
+
 mixin header({isLogin=false,name=''}={})
 	header.header(class=isLogin ? 'header_authorized' : null)
 		.container
