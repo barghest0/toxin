@@ -13,15 +13,15 @@ block search-room
 					.search-room__filter
 						+dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'sm'})
 					.search-room__filter 
-						+range-slider()
+						+range-slider({label:'Диапазон цены'})
 					.search-room__filter 
-						+checkbox-list({label:'checkbox buttons', items:[ {id:'smoking', name:'smoking', text:'Можно курить'}, {id:'animals', name:'animals', text:'Можно с животными',state:'checked'}, {id:'guests', name:'guests', text:'Можно пригласить гостей (до 10 человек)',state:'checked'}, ] })
+						+checkbox-list({label:'Правила дома', items:[ {id:'smoking', name:'smoking', text:'Можно курить'}, {id:'animals', name:'animals', text:'Можно с животными',state:'checked'}, {id:'guests', name:'guests', text:'Можно пригласить гостей (до 10 человек)',state:'checked'}, ] })
 					.search-room__filter 
-						+rich-checkbox-list({label:'rich checkbox buttons', items:[ {id:'corridor', name:'corridor', text:'Широкий коридор', subtext:'Ширина коридоров в номере не менее 91 см.'}, {id:'invalid-helper', name:'invalid-helper', text:'Помощник для инвалидов',subtext:'На 1 этаже вас встретит специалист и проводит до номера.'}, ]})
+						+rich-checkbox-list({label:'Доступность', items:[ {id:'corridor', name:'corridor', text:'Широкий коридор', subtext:'Ширина коридоров в номере не менее 91 см.'}, {id:'invalid-helper', name:'invalid-helper', text:'Помощник для инвалидов',subtext:'На 1 этаже вас встретит специалист и проводит до номера.'}, ]})
 					.search-room__filter
-						+dropdown({label:'dropdown',items:{bedrooms:'Спальни',beds:'Кровати',bathrooms:'Ванные комнаты'},kind:'apartments', size:'sm'})
+						+dropdown({label:'Удобства номера',items:{bedrooms:'Спальни',beds:'Кровати',bathrooms:'Ванные комнаты'},kind:'apartments', size:'sm'})
 					.search-room__filter
-						+expand-list({label:'expandable checkbox list', items:[ {id:'breakfast', name:'breakfast', text:'Завтрак'}, {id:'table', name:'table', text:'Письменный стол',state:'checked'}, {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'}, {id:'bed', name:'bed', text:'Кроватка',state:'checked'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, ]})
+						+expand-list({label:'Дополнительные удобства', items:[ {id:'breakfast', name:'breakfast', text:'Завтрак'}, {id:'table', name:'table', text:'Письменный стол',state:'checked'}, {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'}, {id:'bed', name:'bed', text:'Кроватка',state:'checked'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, ]})
 				.search-room__cards
 					.search-room__card
 						+preview-room({roomNumber:888,id:'1', images:['preview-room1.png','preview-room1.png','preview-room1.png','preview-room1.png'],price:9900,rate:5,isLuxury:true,reviews:145})

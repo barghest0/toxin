@@ -1,0 +1,25 @@
+.range-slider {
+	&__label {
+		margin-bottom: 20px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__price {
+		display: flex;
+		&-delimiter {
+			margin: 0 3px;
+		}
+	}
+}
+.slider {
+	&__track {
+		border: 1px solid $shadow-25;
+	}
+	&__fill {
+		@include second-gradient-to-bottom;
+	}
+	&__thumb {
+		@include second-gradient-to-bottom;
+	}
+}
