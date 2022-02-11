@@ -10,28 +10,28 @@ mixin footer()
 					.footer__company-logo
 						+logo
 					.footer__company-description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-				nav.footer__nav 
-					.footer__nav-title 
+				.footer__column 
+					.footer__column-title 
 						+block-label({text:"Навигация"}) 
-					a.footer__nav-item(href='/about.html') О нас
-					a.footer__nav-item(href='/news.html') Новости
-					a.footer__nav-item(href='/support.html') Служба поддержки
-					a.footer__nav-item(href='/services.html') Услуги
-				nav.footer__nav 
-					.footer__nav-title 
+					a.footer__column-item(href='/about.html') О нас
+					a.footer__column-item(href='/news.html') Новости
+					a.footer__column-item(href='/support.html') Служба поддержки
+					a.footer__column-item(href='/services.html') Услуги
+				.footer__column
+					.footer__column-title 
 						+block-label({text:"О нас"}) 
-					a.footer__nav-item(href='/aboutService.html') О сервисе
-					a.footer__nav-item(href='/ourTeam.html') Наша команда
-					a.footer__nav-item(href='/jobs.html') Вакансии
-					a.footer__nav-item(href='/investors.html') Инвесторы
-				nav.footer__nav
-					.footer__nav-title 
+					a.footer__column-item(href='/aboutService.html') О сервисе
+					a.footer__column-item(href='/ourTeam.html') Наша команда
+					a.footer__column-item(href='/jobs.html') Вакансии
+					a.footer__column-item(href='/investors.html') Инвесторы
+				.footer__column
+					.footer__column-title 
 						+block-label({text:"Служба поддержки"})
-					a.footer__nav-item(href='/agreements.html') Соглашения
-					a.footer__nav-item(href='/communities.html') Сообщества
-					a.footer__nav-item(href='/connection.html') Связь с нами
+					a.footer__column-item(href='/agreements.html') Соглашения
+					a.footer__column-item(href='/communities.html') Сообщества
+					a.footer__column-item(href='/connection.html') Связь с нами
 				.footer__subscribe
-					.footer__nav-title 
+					.footer__column-title 
 						+block-label({text:"Подписка"}) 
 					.footer__subscribe-description Получайте специальные предложения и новости сервиса
 					+subscribe-text-field({id:'subscribe-field',name:'email',placeholder:'Email'})

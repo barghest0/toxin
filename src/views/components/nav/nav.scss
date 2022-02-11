@@ -1,6 +1,8 @@
 .nav {
 	display: flex;
+	align-items: center;
 	position: relative;
+	column-gap: 20px;
 	&__item {
 		cursor: pointer;
 		position: relative;
@@ -10,16 +12,14 @@
 		align-items: center;
 		transition: all 0.1s linear;
 
+
 		&_sign {
-			width: 84px;
+			width: 87px;
 			height: 34px;
 		}
 		&_register {
 			width: 196px;
 			height: 34px;
-		}
-		&:not(:last-child) {
-			margin-right: 20px;
 		}
 
 		&_list {
@@ -29,10 +29,11 @@
 				border-left: 2px solid rgba(31, 32, 67, 0.5);
 				content: '';
 				cursor: pointer;
-				height: 6px;
+				height: 8px;
 				display: inline-block;
-				margin-left: 8px;
-				width: 6px;
+				margin: 0 8px;
+
+				width: 8px;
 				-webkit-transform: rotate(-45deg);
 				-ms-transform: rotate(-45deg);
 				transform: rotate(-45deg);
