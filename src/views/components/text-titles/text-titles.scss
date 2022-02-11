@@ -16,6 +16,7 @@
 	font-weight: bold;
 	font-size: 12px;
 	text-transform: uppercase;
+	line-height: 1.2;
 }
 
 .block-sub-label {
@@ -28,6 +29,7 @@
 .body-text {
 	color: $shadow-75;
 	font-size: 14px;
+	line-height: 1.28;
 	&_bold {
 		font-weight: bold;
 	}

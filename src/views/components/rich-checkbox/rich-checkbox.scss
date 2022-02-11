@@ -33,6 +33,8 @@
 	}
 
 	&__subtitle {
-		font-size: 12px;
+		.body-text {
+			font-size: 12px;
+		}
 	}
 }

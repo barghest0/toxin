@@ -9,7 +9,9 @@
 	&__preview-images {
 		width: 100%;
 		display: grid;
-		grid-template-columns: 65% 35%;
+		grid-template-columns: 68% 32%;
+		grid-template-rows: repeat(2, 243px);
+
 		grid-template-areas:
 			'main-image second-image-top'
 			'main-image second-image-bottom';
@@ -29,6 +31,7 @@
 	&__second-image {
 		& img {
 			width: 100%;
+			height: 100%;
 			display: block;
 		}
 

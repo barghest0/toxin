@@ -1,12 +1,14 @@
 .range-slider {
 	&__label {
-		margin-bottom: 20px;
+		margin-bottom: 23px;
 		display: flex;
 		justify-content: space-between;
 	}
 
 	&__price {
 		display: flex;
+		font-size: 12px;
+		color: $shadow-50;
 		&-delimiter {
 			margin: 0 3px;
 		}

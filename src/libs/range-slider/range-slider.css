@@ -28,7 +28,7 @@
 	border-radius: 50px;
 	border-radius: 20px;
 	cursor: pointer;
-	height: 4px;
+	height: 6px;
 	width: 100%
 }
 
@@ -45,13 +45,13 @@
 	border-radius: 50%;
 	cursor: pointer;
 	display: inline-block;
-	height: 15px;
+	height: 16px;
+	width: 16px;
 	left: 0;
 	position: absolute;
-	top: 0;
+	top: 2px;
 	transform: translate(-50%, -50%);
 	-webkit-user-select: none;
-	width: 15px;
 	z-index: 20
 }
 
@@ -126,7 +126,7 @@
 	background-color: #242424;
 	border-radius: 50px;
 	cursor: pointer;
-	height: 4px;
+	height: 100%;
 	position: absolute;
 	top: 0;
 	transition: all .2s ease;
