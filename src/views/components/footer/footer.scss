@@ -37,7 +37,7 @@
 		grid-template-columns:
 			260px repeat(auto-fit, minmax(150px, 1fr))
 			minmax(150px, 260px);
-		grid-template-rows: repeat(auto-fit, minmax(168px, 150px));
+		grid-template-rows: repeat(auto-fit, minmax(172px, 150px));
 		grid-column-gap: 40px;
 		padding: 100px 0;
 
@@ -79,40 +79,33 @@
 			color: inherit;
 			text-decoration: none;
 
-			line-height: 1.2;
+			line-height: 1.3;
+		}
+		&_subscribe {
+			max-width: 260px;
+		}
+		&-description {
+			line-height: 1.72;
 		}
 	}
 
-	&__subscribe {
-		display: flex;
-		flex-direction: column;
-		row-gap: 20px;
-		&-title {
-			margin-top: 4px;
-			margin-bottom: 1px;
-		}
-		&-description {
-			max-width: 260px;
-			line-height: 1.7;
-		}
+	&__line {
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid $shadow-25;
 	}
 
 	&__bottom {
-		padding: 23px 0;
+		height: 70px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-top: 10px;
 	}
 
 	&__messengers {
 		display: flex;
 		justify-content: center;
-	}
-
-	&__messenger-item {
-		&:not(:last-child) {
-			margin-right: 20px;
-		}
+		align-items: center;
+		column-gap: 20px;
 	}
 }

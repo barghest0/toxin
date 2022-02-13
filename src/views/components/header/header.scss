@@ -1,7 +1,5 @@
 .header {
-	width: 100%;
 	z-index: 1000;
-	padding: 15px 0;
 	background-color: $white;
 	box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
 
@@ -17,7 +15,8 @@
 	}
 
 	&__inner {
-		height: inherit;
+		height: 70px;
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
