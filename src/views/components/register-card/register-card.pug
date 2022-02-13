@@ -6,15 +6,12 @@ include ../toggle/toggle.pug
 include ../masked-text-field/masked-text-field.pug
 include ../radio-list/radio-list.pug
 
-
-
-
 mixin register-card({title='Регистрация аккаунта'}={})
 	+card
 		.register-card 
 			.register-card__title
 				+widget-title({text:title})
-			form.register-card__register-form(action='register.html', method='post') 
+			form.register-card__register-form(action="register.html", method="post") 
 				.register-card__block
 					.register-card__block-field 
 						+text-field({placeholder:'Имя', name:'name'})

@@ -1,7 +1,6 @@
 include ../text-titles/text-titles.pug
 include ../datepicker/datepicker.pug
 
-
 mixin range-date({from='Прибытие', to='Выезд', idTo='date-from', idFrom='date-to'}={})
 	.range-date
 		.range-date__text-fields
@@ -12,8 +11,8 @@ mixin range-date({from='Прибытие', to='Выезд', idTo='date-from', id
 					input.text-field__input.text-field__input_range-date(
 						id=idFrom,
 						name=name,
-						data-range='true',
-						placeholder='ДД.ММ.ГГГГ'
+						data-range="true",
+						placeholder="ДД.ММ.ГГГГ"
 					)
 			.text-field
 				.text-field__label
@@ -22,8 +21,8 @@ mixin range-date({from='Прибытие', to='Выезд', idTo='date-from', id
 					input.text-field__input.text-field__input_range-date(
 						id=idTo,
 						name=name,
-						data-range='true',
-						placeholder='ДД.ММ.ГГГГ'
+						data-range="true",
+						placeholder="ДД.ММ.ГГГГ"
 					)
 		.range-date__datepicker
 			+datepicker

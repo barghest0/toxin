@@ -1,7 +1,5 @@
 extends ../../layout/ui-kit-layout.pug
 
-
-
 block colors-fonts
 	.colors-fonts
 		.container
@@ -170,12 +168,12 @@ block cards
 
 block headers-footers
 	.headers-footers
-			.headers-footers__inner
-				.headers-footers__header
-					+header({isLogin:false})
-				.headers-footers__header
-					+header({isLogin:true, name:'Юлий цезарь'})
-				.headers-footers__footer
-					+footer
-				.headers-footers__footer-inline 
-					+footer({isSmall:true})
+		.headers-footers__inner
+			.headers-footers__header
+				+header({isLogin:false})
+			.headers-footers__header
+				+header({isLogin:true, name:'Юлий цезарь'})
+			.headers-footers__footer
+				+footer
+			.headers-footers__footer-inline 
+				+footer({isSmall:true})

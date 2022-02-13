@@ -3,7 +3,7 @@ include ../text-titles/text-titles.pug
 include ../subscribe-text-field/subscribe-text-field.pug
 
 mixin footer({isSmall=false}={})
-	footer.footer(style=isSmall ? 'display:none':'')
+	footer.footer(style=isSmall ? "display:none" : "")
 		.container
 			.footer__top
 				.footer__company
@@ -13,23 +13,23 @@ mixin footer({isSmall=false}={})
 				.footer__column 
 					.footer__column-title 
 						+block-label({text:"Навигация"}) 
-					a.footer__column-item(href='/about.html') О нас
-					a.footer__column-item(href='/news.html') Новости
-					a.footer__column-item(href='/support.html') Служба поддержки
-					a.footer__column-item(href='/services.html') Услуги
+					a.footer__column-item(href="/about.html") О нас
+					a.footer__column-item(href="/news.html") Новости
+					a.footer__column-item(href="/support.html") Служба поддержки
+					a.footer__column-item(href="/services.html") Услуги
 				.footer__column
 					.footer__column-title 
 						+block-label({text:"О нас"}) 
-					a.footer__column-item(href='/aboutService.html') О сервисе
-					a.footer__column-item(href='/ourTeam.html') Наша команда
-					a.footer__column-item(href='/jobs.html') Вакансии
-					a.footer__column-item(href='/investors.html') Инвесторы
+					a.footer__column-item(href="/aboutService.html") О сервисе
+					a.footer__column-item(href="/ourTeam.html") Наша команда
+					a.footer__column-item(href="/jobs.html") Вакансии
+					a.footer__column-item(href="/investors.html") Инвесторы
 				.footer__column
 					.footer__column-title 
 						+block-label({text:"Служба поддержки"})
-					a.footer__column-item(href='/agreements.html') Соглашения
-					a.footer__column-item(href='/communities.html') Сообщества
-					a.footer__column-item(href='/connection.html') Связь с нами
+					a.footer__column-item(href="/agreements.html") Соглашения
+					a.footer__column-item(href="/communities.html") Сообщества
+					a.footer__column-item(href="/connection.html") Связь с нами
 				.footer__column.footer__column_subscribe
 					.footer__column-title 
 						+block-label({text:"Подписка"}) 
@@ -40,20 +40,48 @@ mixin footer({isSmall=false}={})
 			.footer__bottom
 				.footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
 				.footer__messengers
-					a.footer__messenger-item(href='https://twitter.com/?')
-						img.footer__messenger-image(src='assets/images/twitter.svg')
-					a.footer__messenger-item(href='https://www.facebook.com/')
-						img.footer__messenger-image(src='assets/images/facebook.svg')
-					a.footer__messenger-item(href='https://www.instagram.com/')
-						img.footer__messenger-image(src='assets/images/instagram.svg')
-	footer.footer.footer_small(class=isSmall ? 'footer_small-inline':'')
+					a.footer__messenger-item(
+						href="https://twitter.com/?",
+						target="_blank",
+						rel="noopener noreferrer"
+					)
+						img.footer__messenger-image(
+							src="assets/images/twitter.svg",
+							target="_blank",
+							rel="noopener noreferrer"
+						)
+					a.footer__messenger-item(
+						href="https://www.facebook.com/",
+						target="_blank",
+						rel="noopener noreferrer"
+					)
+						img.footer__messenger-image(src="assets/images/facebook.svg")
+					a.footer__messenger-item(
+						href="https://www.instagram.com/",
+						target="_blank",
+						rel="noopener noreferrer"
+					)
+						img.footer__messenger-image(src="assets/images/instagram.svg")
+	footer.footer.footer_small(class=isSmall ? "footer_small-inline" : "")
 		.footer__company-logo
 			+logo
 		.footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
 		.footer__messengers
-			a.footer__messenger-item(href='https://twitter.com/?')
-				img.footer__messenger-image(src='assets/images/twitter.svg')
-			a.footer__messenger-item(href='https://www.facebook.com/')
-				img.footer__messenger-image(src='assets/images/facebook.svg')
-			a.footer__messenger-item(href='https://www.instagram.com/')
-				img.footer__messenger-image(src='assets/images/instagram.svg')
+			a.footer__messenger-item(
+				href="https://twitter.com/?",
+				target="_blank",
+				rel="noopener noreferrer"
+			)
+				img.footer__messenger-image(src="assets/images/twitter.svg")
+			a.footer__messenger-item(
+				href="https://www.facebook.com/",
+				target="_blank",
+				rel="noopener noreferrer"
+			)
+				img.footer__messenger-image(src="assets/images/facebook.svg")
+			a.footer__messenger-item(
+				href="https://www.instagram.com/",
+				target="_blank",
+				rel="noopener noreferrer"
+			)
+				img.footer__messenger-image(src="assets/images/instagram.svg")

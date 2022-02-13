@@ -6,6 +6,7 @@ $('.range-date').each(function (index) {
 	new AirDatepicker(datepicker, {
 		inline: true,
 		range: true,
+		minDate: new Date(),
 		onSelect: data => {
 			const [from, to] = data.formattedDate;
 			$(`#date-from-${index + 1}`).val(from);
@@ -19,6 +20,7 @@ $('.filter-date').each(function (index) {
 	new AirDatepicker(datepicker, {
 		inline: true,
 		range: true,
+		minDate: new Date(),
 		onSelect: data => {
 			const [from, to] = data.formattedDate;
 			$('.text-field__input_filter-date').val(`${from} - ${to || ''}`);

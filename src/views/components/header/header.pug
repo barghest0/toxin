@@ -2,9 +2,9 @@ include ../logo/logo.pug
 include ../nav/nav.pug
 
 mixin header({isLogin=false,name=''}={})
-	header.header(class=isLogin ? 'header_authorized' : null)
+	header.header(class=isLogin ? "header_authorized" : null)
 		.container
-			.header__inner(class=isLogin ? 'header__inner_authorized' : null)
+			.header__inner(class=isLogin ? "header__inner_authorized" : null)
 				.header__logo
 					+logo
 				.header__nav
