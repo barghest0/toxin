@@ -11,7 +11,10 @@
 	}
 
 	&__block {
-		margin-bottom: 20px;
+		margin-bottom: 22px;
+		&:first-child &-field:last-child {
+			margin-bottom: 26px;
+		}
 		&-field {
 			&:not(:last-child) {
 				margin-bottom: 10px;
