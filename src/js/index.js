@@ -30,3 +30,6 @@ import '../views/pages/room/images/main-image-room.jpg';
 import '../views/pages/room/images/second-image-room.jpg';
 import '../views/pages/room/images/third-image-room.jpg';
 import '../views/pages/search-room/images/filter-icon.svg';
+import '../views/components/footer/images/facebook.svg';
+import '../views/components/footer/images/instagram.svg';
+import '../views/components/footer/images/twitter.svg';

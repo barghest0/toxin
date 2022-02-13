@@ -12,7 +12,6 @@
 		align-items: center;
 		transition: all 0.1s linear;
 
-
 		&_sign {
 			width: 87px;
 			height: 34px;
@@ -24,16 +23,17 @@
 
 		&_list {
 			padding-left: 0;
+
 			&::after {
+				content: '';
+				display: inline-block;
+				height: 8px;
+				width: 8px;
+				margin: 0 8px;
+				margin-bottom: 2px;
 				border-bottom: 2px solid rgba(31, 32, 67, 0.5);
 				border-left: 2px solid rgba(31, 32, 67, 0.5);
-				content: '';
 				cursor: pointer;
-				height: 8px;
-				display: inline-block;
-				margin: 0 8px;
-
-				width: 8px;
 				-webkit-transform: rotate(-45deg);
 				-ms-transform: rotate(-45deg);
 				transform: rotate(-45deg);

@@ -1,22 +1,19 @@
-.headers-footers {
-	&__header {
-		margin-bottom: 50px;
-	}
-	margin-bottom: 50px;
-}
-
 .colors-fonts {
+	margin-top: 150px;
 	margin-bottom: 100px;
-	display: flex;
-	justify-content: space-between;
-	.colors-fonts__font {
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__font {
 		display: grid;
 		grid-template-columns: 40px 370px;
 		grid-column-gap: 20px;
 		margin-bottom: 40px;
 	}
 
-	.colors-fonts__tag {
+	&__tag {
 		text-transform: uppercase;
 		color: $shadow-25;
 		justify-self: end;
@@ -40,9 +37,12 @@
 }
 
 .form-elements {
-	display: grid;
-	grid-template-columns: 320px minmax(10px, 126px) 320px minmax(10px, 70px) 320px;
 	margin-bottom: 100px;
+	&__inner {
+		display: grid;
+		grid-template-columns: 320px minmax(10px, 126px) 320px minmax(10px, 70px) 320px;
+	}
+
 	&__fields {
 		grid-column-start: 1;
 	}
@@ -152,9 +152,12 @@
 }
 
 .dropdowns {
-	display: grid;
-	grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
 	margin-bottom: 40px;
+	&__inner {
+		display: grid;
+		grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
+	}
+
 	&__labels {
 		display: flex;
 		justify-content: space-between;
@@ -176,9 +179,12 @@
 }
 
 .lists {
-	display: grid;
-	grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
 	margin-bottom: 40px;
+	&__inner {
+		display: grid;
+		grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
+	}
+
 	&__label {
 		margin-bottom: 16px;
 	}
@@ -199,9 +205,12 @@
 }
 
 .reviews {
-	display: grid;
-	grid-template-columns: 280px minmax(10px, 167px) 1fr;
 	margin-bottom: 100px;
+	&__inner {
+		display: grid;
+		grid-template-columns: 280px minmax(10px, 167px) 1fr;
+	}
+
 	&__reviews-list {
 		grid-column-start: 1;
 	}
@@ -211,9 +220,15 @@
 }
 
 .cards {
-	display: grid;
-	grid-template-columns: 380px 380px 320px;
-	grid-column-gap: 40px;
+	padding-top: 150px;
+	padding-bottom: 140px;
+	background-color: #f4f4f6;
+	&__inner {
+		display: grid;
+		grid-template-columns: 380px 380px 320px;
+		grid-column-gap: 40px;
+	}
+
 	&__column {
 		display: flex;
 		flex-direction: column;
@@ -224,5 +239,18 @@
 	}
 	&__preview-room {
 		width: 270px;
+	}
+}
+.headers-footers {
+	padding-bottom: 125px;
+	background-color: #f4f4f6;
+	&__header {
+		margin-bottom: 40px;
+	}
+	&__footer {
+		margin-bottom: 55px;
+		&-inline {
+			margin-bottom: 125px;
+		}
 	}
 }
