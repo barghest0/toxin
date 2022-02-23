@@ -2,12 +2,14 @@
 	position: absolute;
 	margin-top: 5px;
 	width: 100%;
-	height: 369px;
+	// height: 369px;
+	box-sizing: border-box;
+	padding: 20px;
 	&.-inline- {
 		box-shadow: 0 0 25px rgba($color: $black, $alpha: 0.2);
 	}
 	&--content {
-		padding: 0 20px;
+		padding: 0;
 		margin-bottom: 20px;
 	}
 
@@ -16,8 +18,7 @@
 	}
 
 	&-nav {
-		padding: 20px;
-		padding-bottom: 0;
+		padding: 0;
 		border: none;
 		&--title {
 			color: $shadow-100;
@@ -33,26 +34,29 @@
 		}
 	}
 
-	// &--buttons {
-	// 	display: flex;
-	// 	justify-content: space-between;
+	&--buttons {
+		border: none;
+		padding: 0;
+	}
 
-	// 	border: none;
+	&-buttons {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+	&-button {
+		padding: 0;
+		color: $main-color;
+		font-weight: bold;
+		text-transform: uppercase;
+		height: auto;
+		flex: 0;
 
-	// 	padding: 0;
-	// }
-	// &--button {
-	// 	color: $main-color;
-	// 	font-weight: bold;
-	// 	text-transform: uppercase;
-	// 	height: auto;
-	// 	flex: 0;
-
-	// 	&:hover {
-	// 		background-color: transparent;
-	// 		color: $main-color;
-	// 	}
-	// }
+		&:hover {
+			background-color: transparent;
+			color: $main-color;
+		}
+	}
 
 	&-body {
 		&--day-names {
@@ -103,7 +107,7 @@
 
 		&.-range-from-::after {
 			z-index: -1;
-			content: '';
+			content: "";
 			position: absolute;
 			width: 20px;
 			height: 100%;
@@ -113,7 +117,7 @@
 
 		&.-range-to-::before {
 			z-index: -1;
-			content: '';
+			content: "";
 			position: absolute;
 			width: 20px;
 			height: 100%;
@@ -169,6 +173,7 @@
 		}
 	}
 	&_md {
+		padding: 10px;
 		height: 300px;
 	}
 	&_md &--navigation {
