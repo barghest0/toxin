@@ -17,18 +17,22 @@
 
 	&-button-next:after,
 	&-button-prev:after {
-		z-index: 1000;
+		z-index: 100;
 		color: #fff;
 		font-size: 14px;
-		font-weight: bold;
-	}
-
-	&-button-next,
-	&-button-prev {
-		z-index: 1000;
-
 		transition: 0.2s linear;
 		opacity: 0;
+		font-weight: bold;
 		pointer-events: none;
+	}
+
+	&:hover &-button-next:after {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	&:hover &-button-prev:after {
+		opacity: 1;
+		pointer-events: all;
 	}
 }

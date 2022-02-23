@@ -28,7 +28,7 @@ module.exports = {
 	},
 
 	output: {
-		filename: `${PATHS.assets}js/[name].[fullhash].js`,
+		filename: `js/[name].[fullhash].js`,
 		path: PATHS.dist,
 		assetModuleFilename: "",
 	},
@@ -66,7 +66,6 @@ module.exports = {
 					filename: `${PATHS.assets}images/[name][ext]`,
 				},
 			},
-
 			{
 				test: /\.(woff(2)?|ttf|eot)$/,
 				type: "asset/resource",
@@ -105,7 +104,7 @@ module.exports = {
 
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: `${PATHS.assets}css/[name].[fullhash].css`,
+			filename: `css/[name].[fullhash].css`,
 		}),
 		new CopyWebpackPlugin({
 			patterns: [
