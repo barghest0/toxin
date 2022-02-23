@@ -1,6 +1,5 @@
 {
-    "presets": [
-        //то, что будет транспилировать
-        "@babel/preset-env"
-    ]
+  "presets": [
+    "@babel/preset-env"
+  ]
 }

@@ -1,18 +1,16 @@
-//------------------LIBRARIES IMPORTS--------------
+@import "./mixins";
+@import "./vars";
+@import "./components";
+@import "./pages";
+@import "./libs";
+@import "./fonts";
 
-@import './mixins';
-@import './vars';
-@import './components';
-@import './pages';
-@import './libs';
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 html {
 	line-height: $main-line-height;
 	font-size: $main-font-size;
 	color: $font-color;
 
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat, sans-serif;
 
 	@media screen and(max-width:$desktop-width) {
 		font-size: 13px;

@@ -1,21 +1,21 @@
-const path = require('path');
-const fs = require('fs');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
+const path = require("path");
+const fs = require("fs");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 const PATHS = {
-	src: path.join(__dirname, './src'),
-	dist: path.join(__dirname, './dist'),
-	assets: 'assets/',
+	src: path.join(__dirname, "./src"),
+	dist: path.join(__dirname, "./dist"),
+	assets: "assets/",
 };
-let pagesBlocks = ['ui-kit', 'landing', 'search-room', 'login', 'register', 'room'];
+let pagesBlocks = ["ui-kit", "landing", "search-room", "login", "register", "room"];
 const PAGES_DIR = `${PATHS.src}/views/pages/`;
 
 const PAGES = pagesBlocks.map(
 	item =>
 		`${PAGES_DIR}${item}/` +
-		fs.readdirSync(`${PAGES_DIR}${item}/`).filter(fileName => fileName.endsWith('.pug')),
+		fs.readdirSync(`${PAGES_DIR}${item}/`).filter(fileName => fileName.endsWith(".pug")),
 );
 
 module.exports = {
@@ -30,16 +30,16 @@ module.exports = {
 	output: {
 		filename: `${PATHS.assets}js/[name].[fullhash].js`,
 		path: PATHS.dist,
-		assetModuleFilename: 'assets/images/[name][ext]',
+		assetModuleFilename: "",
 	},
 
 	optimization: {
 		splitChunks: {
 			cacheGroups: {
 				vendor: {
-					name: 'vendors',
+					name: "vendors",
 					test: /node_modules/,
-					chunks: 'all',
+					chunks: "all",
 					enforce: true,
 				},
 			},
@@ -51,37 +51,49 @@ module.exports = {
 			{
 				test: /\.js$/,
 
-				use: ['babel-loader'],
+				use: ["babel-loader"],
 
-				exclude: '/node_modules/',
+				exclude: "/node_modules/",
 			},
 			{
 				test: /\.pug$/,
-				use: ['pug-loader'],
+				use: ["pug-loader"],
 			},
 			{
 				test: /\.(png|svg|jpg|jpeg|gif)$/,
-				type: 'asset/resource',
+				type: "asset/resource",
+				generator: {
+					filename: `${PATHS.assets}images/[name][ext]`,
+				},
 			},
+
+			{
+				test: /\.(woff(2)?|ttf|eot)$/,
+				type: "asset/resource",
+				generator: {
+					filename: `${PATHS.assets}fonts/[name][ext]`,
+				},
+			},
+
 			{
 				test: /\.(scss|css)$/,
 				use: [
 					MiniCssExtractPlugin.loader,
-					'css-loader',
+					"css-loader",
 					{
-						loader: 'postcss-loader',
+						loader: "postcss-loader",
 						options: {
-							postcssOptions: { config: 'postcss.config.js' },
+							postcssOptions: { config: "postcss.config.js" },
 						},
 					},
 					{
-						loader: 'resolve-url-loader',
+						loader: "resolve-url-loader",
 						options: {
 							sourceMap: true,
 						},
 					},
 					{
-						loader: 'sass-loader',
+						loader: "sass-loader",
 						options: {
 							sourceMap: true,
 						},
@@ -99,14 +111,14 @@ module.exports = {
 			patterns: [
 				{
 					from: `${PATHS.src}/static`,
-					to: '',
+					to: "",
 				},
 			],
 		}),
 
 		new webpack.ProvidePlugin({
-			$: 'jquery',
-			jQuery: 'jquery',
+			$: "jquery",
+			jQuery: "jquery",
 		}),
 
 		new HtmlWebpackPlugin({
@@ -118,9 +130,9 @@ module.exports = {
 			return new HtmlWebpackPlugin({
 				template: page,
 				filename: `${page
-					.split('/')
+					.split("/")
 					.at(-1)
-					.replace(/\.pug$/, '.html')}`,
+					.replace(/\.pug$/, ".html")}`,
 				minify: false,
 			});
 		}),
