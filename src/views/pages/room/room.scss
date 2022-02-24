@@ -10,13 +10,12 @@
 		width: 100%;
 		display: grid;
 		grid-template-columns: 68% 32%;
-		grid-template-rows: repeat(2, 243px);
-
+		grid-template-rows: repeat(2, minmax(max-content, 100px));
 		grid-template-areas:
-			'main-image second-image-top'
-			'main-image second-image-bottom';
+			"main-image second-image-top"
+			"main-image second-image-bottom";
 		@include tablet-portrait {
-			grid-template-areas: 'main-image main-image';
+			grid-template-areas: "main-image main-image";
 			grid-template-rows: minmax(min-content, 100px);
 		}
 	}

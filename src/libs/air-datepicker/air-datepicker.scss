@@ -174,7 +174,6 @@
 	}
 	&_md {
 		padding: 10px;
-		height: 300px;
 	}
 	&_md &--navigation {
 		margin-bottom: 10px;
@@ -182,7 +181,7 @@
 
 	&_md &-body--cells.-days- {
 		width: 100%;
-		grid-auto-rows: 30px;
-		grid-auto-columns: 30px;
+		grid-auto-rows: 33px;
+		grid-auto-columns: 33px;
 	}
 }
