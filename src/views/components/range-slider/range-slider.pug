@@ -1,11 +1,11 @@
 include ../text-titles/text-titles.pug
 
 mixin range-slider({startPrice=5000,endPrice=10000,label='Range Slider'}={})
-	.range-slider 
-		.range-slider__label 
-			+block-label({text:label})
-			.range-slider__price 
-				.range-slider__start-price #{ startPrice }₽
-				span.range-slider__price-delimiter -
-				.range-slider__end-price #{ endPrice }₽
-		.slider(data-first-value=startPrice, data-second-value=endPrice)
+  .range-slider 
+    .range-slider__label 
+      +block-label({text:label})
+      .range-slider__price 
+        .range-slider__start-price #{ startPrice }₽
+        span.range-slider__price-delimiter -
+        .range-slider__end-price #{ endPrice }₽
+    .slider(data-first-value=startPrice, data-second-value=endPrice)

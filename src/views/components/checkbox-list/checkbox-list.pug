@@ -1,9 +1,9 @@
 include ../checkbox/checkbox.pug
 include ../text-titles/text-titles.pug
 mixin checkbox-list({label='checkboxes',items=[]}={})
-	.checkbox-list
-		.checkbox-list__label
-			+block-label({text:label})
-		each item in items
-			.checkbox-list__item
-				+checkbox({text:item['text'],state:item['state'],name:item['name'],id:item['id']})
+  .checkbox-list
+    .checkbox-list__label
+      +block-label({text:label})
+    each item in items
+      .checkbox-list__item
+        +checkbox({text:item['text'],state:item['state'],name:item['name'],id:item['id']})

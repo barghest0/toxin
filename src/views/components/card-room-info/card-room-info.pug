@@ -1,15 +1,15 @@
 include ../text-titles/text-titles.pug
 
 mixin card-room-info({roomNumber='', isLuxury='', price='', size=''}={})
-	.card-room-info(class=`card-room-info_${size}`)
-		.card-room-info__room
-			.card-room-info__room-number №
-				if size === 'lg'
-					+widget-title({text:roomNumber})
-				else
-					+title-inside-widget({text:roomNumber})
-			if isLuxury
-				.card-room-info__room-luxury Люкс
-		.card-room-info__price
-			.card-room-info__price-value #{ price }₽
-			.card-room-info__price-in-time в сутки
+  .card-room-info(class=`card-room-info_${size}`)
+    .card-room-info__room
+      .card-room-info__room-number №
+        if size === 'lg'
+          +widget-title({text:roomNumber})
+        else
+          +title-inside-widget({text:roomNumber})
+      if isLuxury
+        .card-room-info__room-luxury Люкс
+    .card-room-info__price
+      .card-room-info__price-value #{ price }₽
+      .card-room-info__price-in-time в сутки

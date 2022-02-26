@@ -1,13 +1,13 @@
 mixin subscribe-text-field({id='subscribe-text-field', name="", placeholder='', type='text', value=""}={})
-	.text-field
-		form.text-field__container.text-field__container_send-email
-			input.text-field__input.subscribe-text-field(
-				type="email",
-				name=name,
-				id=id,
-				placeholder=placeholder
-			)
-			button.subscribe-text-field__arrow(type="submit")
-				<svg width="17" height="18" viewBox="0 0 17 18">
-					<path d="M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z" fill="#BC9CFF"/>
-				</svg>
+  .text-field
+    form.text-field__container.text-field__container_send-email
+      input.text-field__input.subscribe-text-field(
+        type='email',
+        name=name,
+        id=id,
+        placeholder=placeholder
+      )
+      button.subscribe-text-field__arrow(type='submit')
+        <svg width="17" height="18" viewBox="0 0 17 18">
+          <path d="M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z" fill="#BC9CFF"/>
+        </svg>

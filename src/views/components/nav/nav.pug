@@ -1,16 +1,16 @@
 include ../button/button.pug
 
 mixin nav({isLogin=false,name='',burger=false}={})
-	nav.nav(class=burger ? "nav_burger" : null)
-		a.nav__item(href="/about.html") О нас
-		ul.nav__item.nav__item_list Услуги
-		a.nav__item(href="/jobs.html") Вакансии
-		a.nav__item(href="/news.html") Новости
-		ul.nav__item.nav__item_list Соглашения
-		if isLogin
-			a.nav__item.nav__item_profile(href="/profile.html")= name
-		else
-			a.nav__item.nav__item_sign(href="/login.html")
-				+button({text:'Войти', type:'outlined', })
-			a.nav__item.nav__item_register(href="/register.html")
-				+button({text:'Зарегистрироваться',type:'filled'})
+  nav.nav(class=burger ? 'nav_burger' : null)
+    a.nav__item(href='/about.html') О нас
+    ul.nav__item.nav__item_list Услуги
+    a.nav__item(href='/jobs.html') Вакансии
+    a.nav__item(href='/news.html') Новости
+    ul.nav__item.nav__item_list Соглашения
+    if isLogin
+      a.nav__item.nav__item_profile(href='/profile.html')= name
+    else
+      a.nav__item.nav__item_sign(href='/login.html')
+        +button({text:'Войти', type:'outlined', })
+      a.nav__item.nav__item_register(href='/register.html')
+        +button({text:'Зарегистрироваться',type:'filled'})

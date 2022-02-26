@@ -5,14 +5,14 @@ include ../dropdown/dropdown.pug
 include ../button/button.pug
 
 mixin search-room-card({title='Найдём номера под ваши пожелания'}={})
-	+card
-		.search-room-card 
-			.search-room-card__title 
-				+widget-title({text:title})
-			form.search-room-card__search-form(action="search-room.html")
-				.search-room-card__date 
-					+range-date({from:'Прибытие',to:'Выезд',idFrom:'date-from-1',idTo:'date-to-1'})
-				.search-room-card__guests 
-					+dropdown({label:'Гости', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
-				.search-room-card__button(action="search-room.html") 
-					+button({text:'Подобрать номер', type:'filled', isLargest:true})
+  +card
+    .search-room-card 
+      .search-room-card__title 
+        +widget-title({text:title})
+      form.search-room-card__search-form(action='search-room.html')
+        .search-room-card__date 
+          +range-date({from:'Прибытие',to:'Выезд',idFrom:'date-from-1',idTo:'date-to-1'})
+        .search-room-card__guests 
+          +dropdown({label:'Гости', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
+        .search-room-card__button(action='search-room.html') 
+          +button({text:'Подобрать номер', type:'filled', isLargest:true})

@@ -2,16 +2,16 @@ include ../like/like.pug
 include ../text-titles/text-titles.pug
 
 mixin feedback({avatar='', alt='',name='',lastVisit='', likesCount='', comment='',likeState=''}={})
-	.feedback
-		.feedback__user
-			img.feedback__user-avatar(src=`assets/images/${avatar}`, alt=alt)
-			.feedback__user-info
-				.feedback__user-name
-					+body-text({text:name,weight:'bold'})
-				.feedback__user-visit
-					+body-text({text:lastVisit})
-		.feedback__content
-			.feedback__like
-				+like({id:'like-feedback', name:'like-feedback', count:likesCount, state:likeState})
-			.feedback__comment
-				+body-text({text:comment})
+  .feedback
+    .feedback__user
+      img.feedback__user-avatar(src=`assets/images/${avatar}`, alt=alt)
+      .feedback__user-info
+        .feedback__user-name
+          +body-text({text:name,weight:'bold'})
+        .feedback__user-visit
+          +body-text({text:lastVisit})
+    .feedback__content
+      .feedback__like
+        +like({id:'like-feedback', name:'like-feedback', count:likesCount, state:likeState})
+      .feedback__comment
+        +body-text({text:comment})

@@ -1,14 +1,14 @@
 include ../text-titles/text-titles.pug
 
 mixin rich-checkbox({text='',subtext='', name='', id='', state=''}={})
-	label.rich-checkbox
-		if state === 'checked'
-			input.rich-checkbox__input(type="checkbox", name=name, id=id, checked)
-		else
-			input.rich-checkbox__input(type="checkbox", name=name, id=id)
-		span.rich-checkbox__custom-input
-		.rich-checkbox__titles
-			.rich-checkbox__title
-				+body-text({text,weight:'bold'})
-			.rich-checkbox__subtitle
-				+body-text({text:subtext})
+  label.rich-checkbox
+    if state === 'checked'
+      input.rich-checkbox__input(type='checkbox', name=name, id=id, checked)
+    else
+      input.rich-checkbox__input(type='checkbox', name=name, id=id)
+    span.rich-checkbox__custom-input
+    .rich-checkbox__titles
+      .rich-checkbox__title
+        +body-text({text,weight:'bold'})
+      .rich-checkbox__subtitle
+        +body-text({text:subtext})

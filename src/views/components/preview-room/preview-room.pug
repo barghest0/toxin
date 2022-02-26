@@ -5,18 +5,18 @@ include ../dropdown/dropdown.pug
 include ../button/button.pug
 
 mixin preview-room({roomNumber='',id='',images=[],isLuxury=false,rate=0,price=0,reviews=''}={})
-	+card('sm')
-		a.preview-room(href="/room.html")
-			.preview-room__carousel.swiper
-				.preview-room__carousel-container.swiper-wrapper 
-					each image in images
-						img.preview-room__image.swiper-slide(src=`assets/images/${image}`, alt="")
-				.swiper-pagination 
-				.swiper-button-next 
-				.swiper-button-prev
-			.preview-room__content 
-				.preview-room__info
-					+card-room-info({roomNumber,isLuxury,price,size:'sm'})
-				.preview-room__reviews
-					+rate({id:`${id}-rate`,name:`${id}-rate`,rate})
-					.preview-room__reviews-value #{ reviews } Отзывов
+  +card('sm')
+    a.preview-room(href='/room.html')
+      .preview-room__carousel.swiper
+        .preview-room__carousel-container.swiper-wrapper 
+          each image in images
+            img.preview-room__image.swiper-slide(src=`assets/images/${image}`, alt='')
+        .swiper-pagination 
+        .swiper-button-next 
+        .swiper-button-prev
+      .preview-room__content 
+        .preview-room__info
+          +card-room-info({roomNumber,isLuxury,price,size:'sm'})
+        .preview-room__reviews
+          +rate({id:`${id}-rate`,name:`${id}-rate`,rate})
+          .preview-room__reviews-value #{ reviews } Отзывов

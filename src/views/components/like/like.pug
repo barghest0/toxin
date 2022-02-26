@@ -1,8 +1,8 @@
 mixin like({id='', name='', count=0,state=''}={})
-	label.like
-		if state === 'checked'
-			input.like__input(type="checkbox", name=name, id=id, checked)
-		else
-			input.like__input(type="checkbox", name=name, id=id)
-		span.like__custom-input
-			= count
+  label.like
+    if state === 'checked'
+      input.like__input(type='checkbox', name=name, id=id, checked)
+    else
+      input.like__input(type='checkbox', name=name, id=id)
+    span.like__custom-input
+      = count
