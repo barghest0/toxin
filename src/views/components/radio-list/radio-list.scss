@@ -1,35 +1,30 @@
 .radio-list {
-	display: flex;
+  display: flex;
 
-	&__input {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-	}
+  &__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
 
-	&__item {
-		display: flex;
-		align-items: center;
-		cursor: pointer;
-		width: 100px;
-		margin-right: 20px;
-	}
+  &__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100px;
+    margin-right: 20px;
+  }
 
-	&__item:hover &__custom-input {
-		background: url('images/fill-radio.svg');
-		opacity: 0.6;
-	}
+  &__custom-input {
+    align-self: flex-start;
+    min-width: 20px;
+    margin-right: 10px;
+    height: 20px;
+    transition: 0.3s ease-in-out;
+    background: url('images/empty-radio.svg');
+  }
 
-	&__custom-input {
-		align-self: flex-start;
-		min-width: 20px;
-		margin-right: 10px;
-		height: 20px;
-		transition: 0.1s ease-in-out;
-		background: url('images/empty-radio.svg');
-	}
-
-	&__input:checked + &__custom-input {
-		background: url('images/fill-radio.svg');
-	}
+  &__input:checked + &__custom-input {
+    background: url('images/fill-radio.svg');
+  }
 }
