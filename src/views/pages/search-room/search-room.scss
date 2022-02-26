@@ -1,71 +1,71 @@
 .search-room {
-	&__inner {
-		padding-top: 30px;
-		padding-bottom: 70px;
-		display: grid;
-		grid-template-columns: 266px minmax(10px, 60px) 1fr;
-		@include sm-tablet-portrait {
-			grid-template-columns: 1fr;
-			padding-top: 50px;
-		}
-	}
+  &__inner {
+    padding-top: 30px;
+    padding-bottom: 70px;
+    display: grid;
+    grid-template-columns: 266px minmax(10px, 60px) 1fr;
+    @include sm-tablet-portrait {
+      grid-template-columns: 1fr;
+      padding-top: 50px;
+    }
+  }
 
-	&__filters {
-		z-index: 100;
-		background-color: $white;
-		transition: all 0.3s linear;
+  &__filters {
+    z-index: 100;
+    background-color: $white;
+    transition: all 0.3s linear;
 
-		@include sm-tablet-portrait {
-			position: absolute;
-			transform: translateX(-300px);
-			left: 0;
-			&.active {
-				padding: 20px;
+    @include sm-tablet-portrait {
+      position: absolute;
+      transform: translateX(-300px);
+      left: 0;
+      &.active {
+        padding: 20px;
 
-				transform: translateX(0);
-			}
-		}
-	}
+        transform: translateX(0);
+      }
+    }
+  }
 
-	&__filter {
-		margin-bottom: 30px;
-		&:first-child {
-			margin-bottom: 20px;
-		}
-		&-icon {
-			z-index: 110;
-			cursor: pointer;
-			position: absolute;
-			top: 85px;
-			display: none;
-			@include sm-tablet-portrait {
-				display: block;
-			}
-		}
-	}
-	&__slider-description {
-		margin-top: 13.5px;
-		font-size: 12px;
-		color: $shadow-50;
-	}
+  &__filter {
+    margin-bottom: 30px;
+    &:first-child {
+      margin-bottom: 20px;
+    }
+    &-icon {
+      z-index: 110;
+      cursor: pointer;
+      position: absolute;
+      top: 85px;
+      display: none;
+      @include sm-tablet-portrait {
+        display: block;
+      }
+    }
+  }
+  &__slider-description {
+    margin-top: 13.5px;
+    font-size: 12px;
+    color: $shadow-50;
+  }
 
-	&__cards {
-		grid-column-start: 3;
-		&-title {
-			margin-bottom: 20px;
-		}
-		&-inner {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-			grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
-			grid-column-gap: 10px;
-			grid-row-gap: 20px;
-			margin-bottom: 40px;
-		}
-	}
+  &__cards {
+    grid-column-start: 3;
+    &-title {
+      margin-bottom: 20px;
+    }
+    &-inner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+      grid-column-gap: 10px;
+      grid-row-gap: 20px;
+      margin-bottom: 40px;
+    }
+  }
 
-	&__pagination {
-		display: flex;
-		justify-content: center;
-	}
+  &__pagination {
+    display: flex;
+    justify-content: center;
+  }
 }

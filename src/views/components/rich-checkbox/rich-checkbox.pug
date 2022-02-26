@@ -8,7 +8,5 @@ mixin rich-checkbox({text='',subtext='', name='', id='', state=''}={})
       input.rich-checkbox__input(type='checkbox', name=name, id=id)
     span.rich-checkbox__custom-input
     .rich-checkbox__titles
-      .rich-checkbox__title
-        +body-text({text,weight:'bold'})
-      .rich-checkbox__subtitle
-        +body-text({text:subtext})
+      .rich-checkbox__title=text
+      .rich-checkbox__subtitle=subtext

@@ -10,6 +10,8 @@
   &-ellipsis {
     display: flex;
     align-items: center;
+    justify-content: center;
+    @include size(40px);
   }
 
   &-page {
