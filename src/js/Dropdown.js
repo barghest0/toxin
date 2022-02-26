@@ -1,5 +1,6 @@
 import "item-quantity-dropdown/lib/item-quantity-dropdown.min";
 import "item-quantity-dropdown/lib/item-quantity-dropdown.min.css";
+import { PEOPLE_TYPE } from "./constants/dropdown";
 
 class Dropdown {
 	constructor(element, size, type) {
@@ -19,7 +20,7 @@ class Dropdown {
 	setParams() {
 		this.params = {
 			maxItems: 20,
-			setSelectionText: this.type === "people" ? this.setPeopleText : this.setApartmentsText,
+			setSelectionText: this.type === PEOPLE_TYPE ? this.setPeopleText : this.setApartmentsText,
 		};
 	}
 
@@ -28,14 +29,14 @@ class Dropdown {
 	}
 
 	attachButtonsListeners() {
-		this.element.find(".button-increment").on("click", function () {
-			if ($(this).prev().html() > 0) {
-				$(this).prev().prev().prop("disabled", false);
+		this.element.find(".button-increment").on("click", function (e) {
+			if ($(e.currentTarget).prev().html() > 0) {
+				$(e.currentTarget).prev().prev().prop("disabled", false);
 			}
 		});
-		this.element.find(".button-decrement").on("click", function () {
-			if ($(this).next().html() == 0) {
-				$(this).prop("disabled", true);
+		this.element.find(".button-decrement").on("click", function (e) {
+			if ($(e.currentTarget).next().html() == 0) {
+				$(e.currentTarget).prop("disabled", true);
 			}
 		});
 

@@ -1,5 +1,6 @@
 import AirDatepicker from "air-datepicker";
 import "air-datepicker/air-datepicker.css";
+import { FILTER_TYPE, MD_SIZE } from "./constants/datepicker";
 
 class Datepicker {
 	constructor(element, type, size) {
@@ -21,7 +22,7 @@ class Datepicker {
 	createDatepicker() {
 		this.element.each(index => {
 			const datepicker = this.element.find(".datepicker")[index];
-			if (this.type === "filter") this.attachFilterOnSelect();
+			if (this.type === FILTER_TYPE) this.attachFilterOnSelect();
 			else this.attachRangeOnSelect(index);
 			new AirDatepicker(datepicker, this.params);
 		});
@@ -32,10 +33,10 @@ class Datepicker {
 		this.params.inline = true;
 		this.params.range = true;
 		this.params.minDate = new Date();
-		if (this.size === "md") {
+		if (this.size === MD_SIZE) {
 			this.params.classes = "air-datepicker_md";
 		}
-		if (this.type === "filter") {
+		if (this.type === FILTER_TYPE) {
 			this.params.dateFormat = "d MMM";
 		}
 	}
