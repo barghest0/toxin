@@ -4,9 +4,8 @@ mixin review-list({items=[]}={})
   .review-list
     each item in items
       .review-list__item
-        img.review-list__img(src=`assets/images/${item['img']}`, alt=item['alt'])
+        .review-list__img-container
+          img.review-list__img(src=`assets/images/${item['img']}`, alt=item['alt'])
         .review-list__text
-          .review-list__title
-            +body-text({text:item['title'],weight:'bold'})
-          .review-list__subtitle 
-            +body-text({text:item['subtitle']})
+          .review-list__title=item['title']
+          .review-list__subtitle=item['subtitle']
