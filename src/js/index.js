@@ -3,7 +3,6 @@ import '../views/components/dropdown/dropdown';
 import '../views/components/masked-text-field/masked-text-field';
 import '../views/components/filter-date/filter-date';
 import '../views/components/chart/chart';
-import '../views/components/pagination/pagination';
 import '../views/components/expand-list/expand-list';
 import '../views/components/preview-room/preview-room';
 import '../views/components/header/header';
@@ -11,6 +10,7 @@ import '../views/components/datepicker/datepicker';
 import '../views/components/range-date/range-date';
 import '../views/components/filter-date/filter-date';
 import '../views/components/range-slider/range-slider';
+import '../views/components/pagination/pagination';
 
 //pages files
 import '../views/pages/search-room/search-room';
