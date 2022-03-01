@@ -1,6 +1,6 @@
 include ../text-titles/text-titles.pug
 include ../card/card.pug
-include ../text-field/text-field.pug
+include ../default-text-field/default-text-field.pug
 include ../button/button.pug
 
 mixin login-card({title='Войти'}={})
@@ -11,9 +11,9 @@ mixin login-card({title='Войти'}={})
       form.login-card__login-form
         .login-card__block 
           .login-card__block-field 
-            +text-field({placeholder:'Email', type:'email', name:'email'})
+            +default-text-field({placeholder:'Email', type:'email', name:'email'})
           .login-card__block-field 
-            +text-field({placeholder:'Пароль', type:'password', name:'password'})
+            +default-text-field({placeholder:'Пароль', type:'password', name:'password'})
         .login-card__button
           +button({text:'Войти', type:'filled', isLargest:true})
       .login-card__profile-action 

@@ -1,17 +1,29 @@
 .text-field {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
-  &__labels {
+  &__label {
     margin-bottom: 5px;
   }
+
   &__container {
+    position: relative;
+    height: 44px;
     border-radius: 4px;
+    background-color: $white;
+    &_send-email {
+      display: flex;
+      align-items: center;
+    }
   }
 
-  input {
-    width: 100%;
+  &__input {
     height: 44px;
+    width: 100%;
     padding: 0 15px;
+
+    border: none;
     border: 1px solid $shadow-25;
     border-radius: 4px;
     outline: none;
@@ -28,6 +40,16 @@
 
     &:focus {
       border: 1px solid $shadow-50;
+    }
+
+    &_range-date,
+    &_filter-date {
+      cursor: pointer;
+      position: relative;
+      &::placeholder {
+        color: $shadow-75;
+        font-size: 14px;
+      }
     }
   }
 }

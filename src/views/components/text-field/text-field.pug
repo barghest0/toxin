@@ -1,4 +1,11 @@
-mixin text-field({name="",placeholder='', type='text', value=""})
-  .text-field
+
+
+
+mixin text-field({label='',subLabel=''}={})
+  .text-field 
+    .text-field__labels
+      +block-label({text:label})
+      if subLabel
+        +block-sub-label({text:subLabel})
     .text-field__container
-      input.text-field__input(type=type, name=name, placeholder=placeholder, value=value)
+      block

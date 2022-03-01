@@ -2,16 +2,13 @@ include ../text-titles/text-titles.pug
 include ../datepicker/datepicker.pug
 
 mixin filter-date({label='', id='filter-date', placeholder=''}={})
-  .filter-date
-    .filter-date__label 
-      +block-label({text:label})
-    .text-field
-      .text-field__container
-        input.text-field__input.text-field__input_filter-date(
-          id=id,
-          name=name,
-          data-range='true',
-          value='Выберите дату'
-        )
-    .filter-date__datepicker
-      +datepicker
+  +text-field({label})
+    .filter-date
+      input.filter-date__input(
+        id=id,
+        name=name,
+        data-range='true',
+        value='Выберите дату'
+      )
+      .filter-date__datepicker
+        +datepicker

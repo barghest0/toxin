@@ -35,16 +35,14 @@ block form-elements
             .form-elements__field-labels
               +block-label({text:'text field'})
               +block-sub-label({text:'default'})
-            +text-field({ name:"email", placeholder:"Email", type:'email'})
+            +default-text-field({ name:"email", placeholder:"Email", type:'email'})
           .form-elements__text-field
             .form-elements__field-labels
               +block-label({text:'text field'})
               +block-sub-label({text:'hover / focus'})
-            +text-field({ name:"email", placeholder:"Email", type:'email', value:'This is pretty awesome'})
+            +default-text-field({ name:"email", placeholder:"Email", type:'email', value:'This is pretty awesome'})
           .form-elements__dropdown
-            .form-elements__field-labels
-              +block-label({text:'dropdown'})
-            +dropdown({items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
+            +dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
           .form-elements__masked-text-field
             .form-elements__field-labels
               +block-label({text:'masked text field'})

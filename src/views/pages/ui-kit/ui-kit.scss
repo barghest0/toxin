@@ -1,256 +1,256 @@
 .colors-fonts {
-	margin-top: 150px;
-	margin-bottom: 100px;
-	&__inner {
-		display: flex;
-		justify-content: space-between;
-	}
+  margin-top: 150px;
+  margin-bottom: 100px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
 
-	&__font {
-		display: grid;
-		grid-template-columns: 40px 370px;
-		grid-column-gap: 20px;
-		margin-bottom: 40px;
-	}
+  &__font {
+    display: grid;
+    grid-template-columns: 40px 370px;
+    grid-column-gap: 20px;
+    margin-bottom: 40px;
+  }
 
-	&__tag {
-		text-transform: uppercase;
-		color: $shadow-25;
-		justify-self: end;
+  &__tag {
+    text-transform: uppercase;
+    color: $shadow-25;
+    justify-self: end;
 
-		&_type {
-			&_widget {
-				font-size: 24px;
-			}
-			&_inside-widget {
-				font-size: 19px;
-			}
-			&_label {
-				font-size: 12px;
-			}
-			&_text {
-				font-size: 14px;
-				text-transform: capitalize;
-			}
-		}
-	}
+    &_type {
+      &_widget {
+        font-size: 24px;
+      }
+      &_inside-widget {
+        font-size: 19px;
+      }
+      &_label {
+        font-size: 12px;
+      }
+      &_text {
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+    }
+  }
 }
 
 .form-elements {
-	margin-bottom: 100px;
-	&__inner {
-		display: grid;
-		grid-template-columns: 320px minmax(10px, 126px) 320px minmax(10px, 70px) 320px;
-	}
+  margin-bottom: 100px;
+  &__inner {
+    display: grid;
+    grid-template-columns: 320px minmax(10px, 126px) 320px minmax(10px, 70px) 320px;
+  }
 
-	&__fields {
-		grid-column-start: 1;
-	}
+  &__fields {
+    grid-column-start: 1;
+  }
 
-	&__field-labels {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 5px;
-	}
+  &__field-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
 
-	&__text-field {
-		margin-bottom: 20px;
-	}
+  &__text-field {
+    margin-bottom: 20px;
+  }
 
-	&__masked-text-field {
-		margin-bottom: 40px;
-	}
+  &__masked-text-field {
+    margin-bottom: 40px;
+  }
 
-	&__subscribe-field {
-		max-width: 266px;
-	}
+  &__subscribe-field {
+    max-width: 266px;
+  }
 
-	&__dropdown {
-		margin-bottom: 20px;
-	}
+  &__dropdown {
+    margin-bottom: 20px;
+  }
 
-	&__range-date {
-		margin-bottom: 40px;
-	}
+  &__range-date {
+    margin-bottom: 40px;
+  }
 
-	&__filter-date {
-		margin-bottom: 40px;
-		max-width: 266px;
-	}
+  &__filter-date {
+    margin-bottom: 40px;
+    max-width: 266px;
+  }
 
-	&__selections {
-		grid-column-start: 3;
-	}
+  &__selections {
+    grid-column-start: 3;
+  }
 
-	&__selection-label {
-		margin-bottom: 16px;
-	}
+  &__selection-label {
+    margin-bottom: 16px;
+  }
 
-	&__checkboxes {
-		margin-bottom: 40px;
-	}
+  &__checkboxes {
+    margin-bottom: 40px;
+  }
 
-	&__radio {
-		margin-bottom: 40px;
-	}
+  &__radio {
+    margin-bottom: 40px;
+  }
 
-	&__toggle {
-		margin-bottom: 40px;
-		&-column {
-			display: flex;
-			flex-direction: column;
-			row-gap: 14px;
-		}
-	}
+  &__toggle {
+    margin-bottom: 40px;
+    &-column {
+      display: flex;
+      flex-direction: column;
+      row-gap: 14px;
+    }
+  }
 
-	&__like {
-		margin-bottom: 40px;
-		&-row {
-			display: flex;
-			column-gap: 10px;
-		}
-	}
+  &__like {
+    margin-bottom: 40px;
+    &-row {
+      display: flex;
+      column-gap: 10px;
+    }
+  }
 
-	&__rate {
-		&-row {
-			display: flex;
-			column-gap: 20px;
-		}
-	}
+  &__rate {
+    &-row {
+      display: flex;
+      column-gap: 20px;
+    }
+  }
 
-	&__other {
-		grid-column-start: 5;
-	}
+  &__other {
+    grid-column-start: 5;
+  }
 
-	&__other-label {
-		margin-bottom: 16px;
-	}
-	&__slider {
-		margin-bottom: 20px;
-	}
+  &__other-label {
+    margin-bottom: 16px;
+  }
+  &__slider {
+    margin-bottom: 20px;
+  }
 
-	&__buttons {
-		margin-bottom: 40px;
-		&-small {
-			display: grid;
-			grid-template-columns: repeat(2, 100px);
-			grid-template-rows: repeat(2, 45px);
-			grid-row-gap: 30px;
-			grid-column-gap: 30px;
-			margin-bottom: 30px;
-		}
-		&-no-bordered {
-			display: flex;
-			column-gap: 20px;
-			margin-bottom: 30px;
-		}
+  &__buttons {
+    margin-bottom: 40px;
+    &-small {
+      display: grid;
+      grid-template-columns: repeat(2, 100px);
+      grid-template-rows: repeat(2, 45px);
+      grid-row-gap: 30px;
+      grid-column-gap: 30px;
+      margin-bottom: 30px;
+    }
+    &-no-bordered {
+      display: flex;
+      column-gap: 20px;
+      margin-bottom: 30px;
+    }
 
-		&-largest {
-			height: 44px;
-		}
-	}
+    &-largest {
+      height: 44px;
+    }
+  }
 }
 
 .dropdowns {
-	margin-bottom: 40px;
-	&__inner {
-		display: grid;
-		grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
-	}
+  margin-bottom: 40px;
+  &__inner {
+    display: grid;
+    grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
+  }
 
-	&__labels {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 5px;
-	}
-	&__apartments {
-		grid-column-start: 1;
-		&-item {
-			margin-bottom: 20px;
-		}
-	}
+  &__labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  &__apartments {
+    grid-column-start: 1;
+    &-item {
+      margin-bottom: 20px;
+    }
+  }
 
-	&__guests-expand {
-		grid-column-start: 3;
-	}
-	&__guests {
-		grid-column-start: 5;
-	}
+  &__guests-expand {
+    grid-column-start: 3;
+  }
+  &__guests {
+    grid-column-start: 5;
+  }
 }
 
 .lists {
-	margin-bottom: 40px;
-	&__inner {
-		display: grid;
-		grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
-	}
+  margin-bottom: 40px;
+  &__inner {
+    display: grid;
+    grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
+  }
 
-	&__label {
-		margin-bottom: 16px;
-	}
-	&__expand-checkbox {
-		grid-column-start: 1;
-		display: flex;
-		flex-direction: column;
-		row-gap: 35px;
-	}
+  &__label {
+    margin-bottom: 16px;
+  }
+  &__expand-checkbox {
+    grid-column-start: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+  }
 
-	&__rich-checkbox {
-		grid-column-start: 3;
-	}
+  &__rich-checkbox {
+    grid-column-start: 3;
+  }
 
-	&__bullet-list {
-		grid-column-start: 5;
-	}
+  &__bullet-list {
+    grid-column-start: 5;
+  }
 }
 
 .reviews {
-	margin-bottom: 100px;
-	&__inner {
-		display: grid;
-		grid-template-columns: 280px minmax(10px, 167px) 1fr;
-	}
+  margin-bottom: 100px;
+  &__inner {
+    display: grid;
+    grid-template-columns: 280px minmax(10px, 167px) 1fr;
+  }
 
-	&__reviews-list {
-		grid-column-start: 1;
-	}
-	&__feedback {
-		grid-column-start: 3;
-	}
+  &__reviews-list {
+    grid-column-start: 1;
+  }
+  &__feedback {
+    grid-column-start: 3;
+  }
 }
 
 .cards {
-	padding-top: 150px;
-	padding-bottom: 140px;
-	background-color: #f4f4f6;
-	&__inner {
-		display: grid;
-		grid-template-columns: 380px 380px 320px;
-		grid-column-gap: 40px;
-	}
+  padding-top: 150px;
+  padding-bottom: 140px;
+  background-color: #f4f4f6;
+  &__inner {
+    display: grid;
+    grid-template-columns: 380px 380px 320px;
+    grid-column-gap: 40px;
+  }
 
-	&__column {
-		display: flex;
-		flex-direction: column;
-		row-gap: 40px;
-	}
-	&__datepicker .datepicker-container {
-		display: block;
-	}
-	&__preview-room {
-		width: 270px;
-	}
+  &__column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  &__datepicker .datepicker-container {
+    display: block;
+  }
+  &__preview-room {
+    width: 270px;
+  }
 }
 .headers-footers {
-	padding-bottom: 125px;
-	background-color: #f4f4f6;
-	&__header {
-		margin-bottom: 40px;
-	}
-	&__footer {
-		margin-bottom: 55px;
-		&-inline {
-			margin-bottom: 125px;
-		}
-	}
+  padding-bottom: 125px;
+  background-color: #f4f4f6;
+  &__header {
+    margin-bottom: 40px;
+  }
+  &__footer {
+    margin-bottom: 55px;
+    &-inline {
+      margin-bottom: 125px;
+    }
+  }
 }

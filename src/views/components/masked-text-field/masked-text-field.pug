@@ -1,7 +1,9 @@
+include ../text-field/text-field.pug
+
 mixin masked-text-field({id='masked-text-field',name="",placeholder='', type='text', value=""}={})
-  .text-field
-    .text-field__container
-      input.text-field__input.masked-text-field.js-masked-text-field(
+  +text-field()
+    .masked-text-field
+      input.masked-text-field__input.js-masked-text-field(
         type=type,
         name=name,
         id=id,

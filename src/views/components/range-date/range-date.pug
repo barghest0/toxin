@@ -4,21 +4,15 @@ include ../datepicker/datepicker.pug
 mixin range-date({from='Прибытие', to='Выезд', idTo='date-from', idFrom='date-to'}={})
   .range-date
     .range-date__text-fields
-      .text-field
-        .text-field__label
-          +block-label({text:from})
-        .text-field__container
-          input.text-field__input.text-field__input_range-date(
+      +text-field({label:from})
+          input.range-date__input(
             id=idFrom,
             name=name,
             data-range='true',
             placeholder='ДД.ММ.ГГГГ'
           )
-      .text-field
-        .text-field__label
-          +block-label({text:to})
-        .text-field__container
-          input.text-field__input.text-field__input_range-date(
+      +text-field({label:to})
+          input.range-date__input(
             id=idTo,
             name=name,
             data-range='true',

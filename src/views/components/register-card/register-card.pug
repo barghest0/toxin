@@ -1,6 +1,6 @@
 include ../text-titles/text-titles.pug
 include ../card/card.pug
-include ../text-field/text-field.pug
+include ../default-text-field/default-text-field.pug
 include ../button/button.pug
 include ../toggle/toggle.pug
 include ../masked-text-field/masked-text-field.pug
@@ -14,9 +14,9 @@ mixin register-card({title='Регистрация аккаунта'}={})
       form.register-card__register-form(action='register.html', method='post') 
         .register-card__block
           .register-card__block-field 
-            +text-field({placeholder:'Имя', name:'name'})
+            +default-text-field({placeholder:'Имя', name:'name'})
           .register-card__block-field
-            +text-field({placeholder:'Фамилия', name:'surname'})
+            +default-text-field({placeholder:'Фамилия', name:'surname'})
           .register-card__block-field 
             +radio-list({items:[{id:'male', name:'gender', text:'Мужчина', state:'checked'}, {id:'female', name:'gender', text:'Женщина'}]})
         .register-card__block
@@ -28,9 +28,9 @@ mixin register-card({title='Регистрация аккаунта'}={})
           .register-card__label
             +block-label({text:'Данные для входа в сервис'})
           .register-card__block-field 
-            +text-field({placeholder:'Email',type:'email',name:'email'})
+            +default-text-field({placeholder:'Email',type:'email',name:'email'})
           .register-card__block-field 
-            +text-field({placeholder:'Пароль',type:'password',name:'user-password'})
+            +default-text-field({placeholder:'Пароль',type:'password',name:'user-password'})
           .register-card__block-field 
             +toggle({name:'offers',text:'Получать спецпредложения'})
         .register-card__button 
