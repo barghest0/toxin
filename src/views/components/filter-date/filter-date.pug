@@ -9,6 +9,7 @@ mixin filter-date({label='', id='filter-date', placeholder=''}={})
         name=name,
         data-range='true',
         value='Выберите дату'
+        autocomplete="off"
       )
       .filter-date__datepicker
         +datepicker
