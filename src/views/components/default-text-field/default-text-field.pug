@@ -1,6 +1,6 @@
 include ../text-field/text-field.pug
 
-mixin default-text-field({name="",placeholder='', type='text', value=""})
-  +text-field()
+mixin default-text-field({label="",subLabel="",name="",placeholder='', type='text', value=""})
+  +text-field({label,subLabel})
     .default-text-field
         input.default-text-field__input(type=type, name=name, placeholder=placeholder, value=value)

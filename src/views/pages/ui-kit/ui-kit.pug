@@ -32,29 +32,19 @@ block form-elements
       .form-elements__inner
         .form-elements__fields
           .form-elements__text-field
-            .form-elements__field-labels
-              +block-label({text:'text field'})
-              +block-sub-label({text:'default'})
-            +default-text-field({ name:"email", placeholder:"Email", type:'email'})
+            +default-text-field({label:'text field', subLabel:'default', name:"email", placeholder:"Email", type:'email'})
           .form-elements__text-field
-            .form-elements__field-labels
-              +block-label({text:'text field'})
-              +block-sub-label({text:'hover / focus'})
-            +default-text-field({ name:"email", placeholder:"Email", type:'email', value:'This is pretty awesome'})
+            +default-text-field({label:'text field', subLabel:'hover / focus', name:"email", placeholder:"Email", type:'email', value:'This is pretty awesome'})
           .form-elements__dropdown
             +dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
           .form-elements__masked-text-field
-            .form-elements__field-labels
-              +block-label({text:'masked text field'})
-            +masked-text-field({ name:"birthday", placeholder:"ДД.ММ.ГГГГ", type:'text', id:'masked-text-field-1'})
+            +masked-text-field({label:'masked text field', name:"birthday", placeholder:"ДД.ММ.ГГГГ", type:'text', id:'masked-text-field-1'})
           .form-elements__range-date
-            +range-date({from:'date dropdown',to:'date dropdown', idFrom:'date-from-1', idTo:'date-to-1'})
+            +range-date({from:'date dropdown', to:'date dropdown', idFrom:'date-from-1', idTo:'date-to-1'})
           .form-elements__filter-date
-            +filter-date({label:'filter date dropdown', value:'19 авг - 23 авг',id:'filter-date'})
+            +filter-date({label:'filter date dropdown', value:'19 авг - 23 авг', id:'filter-date'})
           .form-elements__subscribe-field
-            .form-elements__field-labels
-              +block-label({text:'subscription text field'})
-            +subscribe-text-field({placeholder:'Email',name:'email'})
+            +subscribe-text-field({label:'subscription text field', placeholder:'Email',name:'email'})
 
         .form-elements__selections
           .form-elements__checkboxes

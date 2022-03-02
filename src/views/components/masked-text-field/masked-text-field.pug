@@ -1,7 +1,7 @@
 include ../text-field/text-field.pug
 
-mixin masked-text-field({id='masked-text-field',name="",placeholder='', type='text', value=""}={})
-  +text-field()
+mixin masked-text-field({label="", id='masked-text-field',name="",placeholder='', type='text', value=""}={})
+  +text-field({label})
     .masked-text-field
       input.masked-text-field__input.js-masked-text-field(
         type=type,

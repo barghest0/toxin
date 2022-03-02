@@ -3,9 +3,10 @@
 
 mixin text-field({label='',subLabel=''}={})
   .text-field 
-    .text-field__labels
-      +block-label({text:label})
-      if subLabel
-        +block-sub-label({text:subLabel})
+    if label
+      .text-field__labels
+        +block-label({text:label})
+        if subLabel
+          +block-sub-label({text:subLabel})
     .text-field__container
       block

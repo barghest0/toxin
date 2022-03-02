@@ -1,7 +1,7 @@
 include ../text-field/text-field.pug
 
-mixin subscribe-text-field({id='subscribe-text-field', name="", placeholder='', type='text', value=""}={})
-  +text-field()
+mixin subscribe-text-field({label="", id='subscribe-text-field', name="", placeholder='', type='text', value=""}={})
+  +text-field({label})
     .subscribe-text-field
       form.subscribe-text-field__form
         input.subscribe-text-field__input(

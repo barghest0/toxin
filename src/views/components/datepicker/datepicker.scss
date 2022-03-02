@@ -3,11 +3,11 @@
   width: 100%;
   position: absolute;
   display: none;
-  &.open {
-    display: block;
-  }
   &_inline {
     display: block;
     position: relative;
+  }
+  &.open {
+    display: block;
   }
 }
