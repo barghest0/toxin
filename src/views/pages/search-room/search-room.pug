@@ -22,7 +22,7 @@ block search-room
           .search-room__filter
             +filter-date({label:'Даты пребывания в отеле'})
           .search-room__filter
-            +dropdown({label:'Гости', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'sm'})
+            +dropdown({label:'Гости',type:'guests'})
           .search-room__filter 
             +range-slider({label:'Диапазон цены'})
             .search-room__slider-description Стоимость за сутки пребывания в номере

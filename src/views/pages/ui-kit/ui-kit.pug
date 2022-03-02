@@ -36,7 +36,7 @@ block form-elements
           .form-elements__text-field
             +default-text-field({label:'text field', subLabel:'hover / focus', name:"email", placeholder:"Email", type:'email', value:'This is pretty awesome'})
           .form-elements__dropdown
-            +dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
+            +dropdown({label:'dropdown',type:'guests'})
           .form-elements__masked-text-field
             +masked-text-field({label:'masked text field', name:"birthday", placeholder:"ДД.ММ.ГГГГ", type:'text', id:'masked-text-field-1'})
           .form-elements__range-date
@@ -99,15 +99,15 @@ block dropdowns
       .dropdowns__inner
         .dropdowns__apartments
           .dropdowns__apartments-item
-            +dropdown({label:'dropdown',subLabel:'default',items:{bedrooms:'Спальни',beds:'Кровати',bathrooms:'Ванные комнаты'},kind:'apartments', size:'sm'})
+            +dropdown({label:'dropdown',subLabel:'default',type:'apartments', })
           .dropdowns__apartments-item
-            +dropdown({label:'dropdown',subLabel:'expanded', items:{bedrooms:'Спальни',beds:'Кровати',bathrooms:'Ванные комнаты'},kind:'apartments', size:'sm'})
+            +dropdown({label:'dropdown',subLabel:'expanded',type:'apartments', })
         .dropdowns__guests-expand
           .dropdowns__guests-item
-            +dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
+            +dropdown({label:'dropdown',type:'guests', })
         .dropdowns__guests
           .dropdowns__guests-item
-            +dropdown({label:'dropdown', items:{adult:'Взрослые',child:'Дети',newborns:'Младенцы'},kind:'guests', size:'lg'})
+            +dropdown({label:'dropdown',type:'guests', })
 
 block lists
   .lists 

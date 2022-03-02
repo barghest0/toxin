@@ -1,7 +1,7 @@
-const PEOPLE_TYPE = "people";
-const APARTMENTS_TYPE = "apartments";
+const GUESTS_TYPE = 'guests';
+const APARTMENTS_TYPE = 'apartments';
 
-const MD_SIZE = "md";
-const LG_SiZE = "lg";
+const MD_SIZE = 'md';
+const LG_SIZE = 'lg';
 
-export { PEOPLE_TYPE, APARTMENTS_TYPE, MD_SIZE, LG_SiZE };
+export { GUESTS_TYPE, APARTMENTS_TYPE, MD_SIZE, LG_SIZE };

@@ -1,10 +1,10 @@
 include ../text-titles/text-titles.pug
 include ../button/button.pug
 
-mixin dropdown({label='', subLabel='', items={}, kind='guests', size="lg"}={})
+mixin dropdown({label='', subLabel='', type='guests', size="lg"}={})
   .dropdown
     .dropdown__labels
       +block-label({text:label})
       if subLabel
         +block-sub-label({text:subLabel})
-    .dropdown__field
+    .dropdown__field(class=`dropdown__field_${type}`)

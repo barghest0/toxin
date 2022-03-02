@@ -4,7 +4,7 @@
   &__buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 12px;
   }
 
   &__labels {
@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
   }
+
   &__field {
     height: 44px;
     border-radius: 4px 4px 0 0;
@@ -36,19 +37,27 @@
     }
   }
 
+  &__total-count {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+
   &__list {
     cursor: default;
     display: none;
     border: 1px solid $shadow-50;
-    border-top: none;
-    top: 43px;
     position: relative;
     width: 100%;
     background-color: $white;
     z-index: 100;
-    padding: 7px 7px 15px 15px;
+    padding: 7px 7px 10px 15px;
     row-gap: 7px;
+    box-shadow: 0 10px 20px $shadow-5;
+    border-radius: 0px 0px 4px 4px;
     &-item {
+      color: $shadow-100;
       height: 30px;
       display: flex;
       align-items: center;
