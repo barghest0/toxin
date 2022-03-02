@@ -50,7 +50,7 @@ class Datepicker {
       content: 'Применить',
       className: 'air-datepicker-button-apply',
       onClick: e => {
-        e.$el.classList.toggle('active');
+        e.$el.classList.toggle('open');
       },
     };
     this.params.buttons.push(applyButton);

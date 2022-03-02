@@ -1,2 +1,2 @@
-mixin datepicker
-  .datepicker
+mixin datepicker({isInline=false}={})
+  .datepicker(class=isInline ? 'datepicker_inline':null)
