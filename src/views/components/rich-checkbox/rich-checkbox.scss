@@ -19,10 +19,7 @@
     background: url('./images/empty-checkbox.svg');
   }
 
-  &__input:hover + &__custom-input {
-    background: url('./images/fill-checkbox.svg');
-    opacity: 0.6;
-  }
+
 
   &__input:checked + &__custom-input {
     background: url('./images/fill-checkbox.svg');

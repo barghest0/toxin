@@ -1,8 +1,9 @@
 .form-elements {
-  padding-top: 100px;
-  &__inner {
+  padding: 100px 0;
+  &__inputs {
     display: grid;
     grid-template-columns: 320px minmax(10px, 126px) 320px minmax(10px, 70px) 320px;
+    margin-bottom: 70px;
   }
 
   &__fields {
@@ -111,68 +112,55 @@
       height: 44px;
     }
   }
-}
 
-.dropdowns {
-  margin-bottom: 40px;
-  &__inner {
+  &__dropdowns {
+    margin-bottom: 40px;
     display: grid;
     grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
   }
 
-  &__labels {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-  }
-  &__apartments {
-    grid-column-start: 1;
-    &-item {
-      margin-bottom: 20px;
+  &__dropdown {
+    margin-bottom: 20px;
+    &_apartments {
+      grid-column-start: 1;
+    }
+
+    &_guests {
+      grid-row: 1;
+      grid-column-start: 3;
+    }
+    &_cleared {
+      grid-column-start: 5;
     }
   }
 
-  &__guests-expand {
-    grid-column-start: 3;
-  }
-  &__guests {
-    grid-column-start: 5;
-  }
-}
-
-.lists {
-  margin-bottom: 40px;
-  &__inner {
+  &__lists {
+    margin-bottom: 40px;
     display: grid;
     grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
   }
 
-  &__label {
+  &__list-label {
     margin-bottom: 16px;
   }
+
   &__expand-checkbox {
     grid-column-start: 1;
     display: flex;
     flex-direction: column;
     row-gap: 35px;
   }
-
   &__rich-checkbox {
     grid-column-start: 3;
   }
-
   &__bullet-list {
     grid-column-start: 5;
   }
-}
 
-.reviews {
-  padding-bottom: 100px;
-  &__inner {
+  &__reviews {
     display: grid;
     grid-template-columns: 280px minmax(10px, 167px) 1fr;
   }
-
   &__reviews-list {
     grid-column-start: 1;
   }

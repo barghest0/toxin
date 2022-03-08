@@ -1,4 +1,4 @@
-import { LG_SIZE } from './constants/dropdown';
+import { GUESTS_TYPE, LG_SIZE } from './constants/dropdown';
 
 class Dropdown {
   constructor(element, size, type, data) {
@@ -12,11 +12,10 @@ class Dropdown {
   }
 
   init() {
-    // this.setCurrentElement()
     this.createTotalText();
     this.createList();
     this.createButtons();
-    this.setTotalText(123, 0);
+    this.setTotalText(this.type === GUESTS_TYPE ? 'Сколько гостей' : 'Выберите удобства');
     this.attachListeners();
   }
 
@@ -57,8 +56,8 @@ class Dropdown {
     this.element.append('<div class="dropdown__total-text"></div>');
   }
 
-  setTotalText(text, index) {
-    $(this.element[index]).find('.dropdown__total-text').text(text);
+  setTotalText(text) {
+    $(this.element).find('.dropdown__total-text').text(text);
   }
 
   incrementCounter(e) {
@@ -105,7 +104,7 @@ class Dropdown {
   }
 
   updateTotalText() {
-    this.setTotalText(123, 0);
+    this.setTotalText(this.type === GUESTS_TYPE ? 'Сколько гостей' : 'Выберите удобства');
   }
 
   clearTotalText(e) {

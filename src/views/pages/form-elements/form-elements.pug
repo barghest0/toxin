@@ -23,14 +23,9 @@ block form-elements
   include ../../components/review-list/review-list.pug
   include ../../components/feedback/feedback.pug
 
-
-
-
-
-
   .form-elements
     .container
-      .form-elements__inner
+      .form-elements__inputs
         .form-elements__fields
           .form-elements__text-field
             +default-text-field({label:'text field', subLabel:'default', name:"email", placeholder:"Email", type:'email'})
@@ -94,41 +89,30 @@ block form-elements
               +block-label({text:'pagination'})
             +pagination
 
-block dropdowns
-  .dropdowns
-    .container
-      .dropdowns__inner
-        .dropdowns__apartments
-          .dropdowns__apartments-item
+      .form-elements__dropdowns
+          .form-elements__dropdown.form-elements__dropdown_apartments
             +dropdown({label:'dropdown',subLabel:'default',id:'dropdown-apartments-1',type:'apartments'})
-          .dropdowns__apartments-item
+          .form-elements__dropdown.form-elements__dropdown_apartments
             +dropdown({label:'dropdown',subLabel:'expanded',id:'dropdown-apartments-2',type:'apartments'})
-        .dropdowns__guests-expand
-          .dropdowns__guests-item
+          .form-elements__dropdown.form-elements__dropdown_guests.form-elements__dropdown_cleared
             +dropdown({label:'dropdown',type:'guests', id:'dropdown-guests-2'})
-        .dropdowns__guests
-          .dropdowns__guests-item
+          .form-elements__dropdown.form-elements__dropdown_guests
             +dropdown({label:'dropdown',type:'guests', id:'dropdown-guests-3'})
 
-block lists
-  .lists 
-    .container
-      .lists__inner
-        .lists__expand-checkbox
+      .form-elements__lists
+        .form-elements__expand-checkbox
           +expand-list({label:'expandable checkbox list', items:[ {id:'breakfast', name:'breakfast', text:'Завтрак'}, {id:'table', name:'table', text:'Письменный стол',state:'checked'}, {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'}, {id:'bed', name:'bed', text:'Кроватка',state:'checked'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, ]})
           +expand-list({label:'expandable checkbox list',isActive:'active', items:[ {id:'breakfast', name:'breakfast', text:'Завтрак'}, {id:'table', name:'table', text:'Письменный стол',state:'checked'}, {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'}, {id:'bed', name:'bed', text:'Кроватка',state:'checked'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, ]})
-        .lists__rich-checkbox
+        .form-elements__rich-checkbox
           +rich-checkbox-list({label:'rich checkbox buttons', items:[ {id:'corridor', name:'corridor', text:'Широкий коридор', subtext:'Ширина коридоров в номере не менее 91 см.'}, {id:'invalid-helper', name:'invalid-helper', text:'Помощник для инвалидов',subtext:'На 1 этаже вас встретит специалист и проводит до номера.'}, ]})
-        .lists__bullet-list
-          .lists__label
+        .form-elements__bullet-list
+          .form-elements__list-label
             +block-label({text:'bullet list'})
           +bullet-list({items:[{text:'Нельзя с питомцами'},{text:'Без вечеринок и мероприятий'},{text:'Время прибытия — после 13:00, а выезд до 12:00'} ]})
 
-block reviews
-  .reviews
-    .container
-      .reviews__inner
-        .reviews__review-list
+      .form-elements__reviews
+        .form-elements__review-list
           +review-list({items:[ {img:'review-image1.svg', alt:'comfort', title:'Комфорт',subtitle:'Шумопоглощающие стены'}, {img:'review-image2.svg', alt:'convenience', title:'Удобство',subtitle:'Окно в каждой из спален'}] })
-        .reviews__feedback 
+        .form-elements__feedback 
           +feedback({avatar:'avatar.svg',alt:'avatar',name:'Мурад Сарафанов', lastVisit:'5 дней назад', comment:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',likeState:'checked',likesCount:12})
+
