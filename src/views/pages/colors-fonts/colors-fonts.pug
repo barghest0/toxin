@@ -1,0 +1,29 @@
+extends ../../layout/colors-fonts-layout.pug
+
+block colors-fonts
+  include ../../components/color/color.pug
+  include ../../components/text-titles/text-titles.pug
+  .colors-fonts
+    .container
+      .colors-fonts__inner
+        .colors-fonts__colors
+          +color({ hex: '#1F2041', text:'Dark Shade 100%', opacity:100})
+          +color({ hex: '#1F2041', text:'Dark Shade 75%', opacity:75})
+          +color({ hex: '#1F2041', text:'Dark Shade 50%', opacity:50})
+          +color({ hex: '#1F2041', text:'Dark Shade 25%', opacity:25})
+          +color({ hex: '#1F2041', text:'Dark Shade 5%', opacity:5})
+          +color({ hex: '#BC9CFF', text:'Purple', color:'purple'})
+          +color({ hex: '#6FCF97', text:'Green', color:'green'})
+        .colors-fonts__fonts
+          .colors-fonts__font
+            .colors-fonts__tag.colors-fonts__tag_type_widget h1
+            +widget-title({text:'This one is the sub-section or widget title'})
+          .colors-fonts__font
+            .colors-fonts__tag.colors-fonts__tag_type_inside-widget h2
+            +title-inside-widget({text:'Next one is the item title inside widgets'})
+          .colors-fonts__font
+            .colors-fonts__tag.colors-fonts__tag_type_label h3
+            +block-label({text:'This is a label or CTA text'})
+          .colors-fonts__font
+            .colors-fonts__tag.colors-fonts__tag_type_text Body
+            +body-text({text:'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})

@@ -1,0 +1,13 @@
+.headers-footers {
+  padding: 100px 0;
+  background-color: #f4f4f6;
+  &__header {
+    margin-bottom: 40px;
+  }
+  &__footer {
+    margin-bottom: 55px;
+    &-inline {
+      margin-bottom: 125px;
+    }
+  }
+}

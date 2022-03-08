@@ -1,0 +1,22 @@
+.cards {
+  padding: 100px 0;
+  padding-bottom: 140px;
+  background-color: #f4f4f6;
+  &__inner {
+    display: grid;
+    grid-template-columns: 380px 380px 320px;
+    grid-column-gap: 40px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  &__datepicker .datepicker-container {
+    display: block;
+  }
+  &__preview-room {
+    width: 270px;
+  }
+}

@@ -1,4 +1,7 @@
 .paginationjs {
+  &-nav {
+    text-align: center;
+  }
   &-pages ul {
     display: flex;
     font-family: inherit;

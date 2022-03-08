@@ -1,43 +1,5 @@
-.colors-fonts {
-  margin-top: 150px;
-  margin-bottom: 100px;
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__font {
-    display: grid;
-    grid-template-columns: 40px 370px;
-    grid-column-gap: 20px;
-    margin-bottom: 40px;
-  }
-
-  &__tag {
-    text-transform: uppercase;
-    color: $shadow-25;
-    justify-self: end;
-
-    &_type {
-      &_widget {
-        font-size: 24px;
-      }
-      &_inside-widget {
-        font-size: 19px;
-      }
-      &_label {
-        font-size: 12px;
-      }
-      &_text {
-        font-size: 14px;
-        text-transform: capitalize;
-      }
-    }
-  }
-}
-
 .form-elements {
-  margin-bottom: 100px;
+  padding-top: 100px;
   &__inner {
     display: grid;
     grid-template-columns: 320px minmax(10px, 126px) 320px minmax(10px, 70px) 320px;
@@ -205,7 +167,7 @@
 }
 
 .reviews {
-  margin-bottom: 100px;
+  padding-bottom: 100px;
   &__inner {
     display: grid;
     grid-template-columns: 280px minmax(10px, 167px) 1fr;
@@ -216,41 +178,5 @@
   }
   &__feedback {
     grid-column-start: 3;
-  }
-}
-
-.cards {
-  padding-top: 150px;
-  padding-bottom: 140px;
-  background-color: #f4f4f6;
-  &__inner {
-    display: grid;
-    grid-template-columns: 380px 380px 320px;
-    grid-column-gap: 40px;
-  }
-
-  &__column {
-    display: flex;
-    flex-direction: column;
-    row-gap: 40px;
-  }
-  &__datepicker .datepicker-container {
-    display: block;
-  }
-  &__preview-room {
-    width: 270px;
-  }
-}
-.headers-footers {
-  padding-bottom: 125px;
-  background-color: #f4f4f6;
-  &__header {
-    margin-bottom: 40px;
-  }
-  &__footer {
-    margin-bottom: 55px;
-    &-inline {
-      margin-bottom: 125px;
-    }
   }
 }

@@ -1,0 +1,20 @@
+extends ../../layout/headers-footers-layout.pug
+
+
+
+
+block headers-footers
+  include ../../components/header/header.pug
+  include ../../components/footer/footer.pug
+
+
+  .headers-footers
+    .headers-footers__inner
+      .headers-footers__header
+        +header({isLogin:false})
+      .headers-footers__header
+        +header({isLogin:true, name:'Юлий цезарь'})
+      .headers-footers__footer
+        +footer
+      .headers-footers__footer-inline 
+        +footer({isSmall:true})

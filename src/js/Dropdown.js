@@ -109,7 +109,6 @@ class Dropdown {
   }
 
   clearTotalText(e) {
-    const currentIndex = $(e.target.closest('.dropdown__field')).index();
     this.data.forEach(item => {
       item.count = 0;
     });

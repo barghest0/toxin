@@ -1,32 +1,33 @@
-extends ../../layout/ui-kit-layout.pug
+extends ../../layout/form-elements-layout.pug
 
-block colors-fonts
-  .colors-fonts
-    .container
-      .colors-fonts__inner
-        .colors-fonts__colors
-          +color({ hex: '#1F2041', text:'Dark Shade 100%', opacity:100})
-          +color({ hex: '#1F2041', text:'Dark Shade 75%', opacity:75})
-          +color({ hex: '#1F2041', text:'Dark Shade 50%', opacity:50})
-          +color({ hex: '#1F2041', text:'Dark Shade 25%', opacity:25})
-          +color({ hex: '#1F2041', text:'Dark Shade 5%', opacity:5})
-          +color({ hex: '#BC9CFF', text:'Purple', color:'purple'})
-          +color({ hex: '#6FCF97', text:'Green', color:'green'})
-        .colors-fonts__fonts
-          .colors-fonts__font
-            .colors-fonts__tag.colors-fonts__tag_type_widget h1
-            +widget-title({text:'This one is the sub-section or widget title'})
-          .colors-fonts__font
-            .colors-fonts__tag.colors-fonts__tag_type_inside-widget h2
-            +title-inside-widget({text:'Next one is the item title inside widgets'})
-          .colors-fonts__font
-            .colors-fonts__tag.colors-fonts__tag_type_label h3
-            +block-label({text:'This is a label or CTA text'})
-          .colors-fonts__font
-            .colors-fonts__tag.colors-fonts__tag_type_text Body
-            +body-text({text:'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
 
 block form-elements
+  include ../../components/default-text-field/default-text-field.pug
+  include ../../components/dropdown/dropdown.pug
+  include ../../components/masked-text-field/masked-text-field.pug
+  include ../../components/range-date/range-date.pug
+  include ../../components/filter-date/filter-date.pug
+  include ../../components/subscribe-text-field/subscribe-text-field.pug
+  include ../../components/checkbox-list/checkbox-list.pug
+  include ../../components/text-titles/text-titles.pug
+  include ../../components/radio-list/radio-list.pug
+  include ../../components/toggle/toggle.pug
+  include ../../components/like/like.pug
+  include ../../components/rate/rate.pug
+  include ../../components/range-slider/range-slider.pug
+  include ../../components/button/button.pug
+  include ../../components/pagination/pagination.pug
+  include ../../components/expand-list/expand-list.pug
+  include ../../components/rich-checkbox-list/rich-checkbox-list.pug
+  include ../../components/bullet-list/bullet-list.pug
+  include ../../components/review-list/review-list.pug
+  include ../../components/feedback/feedback.pug
+
+
+
+
+
+
   .form-elements
     .container
       .form-elements__inner
@@ -131,37 +132,3 @@ block reviews
           +review-list({items:[ {img:'review-image1.svg', alt:'comfort', title:'Комфорт',subtitle:'Шумопоглощающие стены'}, {img:'review-image2.svg', alt:'convenience', title:'Удобство',subtitle:'Окно в каждой из спален'}] })
         .reviews__feedback 
           +feedback({avatar:'avatar.svg',alt:'avatar',name:'Мурад Сарафанов', lastVisit:'5 дней назад', comment:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',likeState:'checked',likesCount:12})
-
-block cards
-  .cards
-    .container
-      .cards__inner
-        .cards__column 
-          .cards__search-room-card
-            +search-room-card
-          .cards__register-card
-            +register-card
-        .cards__column 
-          .cards__booking-card
-            +booking-card({roomNumber:888, price:9900,isLuxury:true})
-          .cards__login-card
-            +login-card
-        .cards__column
-          .cards__datepicker
-            +datepicker({isInline:true})
-          .cards__preview-room 
-            +preview-room({roomNumber:888,images:['preview-room1.png','preview-room1.png','preview-room1.png','preview-room1.png'],price:9900,rate:5,isLuxury:true,reviews:145})
-          .cards__preview-room 
-            +preview-room({roomNumber:840,images:['preview-room2.png','preview-room2.png','preview-room2.png','preview-room2.png'],price:9900,rate:4,isLuxury:false,reviews:65})
-
-block headers-footers
-  .headers-footers
-    .headers-footers__inner
-      .headers-footers__header
-        +header({isLogin:false})
-      .headers-footers__header
-        +header({isLogin:true, name:'Юлий цезарь'})
-      .headers-footers__footer
-        +footer
-      .headers-footers__footer-inline 
-        +footer({isSmall:true})
