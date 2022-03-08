@@ -1,3 +1,5 @@
+import { LG_SIZE } from './constants/dropdown';
+
 class Dropdown {
   constructor(element, size, type, data) {
     this.element = element;
@@ -10,10 +12,11 @@ class Dropdown {
   }
 
   init() {
-    this.createTotalCount();
+    // this.setCurrentElement()
+    this.createTotalText();
     this.createList();
     this.createButtons();
-    this.setTotalCount();
+    this.setTotalText(123, 0);
     this.attachListeners();
   }
 
@@ -25,7 +28,7 @@ class Dropdown {
             ${item.text}
             <div class="dropdown__list-tools">
               <div class="dropdown__list-decrement ${
-                item.count <= 0 ? 'dropdown__list-decrement_disabled' : null
+                item.count <= 0 ? 'dropdown__list-decrement_disabled' : ''
               }">-</div>
               <div class="dropdown__list-counter">${item.count}</div>
               <div class="dropdown__list-increment">+</div>
@@ -38,22 +41,87 @@ class Dropdown {
   }
 
   createButtons() {
-    this.element.find('.dropdown__list').append(
-      `<div class="dropdown__buttons">
-        <button class="dropdown__clear-button button button_no-bordered">${
-          this.totalCount > 0 ? 'Очистить' : ''
-        } </button>
-        <button class="dropdown__submit-button button button_no-bordered">Применить</button>
-      </div>`,
-    );
+    if (this.size === LG_SIZE) {
+      this.element.find('.dropdown__list').append(
+        `<div class="dropdown__buttons">
+          <button class="dropdown__clear-button button button_no-bordered">${
+            this.totalCount > 0 ? 'Очистить' : ''
+          } </button>
+          <button class="dropdown__submit-button button button_no-bordered">Применить</button>
+        </div>`,
+      );
+    }
   }
 
-  createTotalCount() {
-    this.element.append('<div class="dropdown__total-count"></div>');
+  createTotalText() {
+    this.element.append('<div class="dropdown__total-text"></div>');
   }
 
-  setTotalCount() {
-    this.element.find('.dropdown__total-count').text(this.totalCount);
+  setTotalText(text, index) {
+    $(this.element[index]).find('.dropdown__total-text').text(text);
+  }
+
+  incrementCounter(e) {
+    const clickedElement = $(e.target.closest('.dropdown__list-item')).index();
+    const currentData = this.data[clickedElement];
+    if (currentData.count === 0) {
+      this.element.find('.dropdown__clear-button').html('Очистить');
+    }
+
+    $(e.target)
+      .siblings('.dropdown__list-decrement')
+      .removeClass('dropdown__list-decrement_disabled');
+    currentData.count += 1;
+    this.totalCount += 1;
+
+    if (currentData.count === 10) {
+      $(e.target).addClass('dropdown__list-increment_disabled');
+    }
+
+    $(e.target).siblings('.dropdown__list-counter').text(currentData.count);
+    this.updateTotalText();
+  }
+
+  decrementCounter(e) {
+    const clickedElement = $(e.target.closest('.dropdown__list-item')).index();
+    const currentData = this.data[clickedElement];
+
+    $(e.target)
+      .siblings('.dropdown__list-increment')
+      .removeClass('dropdown__list-increment_disabled');
+
+    currentData.count -= 1;
+    this.totalCount -= 1;
+    if (this.totalCount === 0) {
+      this.element.find('.dropdown__clear-button').html('');
+    }
+
+    if (currentData.count === 0) {
+      currentData.count = 0;
+      $(e.target).addClass('dropdown__list-decrement_disabled');
+    }
+    $(e.target).siblings('.dropdown__list-counter').text(currentData.count);
+    this.updateTotalText();
+  }
+
+  updateTotalText() {
+    this.setTotalText(123, 0);
+  }
+
+  clearTotalText(e) {
+    const currentIndex = $(e.target.closest('.dropdown__field')).index();
+    this.data.forEach(item => {
+      item.count = 0;
+    });
+    this.totalCount = 0;
+    const items = $(this.element).find('.dropdown__list-item');
+    items.each(function () {
+      $(this).find('.dropdown__list-counter').html('0');
+      $(this)
+        .find('.dropdown__list-decrement')
+        .addClass('dropdown__list-decrement_disabled');
+    });
+    $('.dropdown__clear-button').html('');
   }
 
   attachListeners() {
@@ -61,8 +129,23 @@ class Dropdown {
       e.currentTarget.classList.toggle('open');
     });
 
+    this.element
+      .find('.dropdown__list-increment')
+      .on('click', this.incrementCounter.bind(this));
+    this.element
+      .find('.dropdown__list-decrement')
+      .on('click', this.decrementCounter.bind(this));
+
     this.element.find('.dropdown__list').on('click', e => {
       e.stopPropagation();
+    });
+
+    this.element
+      .find('.dropdown__clear-button')
+      .on('click', this.clearTotalText.bind(this));
+
+    this.element.find('.dropdown__submit-button').on('click', e => {
+      e.target.closest('.dropdown__field').classList.toggle('open');
     });
   }
 }
