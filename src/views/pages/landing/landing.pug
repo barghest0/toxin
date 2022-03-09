@@ -1,15 +1,14 @@
-extends ../../layout/landing-layout.pug
+extends ../../layout/main-page.pug
 
-block landing
-  include ../../components/footer/footer.pug
-  include ../../components/header/header.pug
+block title 
+  title Landing
+
+block page
   include ../../components/search-room-card/search-room-card.pug
   .landing
-    +header
     .landing__intro
       .container
         .landing__inner
           .landing__search-card
             +search-room-card
           .landing__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
-      +footer

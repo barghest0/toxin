@@ -1,8 +1,9 @@
-extends ../../layout/search-room-layout.pug
+extends ../../layout/main-page.pug
 
-block search-room
-  include ../../components/footer/footer.pug
-  include ../../components/header/header.pug
+block title 
+  title Search room
+
+block page
   include ../../components/range-slider/range-slider.pug
   include ../../components/checkbox-list/checkbox-list.pug
   include ../../components/dropdown/dropdown.pug
@@ -13,7 +14,6 @@ block search-room
   include ../../components/pagination/pagination.pug
 
   .search-room
-    +header
     .container
       .search-room__inner
         .search-room__filter-icon 
@@ -64,4 +64,3 @@ block search-room
               +preview-room({roomNumber:880,id:'12', images:['preview-room3.png','preview-room3.png','preview-room3.png','preview-room3.png'],price:8500,rate:3,isLuxury:true,reviews:35})
           .search-room__pagination
             +pagination
-    +footer

@@ -1,15 +1,14 @@
-extends ../../layout/register-layout.pug
+extends ../../layout/main-page.pug
 
-block register
-  include ../../components/footer/footer.pug
-  include ../../components/header/header.pug
+
+block title 
+  title Registration
+
+block page
   include ../../components/register-card/register-card.pug
-
   .register 
-    +header
     .register__intro
       .container
         .register__inner
           .register__card
             +register-card
-    +footer

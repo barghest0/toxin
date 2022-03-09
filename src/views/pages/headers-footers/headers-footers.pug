@@ -1,13 +1,12 @@
-extends ../../layout/headers-footers-layout.pug
+extends ../../layout/ui-kit-page.pug
 
 
+block title 
+  title Headers & footers
 
-
-block headers-footers
+block page
   include ../../components/header/header.pug
   include ../../components/footer/footer.pug
-
-
   .headers-footers
     .headers-footers__inner
       .headers-footers__header

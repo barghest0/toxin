@@ -1,8 +1,9 @@
-extends ../../layout/room-layout.pug
+extends ../../layout/main-page.pug
 
-block room
-  include ../../components/footer/footer.pug
-  include ../../components/header/header.pug
+block title 
+  title Room
+
+block page
   include ../../components/text-titles/text-titles.pug
   include ../../components/review-list/review-list.pug
   include ../../components/chart/chart.pug
@@ -11,7 +12,6 @@ block room
   include ../../components/booking-card/booking-card.pug
 
   .room
-    +header 
     .room__preview-images 
       .room__main-image
         img(src='assets/images/main-image-room.jpg', alt='Room photo')
@@ -52,4 +52,3 @@ block room
               +body-text({text:'Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.'})
         .room__booking 
           +booking-card({roomNumber:888, price:9900,isLuxury:true})
-    +footer
