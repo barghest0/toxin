@@ -1,43 +1,51 @@
-.booking-card {
-	&__room-info {
-		margin-bottom: 20px;
-	}
-	&__date {
-		margin-bottom: 20px;
-	}
-	&__guests {
-		margin-bottom: 20px;
-	}
-	&__cost {
-		display: grid;
-		grid-template-columns: minmax(195px, 240px) minmax(60px, 1fr);
-		grid-template-rows: 15px 15px 36px;
-		grid-row-gap: 20px;
-		margin-bottom: 30px;
-	}
-	&__day-price {
-		justify-self: right;
-	}
-	&__service {
-		display: flex;
-		justify-content: space-between;
-		&-price {
-			justify-self: right;
-		}
-	}
+@import '../../components/text-titles/text-titles';
+@import '../../components/text-field/text-field';
+@import '../../components/button/button';
+@import '../../components/card-room-info/card-room-info';
+@import '../../components/datepicker/datepicker';
+@import '../../components/dropdown/dropdown.scss';
 
-	&__add-service {
-		display: flex;
-		&-price {
-			justify-self: right;
-		}
-	}
-	&__final-cost {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 25px;
-	}
-	&__button {
-		height: 44px;
-	}
+
+.booking-card {
+  &__room-info {
+    margin-bottom: 20px;
+  }
+  &__date {
+    margin-bottom: 20px;
+  }
+  &__guests {
+    margin-bottom: 20px;
+  }
+  &__cost {
+    display: grid;
+    grid-template-columns: minmax(195px, 240px) minmax(60px, 1fr);
+    grid-template-rows: 15px 15px 36px;
+    grid-row-gap: 20px;
+    margin-bottom: 30px;
+  }
+  &__day-price {
+    justify-self: right;
+  }
+  &__service {
+    display: flex;
+    justify-content: space-between;
+    &-price {
+      justify-self: right;
+    }
+  }
+
+  &__add-service {
+    display: flex;
+    &-price {
+      justify-self: right;
+    }
+  }
+  &__final-cost {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  &__button {
+    height: 44px;
+  }
 }

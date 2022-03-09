@@ -31,7 +31,7 @@ block search-room
           .search-room__filter 
             +rich-checkbox-list({label:'Доступность', items:[ {id:'corridor', name:'corridor', text:'Широкий коридор', subtext:'Ширина коридоров в номере не менее 91 см.'}, {id:'invalid-helper', name:'invalid-helper', text:'Помощник для инвалидов',subtext:'На 1 этаже вас встретит специалист и проводит до номера.'}, ]})
           .search-room__filter
-            +dropdown({label:'dropdown',subLabel:'default',id:'dropdown-apartments-1',type:'apartments'})
+            +dropdown({label:'Удобства номера',id:'dropdown-apartments-1',type:'apartments'})
           .search-room__filter
             +expand-list({label:'Дополнительные удобства', items:[ {id:'breakfast', name:'breakfast', text:'Завтрак'}, {id:'table', name:'table', text:'Письменный стол',state:'checked'}, {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'}, {id:'bed', name:'bed', text:'Кроватка',state:'checked'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, ]})
         .search-room__cards

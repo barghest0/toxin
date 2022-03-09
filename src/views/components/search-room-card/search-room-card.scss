@@ -1,14 +1,22 @@
+@import '../range-date/range-date.scss';
+@import '../dropdown/dropdown.scss';
+@import '../datepicker/datepicker.scss';
+@import '../text-titles/text-titles.scss';
+@import '../text-field/text-field.scss';
+@import '../button/button.scss';
+@import '../../../libs/air-datepicker/air-datepicker.scss';
+
 .search-room-card {
-	&__title {
-		margin-bottom: 23px;
-	}
-	&__date {
-		margin-bottom: 24px;
-	}
-	&__guests {
-		margin-bottom: 31px;
-	}
-	&__button {
-		height: 44px;
-	}
+  &__title {
+    margin-bottom: 23px;
+  }
+  &__date {
+    margin-bottom: 24px;
+  }
+  &__guests {
+    margin-bottom: 31px;
+  }
+  &__button {
+    height: 44px;
+  }
 }

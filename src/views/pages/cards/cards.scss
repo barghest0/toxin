@@ -1,3 +1,13 @@
+@import '../../../style/scss/index.scss';
+@import '../../components/card/card.scss';
+@import '../../components/datepicker/datepicker.scss';
+@import '../../components/search-room-card/search-room-card.scss';
+@import '../../components/booking-card/booking-card.scss';
+@import '../../components/login-card/login-card.scss';
+@import '../../components/register-card/register-card.scss';
+@import '../../components/card-room-info/card-room-info';
+@import '../../components/preview-room/preview-room';
+
 .cards {
   padding: 100px 0;
   padding-bottom: 140px;
@@ -13,9 +23,11 @@
     flex-direction: column;
     row-gap: 40px;
   }
+
   &__datepicker .datepicker-container {
     display: block;
   }
+
   &__preview-room {
     width: 270px;
   }

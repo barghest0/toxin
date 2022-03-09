@@ -1,3 +1,26 @@
+@import '../../../style/scss/index.scss';
+@import '../../components/bullet-list/bullet-list.scss';
+@import '../../components/button/button.scss';
+@import '../../components/checkbox-list/checkbox-list.scss';
+@import '../../components/dropdown/dropdown.scss';
+@import '../../components/expand-list/expand-list.scss';
+@import '../../components/feedback/feedback.scss';
+@import '../../components/filter-date/filter-date.scss';
+@import '../../components/text-titles/text-titles.scss';
+@import '../../components/like/like.scss';
+@import '../../components/masked-text-field/masked-text-field.scss';
+@import '../../components/pagination/pagination.scss';
+@import '../../components/radio-list/radio-list.scss';
+@import '../../components/range-date/range-date.scss';
+@import '../../components/range-slider/range-slider.scss';
+@import '../../components/rate/rate.scss';
+@import '../../components/review-list/review-list.scss';
+@import '../../components/rich-checkbox-list/rich-checkbox-list.scss';
+@import '../../components/subscribe-text-field/subscribe-text-field.scss';
+@import '../../components/text-field/text-field.scss';
+@import '../../components/toggle/toggle.scss';
+@import '../../components/datepicker/datepicker.scss';
+
 .form-elements {
   padding: 100px 0;
   &__inputs {

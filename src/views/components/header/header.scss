@@ -1,97 +1,102 @@
+@import '../logo/logo.scss';
+@import '../nav/nav.scss';
+@import '../button/button.scss';
+
+
 .header {
-	z-index: 1000;
-	background-color: $white;
-	box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
+  z-index: 1000;
+  background-color: $white;
+  box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
 
-	&__logo {
-		height: 40px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+  &__logo {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-	&__inner {
-		height: 70px;
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background-color: $white;
-	}
+  &__inner {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+  }
 
-	&__nav {
-		@include tablet-landscape {
-			display: none;
-		}
-	}
+  &__nav {
+    @include tablet-landscape {
+      display: none;
+    }
+  }
 
-	&__burger {
-		display: none;
+  &__burger {
+    display: none;
 
-		&-block {
-			width: 100%;
-			height: 30px;
-			position: relative;
-			cursor: pointer;
-		}
-		&-line {
-			position: absolute;
-			content: '';
-			width: 30px;
-			height: 3px;
-			@include main-gradient-to-bottom;
-			border-radius: 5px;
-			top: 5px;
-			transition: all 0.2s linear;
+    &-block {
+      width: 100%;
+      height: 30px;
+      position: relative;
+      cursor: pointer;
+    }
+    &-line {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 3px;
+      @include main-gradient-to-bottom;
+      border-radius: 5px;
+      top: 5px;
+      transition: all 0.2s linear;
 
-			&::before {
-				position: absolute;
-				content: '';
-				width: 30px;
-				height: 3px;
-				@include main-gradient-to-bottom;
-				border-radius: 5px;
-				top: 20px;
-				transition: all 0.2s linear;
-			}
-			&::after {
-				position: absolute;
-				content: '';
-				width: 30px;
-				height: 3px;
-				top: 10px;
-				@include main-gradient-to-bottom;
-				border-radius: 5px;
-				transition: all 0.2s linear;
-			}
-		}
+      &::before {
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 3px;
+        @include main-gradient-to-bottom;
+        border-radius: 5px;
+        top: 20px;
+        transition: all 0.2s linear;
+      }
+      &::after {
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 3px;
+        top: 10px;
+        @include main-gradient-to-bottom;
+        border-radius: 5px;
+        transition: all 0.2s linear;
+      }
+    }
 
-		&.active &-line {
-			transform: rotate(45deg);
-			top: 10px;
-			&::after {
-				opacity: 0;
-				pointer-events: none;
-			}
-			&::before {
-				transform: rotate(90deg);
-				top: 0;
-			}
-		}
+    &.active &-line {
+      transform: rotate(45deg);
+      top: 10px;
+      &::after {
+        opacity: 0;
+        pointer-events: none;
+      }
+      &::before {
+        transform: rotate(90deg);
+        top: 0;
+      }
+    }
 
-		&-nav {
-			display: none;
-		}
+    &-nav {
+      display: none;
+    }
 
-		&.active &-nav {
-			display: block;
-		}
+    &.active &-nav {
+      display: block;
+    }
 
-		@include tablet-landscape {
-			width: 30px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-	}
+    @include tablet-landscape {
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }

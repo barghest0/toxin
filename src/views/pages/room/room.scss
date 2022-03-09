@@ -1,3 +1,15 @@
+@import '../../../style/scss/index.scss';
+@import '../../components/card/card.scss';
+@import '../../components/text-titles/text-titles.scss';
+@import '../../components/header/header.scss';
+@import '../../components/footer/footer.scss';
+@import '../../components/booking-card/booking-card.scss';
+@import '../../components/chart/chart.scss';
+@import '../../components/feedback/feedback.scss';
+@import '../../components/bullet-list/bullet-list.scss';
+@import '../../components/review-list/review-list.scss';
+@import '../../components/range-date/range-date.scss';
+
 .room {
   &__label {
     margin-bottom: 24px;

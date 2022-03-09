@@ -1,27 +1,31 @@
+@import '../../components/text-titles/text-titles';
+@import '../../components/text-field/text-field';
+@import '../../components/button/button';
+
 .login-card {
-	&__title {
-		margin-bottom: 20px;
-	}
-	&__block {
-		margin-bottom: 20px;
-		&-field {
-			&:not(:last-child) {
-				margin-bottom: 10px;
-			}
-		}
-	}
-	&__button {
-		margin-bottom: 30px;
-		height: 44px;
-	}
-	&__profile-action {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		height: 44px;
-		&-button {
-			width: 100px;
-			height: 100%;
-		}
-	}
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__block {
+    margin-bottom: 20px;
+    &-field {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__button {
+    margin-bottom: 30px;
+    height: 44px;
+  }
+  &__profile-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+    &-button {
+      width: 100px;
+      height: 100%;
+    }
+  }
 }

@@ -9,39 +9,41 @@ const PATHS = {
   dist: path.join(__dirname, './dist'),
   assets: 'assets/',
 };
-let pagesBlocks = [
-  'headers-footers',
-  'cards',
-  'form-elements',
-  'colors-fonts',
-  'landing',
-  'search-room',
-  'login',
-  'register',
-  'room',
-];
 
-const PAGES_DIR = `${PATHS.src}/views/pages/`;
+const PAGES_DIR = `${PATHS.src}/views/pages`;
 
-const PAGES = pagesBlocks.map(
-  item =>
-    `${PAGES_DIR}${item}/` +
-    fs.readdirSync(`${PAGES_DIR}${item}/`).filter(fileName => fileName.endsWith('.pug')),
-);
+const getEntries = pages => {
+  const entries = {};
+  const htmlPages = [];
+
+  pages.forEach(name => {
+    entries[name] = `${PAGES_DIR}/${name}/${name}.js`;
+    htmlPages.push(
+      new HtmlWebpackPlugin({
+        filename: `${name}.html`,
+        template: `${PAGES_DIR}/${name}/${name}.pug`,
+        chunks: [name],
+      }),
+    );
+  });
+
+  return [entries, htmlPages];
+};
+
+const [entries, htmlPages] = getEntries(fs.readdirSync(PAGES_DIR));
 
 module.exports = {
-  externals: {
-    path: PATHS,
-  },
-
   entry: {
-    app: PATHS.src,
+    ...entries,
   },
 
   output: {
     filename: `js/[name].[fullhash].js`,
     path: PATHS.dist,
     assetModuleFilename: '',
+  },
+  externals: {
+    path: PATHS,
   },
 
   optimization: {
@@ -132,20 +134,6 @@ module.exports = {
       'window.jQuery': 'jquery',
     }),
 
-    new HtmlWebpackPlugin({
-      template: `${PATHS.src}/views/pages/index.pug`,
-      filename: `./index.html`,
-    }),
-
-    ...PAGES.map(page => {
-      return new HtmlWebpackPlugin({
-        template: page,
-        filename: `${page
-          .split('/')
-          .at(-1)
-          .replace(/\.pug$/, '.html')}`,
-        minify: false,
-      });
-    }),
+    ...htmlPages,
   ],
 };

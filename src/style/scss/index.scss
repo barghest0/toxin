@@ -1,44 +1,41 @@
-@import "./mixins";
-@import "./vars";
-@import "./components";
-@import "./pages";
-@import "./libs";
-@import "./fonts";
+@import './mixins';
+@import './vars';
+@import './fonts';
 
 html {
-	line-height: $main-line-height;
-	font-size: $main-font-size;
-	color: $font-color;
+  line-height: $main-line-height;
+  font-size: $main-font-size;
+  color: $font-color;
 
-	font-family: Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
 
-	@media screen and(max-width:$desktop-width) {
-		font-size: 13px;
-	}
-	@media screen and(max-width:$table-width) {
-		font-size: 12px;
-	}
-	@media screen and(max-width:$phone-width) {
-		font-size: 11px;
-	}
+  @media screen and(max-width:$desktop-width) {
+    font-size: 13px;
+  }
+  @media screen and(max-width:$table-width) {
+    font-size: 12px;
+  }
+  @media screen and(max-width:$phone-width) {
+    font-size: 11px;
+  }
 }
 
 *,
 *::after,
 *::before {
-	margin: 0;
-	box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 *::placeholder {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .container {
-	max-width: 1200px;
-	padding: 0 20px;
-	margin: 0 auto;
-	@include phone {
-		padding: 0 10px;
-	}
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  @include phone {
+    padding: 0 10px;
+  }
 }
