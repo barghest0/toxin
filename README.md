@@ -1,7 +1,18 @@
+
 # toxin-hotel
 
-## Страницы 
-[Ui-kit](https://barghest0.github.io/toxin/dist/ui-kit.html)
+[Главная](https://barghest0.github.io/toxin/dist)
+## Страницы ui kit 
+
+[Colors & fonts](https://barghest0.github.io/toxin/dist/colors-fonts.html)
+
+[Form elements](https://barghest0.github.io/toxin/dist/form-elements.html)
+
+[Cards](https://barghest0.github.io/toxin/dist/cards.html)
+
+[Headers & footers](https://barghest0.github.io/toxin/dist/headers-footers.html)
+
+## Страницы сайта
 
 [Landing](https://barghest0.github.io/toxin/dist/landing.html)
 
