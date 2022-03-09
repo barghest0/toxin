@@ -1,6 +1,7 @@
 .dropdown {
   display: flex;
   flex-direction: column;
+  position: relative;
   &__buttons {
     display: flex;
     justify-content: space-between;
@@ -14,7 +15,9 @@
   }
 
   &__field {
+    width: 100%;
     height: 44px;
+    margin: 0;
     border-radius: 4px 4px 0 0;
     border: 1px solid $shadow-25;
     position: relative;
@@ -39,6 +42,7 @@
 
   &__total-text {
     height: 100%;
+    width: inherit;
     display: flex;
     align-items: center;
     padding: 0 15px;
@@ -47,9 +51,10 @@
   &__list {
     cursor: default;
     display: none;
-    border: 1px solid $shadow-50;
-    position: relative;
     width: 100%;
+    border: 1px solid $shadow-50;
+    border-top: none;
+    position: absolute;
     background-color: $white;
     z-index: 100;
     padding: 7px 7px 10px 15px;
@@ -99,10 +104,10 @@
     }
   }
 
-  &__field.open {
+  &__container.open &__field {
     border-color: $shadow-50;
   }
-  &__field.open &__list {
+  &__container.open &__list {
     display: flex;
     flex-direction: column;
   }

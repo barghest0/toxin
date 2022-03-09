@@ -21,6 +21,7 @@ class Dropdown {
 
   createList() {
     this.element.append('<div class="dropdown__list"></div>');
+
     for (const item of this.data) {
       this.element.find('.dropdown__list').append(
         `<div class="dropdown__list-item" data-name="${item.name}" >
@@ -43,17 +44,19 @@ class Dropdown {
     if (this.size === LG_SIZE) {
       this.element.find('.dropdown__list').append(
         `<div class="dropdown__buttons">
-          <button class="dropdown__clear-button button button_no-bordered">${
+          <button class="dropdown__clear-button button button_no-bordered" type="button" >${
             this.totalCount > 0 ? 'Очистить' : ''
           } </button>
-          <button class="dropdown__submit-button button button_no-bordered">Применить</button>
+          <button class="dropdown__submit-button button button_no-bordered" type="button" >Применить</button>
         </div>`,
       );
     }
   }
 
   createTotalText() {
-    this.element.append('<div class="dropdown__total-text"></div>');
+    this.element
+      .find('.dropdown__field')
+      .append('<div class="dropdown__total-text"></div>');
   }
 
   setTotalText(text) {
@@ -113,13 +116,13 @@ class Dropdown {
     });
     this.totalCount = 0;
     const items = $(this.element).find('.dropdown__list-item');
-    items.each(function () {
-      $(this).find('.dropdown__list-counter').html('0');
-      $(this)
+    items.each(function (index) {
+      $(items[index]).find('.dropdown__list-counter').html('0');
+      $(items[index])
         .find('.dropdown__list-decrement')
         .addClass('dropdown__list-decrement_disabled');
     });
-    $('.dropdown__clear-button').html('');
+    $(e.target).html('');
   }
 
   attachListeners() {
@@ -143,7 +146,7 @@ class Dropdown {
       .on('click', this.clearTotalText.bind(this));
 
     this.element.find('.dropdown__submit-button').on('click', e => {
-      e.target.closest('.dropdown__field').classList.toggle('open');
+      this.element.toggleClass('open');
     });
   }
 }

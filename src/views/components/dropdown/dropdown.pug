@@ -7,4 +7,5 @@ mixin dropdown({label='', subLabel='', type='guests', size="lg",id=''}={})
       +block-label({text:label})
       if subLabel
         +block-sub-label({text:subLabel})
-    .dropdown__field(class=`dropdown__field_${type}` id=id)
+    .dropdown__container(class=`dropdown__container_${type}` id=id)
+      .dropdown__field

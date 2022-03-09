@@ -13,8 +13,8 @@ new Dropdown($('#dropdown-guests-1'), LG_SIZE, GUESTS_TYPE, [
 ]);
 
 new Dropdown($('#dropdown-guests-2'), LG_SIZE, GUESTS_TYPE, [
-  { text: 'Взрослые', name: 'adults', count: 2 },
-  { text: 'Дети', name: 'children', count: 1 },
+  { text: 'Взрослые', name: 'adults', count: 0 },
+  { text: 'Дети', name: 'children', count: 0 },
   { text: 'Младенцы', name: 'newborns', count: 0 },
 ]);
 
