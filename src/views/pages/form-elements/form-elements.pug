@@ -1,7 +1,6 @@
 extends ../../layout/ui-kit-page.pug
 
-
-block title 
+block title
   title Form elements
 
 block page
@@ -35,7 +34,7 @@ block page
           .form-elements__text-field
             +default-text-field({label:'text field', subLabel:'hover / focus', name:"email", placeholder:"Email", type:'email', value:'This is pretty awesome'})
           .form-elements__dropdown
-            +dropdown({label:'dropdown',type:'guests',id:'dropdown-guests-1'})
+            +dropdown({label:'dropdown', type:'guests', data:[{ title: 'Взрослые', name: 'adults', count: 0 },{ title: 'Дети', name: 'children', count: 0 },{ title: 'Младенцы', name: 'newborns', count: 0 }]})
           .form-elements__masked-text-field
             +masked-text-field({label:'masked text field', name:"birthday", placeholder:"ДД.ММ.ГГГГ", type:'text'})
           .form-elements__range-date
@@ -93,14 +92,14 @@ block page
             +pagination
 
       .form-elements__dropdowns
-          .form-elements__dropdown.form-elements__dropdown_apartments
-            +dropdown({label:'dropdown',subLabel:'default',id:'dropdown-apartments-1',type:'apartments'})
-          .form-elements__dropdown.form-elements__dropdown_apartments
-            +dropdown({label:'dropdown',subLabel:'expanded',id:'dropdown-apartments-2',type:'apartments'})
-          .form-elements__dropdown.form-elements__dropdown_guests.form-elements__dropdown_cleared
-            +dropdown({label:'dropdown',type:'guests', id:'dropdown-guests-2'})
-          .form-elements__dropdown.form-elements__dropdown_guests
-            +dropdown({label:'dropdown',type:'guests', id:'dropdown-guests-3'})
+        .form-elements__dropdown.form-elements__dropdown_apartments
+          +dropdown({label:'dropdown',subLabel:'default',size:'md', type:'apartments',data:[{ title: 'Спальни', name: 'bedrooms', count: 2 },{ title: 'Кровати', name: 'beds', count: 2 },{ title: 'Ванные комнаты', name: 'bathrooms', count: 0 }]})
+        .form-elements__dropdown.form-elements__dropdown_apartments
+          +dropdown({label:'dropdown',subLabel:'expanded',size:'md', type:'apartments',data:[{ title: 'Спальни', name: 'bedrooms', count: 2 },{ title: 'Кровати', name: 'beds', count: 2 },{ title: 'Ванные комнаты', name: 'bathrooms', count: 0 }], state:'opened'})
+        .form-elements__dropdown.form-elements__dropdown_guests.form-elements__dropdown_cleared
+          +dropdown({label:'dropdown',type:'guests', data:[{ title: 'Взрослые', name: 'adults', count: 0 },{ title: 'Дети', name: 'children', count: 0 },{ title: 'Младенцы', name: 'newborns', count: 0 }],state:'opened'})
+        .form-elements__dropdown.form-elements__dropdown_guests
+          +dropdown({label:'dropdown',type:'guests', data:[{ title: 'Взрослые', name: 'adults', count: 2 },{ title: 'Дети', name: 'children', count: 1 },{ title: 'Младенцы', name: 'newborns', count: 0 }],state:'opened'})
 
       .form-elements__lists
         .form-elements__expand-checkbox
@@ -118,4 +117,3 @@ block page
           +review-list({items:[ {img:'review-image1.svg', alt:'comfort', title:'Комфорт',subtitle:'Шумопоглощающие стены'}, {img:'review-image2.svg', alt:'convenience', title:'Удобство',subtitle:'Окно в каждой из спален'}] })
         .form-elements__feedback 
           +feedback({avatar:'avatar.svg',alt:'avatar',name:'Мурад Сарафанов', lastVisit:'5 дней назад', comment:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',likeState:'checked',likesCount:12})
-

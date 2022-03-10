@@ -8,16 +8,16 @@ mixin range-date({from='Прибытие', to='Выезд', dateFrom='2022', dat
         .range-date__field
           input.range-date__input(
             name=name,
-            placeholder='ДД.ММ.ГГГГ'
-            autocomplete="off"
+            placeholder='ДД.ММ.ГГГГ',
+            autocomplete='off',
             data-date-from=dateFrom
           )
       +text-field({label:to})
         .range-date__field
           input.range-date__input(
             name=name,
-            placeholder='ДД.ММ.ГГГГ'
-            autocomplete="off"
+            placeholder='ДД.ММ.ГГГГ',
+            autocomplete='off',
             data-date-to=dateTo
           )
     .range-date__datepicker

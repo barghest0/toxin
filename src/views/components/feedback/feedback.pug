@@ -6,8 +6,8 @@ mixin feedback({avatar='', alt='',name='',lastVisit='', likesCount='', comment='
     .feedback__user
       img.feedback__user-avatar(src=`assets/images/${avatar}`, alt=alt)
       .feedback__user-info
-        .feedback__user-name=name
-        .feedback__user-visit=lastVisit
+        .feedback__user-name= name
+        .feedback__user-visit= lastVisit
     .feedback__content
       .feedback__like
         +like({id:'like-feedback', name:'like-feedback', count:likesCount, state:likeState})

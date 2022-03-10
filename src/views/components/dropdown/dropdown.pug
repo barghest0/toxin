@@ -1,11 +1,25 @@
 include ../text-titles/text-titles.pug
 include ../button/button.pug
 
-mixin dropdown({label='', subLabel='', type='guests', size="lg",id=''}={})
+mixin dropdown({label='', subLabel='',size='lg', type='guests', data={},state=''}={})
   .dropdown
     .dropdown__labels
       +block-label({text:label})
       if subLabel
         +block-sub-label({text:subLabel})
-    .dropdown__container(class=`dropdown__container_${type}` id=id)
+    .dropdown__container.dropdown-container.js-dropdown-container(class=state==="opened"?'open':'' data-type=type)
       .dropdown__field
+      .dropdown__list 
+        each listItem in data
+            .dropdown__list-item(data-name=listItem.name)
+              .dropdown__list-item-title=listItem.title
+              .dropdown__list-item-tools
+                .dropdown__list-decrement -
+                .dropdown__list-counter=listItem.count
+                .dropdown__list-increment +
+        if(size==='lg')
+          .dropdown__buttons
+            .dropdown__clear-button 
+              +button({type:'no-bordered',text:'Очистить'}) 
+            .dropdown__apply-button 
+              +button({type:'no-bordered',text:'Применить'}) 

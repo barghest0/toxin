@@ -137,7 +137,7 @@
   }
 
   &__dropdowns {
-    margin-bottom: 40px;
+    margin-bottom: 160px;
     display: grid;
     grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
   }
@@ -150,10 +150,10 @@
 
     &_guests {
       grid-row: 1;
-      grid-column-start: 3;
+      grid-column-start: 5;
     }
     &_cleared {
-      grid-column-start: 5;
+      grid-column-start: 3;
     }
   }
 

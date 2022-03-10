@@ -1,6 +1,6 @@
 extends ../../layout/main-page.pug
 
-block title 
+block title
   title Search room
 
 block page
@@ -22,7 +22,7 @@ block page
           .search-room__filter
             +filter-date({label:'Даты пребывания в отеле'})
           .search-room__filter
-            +dropdown({label:'Гости',type:'guests'})
+            +dropdown({label:'Гости',type:'guests', size:'md', data:[{ title: 'Взрослые', name: 'adults', count: 0 },{ title: 'Дети', name: 'children', count: 0 },{ title: 'Младенцы', name: 'newborns', count: 0 }]})
           .search-room__filter 
             +range-slider({label:'Диапазон цены'})
             .search-room__slider-description Стоимость за сутки пребывания в номере
@@ -31,7 +31,7 @@ block page
           .search-room__filter 
             +rich-checkbox-list({label:'Доступность', items:[ {id:'corridor', name:'corridor', text:'Широкий коридор', subtext:'Ширина коридоров в номере не менее 91 см.'}, {id:'invalid-helper', name:'invalid-helper', text:'Помощник для инвалидов',subtext:'На 1 этаже вас встретит специалист и проводит до номера.'}, ]})
           .search-room__filter
-            +dropdown({label:'Удобства номера',id:'dropdown-apartments-1',type:'apartments'})
+            +dropdown({label:'Удобства номера',size:'md', type:'apartments',data:[{ title: 'Спальни', name: 'bedrooms', count: 0 },{ title: 'Кровати', name: 'beds', count: 0 },{ title: 'Ванные комнаты', name: 'bathrooms', count: 0 }]})
           .search-room__filter
             +expand-list({label:'Дополнительные удобства', items:[ {id:'breakfast', name:'breakfast', text:'Завтрак'}, {id:'table', name:'table', text:'Письменный стол',state:'checked'}, {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'}, {id:'bed', name:'bed', text:'Кроватка',state:'checked'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, ]})
         .search-room__cards

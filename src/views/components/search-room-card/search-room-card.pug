@@ -13,6 +13,6 @@ mixin search-room-card({title='Найдём номера под ваши пож�
         .search-room-card__date 
           +range-date({from:'Прибытие',to:'Выезд'})
         .search-room-card__guests 
-          +dropdown({label:'Гости',type:'guests',id:'dropdown-guests-1'})
+          +dropdown({label:'Гости',type:'guests', data:[{ title: 'Взрослые', name: 'adults', count: 0 },{ title: 'Дети', name: 'children', count: 0 },{ title: 'Младенцы', name: 'newborns', count: 0 }]})
         .search-room-card__button(action='search-room.html') 
           +button({text:'Подобрать номер', type:'filled', isLargest:true})

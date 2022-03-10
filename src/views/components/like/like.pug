@@ -4,5 +4,5 @@ mixin like({id='', name='', count=0,state=''}={})
       input.like__input(type='checkbox', name=name, id=id, checked)
     else
       input.like__input(type='checkbox', name=name, id=id)
-    span.like__custom-input(class=state==='checked'? 'active':'')
+    span.like__custom-input(class=state === 'checked' ? 'active' : '')
       = count

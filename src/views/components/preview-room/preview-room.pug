@@ -20,6 +20,5 @@ mixin preview-room({roomNumber='',id='',images=[],isLuxury=false,rate=0,price=0,
         .preview-room__reviews
           +rate({id:`${id}-rate`,name:`${id}-rate`,rate})
           .preview-room__reviews-value
-            span.preview-room__reviews-number=reviews 
+            span.preview-room__reviews-number= reviews
             span.preview-room__reviews-text Отзывов
-            

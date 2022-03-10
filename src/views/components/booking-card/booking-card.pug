@@ -13,7 +13,7 @@ mixin booking-card({roomNumber='', price='', isLuxury=false}={})
       .booking-card__date 
         +range-date({from:'Прибытие',to:'Выезд'})
       .booking-card__guests 
-        +dropdown({label:'Гости',type:'guests',id:'dropdown-guests-1'})
+        +dropdown({label:'Гости',type:'guests', data:[{ title: 'Взрослые', name: 'adults', count: 0 },{ title: 'Дети', name: 'children', count: 0 },{ title: 'Младенцы', name: 'newborns', count: 0 }]})
       .booking-card__cost 
         .booking-card__day 
           +body-text({text:'9 990₽ х 4 суток'}) 
