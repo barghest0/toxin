@@ -11,7 +11,7 @@ mixin search-room-card({title='Найдём номера под ваши пож�
         +widget-title({text:title})
       form.search-room-card__search-form(action='search-room.html')
         .search-room-card__date 
-          +range-date({from:'Прибытие',to:'Выезд',idFrom:'date-from-1',idTo:'date-to-1'})
+          +range-date({from:'Прибытие',to:'Выезд'})
         .search-room-card__guests 
           +dropdown({label:'Гости',type:'guests',id:'dropdown-guests-1'})
         .search-room-card__button(action='search-room.html') 

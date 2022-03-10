@@ -33,6 +33,7 @@ const getEntries = pages => {
 const [entries, htmlPages] = getEntries(fs.readdirSync(PAGES_DIR));
 
 module.exports = {
+  
   entry: {
     ...entries,
   },

@@ -1,78 +1,60 @@
-import AirDatepicker from 'air-datepicker';
-import 'air-datepicker/air-datepicker.css';
-import { FILTER_TYPE, MD_SIZE } from './constants/datepicker';
+import DatepickerFacade from '../libs/air-datepicker/DatepickerFacade';
+import {
+  DATEPICKER_CLASS,
+  DATEPICKER_CONTAINER_CLASS,
+  DATE_FROM_SELECTOR,
+  DATE_TO_SELECTOR,
+  FILTER_DATE_SELECTOR,
+  OPENED_DATEPICKER_CLASS,
+  SINGLE_DATEPICKER,
+} from './constants/datepicker';
 
 class Datepicker {
-  constructor(element, type, size) {
-    this.element = element;
-    this.type = type;
-    this.params = {};
-    this.size = size;
+  constructor($container) {
+    this.$container = $container;
     this.init();
   }
 
   init() {
-    this.params.buttons = [];
-    this.setBaseParams();
-    this.createClearButton();
-    this.createApplyButton();
-    this.createDatepicker();
+    this.setInputs();
+    this.setDatepicker();
+    this.attachInputsListeners();
+    this.attachDocumentListener();
+    new DatepickerFacade(this.datepicker, this.$dateFrom, this.$dateTo);
   }
 
-  createDatepicker() {
-    this.element.each(index => {
-      const datepicker = this.element.find('.datepicker')[index];
-      if (this.type === FILTER_TYPE) this.attachFilterOnSelect();
-      else this.attachRangeOnSelect(index);
-      new AirDatepicker(datepicker, this.params);
-    });
-    $('.air-datepicker-button').attr('type', 'button');
-  }
-
-  setBaseParams() {
-    this.params.inline = true;
-    this.params.range = true;
-    this.params.minDate = new Date();
-    if (this.size === MD_SIZE) {
-      this.params.classes = 'air-datepicker_md';
-    }
-    if (this.type === FILTER_TYPE) {
-      this.params.dateFormat = 'd MMM';
+  setInputs() {
+    this.$dateFrom = this.$container.find(DATE_FROM_SELECTOR);
+    this.$dateTo = this.$container.find(DATE_TO_SELECTOR);
+    const $filterDate = this.$container.find(FILTER_DATE_SELECTOR);
+    if (!this.$dateTo.length) {
+      this.$dateFrom = $filterDate;
     }
   }
 
-  createClearButton() {
-    this.params.buttons.push('clear');
+  setDatepicker() {
+    this.datepicker = this.$container.find(`.${DATEPICKER_CLASS}`)[SINGLE_DATEPICKER];
   }
 
-  createApplyButton() {
-    const applyButton = {
-      content: 'Применить',
-      className: 'air-datepicker-button-apply',
-      onClick: e => {
-        e.$el.classList.toggle('open');
-      },
-    };
-    this.params.buttons.push(applyButton);
+  attachInputsListeners() {
+    this.$dateFrom.on('click', this.openDatepickerAfterInputClick.bind(this));
+    if (this.$dateTo) {
+      this.$dateTo.on('click', this.openDatepickerAfterInputClick.bind(this));
+    }
   }
 
-  attachFilterOnSelect() {
-    this.params.onSelect = data => {
-      const [from, to] = data.formattedDate;
-      if (from && to) {
-        $('#filter-date').val(`${from} - ${to}`);
-      } else {
-        $('#filter-date').val(`Выберите дату`);
-      }
-    };
+  openDatepickerAfterInputClick() {
+    this.datepicker.classList.toggle(OPENED_DATEPICKER_CLASS);
   }
 
-  attachRangeOnSelect(index) {
-    this.params.onSelect = data => {
-      const [from, to] = data.formattedDate;
-      $(`#date-from-${index + 1}`).val(from);
-      $(`#date-to-${index + 1}`).val(to);
-    };
+  attachDocumentListener() {
+    document.addEventListener('click', this.closeDatepickerAfterDocumentClick.bind(this));
+  }
+
+  closeDatepickerAfterDocumentClick(e) {
+    if (!e.target.closest(`.${DATEPICKER_CONTAINER_CLASS}`)) {
+      this.datepicker.classList.remove(OPENED_DATEPICKER_CLASS);
+    }
   }
 }
 

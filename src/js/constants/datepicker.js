@@ -1,7 +1,20 @@
-const FILTER_TYPE = 'filter';
-const RANGE_TYPE = 'range';
+const APPLY_BUTTON_CLASS = 'air-datepicker-button-apply';
+const DATEPICKER_CLASS = 'datepicker';
+const DATEPICKER_CONTAINER_CLASS = 'js-datepicker-container';
+const SINGLE_DATEPICKER = 0;
+const OPENED_DATEPICKER_CLASS = 'open';
 
-const MD_SIZE = 'md';
-const LG_SIZE = 'lg';
+const DATE_FROM_SELECTOR = '[data-date-from]';
+const DATE_TO_SELECTOR = '[data-date-to]';
+const FILTER_DATE_SELECTOR = '[data-filter-date]';
 
-export { FILTER_TYPE, RANGE_TYPE, MD_SIZE, LG_SIZE };
+export {
+  APPLY_BUTTON_CLASS,
+  OPENED_DATEPICKER_CLASS,
+  DATEPICKER_CLASS,
+  DATE_FROM_SELECTOR,
+  DATE_TO_SELECTOR,
+  FILTER_DATE_SELECTOR,
+  SINGLE_DATEPICKER,
+  DATEPICKER_CONTAINER_CLASS,
+};

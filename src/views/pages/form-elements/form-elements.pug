@@ -37,11 +37,11 @@ block page
           .form-elements__dropdown
             +dropdown({label:'dropdown',type:'guests',id:'dropdown-guests-1'})
           .form-elements__masked-text-field
-            +masked-text-field({label:'masked text field', name:"birthday", placeholder:"ДД.ММ.ГГГГ", type:'text', id:'masked-text-field-1'})
+            +masked-text-field({label:'masked text field', name:"birthday", placeholder:"ДД.ММ.ГГГГ", type:'text'})
           .form-elements__range-date
-            +range-date({from:'date dropdown', to:'date dropdown', idFrom:'date-from-1', idTo:'date-to-1'})
+            +range-date({from:'date dropdown', to:'date dropdown', dateFrom:'01.01.2001', dateTo:'01.02.2001'})
           .form-elements__filter-date
-            +filter-date({label:'filter date dropdown', value:'19 авг - 23 авг', id:'filter-date'})
+            +filter-date({label:'filter date dropdown', filterDate:'19 авг - 23 авг'})
           .form-elements__subscribe-field
             +subscribe-text-field({label:'subscription text field', placeholder:'Email',name:'email'})
 

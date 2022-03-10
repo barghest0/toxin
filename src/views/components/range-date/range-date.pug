@@ -1,26 +1,24 @@
 include ../text-titles/text-titles.pug
 include ../datepicker/datepicker.pug
 
-mixin range-date({from='Прибытие', to='Выезд', idTo='date-from', idFrom='date-to'}={})
-  .range-date
+mixin range-date({from='Прибытие', to='Выезд', dateFrom='2022', dateTo='2023'}={})
+  .range-date.datepicker-container.js-datepicker-container
     .range-date__fields
       +text-field({label:from})
         .range-date__field
           input.range-date__input(
-            id=idFrom,
             name=name,
-            data-range='true',
             placeholder='ДД.ММ.ГГГГ'
             autocomplete="off"
+            data-date-from=dateFrom
           )
       +text-field({label:to})
         .range-date__field
           input.range-date__input(
-            id=idTo,
             name=name,
-            data-range='true',
             placeholder='ДД.ММ.ГГГГ'
             autocomplete="off"
+            data-date-to=dateTo
           )
     .range-date__datepicker
       +datepicker
