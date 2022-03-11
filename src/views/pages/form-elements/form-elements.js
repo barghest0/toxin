@@ -8,5 +8,7 @@ import '../../components/like/like';
 import '../../components/range-date/range-date';
 import '../../components/filter-date/filter-date';
 import '../../components/datepicker/datepicker';
+import '../../components/feedback/feedback';
+import '../../components/review-list/review-list';
 
 import './form-elements.scss';

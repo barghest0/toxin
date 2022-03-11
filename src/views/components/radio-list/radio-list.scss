@@ -15,6 +15,11 @@
     margin-right: 20px;
   }
 
+  &__title {
+    color: $shadow-50;
+    transition: all 0.2s ease-in-out;
+  }
+
   &__custom-input {
     align-self: flex-start;
     min-width: 20px;
@@ -26,5 +31,9 @@
 
   &__input:checked + &__custom-input {
     background: url('images/fill-radio.svg');
+  }
+
+  &__input:checked + &__custom-input + &__title {
+    color: $shadow-75;
   }
 }

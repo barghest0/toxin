@@ -5,7 +5,7 @@ import {
   DATE_FROM_SELECTOR,
   DATE_TO_SELECTOR,
   FILTER_DATE_SELECTOR,
-  OPENED_DATEPICKER_CLASS,
+  OPENED_CLASS,
   SINGLE_DATEPICKER,
 } from './constants/datepicker';
 
@@ -20,7 +20,7 @@ class Datepicker {
     this.setDatepicker();
     this.attachInputsListeners();
     this.attachDocumentListener();
-    new DatepickerFacade(this.datepicker, this.$dateFrom, this.$dateTo);
+    new DatepickerFacade(this.$container, this.datepicker, this.$dateFrom, this.$dateTo);
   }
 
   setInputs() {
@@ -44,7 +44,8 @@ class Datepicker {
   }
 
   openDatepickerAfterInputClick() {
-    this.datepicker.classList.toggle(OPENED_DATEPICKER_CLASS);
+    this.datepicker.classList.toggle(OPENED_CLASS);
+    this.$container.toggleClass(OPENED_CLASS);
   }
 
   attachDocumentListener() {
@@ -53,7 +54,8 @@ class Datepicker {
 
   closeDatepickerAfterDocumentClick(e) {
     if (!e.target.closest(`.${DATEPICKER_CONTAINER_CLASS}`)) {
-      this.datepicker.classList.remove(OPENED_DATEPICKER_CLASS);
+      this.datepicker.classList.remove(OPENED_CLASS);
+      this.$container.removeClass(OPENED_CLASS);
     }
   }
 }

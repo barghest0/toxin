@@ -10,5 +10,5 @@ mixin block-label({text=''}={})
 mixin block-sub-label({text=''}={})
   h3.block-sub-label= text
 
-mixin body-text({text='', weight='normal'}={})
-  .body-text(class=`body-text_${weight}`)= text
+mixin body-text({text=''}={})
+  .body-text= text

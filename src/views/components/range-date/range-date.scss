@@ -21,6 +21,11 @@
       transition: all 0.2s linear;
     }
   }
+
+  &.open &__field::after {
+    transform: rotate(135deg);
+  }
+
   &__input {
     cursor: pointer;
     caret-color: transparent;

@@ -8,5 +8,4 @@ mixin radio-list({items=[]}={})
         else
           input.radio-list__input(type='radio', name=item['name'], id=item['id'])
         span.radio-list__custom-input
-        .radio-list__title
-          +body-text({text: item['text']})
+        .radio-list__title=item['text']

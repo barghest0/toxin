@@ -4,12 +4,13 @@ include ../datepicker/datepicker.pug
 mixin filter-date({label='', filterDate="2022", placeholder=''}={})
   +text-field({label})
     .filter-date.datepicker-container.js-datepicker-container
-      input.filter-date__input(
-        name=name,
-        data-range='true',
-        value='Выберите дату',
-        autocomplete='off',
-        data-filter-date=filterDate
-      )
+      .filter-date__field
+        input.filter-date__input(
+          name=name,
+          data-range='true',
+          value='Выберите дату',
+          autocomplete='off',
+          data-filter-date=filterDate
+        )
       .filter-date__datepicker
         +datepicker

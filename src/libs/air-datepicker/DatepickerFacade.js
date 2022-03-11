@@ -2,12 +2,13 @@ import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 import {
   APPLY_BUTTON_CLASS,
-  OPENED_DATEPICKER_CLASS,
+  OPENED_CLASS,
   MIDDLE_DATEPICKER_CLASS,
 } from '../../js/constants/datepicker';
 
 class DatepickerFacade {
-  constructor(datepicker, $dateFrom, $dateTo = null) {
+  constructor($container, datepicker, $dateFrom, $dateTo = null) {
+    this.$container = $container;
     this.datepicker = datepicker;
     this.$dateFrom = $dateFrom;
     this.$dateTo = $dateTo;
@@ -60,7 +61,8 @@ class DatepickerFacade {
       content: 'Применить',
       className: APPLY_BUTTON_CLASS,
       onClick: e => {
-        e.$el.classList.toggle(OPENED_DATEPICKER_CLASS);
+        e.$el.classList.toggle(OPENED_CLASS);
+        this.$container.toggleClass(OPENED_CLASS);
       },
     };
     this.buttons = ['clear', applyButton];

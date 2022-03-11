@@ -78,12 +78,12 @@ block page
               +block-label({text:'buttons'})
             .form-elements__buttons-small
               +button({text:'click me',type:'filled'})
-              +button({text:'click me',type:'filled'})
+              +button({text:'click me',type:'filled',state:'hovered'})
               +button({text:'click me',type:'outlined'})
-              +button({text:'click me',type:'outlined'})
+              +button({text:'click me',type:'outlined',state:'hovered'})
             .form-elements__buttons-no-bordered
               +button({text:'click me',type:'no-bordered'})
-              +button({text:'click me',type:'no-bordered'})
+              +button({text:'click me',type:'no-bordered',state:'hovered'})
             .form-elements__buttons-largest
               +button({text:'перейти к оплате',type:'filled',isLargest:true})
           .form-elements__pagination
@@ -116,4 +116,4 @@ block page
         .form-elements__review-list
           +review-list({items:[ {img:'review-image1.svg', alt:'comfort', title:'Комфорт',subtitle:'Шумопоглощающие стены'}, {img:'review-image2.svg', alt:'convenience', title:'Удобство',subtitle:'Окно в каждой из спален'}] })
         .form-elements__feedback 
-          +feedback({avatar:'avatar.svg',alt:'avatar',name:'Мурад Сарафанов', lastVisit:'5 дней назад', comment:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',likeState:'checked',likesCount:12})
+          +feedback({avatar:'avatar.png',alt:'avatar',name:'Мурад Сарафанов', lastVisit:'5 дней назад', comment:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',likeState:'checked',likesCount:12})

@@ -1,5 +1,5 @@
-mixin button({text="",type="outlined",isLargest=false}={})
+mixin button({text="",type="outlined",isLargest=false,state=''}={})
   button.button(
-    class=isLargest ? `button_largest button_${type}` : `button_${type}`,
+    class=isLargest ? `button_largest button_${type}` : `button_${type} ${state ==='hovered' ? `hovered`: '' }`,
     type=type === 'no-bordered' ? 'button' : 'submit'
   )= text
