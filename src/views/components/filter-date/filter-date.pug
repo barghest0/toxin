@@ -2,13 +2,36 @@ include ../text-titles/text-titles.pug
 include ../datepicker/datepicker.pug
 
 mixin filter-date({label='', dateFrom="", dateTo="",  placeholder=''}={})
+  -
+    const months = [
+      'Янв',
+      'Фев',
+      'Мар',
+      'Апр',
+      'Май',
+      'Июн',
+      'Июл',
+      'Авг',
+      'Сен',
+      'Окт',
+      'Ноя',
+      'Дек',
+    ];
+    const dateFromObject = new Date(dateFrom)
+    const dateToObject = new Date(dateTo)
+    const fromMonth = months[dateFromObject.getMonth()] 
+    const toMonth = months[dateFromObject.getMonth()]
+    const shortDateFrom = `${dateFromObject.getDate()} ${fromMonth}`
+    const shortDateTo = `${dateToObject.getDate()} ${toMonth}`
+
+
   +text-field({label})
     .filter-date.datepicker-container.js-datepicker-container
       .filter-date__field
         input.filter-date__input(
           name=name,
           data-range='true',
-          value='Выберите дату',
+          value=dateTo && dateFrom ?  `${shortDateFrom} - ${shortDateTo} `: 'Выберите дату',
           autocomplete='off',
         )
       .filter-date__datepicker

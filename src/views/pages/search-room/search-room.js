@@ -7,6 +7,8 @@ import '../../components/datepicker/datepicker';
 import '../../components/range-slider/range-slider';
 import '../../components/pagination/pagination';
 
+import './images/filter-icon.svg';
+
 import './search-room.scss';
 
 $('.search-room__filter-icon').on('click', e => {

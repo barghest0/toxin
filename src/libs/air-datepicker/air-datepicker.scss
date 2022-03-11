@@ -157,6 +157,9 @@
         color: $white;
         font-weight: bold;
       }
+      &.-disabled- {
+        border-radius: 50%;
+      }
     }
 
     &.-in-range- {
@@ -178,5 +181,4 @@
       }
     }
   }
-  
 }
