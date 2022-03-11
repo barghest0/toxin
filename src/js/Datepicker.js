@@ -27,6 +27,7 @@ class Datepicker {
     this.$dateFrom = this.$container.find(DATE_FROM_SELECTOR);
     this.$dateTo = this.$container.find(DATE_TO_SELECTOR);
     const $filterDate = this.$container.find(FILTER_DATE_SELECTOR);
+
     if (!this.$dateTo.length) {
       this.$dateFrom = $filterDate;
     }

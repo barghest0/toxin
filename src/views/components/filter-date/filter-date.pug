@@ -1,7 +1,7 @@
 include ../text-titles/text-titles.pug
 include ../datepicker/datepicker.pug
 
-mixin filter-date({label='', filterDate="2022", placeholder=''}={})
+mixin filter-date({label='', dateFrom="", dateTo="",  placeholder=''}={})
   +text-field({label})
     .filter-date.datepicker-container.js-datepicker-container
       .filter-date__field
@@ -10,7 +10,6 @@ mixin filter-date({label='', filterDate="2022", placeholder=''}={})
           data-range='true',
           value='Выберите дату',
           autocomplete='off',
-          data-filter-date=filterDate
         )
       .filter-date__datepicker
-        +datepicker
+        +datepicker({dateFrom,dateTo})

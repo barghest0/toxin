@@ -29,16 +29,28 @@ class DatepickerFacade {
       range: true,
       minDate: new Date(),
       buttons: this.buttons,
+      isMobile: true,
+      dateFormat: 'MM.dd.yyyy',
     };
+    if (this.datepicker.dataset.dateFrom && this.datepicker.dataset.dateTo) {
+      this.setSelectedDates();
+    }
     this.setRangeParams();
     if (!this.$dateTo.length) {
       this.setFilterParams();
     }
   }
 
+  setSelectedDates() {
+    this.params.selectedDates = [
+      this.datepicker.dataset.dateFrom,
+      this.datepicker.dataset.dateTo,
+    ];
+  }
+
   setRangeParams() {
-    this.params.onSelect = data => {
-      const [from, to] = data.formattedDate;
+    this.params.onSelect = ({ formattedDate }) => {
+      const [from, to] = formattedDate;
       this.$dateFrom.val(from);
       this.$dateTo.val(to);
     };
@@ -46,8 +58,8 @@ class DatepickerFacade {
 
   setFilterParams() {
     this.params.dateFormat = 'd MMM';
-    this.params.onSelect = data => {
-      const [from, to] = data.formattedDate;
+    this.params.onSelect = ({ formattedDate }) => {
+      const [from, to] = formattedDate;
       if (from && to) {
         this.$dateFrom.val(`${from} - ${to}`);
       } else {

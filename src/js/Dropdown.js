@@ -266,8 +266,8 @@ class Dropdown {
 
     let textString = text.join(', ');
 
-    if (textString.length > 27) {
-      textString = textString.slice(0, 27);
+    if (textString.length > 20) {
+      textString = textString.slice(0, 20);
       textString += '...';
     }
 

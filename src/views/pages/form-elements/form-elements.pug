@@ -38,9 +38,9 @@ block page
           .form-elements__masked-text-field
             +masked-text-field({label:'masked text field', name:"birthday", placeholder:"ДД.ММ.ГГГГ", type:'text'})
           .form-elements__range-date
-            +range-date({from:'date dropdown', to:'date dropdown', dateFrom:'01.01.2001', dateTo:'01.02.2001'})
+            +range-date({from:'date dropdown', to:'date dropdown', })
           .form-elements__filter-date
-            +filter-date({label:'filter date dropdown', filterDate:'19 авг - 23 авг'})
+            +filter-date({label:'filter date dropdown', dateFrom:'08.19.2019', dateTo:'08.23.2019'})
           .form-elements__subscribe-field
             +subscribe-text-field({label:'subscription text field', placeholder:'Email',name:'email'})
 
