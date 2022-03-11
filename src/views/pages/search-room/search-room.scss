@@ -30,17 +30,35 @@
 
   &__filters {
     z-index: 100;
-    background-color: $white;
     transition: all 0.3s linear;
 
-    @include sm-tablet-portrait {
-      position: absolute;
-      transform: translateX(-300px);
-      left: 0;
-      &.active {
-        padding: 20px;
+    &-inner {
+      background-color: $white;
+    }
 
+    @include sm-tablet-portrait {
+      pointer-events: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      &.active {
+        pointer-events: all;
+        width: 100%;
+        background-color: $shadow-50;
+        cursor: pointer;
+      }
+      &-inner {
+        transform: translateX(-300px);
+        width: 50%;
+        padding: 20px;
+      }
+      &.active &-inner {
         transform: translateX(0);
+        height: 100vh;
+        overflow: scroll;
+      }
+      &-inner::-webkit-scrollbar {
+        width: 0;
       }
     }
   }
@@ -51,10 +69,11 @@
       margin-bottom: 20px;
     }
     &-icon {
-      z-index: 110;
+      z-index: 90;
       cursor: pointer;
       position: absolute;
       top: 85px;
+      right: 25px;
       display: none;
       @include sm-tablet-portrait {
         display: block;

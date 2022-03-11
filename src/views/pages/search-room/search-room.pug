@@ -19,21 +19,22 @@ block page
         .search-room__filter-icon 
           img(src='assets/images/filter-icon.svg', alt='alt')
         .search-room__filters
-          .search-room__filter
-            +filter-date({label:'Даты пребывания в отеле', dateFrom:'08.19.2022', dateTo:'08.23.2022'})
-          .search-room__filter
-            +dropdown({label:'Гости',type:'guests', size:'md', data:[{ title: 'Взрослые', name: 'adults', count: 2 },{ title: 'Дети', name: 'children', count: 0 },{ title: 'Младенцы', name: 'newborns', count: 1 }]})
-          .search-room__filter 
-            +range-slider({label:'Диапазон цены'})
-            .search-room__slider-description Стоимость за сутки пребывания в номере
-          .search-room__filter 
-            +checkbox-list({label:'Правила дома', items:[ {id:'smoking', name:'smoking', text:'Можно курить'}, {id:'animals', name:'animals', text:'Можно с животными',state:'checked'}, {id:'guests', name:'guests', text:'Можно пригласить гостей (до 10 человек)',state:'checked'}, ] })
-          .search-room__filter 
-            +rich-checkbox-list({label:'Доступность', items:[ {id:'corridor', name:'corridor', text:'Широкий коридор', subtext:'Ширина коридоров в номере не менее 91 см.'}, {id:'invalid-helper', name:'invalid-helper', text:'Помощник для инвалидов',subtext:'На 1 этаже вас встретит специалист и проводит до номера.'}, ]})
-          .search-room__filter
-            +dropdown({label:'Удобства номера',size:'md', type:'apartments',data:[{ title: 'Спальни', name: 'bedrooms', count: 2 },{ title: 'Кровати', name: 'beds', count: 2 },{ title: 'Ванные комнаты', name: 'bathrooms', count: 1 }]})
-          .search-room__filter
-            +expand-list({label:'Дополнительные удобства', items:[ {id:'breakfast', name:'breakfast', text:'Завтрак'}, {id:'table', name:'table', text:'Письменный стол',state:'checked'}, {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'}, {id:'bed', name:'bed', text:'Кроватка',state:'checked'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, ]})
+          .search-room__filters-inner
+            .search-room__filter
+              +filter-date({label:'Даты пребывания в отеле', dateFrom:'08.19.2022', dateTo:'08.23.2022'})
+            .search-room__filter
+              +dropdown({label:'Гости',type:'guests', size:'md', data:[{ title: 'Взрослые', name: 'adults', count: 2 },{ title: 'Дети', name: 'children', count: 0 },{ title: 'Младенцы', name: 'newborns', count: 1 }]})
+            .search-room__filter 
+              +range-slider({label:'Диапазон цены'})
+              .search-room__slider-description Стоимость за сутки пребывания в номере
+            .search-room__filter 
+              +checkbox-list({label:'Правила дома', items:[ {id:'smoking', name:'smoking', text:'Можно курить'}, {id:'animals', name:'animals', text:'Можно с животными',state:'checked'}, {id:'guests', name:'guests', text:'Можно пригласить гостей (до 10 человек)',state:'checked'}, ] })
+            .search-room__filter 
+              +rich-checkbox-list({label:'Доступность', items:[ {id:'corridor', name:'corridor', text:'Широкий коридор', subtext:'Ширина коридоров в номере не менее 91 см.'}, {id:'invalid-helper', name:'invalid-helper', text:'Помощник для инвалидов',subtext:'На 1 этаже вас встретит специалист и проводит до номера.'}, ]})
+            .search-room__filter
+              +dropdown({label:'Удобства номера',size:'md', type:'apartments',data:[{ title: 'Спальни', name: 'bedrooms', count: 2 },{ title: 'Кровати', name: 'beds', count: 2 },{ title: 'Ванные комнаты', name: 'bathrooms', count: 1 }]})
+            .search-room__filter
+              +expand-list({label:'Дополнительные удобства', items:[ {id:'breakfast', name:'breakfast', text:'Завтрак'}, {id:'table', name:'table', text:'Письменный стол',state:'checked'}, {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'}, {id:'bed', name:'bed', text:'Кроватка',state:'checked'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, ]})
         .search-room__cards
           .search-room__cards-title 
             +widget-title({text:'Номера, которые мы для вас подобрали'})
