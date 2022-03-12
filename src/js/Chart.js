@@ -14,7 +14,6 @@ class Chart {
 
   setTotalVotes() {
     this.totalVotes = this.votes.reduce((acc, vote) => acc + vote);
-
   }
 
   setVotes() {

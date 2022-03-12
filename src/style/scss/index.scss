@@ -6,7 +6,7 @@ html {
   line-height: $main-line-height;
   font-size: $main-font-size;
   color: $font-color;
-
+  overflow-x: hidden;
   font-family: Montserrat, sans-serif;
 
   @media screen and(max-width:$desktop-width) {
@@ -15,9 +15,7 @@ html {
   @media screen and(max-width:$table-width) {
     font-size: 12px;
   }
-  @media screen and(max-width:$phone-width) {
-    font-size: 11px;
-  }
+
 }
 
 *,

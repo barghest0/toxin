@@ -74,9 +74,6 @@ class ChartFacade {
 
       layout: {
         padding: {
-          left: -10,
-          right: 0,
-          top: 0,
           bottom: -5,
         },
       },
@@ -107,7 +104,7 @@ class ChartFacade {
   }
 
   createChart() {
-    new Chart(this.container, {
+    this.chart = new Chart(this.container, {
       type: 'doughnut',
       data: this.data,
       options: this.options,

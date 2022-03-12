@@ -1,5 +1,5 @@
 .chart {
-  width: 320px;
+  width: 340px;
   height: 125px;
   color: $main-color;
   text-transform: uppercase;
@@ -8,8 +8,8 @@
   position: relative;
 
   &__votes {
-    top: 40px;
-    left: 24px;
+    top: 45px;
+    left: 32px;
     position: absolute;
     &-count {
       font-size: 24px;

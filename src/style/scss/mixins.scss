@@ -1,58 +1,61 @@
 @use 'sass:math';
 
 @function rem($pixel, $context: $main-font-size) {
-	@if (unitless($pixel)) {
-		$pixel: $pixel * 1px;
-	}
-	@if (unitless($context)) {
-		$context: $context * 1px;
-	}
+  @if (unitless($pixel)) {
+    $pixel: $pixel * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
 
-	@return (math.div($pixel, $context) * 1rem);
+  @return (math.div($pixel, $context) * 1rem);
 }
 
 @mixin size($width, $height: $width) {
-	width: $width;
-	min-height: $height;
+  width: $width;
+  min-height: $height;
 }
 
 @mixin main-gradient-to-bottom($color: $main-color, $second-color: $gradient-main-color) {
-	background: linear-gradient(to bottom, $color, $second-color);
+  background: linear-gradient(to bottom, $color, $second-color);
 }
-@mixin second-gradient-to-bottom($color: $second-color, $second-color: $gradient-second-color) {
-	background: linear-gradient(to bottom, $color, $second-color);
+@mixin second-gradient-to-bottom(
+  $color: $second-color,
+  $second-color: $gradient-second-color
+) {
+  background: linear-gradient(to bottom, $color, $second-color);
 }
 
 @mixin phone {
-	@media (max-width: 450px) {
-		@content;
-	}
+  @media (max-width: 450px) {
+    @content;
+  }
 }
 
 @mixin sm-tablet-portrait {
-	@media (max-width: 650px) {
-		@content;
-	}
+  @media (max-width: 650px) {
+    @content;
+  }
 }
 @mixin tablet-portrait {
-	@media (max-width: 768px) {
-		@content;
-	}
+  @media (max-width: 768px) {
+    @content;
+  }
 }
 @mixin tablet-landscape {
-	@media (max-width: 900px) {
-		@content;
-	}
+  @media (max-width: 900px) {
+    @content;
+  }
 }
 
 @mixin sm-desktop {
-	@media (max-width: 1024px) {
-		@content;
-	}
+  @media (max-width: 1024px) {
+    @content;
+  }
 }
 
 @mixin md-desktop {
-	@media (max-width: 1200px) {
-		@content;
-	}
+  @media (max-width: 1110px) {
+    @content;
+  }
 }
