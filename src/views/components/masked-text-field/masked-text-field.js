@@ -1,3 +1,3 @@
-import 'jquery.maskedinput/src/jquery.maskedinput';
+import MaskedTextField from '../../../js/MaskedTextField';
 
-$('.js-masked-text-field').mask('99.99.9999');
+new MaskedTextField($('.js-masked-text-field'));

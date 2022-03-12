@@ -48,9 +48,12 @@
         cursor: pointer;
       }
       &-inner {
-        transform: translateX(-300px);
-        width: 50%;
+        transform: translateX(-400px);
+        width: 400px;
         padding: 20px;
+        @include phone {
+          width: 260px;
+        }
       }
       &.active &-inner {
         transform: translateX(0);

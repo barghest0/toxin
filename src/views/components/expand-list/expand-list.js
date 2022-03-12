@@ -1,3 +1,3 @@
-$('.expand-list__label').on('click', function () {
-	$(this).next().toggleClass('active');
-});
+import ExpandList from '../../../js/ExpandList';
+
+new ExpandList($('.expand-list__label'));
