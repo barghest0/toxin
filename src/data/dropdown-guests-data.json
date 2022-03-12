@@ -1,0 +1,19 @@
+{
+  "clear": [
+    { "title": "Взрослые", "name": "adults", "count": 0 },
+    { "title": "Дети", "name": "children", "count": 0 },
+    { "title": "Младенцы", "name": "newborns", "count": 0 }
+  ],
+
+  "withChildren": [
+    { "title": "Взрослые", "name": "adults", "count": 2 },
+    { "title": "Дети", "name": "children", "count": 0 },
+    { "title": "Младенцы", "name": "newborns", "count": 1 }
+  ],
+
+  "withoutChildren": [
+    { "title": "Взрослые", "name": "adults", "count": 2 },
+    { "title": "Дети", "name": "children", "count": 1 },
+    { "title": "Младенцы", "name": "newborns", "count": 0 }
+  ]
+}

@@ -12,6 +12,11 @@ block page
   include ../../components/expand-list/expand-list.pug
   include ../../components/preview-room/preview-room.pug
   include ../../components/pagination/pagination.pug
+  - const roomsData = require('../../../data/preview-rooms-data')
+  - const expandData = require('../../../data/expand-list-data')
+  - const checkboxData = require('../../../data/checkbox-list-data')
+  - const guestDropdownData = require('../../../data/dropdown-guests-data')
+  - const apartmentsDropdownData = require('../../../data/dropdown-apartments-data')
 
   .search-room
     .container
@@ -23,45 +28,24 @@ block page
             .search-room__filter
               +filter-date({label:'Даты пребывания в отеле', dateFrom:'08.19.2022', dateTo:'08.23.2022'})
             .search-room__filter
-              +dropdown({label:'Гости',type:'guests', size:'md', data:[{ title: 'Взрослые', name: 'adults', count: 2 },{ title: 'Дети', name: 'children', count: 0 },{ title: 'Младенцы', name: 'newborns', count: 1 }]})
+              +dropdown({label:'Гости',type:'guests', size:'md', data:guestDropdownData.withChildren})
             .search-room__filter 
               +range-slider({label:'Диапазон цены'})
               .search-room__slider-description Стоимость за сутки пребывания в номере
             .search-room__filter 
-              +checkbox-list({label:'Правила дома', items:[ {id:'smoking', name:'smoking', text:'Можно курить'}, {id:'animals', name:'animals', text:'Можно с животными',state:'checked'}, {id:'guests', name:'guests', text:'Можно пригласить гостей (до 10 человек)',state:'checked'}, ] })
+              +checkbox-list({label:'Правила дома', items:checkboxData.default})
             .search-room__filter 
-              +rich-checkbox-list({label:'Доступность', items:[ {id:'corridor', name:'corridor', text:'Широкий коридор', subtext:'Ширина коридоров в номере не менее 91 см.'}, {id:'invalid-helper', name:'invalid-helper', text:'Помощник для инвалидов',subtext:'На 1 этаже вас встретит специалист и проводит до номера.'}, ]})
+              +rich-checkbox-list({label:'Доступность', items:checkboxData.rich})
             .search-room__filter
-              +dropdown({label:'Удобства номера',size:'md', type:'apartments',data:[{ title: 'Спальни', name: 'bedrooms', count: 2 },{ title: 'Кровати', name: 'beds', count: 2 },{ title: 'Ванные комнаты', name: 'bathrooms', count: 1 }]})
+              +dropdown({label:'Удобства номера',size:'md', type:'apartments',data: apartmentsDropdownData.data})
             .search-room__filter
-              +expand-list({label:'Дополнительные удобства', items:[ {id:'breakfast', name:'breakfast', text:'Завтрак'}, {id:'table', name:'table', text:'Письменный стол',state:'checked'}, {id:'chair', name:'chair', text:'Стул для кормления',state:'checked'}, {id:'bed', name:'bed', text:'Кроватка',state:'checked'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, {id:'tv', name:'tv', text:'Телевизор'}, {id:'shampoo', name:'shampoo', text:'Шампунь'}, ]})
+              +expand-list({label:'Дополнительные удобства', items:expandData.data})
         .search-room__cards
           .search-room__cards-title 
             +widget-title({text:'Номера, которые мы для вас подобрали'})
           .search-room__cards-inner
-            .search-room__card
-              +preview-room({roomNumber:888,id:'1', images:['preview-room1.png','preview-room1.png','preview-room1.png','preview-room1.png'],price:9900,rate:5,isLuxury:true,reviews:145})
-            .search-room__card
-              +preview-room({roomNumber:840,id:'2', images:['preview-room2.png','preview-room2.png','preview-room2.png','preview-room2.png'],price:9900,rate:4,isLuxury:false,reviews:65})
-            .search-room__card
-              +preview-room({roomNumber:880,id:'3', images:['preview-room3.png','preview-room3.png','preview-room3.png','preview-room3.png'],price:8500,rate:3,isLuxury:true,reviews:35})
-            .search-room__card
-              +preview-room({roomNumber:888,id:'4', images:['preview-room1.png','preview-room1.png','preview-room1.png','preview-room1.png'],price:9900,rate:5,isLuxury:true,reviews:145})
-            .search-room__card
-              +preview-room({roomNumber:840,id:'5', images:['preview-room2.png','preview-room2.png','preview-room2.png','preview-room2.png'],price:9900,rate:4,isLuxury:false,reviews:65})
-            .search-room__card
-              +preview-room({roomNumber:880,id:'6', images:['preview-room3.png','preview-room3.png','preview-room3.png','preview-room3.png'],price:8500,rate:3,isLuxury:true,reviews:35})
-            .search-room__card
-              +preview-room({roomNumber:888,id:'7', images:['preview-room1.png','preview-room1.png','preview-room1.png','preview-room1.png'],price:9900,rate:5,isLuxury:true,reviews:145})
-            .search-room__card
-              +preview-room({roomNumber:840,id:'8', images:['preview-room2.png','preview-room2.png','preview-room2.png','preview-room2.png'],price:9900,rate:4,isLuxury:false,reviews:65})
-            .search-room__card
-              +preview-room({roomNumber:880,id:'9', images:['preview-room3.png','preview-room3.png','preview-room3.png','preview-room3.png'],price:8500,rate:3,isLuxury:true,reviews:35})
-            .search-room__card
-              +preview-room({roomNumber:888,id:'10', images:['preview-room1.png','preview-room1.png','preview-room1.png','preview-room1.png'],price:9900,rate:5,isLuxury:true,reviews:145})
-            .search-room__card
-              +preview-room({roomNumber:840,id:'11', images:['preview-room2.png','preview-room2.png','preview-room2.png','preview-room2.png'],price:9900,rate:4,isLuxury:false,reviews:65})
-            .search-room__card
-              +preview-room({roomNumber:880,id:'12', images:['preview-room3.png','preview-room3.png','preview-room3.png','preview-room3.png'],price:8500,rate:3,isLuxury:true,reviews:35})
+            each roomData in roomsData.data
+              .search-room__card
+                +preview-room(roomData)
           .search-room__pagination
             +pagination

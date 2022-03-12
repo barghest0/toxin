@@ -11,6 +11,8 @@ block page
   include ../../components/datepicker/datepicker.pug
   include ../../components/preview-room/preview-room.pug
 
+  - roomsData = require('../../../data/preview-rooms-data')
+
   .cards
     .container
       .cards__inner
@@ -27,7 +29,7 @@ block page
         .cards__column
           .cards__datepicker.datepicker-container.js-datepicker-container
             +datepicker({isInline:true, dateFrom:'08.19.2022', dateTo:'08.23.2022'})
-          .cards__preview-room 
-            +preview-room({roomNumber:888,images:['preview-room1.png','preview-room1.png','preview-room1.png','preview-room1.png'],price:9900,rate:5,id:'room-1', isLuxury:true,reviews:145})
-          .cards__preview-room 
-            +preview-room({roomNumber:840,images:['preview-room2.png','preview-room2.png','preview-room2.png','preview-room2.png'],price:9900,rate:4,id:'room-2',isLuxury:false,reviews:65})
+          each roomData, key in roomsData.data
+            if key <= 1
+              .cards__preview-room 
+                +preview-room(roomData)

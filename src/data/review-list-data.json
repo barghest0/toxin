@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "img": "review-image1.svg",
+      "alt": "comfort",
+      "title": "Комфорт",
+      "subtitle": "Шумопоглощающие стены"
+    },
+    {
+      "img": "review-image2.svg",
+      "alt": "convenience",
+      "title": "Удобство",
+      "subtitle": "Окно в каждой из спален"
+    }
+  ]
+}

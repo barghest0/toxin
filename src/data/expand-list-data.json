@@ -1,0 +1,12 @@
+{
+  "data": [
+    { "name": "breakfast", "text": "Завтрак" },
+    { "name": "table", "text": "Письменный стол", "state": "checked" },
+    { "name": "chair", "text": "Стул для кормления", "state": "checked" },
+    { "name": "bed", "text": "Кроватка", "state": "checked" },
+    { "name": "tv", "text": "Телевизор" },
+    { "name": "shampoo", "text": "Шампунь" },
+    { "name": "tv", "text": "Телевизор" },
+    { "name": "shampoo", "text": "Шампунь" }
+  ]
+}
