@@ -3,19 +3,18 @@ import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 
 class ChartFacade {
-  constructor(container, votes) {
+  constructor(container, votes, totalVotes) {
     this.container = container;
     this.votes = votes;
+    this.totalVotes = totalVotes;
     this.init();
   }
 
   init() {
     this.getContext();
     this.setGradients();
-    this.setTotalVotesCount();
     this.setData();
     this.setOptions();
-    this.setChartPlugins();
     this.createChart();
   }
 
@@ -58,10 +57,6 @@ class ChartFacade {
     };
   }
 
-  setTotalVotesCount() {
-    this.votesCount = this.votes.reduce((acc, vote) => acc + vote);
-  }
-
   setOptions() {
     this.options = {
       cutout: '90%',
@@ -79,10 +74,10 @@ class ChartFacade {
 
       layout: {
         padding: {
-          left: 0,
+          left: -10,
           right: 0,
           top: 0,
-          bottom: 0,
+          bottom: -5,
         },
       },
 
@@ -111,39 +106,11 @@ class ChartFacade {
     };
   }
 
-  setChartPlugins() {
-    this.chartPlugins = [
-      {
-        beforeDraw: chart => {
-          const width = chart.width;
-          const height = chart.height;
-          const ctx = chart.ctx;
-
-          ctx.restore();
-          ctx.font = 'bold 24px sans-serif';
-          ctx.fillStyle = '#BC9CFF';
-          ctx.textBaseline = 'middle';
-
-          let textX = Math.round((width - ctx.measureText(this.votesCount).width) / 5.1);
-          let textY = height / 2.4;
-          ctx.fillText(this.votesCount, textX, textY);
-
-          ctx.font = 'bold 12px sans-serif';
-          const votesText = chart.config.options.elements.center.votes;
-          ctx.fillText(votesText, textX - 10, textY + 20);
-
-          ctx.save();
-        },
-      },
-    ];
-  }
-
   createChart() {
     new Chart(this.container, {
       type: 'doughnut',
       data: this.data,
       options: this.options,
-      plugins: this.chartPlugins,
     });
   }
 }

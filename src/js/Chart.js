@@ -8,7 +8,13 @@ class Chart {
 
   init() {
     this.setVotes();
+    this.setTotalVotes();
     this.createChart();
+  }
+
+  setTotalVotes() {
+    this.totalVotes = this.votes.reduce((acc, vote) => acc + vote);
+
   }
 
   setVotes() {
@@ -16,7 +22,7 @@ class Chart {
   }
 
   createChart() {
-    new ChartFacade(this.container, this.votes);
+    new ChartFacade(this.container, this.votes, this.totalVotes);
   }
 }
 

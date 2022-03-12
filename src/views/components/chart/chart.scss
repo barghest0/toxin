@@ -1,4 +1,26 @@
+.chart {
+  width: 320px;
+  height: 125px;
+  color: $main-color;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+
+  &__votes {
+    top: 40px;
+    left: 24px;
+    position: absolute;
+    &-count {
+      font-size: 24px;
+    }
+    &-text {
+      font-size: 12px;
+    }
+  }
+}
+
 #impressions {
   position: relative;
-  right: 30px;
+  right: 23px;
 }

@@ -1,3 +1,6 @@
 mixin chart({great=0,good=0,satisfied=0,disappointed=0}={})
   .chart
-    canvas#impressions(width='200' height='125')
+    .chart__votes
+      .chart__votes-count 260
+      .chart__votes-text голосов
+    canvas#impressions(width='320' height='125')
