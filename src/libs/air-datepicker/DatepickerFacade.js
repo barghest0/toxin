@@ -3,8 +3,7 @@ import 'air-datepicker/air-datepicker.css';
 import {
   APPLY_BUTTON_CLASS,
   OPENED_CLASS,
-  MIDDLE_DATEPICKER_CLASS,
-} from '../../js/constants/datepicker';
+} from '../../views/components/datepicker/constants';
 
 class DatepickerFacade {
   constructor($container, datepicker, $dateFrom, $dateTo = null) {

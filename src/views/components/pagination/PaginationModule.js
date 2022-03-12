@@ -1,4 +1,4 @@
-import PaginationFacade from '../libs/pagination/PaginationFacade';
+import PaginationFacade from '../../../libs/pagination/PaginationFacade';
 
 class Pagination {
   constructor($element) {

@@ -1,4 +1,4 @@
-import DatepickerFacade from '../libs/air-datepicker/DatepickerFacade';
+import DatepickerFacade from '../../../libs/air-datepicker/DatepickerFacade';
 import {
   DATEPICKER_CLASS,
   DATEPICKER_CONTAINER_CLASS,
@@ -7,7 +7,7 @@ import {
   FILTER_DATE_SELECTOR,
   OPENED_CLASS,
   SINGLE_DATEPICKER,
-} from './constants/datepicker';
+} from './constants';
 
 class Datepicker {
   constructor($container) {

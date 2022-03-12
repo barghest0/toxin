@@ -1,5 +1,5 @@
 import 'jquery.maskedinput/src/jquery.maskedinput';
-import { MASK } from './constants/masked-text-field';
+import { MASK } from './constants';
 
 class MaskedTextField {
   constructor($container) {

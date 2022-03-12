@@ -1,6 +1,6 @@
-import Slider from '../libs/range-slider/range-slider';
-import '../libs/range-slider/range-slider.css';
-import { END_PRICE_CLASS, START_PRICE_CLASS } from './constants/range-slider';
+import Slider from '../../../libs/range-slider/range-slider';
+import '../../..//libs/range-slider/range-slider.css';
+import { END_PRICE_CLASS, START_PRICE_CLASS } from './constants';
 
 class RangeSlider {
   constructor(container) {

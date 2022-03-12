@@ -1,8 +1,4 @@
-import {
-  BURGER_CLASS,
-  BURGER_NAV_CLASS,
-  OPEN_BURGER_CLASS,
-} from './constants/header-burger';
+import { BURGER_CLASS, BURGER_NAV_CLASS, OPEN_BURGER_CLASS } from './constants';
 
 class HeaderBurger {
   constructor($container) {

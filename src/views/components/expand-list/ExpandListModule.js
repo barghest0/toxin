@@ -1,4 +1,4 @@
-import { EXPANDED_CLASS } from './constants/expand-list';
+import { EXPANDED_CLASS } from './constants';
 
 class ExpandList {
   constructor($container) {

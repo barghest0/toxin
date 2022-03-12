@@ -1,3 +1,3 @@
-import RangeSlider from '../../../js/RangeSlider';
+import RangeSlider from './RangeSliderModule';
 
 new RangeSlider('.slider');

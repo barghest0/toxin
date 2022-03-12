@@ -1,3 +1,3 @@
-import Like from '../../../js/Like';
+import Like from './LikeModule';
 
 new Like($('.like__custom-input'));

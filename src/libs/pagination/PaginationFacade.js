@@ -1,5 +1,5 @@
 import 'paginationjs';
-import { QUANTITY_PAGES } from '../../js/constants/pagination';
+import { QUANTITY_PAGES } from '../../views/components/pagination/constants';
 
 class PaginationFacade {
   constructor($element) {

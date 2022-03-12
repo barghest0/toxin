@@ -1,4 +1,4 @@
-import ChartFacade from '../libs/chart/ChartFacade';
+import ChartFacade from '../../../libs/chart/ChartFacade';
 
 class Chart {
   constructor(container) {

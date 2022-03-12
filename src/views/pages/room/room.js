@@ -1,5 +1,5 @@
 import '../../components/dropdown/dropdown';
-import '../../components/chart/chart';
+import '../../components/chart/chart.js';
 import '../../components/header/header';
 import '../../components/datepicker/datepicker';
 import '../../components/range-date/range-date';

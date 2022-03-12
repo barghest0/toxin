@@ -1,4 +1,4 @@
-import SwiperFacade from '../libs/swiper/SwiperFacade';
+import SwiperFacade from '../../../libs/swiper/SwiperFacade';
 
 class Slider {
   constructor(container) {

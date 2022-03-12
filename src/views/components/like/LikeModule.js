@@ -1,4 +1,4 @@
-import { LIKED_CLASS } from './constants/like';
+import { LIKED_CLASS } from './constants';
 
 class Like {
   constructor($container) {

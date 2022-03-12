@@ -1,4 +1,4 @@
-import Chart from '../../../js/Chart';
+import Chart from './ChartModule';
 
 const container = document.querySelector('#impressions');
 

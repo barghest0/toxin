@@ -1,4 +1,4 @@
-import { BACKGROUND_CLASS, OPENED_CLASS } from './constants/filter-button';
+import { BACKGROUND_CLASS, OPENED_CLASS } from './constants';
 
 class FilterButton {
   constructor($button) {

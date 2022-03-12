@@ -1,4 +1,4 @@
-import FilterButton from '../../../js/FilterButton';
+import FilterButton from './FilterButtonModule';
 import '../../components/dropdown/dropdown';
 import '../../components/filter-date/filter-date';
 import '../../components/expand-list/expand-list';

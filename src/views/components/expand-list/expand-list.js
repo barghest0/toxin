@@ -1,3 +1,3 @@
-import ExpandList from '../../../js/ExpandList';
+import ExpandList from './ExpandListModule';
 
 new ExpandList($('.expand-list__label'));

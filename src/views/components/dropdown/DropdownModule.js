@@ -15,7 +15,7 @@ import {
   MIN_COUNT,
   NEWBORNS_SELECTOR,
   OPENED_CLASS,
-} from './constants/dropdown';
+} from './constants';
 
 class Dropdown {
   constructor($container) {
