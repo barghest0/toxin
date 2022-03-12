@@ -6,7 +6,7 @@ include ../button/button.pug
 
 mixin preview-room({roomNumber='',id='room',images=[],isLuxury=false,rate=0,price=0,reviews=''}={})
   +card('sm')
-    a.preview-room(href='/room.html')
+    a.preview-room(href='room.html')
       .preview-room__carousel.swiper
         .preview-room__carousel-container.swiper-wrapper 
           each image in images
