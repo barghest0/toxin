@@ -1,11 +1,11 @@
 include ../text-titles/text-titles.pug
 
-mixin toggle({id='toggle',text='',name='offers',state='unchecked'}={})
+mixin toggle({text='',name='offers',state='unchecked'}={})
   label.toggle
     if state === 'checked'
-      input.toggle__input(type='checkbox', name=name, id=id, checked)
+      input.toggle__input(type='checkbox', name=name, checked)
     else
-      input.toggle__input(type='checkbox', name=name, id=id)
+      input.toggle__input(type='checkbox', name=name)
     span.toggle__custom-input(style='')
     .toggle__title=text
      

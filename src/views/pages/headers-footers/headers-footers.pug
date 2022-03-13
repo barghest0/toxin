@@ -9,9 +9,9 @@ block page
   .headers-footers
     .headers-footers__inner
       .headers-footers__header
-        +header({isLogin:false})
+        +header
       .headers-footers__header
-        +header({isLogin:true, name:'Юлий цезарь'})
+        +header({state:"auth", name:'Юлий цезарь'})
       .headers-footers__footer
         +footer
       .headers-footers__footer-inline 

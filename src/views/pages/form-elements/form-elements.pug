@@ -58,25 +58,25 @@ block page
           .form-elements__radio
             .form-elements__selection-label
               +block-label({text:'radio button'})
-            +radio-list({items:[{id:'male', name:'gender', text:'Мужчина', state:'checked'}, {id:'female', name:'gender', text:'Женщина'}] })
+            +radio-list({items:[{name:'gender', text:'Мужчина', state:'checked'}, { name:'gender', text:'Женщина'}]})
           .form-elements__toggle
             .form-elements__selection-label
               +block-label({text:'toggle'})
             .form-elements__toggle-column
-              +toggle({id:'toggle-offers',text:'Получать спецпредложения',name:'toggle-offers',state:'checked'})
-              +toggle({id:'toggle-offers',text:'Получать спецпредложения',name:'toggle-offers'})
+              +toggle({text:'Получать спецпредложения',name:'toggle-offers',state:'checked'})
+              +toggle({text:'Получать спецпредложения',name:'toggle-offers'})
           .form-elements__like
             .form-elements__selection-label
               +block-label({text:'like button'})
             .form-elements__like-row
-              +like({id:'like-1',name:'like',count:2,state:'unchecked'})
-              +like({id:'like-2',name:'like',count:12,state:'checked'})
+              +like({name:'like',count:2,state:'unchecked'})
+              +like({name:'like',count:12,state:'checked'})
           .form-elements__rate
             .form-elements__selection-label
               +block-label({text:'rate button'})
             .form-elements__rate-row
-              +rate({id:'first-rate',name:'first-rate',rate:4})
-              +rate({id:'second-rate',name:'second-rate',rate:5})
+              +rate({name:'1-rate',rate:4})
+              +rate({name:'2-rate',rate:5})
 
         .form-elements__other
           .form-elements__slider
@@ -111,7 +111,7 @@ block page
       .form-elements__lists
         .form-elements__expand-checkbox
           +expand-list({label:'expandable checkbox list', items:expandListData.data})
-          +expand-list({label:'expandable checkbox list',isActive:'active', items:expandListData.data})
+          +expand-list({label:'expandable checkbox list',state:'opened', items:expandListData.data})
         .form-elements__rich-checkbox
           +rich-checkbox-list({label:'rich checkbox buttons', items:checkboxData.rich})
         .form-elements__bullet-list

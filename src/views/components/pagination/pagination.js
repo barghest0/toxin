@@ -1,3 +1,3 @@
 import Pagination from './PaginationModule';
 
-new Pagination($('#pagination'));
+new Pagination($('.pagination'));

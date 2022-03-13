@@ -1,16 +1,16 @@
 include ../logo/logo.pug
 include ../nav/nav.pug
 
-mixin header({isLogin=false,name=''}={})
-  header.header(class=isLogin ? 'header_authorized' : null)
+mixin header({state='guest',name=''}={})
+  header.header(class=`header_${state}`)
     .container
-      .header__inner(class=isLogin ? 'header__inner_authorized' : null)
+      .header__inner(class=`header__inner_${state}`)
         .header__logo
           +logo
         .header__nav
-          +nav({isLogin,name})
+          +nav({state,name})
         .header__burger
           .header__burger-block
             .header__burger-line
           .header__burger-nav
-            +nav({isLogin,name,burger:true})
+            +nav({state,name,burger:true})

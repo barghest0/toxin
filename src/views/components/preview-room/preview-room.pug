@@ -4,7 +4,7 @@ include ../rate/rate.pug
 include ../dropdown/dropdown.pug
 include ../button/button.pug
 
-mixin preview-room({roomNumber='',id='room',images=[],isLuxury=false,rate=0,price=0,reviews=''}={})
+mixin preview-room({roomNumber='',id='0',images=[],isLuxury=false,rate=0,price=0,reviews=''}={})
   +card('sm')
     a.preview-room(href='room.html')
       .preview-room__carousel.swiper

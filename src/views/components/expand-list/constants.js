@@ -1,3 +1,3 @@
-const EXPANDED_CLASS = 'active';
+const EXPANDED_CLASS = 'open';
 
 export { EXPANDED_CLASS };

@@ -20,7 +20,7 @@ mixin register-card({title='Регистрация аккаунта'}={})
           .register-card__block-field
             +default-text-field({placeholder:'Фамилия', name:'surname'})
           .register-card__block-field 
-            +radio-list({items:[{id:'male', name:'gender', text:'Мужчина', state:'checked'}, {id:'female', name:'gender', text:'Женщина'}]})
+            +radio-list({items:[{name:'gender', text:'Мужчина', state:'checked'}, {name:'gender', text:'Женщина'}]})
         .register-card__block
           .register-card__block-field
             +masked-text-field({label:'Дата рождения', placeholder:'ДД.ММ.ГГГГ', name:'birthday',id:'masked-text-field-2'})

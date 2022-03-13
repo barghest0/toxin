@@ -7,4 +7,4 @@ mixin checkbox-list({label='checkboxes',items=[]}={})
       +block-label({text:label})
     each item in items
       .checkbox-list__item
-        +checkbox({text:item['text'],state:item['state'],name:item['name'],id:item['id']})
+        +checkbox({text:item['text'],state:item['state'],name:item['name']})

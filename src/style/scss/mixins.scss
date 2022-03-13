@@ -55,7 +55,7 @@
 }
 
 @mixin md-desktop {
-  @media (max-width: 1110px) {
+  @media (max-width: 1200px) {
     @content;
   }
 }

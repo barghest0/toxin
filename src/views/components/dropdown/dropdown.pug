@@ -10,7 +10,7 @@ mixin dropdown({label='', subLabel='',size='lg', type='guests', data={},state=''
       +block-label({text:label})
       if subLabel
         +block-sub-label({text:subLabel})
-    .dropdown__container.dropdown-container.js-dropdown-container(class=state==="opened"?'open':'' data-type=type)
+    .dropdown__container.dropdown-container.js-dropdown-container(class=state === "opened"? 'open': '' data-type=type)
       .dropdown__field
       .dropdown__list 
         each listItem in data

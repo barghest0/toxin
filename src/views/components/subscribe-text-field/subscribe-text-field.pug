@@ -1,13 +1,12 @@
 include ../text-field/text-field.pug
 
-mixin subscribe-text-field({label="", id='subscribe-text-field', name="", placeholder='', type='text', value=""}={})
+mixin subscribe-text-field({label="", name="", placeholder='', type='text', value=""}={})
   +text-field({label})
     .subscribe-text-field
       form.subscribe-text-field__form
         input.subscribe-text-field__input(
           type='email',
           name=name,
-          id=id,
           placeholder=placeholder
         )
         button.subscribe-text-field__arrow(type='submit')

@@ -1,8 +1,8 @@
-mixin checkbox({text='',state='',name='',id=''}={})
+mixin checkbox({text='',state='',name=''}={})
   label.checkbox
     if state === 'checked'
-      input.checkbox__input(type='checkbox', name=name, id=id, checked=state)
+      input.checkbox__input(type='checkbox', name=name, checked=state)
     else
-      input.checkbox__input(type='checkbox', name=name, id=id)
+      input.checkbox__input(type='checkbox', name=name)
     span.checkbox__custom-input
     .checkbox__title= text
