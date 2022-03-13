@@ -32,26 +32,16 @@
     grid-column-start: 1;
   }
 
-  &__field-labels {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
+  &__text-field {
+    margin-bottom: 20px;
   }
 
-  &__text-field {
+  &__dropdown {
     margin-bottom: 20px;
   }
 
   &__masked-text-field {
     margin-bottom: 40px;
-  }
-
-  &__subscribe-field {
-    max-width: 266px;
-  }
-
-  &__dropdown {
-    margin-bottom: 20px;
   }
 
   &__range-date {
@@ -60,6 +50,10 @@
 
   &__filter-date {
     margin-bottom: 40px;
+    max-width: 266px;
+  }
+
+  &__subscribe-field {
     max-width: 266px;
   }
 
@@ -116,7 +110,7 @@
 
   &__buttons {
     margin-bottom: 40px;
-    &-small {
+    &_small {
       display: grid;
       grid-template-columns: repeat(2, 100px);
       grid-template-rows: repeat(2, 45px);
@@ -124,18 +118,18 @@
       grid-column-gap: 30px;
       margin-bottom: 30px;
     }
-    &-no-bordered {
+    &_no-bordered {
       display: flex;
       column-gap: 20px;
       margin-bottom: 30px;
     }
 
-    &-largest {
+    &_largest {
       height: 44px;
     }
   }
 
-  &__pagination{
+  &__pagination {
     width: 240px;
   }
 
