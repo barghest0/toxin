@@ -1,6 +1,7 @@
 @import './mixins';
 @import './vars';
 @import './fonts';
+@import './text-titles';
 
 html {
   line-height: $main-line-height;
@@ -15,7 +16,6 @@ html {
   @media screen and(max-width:$table-width) {
     font-size: 12px;
   }
-
 }
 
 *,

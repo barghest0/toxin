@@ -18,7 +18,7 @@ mixin preview-room({roomNumber='',id='room',images=[],isLuxury=false,rate=0,pric
         .preview-room__info
           +card-room-info({roomNumber,isLuxury,price,size:'sm'})
         .preview-room__reviews
-          +rate({id:`${id}-rate`,name:`${id}-rate`,rate})
+          +rate({name:`${id}-rate`,rate})
           .preview-room__reviews-value
             span.preview-room__reviews-number= reviews
             span.preview-room__reviews-text Отзывов

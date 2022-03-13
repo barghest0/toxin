@@ -11,7 +11,7 @@ block page
   include ../../components/filter-date/filter-date.pug
   include ../../components/subscribe-text-field/subscribe-text-field.pug
   include ../../components/checkbox-list/checkbox-list.pug
-  include ../../components/text-titles/text-titles.pug
+  include ../../components/block-label/block-label.pug
   include ../../components/radio-list/radio-list.pug
   include ../../components/toggle/toggle.pug
   include ../../components/like/like.pug
@@ -32,6 +32,7 @@ block page
   - const reviewListData = require('../../../data/review-list-data')
   - const bulletListData = require('../../../data/bullet-list')
   - const feedbackData = require('../../../data/feedback-data')
+
   .form-elements
     .container
       .form-elements__inputs
@@ -100,13 +101,13 @@ block page
 
       .form-elements__dropdowns
         .form-elements__dropdown.form-elements__dropdown_apartments
-          +dropdown({label:'dropdown',subLabel:'default',size:'md', type:'apartments',data:apartmentsDropdownData.data})
+          +dropdown({label:'dropdown',subLabel:'default',size:'md', type:'apartments', data:apartmentsDropdownData.data})
         .form-elements__dropdown.form-elements__dropdown_apartments
-          +dropdown({label:'dropdown',subLabel:'expanded',size:'md', type:'apartments',data:apartmentsDropdownData.data, state:'opened'})
+          +dropdown({label:'dropdown',subLabel:'expanded',size:'md', type:'apartments', data:apartmentsDropdownData.data, state:'opened'})
         .form-elements__dropdown.form-elements__dropdown_guests.form-elements__dropdown_cleared
           +dropdown({label:'dropdown',type:'guests', data:guestDropdownData.clear, state:'opened'} )
         .form-elements__dropdown.form-elements__dropdown_guests
-          +dropdown({label:'dropdown',type:'guests', data:guestDropdownData.withoutChildren,state:'opened'})
+          +dropdown({label:'dropdown',type:'guests', data:guestDropdownData.withoutChildren, state:'opened'})
       .form-elements__lists
         .form-elements__expand-checkbox
           +expand-list({label:'expandable checkbox list', items:expandListData.data})

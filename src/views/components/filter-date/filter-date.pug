@@ -1,4 +1,3 @@
-include ../text-titles/text-titles.pug
 include ../datepicker/datepicker.pug
 
 mixin filter-date({label='', dateFrom="", dateTo="",  placeholder=''}={})
@@ -23,7 +22,6 @@ mixin filter-date({label='', dateFrom="", dateTo="",  placeholder=''}={})
     const toMonth = months[dateFromObject.getMonth()]
     const shortDateFrom = `${dateFromObject.getDate()} ${fromMonth}`
     const shortDateTo = `${dateToObject.getDate()} ${toMonth}`
-
 
   +text-field({label})
     .filter-date.datepicker-container.js-datepicker-container

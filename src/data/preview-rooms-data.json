@@ -1,8 +1,8 @@
 {
   "data": [
     {
-      "roomNumber": 888,
       "id": 1,
+      "roomNumber": 888,
       "images": [
         "preview-room1.png",
         "preview-room1.png",
@@ -15,8 +15,8 @@
       "reviews": 145
     },
     {
-      "roomNumber": 840,
       "id": 2,
+      "roomNumber": 840,
       "images": [
         "preview-room2.png",
         "preview-room2.png",
@@ -29,8 +29,8 @@
       "reviews": 65
     },
     {
-      "roomNumber": 880,
       "id": 3,
+      "roomNumber": 880,
       "images": [
         "preview-room3.png",
         "preview-room3.png",
@@ -43,8 +43,8 @@
       "reviews": 35
     },
     {
-      "roomNumber": 888,
       "id": 4,
+      "roomNumber": 888,
       "images": [
         "preview-room1.png",
         "preview-room1.png",
@@ -57,8 +57,8 @@
       "reviews": 145
     },
     {
-      "roomNumber": 840,
       "id": 5,
+      "roomNumber": 840,
       "images": [
         "preview-room2.png",
         "preview-room2.png",
@@ -71,8 +71,8 @@
       "reviews": 65
     },
     {
-      "roomNumber": 880,
       "id": 6,
+      "roomNumber": 880,
       "images": [
         "preview-room3.png",
         "preview-room3.png",
@@ -85,8 +85,8 @@
       "reviews": 35
     },
     {
-      "roomNumber": 888,
       "id": 7,
+      "roomNumber": 888,
       "images": [
         "preview-room1.png",
         "preview-room1.png",
@@ -99,8 +99,8 @@
       "reviews": 145
     },
     {
-      "roomNumber": 840,
       "id": 8,
+      "roomNumber": 840,
       "images": [
         "preview-room2.png",
         "preview-room2.png",
@@ -113,8 +113,8 @@
       "reviews": 65
     },
     {
-      "roomNumber": 880,
       "id": 9,
+      "roomNumber": 880,
       "images": [
         "preview-room3.png",
         "preview-room3.png",
@@ -127,8 +127,8 @@
       "reviews": 35
     },
     {
-      "roomNumber": 888,
       "id": 10,
+      "roomNumber": 888,
       "images": [
         "preview-room1.png",
         "preview-room1.png",
@@ -141,8 +141,8 @@
       "reviews": 145
     },
     {
-      "roomNumber": 840,
       "id": 11,
+      "roomNumber": 840,
       "images": [
         "preview-room2.png",
         "preview-room2.png",
@@ -155,8 +155,8 @@
       "reviews": 65
     },
     {
-      "roomNumber": 880,
       "id": 12,
+      "roomNumber": 880,
       "images": [
         "preview-room3.png",
         "preview-room3.png",

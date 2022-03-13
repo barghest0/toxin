@@ -1,7 +1,10 @@
-include ../text-titles/text-titles.pug
 include ../button/button.pug
+include ../block-sub-label/block-sub-label.pug
+include ../block-label/block-label.pug
+
 
 mixin dropdown({label='', subLabel='',size='lg', type='guests', data={},state=''}={})
+  
   .dropdown
     .dropdown__labels
       +block-label({text:label})
