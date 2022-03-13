@@ -1,3 +1,4 @@
+import { FIELD_SELECTOR } from './constants';
 import MaskedTextField from './MaskedTextFieldModule';
 
-new MaskedTextField($('.js-masked-text-field'));
+new MaskedTextField($(FIELD_SELECTOR));

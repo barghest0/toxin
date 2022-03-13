@@ -1,4 +1,6 @@
-const BACKGROUND_CLASS = 'search-room__filters';
+const BACKGROUND_SELECTOR = '.search-room__filters';
+const FILTER_BUTTON_SELECTOR = '.js-search-room__filter-icon';
+
 const OPENED_CLASS = 'active';
-const FILTER_BUTTON_CLASS = 'js-search-room__filter-icon';
-export { BACKGROUND_CLASS, OPENED_CLASS, FILTER_BUTTON_CLASS };
+
+export { BACKGROUND_SELECTOR, OPENED_CLASS, FILTER_BUTTON_SELECTOR };

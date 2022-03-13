@@ -1,6 +1,6 @@
 import Chart from './ChartModule';
-import { CONTAINER_CLASS } from './constants';
+import { CONTAINER_SELECTOR } from './constants';
 
-const container = document.querySelector(`.${CONTAINER_CLASS}`);
+const container = document.querySelector(CONTAINER_SELECTOR);
 
 new Chart(container);

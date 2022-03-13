@@ -1,4 +1,4 @@
-import { PAGINATION_CLASS } from './constants';
+import { PAGINATION_SELECTOR } from './constants';
 import Pagination from './PaginationModule';
 
-new Pagination($(`.${PAGINATION_CLASS}`));
+new Pagination($(PAGINATION_SELECTOR));

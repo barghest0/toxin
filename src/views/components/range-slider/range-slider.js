@@ -1,4 +1,4 @@
-import { RANGE_SLIDER_CLASS } from './constants';
+import { RANGE_SLIDER_SELECTOR } from './constants';
 import RangeSlider from './RangeSliderModule';
 
-new RangeSlider(`.${RANGE_SLIDER_CLASS}`);
+new RangeSlider(RANGE_SLIDER_SELECTOR);

@@ -1,5 +1,5 @@
 import HeaderBurger from './HeaderBurgerModule';
 import '../logo/logo';
-import { BURGER_CLASS } from './constants';
+import { BURGER_SELECTOR } from './constants';
 
-new HeaderBurger($(`.${BURGER_CLASS}`));
+new HeaderBurger($(BURGER_SELECTOR));

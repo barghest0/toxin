@@ -1,4 +1,4 @@
 const LIKED_CLASS = 'active';
-const LIKE_CLASS = 'js-like__custom-input';
+const LIKE_BUTTON_SELECTOR = '.js-like__custom-input';
 
-export { LIKED_CLASS, LIKE_CLASS };
+export { LIKED_CLASS, LIKE_BUTTON_SELECTOR };

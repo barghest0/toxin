@@ -1,4 +1,4 @@
-import { LIKE_CLASS } from './constants';
+import { LIKE_BUTTON_SELECTOR } from './constants';
 import Like from './LikeModule';
 
-new Like($(`.${LIKE_CLASS}`));
+new Like($(LIKE_BUTTON_SELECTOR));

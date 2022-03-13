@@ -1,16 +1,16 @@
 import {
-  APPLY_BUTTON_CLASS,
+  APPLY_BUTTON_SELECTOR,
   BATHROOMS_SELECTOR,
   BEDROOMS_SELECTOR,
   BEDS_SELECTOR,
-  CLEAR_BUTTON_CLASS,
-  CONTAINER_CLASS,
-  COUNTER_CLASS,
-  DECREMENT_CLASS,
-  FIELD_CLASS,
+  CLEAR_BUTTON_SELECTOR,
+  CONTAINER_SELECTOR,
+  COUNTER_SELECTOR,
+  DECREMENT_SELECTOR,
+  FIELD_SELECTOR,
   GUESTS_TYPE,
-  INCREMENT_CLASS,
-  LIST_CLASS,
+  INCREMENT_SELECTOR,
+  LIST_SELECTOR,
   MAX_COUNT,
   MIN_COUNT,
   NEWBORNS_SELECTOR,
@@ -51,22 +51,22 @@ class Dropdown {
   }
 
   setList() {
-    this.$list = this.$container.find(`.${LIST_CLASS}`);
+    this.$list = this.$container.find(LIST_SELECTOR);
   }
 
   setField() {
-    this.$field = this.$container.find(`.${FIELD_CLASS}`);
+    this.$field = this.$container.find(FIELD_SELECTOR);
   }
 
   setTools() {
-    this.$counters = this.$container.find(`.${COUNTER_CLASS}`);
-    this.$increment = this.$container.find(`.${INCREMENT_CLASS}`);
-    this.$decrement = this.$container.find(`.${DECREMENT_CLASS}`);
+    this.$counters = this.$container.find(COUNTER_SELECTOR);
+    this.$increment = this.$container.find(INCREMENT_SELECTOR);
+    this.$decrement = this.$container.find(DECREMENT_SELECTOR);
   }
 
   setButtons() {
-    this.$clear = this.$container.find(`.${CLEAR_BUTTON_CLASS}`);
-    this.$apply = this.$container.find(`.${APPLY_BUTTON_CLASS}`);
+    this.$clear = this.$container.find(CLEAR_BUTTON_SELECTOR);
+    this.$apply = this.$container.find(APPLY_BUTTON_SELECTOR);
   }
 
   calculateTotalCount() {
@@ -103,11 +103,11 @@ class Dropdown {
     this.$counters.each(index => {
       const counter = this.$counters[index];
       if (Number(counter.innerHTML) === MIN_COUNT) {
-        this.disableElement($(counter).siblings(`.${DECREMENT_CLASS}`));
+        this.disableElement($(counter).siblings(DECREMENT_SELECTOR));
       }
 
       if (Number(counter.innerHTML) === MAX_COUNT) {
-        this.disableElement($(counter).siblings(`.${INCREMENT_CLASS}`));
+        this.disableElement($(counter).siblings(INCREMENT_SELECTOR));
       }
     });
   }
@@ -137,7 +137,7 @@ class Dropdown {
   }
 
   closeDropdownListAfterDocumentClick(event) {
-    if (!event.target.closest(`.${CONTAINER_CLASS}`)) {
+    if (!event.target.closest(CONTAINER_SELECTOR)) {
       this.$container.removeClass(OPENED_CLASS);
     }
   }
@@ -151,8 +151,8 @@ class Dropdown {
     event.stopPropagation();
 
     const $target = $(event.target);
-    const $counter = $target.siblings(`.${COUNTER_CLASS}`);
-    const decrementElement = $target.siblings(`.${DECREMENT_CLASS}`);
+    const $counter = $target.siblings(COUNTER_SELECTOR);
+    const decrementElement = $target.siblings(DECREMENT_SELECTOR);
     let counterNumber = Number($counter.text());
 
     this.enableElement(decrementElement);
@@ -173,8 +173,8 @@ class Dropdown {
     event.stopPropagation();
 
     const $target = $(event.target);
-    const $counter = $target.siblings(`.${COUNTER_CLASS}`);
-    const incrementElement = $target.siblings(`.${INCREMENT_CLASS}`);
+    const $counter = $target.siblings(COUNTER_SELECTOR);
+    const incrementElement = $target.siblings(INCREMENT_SELECTOR);
 
     let counterNumber = Number($counter.text());
 
@@ -210,7 +210,7 @@ class Dropdown {
     text.push(`${this.totalCount} гост${this.getGuestEnding()}`);
 
     const children = Number(
-      this.$container.find(NEWBORNS_SELECTOR).find(`.${COUNTER_CLASS}`).text(),
+      this.$container.find(NEWBORNS_SELECTOR).find(COUNTER_SELECTOR).text(),
     );
 
     if (children) {
@@ -242,13 +242,13 @@ class Dropdown {
 
   setApartmentsFieldText() {
     const bedrooms = Number(
-      this.$container.find(BEDROOMS_SELECTOR).find(`.${COUNTER_CLASS}`).text(),
+      this.$container.find(BEDROOMS_SELECTOR).find(COUNTER_SELECTOR).text(),
     );
     const beds = Number(
-      this.$container.find(BEDS_SELECTOR).find(`.${COUNTER_CLASS}`).text(),
+      this.$container.find(BEDS_SELECTOR).find(COUNTER_SELECTOR).text(),
     );
     const bathrooms = Number(
-      this.$container.find(BATHROOMS_SELECTOR).find(`.${COUNTER_CLASS}`).text(),
+      this.$container.find(BATHROOMS_SELECTOR).find(COUNTER_SELECTOR).text(),
     );
     let text = [];
 
@@ -266,10 +266,7 @@ class Dropdown {
 
     let textString = text.join(', ');
 
-    if (textString.length > 20) {
-      textString = textString.slice(0, 20);
-      textString += '...';
-    }
+
 
     this.$field.text(textString);
   }

@@ -1,4 +1,4 @@
-import { BACKGROUND_CLASS, OPENED_CLASS } from './constants';
+import { BACKGROUND_SELECTOR, OPENED_CLASS } from './constants';
 
 class FilterButton {
   constructor($button) {
@@ -12,7 +12,7 @@ class FilterButton {
   }
 
   setBackground() {
-    this.$background = this.$button.siblings(`.${BACKGROUND_CLASS}`);
+    this.$background = this.$button.siblings(BACKGROUND_SELECTOR);
   }
 
   attachListeners() {
@@ -26,7 +26,7 @@ class FilterButton {
 
   handleBackgroundClick(event) {
     if (event.target.classList.contains(BACKGROUND_CLASS)) {
-      this.$background.removeClass('active');
+      this.$background.removeClass(OPENED_CLASS);
     }
   }
 }

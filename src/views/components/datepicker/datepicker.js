@@ -1,6 +1,6 @@
-import { CONTAINER_CLASS } from './constants';
+import { CONTAINER_SELECTOR } from './constants';
 import Datepicker from './DatepickerModule';
 
-$(`.${CONTAINER_CLASS}`).each(function () {
+$(CONTAINER_SELECTOR).each(function () {
   new Datepicker($(this));
 });

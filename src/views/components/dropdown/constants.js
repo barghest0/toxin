@@ -2,19 +2,19 @@ const GUESTS_TYPE = 'guests';
 const APARTMENTS_TYPE = 'apartments';
 
 const OPENED_CLASS = 'open';
-const CONTAINER_CLASS = 'js-dropdown-container';
-const LIST_CLASS = 'js-dropdown__list';
-const FIELD_CLASS = 'js-dropdown__field';
 
-const LIST_ITEM_CLASS = 'js-dropdown__list-item';
-const LIST_ITEM_TITLE_CLASS = 'js-dropdown__list-item-title';
-const LIST_ITEM_TOOLS_CLASS = 'js-dropdown__list-item-tools';
-const DECREMENT_CLASS = 'js-dropdown__list-decrement';
-const INCREMENT_CLASS = 'js-dropdown__list-increment';
-const COUNTER_CLASS = 'js-dropdown__list-counter';
-const APPLY_BUTTON_CLASS = 'js-dropdown__apply-button';
-const CLEAR_BUTTON_CLASS = 'js-dropdown__clear-button';
-const SINGLE_ELEMENT = 0;
+const CONTAINER_SELECTOR = '.js-dropdown-container';
+const LIST_SELECTOR = '.js-dropdown__list';
+const FIELD_SELECTOR = '.js-dropdown__field';
+
+const LIST_ITEM_SELECTOR = '.js-dropdown__list-item';
+const LIST_ITEM_TITLE_SELECTOR = '.js-dropdown__list-item-title';
+const LIST_ITEM_TOOLS_SELECTOR = '.js-dropdown__list-item-tools';
+const DECREMENT_SELECTOR = '.js-dropdown__list-decrement';
+const INCREMENT_SELECTOR = '.js-dropdown__list-increment';
+const COUNTER_SELECTOR = '.js-dropdown__list-counter';
+const APPLY_BUTTON_SELECTOR = '.js-dropdown__apply-button';
+const CLEAR_BUTTON_SELECTOR = '.js-dropdown__clear-button';
 
 const NEWBORNS_SELECTOR = '[data-name="newborns"]';
 const BEDROOMS_SELECTOR = '[data-name="bedrooms"]';
@@ -28,20 +28,19 @@ export {
   GUESTS_TYPE,
   APARTMENTS_TYPE,
   OPENED_CLASS,
-  CONTAINER_CLASS,
-  LIST_CLASS,
-  LIST_ITEM_CLASS,
-  LIST_ITEM_TOOLS_CLASS,
-  DECREMENT_CLASS,
-  INCREMENT_CLASS,
-  COUNTER_CLASS,
+  CONTAINER_SELECTOR,
+  LIST_SELECTOR,
+  LIST_ITEM_SELECTOR,
+  LIST_ITEM_TOOLS_SELECTOR,
+  DECREMENT_SELECTOR,
+  INCREMENT_SELECTOR,
+  COUNTER_SELECTOR,
   MAX_COUNT,
   MIN_COUNT,
-  APPLY_BUTTON_CLASS,
-  CLEAR_BUTTON_CLASS,
-  SINGLE_ELEMENT,
-  FIELD_CLASS,
-  LIST_ITEM_TITLE_CLASS,
+  APPLY_BUTTON_SELECTOR,
+  CLEAR_BUTTON_SELECTOR,
+  FIELD_SELECTOR,
+  LIST_ITEM_TITLE_SELECTOR,
   NEWBORNS_SELECTOR,
   BEDROOMS_SELECTOR,
   BEDS_SELECTOR,

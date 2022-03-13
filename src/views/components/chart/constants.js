@@ -1,3 +1,3 @@
-const CONTAINER_CLASS = 'js-chart__impressions';
+const CONTAINER_SELECTOR = '.js-chart__impressions';
 
-export { CONTAINER_CLASS };
+export { CONTAINER_SELECTOR };

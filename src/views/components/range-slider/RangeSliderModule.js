@@ -1,6 +1,11 @@
 import Slider from '../../../libs/range-slider/range-slider';
 import '../../..//libs/range-slider/range-slider.css';
-import { END_PRICE_CLASS, START_PRICE_CLASS } from './constants';
+import {
+  END_PRICE_SELECTOR,
+  FIRST_VALUE,
+  SECOND_VALUE,
+  START_PRICE_SELECTOR,
+} from './constants';
 
 class RangeSlider {
   constructor(container) {
@@ -15,8 +20,8 @@ class RangeSlider {
   }
 
   setInputs() {
-    this.$startPrice = $(this.container).find(`.${START_PRICE_CLASS}`);
-    this.$endPrice = $(this.container).find(`.${END_PRICE_CLASS}`);
+    this.$startPrice = $(this.container).find(START_PRICE_SELECTOR);
+    this.$endPrice = $(this.container).find(END_PRICE_SELECTOR);
   }
 
   setParams() {
@@ -32,8 +37,8 @@ class RangeSlider {
   }
 
   handleChange({ value }) {
-    this.$startPrice.html(value[0].toFixed() + ' ₽');
-    this.$endPrice.html(value[1].toFixed() + ' ₽');
+    this.$startPrice.html(value[FIRST_VALUE].toFixed() + ' ₽');
+    this.$endPrice.html(value[SECOND_VALUE].toFixed() + ' ₽');
   }
 
   createSlider() {

@@ -1,4 +1,4 @@
-import { BURGER_CLASS, BURGER_NAV_CLASS, OPEN_BURGER_CLASS } from './constants';
+import { BURGER_SELECTOR, BURGER_NAV_SELECTOR, OPEN_BURGER_CLASS } from './constants';
 
 class HeaderBurger {
   constructor($container) {
@@ -12,7 +12,7 @@ class HeaderBurger {
   }
 
   setBurgerNav() {
-    this.$burgerNav = this.$container.find(`.${BURGER_NAV_CLASS}`);
+    this.$burgerNav = this.$container.find(BURGER_NAV_SELECTOR);
   }
 
   attachListeners() {
@@ -22,11 +22,11 @@ class HeaderBurger {
 
   handleBurgerClick(event) {
     $(event.currentTarget).toggleClass(OPEN_BURGER_CLASS);
-    $(`.${BURGER_NAV_CLASS}`).toggleClass(OPEN_BURGER_CLASS);
+    $(BURGER_NAV_SELECTOR).toggleClass(OPEN_BURGER_CLASS);
   }
 
   closeBurgerAfterDocumentClick(event) {
-    if (!event.target.closest(`.${BURGER_CLASS}`)) {
+    if (!event.target.closest(BURGER_SELECTOR)) {
       this.$container.removeClass(OPEN_BURGER_CLASS);
     }
   }

@@ -1,4 +1,4 @@
 const EXPANDED_CLASS = 'open';
-const LABEL_CLASS = 'js-expand-list__label';
+const LABEL_SELECTOR = '.js-expand-list__label';
 
-export { EXPANDED_CLASS, LABEL_CLASS };
+export { EXPANDED_CLASS, LABEL_SELECTOR };
