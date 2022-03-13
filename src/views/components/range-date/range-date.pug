@@ -5,7 +5,7 @@ mixin range-date({from='Прибытие', to='Выезд', dateFrom='', dateTo=
     .range-date__fields
       +text-field({label:from})
         .range-date__field
-          input.range-date__input.range-date__input_from(
+          input.range-date__input.js-range-date__input_from.range-date__input_from(
             name=name,
             placeholder='ДД.ММ.ГГГГ',
             autocomplete='off',
@@ -13,7 +13,7 @@ mixin range-date({from='Прибытие', to='Выезд', dateFrom='', dateTo=
           )
       +text-field({label:to})
         .range-date__field
-          input.range-date__input.range-date__input_to(
+          input.range-date__input.js-range-date__input_to.range-date__input_to(
             name=name,
             placeholder='ДД.ММ.ГГГГ',
             autocomplete='off',

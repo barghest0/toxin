@@ -1,10 +1,10 @@
 import DatepickerFacade from '../../../libs/air-datepicker/DatepickerFacade';
 import {
   DATEPICKER_CLASS,
-  DATEPICKER_CONTAINER_CLASS,
-  DATE_FROM_SELECTOR,
-  DATE_TO_SELECTOR,
-  FILTER_DATE_SELECTOR,
+  CONTAINER_CLASS,
+  DATE_FROM_CLASS,
+  DATE_TO_CLASS,
+  FILTER_DATE_CLASS,
   OPENED_CLASS,
   SINGLE_DATEPICKER,
 } from './constants';
@@ -24,9 +24,9 @@ class Datepicker {
   }
 
   setInputs() {
-    this.$dateFrom = this.$container.find(DATE_FROM_SELECTOR);
-    this.$dateTo = this.$container.find(DATE_TO_SELECTOR);
-    const $filterDate = this.$container.find(FILTER_DATE_SELECTOR);
+    this.$dateFrom = this.$container.find(`.${DATE_FROM_CLASS}`);
+    this.$dateTo = this.$container.find(`.${DATE_TO_CLASS}`);
+    const $filterDate = this.$container.find(`.${FILTER_DATE_CLASS}`);
 
     if (!this.$dateTo.length) {
       this.$dateFrom = $filterDate;
@@ -54,7 +54,7 @@ class Datepicker {
   }
 
   closeDatepickerAfterDocumentClick(e) {
-    if (!e.target.closest(`.${DATEPICKER_CONTAINER_CLASS}`)) {
+    if (!e.target.closest(`.${CONTAINER_CLASS}`)) {
       this.datepicker.classList.remove(OPENED_CLASS);
       this.$container.removeClass(OPENED_CLASS);
     }

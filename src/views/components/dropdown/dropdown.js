@@ -1,6 +1,6 @@
-
+import { CONTAINER_CLASS } from './constants';
 import Dropdown from './DropdownModule';
 
-$('.js-dropdown-container').each(function () {
+$(`.${CONTAINER_CLASS}`).each(function () {
   new Dropdown($(this));
 });

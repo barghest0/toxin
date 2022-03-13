@@ -1,3 +1,4 @@
 const QUANTITY_PAGES = 180;
+const PAGINATION_CLASS = 'js-pagination';
 
-export { QUANTITY_PAGES };
+export { QUANTITY_PAGES, PAGINATION_CLASS };

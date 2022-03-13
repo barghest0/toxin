@@ -1,4 +1,3 @@
-import FilterButton from './FilterButtonModule';
 import '../../components/dropdown/dropdown';
 import '../../components/filter-date/filter-date';
 import '../../components/expand-list/expand-list';
@@ -12,4 +11,7 @@ import './images/filter-icon.svg';
 
 import './search-room.scss';
 
-new FilterButton($('.search-room__filter-icon'));
+import FilterButton from './FilterButtonModule';
+import { FILTER_BUTTON_CLASS } from './constants';
+
+new FilterButton($(`.${FILTER_BUTTON_CLASS}`));

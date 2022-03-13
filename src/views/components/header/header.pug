@@ -9,8 +9,8 @@ mixin header({state='guest',name=''}={})
           +logo
         .header__nav
           +nav({state,name})
-        .header__burger
+        .header__burger.js-header__burger
           .header__burger-block
             .header__burger-line
-          .header__burger-nav
+          .header__burger-nav.js-header__burger-nav
             +nav({state,name,burger:true})

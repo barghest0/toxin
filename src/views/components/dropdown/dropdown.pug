@@ -4,25 +4,24 @@ include ../block-label/block-label.pug
 
 
 mixin dropdown({label='', subLabel='',size='lg', type='guests', data={},state=''}={})
-  
   .dropdown
     .dropdown__labels
       +block-label({text:label})
       if subLabel
         +block-sub-label({text:subLabel})
     .dropdown__container.dropdown-container.js-dropdown-container(class=state === "opened"? 'open': '' data-type=type)
-      .dropdown__field
-      .dropdown__list 
+      .dropdown__field.js-dropdown__field
+      .dropdown__list.js-dropdown__list
         each listItem in data
-            .dropdown__list-item(data-name=listItem.name)
-              .dropdown__list-item-title=listItem.title
-              .dropdown__list-item-tools
-                .dropdown__list-decrement -
-                .dropdown__list-counter=listItem.count
-                .dropdown__list-increment +
+            .dropdown__list-item.js-dropdown__list-item(data-name=listItem.name)
+              .dropdown__list-item-title.js-dropdown__list-item-title=listItem.title
+              .dropdown__list-item-tools.js-dropdown__list-item-tools
+                .dropdown__list-decrement.js-dropdown__list-decrement -
+                .dropdown__list-counter.js-dropdown__list-counter=listItem.count
+                .dropdown__list-increment.js-dropdown__list-increment +
         if(size==='lg')
           .dropdown__buttons
-            .dropdown__clear-button 
+            .dropdown__clear-button.js-dropdown__clear-button
               +button({type:'no-bordered',text:'Очистить'}) 
-            .dropdown__apply-button 
+            .dropdown__apply-button.js-dropdown__apply-button  
               +button({type:'no-bordered',text:'Применить'}) 

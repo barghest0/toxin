@@ -26,7 +26,7 @@ mixin filter-date({label='', dateFrom="", dateTo="",  placeholder=''}={})
   +text-field({label})
     .filter-date.datepicker-container.js-datepicker-container
       .filter-date__field
-        input.filter-date__input(
+        input.filter-date__input.js-filter-date__input(
           name=name,
           data-range='true',
           value=dateTo && dateFrom ?  `${shortDateFrom} - ${shortDateTo} `: 'Выберите дату',

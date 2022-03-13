@@ -3,21 +3,20 @@ const APARTMENTS_TYPE = 'apartments';
 
 const OPENED_CLASS = 'open';
 const CONTAINER_CLASS = 'js-dropdown-container';
-const LIST_CLASS = 'dropdown__list';
-const FIELD_CLASS = 'dropdown__field';
+const LIST_CLASS = 'js-dropdown__list';
+const FIELD_CLASS = 'js-dropdown__field';
 
-const LIST_ITEM_CLASS = 'dropdown__list-item';
-const LIST_ITEM_TITLE_CLASS = 'dropdown__list-item-title';
-const LIST_ITEM_TOOLS_CLASS = 'dropdown__list-item-tools';
-const DECREMENT_CLASS = 'dropdown__list-decrement';
-const INCREMENT_CLASS = 'dropdown__list-increment';
-const COUNTER_CLASS = 'dropdown__list-counter';
-const APPLY_BUTTON_CLASS = 'dropdown__apply-button';
-const CLEAR_BUTTON_CLASS = 'dropdown__clear-button';
+const LIST_ITEM_CLASS = 'js-dropdown__list-item';
+const LIST_ITEM_TITLE_CLASS = 'js-dropdown__list-item-title';
+const LIST_ITEM_TOOLS_CLASS = 'js-dropdown__list-item-tools';
+const DECREMENT_CLASS = 'js-dropdown__list-decrement';
+const INCREMENT_CLASS = 'js-dropdown__list-increment';
+const COUNTER_CLASS = 'js-dropdown__list-counter';
+const APPLY_BUTTON_CLASS = 'js-dropdown__apply-button';
+const CLEAR_BUTTON_CLASS = 'js-dropdown__clear-button';
 const SINGLE_ELEMENT = 0;
 
 const NEWBORNS_SELECTOR = '[data-name="newborns"]';
-
 const BEDROOMS_SELECTOR = '[data-name="bedrooms"]';
 const BEDS_SELECTOR = '[data-name="beds"]';
 const BATHROOMS_SELECTOR = '[data-name="bathrooms"]';

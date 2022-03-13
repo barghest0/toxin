@@ -4,7 +4,7 @@ include ../block-label/block-label.pug
 
 mixin expand-list({label='',state='',items={}}={})
   .expand-list
-    .expand-list__label
+    .expand-list__label.js-expand-list__label
       +block-label({text:label})
     .expand-list__items(class=state==="opened"? 'open': '')
       each item in items 

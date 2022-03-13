@@ -1,3 +1,4 @@
+import { LABEL_CLASS } from './constants';
 import ExpandList from './ExpandListModule';
 
-new ExpandList($('.expand-list__label'));
+new ExpandList($(`.${LABEL_CLASS}`));
