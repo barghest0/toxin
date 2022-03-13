@@ -1,0 +1,6 @@
+{
+  "data": [
+    { "name": "gender", "text": "Мужчина", "state": "checked" },
+    { "name": "gender", "text": "Женщина" }
+  ]
+}

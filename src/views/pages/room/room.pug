@@ -11,9 +11,11 @@ block page
   include ../../components/bullet-list/bullet-list.pug
   include ../../components/booking-card/booking-card.pug
   - const feedbackData = require('../../../data/feedback-data')
-  - const bulletListData = require('../../../data/bullet-list')
-  - const reviewListData = require('../../../data/review-list-data')
-
+  - const bulletListData = require('../../../data/bullet-list').data
+  - const reviewListData = require('../../../data/review-list-data').data
+  - const bookingData = require('../../../data/booking-data').data
+  - const guestsDropdownData = require('../../../data/dropdown-guests-data').withoutChildren
+  - bookingData.guests = guestsDropdownData
   .room
     .room__preview-images 
       .room__main-image
@@ -29,7 +31,7 @@ block page
             .room__about
               .room__label
                 +title-inside-widget({text:'Сведения о номере'})
-              +review-list({items:reviewListData.data })
+              +review-list({items:reviewListData })
             .room__impressions
               .room__label 
                 +title-inside-widget({text:'Впечатления от номера'})
@@ -49,11 +51,11 @@ block page
               .room__label.room__label_separated
                 +title-inside-widget({text:'Правила'})
               .room__rules-list 
-                +bullet-list({items:bulletListData.data})
+                +bullet-list({items:bulletListData})
             .room__cancel
               .room__label
                 +title-inside-widget({text:'Отмена'})
               .room__cancel-text 
                 +body-text({text:'Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.'})
         .room__booking 
-          +booking-card({roomNumber:888, price:9900,isLuxury:true})
+          +booking-card(bookingData)

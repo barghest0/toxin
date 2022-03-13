@@ -1,0 +1,14 @@
+{
+  "data": {
+    "roomNumber": 888,
+    "price": 9900,
+    "isLuxury": true,
+    "dateFrom": "08.19.2022",
+    "dateTo": "08.23.2022",
+    "days": 4,
+    "serviceDiscount": 2179,
+    "servicePrice": 2179,
+    "addServicePrice": 300,
+    "addServiceDiscount": 0
+  }
+}

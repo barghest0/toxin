@@ -27,12 +27,12 @@ block page
 
   - const guestDropdownData = require('../../../data/dropdown-guests-data')
   - const checkboxData = require('../../../data/checkbox-list-data')
-  - const apartmentsDropdownData = require('../../../data/dropdown-apartments-data')
-  - const expandListData = require('../../../data/expand-list-data')
-  - const reviewListData = require('../../../data/review-list-data')
-  - const bulletListData = require('../../../data/bullet-list')
+  - const apartmentsDropdownData = require('../../../data/dropdown-apartments-data').data
+  - const expandListData = require('../../../data/expand-list-data').data
+  - const reviewListData = require('../../../data/review-list-data').data
+  - const bulletListData = require('../../../data/bullet-list').data
   - const feedbackData = require('../../../data/feedback-data')
-
+  - const genderData = require('../../../data/gender-data').data
   .form-elements
     .container
       .form-elements__inputs
@@ -58,7 +58,7 @@ block page
           .form-elements__radio
             .form-elements__selection-label
               +block-label({text:'radio button'})
-            +radio-list({items:[{name:'gender', text:'Мужчина', state:'checked'}, { name:'gender', text:'Женщина'}]})
+            +radio-list({items:genderData})
           .form-elements__toggle
             .form-elements__selection-label
               +block-label({text:'toggle'})
@@ -101,25 +101,25 @@ block page
 
       .form-elements__dropdowns
         .form-elements__dropdown.form-elements__dropdown_apartments
-          +dropdown({label:'dropdown',subLabel:'default',size:'md', type:'apartments', data:apartmentsDropdownData.data})
+          +dropdown({label:'dropdown',subLabel:'default',size:'md', type:'apartments', data:apartmentsDropdownData})
         .form-elements__dropdown.form-elements__dropdown_apartments
-          +dropdown({label:'dropdown',subLabel:'expanded',size:'md', type:'apartments', data:apartmentsDropdownData.data, state:'opened'})
+          +dropdown({label:'dropdown',subLabel:'expanded',size:'md', type:'apartments', data:apartmentsDropdownData, state:'opened'})
         .form-elements__dropdown.form-elements__dropdown_guests.form-elements__dropdown_cleared
           +dropdown({label:'dropdown',type:'guests', data:guestDropdownData.clear, state:'opened'} )
         .form-elements__dropdown.form-elements__dropdown_guests
           +dropdown({label:'dropdown',type:'guests', data:guestDropdownData.withoutChildren, state:'opened'})
       .form-elements__lists
         .form-elements__expand-checkbox
-          +expand-list({label:'expandable checkbox list', items:expandListData.data})
-          +expand-list({label:'expandable checkbox list',state:'opened', items:expandListData.data})
+          +expand-list({label:'expandable checkbox list', items:expandListData})
+          +expand-list({label:'expandable checkbox list',state:'opened', items:expandListData})
         .form-elements__rich-checkbox
           +rich-checkbox-list({label:'rich checkbox buttons', items:checkboxData.rich})
         .form-elements__bullet-list
           .form-elements__list-label
             +block-label({text:'bullet list'})
-          +bullet-list({items:bulletListData.data})
+          +bullet-list({items:bulletListData})
       .form-elements__reviews
         .form-elements__review-list
-          +review-list({items:reviewListData.data})
+          +review-list({items:reviewListData})
         .form-elements__feedback 
           +feedback(feedbackData.man)

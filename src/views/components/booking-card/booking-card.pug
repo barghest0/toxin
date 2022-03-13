@@ -6,33 +6,37 @@ include ../card/card.pug
 include ../title-inside-widget/title-inside-widget.pug
 include ../body-text/body-text.pug
 
-mixin booking-card({roomNumber='', price='', isLuxury=false}={})
-  - const guestsDropdownData = require('../../../data/dropdown-guests-data')
+mixin booking-card({roomNumber='', price='', isLuxury=false, dateFrom="",dateTo="",days="", servicePrice="", serviceDiscount="", addServicePrice="", addServiceDiscount="",guests=[]}={})
+ 
+  - const daysPrice = price * days
+  - const servicePriceWithoutDiscount =  servicePrice - serviceDiscount
+  - const addServicePriceWithoutDiscount =  addServicePrice - addServiceDiscount
+  - const totalPrice = daysPrice + servicePriceWithoutDiscount + addServicePriceWithoutDiscount - serviceDiscount - addServiceDiscount 
   +card
     .booking-card
       .booking-card__room-info 
         +card-room-info({roomNumber, price, isLuxury, size:'lg'})
       .booking-card__date 
-        +range-date({from:'Прибытие',to:'Выезд', dateFrom:'08.19.2022', dateTo:'08.23.2022'})
+        +range-date({from:'Прибытие', to:'Выезд', dateFrom, dateTo})
       .booking-card__guests 
-        +dropdown({label:'Гости',type:'guests', data:guestsDropdownData.withoutChildren})
+        +dropdown({label:'Гости',type:'guests', data:guests})
       .booking-card__cost 
         .booking-card__day 
-          +body-text({text:'9 990₽ х 4 суток'}) 
-        .booking-card__day-price 
-          +body-text({text:'39 960₽'}) 
+          +body-text({text:`${price.toLocaleString()}₽ х ${days} суток`}) 
+        .booking-card__day-price
+          +body-text({text:`${daysPrice.toLocaleString()}₽`}) 
         .booking-card__service 
-          +body-text({text:'Сбор за услуги: скидка 2 179₽'}) 
+          +body-text({text:`Сбор за услуги${serviceDiscount  ? `: скидка ${serviceDiscount.toLocaleString()}₽` : ''}`}) 
           img(src='assets/images/services.svg', weight=20, height=20, alt='')
         .booking-card__service-price 
-          +body-text({text:'0₽'}) 
+          +body-text({text:`${servicePriceWithoutDiscount.toLocaleString()}₽`}) 
         .booking-card__add-service 
-          +body-text({text:'Сбор за дополнительные услуги'}) 
+          +body-text({text:`Сбор за дополнительные услуги  ${addServiceDiscount  ? `:скидка ${addServiceDiscount.toLocaleString()}₽` : ''}`}) 
           img(src='assets/images/services.svg', weight=20, height=20, alt='')
         .booking-card__add-service-price
-          +body-text({text:'300₽'}) 
+          +body-text({text:`${addServicePriceWithoutDiscount}₽`}) 
       .booking-card__final-cost 
         +title-inside-widget({text:'Итого'})
-        +title-inside-widget({text:'38 081₽'})
+        +title-inside-widget({text:`${totalPrice.toLocaleString()}₽`})
       .booking-card__button 
         +button({text:'Забронировать',type:'filled',isLargest:true})
