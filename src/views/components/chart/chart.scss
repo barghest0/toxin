@@ -1,26 +1,14 @@
 .chart {
-  width: 340px;
-  height: 125px;
+  width: 345px;
+  height: 130px;
   color: $main-color;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
   position: relative;
 
-  &__votes {
-    top: 45px;
-    left: 32px;
-    position: absolute;
-    &-count {
-      font-size: 24px;
-    }
-    &-text {
-      font-size: 12px;
-    }
-  }
-
-  &__impressions {
-    position: relative;
-    right: 23px;
+  @include phone {
+    width: 320px;
+    height: 180px;
   }
 }

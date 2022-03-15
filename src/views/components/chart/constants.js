@@ -1,3 +1,4 @@
 const CONTAINER_SELECTOR = '.js-chart__impressions';
+const TURNING_POINT = 450;
 
-export { CONTAINER_SELECTOR };
+export { CONTAINER_SELECTOR, TURNING_POINT };

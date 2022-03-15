@@ -123,6 +123,13 @@
         }
       }
     }
+    &-chart {
+      position: relative;
+      left: -23px;
+      @include phone {
+        left: -15px;
+      }
+    }
   }
 
   &__feedback {

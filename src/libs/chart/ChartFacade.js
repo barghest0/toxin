@@ -1,57 +1,34 @@
 import { Chart, registerables } from 'chart.js';
+import { TURNING_POINT } from '../../views/components/chart/constants';
 
 Chart.register(...registerables);
 
 class ChartFacade {
-  constructor(container, votes, totalVotes) {
+  constructor(container, context, votes, totalVotes, backgroundColors, labels) {
     this.container = container;
+    this.context = context;
     this.votes = votes;
     this.totalVotes = totalVotes;
+    this.backgroundColors = backgroundColors;
+    this.labels = labels;
     this.init();
   }
 
   init() {
-    this.getContext();
-    this.setGradients();
     this.setData();
     this.setOptions();
+    this.setPlugins();
     this.createChart();
-  }
-
-  getContext() {
-    this.context = this.container.getContext('2d');
-  }
-
-  setGradients() {
-    this.disappointColorGradient = this.context.createLinearGradient(0, 0, 0, 200);
-    this.disappointColorGradient.addColorStop(0, '#909090');
-    this.disappointColorGradient.addColorStop(1, '#3D4975');
-
-    this.satisfactoryColorGradient = this.context.createLinearGradient(0, 0, 0, 200);
-    this.satisfactoryColorGradient.addColorStop(0, '#BC9CFF');
-    this.satisfactoryColorGradient.addColorStop(1, '#8BA4F9');
-
-    this.goodColorGradient = this.context.createLinearGradient(0, 0, 0, 200);
-    this.goodColorGradient.addColorStop(0, '#6FCF97');
-    this.goodColorGradient.addColorStop(1, '#66D2EA');
-
-    this.greatColorGradient = this.context.createLinearGradient(0, 0, 0, 200);
-    this.greatColorGradient.addColorStop(0, '#FFE39C');
-    this.greatColorGradient.addColorStop(1, '#FFBA9C');
+    this.attachListeners();
   }
 
   setData() {
     this.data = {
-      labels: ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно'],
+      labels: this.labels,
       datasets: [
         {
           data: this.votes,
-          backgroundColor: [
-            this.disappointColorGradient,
-            this.satisfactoryColorGradient,
-            this.goodColorGradient,
-            this.greatColorGradient,
-          ],
+          backgroundColor: this.backgroundColors,
         },
       ],
     };
@@ -63,11 +40,11 @@ class ChartFacade {
       radius: '61',
       responsive: true,
       maintainAspectRatio: false,
-
+      responsive: true,
       elements: {
         responsive: true,
         center: {
-          votesCount: this.votesCount,
+          votesCount: this.totalVotes,
           votes: 'ГОЛОСОВ',
         },
       },
@@ -80,9 +57,11 @@ class ChartFacade {
 
       plugins: {
         legend: {
-          position: 'right',
-          align: 'end',
+          position: window.innerWidth >= TURNING_POINT ? 'right' : 'bottom',
+          doughnutMode: true,
+          align: window.innerWidth >= TURNING_POINT ? 'end' : 'center',
           reverse: true,
+
           labels: {
             boxWidth: 8,
             boxHeight: 8,
@@ -103,12 +82,62 @@ class ChartFacade {
     };
   }
 
+  setPlugins() {
+    this.plugins = [
+      {
+        beforeDraw: chart => {
+          let {
+            ctx,
+            chartArea: { width, height },
+          } = chart;
+
+          ctx.save();
+          ctx.fillStyle = '#BC9CFF';
+          const x = width / 2;
+          const y = height / 2;
+          const text = 'ГОЛОСОВ';
+          ctx.font = 'bold 12px Montserrat';
+          ctx.textAlign = 'center';
+          ctx.fillText(text, x, y + 20);
+          ctx.font = 'bold 24px Montserrat';
+          ctx.fillText(this.totalVotes, x, y);
+        },
+      },
+    ];
+  }
+
   createChart() {
-    this.chart = new Chart(this.container, {
-      type: 'doughnut',
-      data: this.data,
-      options: this.options,
+    window.addEventListener('load', () => {
+      this.chart = new Chart(this.container, {
+        type: 'doughnut',
+        data: this.data,
+        options: this.options,
+        plugins: this.plugins,
+      });
     });
+  }
+
+  attachListeners() {
+    window.addEventListener('resize', this.checkWindowSize.bind(this));
+  }
+
+  checkWindowSize(event) {
+    if (event.target.innerWidth <= TURNING_POINT) {
+      this.changeLegendPositionToBottom();
+    } else {
+      this.changeLegendPositionToRight();
+    }
+  }
+
+  changeLegendPositionToBottom() {
+    this.chart.options.plugins.legend.position = 'bottom';
+    this.chart.options.plugins.legend.align = 'center';
+    this.chart.update();
+  }
+  changeLegendPositionToRight() {
+    this.chart.options.plugins.legend.position = 'right';
+    this.chart.options.plugins.legend.align = 'end';
+    this.chart.update();
   }
 }
 

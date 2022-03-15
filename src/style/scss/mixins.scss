@@ -19,6 +19,7 @@
 @mixin main-gradient-to-bottom($color: $main-color, $second-color: $gradient-main-color) {
   background: linear-gradient(to bottom, $color, $second-color);
 }
+
 @mixin second-gradient-to-bottom(
   $color: $second-color,
   $second-color: $gradient-second-color
