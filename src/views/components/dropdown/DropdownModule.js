@@ -16,17 +16,19 @@ import {
   NEWBORNS_SELECTOR,
   OPENED_CLASS,
 } from './constants';
+import DropdownHelper from './DropdownHelper';
 
 class Dropdown {
   constructor($container) {
     this.$container = $container;
     this.$list = null;
     this.$counters = null;
-    this.$increment = null;
-    this.$decrement = null;
+    this.$increments = null;
+    this.$decrements = null;
     this.$field = null;
     this.type = '';
     this.totalCount = 0;
+    this.helper = new DropdownHelper();
     this.init();
   }
 
@@ -60,8 +62,8 @@ class Dropdown {
 
   setTools() {
     this.$counters = this.$container.find(COUNTER_SELECTOR);
-    this.$increment = this.$container.find(INCREMENT_SELECTOR);
-    this.$decrement = this.$container.find(DECREMENT_SELECTOR);
+    this.$increments = this.$container.find(INCREMENT_SELECTOR);
+    this.$decrements = this.$container.find(DECREMENT_SELECTOR);
   }
 
   setButtons() {
@@ -100,8 +102,7 @@ class Dropdown {
   }
 
   checkCounters() {
-    this.$counters.each(index => {
-      const counter = this.$counters[index];
+    this.$counters.each((_index, counter) => {
       if (Number(counter.innerHTML) === MIN_COUNT) {
         this.disableElement($(counter).siblings(DECREMENT_SELECTOR));
       }
@@ -143,8 +144,16 @@ class Dropdown {
   }
 
   attachToolsListeners() {
-    this.$increment.on('click', this.incrementCounter.bind(this));
-    this.$decrement.on('click', this.decrementCounter.bind(this));
+    this.$increments.on('click', this.incrementCounter.bind(this));
+    this.$decrements.on('click', this.decrementCounter.bind(this));
+  }
+
+  incrementTotalCount() {
+    this.totalCount += 1;
+  }
+
+  decrementTotalCount() {
+    this.totalCount -= 1;
   }
 
   incrementCounter(event) {
@@ -158,7 +167,7 @@ class Dropdown {
     this.enableElement(decrementElement);
 
     $counter.text(counterNumber + 1);
-    this.totalCount += 1;
+    this.incrementTotalCount();
     counterNumber = Number($counter.text());
 
     if (counterNumber === MAX_COUNT) {
@@ -175,13 +184,12 @@ class Dropdown {
     const $target = $(event.target);
     const $counter = $target.siblings(COUNTER_SELECTOR);
     const incrementElement = $target.siblings(INCREMENT_SELECTOR);
-
     let counterNumber = Number($counter.text());
 
     this.enableElement(incrementElement);
 
     $counter.text(counterNumber - 1);
-    this.totalCount -= 1;
+    this.decrementTotalCount();
     counterNumber = Number($counter.text());
 
     if (counterNumber === MIN_COUNT) {
@@ -207,37 +215,18 @@ class Dropdown {
   setGuestsFieldText() {
     const text = [];
 
-    text.push(`${this.totalCount} гост${this.getGuestEnding()}`);
+    text.push(`${this.totalCount} ${this.helper.getGuestEnding(this.totalCount)}`);
 
-    const children = Number(
+    const newborns = Number(
       this.$container.find(NEWBORNS_SELECTOR).find(COUNTER_SELECTOR).text(),
     );
 
-    if (children) {
-      text.push(`${children} младен${this.getChildrenEnding(children)}`);
+    if (newborns) {
+      text.push(`${newborns} ${this.helper.getNewbornsEnding(newborns)}`);
     }
+
     const textString = text.join(', ');
     this.$field.text(textString);
-  }
-
-  getGuestEnding() {
-    if (this.totalCount === 1) {
-      return 'ь';
-    }
-    if (this.totalCount > 1 && this.totalCount < 5) {
-      return 'я';
-    }
-    return 'ей';
-  }
-
-  getChildrenEnding(count) {
-    if (count === 1) {
-      return 'ец';
-    }
-    if (count > 1 && count < 5) {
-      return 'ца';
-    }
-    return 'ев';
   }
 
   setApartmentsFieldText() {
@@ -251,52 +240,21 @@ class Dropdown {
       this.$container.find(BATHROOMS_SELECTOR).find(COUNTER_SELECTOR).text(),
     );
     const text = [];
-
-    if (bedrooms) {
-      text.push(`${bedrooms} спаль${this.getBedroomsEnd(bedrooms)}`);
+    if (bathrooms) {
+      text.push(`${bedrooms} ${this.helper.getBedroomsEnding(bedrooms)}`);
     }
 
     if (beds) {
-      text.push(`${beds} кроват${this.getBedsEnd(beds)}`);
+      text.push(`${beds} ${this.helper.getBedsEnding(beds)}`);
     }
 
     if (bathrooms) {
-      text.push(`${bathrooms} ${this.getBathroomsEnd(bathrooms)}`);
+      text.push(`${bathrooms} ${this.helper.getBathroomsEnd(bathrooms)}`);
     }
 
     const textString = text.join(', ');
 
     this.$field.text(textString);
-  }
-
-  getBedroomsEnd(count) {
-    if (count === 1) {
-      return 'ня';
-    }
-    if (count > 1 && count < 5) {
-      return 'ни';
-    }
-    return 'ен';
-  }
-
-  getBedsEnd(count) {
-    if (count === 1) {
-      return 'ь';
-    }
-    if (count > 1 && count < 5) {
-      return 'и';
-    }
-    return 'ей';
-  }
-
-  getBathroomsEnd(count) {
-    if (count === 1) {
-      return 'ванная комната';
-    }
-    if (count > 1 && count < 5) {
-      return 'ванные комнаты';
-    }
-    return 'ванных комнат';
   }
 
   disableElement($element) {
@@ -305,6 +263,12 @@ class Dropdown {
 
   enableElement($element) {
     $element.removeClass('disabled');
+  }
+
+  enableAllIncrements() {
+    this.$increments.each((_index, increment) => {
+      this.enableElement($(increment));
+    });
   }
 
   attachButtonsListeners() {
@@ -319,6 +283,7 @@ class Dropdown {
     this.totalCount = 0;
     this.checkCounters();
     this.checkTotalCount();
+    this.enableAllIncrements();
     this.setDefaultFieldText();
   }
 

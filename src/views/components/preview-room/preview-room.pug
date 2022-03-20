@@ -10,7 +10,10 @@ mixin preview-room({roomNumber='',id='0',images=[],isLuxury=false,rate=0,price=0
       .preview-room__carousel.swiper.js-swiper
         .preview-room__carousel-container.swiper-wrapper.js-swiper-wrapper
           each image in images
-            img.preview-room__image.swiper-slide.js-swiper-slide(src=`assets/images/${image}`, alt='')
+            img.preview-room__image.swiper-slide.js-swiper-slide(
+              src=`assets/images/${image}`,
+              alt=''
+            )
         .swiper-pagination.js-swiper-pagination
         .swiper-button-next.js-swiper-button-next
         .swiper-button-prev.js-swiper-button-prev

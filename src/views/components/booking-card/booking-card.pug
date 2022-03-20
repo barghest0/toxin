@@ -7,11 +7,10 @@ include ../title-inside-widget/title-inside-widget.pug
 include ../body-text/body-text.pug
 
 mixin booking-card({roomNumber='', price='', isLuxury=false, dateFrom="",dateTo="",days="", servicePrice="", serviceDiscount="", addServicePrice="", addServiceDiscount="",guests=[]}={})
- 
-  - const daysPrice = price * days
-  - const servicePriceWithoutDiscount =  servicePrice - serviceDiscount
-  - const addServicePriceWithoutDiscount =  addServicePrice - addServiceDiscount
-  - const totalPrice = daysPrice + servicePriceWithoutDiscount + addServicePriceWithoutDiscount - serviceDiscount - addServiceDiscount 
+  - const daysPrice = price * days;
+  - const servicePriceWithoutDiscount = servicePrice - serviceDiscount;
+  - const addServicePriceWithoutDiscount = addServicePrice - addServiceDiscount;
+  - const totalPrice = daysPrice + servicePriceWithoutDiscount + addServicePriceWithoutDiscount - serviceDiscount - addServiceDiscount;
   +card
     .booking-card
       .booking-card__room-info 
@@ -26,12 +25,12 @@ mixin booking-card({roomNumber='', price='', isLuxury=false, dateFrom="",dateTo=
         .booking-card__day-price
           +body-text({text:`${daysPrice.toLocaleString()}₽`}) 
         .booking-card__service 
-          +body-text({text:`Сбор за услуги${serviceDiscount  ? `: скидка ${serviceDiscount.toLocaleString()}₽` : ''}`}) 
+          +body-text({text:`Сбор за услуги${serviceDiscount ? `: скидка ${serviceDiscount.toLocaleString()}₽` : ''}`}) 
           img(src='assets/images/services.svg', weight=20, height=20, alt='')
         .booking-card__service-price 
           +body-text({text:`${servicePriceWithoutDiscount.toLocaleString()}₽`}) 
         .booking-card__add-service 
-          +body-text({text:`Сбор за дополнительные услуги  ${addServiceDiscount  ? `:скидка ${addServiceDiscount.toLocaleString()}₽` : ''}`}) 
+          +body-text({text:`Сбор за дополнительные услуги ${addServiceDiscount ? `:скидка ${addServiceDiscount.toLocaleString()}₽` : ''}`}) 
           img(src='assets/images/services.svg', weight=20, height=20, alt='')
         .booking-card__add-service-price
           +body-text({text:`${addServicePriceWithoutDiscount}₽`}) 

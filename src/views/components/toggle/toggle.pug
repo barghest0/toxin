@@ -1,4 +1,3 @@
-
 mixin toggle({text='',name='offers',state='unchecked'}={})
   label.toggle
     if state === 'checked'
@@ -6,5 +5,4 @@ mixin toggle({text='',name='offers',state='unchecked'}={})
     else
       input.toggle__input(type='checkbox', name=name)
     span.toggle__custom-input(style='')
-    .toggle__title=text
-     
+    .toggle__title= text

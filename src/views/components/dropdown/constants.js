@@ -24,7 +24,25 @@ const BATHROOMS_SELECTOR = '[data-name="bathrooms"]';
 const MAX_COUNT = 5;
 const MIN_COUNT = 0;
 
+const NEWBORNS = ['младенец', 'младенца', 'младенцев'];
+const GUESTS = ['гость', 'гостя', 'гостей'];
+const BEDROOMS = ['спальня', 'спальни', 'спален'];
+const BEDS = ['кровать', 'кровати', 'кроватей'];
+const BATHROOMS = ['ванная комната', 'ванные комтаны', 'ванных комнат'];
+
+const FIRST_ENDING = 0;
+const SECOND_ENDING = 1;
+const THIRD_ENDING = 2;
+
 export {
+  FIRST_ENDING,
+  SECOND_ENDING,
+  THIRD_ENDING,
+  NEWBORNS,
+  GUESTS,
+  BEDROOMS,
+  BEDS,
+  BATHROOMS,
   GUESTS_TYPE,
   APARTMENTS_TYPE,
   OPENED_CLASS,

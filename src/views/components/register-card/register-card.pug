@@ -9,7 +9,7 @@ include ../masked-text-field/masked-text-field.pug
 include ../radio-list/radio-list.pug
 
 mixin register-card({title='Регистрация аккаунта'}={})
-  - const genderData = require('../../../data/gender-data').data
+  - const genderData = require('../../../data/gender-data').data;
   +card
     .register-card 
       .register-card__title

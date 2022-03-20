@@ -10,12 +10,12 @@ block page
   include ../../components/feedback/feedback.pug
   include ../../components/bullet-list/bullet-list.pug
   include ../../components/booking-card/booking-card.pug
-  - const feedbackData = require('../../../data/feedback-data')
-  - const bulletListData = require('../../../data/bullet-list').data
-  - const reviewListData = require('../../../data/review-list-data').data
-  - const bookingData = require('../../../data/booking-data').data
-  - const guestsDropdownData = require('../../../data/dropdown-guests-data').withoutChildren
-  - bookingData.guests = guestsDropdownData
+  - const feedbackData = require('../../../data/feedback-data');
+  - const bulletListData = require('../../../data/bullet-list').data;
+  - const reviewListData = require('../../../data/review-list-data').data;
+  - const bookingData = require('../../../data/booking-data').data;
+  - const guestsDropdownData = require('../../../data/dropdown-guests-data').withoutChildren;
+  - bookingData.guests = guestsDropdownData;
   .room
     .room__preview-images 
       .room__main-image
