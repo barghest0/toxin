@@ -4,8 +4,8 @@ import {
   BEDROOMS_SELECTOR,
   BEDS_SELECTOR,
   CLEAR_BUTTON_SELECTOR,
-  CONTAINER_SELECTOR,
   COUNTER_SELECTOR,
+  CONTAINER_SELECTOR,
   DECREMENT_SELECTOR,
   FIELD_SELECTOR,
   GUESTS_TYPE,
@@ -216,28 +216,28 @@ class Dropdown {
     if (children) {
       text.push(`${children} младен${this.getChildrenEnding(children)}`);
     }
-    let textString = text.join(', ');
+    const textString = text.join(', ');
     this.$field.text(textString);
   }
 
   getGuestEnding() {
     if (this.totalCount === 1) {
       return 'ь';
-    } else if (this.totalCount > 1 && this.totalCount < 5) {
-      return 'я';
-    } else {
-      return 'ей';
     }
+    if (this.totalCount > 1 && this.totalCount < 5) {
+      return 'я';
+    }
+    return 'ей';
   }
 
   getChildrenEnding(count) {
     if (count === 1) {
       return 'ец';
-    } else if (count > 1 && count < 5) {
-      return 'ца';
-    } else {
-      return 'ев';
     }
+    if (count > 1 && count < 5) {
+      return 'ца';
+    }
+    return 'ев';
   }
 
   setApartmentsFieldText() {
@@ -250,7 +250,7 @@ class Dropdown {
     const bathrooms = Number(
       this.$container.find(BATHROOMS_SELECTOR).find(COUNTER_SELECTOR).text(),
     );
-    let text = [];
+    const text = [];
 
     if (bedrooms) {
       text.push(`${bedrooms} спаль${this.getBedroomsEnd(bedrooms)}`);
@@ -264,9 +264,7 @@ class Dropdown {
       text.push(`${bathrooms} ${this.getBathroomsEnd(bathrooms)}`);
     }
 
-    let textString = text.join(', ');
-
-
+    const textString = text.join(', ');
 
     this.$field.text(textString);
   }
@@ -274,31 +272,31 @@ class Dropdown {
   getBedroomsEnd(count) {
     if (count === 1) {
       return 'ня';
-    } else if (count > 1 && count < 5) {
-      return 'ни';
-    } else {
-      return 'ен';
     }
+    if (count > 1 && count < 5) {
+      return 'ни';
+    }
+    return 'ен';
   }
 
   getBedsEnd(count) {
     if (count === 1) {
       return 'ь';
-    } else if (count > 1 && count < 5) {
-      return 'и';
-    } else {
-      return 'ей';
     }
+    if (count > 1 && count < 5) {
+      return 'и';
+    }
+    return 'ей';
   }
 
   getBathroomsEnd(count) {
     if (count === 1) {
       return 'ванная комната';
-    } else if (count > 1 && count < 5) {
-      return 'ванные комнаты';
-    } else {
-      return 'ванных комнат';
     }
+    if (count > 1 && count < 5) {
+      return 'ванные комнаты';
+    }
+    return 'ванных комнат';
   }
 
   disableElement($element) {
