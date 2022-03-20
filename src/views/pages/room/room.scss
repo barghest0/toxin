@@ -75,6 +75,7 @@
   &__booking {
     grid-column-start: 3;
     height: 512px;
+    max-width: 380px;
     @include tablet-landscape {
       grid-column-start: 1;
       grid-row-start: 2;
