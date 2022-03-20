@@ -55,7 +55,7 @@
 
   &_burger {
     height: inherit;
-    z-index: 200;
+    z-index: inherit;
     background-color: $white;
     position: absolute;
     flex-direction: column;
@@ -71,6 +71,10 @@
     justify-content: center;
     margin-right: 0;
     width: 300px;
+    &_profile {
+      border-right: none;
+      padding-left: 0;
+    }
     @include phone {
       width: calc(100vw - 30px);
     }

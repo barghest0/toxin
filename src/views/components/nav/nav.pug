@@ -2,13 +2,13 @@ include ../button/button.pug
 
 mixin nav({state='guest',name='',burger=false}={})
   nav.nav(class=burger ? 'nav_burger' : null)
-    a.nav__item(href='/about.html') О нас
+    a.nav__item(href='/mock-address/change-me') О нас
     ul.nav__item.nav__item_list Услуги
-    a.nav__item(href='/jobs.html') Вакансии
-    a.nav__item(href='/news.html') Новости
+    a.nav__item(href='/mock-address/change-me') Вакансии
+    a.nav__item(href='/mock-address/change-me') Новости
     ul.nav__item.nav__item_list Соглашения
     if state === 'auth'
-      a.nav__item.nav__item_profile(href='profile.html')= name
+      a.nav__item.nav__item_profile(href='/mock-address/change-me')= name
     else
       a.nav__item.nav__item_sign(href='login.html')
         +button({text:'Войти', type:'outlined', })

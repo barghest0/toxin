@@ -2,12 +2,14 @@
 @import '../nav/nav.scss';
 @import '../button/button.scss';
 
-
 .header {
   z-index: 1000;
   background-color: $white;
   box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
-
+  position: relative;
+  &_auth {
+    z-index: 900;
+  }
   &__logo {
     height: 40px;
     display: flex;
