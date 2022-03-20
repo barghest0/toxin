@@ -8,7 +8,7 @@ class Pagination {
   }
 
   init() {
-    new PaginationFacade(this.$element);
+    this.pagination = new PaginationFacade(this.$element);
   }
 }
 

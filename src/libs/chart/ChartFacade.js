@@ -40,7 +40,6 @@ class ChartFacade {
       radius: '61',
       responsive: true,
       maintainAspectRatio: false,
-      responsive: true,
       elements: {
         responsive: true,
         center: {
@@ -86,7 +85,7 @@ class ChartFacade {
     this.plugins = [
       {
         beforeDraw: chart => {
-          let {
+          const {
             ctx,
             chartArea: { width, height },
           } = chart;
@@ -134,6 +133,7 @@ class ChartFacade {
     this.chart.options.plugins.legend.align = 'center';
     this.chart.update();
   }
+
   changeLegendPositionToRight() {
     this.chart.options.plugins.legend.position = 'right';
     this.chart.options.plugins.legend.align = 'end';

@@ -15,18 +15,18 @@ class Like {
   }
 
   handleLikeClick(event) {
-    const target = event.target;
-    let likes = Number(target.innerHTML);
+    this.element = event.target;
+    let likes = Number(this.element.innerHTML);
 
-    if (target.classList.contains(LIKED_CLASS)) {
+    if (this.element.classList.contains(LIKED_CLASS)) {
       likes -= 1;
     } else {
       likes += 1;
     }
 
-    target.classList.toggle(LIKED_CLASS);
+    this.element.classList.toggle(LIKED_CLASS);
 
-    target.innerHTML = likes;
+    this.element.innerHTML = likes;
   }
 }
 

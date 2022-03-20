@@ -21,7 +21,8 @@ class HeaderBurger {
   }
 
   handleBurgerClick(event) {
-    $(event.currentTarget).toggleClass(OPEN_BURGER_CLASS);
+    this.element = event.currentTarget;
+    $(this.element).toggleClass(OPEN_BURGER_CLASS);
     $(BURGER_NAV_SELECTOR).toggleClass(OPEN_BURGER_CLASS);
   }
 

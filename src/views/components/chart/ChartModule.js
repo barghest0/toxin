@@ -53,7 +53,7 @@ class Chart {
   }
 
   createChart() {
-    new ChartFacade(
+    this.chart = new ChartFacade(
       this.container,
       this.context,
       this.votes,

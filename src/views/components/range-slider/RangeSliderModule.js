@@ -1,5 +1,5 @@
 import Slider from '../../../libs/range-slider/range-slider';
-import '../../..//libs/range-slider/range-slider.css';
+import '../../../libs/range-slider/range-slider.css';
 import {
   END_PRICE_SELECTOR,
   FIRST_VALUE,
@@ -37,12 +37,12 @@ class RangeSlider {
   }
 
   handleChange({ value }) {
-    this.$startPrice.html(value[FIRST_VALUE].toFixed() + ' ₽');
-    this.$endPrice.html(value[SECOND_VALUE].toFixed() + ' ₽');
+    this.$startPrice.html(`${value[FIRST_VALUE].toFixed()} ₽`);
+    this.$endPrice.html(`${value[SECOND_VALUE].toFixed()} ₽`);
   }
 
   createSlider() {
-    new Slider(this.container, this.params);
+    this.slider = new Slider(this.container, this.params);
   }
 }
 

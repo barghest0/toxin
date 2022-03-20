@@ -2,6 +2,7 @@ const CONTAINER_SELECTOR = '.js-datepicker-container';
 const DATEPICKER_SELECTOR = '.js-datepicker';
 
 const APPLY_BUTTON_CLASS = 'air-datepicker-button-apply';
+const BUTTON_SELECTOR = '.air-datepicker-button';
 const SINGLE_DATEPICKER = 0;
 const OPENED_CLASS = 'open';
 
@@ -18,4 +19,5 @@ export {
   FILTER_DATE_SELECTOR,
   SINGLE_DATEPICKER,
   CONTAINER_SELECTOR,
+  BUTTON_SELECTOR,
 };

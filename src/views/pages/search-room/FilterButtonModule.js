@@ -25,7 +25,7 @@ class FilterButton {
   }
 
   handleBackgroundClick(event) {
-    if (event.target.classList.contains(BACKGROUND_CLASS)) {
+    if (event.target.classList.contains(OPENED_CLASS)) {
       this.$background.removeClass(OPENED_CLASS);
     }
   }

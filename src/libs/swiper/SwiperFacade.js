@@ -1,9 +1,8 @@
-import Swiper from 'swiper';
-
+import Swiper, { Pagination, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/scss/pagination';
 import 'swiper/scss/navigation';
-import { Pagination, Navigation } from 'swiper';
+
 import {
   NEXT_BUTTON_SELECTOR,
   PAGINATION_SELECTOR,
@@ -44,8 +43,9 @@ class SwiperFacade {
       },
     };
   }
+
   createSlider() {
-    new Swiper(this.container, this.params);
+    this.swiper = new Swiper(this.container, this.params);
   }
 }
 

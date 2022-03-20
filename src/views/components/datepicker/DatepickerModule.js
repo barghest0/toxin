@@ -20,7 +20,12 @@ class Datepicker {
     this.setDatepicker();
     this.attachInputsListeners();
     this.attachDocumentListener();
-    new DatepickerFacade(this.$container, this.datepicker, this.$dateFrom, this.$dateTo);
+    this.datepickerFacade = new DatepickerFacade(
+      this.$container,
+      this.datepicker,
+      this.$dateFrom,
+      this.$dateTo,
+    );
   }
 
   setInputs() {

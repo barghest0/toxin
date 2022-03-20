@@ -7,7 +7,7 @@ class Slider {
   }
 
   init() {
-    new SwiperFacade(this.container);
+    this.slider = new SwiperFacade(this.container);
   }
 }
 

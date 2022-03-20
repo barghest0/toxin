@@ -3,6 +3,7 @@ import 'air-datepicker/air-datepicker.css';
 import {
   APPLY_BUTTON_CLASS,
   OPENED_CLASS,
+  BUTTON_SELECTOR,
 } from '../../views/components/datepicker/constants';
 
 class DatepickerFacade {
@@ -20,6 +21,7 @@ class DatepickerFacade {
     this.createButtons();
     this.setParams();
     this.createDatepicker();
+    this.setButtonsTypeToButton();
   }
 
   setParams() {
@@ -80,7 +82,15 @@ class DatepickerFacade {
   }
 
   createDatepicker() {
-    new AirDatepicker(this.datepicker, this.params);
+    this.airDatepicker = new AirDatepicker(this.datepicker, this.params);
+  }
+
+  setButtonsTypeToButton() {
+    $(this.datepicker)
+      .find(BUTTON_SELECTOR)
+      .each((_index, button) => {
+        $(button).attr('type', 'button');
+      });
   }
 }
 
