@@ -27,6 +27,7 @@
   }
 
   &__nav {
+    height: 34px;
     @include tablet-landscape {
       display: none;
     }

@@ -3,10 +3,10 @@ include ../button/button.pug
 mixin nav({state='guest',name='',burger=false}={})
   nav.nav(class=burger ? 'nav_burger' : null)
     a.nav__item(href='/mock-address/change-me') О нас
-    ul.nav__item.nav__item_list Услуги
+    div.nav__item.nav__item_list.nav__item_services Услуги
     a.nav__item(href='/mock-address/change-me') Вакансии
     a.nav__item(href='/mock-address/change-me') Новости
-    ul.nav__item.nav__item_list Соглашения
+    div.nav__item.nav__item_list.nav__item_agreements Соглашения
     if state === 'auth'
       a.nav__item.nav__item_profile(href='/mock-address/change-me')= name
     else

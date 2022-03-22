@@ -1,11 +1,13 @@
 .nav {
+  height: inherit;
   display: flex;
-  align-items: center;
+  justify-content: center;
   position: relative;
   column-gap: 20px;
   @include sm-desktop {
     column-gap: 15px;
   }
+
   &__item {
     cursor: pointer;
     font-weight: normal;
@@ -27,9 +29,11 @@
 
     &_list {
       padding-left: 0;
-
+      display: flex;
+      justify-content: center;
       &::after {
         content: '';
+        transition: all 0.2s linear;
         display: inline-block;
         height: 8px;
         width: 8px;
@@ -42,15 +46,50 @@
         -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
       }
+      &.open {
+        &::after {
+          transform: rotate(135deg);
+        }
+      }
     }
+
     &_profile {
       padding-left: 20px;
       border-left: 1px solid rgba(#1f2041, 0.1);
     }
 
     &:hover {
-      font-weight: bold;
+      font-weight: 700;
     }
+  }
+
+  &__list {
+    display: none;
+    position: absolute;
+    top: 30px;
+    width: 150px;
+    background-color: $white;
+    font-weight: normal;
+    box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
+    flex-direction: column;
+    z-index: 100;
+
+    &-item {
+      text-decoration: none;
+      color: inherit;
+      text-align: center;
+      padding: 15px 0px;
+      &:hover {
+        background-color: $shadow-5;
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid $shadow-5;
+      }
+    }
+  }
+
+  &__item.open &__list {
+    display: flex;
   }
 
   &_burger {
