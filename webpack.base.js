@@ -42,7 +42,7 @@ module.exports = {
     filename: `js/[name].[fullhash].js`,
     path: PATHS.dist,
     assetModuleFilename: '',
-		clean:true
+    clean: true,
   },
 
   externals: {

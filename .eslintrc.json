@@ -9,7 +9,14 @@
     "ecmaVersion": 13,
     "sourceType": "module"
   },
-  "plugins": ["prettier"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts"]
+      }
+    }
+  },
+  "plugins": ["prettier", "pug"],
   "rules": {
     "prettier/prettier": ["error"]
   }

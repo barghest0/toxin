@@ -4,4 +4,5 @@ import './images/preview-room2.png';
 import './images/preview-room3.png';
 import { SLIDER_SELECTOR } from './constants';
 
-new Slider(SLIDER_SELECTOR);
+const sliders = document.querySelectorAll(SLIDER_SELECTOR);
+sliders.forEach(slider => new Slider(slider));

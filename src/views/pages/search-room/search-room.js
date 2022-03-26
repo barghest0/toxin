@@ -1,5 +1,4 @@
 import '../../components/dropdown/dropdown';
-import '../../components/filter-date/filter-date';
 import '../../components/expand-list/expand-list';
 import '../../components/preview-room/preview-room';
 import '../../components/header/header';
@@ -14,4 +13,4 @@ import './search-room.scss';
 import FilterButton from './FilterButtonModule';
 import { FILTER_BUTTON_SELECTOR } from './constants';
 
-new FilterButton($(FILTER_BUTTON_SELECTOR));
+$(FILTER_BUTTON_SELECTOR).each((_index, element) => new FilterButton($(element)));

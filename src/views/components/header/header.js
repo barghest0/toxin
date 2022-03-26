@@ -2,4 +2,5 @@ import HeaderBurger from './HeaderBurgerModule';
 import '../logo/logo';
 import '../nav/nav';
 import { BURGER_SELECTOR } from './constants';
-const burger = new HeaderBurger($(BURGER_SELECTOR));
+
+$(BURGER_SELECTOR).each((_index, element) => new HeaderBurger($(element)));

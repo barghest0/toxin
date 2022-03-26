@@ -15,6 +15,4 @@ const devConfig = merge(baseConfig, {
   },
 });
 
-module.exports = new Promise((resolve, reject) => {
-  resolve(devConfig);
-});
+module.exports = devConfig;

@@ -1,4 +1,4 @@
 import { LABEL_SELECTOR } from './constants';
 import ExpandList from './ExpandListModule';
 
-new ExpandList($(LABEL_SELECTOR));
+$(LABEL_SELECTOR).each((_index, element) => new ExpandList($(element)));

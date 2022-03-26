@@ -1,13 +1,15 @@
 import { SERVICES_LIST_SELECTOR, AGREEMENTS_LIST_SELECTOR } from './constants';
 import NavList from './NavListModule';
 
-const servicesList = new NavList($(SERVICES_LIST_SELECTOR), [
-  { name: 'Услуги' },
-  { name: 'Услуги' },
-  { name: 'Услуги' },
-]);
-const agreementsList = new NavList($(AGREEMENTS_LIST_SELECTOR), [
-  { name: 'Соглашения' },
-  { name: 'Соглашения' },
-  { name: 'Соглашения' },
-]);
+$(SERVICES_LIST_SELECTOR).each(
+  (_index, element) =>
+    new NavList($(element), [{ name: 'Услуги' }, { name: 'Услуги' }, { name: 'Услуги' }]),
+);
+$(AGREEMENTS_LIST_SELECTOR).each(
+  (_index, element) =>
+    new NavList($(element), [
+      { name: 'Соглашения' },
+      { name: 'Соглашения' },
+      { name: 'Соглашения' },
+    ]),
+);

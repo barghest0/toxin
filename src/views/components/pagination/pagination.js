@@ -1,4 +1,4 @@
 import { PAGINATION_SELECTOR } from './constants';
 import Pagination from './PaginationModule';
 
-new Pagination($(PAGINATION_SELECTOR));
+$(PAGINATION_SELECTOR).each((_index, element) => new Pagination($(element)));

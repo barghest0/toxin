@@ -8,11 +8,7 @@
     "build": "webpack --config ./webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js"
   },
-  "browserslist": [
-    "> 1%",
-    "last 4 version",
-    "IE 10"
-  ],
+  "browserslist": ["> 1%", "last 4 version", "IE 10"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/barghest0/MetaLampLayoutPratice.git"
@@ -37,8 +33,9 @@
     "eslint": "^8.11.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-pug": "^1.2.4",
     "file-loader": "^6.2.0",
     "html-webpack-externals-plugin": "^3.8.0",
     "html-webpack-plugin": "^5.3.2",
