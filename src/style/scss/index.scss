@@ -28,6 +28,16 @@ html {
 *::placeholder {
   font-size: 14px;
 }
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @include main-gradient-to-bottom;
+  border-radius: 10px;
+}
 
 .container {
   max-width: 1200px;
