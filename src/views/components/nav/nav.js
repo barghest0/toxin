@@ -5,6 +5,7 @@ $(SERVICES_LIST_SELECTOR).each(
   (_index, element) =>
     new NavList($(element), [{ name: 'Услуги' }, { name: 'Услуги' }, { name: 'Услуги' }]),
 );
+
 $(AGREEMENTS_LIST_SELECTOR).each(
   (_index, element) =>
     new NavList($(element), [

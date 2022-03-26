@@ -18,17 +18,10 @@
     border-radius: 4px;
     outline: none;
     position: relative;
-    font-size: 14px;
     font-family: inherit;
-
-    &::placeholder {
-      color: $shadow-25;
-    }
+    font-size: 14px;
+    transition: all 0.2s linear;
     &:hover {
-      border: 1px solid $shadow-50;
-    }
-
-    &:focus {
       border: 1px solid $shadow-50;
     }
   }

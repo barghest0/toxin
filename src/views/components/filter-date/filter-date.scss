@@ -1,8 +1,12 @@
+@import '../text-field/text-field.scss';
 .filter-date {
   position: relative;
   &__input {
     cursor: pointer;
     caret-color: transparent;
+    &::placeholder {
+      color: $shadow-75;
+    }
   }
 
   &__field {

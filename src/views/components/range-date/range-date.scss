@@ -1,3 +1,4 @@
+@import '../text-field/text-field.scss';
 .range-date {
   position: relative;
   &__fields {
@@ -29,5 +30,8 @@
   &__input {
     cursor: pointer;
     caret-color: transparent;
+    &::placeholder {
+      color: $shadow-75;
+    }
   }
 }

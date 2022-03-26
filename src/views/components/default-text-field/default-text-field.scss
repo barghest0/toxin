@@ -1,4 +1,5 @@
-.text-field {
+@import '../text-field/text-field.scss';
+.default-text-field {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -34,22 +35,9 @@
     &::placeholder {
       color: $shadow-25;
     }
-    &:hover {
-      border: 1px solid $shadow-50;
-    }
 
     &:focus {
       border: 1px solid $shadow-50;
-    }
-
-    &_range-date,
-    &_filter-date {
-      cursor: pointer;
-      position: relative;
-      &::placeholder {
-        color: $shadow-75;
-        font-size: 14px;
-      }
     }
   }
 }
