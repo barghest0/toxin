@@ -3,10 +3,6 @@
     &::placeholder {
       color: $shadow-25;
     }
-    &:hover {
-      border: 1px solid $shadow-50;
-    }
-
     &:focus {
       border: 1px solid $shadow-50;
     }

@@ -11,7 +11,7 @@
 
 .room {
   &__label {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     &_feedback {
       display: flex;
       justify-content: space-between;
@@ -90,7 +90,7 @@
       'reviews'
       'feedback'
       'additions';
-    row-gap: 30px;
+    row-gap: 36px;
   }
 
   &__reviews {
@@ -142,13 +142,15 @@
     &-count {
       font-size: 14px;
       text-align: center;
+      display: flex;
+      align-items: center;
     }
     grid-area: feedback;
   }
 
   &__additions {
     display: grid;
-    grid-template-columns: 1fr minmax(0px, 70px) 1fr;
+    grid-template-columns: 1fr minmax(0px, 10px) 1fr;
     grid-area: additions;
     @include sm-tablet-portrait {
       grid-template-columns: 1fr minmax(0px, 20px) 1fr;

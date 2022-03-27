@@ -6,15 +6,15 @@
     align-items: flex-end;
     &-number {
       display: flex;
+      line-height: 1.7;
       align-items: flex-end;
       font-size: 14px;
       font-weight: bold;
       margin-right: 8px;
-      .widget-title {
-        line-height: 0.8;
-      }
+      color: $shadow-100;
     }
     &-luxury {
+      line-height: 1.7;
       font-weight: bold;
       font-size: 12px;
       text-transform: uppercase;
