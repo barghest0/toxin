@@ -9,6 +9,7 @@
       line-height: 1.7;
       align-items: flex-end;
       font-size: 14px;
+      column-gap: 2px;
       font-weight: bold;
       margin-right: 8px;
       color: $shadow-100;
@@ -26,6 +27,7 @@
     color: $shadow-50;
     display: flex;
     align-items: flex-end;
+    line-height: 1.6;
     &-value {
       font-weight: bold;
       font-size: 14px;

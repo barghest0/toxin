@@ -1,7 +1,7 @@
 {
   "default": [
     { "name": "smoking", "text": "Можно курить" },
-    { "name": "animals", "text": "Можно с животными", "state": "checked" },
+    { "name": "animals", "text": "Можно с питомцами", "state": "checked" },
     {
       "name": "guests",
       "text": "Можно пригласить гостей (до 10 человек)",

@@ -5,7 +5,7 @@
   &__item {
     list-style-image: url('./images/bullet-list-item.svg');
     padding-inline-start: 1ch;
-    line-height: 2;
+    line-height: 1.7;
     font-size: 14px;
     &:not(:last-child) {
       margin-bottom: 10px;

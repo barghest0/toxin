@@ -2,29 +2,23 @@
   position: relative;
   width: 120px;
   height: 24px;
-
   background: url('images/inactive-rate.svg');
+  background-size: 120px auto;
 
   &__input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
     cursor: pointer;
-    min-width: 24px;
-    height: 24px;
+    height: 20px;
     position: absolute;
     left: 0;
     top: 0;
     font-size: inherit;
-
+    margin: 0;
+    background-size: 20px auto;
     &:checked {
       background: url('images/active-rate.svg');
-    }
-
-    &:hover {
-      background: url('images/active-rate.svg');
-      opacity: 0.4;
     }
 
     &:nth-of-type(1) {

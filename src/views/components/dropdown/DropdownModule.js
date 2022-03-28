@@ -240,7 +240,7 @@ class Dropdown {
       this.$container.find(BATHROOMS_SELECTOR).find(COUNTER_SELECTOR).text(),
     );
     const text = [];
-    if (bathrooms) {
+    if (bedrooms) {
       text.push(`${bedrooms} ${this.helper.getBedroomsEnding(bedrooms)}`);
     }
 
@@ -249,7 +249,7 @@ class Dropdown {
     }
 
     if (bathrooms) {
-      text.push(`${bathrooms} ${this.helper.getBathroomsEnd(bathrooms)}`);
+      text.push(`${bathrooms} ${this.helper.getBathroomsEnding(bathrooms)}`);
     }
 
     const textString = text.join(', ');

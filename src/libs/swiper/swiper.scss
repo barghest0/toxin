@@ -2,11 +2,13 @@
   position: relative;
 
   &-pagination {
+    bottom: 12px !important;
     text-align: right;
-    padding-right: 10px;
+    padding-right: 15px;
     &-bullet {
       border: 1.5px solid #fff;
       opacity: 1;
+      margin: 0 1.5px !important;
       background-color: transparent;
 
       &-active {

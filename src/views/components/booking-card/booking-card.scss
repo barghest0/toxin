@@ -17,9 +17,8 @@
   &__cost {
     display: grid;
     grid-template-columns: minmax(195px, 240px) minmax(60px, 1fr);
-    grid-template-rows: 15px 15px 36px;
-    grid-row-gap: 20px;
-    margin-bottom: 30px;
+    grid-row-gap: 10px;
+    margin-bottom: 29px;
   }
   &__day-price {
     justify-self: right;
@@ -36,6 +35,9 @@
     display: flex;
     &-price {
       justify-self: right;
+    }
+    .body-text {
+      line-height: 1.3;
     }
   }
   &__final-cost {

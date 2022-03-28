@@ -26,11 +26,12 @@
   &__title {
     font-weight: bold;
     margin-bottom: 5px;
-    line-height: 1.15;
+    line-height: 1.2;
   }
 
   &__subtitle {
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.25;
+    color: $shadow-50;
   }
 }

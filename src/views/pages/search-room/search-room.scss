@@ -96,11 +96,10 @@
       grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
       grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
       grid-column-gap: 10px;
-      grid-row-gap: 20px;
+      grid-row-gap: 21px;
       margin-bottom: 40px;
     }
   }
-
   &__pagination {
     display: flex;
     justify-content: center;
