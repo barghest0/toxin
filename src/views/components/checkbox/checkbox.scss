@@ -11,9 +11,9 @@
 
   &__custom-input {
     align-self: flex-start;
+    height: 20px;
     min-width: 20px;
     margin-right: 10px;
-    height: 20px;
     transition: 0.2s ease-in-out;
 
     background: url('./images/empty-checkbox.svg');
@@ -22,8 +22,9 @@
   &__input:checked + &__custom-input {
     background: url('./images/fill-checkbox.svg');
   }
+
   &__title {
     line-height: 1.43;
-    color: $shadow-50;
+    color: $dark-shade-50;
   }
 }

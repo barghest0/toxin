@@ -1,9 +1,9 @@
 @import '../text-field/text-field.scss';
+
 .default-text-field {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  @include size(100%);
   &__label {
     margin-bottom: 5px;
   }
@@ -20,23 +20,22 @@
   }
 
   &__input {
-    height: 44px;
-    width: 100%;
+    @include size(100%, 44px);
     padding: 0 15px;
 
     border: none;
-    border: 1px solid $shadow-25;
+    border: 1px solid $dark-shade-25;
     border-radius: 4px;
     outline: none;
     position: relative;
     font-family: inherit;
 
     &::placeholder {
-      color: $shadow-25;
+      color: $dark-shade-25;
     }
 
     &:focus {
-      border: 1px solid $shadow-50;
+      border: 1px solid $dark-shade-50;
     }
   }
 }

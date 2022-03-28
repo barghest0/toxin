@@ -24,6 +24,7 @@
   }
 
   &__title {
+    color: $dark-shade-75;
     font-weight: bold;
     margin-bottom: 5px;
     line-height: 1.2;
@@ -32,6 +33,6 @@
   &__subtitle {
     font-size: 12px;
     line-height: 1.25;
-    color: $shadow-50;
+    color: $dark-shade-50;
   }
 }

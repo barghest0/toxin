@@ -1,9 +1,8 @@
 @import '../../../libs/air-datepicker/air-datepicker.scss';
 
 .datepicker {
+  @include size(100%);
   z-index: 100;
-  width: 100%;
-  height: 100%;
   position: absolute;
   display: none;
   &_inline {

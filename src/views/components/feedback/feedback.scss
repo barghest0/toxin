@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   background-color: $white;
+  color: $dark-shade-75;
   &__user {
     display: flex;
     align-items: center;
@@ -18,7 +19,6 @@
 
     &-name {
       font-weight: bold;
-      margin-bottom: 10px;
     }
   }
 
@@ -29,6 +29,6 @@
   &__content {
     display: flex;
     align-items: flex-start;
-    line-height: 1.7;
+    line-height: $main-line-height;
   }
 }

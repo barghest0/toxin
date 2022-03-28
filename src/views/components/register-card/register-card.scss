@@ -39,8 +39,7 @@
     align-items: center;
     height: 44px;
     &-button {
-      width: 100px;
-      height: 100%;
+      @include size(100px, 100%);
     }
   }
 }

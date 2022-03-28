@@ -4,6 +4,7 @@
   justify-content: center;
   position: relative;
   column-gap: 20px;
+  color: $dark-shade-75;
   @include sm-desktop {
     column-gap: 15px;
   }
@@ -19,12 +20,10 @@
     transition: all 0.2s linear;
 
     &_sign {
-      width: 87px;
-      height: 34px;
+      @include size(87px, 34px);
     }
     &_register {
-      width: 196px;
-      height: 34px;
+      @include size(196px, 34px);
     }
 
     &_list {
@@ -32,19 +31,7 @@
       display: flex;
       justify-content: center;
       &::after {
-        content: '';
-        transition: all 0.2s linear;
-        display: inline-block;
-        height: 8px;
-        width: 8px;
-        margin: 0 8px;
-        margin-bottom: 2px;
-        border-bottom: 2px solid rgba(31, 32, 67, 0.5);
-        border-left: 2px solid rgba(31, 32, 67, 0.5);
-        cursor: pointer;
-        -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        transform: rotate(-45deg);
+        @include dropdown-arrow(-5px, -1px, relative);
       }
       &.open {
         &::after {
@@ -80,10 +67,10 @@
       text-align: center;
       padding: 15px 0px;
       &:hover {
-        background-color: $shadow-5;
+        background-color: $dark-shade-5;
       }
       &:not(:last-child) {
-        border-bottom: 1px solid $shadow-5;
+        border-bottom: 1px solid $dark-shade-5;
       }
     }
   }

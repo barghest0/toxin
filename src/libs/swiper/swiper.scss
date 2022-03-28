@@ -6,13 +6,13 @@
     text-align: right;
     padding-right: 15px;
     &-bullet {
-      border: 1.5px solid #fff;
+      border: 1.5px solid $white;
       opacity: 1;
       margin: 0 1.5px !important;
       background-color: transparent;
 
       &-active {
-        background-color: #fff;
+        background-color: $white;
       }
     }
   }
@@ -20,8 +20,8 @@
   &-button-next:after,
   &-button-prev:after {
     z-index: 100;
-    color: #fff;
-    font-size: 14px;
+    color: $white;
+    font-size: $main-font-size;
     transition: 0.2s linear;
     opacity: 0;
     font-weight: bold;

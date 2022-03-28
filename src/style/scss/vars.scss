@@ -1,12 +1,10 @@
-//fonts
 $font: 'Montserrat', sans-serif;
 
-//colors
-$shadow-100: #1f2043;
-$shadow-75: rgba(#1f2043, 0.75);
-$shadow-50: rgba(#1f2043, 0.5);
-$shadow-25: rgba(#1f2043, 0.25);
-$shadow-5: rgba(#1f2043, 0.05);
+$dark-shade-100: #1f2043;
+$dark-shade-75: rgba(#1f2043, 0.75);
+$dark-shade-50: rgba(#1f2043, 0.5);
+$dark-shade-25: rgba(#1f2043, 0.25);
+$dark-shade-5: rgba(#1f2043, 0.05);
 
 $white: #fff;
 $black: #000;
@@ -14,12 +12,11 @@ $black: #000;
 $main-color: #bc9cff;
 $second-color: #6fcf97;
 
-$font-color: $shadow-75;
+$font-color: $dark-shade-100;
 
 $gradient-main-color: #8ba4f9;
 $gradient-second-color: #66d2ea;
 
-//size
 $desktop-width: 1280px;
 $sm-desktop-width: 980px;
 $table-width: 768px;
@@ -27,5 +24,8 @@ $phone-width: 480px;
 $sm-phone-width: 320px;
 
 $main-font-size: 14px;
-$main-font-weight: 400;
-$main-line-height: 1;
+$inside-widget-font-size: 19px;
+$widget-font-size: 24px;
+$second-font-size: 12px;
+$main-line-height: 1.7;
+$second-line-height: 1.3;

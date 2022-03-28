@@ -2,11 +2,10 @@
   position: absolute;
   margin-top: 5px;
   width: 100%;
-  // height: 369px;
   box-sizing: border-box;
   padding: 20px;
   &.-inline- {
-    box-shadow: 0 0 25px rgba($color: $black, $alpha: 0.2);
+    @include shadow;
   }
   &--content {
     padding: 0;
@@ -21,11 +20,11 @@
     padding: 0;
     border: none;
     &--title {
-      color: $shadow-100;
+      color: $dark-shade-100;
       font-weight: bold;
       font-size: 19px;
       i {
-        color: $shadow-100;
+        color: $dark-shade-100;
       }
     }
     &--action path {
@@ -80,7 +79,7 @@
 
   &-cell {
     &.-day- {
-      color: $shadow-50;
+      color: $dark-shade-50;
       @include size(100%);
     }
     &.-current- {
@@ -93,11 +92,11 @@
       }
 
       &.-in-range- {
-        color: $shadow-50;
+        color: $dark-shade-50;
         border-radius: 0;
 
         &.-focus- {
-          color: $shadow-50;
+          color: $dark-shade-50;
         }
       }
     }
@@ -164,7 +163,7 @@
 
     &.-in-range- {
       color: $white;
-      color: $shadow-50;
+      color: $dark-shade-50;
       background: linear-gradient(
         to bottom,
         rgba($main-color, 0.25),

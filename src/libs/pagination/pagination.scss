@@ -1,8 +1,8 @@
 .paginationjs {
   &-nav {
     text-align: center;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: $main-font-size;
+    line-height: $main-line-height;
   }
   &-pages ul {
     display: flex;
@@ -30,7 +30,7 @@
     font-size: 12px;
     background: transparent;
     a {
-      color: $shadow-50;
+      color: $dark-shade-50;
       text-decoration: none;
     }
     &.active {

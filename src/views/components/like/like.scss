@@ -10,14 +10,13 @@
   }
 
   &__custom-input {
-    height: 20px;
-    min-width: 40px;
+    @include size(40px, 20px);
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 10px;
     font-size: 10px;
-    color: $shadow-25;
+    color: $dark-shade-25;
     transition: 0.3s ease-in-out;
     background: url('./images/unlike-button.svg');
   }

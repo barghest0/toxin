@@ -1,12 +1,13 @@
 .bullet-list {
   &__list {
+    color: $dark-shade-75;
     padding-left: 16px;
   }
   &__item {
     list-style-image: url('./images/bullet-list-item.svg');
     padding-inline-start: 1ch;
-    line-height: 1.7;
-    font-size: 14px;
+    line-height: $main-line-height;
+    font-size: $main-font-size;
     &:not(:last-child) {
       margin-bottom: 10px;
     }

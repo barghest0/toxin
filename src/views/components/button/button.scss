@@ -2,15 +2,14 @@
   font-weight: bold;
   border: none;
   border-radius: 22px;
-  height: 100%;
-  width: 100%;
+  @include size(100%);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
   cursor: pointer;
   line-height: 1.2;
-  font-size: 12px;
+  font-size: $second-font-size;
   text-transform: uppercase;
 
   transition: 0.2s ease-in-out;
@@ -32,18 +31,17 @@
   }
 
   &_no-bordered {
-    width: inherit;
-    height: inherit;
+    @include size(inherit);
     color: $main-color;
     background-color: transparent;
     &:hover {
-      color: $shadow-50;
+      color: $dark-shade-50;
     }
     &:active {
       color: $main-color;
     }
     &.hovered {
-      color: $shadow-50;
+      color: $dark-shade-50;
     }
   }
 
@@ -96,8 +94,7 @@
 
     &::before {
       content: '';
-      width: 45px;
-      height: 45px;
+      @include size(45px);
       position: absolute;
       top: 50%;
       right: 0;

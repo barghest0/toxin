@@ -16,6 +16,7 @@ class ExpandList {
 
   clickLabelCallback(event) {
     this.$element = $(event.currentTarget);
+    this.$element.toggleClass(EXPANDED_CLASS);
     this.$element.next().toggleClass(EXPANDED_CLASS);
   }
 }

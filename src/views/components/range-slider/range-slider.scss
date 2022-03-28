@@ -7,8 +7,8 @@
 
   &__price {
     display: flex;
-    font-size: 12px;
-    color: $shadow-50;
+    font-size: $second-font-size;
+    color: $dark-shade-50;
     &-delimiter {
       margin: 0 3px;
     }
@@ -16,7 +16,7 @@
 }
 .slider {
   &__track {
-    border: 1px solid $shadow-25;
+    border: 1px solid $dark-shade-25;
   }
   &__fill {
     @include second-gradient-to-bottom;

@@ -2,13 +2,12 @@
 @import '../../components/logo/logo.scss';
 
 .footer {
-  box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
   background-color: $white;
   border-top: 1px solid #e5e5e5;
   margin: 0 auto;
+  @include shadow;
   &_small {
-    height: 365px;
-    max-width: 768px;
+    @include size(768px, 365px);
     display: none;
     border: none;
     &-inline {
@@ -17,6 +16,9 @@
       align-items: center;
       flex-direction: column;
     }
+  }
+  &__copyright {
+    color: $dark-shade-75;
   }
   &_small &__copyright {
     text-align: center;
@@ -66,7 +68,8 @@
       grid-column: 1 / main-end;
     }
     &-description {
-      line-height: 1.7;
+      color: $dark-shade-75;
+      line-height: $main-line-height;
     }
     &-logo {
       margin-bottom: 18px;
@@ -77,6 +80,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    color: $dark-shade-75;
     min-width: 150px;
     row-gap: 20px;
     &-title {
@@ -94,14 +98,14 @@
       max-width: 260px;
     }
     &-description {
-      line-height: 1.7;
+      line-height: $main-line-height;
     }
   }
 
   &__line {
     width: 100%;
     border: none;
-    border-bottom: 1px solid $shadow-25;
+    border-bottom: 1px solid $dark-shade-25;
   }
 
   &__bottom {

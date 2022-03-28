@@ -17,21 +17,21 @@
 
   &__tag {
     text-transform: uppercase;
-    color: $shadow-25;
+    color: $dark-shade-25;
     justify-self: end;
 
     &_type {
       &_widget {
-        font-size: 24px;
+        font-size: $widget-font-size;
       }
       &_inside-widget {
-        font-size: 19px;
+        font-size: $inside-widget-font-size;
       }
       &_label {
-        font-size: 12px;
+        font-size: $second-font-size;
       }
       &_text {
-        font-size: 14px;
+        font-size: $main-font-size;
         text-transform: capitalize;
       }
     }

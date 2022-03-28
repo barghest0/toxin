@@ -38,16 +38,14 @@
 
   &__main-image {
     & img {
-      width: 100%;
-      height: 100%;
+      @include size(100%);
     }
     grid-area: main-image;
   }
 
   &__second-image {
     & img {
-      width: 100%;
-      height: 100%;
+      @include size(100%);
       display: block;
     }
 
@@ -73,9 +71,8 @@
     }
   }
   &__booking {
+    @include size(380px, 512px);
     grid-column-start: 3;
-    height: 512px;
-    max-width: 380px;
     @include tablet-landscape {
       grid-column-start: 1;
       grid-row-start: 2;

@@ -42,7 +42,7 @@
       &.active {
         pointer-events: all;
         width: 100%;
-        background-color: $shadow-50;
+        background-color: $dark-shade-50;
       }
       &-inner {
         transform: translateX(-400px);
@@ -82,8 +82,8 @@
   }
   &__slider-description {
     margin-top: 13.5px;
-    font-size: 12px;
-    color: $shadow-50;
+    font-size: $second-font-size;
+    color: $dark-shade-50;
   }
 
   &__cards {

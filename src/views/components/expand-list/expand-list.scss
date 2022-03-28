@@ -4,18 +4,10 @@
     margin-bottom: 17px;
     cursor: pointer;
     &::after {
-      border-bottom: 2px solid rgba(31, 32, 67, 0.5);
-      border-left: 2px solid rgba(31, 32, 67, 0.5);
-      content: '';
-      cursor: pointer;
-      height: 8px;
-      position: absolute;
-      width: 8px;
-      right: 18px;
-      top: 2px;
-      -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
+      @include dropdown-arrow(18px, 2px);
+    }
+    &.open::after {
+      transform: rotate(135deg);
     }
   }
 

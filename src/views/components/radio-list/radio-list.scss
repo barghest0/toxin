@@ -16,15 +16,15 @@
   }
 
   &__title {
-    color: $shadow-50;
+    color: $dark-shade-50;
     transition: all 0.2s ease-in-out;
   }
 
   &__custom-input {
-    align-self: flex-start;
     min-width: 20px;
-    margin-right: 10px;
     height: 20px;
+    align-self: flex-start;
+    margin-right: 10px;
     transition: 0.3s ease-in-out;
     background: url('images/empty-radio.svg');
   }
@@ -34,6 +34,6 @@
   }
 
   &__input:checked + &__custom-input + &__title {
-    color: $shadow-75;
+    color: $dark-shade-75;
   }
 }

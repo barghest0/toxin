@@ -17,7 +17,6 @@
     align-items: center;
   }
   &__card {
-    height: 646px;
-    width: 380px;
+    @include size(380px, 646px);
   }
 }

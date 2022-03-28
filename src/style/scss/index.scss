@@ -2,6 +2,12 @@
 @import './vars';
 @import './fonts';
 @import './text-titles';
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
 
 html {
   line-height: $main-line-height;
@@ -18,15 +24,8 @@ html {
   }
 }
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  box-sizing: border-box;
-}
-
 *::placeholder {
-  font-size: 14px;
+  font-size: $main-font-size;
 }
 
 ::-webkit-scrollbar {

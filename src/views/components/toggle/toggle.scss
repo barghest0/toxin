@@ -21,7 +21,7 @@
   &__title {
     display: flex;
     align-items: center;
-    font-size: 14px;
-    color: $shadow-75;
+    font-size: $main-font-size;
+    color: $dark-shade-75;
   }
 }

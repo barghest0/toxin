@@ -1,7 +1,6 @@
 .rate {
   position: relative;
-  width: 120px;
-  height: 24px;
+  @include size(120px, 24px);
   background: url('images/inactive-rate.svg');
   background-size: 120px auto;
 

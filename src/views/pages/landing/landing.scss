@@ -23,11 +23,12 @@
   }
 
   &__slogan {
-    line-height: 1.7;
+    line-height: $main-line-height;
     grid-column-start: 3;
     grid-row-start: 2;
     align-self: end;
     text-align: end;
+    color: $dark-shade-75;
     @include tablet-portrait {
       grid-column-start: 1;
       text-align: start;

@@ -23,8 +23,7 @@
     justify-content: space-between;
     height: 44px;
     &-button {
-      width: 100px;
-      height: 100%;
+      @include size(99px, 100%);
     }
   }
 }

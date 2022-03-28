@@ -4,11 +4,9 @@
 
 .preview-room {
   text-decoration: none;
-  color: $shadow-100;
+  color: $dark-shade-100;
   background-color: $white;
-
-  width: 100%;
-  height: 100%;
+  @include size(100%);
 
   &__carousel {
     width: 100%;
@@ -40,7 +38,7 @@
 
   &__info {
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba($color: $shadow-100, $alpha: 0.1);
+    border-bottom: 1px solid rgba($color: $dark-shade-100, $alpha: 0.1);
   }
 
   &__reviews {
@@ -50,7 +48,7 @@
     justify-content: space-between;
 
     &-value {
-      color: $shadow-50;
+      color: $dark-shade-50;
     }
 
     &-number {

@@ -1,6 +1,5 @@
 .chart {
-  width: 345px;
-  height: 125px;
+  @include size(345px, 125px);
   color: $main-color;
   text-transform: uppercase;
   font-weight: bold;
@@ -8,7 +7,6 @@
   position: relative;
 
   @include phone {
-    width: 320px;
-    height: 180px;
+    @include size(320px, 180px);
   }
 }
