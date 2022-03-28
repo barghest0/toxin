@@ -24,6 +24,7 @@ const getEntries = pages => {
         filename: `${name}.html`,
         template: `${PAGES_DIR}/${name}/${name}.pug`,
         chunks: [name],
+        favicon: `${PATHS.src}/static/favicon.ico`,
       }),
     );
   });
@@ -119,15 +120,6 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: `css/[name].[fullhash].css`,
-    }),
-
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: `${PATHS.src}/static`,
-          to: '',
-        },
-      ],
     }),
 
     new webpack.ProvidePlugin({
