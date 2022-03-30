@@ -8,7 +8,11 @@
     "build": "webpack --config ./webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js"
   },
-  "browserslist": ["> 1%", "last 4 version", "IE 10"],
+  "browserslist": [
+    "> 1%",
+    "last 4 version",
+    "IE 10"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/barghest0/MetaLampLayoutPratice.git"
@@ -53,6 +57,7 @@
   "dependencies": {
     "air-datepicker": "^3.1.1",
     "chart.js": "^3.5.1",
+    "gh-pages": "^3.2.3",
     "jquery": "^3.6.0",
     "jquery.maskedinput": "^1.4.1",
     "paginationjs": "^2.1.5",
