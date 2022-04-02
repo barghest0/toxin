@@ -71,7 +71,8 @@
     }
   }
   &__booking {
-    @include size(380px, 512px);
+    max-width: 380px;
+    height: 512px;
     grid-column-start: 3;
     @include tablet-landscape {
       grid-column-start: 1;

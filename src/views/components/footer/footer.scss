@@ -7,7 +7,7 @@
   margin: 0 auto;
   @include shadow;
   &_small {
-    @include size(768px, 365px);
+    @include size(100%, 365px);
     display: none;
     border: none;
     &-inline {
