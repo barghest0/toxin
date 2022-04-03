@@ -1,4 +1,4 @@
-import { RANGE_SLIDER_SELECTOR } from './constants';
+import { RANGE_SLIDER_CONTAINER_SELECTOR } from './constants';
 import RangeSlider from './RangeSliderModule';
 
-// new RangeSlider(RANGE_SLIDER_SELECTOR);
+$(RANGE_SLIDER_CONTAINER_SELECTOR).each((_index, element) => new RangeSlider($(element)));

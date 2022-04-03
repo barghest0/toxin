@@ -5,7 +5,7 @@ mixin range-slider({startPrice=5000,endPrice=10000,label='Range Slider'}={})
     .range-slider__label 
       +block-label({text:label})
       .range-slider__price 
-        .range-slider__start-price #{ startPrice }₽
+        .js-range-slider__start-price.range-slider__start-price #{ startPrice } ₽
         span.range-slider__price-delimiter -
-        .range-slider__end-price #{ endPrice }₽
+        .js-range-slider__end-price.range-slider__end-price #{ endPrice } ₽
     .slider.js-slider(data-first-value=startPrice, data-second-value=endPrice)

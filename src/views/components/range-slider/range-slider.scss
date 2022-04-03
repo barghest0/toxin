@@ -1,3 +1,5 @@
+@import '../../../libs/range-slider/range-slider.scss';
+
 .range-slider {
   &__label {
     margin-bottom: 23px;
@@ -12,16 +14,5 @@
     &-delimiter {
       margin: 0 3px;
     }
-  }
-}
-.slider {
-  &__track {
-    border: 1px solid $dark-shade-25;
-  }
-  &__fill {
-    @include second-gradient-to-bottom;
-  }
-  &__thumb {
-    @include second-gradient-to-bottom;
   }
 }

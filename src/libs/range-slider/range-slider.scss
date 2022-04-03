@@ -1,0 +1,12 @@
+.slider {
+  &__track {
+    border: 1px solid $dark-shade-25;
+    background-color: transparent;
+  }
+  &__fill {
+    @include second-gradient-to-bottom;
+  }
+  &__thumb {
+    @include second-gradient-to-bottom;
+  }
+}
