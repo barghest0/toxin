@@ -26,8 +26,8 @@ class RangeSliderFacade {
   }
 
   handleChange({ value }) {
-    this.$startPrice.html(`${value[FIRST_VALUE]} ₽`);
-    this.$endPrice.html(`${value[SECOND_VALUE]} ₽`);
+    this.$startPrice.html(`${value[FIRST_VALUE].toLocaleString()} ₽`);
+    this.$endPrice.html(`${value[SECOND_VALUE].toLocaleString()} ₽`);
   }
 
   createSlider() {

@@ -6,7 +6,7 @@
 
 .register-card {
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
   &__label {
     margin-bottom: 5px;
@@ -15,9 +15,8 @@
   &__register-form {
     margin-bottom: 30px;
   }
-
   &__block {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     &:first-child &-field:last-child {
       margin-bottom: 26px;
     }
@@ -27,7 +26,6 @@
       }
     }
   }
-
   &__button {
     margin-bottom: 20px;
     height: 44px;

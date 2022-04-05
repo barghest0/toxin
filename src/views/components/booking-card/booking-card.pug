@@ -36,6 +36,7 @@ mixin booking-card({roomNumber='', price='', isLuxury=false, dateFrom="",dateTo=
           +body-text({text:`${addServicePriceWithoutDiscount}₽`}) 
       .booking-card__final-cost 
         +title-inside-widget({text:'Итого'})
+        .booking-card__points
         +title-inside-widget({text:`${totalPrice.toLocaleString()}₽`})
       .booking-card__button 
         +button({text:'Забронировать',type:'filled',isLargest:true})

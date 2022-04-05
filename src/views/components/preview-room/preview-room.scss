@@ -44,10 +44,11 @@
   &__reviews {
     display: flex;
     align-items: center;
-    margin-top: 8px;
+    margin-top: 7.7px;
     justify-content: space-between;
 
     &-value {
+      line-height: 1;
       color: $dark-shade-50;
     }
 

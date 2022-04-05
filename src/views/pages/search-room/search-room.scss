@@ -17,7 +17,7 @@
 .search-room {
   &__inner {
     padding-top: 30px;
-    padding-bottom: 70px;
+    padding-bottom: 72px;
     display: grid;
     grid-template-columns: 266px minmax(10px, 60px) 1fr;
     @include sm-tablet-portrait {
@@ -81,9 +81,10 @@
     }
   }
   &__slider-description {
-    margin-top: 13.5px;
+    margin-top: 12px;
     font-size: $second-font-size;
     color: $dark-shade-50;
+    line-height: $second-line-height;
   }
 
   &__cards {

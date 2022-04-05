@@ -27,12 +27,12 @@
     color: $dark-shade-75;
     font-weight: bold;
     margin-bottom: 5px;
-    line-height: 1.2;
+    line-height: $second-line-height;
   }
 
   &__subtitle {
     font-size: 12px;
-    line-height: 1.25;
+    line-height: $second-line-height;
     color: $dark-shade-50;
   }
 }

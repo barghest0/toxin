@@ -23,6 +23,7 @@
   }
 
   &__preview-images {
+    line-height: 1;
     width: 100%;
     display: grid;
     grid-template-columns: 68% 32%;
@@ -35,7 +36,6 @@
       grid-template-rows: minmax(min-content, 100px);
     }
   }
-
   &__main-image {
     & img {
       @include size(100%);
@@ -57,7 +57,6 @@
       grid-area: second-image-top;
     }
   }
-
   &__inner {
     padding: 72px 0;
     display: grid;
@@ -88,7 +87,7 @@
       'reviews'
       'feedback'
       'additions';
-    row-gap: 36px;
+    row-gap: 35px;
   }
 
   &__reviews {
@@ -138,6 +137,7 @@
       row-gap: 22px;
     }
     &-count {
+      color: $dark-shade-50;
       font-size: 14px;
       text-align: center;
       display: flex;

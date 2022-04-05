@@ -30,8 +30,9 @@
       padding-left: 0;
       display: flex;
       justify-content: center;
+      margin-right: 17px;
       &::after {
-        @include dropdown-arrow(-5px, -1px, relative);
+        @include dropdown-arrow(-8px, -1px, relative);
       }
       &.open {
         &::after {
@@ -102,7 +103,7 @@
       padding-left: 0;
     }
     @include phone {
-      width: calc(100vw - 30px);
+      width: calc(100vw - 20px);
     }
   }
 }
