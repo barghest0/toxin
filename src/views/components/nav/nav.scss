@@ -19,13 +19,6 @@
     align-items: center;
     transition: all 0.2s linear;
 
-    &_sign {
-      @include size(87px, 34px);
-    }
-    &_register {
-      @include size(196px, 34px);
-    }
-
     &_list {
       padding-left: 0;
       display: flex;
@@ -78,6 +71,65 @@
 
   &__item.open &__list {
     display: flex;
+  }
+  &__button {
+    font-weight: bold;
+    border: none;
+    border-radius: 22px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+    line-height: 1.2;
+    font-size: $second-font-size;
+    text-transform: uppercase;
+
+    &_outlined {
+      color: $main-color;
+      position: relative;
+      border: 2px solid transparent;
+      border-radius: 80px;
+      background-image: linear-gradient(white, white),
+        linear-gradient(to bottom, $main-color, $gradient-main-color);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      transition: all 0.1s linear;
+      @include size(87px, 34px);
+      &:hover {
+        opacity: 0.8;
+        border: 2px solid transparent;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        background-image: linear-gradient(white, white),
+          linear-gradient(
+            to bottom,
+            rgba($main-color, 0.5),
+            rgba($gradient-main-color, 0.5)
+          );
+      }
+
+      &:active {
+        opacity: 1;
+        background-image: linear-gradient(white, white),
+          linear-gradient(to bottom, rgba($main-color, 1), rgba($gradient-main-color, 1));
+      }
+    }
+    &_filled {
+      @include size(196px, 34px);
+      @include main-gradient-to-bottom;
+      color: $white;
+      &:hover {
+        opacity: 0.5;
+      }
+      &:active {
+        opacity: 1;
+      }
+      &.hovered {
+        opacity: 0.5;
+      }
+    }
   }
 
   &_burger {

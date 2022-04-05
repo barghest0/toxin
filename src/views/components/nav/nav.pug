@@ -1,16 +1,14 @@
 include ../button/button.pug
 
 mixin nav({state='guest',name='',burger=false}={})
-  nav.nav(class=burger ? 'nav_burger' : null)
-    a.nav__item(href='/mock-address/change-me') О нас
-    div.nav__item.nav__item_list.nav__item_services Услуги
-    a.nav__item(href='/mock-address/change-me') Вакансии
-    a.nav__item(href='/mock-address/change-me') Новости
-    div.nav__item.nav__item_list.nav__item_agreements Соглашения
+  nav.nav(class=burger ? "nav_burger" : null)
+    a.nav__item(href="/mock-address/change-me") О нас
+    .nav__item.nav__item_list.nav__item_services Услуги
+    a.nav__item(href="/mock-address/change-me") Вакансии
+    a.nav__item(href="/mock-address/change-me") Новости
+    .nav__item.nav__item_list.nav__item_agreements Соглашения
     if state === 'auth'
-      a.nav__item.nav__item_profile(href='/mock-address/change-me')= name
+      a.nav__item.nav__item_profile(href="/mock-address/change-me")= name
     else
-      a.nav__item.nav__item_sign(href='login.html')
-        +button({text:'Войти', type:'outlined', })
-      a.nav__item.nav__item_register(href='register.html')
-        +button({text:'Зарегистрироваться',type:'filled'})
+      a.nav__button.nav__button_outlined(href="login.html") Войти
+      a.nav__button.nav__button_filled(href="register.html") Зарегестрироваться

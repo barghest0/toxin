@@ -10,20 +10,20 @@ block page
   include ../../components/feedback/feedback.pug
   include ../../components/bullet-list/bullet-list.pug
   include ../../components/booking-card/booking-card.pug
-  - const feedbackData = require('../../../data/feedback-data');
-  - const bulletListData = require('../../../data/bullet-list').data;
-  - const reviewListData = require('../../../data/review-list-data').data;
-  - const bookingData = require('../../../data/booking-data').data;
-  - const guestsDropdownData = require('../../../data/dropdown-guests-data').withoutChildren;
+  - const feedbackData = require("../../../data/feedback-data");
+  - const bulletListData = require("../../../data/bullet-list").data;
+  - const reviewListData = require("../../../data/review-list-data").data;
+  - const bookingData = require("../../../data/booking-data").data;
+  - const guestsDropdownData = require("../../../data/dropdown-guests-data").withoutChildren;
   - bookingData.guests = guestsDropdownData;
   .room
     .room__preview-images 
       .room__main-image
-        img(src='assets/images/main-image-room.jpg', alt='Room photo')
+        img(src="assets/images/main-image-room.jpg", alt="Room photo")
       .room__second-image.room__second-image_top
-        img(src='assets/images/second-image-room.jpg', alt='Room photo')
+        img(src="assets/images/second-image-room.jpg", alt="Room photo")
       .room__second-image.room__second-image_bottom
-        img(src='assets/images/third-image-room.jpg', alt='Room photo')
+        img(src="assets/images/third-image-room.jpg", alt="Room photo")
     .container
       .room__inner 
         .room__overview

@@ -11,9 +11,9 @@ block page
   include ../../components/datepicker/datepicker.pug
   include ../../components/preview-room/preview-room.pug
 
-  - const roomsData = require('../../../data/preview-rooms-data').data;
-  - const bookingData = require('../../../data/booking-data').data;
-  - const guestsDropdownData = require('../../../data/dropdown-guests-data').withoutChildren;
+  - const roomsData = require("../../../data/preview-rooms-data").data;
+  - const bookingData = require("../../../data/booking-data").data;
+  - const guestsDropdownData = require("../../../data/dropdown-guests-data").withoutChildren;
   - bookingData.guests = guestsDropdownData;
   .cards
     .container

@@ -14,17 +14,17 @@ block page
   include ../../components/pagination/pagination.pug
   include ../../components/widget-title/widget-title.pug
 
-  - const roomsData = require('../../../data/preview-rooms-data').data;
-  - const expandData = require('../../../data/expand-list-data').data;
-  - const checkboxData = require('../../../data/checkbox-list-data');
-  - const guestDropdownData = require('../../../data/dropdown-guests-data');
-  - const apartmentsDropdownData = require('../../../data/dropdown-apartments-data').data;
+  - const roomsData = require("../../../data/preview-rooms-data").data;
+  - const expandData = require("../../../data/expand-list-data").data;
+  - const checkboxData = require("../../../data/checkbox-list-data");
+  - const guestDropdownData = require("../../../data/dropdown-guests-data");
+  - const apartmentsDropdownData = require("../../../data/dropdown-apartments-data").data;
 
   .search-room
     .container
       .search-room__inner
         .search-room__filter-icon.js-search-room__filter-icon 
-          img(src='assets/images/filter-icon.svg', alt='filters')
+          img(src="assets/images/filter-icon.svg", alt="filters")
         .search-room__filters
           .search-room__filters-inner
             .search-room__filter

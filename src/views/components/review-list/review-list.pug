@@ -3,7 +3,7 @@ mixin review-list({items=[]}={})
     each item in items
       .review-list__item
         .review-list__img-container
-          img.review-list__img(src=`assets/images/${item['img']}`, alt=item['alt'])
+          img.review-list__img(src=`assets/images/${item['img']}`, alt=item["alt"])
         .review-list__text
-          .review-list__title= item['title']
-          .review-list__subtitle= item['subtitle']
+          .review-list__title= item["title"]
+          .review-list__subtitle= item["subtitle"]

@@ -5,15 +5,15 @@ include ../button/button.pug
 include ../widget-title/widget-title.pug
 
 mixin search-room-card({title='Найдём номера под ваши пожелания'}={})
-  - const guestsDropdownData = require('../../../data/dropdown-guests-data');
+  - const guestsDropdownData = require("../../../data/dropdown-guests-data");
   +card
     .search-room-card 
       .search-room-card__title 
         +widget-title({text:title})
-      form.search-room-card__search-form(action='search-room.html')
+      form.search-room-card__search-form(action="search-room.html")
         .search-room-card__date 
           +range-date({from:'Прибытие',to:'Выезд'})
         .search-room-card__guests 
           +dropdown({label:'Гости',type:'guests', data:guestsDropdownData.clear})
-        .search-room-card__button(action='search-room.html') 
+        .search-room-card__button
           +button({text:'Подобрать номер', type:'filled', isLargest:true})

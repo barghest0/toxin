@@ -94,8 +94,8 @@
     }
     &-inner {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
       grid-column-gap: 10px;
       grid-row-gap: 21px;
       margin-bottom: 40px;

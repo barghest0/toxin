@@ -28,9 +28,9 @@ mixin filter-date({label='', dateFrom="", dateTo="", placeholder=''}={})
       .filter-date__field
         input.filter-date__input.js-filter-date__input(
           name=name,
-          data-range='true',
-          value=dateTo && dateFrom ? `${shortDateFrom} - ${shortDateTo} ` : 'Выберите дату',
-          autocomplete='off'
+          data-range="true",
+          value=dateTo && dateFrom ? `${shortDateFrom} - ${shortDateTo} ` : "Выберите дату",
+          autocomplete="off"
         )
       .filter-date__datepicker
         +datepicker({dateFrom,dateTo})

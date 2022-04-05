@@ -9,7 +9,7 @@ mixin dropdown({label='', subLabel='',size='lg', type='guests', data={},state=''
       if subLabel
         +block-sub-label({text:subLabel})
     .dropdown__container.dropdown-container.js-dropdown-container(
-      class=state === 'opened' ? 'open' : '',
+      class=state === "opened" ? "open" : "",
       data-type=type
     )
       .dropdown__field.js-dropdown__field
