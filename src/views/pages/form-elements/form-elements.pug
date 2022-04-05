@@ -35,7 +35,7 @@ block page
   - const genderData = require("../../../data/gender-data").data;
   .form-elements
     .container
-      .form-elements__inputs
+      section.form-elements__inputs
         .form-elements__fields
           .form-elements__text-field
             +default-text-field({label:'text field', subLabel:'default', name:"email", placeholder:"Email", type:'email'})
@@ -52,7 +52,7 @@ block page
           .form-elements__subscribe-field
             +subscribe-text-field({label:'subscription text field', placeholder:'Email',name:'email'})
 
-        .form-elements__selections
+        section.form-elements__selections
           .form-elements__checkboxes
             +checkbox-list({label:'checkbox buttons', items:checkboxData.default })
           .form-elements__radio
@@ -78,7 +78,7 @@ block page
               +rate({name:'1-rate',rate:4})
               +rate({name:'2-rate',rate:5})
 
-        .form-elements__other
+        section.form-elements__other
           .form-elements__slider
             +range-slider
           .form-elements__buttons
@@ -99,7 +99,7 @@ block page
               +block-label({text:'pagination'})
             +pagination
 
-      .form-elements__dropdowns
+      section.form-elements__dropdowns
         .form-elements__dropdown.form-elements__dropdown_apartments
           +dropdown({label:'dropdown',subLabel:'default',size:'md', type:'apartments', data:apartmentsDropdownData})
         .form-elements__dropdown.form-elements__dropdown_apartments
@@ -108,7 +108,7 @@ block page
           +dropdown({label:'dropdown',type:'guests', data:guestDropdownData.clear, state:'opened'})
         .form-elements__dropdown.form-elements__dropdown_guests
           +dropdown({label:'dropdown',type:'guests', data:guestDropdownData.withoutChildren, state:'opened'})
-      .form-elements__lists
+      section.form-elements__lists
         .form-elements__expand-checkbox
           +expand-list({label:'expandable checkbox list', items:expandListData})
           +expand-list({label:'expandable checkbox list',state:'opened', items:expandListData})
@@ -118,7 +118,7 @@ block page
           .form-elements__list-label
             +block-label({text:'bullet list'})
           +bullet-list({items:bulletListData})
-      .form-elements__reviews
+      section.form-elements__reviews
         .form-elements__review-list
           +review-list({items:reviewListData})
         .form-elements__feedback 

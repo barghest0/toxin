@@ -28,16 +28,16 @@ block page
       .room__inner 
         .room__overview
           .room__reviews
-            .room__about
+            section.room__about
               .room__label
                 +title-inside-widget({text:'Сведения о номере'})
               +review-list({items:reviewListData })
-            .room__impressions
+            section.room__impressions
               .room__label 
                 +title-inside-widget({text:'Впечатления от номера'})
               .room__impressions-chart
                 +chart({great:130,good:65,satisfied:65})
-          .room__feedback 
+          section.room__feedback 
             .room__label.room__label_feedback
               +title-inside-widget({text:'Отзывы посетителей номера'})
               .room__feedback-count 2 отзыва
@@ -47,12 +47,12 @@ block page
               .room__feedback-item
                 +feedback(feedbackData.woman)
           .room__additions
-            .room__rules 
+            section.room__rules 
               .room__label.room__label_separated
                 +title-inside-widget({text:'Правила'})
               .room__rules-list 
                 +bullet-list({items:bulletListData})
-            .room__cancel
+            section.room__cancel
               .room__label
                 +title-inside-widget({text:'Отмена'})
               .room__cancel-text 

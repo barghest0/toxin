@@ -2,7 +2,7 @@ include ../like/like.pug
 include ../body-text/body-text.pug
 
 mixin feedback({avatar='', alt='',name='',lastVisit='', likesCount='', comment='',likeState=''}={})
-  .feedback
+  article.feedback
     .feedback__user
       img.feedback__user-avatar(src=`assets/images/${avatar}`, alt=alt)
       .feedback__user-info
