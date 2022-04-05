@@ -11,6 +11,7 @@ import './images/filter-icon.svg';
 import './search-room.scss';
 
 import FilterButton from './FilterButtonModule';
+
 import { FILTER_BUTTON_SELECTOR } from './constants';
 
 $(FILTER_BUTTON_SELECTOR).each((_index, element) => new FilterButton($(element)));

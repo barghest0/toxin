@@ -1,4 +1,5 @@
 import { Chart, registerables } from 'chart.js';
+
 import { TURNING_POINT } from '../../views/components/chart/constants';
 
 Chart.register(...registerables);

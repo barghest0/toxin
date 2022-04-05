@@ -1,5 +1,6 @@
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
+
 import {
   APPLY_BUTTON_CLASS,
   OPENED_CLASS,

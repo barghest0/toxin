@@ -1,4 +1,5 @@
 import 'paginationjs';
+
 import { QUANTITY_PAGES } from '../../views/components/pagination/constants';
 
 class PaginationFacade {

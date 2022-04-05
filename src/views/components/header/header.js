@@ -1,6 +1,8 @@
 import HeaderBurger from './HeaderBurgerModule';
+
+import { BURGER_SELECTOR } from './constants';
+
 import '../logo/logo';
 import '../nav/nav';
-import { BURGER_SELECTOR } from './constants';
 
 $(BURGER_SELECTOR).each((_index, element) => new HeaderBurger($(element)));
