@@ -3,6 +3,8 @@ const APARTMENTS_TYPE = 'apartments';
 
 const OPENED_CLASS = 'open';
 
+const DISABLED_CLASS = 'disabled';
+
 const CONTAINER_SELECTOR = '.js-dropdown-container';
 const LIST_SELECTOR = '.js-dropdown__list';
 const FIELD_SELECTOR = '.js-dropdown__field';
@@ -63,4 +65,5 @@ export {
   BEDROOMS_SELECTOR,
   BEDS_SELECTOR,
   BATHROOMS_SELECTOR,
+  DISABLED_CLASS,
 };

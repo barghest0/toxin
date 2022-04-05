@@ -15,6 +15,7 @@ import {
   MIN_COUNT,
   NEWBORNS_SELECTOR,
   OPENED_CLASS,
+  DISABLED_CLASS,
 } from './constants';
 import DropdownHelper from './DropdownHelper';
 
@@ -258,11 +259,13 @@ class Dropdown {
   }
 
   disableElement($element) {
-    $element.addClass('disabled');
+    $element.addClass(DISABLED_CLASS);
+    return this;
   }
 
   enableElement($element) {
-    $element.removeClass('disabled');
+    $element.removeClass(DISABLED_CLASS);
+    return this;
   }
 
   enableAllIncrements() {
