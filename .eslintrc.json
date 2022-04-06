@@ -4,7 +4,7 @@
     "es2021": true,
     "jquery": true
   },
-  "extends": ["airbnb-base", "plugin:prettier/recommended", "prettier", "plugin:fsd/all"],
+  "extends": ["airbnb-base", "plugin:prettier/recommended", "prettier"],
   "parserOptions": {
     "ecmaVersion": 13,
     "sourceType": "module"
@@ -16,7 +16,7 @@
       }
     }
   },
-  "plugins": ["prettier", "pug", "fsd"],
+  "plugins": ["prettier", "pug"],
   "rules": {
     "prettier/prettier": ["error"]
   }
