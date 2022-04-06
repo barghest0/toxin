@@ -6,11 +6,12 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__font {
     display: grid;
-    grid-template-columns: 40px 370px;
+    grid-template-columns: 40px minmax(min-content, 370px);
     grid-column-gap: 20px;
     margin-bottom: 40px;
   }
