@@ -1,4 +1,5 @@
 import Swiper, { Pagination, Navigation } from 'swiper';
+/* eslint-disable import/no-unresolved */
 import 'swiper/css';
 import 'swiper/scss/pagination';
 import 'swiper/scss/navigation';

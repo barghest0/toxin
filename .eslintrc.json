@@ -14,7 +14,8 @@
       "node": {
         "extensions": [".js", ".ts"]
       }
-    }
+    },
+    "import/ignore": ["swiper"]
   },
   "plugins": ["prettier", "pug"],
   "rules": {
