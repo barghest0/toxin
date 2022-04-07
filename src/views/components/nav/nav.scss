@@ -91,6 +91,7 @@
       position: relative;
       border: 2px solid transparent;
       border-radius: 80px;
+      margin: 0 auto;
       background-image: linear-gradient(white, white),
         linear-gradient(to bottom, $main-color, $gradient-main-color);
       background-origin: border-box;
@@ -120,6 +121,8 @@
       @include size(196px, 34px);
       @include main-gradient-to-bottom;
       color: $white;
+      margin: 0 auto;
+
       &:hover {
         opacity: 0.5;
       }

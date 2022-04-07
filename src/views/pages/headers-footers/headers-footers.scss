@@ -15,6 +15,9 @@
       margin: 0 auto;
       width: 768px;
       margin-bottom: 125px;
+      @include tablet-portrait {
+        width: 100%;
+      }
     }
   }
 }
