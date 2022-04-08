@@ -51,6 +51,12 @@
   }
 }
 
+@mixin landscape-phone {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
 @mixin sm-tablet-portrait {
   @media (max-width: 650px) {
     @content;

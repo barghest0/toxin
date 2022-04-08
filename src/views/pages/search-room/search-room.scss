@@ -29,9 +29,38 @@
   &__filters {
     z-index: 1000;
     transition: all 0.3s linear;
-
     &-inner {
       background-color: $white;
+      position: relative;
+    }
+    &-icon {
+      z-index: 90;
+      cursor: pointer;
+      position: absolute;
+      top: 85px;
+      right: 25px;
+      display: none;
+      @include sm-tablet-portrait {
+        display: block;
+      }
+    }
+    &-close {
+      cursor: pointer;
+      display: none;
+      &::after,
+      &::before {
+        content: '';
+        width: 15px;
+        height: 3px;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        @include main-gradient-to-bottom;
+      }
+      &::before {
+        transform: rotate(-45deg);
+      }
     }
 
     @include sm-tablet-portrait {
@@ -48,40 +77,34 @@
         transform: translateX(-400px);
         width: 400px;
         padding: 20px;
-        @include phone {
-          width: 260px;
+        @include landscape-phone {
+          width: 70%;
+          @include phone {
+            width: 100%;
+          }
         }
       }
       &.active &-inner {
         transform: translateX(0);
         height: 100vh;
-        overflow: scroll;
+        overflow: auto;
       }
+      @include phone {
+        &.active &-close {
+          display: block;
+        }
+      }
+
       &-inner::-webkit-scrollbar {
         width: 0;
       }
     }
   }
 
-  &__filters.active + &__cards {
-    position: fixed;
-  }
-
   &__filter {
     margin-bottom: 30px;
     &:first-child {
       margin-bottom: 20px;
-    }
-    &-icon {
-      z-index: 90;
-      cursor: pointer;
-      position: absolute;
-      top: 85px;
-      right: 25px;
-      display: none;
-      @include sm-tablet-portrait {
-        display: block;
-      }
     }
   }
 

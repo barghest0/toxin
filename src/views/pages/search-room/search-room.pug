@@ -23,10 +23,11 @@ block page
   .search-room
     .container
       section.search-room__inner
-        .search-room__filter-icon.js-search-room__filter-icon 
+        .search-room__filters-icon.js-search-room__filters-icon 
           img(src="assets/images/filter-icon.svg", alt="filters")
         .search-room__filters
           .search-room__filters-inner
+            span.search-room__filters-close.js-search-room__filters-close
             .search-room__filter
               +filter-date({label:'Даты пребывания в отеле', dateFrom:'08.19.2022', dateTo:'08.23.2022'})
             .search-room__filter
