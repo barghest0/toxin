@@ -12,18 +12,18 @@ class ChartFacade {
     this.totalVotes = totalVotes;
     this.backgroundColors = backgroundColors;
     this.labels = labels;
-    this.init();
+    this.#init();
   }
 
-  init() {
-    this.setData();
-    this.setOptions();
-    this.setPlugins();
-    this.createChart();
-    this.attachListeners();
+  #init() {
+    this.#setData();
+    this.#setOptions();
+    this.#setPlugins();
+    this.#createChart();
+    this.#attachListeners();
   }
 
-  setData() {
+  #setData() {
     this.data = {
       labels: this.labels,
       datasets: [
@@ -35,7 +35,7 @@ class ChartFacade {
     };
   }
 
-  setOptions() {
+  #setOptions() {
     this.options = {
       cutout: '90%',
       radius: '61',
@@ -61,7 +61,7 @@ class ChartFacade {
           doughnutMode: true,
           align: window.innerWidth >= TURNING_POINT ? 'end' : 'center',
           reverse: true,
-
+          onClick: false,
           labels: {
             boxWidth: 8,
             boxHeight: 8,
@@ -82,7 +82,7 @@ class ChartFacade {
     };
   }
 
-  setPlugins() {
+  #setPlugins() {
     this.plugins = [
       {
         beforeDraw: chart => {
@@ -106,7 +106,7 @@ class ChartFacade {
     ];
   }
 
-  createChart() {
+  #createChart() {
     window.addEventListener('load', () => {
       this.chart = new Chart(this.container, {
         type: 'doughnut',
@@ -117,25 +117,25 @@ class ChartFacade {
     });
   }
 
-  attachListeners() {
-    window.addEventListener('resize', this.checkWindowSize.bind(this));
+  #attachListeners() {
+    window.addEventListener('resize', this.#checkWindowSize.bind(this));
   }
 
-  checkWindowSize(event) {
+  #checkWindowSize(event) {
     if (event.target.innerWidth <= TURNING_POINT) {
-      this.changeLegendPositionToBottom();
+      this.#changeLegendPositionToBottom();
     } else {
-      this.changeLegendPositionToRight();
+      this.#changeLegendPositionToRight();
     }
   }
 
-  changeLegendPositionToBottom() {
+  #changeLegendPositionToBottom() {
     this.chart.options.plugins.legend.position = 'bottom';
     this.chart.options.plugins.legend.align = 'center';
     this.chart.update();
   }
 
-  changeLegendPositionToRight() {
+  #changeLegendPositionToRight() {
     this.chart.options.plugins.legend.position = 'right';
     this.chart.options.plugins.legend.align = 'end';
     this.chart.update();

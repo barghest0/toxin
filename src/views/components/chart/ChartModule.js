@@ -1,29 +1,25 @@
 import ChartFacade from '../../../libs/chart/ChartFacade';
 
 class Chart {
-  constructor(container) {
+  constructor(container, votes, labels) {
     this.container = container;
+    this.votes = votes;
+    this.labels = labels;
     this.context = container.getContext('2d');
-    this.init();
+    this.#init();
   }
 
-  init() {
-    this.setVotes();
-    this.setTotalVotes();
-    this.setLabels();
-    this.setGradients();
-    this.createChart();
+  #init() {
+    this.#setTotalVotes();
+    this.#setGradients();
+    this.#createChart();
   }
 
-  setVotes() {
-    this.votes = [0, 65, 65, 130];
-  }
-
-  setTotalVotes() {
+  #setTotalVotes() {
     this.totalVotes = this.votes.reduce((acc, vote) => acc + vote);
   }
 
-  setGradients() {
+  #setGradients() {
     this.disappointColorGradient = this.context.createLinearGradient(0, 0, 0, 200);
     this.disappointColorGradient.addColorStop(0, '#909090');
     this.disappointColorGradient.addColorStop(1, '#3D4975');
@@ -48,11 +44,7 @@ class Chart {
     ];
   }
 
-  setLabels() {
-    this.labels = ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно'];
-  }
-
-  createChart() {
+  #createChart() {
     this.chart = new ChartFacade(
       this.container,
       this.context,

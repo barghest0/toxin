@@ -3,30 +3,30 @@ import { BURGER_SELECTOR, BURGER_NAV_SELECTOR, OPEN_BURGER_CLASS } from './const
 class HeaderBurger {
   constructor($container) {
     this.$container = $container;
-    this.init();
+    this.#init();
   }
 
-  init() {
-    this.setBurgerNav();
-    this.attachListeners();
+  #init() {
+    this.#setBurgerNav();
+    this.#attachListeners();
   }
 
-  setBurgerNav() {
+  #setBurgerNav() {
     this.$burgerNav = this.$container.find(BURGER_NAV_SELECTOR);
   }
 
-  attachListeners() {
-    this.$container.on('click', this.handleBurgerClick);
-    document.addEventListener('click', this.closeBurgerAfterDocumentClick.bind(this));
+  #attachListeners() {
+    this.$container.on('click', this.#handleBurgerClick);
+    document.addEventListener('click', this.#closeBurgerAfterDocumentClick.bind(this));
   }
 
-  handleBurgerClick(event) {
+  #handleBurgerClick(event) {
     this.element = event.currentTarget;
     $(this.element).toggleClass(OPEN_BURGER_CLASS);
     $(BURGER_NAV_SELECTOR).toggleClass(OPEN_BURGER_CLASS);
   }
 
-  closeBurgerAfterDocumentClick(event) {
+  #closeBurgerAfterDocumentClick(event) {
     if (!event.target.closest(BURGER_SELECTOR)) {
       this.$container.removeClass(OPEN_BURGER_CLASS);
     }

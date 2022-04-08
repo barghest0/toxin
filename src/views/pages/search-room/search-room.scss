@@ -63,6 +63,10 @@
     }
   }
 
+  &__filters.active + &__cards {
+    position: fixed;
+  }
+
   &__filter {
     margin-bottom: 30px;
     &:first-child {
@@ -80,6 +84,7 @@
       }
     }
   }
+
   &__slider-description {
     margin-top: 12px;
     font-size: $second-font-size;

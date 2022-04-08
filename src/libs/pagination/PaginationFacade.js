@@ -1,23 +1,22 @@
 import 'paginationjs';
 
-import { QUANTITY_PAGES } from '../../views/components/pagination/constants';
-
 class PaginationFacade {
-  constructor($element) {
+  constructor($element, count) {
     this.$element = $element;
-    this.init();
+    this.count = count;
+    this.#init();
   }
 
-  init() {
-    this.setParams();
-    this.createPagination();
+  #init() {
+    this.#setParams();
+    this.#createPagination();
   }
 
-  setParams() {
+  #setParams() {
     this.params = {
       dataSource: done => {
-        const arrayOfItems = new Array(QUANTITY_PAGES).fill('').map((_, i) => i + 1);
-        done(arrayOfItems);
+        const pages = new Array(this.count).fill('').map((_, i) => i + 1);
+        done(pages);
       },
       pageSize: 12,
       pageRange: 1,
@@ -31,7 +30,7 @@ class PaginationFacade {
     };
   }
 
-  createPagination() {
+  #createPagination() {
     this.$element.pagination(this.params);
   }
 }

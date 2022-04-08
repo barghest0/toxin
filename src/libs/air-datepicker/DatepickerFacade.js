@@ -15,17 +15,17 @@ class DatepickerFacade {
     this.$dateTo = $dateTo;
     this.params = {};
     this.buttons = [];
-    this.init();
+    this.#init();
   }
 
-  init() {
-    this.createButtons();
-    this.setParams();
-    this.createDatepicker();
-    this.setButtonsTypeToButton();
+  #init() {
+    this.#createButtons();
+    this.#setParams();
+    this.#createDatepicker();
+    this.#setButtonsTypeToButton();
   }
 
-  setParams() {
+  #setParams() {
     this.params = {
       inline: true,
       range: true,
@@ -35,22 +35,22 @@ class DatepickerFacade {
       dateFormat: 'MM.dd.yyyy',
     };
     if (this.datepicker.dataset.dateFrom && this.datepicker.dataset.dateTo) {
-      this.setSelectedDates();
+      this.#setSelectedDates();
     }
-    this.setRangeParams();
+    this.#setRangeParams();
     if (!this.$dateTo.length) {
-      this.setFilterParams();
+      this.#setFilterParams();
     }
   }
 
-  setSelectedDates() {
+  #setSelectedDates() {
     this.params.selectedDates = [
       this.datepicker.dataset.dateFrom,
       this.datepicker.dataset.dateTo,
     ];
   }
 
-  setRangeParams() {
+  #setRangeParams() {
     this.params.onSelect = ({ formattedDate }) => {
       const [from, to] = formattedDate;
       this.$dateFrom.val(from);
@@ -58,7 +58,7 @@ class DatepickerFacade {
     };
   }
 
-  setFilterParams() {
+  #setFilterParams() {
     this.params.dateFormat = 'd MMM';
     this.params.onSelect = ({ formattedDate }) => {
       const [from, to] = formattedDate;
@@ -70,7 +70,7 @@ class DatepickerFacade {
     };
   }
 
-  createButtons() {
+  #createButtons() {
     const applyButton = {
       content: 'Применить',
       className: APPLY_BUTTON_CLASS,
@@ -82,11 +82,11 @@ class DatepickerFacade {
     this.buttons = ['clear', applyButton];
   }
 
-  createDatepicker() {
+  #createDatepicker() {
     this.airDatepicker = new AirDatepicker(this.datepicker, this.params);
   }
 
-  setButtonsTypeToButton() {
+  #setButtonsTypeToButton() {
     $(this.datepicker)
       .find(BUTTON_SELECTOR)
       .each((_index, button) => {

@@ -1,5 +1,7 @@
-import { PAGINATION_SELECTOR } from './constants';
+import { PAGINATION_SELECTOR, QUANTITY_PAGES } from './constants';
 
 import Pagination from './PaginationModule';
 
-$(PAGINATION_SELECTOR).each((_index, element) => new Pagination($(element)));
+$(PAGINATION_SELECTOR).each(
+  (_index, element) => new Pagination($(element), QUANTITY_PAGES),
+);

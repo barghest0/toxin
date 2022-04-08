@@ -3,18 +3,18 @@ import { EXPANDED_CLASS } from './constants';
 class ExpandList {
   constructor($container) {
     this.$container = $container;
-    this.init();
+    this.#init();
   }
 
-  init() {
-    this.attachListener();
+  #init() {
+    this.#attachListener();
   }
 
-  attachListener() {
-    this.$container.on('click', this.clickLabelCallback);
+  #attachListener() {
+    this.$container.on('click', this.#clickLabelCallback);
   }
 
-  clickLabelCallback(event) {
+  #clickLabelCallback(event) {
     this.$element = $(event.currentTarget);
     this.$element.toggleClass(EXPANDED_CLASS);
     this.$element.next().toggleClass(EXPANDED_CLASS);

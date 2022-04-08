@@ -1,23 +1,19 @@
-import 'jquery.maskedinput/src/jquery.maskedinput';
+import MaskedTextFieldFacade from '../../../libs/masked-text-field/MaskedTextFieldFacade';
 import { MASK } from './constants';
 
 class MaskedTextField {
-  constructor($container) {
+  constructor($container, mask) {
     this.$container = $container;
-    this.init();
+    this.mask = mask;
+    this.#init();
   }
 
-  init() {
-    this.setMask();
-    this.createMask();
+  #init() {
+    this.#createMaskedField();
   }
 
-  setMask() {
-    this.mask = MASK;
-  }
-
-  createMask() {
-    this.$container.mask(this.mask);
+  #createMaskedField() {
+    this.maskedField = new MaskedTextFieldFacade(this.$container, MASK);
   }
 }
 

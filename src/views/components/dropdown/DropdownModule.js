@@ -30,71 +30,71 @@ class Dropdown {
     this.type = '';
     this.totalCount = 0;
     this.helper = new DropdownHelper();
-    this.init();
+    this.#init();
   }
 
-  init() {
-    this.setType();
-    this.setList();
-    this.setField();
-    this.setTools();
-    this.setButtons();
-    this.calculateTotalCount();
-    this.checkTotalCount();
-    this.setInitialText();
-    this.checkCounters();
-    this.attachDropdownListeners();
-    this.attachDocumentListener();
-    this.attachToolsListeners();
-    this.attachButtonsListeners();
+  #init() {
+    this.#setType();
+    this.#setList();
+    this.#setField();
+    this.#setTools();
+    this.#setButtons();
+    this.#calculateTotalCount();
+    this.#checkTotalCount();
+    this.#setInitialText();
+    this.#checkCounters();
+    this.#attachDropdownListeners();
+    this.#attachDocumentListener();
+    this.#attachToolsListeners();
+    this.#attachButtonsListeners();
   }
 
-  setType() {
+  #setType() {
     this.type = this.$container.data('type');
   }
 
-  setList() {
+  #setList() {
     this.$list = this.$container.find(LIST_SELECTOR);
   }
 
-  setField() {
+  #setField() {
     this.$field = this.$container.find(FIELD_SELECTOR);
   }
 
-  setTools() {
+  #setTools() {
     this.$counters = this.$container.find(COUNTER_SELECTOR);
     this.$increments = this.$container.find(INCREMENT_SELECTOR);
     this.$decrements = this.$container.find(DECREMENT_SELECTOR);
   }
 
-  setButtons() {
+  #setButtons() {
     this.$clear = this.$container.find(CLEAR_BUTTON_SELECTOR);
     this.$apply = this.$container.find(APPLY_BUTTON_SELECTOR);
   }
 
-  calculateTotalCount() {
+  #calculateTotalCount() {
     this.$counters.each(index => {
       this.totalCount += Number(this.$counters[index].innerHTML);
     });
   }
 
-  setInitialText() {
+  #setInitialText() {
     if (this.totalCount === MIN_COUNT) {
-      this.setDefaultFieldText();
+      this.#setDefaultFieldText();
     } else {
-      this.setFieldText();
+      this.#setFieldText();
     }
   }
 
-  checkTotalCount() {
+  #checkTotalCount() {
     if (this.totalCount === MIN_COUNT) {
-      this.hideClearButton();
+      this.#hideClearButton();
     } else {
-      this.showClearButton();
+      this.#showClearButton();
     }
   }
 
-  setDefaultFieldText() {
+  #setDefaultFieldText() {
     if (this.type === GUESTS_TYPE) {
       this.$field.text('Сколько гостей');
     } else {
@@ -102,62 +102,62 @@ class Dropdown {
     }
   }
 
-  checkCounters() {
+  #checkCounters() {
     this.$counters.each((_index, counter) => {
       if (Number(counter.innerHTML) === MIN_COUNT) {
-        this.disableElement($(counter).siblings(DECREMENT_SELECTOR));
+        this.#disableElement($(counter).siblings(DECREMENT_SELECTOR));
       }
 
       if (Number(counter.innerHTML) === MAX_COUNT) {
-        this.disableElement($(counter).siblings(INCREMENT_SELECTOR));
+        this.#disableElement($(counter).siblings(INCREMENT_SELECTOR));
       }
     });
   }
 
-  hideClearButton() {
+  #hideClearButton() {
     this.$clear.find('button').text('');
   }
 
-  showClearButton() {
+  #showClearButton() {
     this.$clear.find('button').text('Очистить');
   }
 
-  attachDropdownListeners() {
-    this.$container.on('click', this.openDropdownListAfterFieldClick.bind(this));
+  #attachDropdownListeners() {
+    this.$container.on('click', this.#openDropdownListAfterFieldClick.bind(this));
     this.$list.on('click', event => event.stopPropagation());
   }
 
-  openDropdownListAfterFieldClick() {
+  #openDropdownListAfterFieldClick() {
     this.$container.toggleClass(OPENED_CLASS);
   }
 
-  attachDocumentListener() {
+  #attachDocumentListener() {
     document.addEventListener(
       'click',
-      this.closeDropdownListAfterDocumentClick.bind(this),
+      this.#closeDropdownListAfterDocumentClick.bind(this),
     );
   }
 
-  closeDropdownListAfterDocumentClick(event) {
+  #closeDropdownListAfterDocumentClick(event) {
     if (!event.target.closest(CONTAINER_SELECTOR)) {
       this.$container.removeClass(OPENED_CLASS);
     }
   }
 
-  attachToolsListeners() {
-    this.$increments.on('click', this.incrementCounter.bind(this));
-    this.$decrements.on('click', this.decrementCounter.bind(this));
+  #attachToolsListeners() {
+    this.$increments.on('click', this.#incrementCounter.bind(this));
+    this.$decrements.on('click', this.#decrementCounter.bind(this));
   }
 
-  incrementTotalCount() {
+  #incrementTotalCount() {
     this.totalCount += 1;
   }
 
-  decrementTotalCount() {
+  #decrementTotalCount() {
     this.totalCount -= 1;
   }
 
-  incrementCounter(event) {
+  #incrementCounter(event) {
     event.stopPropagation();
 
     const $target = $(event.target);
@@ -165,21 +165,21 @@ class Dropdown {
     const decrementElement = $target.siblings(DECREMENT_SELECTOR);
     let counterNumber = Number($counter.text());
 
-    this.enableElement(decrementElement);
+    this.#enableElement(decrementElement);
 
     $counter.text(counterNumber + 1);
-    this.incrementTotalCount();
+    this.#incrementTotalCount();
     counterNumber = Number($counter.text());
 
     if (counterNumber === MAX_COUNT) {
-      this.disableElement($target);
+      this.#disableElement($target);
     }
 
-    this.checkTotalCount();
-    this.setFieldText();
+    this.#checkTotalCount();
+    this.#setFieldText();
   }
 
-  decrementCounter(event) {
+  #decrementCounter(event) {
     event.stopPropagation();
 
     const $target = $(event.target);
@@ -187,33 +187,33 @@ class Dropdown {
     const incrementElement = $target.siblings(INCREMENT_SELECTOR);
     let counterNumber = Number($counter.text());
 
-    this.enableElement(incrementElement);
+    this.#enableElement(incrementElement);
 
     $counter.text(counterNumber - 1);
-    this.decrementTotalCount();
+    this.#decrementTotalCount();
     counterNumber = Number($counter.text());
 
     if (counterNumber === MIN_COUNT) {
-      this.disableElement($target);
+      this.#disableElement($target);
     }
 
-    this.checkTotalCount();
+    this.#checkTotalCount();
     if (this.totalCount === MIN_COUNT) {
-      this.setDefaultFieldText();
+      this.#setDefaultFieldText();
     } else {
-      this.setFieldText();
+      this.#setFieldText();
     }
   }
 
-  setFieldText() {
+  #setFieldText() {
     if (this.type === GUESTS_TYPE) {
-      this.setGuestsFieldText();
+      this.#setGuestsFieldText();
     } else {
-      this.setApartmentsFieldText();
+      this.#setApartmentsFieldText();
     }
   }
 
-  setGuestsFieldText() {
+  #setGuestsFieldText() {
     const text = [];
 
     text.push(`${this.totalCount} ${this.helper.getGuestEnding(this.totalCount)}`);
@@ -230,7 +230,7 @@ class Dropdown {
     this.$field.text(textString);
   }
 
-  setApartmentsFieldText() {
+  #setApartmentsFieldText() {
     const bedrooms = Number(
       this.$container.find(BEDROOMS_SELECTOR).find(COUNTER_SELECTOR).text(),
     );
@@ -258,39 +258,39 @@ class Dropdown {
     this.$field.text(textString);
   }
 
-  disableElement($element) {
+  #disableElement($element) {
     $element.addClass(DISABLED_CLASS);
     return this;
   }
 
-  enableElement($element) {
+  #enableElement($element) {
     $element.removeClass(DISABLED_CLASS);
     return this;
   }
 
-  enableAllIncrements() {
+  #enableAllIncrements() {
     this.$increments.each((_index, increment) => {
-      this.enableElement($(increment));
+      this.#enableElement($(increment));
     });
   }
 
-  attachButtonsListeners() {
-    this.$clear.on('click', this.clearDropdown.bind(this));
-    this.$apply.on('click', this.applyDropdown.bind(this));
+  #attachButtonsListeners() {
+    this.$clear.on('click', this.#clearDropdown.bind(this));
+    this.$apply.on('click', this.#applyDropdown.bind(this));
   }
 
-  clearDropdown() {
+  #clearDropdown() {
     this.$counters.each(index => {
       this.$counters[index].innerHTML = '0';
     });
     this.totalCount = 0;
-    this.checkCounters();
-    this.checkTotalCount();
-    this.enableAllIncrements();
-    this.setDefaultFieldText();
+    this.#checkCounters();
+    this.#checkTotalCount();
+    this.#enableAllIncrements();
+    this.#setDefaultFieldText();
   }
 
-  applyDropdown() {
+  #applyDropdown() {
     this.$container.toggleClass(OPENED_CLASS);
   }
 }
