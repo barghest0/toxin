@@ -23,7 +23,7 @@ const getEntries = pages => {
         filename: `${name}.html`,
         template: `${PAGES_DIR}/${name}/${name}.pug`,
         chunks: [name],
-        favicon: `${PATHS.src}/static/favicon.ico`,
+        favicon: `${PATHS.src}/assets/static/favicon.ico`,
       }),
     );
   });
