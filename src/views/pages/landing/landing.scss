@@ -15,7 +15,7 @@
     padding-bottom: 20px;
     height: 830px;
     display: grid;
-    grid-template-columns: minmax(300px, 380px) 1fr minmax(0, 260px);
+    grid-template-columns: 380px 1fr minmax(0, 260px);
     grid-template-rows: 374px 1fr;
     @include phone {
       grid-template-columns: 1fr;
