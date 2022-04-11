@@ -158,12 +158,13 @@
   &__dropdowns {
     margin-bottom: 160px;
     display: grid;
-    width: 80%;
+
+    grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
     @include sm-desktop {
-      grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
       row-gap: 50px;
       margin: 0 auto;
       margin-bottom: 50px;
+      width: 80%;
       grid-template-columns: 1fr;
       @include phone {
         width: 100%;

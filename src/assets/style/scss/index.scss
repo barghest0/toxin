@@ -14,7 +14,7 @@ html {
   font-size: $main-font-size;
   color: $font-color;
   overflow-x: hidden;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat, Arial, sans-serif;
 
   @media screen and(max-width:$desktop-width) {
     font-size: 13px;

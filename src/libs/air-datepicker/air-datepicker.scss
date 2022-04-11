@@ -1,4 +1,5 @@
 .air-datepicker {
+  font-family: Montserrat, Arial sans-serif;
   position: absolute;
   margin-top: 5px;
   width: 100%;
@@ -78,6 +79,7 @@
   }
 
   &-cell {
+    font-size: 12px;
     &.-day- {
       color: $dark-shade-50;
       @include size(100%);

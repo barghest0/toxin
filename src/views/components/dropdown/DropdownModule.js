@@ -253,7 +253,12 @@ class Dropdown {
       text.push(`${bathrooms} ${this.helper.getBathroomsEnding(bathrooms)}`);
     }
 
-    const textString = text.join(', ');
+    let textString = text.join(', ');
+    if (textString.length > 23) {
+      textString = textString.slice(0, 23);
+
+      textString += '...';
+    }
 
     this.$field.text(textString);
   }

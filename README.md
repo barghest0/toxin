@@ -2,13 +2,11 @@
 
 [Главная](https://barghest0.github.io/toxin)
 
-
 ## Библиотеки
 
 - Node - 16.13.1
-- Npm - 8.3.1
+- Npm - 8.3.0
 - JQuery - 3.6.0
-- Typescript - 4.5.4
 - Webpack - 5.66.0
 - SASS - 1.49.0
 - Pug - 3.0.2

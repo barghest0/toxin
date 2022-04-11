@@ -25,7 +25,6 @@
     display: flex;
     align-items: center;
     padding-left: 15px;
-    padding-right: 90px;
     &::after {
       @include dropdown-arrow(18px, 17px);
     }

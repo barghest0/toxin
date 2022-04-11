@@ -1,5 +1,5 @@
 {
-  "name": "slider-plugin",
+  "name": "toxin",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,11 +8,7 @@
     "build": "webpack --config ./webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js"
   },
-  "browserslist": [
-    "> 1%",
-    "last 4 version",
-    "IE 10"
-  ],
+  "browserslist": ["> 1%", "last 4 version", "IE 10"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/barghest0/MetaLampLayoutPratice.git"
@@ -36,7 +32,6 @@
     "eslint": "^8.11.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-fsd": "^1.0.1",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-pug": "^1.2.4",
