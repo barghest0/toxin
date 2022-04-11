@@ -8,6 +8,7 @@
   &__title {
     margin-bottom: 21px;
   }
+
   &__label {
     margin-bottom: 5px;
   }
@@ -15,17 +16,21 @@
   &__register-form {
     margin-bottom: 30px;
   }
+
   &__block {
     margin-bottom: 20px;
+
     &:first-child &-field:last-child {
       margin-bottom: 26px;
     }
+
     &-field {
       &:not(:last-child) {
         margin-bottom: 10px;
       }
     }
   }
+
   &__button {
     margin-bottom: 20px;
     height: 44px;
@@ -36,6 +41,7 @@
     justify-content: space-between;
     align-items: center;
     height: 44px;
+
     &-button {
       @include size(100px, 100%);
     }

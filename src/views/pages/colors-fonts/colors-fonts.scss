@@ -3,6 +3,7 @@
 
 .colors-fonts {
   padding: 100px 0;
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -25,12 +26,15 @@
       &_widget {
         font-size: $widget-font-size;
       }
+
       &_inside-widget {
         font-size: $inside-widget-font-size;
       }
+
       &_label {
         font-size: $second-font-size;
       }
+
       &_text {
         font-size: $main-font-size;
         text-transform: capitalize;

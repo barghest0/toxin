@@ -23,18 +23,21 @@
 
 .form-elements {
   padding: 100px 0;
+
   &__inputs {
     display: grid;
     grid-template-columns:
       minmax(250px, 320px) minmax(10px, 126px) minmax(250px, 320px) minmax(10px, 70px)
       minmax(250px, 320px);
     margin-bottom: 70px;
+
     @include sm-desktop {
       row-gap: 50px;
       margin: 0 auto;
       grid-template-columns: 1fr;
       width: 80%;
       margin-bottom: 50px;
+
       @include phone {
         width: 100%;
       }
@@ -72,6 +75,7 @@
 
   &__selections {
     grid-column-start: 3;
+
     @include sm-desktop {
       grid-column-start: 1;
       grid-row-start: 2;
@@ -125,12 +129,14 @@
   &__other-label {
     margin-bottom: 16px;
   }
+
   &__slider {
     margin-bottom: 20px;
   }
 
   &__buttons {
     margin-bottom: 40px;
+
     &_small {
       display: grid;
       grid-template-columns: repeat(2, 100px);
@@ -139,6 +145,7 @@
       grid-column-gap: 30px;
       margin-bottom: 30px;
     }
+
     &_no-bordered {
       display: flex;
       column-gap: 20px;
@@ -158,7 +165,6 @@
   &__dropdowns {
     margin-bottom: 160px;
     display: grid;
-
     grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
     @include sm-desktop {
       row-gap: 50px;
@@ -174,6 +180,7 @@
 
   &__dropdown {
     margin-bottom: 20px;
+
     &_apartments {
       grid-column-start: 1;
     }
@@ -186,6 +193,7 @@
         grid-row-start: 2;
       }
     }
+
     &_cleared {
       grid-column-start: 3;
       @include sm-desktop {
@@ -218,6 +226,7 @@
       grid-column-start: 1;
     }
   }
+
   &__rich-checkbox {
     grid-column-start: 3;
     @include sm-desktop {
@@ -225,6 +234,7 @@
       grid-row-start: 2;
     }
   }
+
   &__bullet-list {
     grid-column-start: 5;
     @include sm-desktop {
@@ -245,6 +255,7 @@
       }
     }
   }
+
   &__reviews-list {
     grid-column-start: 1;
     @include tablet-landscape {
@@ -252,6 +263,7 @@
       grid-column-start: 1;
     }
   }
+
   &__feedback {
     grid-column-start: 3;
     @include tablet-landscape {

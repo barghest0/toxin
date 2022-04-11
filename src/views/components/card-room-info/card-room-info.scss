@@ -1,9 +1,11 @@
 .card-room-info {
   display: flex;
   justify-content: space-between;
+
   &__room {
     display: flex;
     align-items: flex-end;
+
     &-number {
       display: flex;
       line-height: $main-line-height;
@@ -14,6 +16,7 @@
       margin-right: 8px;
       color: $dark-shade-100;
     }
+
     &-luxury {
       line-height: $main-line-height;
       font-weight: bold;
@@ -28,11 +31,13 @@
     display: flex;
     align-items: flex-end;
     line-height: 1.6;
+
     &-value {
       font-weight: bold;
       font-size: $main-font-size;
       margin-right: 5px;
     }
+
     &-in-time {
       font-size: $second-font-size;
     }

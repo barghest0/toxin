@@ -8,24 +8,30 @@
   &__room-info {
     margin-bottom: 20px;
   }
+
   &__date {
     margin-bottom: 20px;
   }
+
   &__guests {
     margin-bottom: 20px;
   }
+
   &__cost {
     display: grid;
     grid-template-columns: minmax(195px, 240px) minmax(60px, 1fr);
     grid-row-gap: 10px;
     margin-bottom: 34px;
   }
+
   &__day-price {
     justify-self: right;
   }
+
   &__service {
     display: flex;
     justify-content: space-between;
+
     &-price {
       justify-self: right;
     }
@@ -33,23 +39,28 @@
 
   &__add-service {
     display: flex;
+
     &-price {
       justify-self: right;
     }
+
     .body-text {
       line-height: $second-line-height;
     }
   }
+
   &__final-cost {
     display: grid;
     column-gap: 4px;
     grid-template-columns: 1fr 3fr 1fr;
     margin-bottom: 21px;
   }
+
   &__points {
     margin-bottom: 6px;
     border-bottom: 1px dotted $dark-shade-25;
   }
+
   &__button {
     height: 44px;
   }

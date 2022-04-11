@@ -7,9 +7,11 @@
   background-color: $white;
   @include shadow;
   position: relative;
-  &_auth {
+
+  &_authorized {
     z-index: 900;
   }
+
   &__logo {
     height: 40px;
     display: flex;
@@ -61,6 +63,7 @@
         top: 20px;
         transition: all 0.2s linear;
       }
+
       &::after {
         content: '';
         @include size(30px, 3px);
@@ -75,10 +78,12 @@
     &.active &-line {
       transform: rotate(45deg);
       top: 10px;
+
       &::after {
         opacity: 0;
         pointer-events: none;
       }
+
       &::before {
         transform: rotate(90deg);
         top: 0;

@@ -5,6 +5,7 @@
   position: relative;
   column-gap: 20px;
   color: $dark-shade-75;
+
   @include sm-desktop {
     column-gap: 15px;
   }
@@ -24,9 +25,11 @@
       display: flex;
       justify-content: center;
       margin-right: 17px;
+
       &::after {
         @include dropdown-arrow(-8px, -1px, relative);
       }
+
       &.open {
         &::after {
           transform: rotate(135deg);
@@ -60,9 +63,11 @@
       color: inherit;
       text-align: center;
       padding: 15px 0px;
+
       &:hover {
         background-color: $dark-shade-5;
       }
+
       &:not(:last-child) {
         border-bottom: 1px solid $dark-shade-5;
       }
@@ -72,6 +77,7 @@
   &__item.open &__list {
     display: flex;
   }
+
   &__button {
     font-weight: bold;
     border: none;
@@ -98,6 +104,7 @@
       background-clip: content-box, border-box;
       transition: all 0.1s linear;
       @include size(87px, 34px);
+
       &:hover {
         opacity: 0.8;
         border: 2px solid transparent;
@@ -117,6 +124,7 @@
           linear-gradient(to bottom, rgba($main-color, 1), rgba($gradient-main-color, 1));
       }
     }
+
     &_filled {
       @include size(196px, 34px);
       @include main-gradient-to-bottom;
@@ -126,9 +134,11 @@
       &:hover {
         opacity: 0.5;
       }
+
       &:active {
         opacity: 1;
       }
+
       &.hovered {
         opacity: 0.5;
       }
@@ -148,15 +158,18 @@
     border-radius: 0px 0px 0px 7px;
     box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
   }
+
   &_burger &__item {
     display: flex;
     justify-content: center;
     margin-right: 0;
     width: 300px;
+
     &_profile {
       border-right: none;
       padding-left: 0;
     }
+
     @include phone {
       width: calc(100vw - 20px);
     }

@@ -12,17 +12,21 @@
   padding: 100px 0;
   padding-bottom: 140px;
   background-color: #f4f4f6;
+
   &__inner {
     display: grid;
     grid-template-columns: 380px 380px 320px;
     column-gap: 40px;
     row-gap: 30px;
+
     @include md-desktop {
       width: 80%;
       margin: 0 auto;
       grid-template-columns: 1fr 1fr;
+
       @include tablet-portrait {
         grid-template-columns: 1fr;
+
         @include phone {
           width: 100%;
         }
@@ -42,6 +46,7 @@
 
   &__preview-room {
     width: 270px;
+
     @include md-desktop {
       grid-column-start: 2;
     }

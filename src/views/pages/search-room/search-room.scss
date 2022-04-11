@@ -20,6 +20,7 @@
     padding-bottom: 72px;
     display: grid;
     grid-template-columns: 266px minmax(10px, 60px) 1fr;
+
     @include sm-tablet-portrait {
       grid-template-columns: 1fr;
       padding-top: 50px;
@@ -29,10 +30,12 @@
   &__filters {
     z-index: 1000;
     transition: all 0.3s linear;
+
     &-inner {
       background-color: $white;
       position: relative;
     }
+
     &-icon {
       z-index: 90;
       cursor: pointer;
@@ -40,10 +43,12 @@
       top: 85px;
       right: 25px;
       display: none;
+
       @include sm-tablet-portrait {
         display: block;
       }
     }
+
     &-close {
       cursor: pointer;
       display: none;
@@ -68,27 +73,33 @@
       position: fixed;
       left: 0;
       top: 0;
+
       &.active {
         pointer-events: all;
         width: 100%;
         background-color: $dark-shade-50;
       }
+
       &-inner {
         transform: translateX(-400px);
         width: 400px;
         padding: 20px;
+
         @include landscape-phone {
           width: 70%;
+
           @include phone {
             width: 100%;
           }
         }
       }
+
       &.active &-inner {
         transform: translateX(0);
         height: 100vh;
         overflow: auto;
       }
+
       @include phone {
         &.active &-close {
           display: block;
@@ -117,9 +128,11 @@
 
   &__cards {
     grid-column-start: 3;
+
     &-title {
       margin-bottom: 20px;
     }
+
     &-inner {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -129,6 +142,7 @@
       margin-bottom: 40px;
     }
   }
+
   &__pagination {
     display: flex;
     justify-content: center;

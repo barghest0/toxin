@@ -20,6 +20,7 @@
     transition: 0.3s ease-in-out;
     background: url('./images/unlike-button.svg');
   }
+
   &__input:checked + &__custom-input {
     color: $main-color;
     background: url('./images/like-button.svg');

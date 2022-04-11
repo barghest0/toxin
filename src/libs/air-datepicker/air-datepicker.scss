@@ -5,9 +5,11 @@
   width: 100%;
   box-sizing: border-box;
   padding: 20px;
+
   &.-inline- {
     @include shadow;
   }
+
   &--content {
     padding: 0;
     margin-bottom: 20px;
@@ -20,14 +22,17 @@
   &-nav {
     padding: 0;
     border: none;
+
     &--title {
       color: $dark-shade-100;
       font-weight: bold;
       font-size: 19px;
+
       i {
         color: $dark-shade-100;
       }
     }
+
     &--action path {
       stroke: $main-color;
       @include size(24px);
@@ -44,6 +49,7 @@
     justify-content: space-between;
     width: 100%;
   }
+
   &-button {
     padding: 0;
     color: $main-color;
@@ -63,6 +69,7 @@
       margin: 0;
       grid-auto-rows: 40px;
     }
+
     &--day-name {
       font-weight: bold;
       font-size: 12px;
@@ -70,6 +77,7 @@
 
       @include size(100%);
     }
+
     &--cells {
       &.-days- {
         grid-auto-rows: 40px;
@@ -80,10 +88,12 @@
 
   &-cell {
     font-size: 12px;
+
     &.-day- {
       color: $dark-shade-50;
       @include size(100%);
     }
+
     &.-current- {
       border-radius: 50%;
       @include second-gradient-to-bottom;
@@ -102,6 +112,7 @@
         }
       }
     }
+
     &.-range-from- {
       position: relative;
     }
@@ -151,6 +162,7 @@
         color: $white;
         font-weight: bold;
       }
+
       &.-current- {
         border-radius: 50%;
         border: none;
@@ -158,6 +170,7 @@
         color: $white;
         font-weight: bold;
       }
+
       &.-disabled- {
         border-radius: 50%;
       }

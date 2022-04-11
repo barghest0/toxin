@@ -1,9 +1,10 @@
 @import '../text-field/text-field.scss';
 
 .default-text-field {
+  @include size(100%);
   display: flex;
   flex-direction: column;
-  @include size(100%);
+
   &__label {
     margin-bottom: 5px;
   }
@@ -13,6 +14,7 @@
     height: 44px;
     border-radius: 4px;
     background-color: $white;
+
     &_send-email {
       display: flex;
       align-items: center;
@@ -20,22 +22,6 @@
   }
 
   &__input {
-    @include size(100%, 44px);
-    padding: 0 15px;
-
-    border: none;
-    border: 1px solid $dark-shade-25;
-    border-radius: 4px;
-    outline: none;
-    position: relative;
-    font-family: inherit;
-
-    &::placeholder {
-      color: $dark-shade-25;
-    }
-
-    &:focus {
-      border: 1px solid $dark-shade-50;
-    }
+    @include text-field;
   }
 }

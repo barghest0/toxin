@@ -3,6 +3,7 @@
   &__form {
     position: relative;
   }
+
   &__arrow {
     @include size(44px);
     position: absolute;
@@ -10,16 +11,10 @@
     background: transparent;
     outline: none;
     border: none;
-
     cursor: pointer;
   }
-  &__input {
-    &::placeholder {
-      color: $dark-shade-25;
-    }
 
-    &:focus {
-      border: 1px solid $dark-shade-50;
-    }
+  &__input {
+    @include text-field;
   }
 }

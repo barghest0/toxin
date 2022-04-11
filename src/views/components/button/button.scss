@@ -1,8 +1,8 @@
 .button {
+  @include size(100%);
   font-weight: bold;
   border: none;
   border-radius: 22px;
-  @include size(100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,20 +11,21 @@
   line-height: 1.2;
   font-size: $second-font-size;
   text-transform: uppercase;
-
   transition: 0.2s ease-in-out;
-
   font-family: inherit;
 
   &_filled {
     @include main-gradient-to-bottom;
     color: $white;
+
     &:hover {
       opacity: 0.5;
     }
+
     &:active {
       opacity: 1;
     }
+
     &.hovered {
       opacity: 0.5;
     }
@@ -34,12 +35,15 @@
     @include size(inherit);
     color: $main-color;
     background-color: transparent;
+
     &:hover {
       color: $dark-shade-50;
     }
+
     &:active {
       color: $main-color;
     }
+
     &.hovered {
       color: $dark-shade-50;
     }

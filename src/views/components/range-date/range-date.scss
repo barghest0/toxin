@@ -1,13 +1,16 @@
 @import '../text-field/text-field.scss';
 .range-date {
   position: relative;
+
   &__fields {
     display: flex;
     column-gap: 20px;
     justify-content: space-between;
   }
+
   &__field {
     position: relative;
+
     &::after {
       @include dropdown-arrow(18px, 17px);
     }
@@ -20,8 +23,14 @@
   &__input {
     cursor: pointer;
     caret-color: transparent;
-    &::placeholder {
-      color: $dark-shade-75;
+    @include text-field {
+      &::placeholder {
+        color: $dark-shade-75;
+      }
+
+      &:focus {
+        border: 1px solid $dark-shade-25;
+      }
     }
   }
 }

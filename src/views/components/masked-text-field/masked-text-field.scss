@@ -1,10 +1,5 @@
-.masked-text-field{
- &__input {
-    &::placeholder {
-      color: $dark-shade-25;
-    }
-    &:focus {
-      border: 1px solid $dark-shade-50;
-    }
+.masked-text-field {
+  &__input {
+    @include text-field;
   }
 }

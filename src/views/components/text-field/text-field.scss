@@ -1,26 +1,13 @@
 .text-field {
   @include size(100%);
+
   &__labels {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
   }
+
   &__container {
     border-radius: 4px;
-  }
-
-  input {
-    @include size(100%, 44px);
-    padding: 0 15px;
-    border: 1px solid $dark-shade-25;
-    border-radius: 4px;
-    outline: none;
-    position: relative;
-    font-family: inherit;
-    font-size: $main-font-size;
-    transition: all 0.2s linear;
-    &:hover {
-      border: 1px solid $dark-shade-50;
-    }
   }
 }

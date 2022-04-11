@@ -12,11 +12,13 @@
 .room {
   &__label {
     margin-bottom: 20px;
+
     &_feedback {
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
     }
+
     &_separated {
       padding-left: 20px;
     }
@@ -29,34 +31,38 @@
     grid-template-columns: 68% 32%;
     grid-template-rows: repeat(2, minmax(max-content, 100px));
     grid-template-areas:
-      'main-image second-image-top'
-      'main-image second-image-bottom';
+      'main-image second-image-upper'
+      'main-image second-image-lower';
+
     @include tablet-portrait {
       grid-template-areas: 'main-image main-image';
       grid-template-rows: minmax(min-content, 100px);
     }
   }
+
   &__main-image {
-    & img {
+    grid-area: main-image;
+
+    &-block {
       @include size(100%);
     }
-    grid-area: main-image;
   }
 
   &__second-image {
-    & img {
+    &-block {
       @include size(100%);
       display: block;
     }
 
-    &_bottom {
-      grid-area: second-image-bottom;
+    &_lower {
+      grid-area: second-image-lower;
     }
 
-    &_top {
-      grid-area: second-image-top;
+    &_upper {
+      grid-area: second-image-upper;
     }
   }
+
   &__inner {
     padding: 72px 0;
     display: grid;
@@ -69,10 +75,12 @@
       row-gap: 30px;
     }
   }
+
   &__booking {
     max-width: 380px;
     height: 512px;
     grid-column-start: 3;
+
     @include tablet-landscape {
       grid-column-start: 1;
       grid-row-start: 2;
@@ -94,12 +102,15 @@
     display: grid;
     grid-template-columns: 280px minmax(10px, 80px) 1fr;
     grid-area: reviews;
+
     @include md-desktop {
       row-gap: 40px;
       grid-template-columns: 1fr;
       justify-self: center;
+
       @include tablet-landscape {
         grid-template-columns: minmax(240px, 1fr) minmax(10px, 80px) 1fr;
+
         @include sm-tablet-portrait {
           grid-template-columns: minmax(240px, 1fr);
         }
@@ -109,21 +120,26 @@
 
   &__impressions {
     grid-column-start: 3;
+
     @include md-desktop {
       grid-column-start: 1;
       grid-row-start: 2;
+
       @include tablet-landscape {
         grid-column-start: 3;
         grid-row-start: 1;
+
         @include sm-tablet-portrait {
           grid-column-start: 1;
           grid-row-start: 2;
         }
       }
     }
+
     &-chart {
       position: relative;
       left: -23px;
+
       @include phone {
         left: -15px;
       }
@@ -136,6 +152,7 @@
       flex-direction: column;
       row-gap: 22px;
     }
+
     &-count {
       color: $dark-shade-50;
       font-size: 14px;
@@ -150,8 +167,10 @@
     display: grid;
     grid-template-columns: 260px minmax(0px, 100px) minmax(340px, 240px);
     grid-area: additions;
+
     @include sm-tablet-portrait {
       grid-template-columns: 1fr minmax(0px, 20px) 1fr;
+
       @include phone {
         row-gap: 20px;
         grid-template-columns: 1fr;
@@ -161,6 +180,7 @@
 
   &__cancel {
     grid-column-start: 3;
+
     @include phone {
       grid-column-start: 1;
       grid-row-start: 2;

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+
   &__buttons {
     display: flex;
     justify-content: space-between;
@@ -25,6 +26,7 @@
     display: flex;
     align-items: center;
     padding-left: 15px;
+
     &::after {
       @include dropdown-arrow(18px, 17px);
     }
@@ -50,6 +52,7 @@
     row-gap: 7px;
     @include shadow;
     border-radius: 0px 0px 4px 4px;
+
     &-item {
       color: $dark-shade-100;
       height: 30px;
@@ -58,6 +61,7 @@
       justify-content: space-between;
       font-weight: bold;
       text-transform: uppercase;
+
       &-tools {
         display: flex;
       }
@@ -77,14 +81,17 @@
       font-size: 18px;
       color: $dark-shade-50;
       font-weight: normal;
+
       &:hover {
         background-color: $dark-shade-5;
       }
+
       &.disabled {
         opacity: 0.38;
         pointer-events: none;
       }
     }
+
     &-counter {
       display: flex;
       align-items: center;

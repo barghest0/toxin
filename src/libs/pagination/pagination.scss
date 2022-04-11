@@ -4,6 +4,7 @@
     font-size: $main-font-size;
     line-height: $main-line-height;
   }
+
   &-pages ul {
     display: flex;
     font-family: inherit;
@@ -29,10 +30,12 @@
     border: none;
     font-size: 12px;
     background: transparent;
+
     a {
       color: $dark-shade-50;
       text-decoration: none;
     }
+
     &.active {
       a {
         color: $white;
@@ -50,6 +53,7 @@
     justify-content: center;
     align-items: center;
     @include second-gradient-to-bottom();
+
     a {
       color: $white;
       width: 100%;
@@ -68,6 +72,7 @@
     justify-content: center;
     align-items: center;
     @include second-gradient-to-bottom();
+
     a {
       color: $white;
       width: 100%;

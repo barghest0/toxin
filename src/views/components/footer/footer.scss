@@ -6,10 +6,12 @@
   border-top: 1px solid #e5e5e5;
   margin: 0 auto;
   @include shadow;
+
   &_small {
     @include size(100%, 365px);
     display: none;
     border: none;
+
     &-inline {
       display: flex;
       justify-content: center;
@@ -17,9 +19,11 @@
       flex-direction: column;
     }
   }
+
   &__copyright {
     color: $dark-shade-75;
   }
+
   &_small &__copyright {
     text-align: center;
     margin-bottom: 25px;
@@ -63,14 +67,17 @@
     display: flex;
     flex-direction: column;
     width: 260px;
+
     @include md-desktop {
       justify-self: center;
       grid-column: 1 / main-end;
     }
+
     &-description {
       color: $dark-shade-75;
       line-height: $main-line-height;
     }
+
     &-logo {
       margin-bottom: 18px;
     }
@@ -83,18 +90,22 @@
     color: $dark-shade-75;
     min-width: 150px;
     row-gap: 20px;
+
     &-title {
       line-height: 1.1;
       text-transform: uppercase;
       margin-top: 2.6px;
     }
+
     &-item {
       color: inherit;
       text-decoration: none;
     }
+
     &_subscribe {
       max-width: 260px;
     }
+
     &-description {
       line-height: $main-line-height;
     }

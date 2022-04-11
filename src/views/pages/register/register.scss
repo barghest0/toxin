@@ -10,12 +10,14 @@
     background: url('./images/auth-background.jpg') center bottom no-repeat;
     background-size: cover;
   }
+
   &__inner {
     height: 684px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   &__card {
     @include size(380px, 646px);
   }

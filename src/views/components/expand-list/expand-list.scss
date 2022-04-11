@@ -3,9 +3,11 @@
     position: relative;
     margin-bottom: 17px;
     cursor: pointer;
+
     &::after {
       @include dropdown-arrow(18px, 2px);
     }
+
     &.open::after {
       transform: rotate(135deg);
     }
@@ -18,6 +20,7 @@
   &__items {
     max-height: 0;
     overflow: hidden;
+
     &.open {
       max-height: 100%;
     }

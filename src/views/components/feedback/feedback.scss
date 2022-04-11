@@ -5,10 +5,12 @@
   flex-direction: column;
   background-color: $white;
   color: $dark-shade-75;
+
   &__user {
     display: flex;
     align-items: center;
     margin-bottom: 12px;
+    
     &-avatar {
       @include size(48px);
       border-radius: 50%;

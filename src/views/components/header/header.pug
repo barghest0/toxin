@@ -1,7 +1,7 @@
 include ../logo/logo.pug
 include ../nav/nav.pug
 
-mixin header({state='guest',name=''}={})
+mixin header({state='no-authorized',name=''}={})
   header.header(class=`header_${state}`)
     .container
       .header__inner(class=`header__inner_${state}`)

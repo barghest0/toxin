@@ -10,6 +10,7 @@
     background: url('images/landing-image.jpg') center bottom no-repeat;
     background-size: cover;
   }
+
   &__inner {
     padding-top: 70px;
     padding-bottom: 20px;
@@ -17,6 +18,7 @@
     display: grid;
     grid-template-columns: 380px 1fr minmax(0, 260px);
     grid-template-rows: 374px 1fr;
+
     @include phone {
       grid-template-columns: 1fr;
     }
@@ -29,6 +31,7 @@
     align-self: end;
     text-align: end;
     color: $dark-shade-75;
+
     @include tablet-portrait {
       grid-column-start: 1;
       text-align: start;

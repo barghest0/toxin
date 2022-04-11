@@ -1,16 +1,5 @@
 @use 'sass:math';
 
-@function rem($pixel, $context: $main-font-size) {
-  @if (unitless($pixel)) {
-    $pixel: $pixel * 1px;
-  }
-  @if (unitless($context)) {
-    $context: $context * 1px;
-  }
-
-  @return (math.div($pixel, $context) * 1rem);
-}
-
 @mixin size($width, $height: $width) {
   width: $width;
   height: $height;
@@ -30,6 +19,7 @@
 ) {
   background: linear-gradient(to bottom, $color, $second-color);
 }
+
 @mixin dropdown-arrow($right: 0px, $top: 0px, $position: absolute) {
   content: '';
   @include size(8px);
@@ -43,6 +33,32 @@
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+@mixin text-field() {
+  @include size(100%, 44px);
+  padding: 0 15px;
+  border: 1px solid $dark-shade-25;
+  border-radius: 4px;
+  outline: none;
+  position: relative;
+  font-family: inherit;
+  font-size: $main-font-size;
+  transition: all 0.2s linear;
+
+  &:hover {
+    border: 1px solid $dark-shade-50;
+  }
+
+  &::placeholder {
+    color: $dark-shade-25;
+  }
+
+  &:focus {
+    border: 1px solid $dark-shade-50;
+  }
+
+  @content;
 }
 
 @mixin phone {

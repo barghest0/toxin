@@ -3,11 +3,13 @@
     color: $dark-shade-75;
     padding-left: 16px;
   }
+
   &__item {
     list-style-image: url('./images/bullet-list-item.svg');
     padding-inline-start: 0.4ch;
     line-height: $main-line-height;
     font-size: $main-font-size;
+
     &:not(:last-child) {
       margin-bottom: 10px;
     }

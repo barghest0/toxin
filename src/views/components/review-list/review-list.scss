@@ -4,6 +4,7 @@
     align-items: center;
     background-color: $white;
     color: $dark-shade-75;
+
     &:not(:last-child) {
       padding-bottom: 17px;
       border-bottom: 1px solid rgba($color: #1f2041, $alpha: 0.1);
