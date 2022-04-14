@@ -3,6 +3,8 @@ const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const PATHS = {
   src: path.join(__dirname, './src'),
@@ -23,7 +25,6 @@ const getEntries = pages => {
         filename: `${name}.html`,
         template: `${PAGES_DIR}/${name}/${name}.pug`,
         chunks: [name],
-        favicon: `${PATHS.src}/assets/static/favicon.ico`,
       }),
     );
   });
@@ -60,6 +61,8 @@ module.exports = {
         },
       },
     },
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
 
   module: {
@@ -119,6 +122,10 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: `css/[name].[fullhash].css`,
+    }),
+
+    new CopyWebpackPlugin({
+      patterns: [{ from: `${PATHS.src}/assets/static`, to: `${PATHS.assets}/favicons` }],
     }),
 
     new webpack.ProvidePlugin({

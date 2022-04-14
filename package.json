@@ -8,7 +8,11 @@
     "build": "webpack --config ./webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js"
   },
-  "browserslist": ["> 1%", "last 4 version", "IE 10"],
+  "browserslist": [
+    "> 1%",
+    "last 4 version",
+    "IE 10"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/barghest0/MetaLampLayoutPratice.git"
@@ -25,6 +29,7 @@
     "@babel/preset-env": "^7.15.8",
     "autoprefixer": "^10.3.7",
     "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^10.2.4",
     "cross-env": "^7.0.3",
     "css-loader": "^6.3.0",
     "css-mqpacker": "^7.0.0",
@@ -45,6 +50,7 @@
     "resolve-url-loader": "^4.0.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.3.0",
+    "terser-webpack-plugin": "^5.3.1",
     "webpack": "^5.58.0",
     "webpack-cli": "^4.9.0",
     "webpack-dev-server": "^4.3.1",
