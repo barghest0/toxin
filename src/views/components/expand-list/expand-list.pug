@@ -1,10 +1,8 @@
 include ../checkbox/checkbox.pug
-include ../block-label/block-label.pug
 
 mixin expand-list({label='',state='',items={}}={})
   .expand-list
-    .expand-list__label.js-expand-list__label
-      +block-label({text:label})
+    h3.expand-list__label.js-expand-list__label=label
     .expand-list__items(class=state === "opened" ? "open" : "")
       each item in items 
         .expand-list__item

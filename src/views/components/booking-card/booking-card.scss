@@ -24,28 +24,33 @@
     margin-bottom: 34px;
   }
 
+  &__day {
+    @include body-text;
+  }
+
   &__day-price {
+    @include body-text;
     justify-self: right;
   }
 
   &__service {
+    @include body-text;
     display: flex;
     justify-content: space-between;
 
     &-price {
+      @include body-text;
       justify-self: right;
     }
   }
 
   &__add-service {
     display: flex;
+    @include body-text;
 
     &-price {
+      @include body-text;
       justify-self: right;
-    }
-
-    .body-text {
-      line-height: $second-line-height;
     }
   }
 
@@ -54,6 +59,9 @@
     column-gap: 4px;
     grid-template-columns: 1fr 3fr 1fr;
     margin-bottom: 21px;
+    &-text {
+      @include title-inside-widget;
+    }
   }
 
   &__points {

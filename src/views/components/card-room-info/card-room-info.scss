@@ -7,14 +7,22 @@
     align-items: flex-end;
 
     &-number {
-      display: flex;
-      line-height: $main-line-height;
-      align-items: flex-end;
-      font-size: $main-font-size;
-      column-gap: 2px;
-      font-weight: bold;
-      margin-right: 8px;
-      color: $dark-shade-100;
+      @include widget-title;
+
+      &_sm {
+        @include title-inside-widget;
+      }
+
+      &-symbol {
+        display: flex;
+        line-height: $main-line-height;
+        align-items: flex-end;
+        font-size: $main-font-size;
+        column-gap: 2px;
+        font-weight: bold;
+        margin-right: 8px;
+        color: $dark-shade-100;
+      }
     }
 
     &-luxury {

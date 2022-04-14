@@ -90,11 +90,11 @@
     color: $dark-shade-75;
     min-width: 150px;
     row-gap: 20px;
-
     &-title {
       line-height: 1.1;
       text-transform: uppercase;
       margin-top: 2.6px;
+      @include block-label;
     }
 
     &-item {

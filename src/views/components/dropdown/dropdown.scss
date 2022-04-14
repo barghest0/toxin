@@ -15,6 +15,14 @@
     justify-content: space-between;
   }
 
+  &__label {
+    @include block-label;
+  }
+
+  &__sub-label {
+    @include block-sub-label;
+  }
+
   &__field {
     @include size(100%, 44px);
     margin: 0;

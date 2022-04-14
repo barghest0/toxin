@@ -11,7 +11,6 @@ block page
   include ../../components/filter-date/filter-date.pug
   include ../../components/subscribe-text-field/subscribe-text-field.pug
   include ../../components/checkbox-list/checkbox-list.pug
-  include ../../components/block-label/block-label.pug
   include ../../components/radio-list/radio-list.pug
   include ../../components/toggle/toggle.pug
   include ../../components/like/like.pug
@@ -56,24 +55,20 @@ block page
           .form-elements__checkboxes
             +checkbox-list({label:'checkbox buttons', items:checkboxData.default })
           .form-elements__radio
-            .form-elements__selection-label
-              +block-label({text:'radio button'})
+            h3.form-elements__selection-label radio button
             +radio-list({items:genderData})
           .form-elements__toggle
-            .form-elements__selection-label
-              +block-label({text:'toggle'})
+            h3.form-elements__selection-label toggle
             .form-elements__toggle-column
               +toggle({text:'Получать спецпредложения',name:'toggle-offers',state:'checked'})
               +toggle({text:'Получать спецпредложения',name:'toggle-offers'})
           .form-elements__like
-            .form-elements__selection-label
-              +block-label({text:'like button'})
+            h3.form-elements__selection-label like button
             .form-elements__like-row
               +like({name:'like',count:2,state:'unchecked'})
               +like({name:'like',count:12,state:'checked'})
           .form-elements__rate
-            .form-elements__selection-label
-              +block-label({text:'rate button'})
+            h3.form-elements__selection-label rate button
             .form-elements__rate-row
               +rate({name:'1-rate',rate:4})
               +rate({name:'2-rate',rate:5})
@@ -82,8 +77,7 @@ block page
           .form-elements__slider
             +range-slider
           .form-elements__buttons
-            .form-elements__other-label
-              +block-label({text:'buttons'})
+            h3.form-elements__other-label buttons
             .form-elements__buttons.form-elements__buttons_small
               +button({text:'click me',type:'filled'})
               +button({text:'click me',type:'filled',state:'hovered'})
@@ -95,8 +89,7 @@ block page
             .form-elements__buttons.form-elements__buttons_largest
               +button({text:'перейти к оплате',type:'filled',isLargest:true})
           .form-elements__pagination
-            .form-elements__other-label
-              +block-label({text:'pagination'})
+            h3.form-elements__other-label pagination
             +pagination
 
       section.form-elements__dropdowns
@@ -115,8 +108,7 @@ block page
         .form-elements__rich-checkbox
           +rich-checkbox-list({label:'rich checkbox buttons', items:checkboxData.rich})
         .form-elements__bullet-list
-          .form-elements__list-label
-            +block-label({text:'bullet list'})
+          h3.form-elements__list-label bullet list
           +bullet-list({items:bulletListData})
       section.form-elements__reviews
         .form-elements__review-list

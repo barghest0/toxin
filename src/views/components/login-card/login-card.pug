@@ -1,5 +1,3 @@
-include ../widget-title/widget-title.pug
-include ../body-text/body-text.pug
 include ../card/card.pug
 include ../default-text-field/default-text-field.pug
 include ../button/button.pug
@@ -7,8 +5,7 @@ include ../button/button.pug
 mixin login-card({title='Войти'}={})
   +card
     .login-card 
-      .login-card__title
-        +widget-title({text:title})
+      h1.login-card__title=title
       form.login-card__login-form
         .login-card__block 
           .login-card__block-field 
@@ -18,7 +15,6 @@ mixin login-card({title='Войти'}={})
         .login-card__button
           +button({text:'Войти', type:'filled', isLargest:true})
       .login-card__profile-action 
-        .login-card__profile-action-text
-          +body-text({text:'Нет аккаунта на Toxin?'})
+        p.login-card__profile-action-text Нет аккаунта на Toxin?
         .login-card__profile-action-button
           +button({text:'Создать',type:'outlined'})

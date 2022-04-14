@@ -1,10 +1,8 @@
 include ../checkbox/checkbox.pug
-include ../block-label/block-label.pug
 
 mixin checkbox-list({label='checkboxes',items=[]}={})
   .checkbox-list
-    .checkbox-list__label
-      +block-label({text:label})
+    h3.checkbox-list__label=label
     each item in items
       .checkbox-list__item
         +checkbox({text:item['text'],state:item['state'],name:item['name']})

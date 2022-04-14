@@ -5,10 +5,6 @@ block title
 
 block page
   include ../../components/color/color.pug
-  include ../../components/widget-title/widget-title.pug
-  include ../../components/title-inside-widget/title-inside-widget.pug
-  include ../../components/block-label/block-label.pug
-  include ../../components/body-text/body-text.pug
 
   .colors-fonts
     .container
@@ -23,14 +19,14 @@ block page
           +color({ hex: '#6FCF97', text:'Green', color:'green'})
         .colors-fonts__fonts
           .colors-fonts__font
-            .colors-fonts__tag.colors-fonts__tag_type_widget h1
-            +widget-title({text:'This one is the sub-section or widget title'})
+            h1.colors-fonts__tag.colors-fonts__tag_type_widget h1
+            .colors-fonts__text.colors-fonts__text_type_widget This one is the sub-section or widget title
           .colors-fonts__font
-            .colors-fonts__tag.colors-fonts__tag_type_inside-widget h2
-            +title-inside-widget({text:'Next one is the item title inside widgets'})
+            h2.colors-fonts__tag.colors-fonts__tag_type_inside-widget h2
+            .colors-fonts__text.colors-fonts__text_type_inside-widget Next one is the item title inside widgets
           .colors-fonts__font
-            .colors-fonts__tag.colors-fonts__tag_type_label h3
-            +block-label({text:'This is a label or CTA text'})
+            h3.colors-fonts__tag.colors-fonts__tag_type_label h3
+            .colors-fonts__text.colors-fonts__text_type_label This is a label or CTA text
           .colors-fonts__font
-            .colors-fonts__tag.colors-fonts__tag_type_text Body
-            +body-text({text:'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
+            p.colors-fonts__tag.colors-fonts__tag_type_text Body
+            .color-fonts__text.color-fonts__tag_type_text This is the body text which is used for most of the design, like paragraphs, lists, etc.

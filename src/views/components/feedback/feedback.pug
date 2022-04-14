@@ -1,5 +1,4 @@
 include ../like/like.pug
-include ../body-text/body-text.pug
 
 mixin feedback({avatar='', alt='',name='',lastVisit='', likesCount='', comment='',likeState=''}={})
   article.feedback
@@ -11,5 +10,4 @@ mixin feedback({avatar='', alt='',name='',lastVisit='', likesCount='', comment='
     .feedback__content
       .feedback__like
         +like({id:'like-feedback', name:'like-feedback', count:likesCount, state:likeState})
-      .feedback__comment
-        +body-text({text:comment})
+      p.feedback__comment=comment

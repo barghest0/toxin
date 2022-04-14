@@ -41,4 +41,23 @@
       }
     }
   }
+  &__text {
+    &_type {
+      &_widget {
+        @include widget-title;
+      }
+
+      &_inside-widget {
+        @include title-inside-widget;
+      }
+
+      &_label {
+        @include block-label;
+      }
+
+      &_text {
+        @include body-text;
+      }
+    }
+  }
 }

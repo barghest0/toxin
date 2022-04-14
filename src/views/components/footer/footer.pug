@@ -1,5 +1,4 @@
 include ../logo/logo.pug
-include ../block-label/block-label.pug
 include ../subscribe-text-field/subscribe-text-field.pug
 
 mixin footer({isSmall=false}={})
@@ -11,28 +10,24 @@ mixin footer({isSmall=false}={})
             +logo
           .footer__company-description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
         .footer__column 
-          .footer__column-title 
-            +block-label({text:"Навигация"}) 
+          h3.footer__column-title Навигация
           a.footer__column-item(href="/about.html") О нас
           a.footer__column-item(href="/news.html") Новости
           a.footer__column-item(href="/support.html") Служба поддержки
           a.footer__column-item(href="/services.html") Услуги
         .footer__column
-          .footer__column-title 
-            +block-label({text:"О нас"}) 
+          h3.footer__column-title О нас
           a.footer__column-item(href="/aboutService.html") О сервисе
           a.footer__column-item(href="/ourTeam.html") Наша команда
           a.footer__column-item(href="/jobs.html") Вакансии
           a.footer__column-item(href="/investors.html") Инвесторы
         .footer__column
-          .footer__column-title 
-            +block-label({text:"Служба поддержки"})
+          h3.footer__column-title Служба поддержки
           a.footer__column-item(href="/agreements.html") Соглашения
           a.footer__column-item(href="/communities.html") Сообщества
           a.footer__column-item(href="/connection.html") Связь с нами
         .footer__column.footer__column_subscribe
-          .footer__column-title 
-            +block-label({text:"Подписка"}) 
+          h3.footer__column-title Подписка
           .footer__column-description Получайте специальные предложения и новости сервиса
           +subscribe-text-field({id:'subscribe-field',name:'email',placeholder:'Email'})
     hr.footer__line

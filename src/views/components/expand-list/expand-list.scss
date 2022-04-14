@@ -3,7 +3,7 @@
     position: relative;
     margin-bottom: 17px;
     cursor: pointer;
-
+    @include block-label;
     &::after {
       @include dropdown-arrow(18px, 2px);
     }

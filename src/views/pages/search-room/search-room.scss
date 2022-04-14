@@ -131,6 +131,7 @@
 
     &-title {
       margin-bottom: 20px;
+      @include widget-title;
     }
 
     &-inner {

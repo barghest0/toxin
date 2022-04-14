@@ -2,8 +2,7 @@ include ../rich-checkbox/rich-checkbox.pug
 
 mixin rich-checkbox-list({label='', items=[]}={})
   .rich-checkbox-list
-    .rich-checkbox-list__label
-      +block-label({text:label})
+    h3.rich-checkbox-list__label=label
     .rich-checkbox-list__items 
       each item in items
         .rich-checkbox-list__item

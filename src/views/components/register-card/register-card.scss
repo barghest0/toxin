@@ -7,10 +7,12 @@
 .register-card {
   &__title {
     margin-bottom: 21px;
+    @include widget-title;
   }
 
   &__label {
     margin-bottom: 5px;
+    @include block-label;
   }
 
   &__register-form {
@@ -41,6 +43,9 @@
     justify-content: space-between;
     align-items: center;
     height: 44px;
+    &-text {
+      @include body-text;
+    }
 
     &-button {
       @include size(100px, 100%);

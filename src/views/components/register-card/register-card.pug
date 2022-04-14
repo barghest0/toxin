@@ -1,6 +1,3 @@
-include ../widget-title/widget-title.pug
-include ../block-label/block-label.pug
-include ../body-text/body-text.pug
 include ../card/card.pug
 include ../default-text-field/default-text-field.pug
 include ../button/button.pug
@@ -12,8 +9,7 @@ mixin register-card({title='Регистрация аккаунта'}={})
   - const genderData = require("../../../data/gender-data").data;
   +card
     .register-card 
-      .register-card__title
-        +widget-title({text:title})
+      h1.register-card__title=title
       form.register-card__register-form(action="register.html", method="post") 
         .register-card__block
           .register-card__block-field 
@@ -26,8 +22,7 @@ mixin register-card({title='Регистрация аккаунта'}={})
           .register-card__block-field
             +masked-text-field({label:'Дата рождения', placeholder:'ДД.ММ.ГГГГ', name:'birthday'})
         .register-card__block
-          .register-card__label
-            +block-label({text:'Данные для входа в сервис'})
+          h3.register-card__label Данные для входа в сервис
           .register-card__block-field 
             +default-text-field({placeholder:'Email',type:'email',name:'email'})
           .register-card__block-field 
@@ -37,7 +32,6 @@ mixin register-card({title='Регистрация аккаунта'}={})
         .register-card__button 
           +button({text:'Зарегистрироваться',type:'filled',isLargest:true})
       .register-card__profile-action 
-        .register-card__profile-action-text
-          +body-text({text:'Уже есть аккаунт на Toxin'})
+        p.register-card__profile-action-text Уже есть аккаунт на Toxin
         .register-card__profile-action-button
           +button({text:'Войти',type:'outlined'})

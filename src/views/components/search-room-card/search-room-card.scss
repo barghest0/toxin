@@ -4,9 +4,11 @@
 @import '../text-field/text-field.scss';
 @import '../button/button.scss';
 @import '../default-text-field/default-text-field.scss';
+
 .search-room-card {
   &__title {
     margin-bottom: 23px;
+    @include widget-title;
   }
 
   &__date {

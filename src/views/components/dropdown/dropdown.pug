@@ -1,13 +1,11 @@
 include ../button/button.pug
-include ../block-sub-label/block-sub-label.pug
-include ../block-label/block-label.pug
 
 mixin dropdown({label='', subLabel='',size='lg', type='guests', data={},state=''}={})
   .dropdown
     .dropdown__labels
-      +block-label({text:label})
+      h3.dropdown__label=label
       if subLabel
-        +block-sub-label({text:subLabel})
+        h3.dropdown__sub-label=subLabel
     .dropdown__container.dropdown-container.js-dropdown-container(
       class=state === "opened" ? "open" : "",
       data-type=type

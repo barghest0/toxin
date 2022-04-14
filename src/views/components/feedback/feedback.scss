@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 12px;
-    
+
     &-avatar {
       @include size(48px);
       border-radius: 50%;
@@ -33,5 +33,9 @@
     display: flex;
     align-items: flex-start;
     line-height: $main-line-height;
+  }
+
+  &__comment {
+    @include body-text;
   }
 }

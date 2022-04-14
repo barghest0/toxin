@@ -3,6 +3,7 @@
 .rich-checkbox-list {
   &__label {
     margin-bottom: 16px;
+    @include block-label;
   }
 
   &__item {

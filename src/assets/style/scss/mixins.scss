@@ -5,6 +5,41 @@
   height: $height;
 }
 
+@mixin block-label {
+  color: $dark-shade-100;
+  font-weight: bold;
+  font-size: $second-font-size;
+  text-transform: uppercase;
+  line-height: $second-line-height;
+}
+
+@mixin block-sub-label {
+  color: $dark-shade-100;
+  font-weight: normal;
+  font-size: $second-font-size;
+  text-transform: uppercase;
+}
+
+@mixin body-text {
+  color: $dark-shade-75;
+  font-size: $main-font-size;
+  line-height: $main-line-height;
+}
+
+@mixin widget-title {
+  color: $dark-shade-100;
+  font-weight: bold;
+  line-height: 1.2;
+  font-size: $widget-font-size;
+}
+
+@mixin title-inside-widget {
+  color: $dark-shade-100;
+  font-weight: bold;
+  font-size: $inside-widget-font-size;
+  line-height: 1.1;
+}
+
 @mixin main-gradient-to-bottom($color: $main-color, $second-color: $gradient-main-color) {
   background: linear-gradient(to bottom, $color, $second-color);
 }

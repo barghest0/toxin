@@ -12,8 +12,9 @@
 .room {
   &__label {
     margin-bottom: 20px;
+    @include title-inside-widget;
 
-    &_feedback {
+    &_flexed {
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
@@ -159,6 +160,7 @@
       text-align: center;
       display: flex;
       align-items: center;
+      font-weight: normal;
     }
     grid-area: feedback;
   }
@@ -180,6 +182,10 @@
 
   &__cancel {
     grid-column-start: 3;
+
+    &-text {
+      @include body-text;
+    }
 
     @include phone {
       grid-column-start: 1;

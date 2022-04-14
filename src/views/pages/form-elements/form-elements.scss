@@ -84,6 +84,7 @@
 
   &__selection-label {
     margin-bottom: 16px;
+    @include block-label;
   }
 
   &__checkboxes {
@@ -128,6 +129,7 @@
 
   &__other-label {
     margin-bottom: 16px;
+    @include block-label;
   }
 
   &__slider {
@@ -215,6 +217,7 @@
 
   &__list-label {
     margin-bottom: 16px;
+    @include block-label;
   }
 
   &__expand-checkbox {

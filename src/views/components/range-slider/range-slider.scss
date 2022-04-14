@@ -5,12 +5,14 @@
     margin-bottom: 23px;
     display: flex;
     justify-content: space-between;
+    @include block-label;
   }
 
   &__price {
     display: flex;
     font-size: $second-font-size;
     color: $dark-shade-50;
+    font-weight: normal;
 
     &-delimiter {
       margin: 0 3px;

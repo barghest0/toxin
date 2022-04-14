@@ -12,7 +12,6 @@ block page
   include ../../components/expand-list/expand-list.pug
   include ../../components/preview-room/preview-room.pug
   include ../../components/pagination/pagination.pug
-  include ../../components/widget-title/widget-title.pug
 
   - const roomsData = require("../../../data/preview-rooms-data").data;
   - const expandData = require("../../../data/expand-list-data").data;
@@ -44,8 +43,7 @@ block page
             .search-room__filter
               +expand-list({label:'Дополнительные удобства', items:expandData})
         .search-room__cards
-          .search-room__cards-title 
-            +widget-title({text:'Номера, которые мы для вас подобрали'})
+          h1.search-room__cards-title Номера, которые мы для вас подобрали
           .search-room__cards-inner
             each roomData in roomsData
               .search-room__card

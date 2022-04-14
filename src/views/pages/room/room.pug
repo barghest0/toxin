@@ -4,18 +4,19 @@ block title
   title Room
 
 block page
-  include ../../components/title-inside-widget/title-inside-widget.pug
   include ../../components/review-list/review-list.pug
   include ../../components/chart/chart.pug
   include ../../components/feedback/feedback.pug
   include ../../components/bullet-list/bullet-list.pug
   include ../../components/booking-card/booking-card.pug
+
   - const feedbackData = require("../../../data/feedback-data");
   - const bulletListData = require("../../../data/bullet-list").data;
   - const reviewListData = require("../../../data/review-list-data").data;
   - const bookingData = require("../../../data/booking-data").data;
   - const guestsDropdownData = require("../../../data/dropdown-guests-data").withoutChildren;
   - bookingData.guests = guestsDropdownData;
+
   .room
     .room__preview-images 
       .room__main-image
@@ -29,17 +30,14 @@ block page
         .room__overview
           .room__reviews
             section.room__about
-              .room__label
-                +title-inside-widget({text:'Сведения о номере'})
-              +review-list({items:reviewListData })
+              h3.room__label Сведения о номере
+              +review-list({items:reviewListData})
             section.room__impressions
-              .room__label 
-                +title-inside-widget({text:'Впечатления от номера'})
+              h3.room__label Впечатления от номера
               .room__impressions-chart
                 +chart({great:130,good:65,satisfied:65})
           section.room__feedback 
-            .room__label.room__label_feedback
-              +title-inside-widget({text:'Отзывы посетителей номера'})
+            h3.room__label.room__label_flexed Отзывы посетителей номера
               .room__feedback-count 2 отзыва
             .room__feedback-items
               .room__feedback-item
@@ -48,14 +46,11 @@ block page
                 +feedback(feedbackData.woman)
           .room__additions
             section.room__rules 
-              .room__label.room__label_separated
-                +title-inside-widget({text:'Правила'})
+              h3.room__label.room__label_separated Правила
               .room__rules-list 
                 +bullet-list({items:bulletListData})
             section.room__cancel
-              .room__label
-                +title-inside-widget({text:'Отмена'})
-              .room__cancel-text 
-                +body-text({text:'Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.'})
+              h3.room__label Отмена
+              p.room__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
         .room__booking 
           +booking-card(bookingData)

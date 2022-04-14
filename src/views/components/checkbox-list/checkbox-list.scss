@@ -1,10 +1,12 @@
 @import '../checkbox/checkbox';
+
 .checkbox-list {
   display: flex;
   flex-direction: column;
 
   &__label {
     margin-bottom: 16.5px;
+    @include block-label;
   }
 
   &__item {

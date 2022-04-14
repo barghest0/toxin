@@ -7,6 +7,14 @@
     margin-bottom: 5px;
   }
 
+  &__label {
+    @include block-label;
+  }
+
+  &__sub-label {
+    @include block-sub-label;
+  }
+
   &__container {
     border-radius: 4px;
   }
