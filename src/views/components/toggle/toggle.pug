@@ -4,5 +4,6 @@ mixin toggle({text='',name='offers',state='unchecked'}={})
       input.toggle__input(type="checkbox", name=name, checked)
     else
       input.toggle__input(type="checkbox", name=name)
-    span.toggle__custom-input(style="")
+    .toggle__custom-input
+      span.toggle__circle
     .toggle__title= text

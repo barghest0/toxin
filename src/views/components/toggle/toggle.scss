@@ -12,11 +12,32 @@
   &__custom-input {
     min-width: 40px;
     margin-right: 10px;
-    background: url('images/inactive-toggle.svg');
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid $dark-shade-25;
+    border-radius: 30px;
+    padding: 0 2px;
+    transition: all 0.2s ease-in-out;
   }
 
-  &__input:checked + &__custom-input {
-    background: url('images/active-toggle.svg');
+  &__circle{
+    @include size(12px);
+    border-radius: 50%;
+    position: absolute;
+    background-color: $dark-shade-25;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &__input:checked + &__custom-input{
+    border: 1px solid $main-color;    
+  }
+
+  &__input:checked + &__custom-input &__circle {
+    @include main-gradient-to-bottom;
+    transform: translate(22px,-50%);
   }
 
   &__title {
