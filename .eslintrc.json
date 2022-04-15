@@ -4,11 +4,12 @@
     "es2021": true,
     "jquery": true
   },
-  "extends": ["airbnb-base", "plugin:prettier/recommended", "prettier"],
+  "extends": ["airbnb-base", "plugin:prettier/recommended", "prettier", "plugin:fsd/all"],
   "parserOptions": {
     "ecmaVersion": 13,
     "sourceType": "module"
   },
+  "ignorePatterns": ["src/vendor"],
   "settings": {
     "import/resolver": {
       "node": {
@@ -17,7 +18,7 @@
     },
     "import/ignore": ["swiper"]
   },
-  "plugins": ["prettier", "pug"],
+  "plugins": ["prettier", "pug", "fsd"],
   "rules": {
     "prettier/prettier": ["error"]
   }

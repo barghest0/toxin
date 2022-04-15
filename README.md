@@ -14,7 +14,7 @@
 - Swiper - 7.2.0
 - Paginationjs - 2.1.5
 - Jquery.maskedinput - 1.4.1
-- Eslint(air-bnb) - 8.8.0
+- Eslint(air-bnb, fsd) - 7.32.0
 - [Slider-plugin](https://github.com/barghest0/slider-plugin)
 
 ## Команды
@@ -24,6 +24,8 @@
 Установка зависимостей - `npm i` или `yarn install`
 
 Запуск сервера для разработки - `npm run dev` или `yarn dev`
+
+Запуск ESlint - `npm run lint` или `yarn lint`
 
 > Сборка запускается на локальной сервере по адресу http://localhost:8080, храниться в браузере в дериктории `dist`
 
