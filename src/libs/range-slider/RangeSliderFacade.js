@@ -19,7 +19,6 @@ class RangeSliderFacade {
       min: 0,
       max: 15000,
       step: 100,
-      onChange: this.handleChange.bind(this),
       hasScale: false,
       hasTips: false,
     };
@@ -32,6 +31,7 @@ class RangeSliderFacade {
 
   createSlider() {
     this.slider = this.$slider.slider(this.params);
+    this.slider.subscribe(this.handleChange.bind(this))
   }
 
   handleDocumentLoaded() {
