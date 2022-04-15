@@ -27,6 +27,9 @@ html {
 
 *::placeholder {
   font-size: $main-font-size;
+  @include phone{
+    font-size:12px;
+  }
 }
 
 ::-webkit-scrollbar {

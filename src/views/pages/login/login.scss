@@ -15,9 +15,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width:380px;
+    margin: 0 auto;
   }
 
   &__card {
-    width: 380px;
+    width: 100%;
   }
 }

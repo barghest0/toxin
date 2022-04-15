@@ -16,9 +16,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width:380px;
+    margin: 0 auto;
   }
 
   &__card {
-    @include size(380px, 646px);
+    width: 100%;
   }
 }
