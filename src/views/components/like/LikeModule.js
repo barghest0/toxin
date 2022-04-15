@@ -3,18 +3,18 @@ import { LIKED_CLASS } from './constants';
 class Like {
   constructor($container) {
     this.$container = $container;
-    this.#init();
+    this.init();
   }
 
-  #init() {
-    this.#attachListener();
+  init() {
+    this.attachListener();
   }
 
-  #attachListener() {
-    this.$container.on('click', this.#handleLikeClick);
+  attachListener() {
+    this.$container.on('click', this.handleLikeClick);
   }
 
-  #handleLikeClick(event) {
+  handleLikeClick(event) {
     this.element = event.target;
     let likes = Number(this.element.innerHTML);
 

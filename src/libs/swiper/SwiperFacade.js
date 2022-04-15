@@ -14,15 +14,15 @@ import {
 class SwiperFacade {
   constructor(container) {
     this.container = container;
-    this.#init();
+    this.init();
   }
 
-  #init() {
-    this.#setParams();
-    this.#createSlider();
+  init() {
+    this.setParams();
+    this.createSlider();
   }
 
-  #setParams() {
+  setParams() {
     this.params = {
       direction: 'horizontal',
       loop: true,
@@ -45,7 +45,7 @@ class SwiperFacade {
     };
   }
 
-  #createSlider() {
+  createSlider() {
     this.swiper = new Swiper(this.container, this.params);
   }
 }

@@ -6,20 +6,20 @@ class Chart {
     this.votes = votes;
     this.labels = labels;
     this.context = container.getContext('2d');
-    this.#init();
+    this.init();
   }
 
-  #init() {
-    this.#setTotalVotes();
-    this.#setGradients();
-    this.#createChart();
+  init() {
+    this.setTotalVotes();
+    this.setGradients();
+    this.createChart();
   }
 
-  #setTotalVotes() {
+  setTotalVotes() {
     this.totalVotes = this.votes.reduce((acc, vote) => acc + vote);
   }
 
-  #setGradients() {
+  setGradients() {
     this.disappointColorGradient = this.context.createLinearGradient(0, 0, 0, 200);
     this.disappointColorGradient.addColorStop(0, '#909090');
     this.disappointColorGradient.addColorStop(1, '#3D4975');
@@ -44,7 +44,7 @@ class Chart {
     ];
   }
 
-  #createChart() {
+  createChart() {
     this.chart = new ChartFacade(
       this.container,
       this.context,

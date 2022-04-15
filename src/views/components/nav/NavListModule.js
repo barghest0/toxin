@@ -4,21 +4,21 @@ class NavListModule {
   constructor($container, items) {
     this.$container = $container;
     this.items = items;
-    this.#init();
+    this.init();
   }
 
-  #init() {
-    this.#createList();
-    this.#createLinks();
-    this.#attachListeners();
+  init() {
+    this.createList();
+    this.createLinks();
+    this.attachListeners();
   }
 
-  #createList() {
+  createList() {
     this.$container.append(`<div class=${LIST_CLASS}><div>`);
     this.list = this.$container.find(LIST_SELECTOR);
   }
 
-  #createLinks() {
+  createLinks() {
     this.items.forEach(item => {
       this.list.append(
         `<a href="/mock-addres/change-me" class=${LIST_ITEM_CLASS}>${item.name}</a>`,
@@ -26,20 +26,20 @@ class NavListModule {
     });
   }
 
-  #attachListeners() {
-    this.$container.on('click', this.#handleLinkClick.bind(this));
+  attachListeners() {
+    this.$container.on('click', this.handleLinkClick.bind(this));
     document.addEventListener(
       'click',
-      this.#closeDropdownListAfterDocumentClick.bind(this),
+      this.closeDropdownListAfterDocumentClick.bind(this),
     );
   }
 
-  #handleLinkClick(event) {
+  handleLinkClick(event) {
     event.stopPropagation();
     this.$container.toggleClass(OPENED_CLASS);
   }
 
-  #closeDropdownListAfterDocumentClick(event) {
+  closeDropdownListAfterDocumentClick(event) {
     if (!event.target.closest(LIST_SELECTOR)) {
       this.$container.removeClass(OPENED_CLASS);
     }

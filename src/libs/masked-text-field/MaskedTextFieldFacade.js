@@ -4,14 +4,14 @@ class MaskedTextFieldFacade {
   constructor($container, mask) {
     this.$container = $container;
     this.mask = mask;
-    this.#init();
+    this.init();
   }
 
-  #init() {
-    this.#createMask();
+  init() {
+    this.createMask();
   }
 
-  #createMask() {
+  createMask() {
     this.$container.mask(this.mask);
   }
 }

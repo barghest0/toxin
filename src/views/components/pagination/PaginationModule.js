@@ -4,10 +4,10 @@ class Pagination {
   constructor($element, count) {
     this.$element = $element;
     this.count = count;
-    this.#init();
+    this.init();
   }
 
-  #init() {
+  init() {
     this.pagination = new PaginationFacade(this.$element, this.count);
   }
 }

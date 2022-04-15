@@ -12,18 +12,18 @@ class ChartFacade {
     this.totalVotes = totalVotes;
     this.backgroundColors = backgroundColors;
     this.labels = labels;
-    this.#init();
+    this.init();
   }
 
-  #init() {
-    this.#setData();
-    this.#setOptions();
-    this.#setPlugins();
-    this.#createChart();
-    this.#attachListeners();
+  init() {
+    this.setData();
+    this.setOptions();
+    this.setPlugins();
+    this.createChart();
+    this.attachListeners();
   }
 
-  #setData() {
+  setData() {
     this.data = {
       labels: this.labels,
       datasets: [
@@ -35,7 +35,7 @@ class ChartFacade {
     };
   }
 
-  #setOptions() {
+  setOptions() {
     this.options = {
       cutout: '90%',
       radius: '61',
@@ -82,7 +82,7 @@ class ChartFacade {
     };
   }
 
-  #setPlugins() {
+  setPlugins() {
     this.plugins = [
       {
         beforeDraw: chart => {
@@ -92,7 +92,7 @@ class ChartFacade {
           } = chart;
 
           ctx.save();
-          ctx.fillStyle = '#BC9CFF';
+          ctx.fillStyle = 'BC9CFF';
           const x = width / 2;
           const y = height / 2;
           const text = 'ГОЛОСОВ';
@@ -106,36 +106,38 @@ class ChartFacade {
     ];
   }
 
-  #createChart() {
-    window.addEventListener('load', () => {
-      this.chart = new Chart(this.container, {
-        type: 'doughnut',
-        data: this.data,
-        options: this.options,
-        plugins: this.plugins,
-      });
+  handleWindowResize() {
+    this.chart = new Chart(this.container, {
+      type: 'doughnut',
+      data: this.data,
+      options: this.options,
+      plugins: this.plugins,
     });
   }
 
-  #attachListeners() {
-    window.addEventListener('resize', this.#checkWindowSize.bind(this));
+  createChart() {
+    window.addEventListener('load', this.handleWindowResize.bind(this));
   }
 
-  #checkWindowSize(event) {
+  attachListeners() {
+    window.addEventListener('resize', this.checkWindowSize.bind(this));
+  }
+
+  checkWindowSize(event) {
     if (event.target.innerWidth <= TURNING_POINT) {
-      this.#changeLegendPositionToBottom();
+      this.changeLegendPositionToBottom();
     } else {
-      this.#changeLegendPositionToRight();
+      this.changeLegendPositionToRight();
     }
   }
 
-  #changeLegendPositionToBottom() {
+  changeLegendPositionToBottom() {
     this.chart.options.plugins.legend.position = 'bottom';
     this.chart.options.plugins.legend.align = 'center';
     this.chart.update();
   }
 
-  #changeLegendPositionToRight() {
+  changeLegendPositionToRight() {
     this.chart.options.plugins.legend.position = 'right';
     this.chart.options.plugins.legend.align = 'end';
     this.chart.update();

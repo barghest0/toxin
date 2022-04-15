@@ -5,33 +5,41 @@ class RangeSliderFacade {
     this.$slider = $slider;
     this.$startPrice = $startPrice;
     this.$endPrice = $endPrice;
-    this.#init();
+    this.init();
   }
 
-  #init() {
-    this.#setParams();
-    this.#createSlider();
+  init() {
+    this.setParams();
+    this.attachListeners();
   }
 
-  #setParams() {
+  setParams() {
     this.params = {
       isRange: true,
       min: 0,
       max: 15000,
       step: 100,
-      onChange: this.#handleChange.bind(this),
+      onChange: this.handleChange.bind(this),
       hasScale: false,
       hasTips: false,
     };
   }
 
-  #handleChange({ value }) {
+  handleChange({ value }) {
     this.$startPrice.html(`${value[FIRST_VALUE].toLocaleString()} ₽`);
     this.$endPrice.html(`${value[SECOND_VALUE].toLocaleString()} ₽`);
   }
 
-  #createSlider() {
+  createSlider() {
     this.slider = this.$slider.slider(this.params);
+  }
+
+  handleDocumentLoaded() {
+    this.createSlider();
+  }
+
+  attachListeners() {
+    window.addEventListener('load', this.handleDocumentLoaded.bind(this));
   }
 }
 

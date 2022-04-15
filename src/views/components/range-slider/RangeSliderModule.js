@@ -10,21 +10,21 @@ import {
 class RangeSlider {
   constructor($container) {
     this.$container = $container;
-    this.#init();
+    this.init();
   }
 
-  #init() {
-    this.#setElements();
-    this.#createSlider();
+  init() {
+    this.setElements();
+    this.createSlider();
   }
 
-  #setElements() {
+  setElements() {
     this.$startPrice = this.$container.find(START_PRICE_SELECTOR);
     this.$endPrice = this.$container.find(END_PRICE_SELECTOR);
     this.$slider = this.$container.find(RANGE_SLIDER_SELECTOR);
   }
 
-  #createSlider() {
+  createSlider() {
     this.slider = new RangeSliderFacade(this.$slider, this.$startPrice, this.$endPrice);
   }
 }
