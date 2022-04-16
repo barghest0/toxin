@@ -1,5 +1,4 @@
 import HeaderBurger from './HeaderBurgerModule';
-
 import { BURGER_SELECTOR } from './constants';
 
 import '../logo/logo';

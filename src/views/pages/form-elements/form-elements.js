@@ -1,3 +1,5 @@
+import './form-elements.scss';
+
 import '../../components/dropdown/dropdown';
 import '../../components/masked-text-field/masked-text-field';
 import '../../components/expand-list/expand-list';
@@ -8,4 +10,3 @@ import '../../components/datepicker/datepicker';
 import '../../components/feedback/feedback';
 import '../../components/review-list/review-list';
 
-import './form-elements.scss';

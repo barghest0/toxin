@@ -1,6 +1,5 @@
-import { SERVICES_LIST_SELECTOR, AGREEMENTS_LIST_SELECTOR } from './constants';
-
 import NavList from './NavListModule';
+import { SERVICES_LIST_SELECTOR, AGREEMENTS_LIST_SELECTOR } from './constants';
 
 $(SERVICES_LIST_SELECTOR).each(
   (_index, element) =>

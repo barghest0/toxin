@@ -1,5 +1,4 @@
 import Slider from './SliderModule';
-
 import { SLIDER_SELECTOR } from './constants';
 
 import './images/preview-room1.png';

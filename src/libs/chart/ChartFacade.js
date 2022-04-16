@@ -92,7 +92,7 @@ class ChartFacade {
           } = chart;
 
           ctx.save();
-          ctx.fillStyle = 'BC9CFF';
+          ctx.fillStyle = '#BC9CFF';
           const x = width / 2;
           const y = height / 2;
           const text = 'ГОЛОСОВ';

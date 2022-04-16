@@ -1,3 +1,4 @@
+import DropdownHelper from './DropdownHelper';
 import {
   APPLY_BUTTON_SELECTOR,
   BATHROOMS_SELECTOR,
@@ -17,7 +18,6 @@ import {
   OPENED_CLASS,
   DISABLED_CLASS,
 } from './constants';
-import DropdownHelper from './DropdownHelper';
 
 class Dropdown {
   constructor($container) {
