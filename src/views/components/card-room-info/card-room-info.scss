@@ -8,6 +8,7 @@
 
     &-number {
       @include widget-title;
+      margin-right: 7px;
 
       &_sm {
         @include title-inside-widget;
@@ -18,9 +19,8 @@
         line-height: $main-line-height;
         align-items: flex-end;
         font-size: $main-font-size;
-        column-gap: 2px;
         font-weight: bold;
-        margin-right: 8px;
+        margin-right: 5px;
         color: $dark-shade-100;
       }
     }

@@ -47,6 +47,7 @@
   &__add-service {
     display: flex;
     @include body-text;
+    line-height: 1.2;
 
     &-price {
       @include body-text;

@@ -6,7 +6,7 @@
 
 .register-card {
   &__title {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
     @include widget-title;
   }
 
@@ -20,10 +20,9 @@
   }
 
   &__block {
-    margin-bottom: 20px;
-
-    &:first-child &-field:last-child {
-      margin-bottom: 26px;
+    margin-bottom: 24.5px;
+    &_sm {
+      margin-bottom: 20px;
     }
 
     &-field {
