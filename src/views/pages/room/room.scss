@@ -96,7 +96,7 @@
       'reviews'
       'feedback'
       'additions';
-    row-gap: 35px;
+    row-gap: 34px;
   }
 
   &__reviews {
@@ -159,7 +159,7 @@
       font-size: 14px;
       text-align: center;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       font-weight: normal;
     }
     grid-area: feedback;

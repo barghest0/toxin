@@ -107,8 +107,12 @@
       max-width: 260px;
     }
 
+    &_sm &-title{
+      margin-top: 2px;
+    }
+
     &-description {
-      line-height: 1.68;
+      line-height: $main-line-height;
       color: $dark-shade-75;
     }
   }

@@ -80,6 +80,7 @@
   font-family: inherit;
   font-size: $main-font-size;
   transition: all 0.2s linear;
+  color: $dark-shade-75;
 
   &:hover {
     border: 1px solid $dark-shade-50;

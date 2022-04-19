@@ -24,17 +24,11 @@
   }
 
   &__field {
-    @include size(100%, 44px);
-    margin: 0;
-    border-radius: 4px 4px 0 0;
-    border: 1px solid $dark-shade-25;
-    position: relative;
-    cursor: pointer;
-    font-size: $main-font-size;
+    @include text-field;
     display: flex;
     align-items: center;
-    padding-left: 15px;
-
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
     &::after {
       @include dropdown-arrow(18px, 17px);
     }

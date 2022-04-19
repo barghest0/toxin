@@ -27,10 +27,13 @@
       &::placeholder {
         color: $dark-shade-75;
       }
-
-      &:focus {
-        border: 1px solid $dark-shade-25;
-      }
     }
+
+    &:focus {
+      border: 1px solid $dark-shade-25;
+    }
+  }
+  &.open &__input {
+    border: 1px solid $dark-shade-50;
   }
 }
