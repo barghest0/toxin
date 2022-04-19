@@ -9,4 +9,3 @@ import '../../components/like/like';
 import '../../components/datepicker/datepicker';
 import '../../components/feedback/feedback';
 import '../../components/review-list/review-list';
-

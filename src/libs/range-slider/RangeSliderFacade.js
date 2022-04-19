@@ -31,7 +31,7 @@ class RangeSliderFacade {
 
   createSlider() {
     this.slider = this.$slider.slider(this.params);
-    this.slider.subscribe(this.handleChange.bind(this))
+    this.slider.subscribe(this.handleChange.bind(this));
   }
 
   handleDocumentLoaded() {

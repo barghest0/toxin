@@ -12,5 +12,3 @@ import '../../components/like/like';
 import '../../components/review-list/review-list';
 import '../../components/feedback/feedback';
 import '../../components/booking-card/booking-card';
-
-

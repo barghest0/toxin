@@ -4,4 +4,3 @@ import './images/twitter.svg';
 
 import '../logo/logo';
 import '../subscribe-text-field/subscribe-text-field';
-

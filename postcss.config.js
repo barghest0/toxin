@@ -1,8 +1,11 @@
+const autoprefixer = require('autoprefixer');
+const mqpacker = require('css-mqpacker');
+const cssnano = require('cssnano');
 module.exports = {
   plugins: [
-    require('autoprefixer'),
-    require('css-mqpacker'),
-    require('cssnano')({
+    autoprefixer,
+    mqpacker,
+    cssnano({
       preset: [
         'default',
         {
