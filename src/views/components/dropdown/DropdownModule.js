@@ -123,7 +123,10 @@ class Dropdown {
   }
 
   attachDropdownListeners() {
-    this.$container.on('click', this.openDropdownListAfterFieldClick.bind(this));
+    this.$container.on(
+      'click',
+      this.openDropdownListAfterFieldClick.bind(this),
+    );
     const stopPropagation = event => {
       event.stopPropagation();
     };
@@ -219,7 +222,9 @@ class Dropdown {
   setGuestsFieldText() {
     const text = [];
 
-    text.push(`${this.totalCount} ${this.helper.getGuestEnding(this.totalCount)}`);
+    text.push(
+      `${this.totalCount} ${this.helper.getGuestEnding(this.totalCount)}`,
+    );
 
     const newborns = Number(
       this.$container.find(NEWBORNS_SELECTOR).find(COUNTER_SELECTOR).text(),

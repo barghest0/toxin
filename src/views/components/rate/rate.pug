@@ -1,7 +1,9 @@
 mixin rate({name='rate', rate='1'}={})
+  - const rateQuantity = [1, 2, 3, 4, 5];
+
   label.rate
-    each val in [1, 2, 3, 4, 5]
-      if val === rate
-        input.rate__input(type="radio", name=name, value=val, checked)
+    each value in rateQuantity
+      if value === rate
+        input.rate__input(type='radio', name=name, value=value, checked)
       else
-        input.rate__input(type="radio", name=name, value=val)
+        input.rate__input(type='radio', name=name, value=value)

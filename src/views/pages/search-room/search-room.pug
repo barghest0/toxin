@@ -13,17 +13,17 @@ block page
   include ../../components/preview-room/preview-room.pug
   include ../../components/pagination/pagination.pug
 
-  - const roomsData = require("../../../data/preview-rooms-data").data;
-  - const expandData = require("../../../data/expand-list-data").data;
-  - const checkboxData = require("../../../data/checkbox-list-data");
-  - const guestDropdownData = require("../../../data/dropdown-guests-data");
-  - const apartmentsDropdownData = require("../../../data/dropdown-apartments-data").data;
+  - const roomsData = require('../../../data/preview-rooms-data').data;
+  - const expandData = require('../../../data/expand-list-data').data;
+  - const checkboxData = require('../../../data/checkbox-list-data');
+  - const guestDropdownData = require('../../../data/dropdown-guests-data');
+  - const apartmentsDropdownData = require('../../../data/dropdown-apartments-data').data;
 
   .search-room
     .container
       section.search-room__inner
         .search-room__filters-icon.js-search-room__filters-icon 
-          img(src="assets/images/filter-icon.svg", alt="filters")
+          img(src='assets/images/filter-icon.svg', alt='filters')
         .search-room__filters
           .search-room__filters-inner
             span.search-room__filters-close.js-search-room__filters-close

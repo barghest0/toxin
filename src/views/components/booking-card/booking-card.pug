@@ -18,17 +18,22 @@ mixin booking-card({roomNumber="", price="", isLuxury=false, dateFrom="",dateTo=
       .booking-card__guests 
         +dropdown({label:'Гости',type:'guests', data:guests})
       .booking-card__cost 
-        .booking-card__day=`${price.toLocaleString()}₽ х ${days} суток`
-        .booking-card__day-price=`${daysPrice.toLocaleString()}₽`
-        .booking-card__service=`Сбор за услуги${serviceDiscount ? `: скидка ${serviceDiscount.toLocaleString()}₽` : ''}` 
-          img(src="assets/images/services.svg", weight=20, height=20, alt="")
-        .booking-card__service-price=`${servicePriceWithoutDiscount.toLocaleString()}₽`
-        .booking-card__add-service=`Сбор за дополнительные услуги ${addServiceDiscount ? `:скидка ${addServiceDiscount.toLocaleString()}₽` : ''}` 
-          img(src="assets/images/services.svg", weight=20, height=20, alt="services")
-        .booking-card__add-service-price=`${addServicePriceWithoutDiscount}₽`
+        .booking-card__day= `${price.toLocaleString()}₽ х ${days} суток`
+        .booking-card__day-price= `${daysPrice.toLocaleString()}₽`
+        .booking-card__service= `Сбор за услуги${serviceDiscount ? `: скидка ${serviceDiscount.toLocaleString()}₽` : ''}`
+          img(src='assets/images/services.svg', weight=20, height=20, alt='')
+        .booking-card__service-price= `${servicePriceWithoutDiscount.toLocaleString()}₽`
+        .booking-card__add-service= `Сбор за дополнительные услуги ${addServiceDiscount ? `:скидка ${addServiceDiscount.toLocaleString()}₽` : ''}`
+          img(
+            src='assets/images/services.svg',
+            weight=20,
+            height=20,
+            alt='services'
+          )
+        .booking-card__add-service-price= `${addServicePriceWithoutDiscount}₽`
       .booking-card__final-cost 
         .booking-card__final-cost-text Итого
         .booking-card__points
-        .booking-card__final-cost-text=`${totalPrice.toLocaleString()}₽`
+        .booking-card__final-cost-text= `${totalPrice.toLocaleString()}₽`
       .booking-card__button 
         +button({text:'Забронировать',type:'filled',isLargest:true})

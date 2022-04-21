@@ -6,11 +6,11 @@ include ../masked-text-field/masked-text-field.pug
 include ../radio-list/radio-list.pug
 
 mixin register-card({title='Регистрация аккаунта'}={})
-  - const genderData = require("../../../data/gender-data").data;
+  - const genderData = require('../../../data/gender-data').data;
   +card
     .register-card 
-      h1.register-card__title=title
-      form.register-card__register-form(action="register.html", method="post") 
+      h1.register-card__title= title
+      form.register-card__register-form(action='register.html', method='post') 
         .register-card__block
           .register-card__block-field 
             +default-text-field({placeholder:'Имя', name:'name'})

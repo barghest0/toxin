@@ -2,8 +2,8 @@ mixin text-field({label='',subLabel=''}={})
   .text-field 
     if label
       .text-field__labels
-        h3.text-field__label=label
+        h3.text-field__label= label
         if subLabel
-          h3.text-field__sub-label=subLabel
+          h3.text-field__sub-label= subLabel
     .text-field__container
       block

@@ -125,7 +125,9 @@ module.exports = {
     }),
 
     new CopyWebpackPlugin({
-      patterns: [{ from: `${PATHS.src}/assets/static`, to: `${PATHS.assets}/favicons` }],
+      patterns: [
+        { from: `${PATHS.src}/assets/static`, to: `${PATHS.assets}/favicons` },
+      ],
     }),
 
     new webpack.ProvidePlugin({

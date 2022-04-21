@@ -1,9 +1,8 @@
-
 mixin card-room-info({roomNumber='', isLuxury='', price='', size=''}={})
   .card-room-info(class=`card-room-info_${size}`)
     .card-room-info__room
       .card-room-info__room-number-symbol №
-      .card-room-info__room-number(class=`card-room-info__room-number_${size}`)=roomNumber
+      .card-room-info__room-number(class=`card-room-info__room-number_${size}`)= roomNumber
       if isLuxury
         .card-room-info__room-luxury Люкс
     .card-room-info__price

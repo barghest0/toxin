@@ -1,4 +1,9 @@
-import { LIST_SELECTOR, OPENED_CLASS, LIST_CLASS, LIST_ITEM_CLASS } from './constants';
+import {
+  LIST_SELECTOR,
+  OPENED_CLASS,
+  LIST_CLASS,
+  LIST_ITEM_CLASS,
+} from './constants';
 
 class NavListModule {
   constructor($container, items) {

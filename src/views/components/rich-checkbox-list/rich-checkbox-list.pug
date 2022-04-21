@@ -2,8 +2,9 @@ include ../rich-checkbox/rich-checkbox.pug
 
 mixin rich-checkbox-list({label='', items=[]}={})
   .rich-checkbox-list
-    h3.rich-checkbox-list__label=label
+    h3.rich-checkbox-list__label= label
     .rich-checkbox-list__items 
       each item in items
+        - const { text, subtext, name, state } = item;
         .rich-checkbox-list__item
-          +rich-checkbox({text:item['text'],subtext:item['subtext'],name:item['name'], state:item['state']})
+          +rich-checkbox({text, subtext, name, state})

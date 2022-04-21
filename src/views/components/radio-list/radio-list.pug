@@ -1,11 +1,12 @@
 mixin radio-list({items=[]}={})
   .radio-list
     each item in items
+      - const { name, state, text } = item;
       label.radio-list__item
-        if item['state'] === 'checked'
-          input.radio-list__input(type="radio", name=item["name"], checked)
+        if state === 'checked'
+          input.radio-list__input(type='radio', name=name, checked)
         else
-          input.radio-list__input(type="radio", name=item["name"])
+          input.radio-list__input(type='radio', name=name)
         .radio-list__custom-input
           span.radio-list__circle
-        .radio-list__title= item["text"]
+        .radio-list__title= text

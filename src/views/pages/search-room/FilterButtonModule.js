@@ -1,4 +1,8 @@
-import { BACKGROUND_SELECTOR, CLOSE_BUTTON_SELECTOR, OPENED_CLASS } from './constants';
+import {
+  BACKGROUND_SELECTOR,
+  CLOSE_BUTTON_SELECTOR,
+  OPENED_CLASS,
+} from './constants';
 
 class FilterButton {
   constructor($button) {

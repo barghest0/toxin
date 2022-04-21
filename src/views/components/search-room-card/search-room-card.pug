@@ -4,11 +4,11 @@ include ../dropdown/dropdown.pug
 include ../button/button.pug
 
 mixin search-room-card({title='Найдём номера под ваши пожелания'}={})
-  - const guestsDropdownData = require("../../../data/dropdown-guests-data");
+  - const guestsDropdownData = require('../../../data/dropdown-guests-data');
   +card
     .search-room-card 
-      h1.search-room-card__title=title 
-      form.search-room-card__search-form(action="search-room.html")
+      h1.search-room-card__title= title
+      form.search-room-card__search-form(action='search-room.html')
         .search-room-card__date 
           +range-date({from:'Прибытие',to:'Выезд'})
         .search-room-card__guests 

@@ -20,11 +20,21 @@ class Chart {
   }
 
   setGradients() {
-    this.disappointColorGradient = this.context.createLinearGradient(0, 0, 0, 200);
+    this.disappointColorGradient = this.context.createLinearGradient(
+      0,
+      0,
+      0,
+      200,
+    );
     this.disappointColorGradient.addColorStop(0, '#909090');
     this.disappointColorGradient.addColorStop(1, '#3D4975');
 
-    this.satisfactoryColorGradient = this.context.createLinearGradient(0, 0, 0, 200);
+    this.satisfactoryColorGradient = this.context.createLinearGradient(
+      0,
+      0,
+      0,
+      200,
+    );
     this.satisfactoryColorGradient.addColorStop(0, '#BC9CFF');
     this.satisfactoryColorGradient.addColorStop(1, '#8BA4F9');
 

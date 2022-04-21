@@ -39,7 +39,8 @@ class Datepicker {
   }
 
   setDatepicker() {
-    this.datepicker = this.$container.find(DATEPICKER_SELECTOR)[SINGLE_DATEPICKER];
+    this.datepicker =
+      this.$container.find(DATEPICKER_SELECTOR)[SINGLE_DATEPICKER];
   }
 
   attachInputsListeners() {
@@ -55,7 +56,10 @@ class Datepicker {
   }
 
   attachDocumentListener() {
-    document.addEventListener('click', this.closeDatepickerAfterDocumentClick.bind(this));
+    document.addEventListener(
+      'click',
+      this.closeDatepickerAfterDocumentClick.bind(this),
+    );
   }
 
   closeDatepickerAfterDocumentClick(e) {

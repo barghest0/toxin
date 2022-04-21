@@ -12,4 +12,6 @@ import '../../components/datepicker/datepicker';
 import '../../components/range-slider/range-slider';
 import '../../components/pagination/pagination';
 
-$(FILTER_BUTTON_SELECTOR).each((_index, element) => new FilterButton($(element)));
+$(FILTER_BUTTON_SELECTOR).each(
+  (_index, element) => new FilterButton($(element)),
+);

@@ -1,4 +1,8 @@
-import { BURGER_SELECTOR, BURGER_NAV_SELECTOR, OPEN_BURGER_CLASS } from './constants';
+import {
+  BURGER_SELECTOR,
+  BURGER_NAV_SELECTOR,
+  OPEN_BURGER_CLASS,
+} from './constants';
 
 class HeaderBurger {
   constructor($container) {
@@ -17,7 +21,10 @@ class HeaderBurger {
 
   attachListeners() {
     this.$container.on('click', this.handleBurgerClick);
-    document.addEventListener('click', this.closeBurgerAfterDocumentClick.bind(this));
+    document.addEventListener(
+      'click',
+      this.closeBurgerAfterDocumentClick.bind(this),
+    );
   }
 
   handleBurgerClick(event) {

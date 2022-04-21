@@ -25,7 +25,11 @@ class RangeSlider {
   }
 
   createSlider() {
-    this.slider = new RangeSliderFacade(this.$slider, this.$startPrice, this.$endPrice);
+    this.slider = new RangeSliderFacade(
+      this.$slider,
+      this.$startPrice,
+      this.$endPrice,
+    );
   }
 }
 

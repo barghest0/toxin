@@ -10,4 +10,4 @@ mixin feedback({avatar='', alt='',name='',lastVisit='', likesCount='', comment='
     .feedback__content
       .feedback__like
         +like({id:'like-feedback', name:'like-feedback', count:likesCount, state:likeState})
-      p.feedback__comment=comment
+      p.feedback__comment= comment
