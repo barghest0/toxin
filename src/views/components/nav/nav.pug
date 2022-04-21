@@ -1,14 +1,16 @@
 include ../button/button.pug
 
 mixin nav({state='no-authorized',name='',burger=false}={})
-  nav.nav(class=burger ? 'nav_burger' : null)
-    a.nav__item(href='/mock-address/change-me') О нас
+  - const classes = burger ? 'nav_burger' : ''
+
+  nav.nav(class=classes)
+    a.nav__item(href="/mock-address/change-me") О нас
     .nav__item.nav__item_list.nav__item_services Услуги
-    a.nav__item(href='/mock-address/change-me') Вакансии
-    a.nav__item(href='/mock-address/change-me') Новости
+    a.nav__item(href="/mock-address/change-me") Вакансии
+    a.nav__item(href="/mock-address/change-me") Новости
     .nav__item.nav__item_list.nav__item_agreements Соглашения
     if state === 'authorized'
-      a.nav__item.nav__item_profile(href='/mock-address/change-me')= name
+      a.nav__item.nav__item_profile(href="/mock-address/change-me")= name
     else
-      a.nav__button.nav__button_outlined(href='login.html') Войти
-      a.nav__button.nav__button_filled(href='register.html') Зарегестрироваться
+      a.nav__button.nav__button_outlined(href="login.html") Войти
+      a.nav__button.nav__button_filled(href="register.html") Зарегестрироваться

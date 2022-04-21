@@ -1,13 +1,22 @@
 include ../text-field/text-field.pug
 
-mixin subscribe-text-field({label="", name="", placeholder='', type='text', value=""}={})
+mixin subscribe-text-field(arguments={})
+  -
+    const {
+      label='',
+      name='',
+      placeholder='',
+      type='text',
+      value=''
+    } = arguments
+
   +text-field({label})
     .subscribe-text-field
       form.subscribe-text-field__form
         input.subscribe-text-field__input(
-          type='email',
+          type="email",
           name=name,
           placeholder=placeholder
         )
-        button.subscribe-text-field__arrow(type='submit')
-          img(src='assets/images/subscribe-arrow.svg', alt='arrow')
+        button.subscribe-text-field__arrow(type="submit")
+          img(src="assets/images/subscribe-arrow.svg", alt="arrow")

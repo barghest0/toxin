@@ -8,10 +8,14 @@ mixin search-room-card({title='Найдём номера под ваши пож�
   +card
     .search-room-card 
       h1.search-room-card__title= title
-      form.search-room-card__search-form(action='search-room.html')
+      form.search-room-card__search-form(action="search-room.html")
         .search-room-card__date 
           +range-date({from:'Прибытие',to:'Выезд'})
         .search-room-card__guests 
-          +dropdown({label:'Гости',type:'guests', data:guestsDropdownData.clear})
+          +dropdown({
+              label:'Гости',
+              type:'guests',
+              data:guestsDropdownData.clear
+           })
         .search-room-card__button
           +button({text:'Подобрать номер', type:'filled', isLargest:true})

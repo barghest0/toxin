@@ -9,9 +9,17 @@ mixin login-card({title='Войти'}={})
       form.login-card__login-form
         .login-card__block 
           .login-card__block-field 
-            +default-text-field({placeholder:'Email', type:'email', name:'email'})
+            +default-text-field({
+              placeholder:'Email',
+              type:'email',
+              name:'email'
+            })
           .login-card__block-field 
-            +default-text-field({placeholder:'Пароль', type:'password', name:'password'})
+            +default-text-field({
+              placeholder:'Пароль',
+              type:'password',
+              name:'password'
+            })
         .login-card__button
           +button({text:'Войти', type:'filled', isLargest:true})
       .login-card__profile-action 

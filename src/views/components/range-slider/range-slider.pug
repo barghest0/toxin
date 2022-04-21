@@ -1,8 +1,10 @@
-mixin range-slider({startPrice=5000,endPrice=10000,label='Range Slider'}={})
+mixin range-slider({startPrice=5000, endPrice=10000, label='Range Slider'}={})
   .range-slider 
     h3.range-slider__label= label
       .range-slider__price 
-        .range-slider__start-price.js-range-slider__start-price #{ startPrice.toLocaleString() } ₽
+        .range-slider__start-price.js-range-slider__start-price
+          | #{ startPrice.toLocaleString() } ₽
         span.range-slider__price-delimiter -
-        .range-slider__end-price.js-range-slider__end-price #{ endPrice.toLocaleString() } ₽
+        .range-slider__end-price.js-range-slider__end-price
+          | #{ endPrice.toLocaleString() } ₽
     .slider.js-slider(data-first-value=startPrice, data-second-value=endPrice)

@@ -21,7 +21,7 @@
     transition: all 0.2s ease-in-out;
   }
 
-  &__circle{
+  &__circle {
     @include size(12px);
     border-radius: 50%;
     position: absolute;
@@ -31,13 +31,13 @@
     transition: transform 0.2s ease-in-out;
   }
 
-  &__input:checked + &__custom-input{
-    border: 1px solid $main-color;    
+  &__input:checked + &__custom-input {
+    border: 1px solid $main-color;
   }
 
   &__input:checked + &__custom-input &__circle {
     @include main-gradient-to-bottom;
-    transform: translate(22px,-50%);
+    transform: translate(22px, -50%);
   }
 
   &__title {

@@ -4,15 +4,26 @@ include ../rate/rate.pug
 include ../dropdown/dropdown.pug
 include ../button/button.pug
 
-mixin preview-room({roomNumber='',id='0',images=[],isLuxury=false,rate=0,price=0,reviews=''}={})
+mixin preview-room(arguments={})
+  -
+    const {
+      roomNumber='',
+      id='0',
+      images=[],
+      isLuxury=false,
+      rate=0,
+      price=0,
+      reviews=''
+    } = arguments
+
   +card('sm')
-    a.preview-room(href='room.html')
+    a.preview-room(href="room.html")
       .preview-room__carousel.swiper.js-swiper
         .preview-room__carousel-container.swiper-wrapper.js-swiper-wrapper
           each image in images
             img.preview-room__image.swiper-slide.js-swiper-slide(
               src=`assets/images/${image}`,
-              alt=''
+              alt=""
             )
         .swiper-pagination.js-swiper-pagination
         .swiper-button-next.js-swiper-button-next

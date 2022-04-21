@@ -1,0 +1,34 @@
+{
+  "dark": [
+    {
+      "hex": "#1F2041",
+      "text": "Dark Shade 100%",
+      "opacity": 100
+    },
+    {
+      "hex": "#1F2041",
+      "text": "Dark Shade 75%",
+      "opacity": 75
+    },
+    {
+      "hex": "#1F2041",
+      "text": "Dark Shade 50%",
+      "opacity": 50
+    },
+    {
+      "hex": "#1F2041",
+      "text": "Dark Shade 25%",
+      "opacity": 25
+    },
+    {
+      "hex": "#1F2041",
+      "text": "Dark Shade 5%",
+      "opacity": 5
+    }
+  ],
+
+  "main": [
+    { "hex": "#BC9CFF", "text": "Purple", "theme": "purple" },
+    { "hex": "#6FCF97", "text": "Green", "theme": "green" }
+  ]
+}

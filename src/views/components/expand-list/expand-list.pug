@@ -1,9 +1,11 @@
 include ../checkbox/checkbox.pug
 
 mixin expand-list({label='',state='',items={}}={})
+  - const classes = state === 'opened' ? 'open' : ''
+
   .expand-list
     h3.expand-list__label.js-expand-list__label= label
-    .expand-list__items(class=state === 'opened' ? 'open' : '')
+    .expand-list__items(class=classes)
       each item in items 
         - const { text, state, name } = item;
         .expand-list__item

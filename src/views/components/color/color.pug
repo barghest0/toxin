@@ -1,8 +1,12 @@
-mixin color({hex='#000', text='', opacity='100', color='dark'}={})
+mixin color({hex='#000', text='', opacity='100', theme='dark'}={})
+  -
+    const classes =
+     theme === 'dark' ? 
+     `color__box_opacity_${opacity}`:
+     `color__box_${theme}`;
+
   .color
-    .color__box(
-      class=color === 'dark' ? `color__box_opacity_${opacity}` : `color__box_${color}`
-    )
+    .color__box(class=classes)
     .color__description
       .color__title= text
       .color__hex= hex

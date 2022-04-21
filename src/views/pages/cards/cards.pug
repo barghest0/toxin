@@ -11,10 +11,13 @@ block page
   include ../../components/datepicker/datepicker.pug
   include ../../components/preview-room/preview-room.pug
 
-  - const roomsData = require('../../../data/preview-rooms-data').data;
-  - const bookingData = require('../../../data/booking-data').data;
-  - const guestsDropdownData = require('../../../data/dropdown-guests-data').withoutChildren;
-  - bookingData.guests = guestsDropdownData;
+  -
+    const roomsData = require("../../../data/preview-rooms-data").data;
+    const bookingData = require("../../../data/booking-data").data;
+    const guestsDropdownData = 
+       require("../../../data/dropdown-guests-data").withoutChildren;
+    bookingData.guests = guestsDropdownData;
+
   .cards
     .container
       .cards__inner
@@ -30,7 +33,11 @@ block page
             +login-card
         .cards__column
           .cards__datepicker.datepicker-container.js-datepicker-container
-            +datepicker({isInline:true, dateFrom:'08.19.2022', dateTo:'08.23.2022'})
+            +datepicker({
+              isInline:true, 
+              dateFrom:'08.19.2022', 
+              dateTo:'08.23.2022'
+            })
           each roomData, key in roomsData
             if key <= 1
               .cards__preview-room 

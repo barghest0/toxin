@@ -1,9 +1,9 @@
-mixin toggle({text='',name='offers',state='unchecked'}={})
+mixin toggle({text='', name='offers', state='unchecked'}={})
   label.toggle
     if state === 'checked'
-      input.toggle__input(type='checkbox', name=name, checked)
+      input.toggle__input(type="checkbox", name=name, checked)
     else
-      input.toggle__input(type='checkbox', name=name)
+      input.toggle__input(type="checkbox", name=name)
     .toggle__custom-input
       span.toggle__circle
     .toggle__title= text

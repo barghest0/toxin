@@ -1,9 +1,9 @@
 mixin like({name='', count=0,state=''}={})
+  - const classes = state === 'checked' ? 'active' : '';
+
   label.like
     if state === 'checked'
-      input.like__input(type='checkbox', name=name, checked)
+      input.like__input(type="checkbox", name=name, checked)
     else
-      input.like__input(type='checkbox', name=name)
-    span.like__custom-input.js-like__custom-input(
-      class=state === 'checked' ? 'active' : ''
-    )= count
+      input.like__input(type="checkbox", name=name)
+    span.like__custom-input.js-like__custom-input(class=classes)= count

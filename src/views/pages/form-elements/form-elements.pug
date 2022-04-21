@@ -24,44 +24,87 @@ block page
   include ../../components/review-list/review-list.pug
   include ../../components/feedback/feedback.pug
 
-  - const guestDropdownData = require('../../../data/dropdown-guests-data');
-  - const checkboxData = require('../../../data/checkbox-list-data');
-  - const apartmentsDropdownData = require('../../../data/dropdown-apartments-data').data;
-  - const expandListData = require('../../../data/expand-list-data').data;
-  - const reviewListData = require('../../../data/review-list-data').data;
-  - const bulletListData = require('../../../data/bullet-list').data;
-  - const feedbackData = require('../../../data/feedback-data');
-  - const genderData = require('../../../data/gender-data').data;
+  -
+     const guestDropdownData = require('../../../data/dropdown-guests-data');
+     const checkboxData = require('../../../data/checkbox-list-data');
+     const apartmentsDropdownData = 
+      require('../../../data/dropdown-apartments-data').data;
+     const expandListData = require('../../../data/expand-list-data').data;
+     const reviewListData = require('../../../data/review-list-data').data;
+     const bulletListData = require('../../../data/bullet-list').data;
+     const feedbackData = require('../../../data/feedback-data');
+     const genderData = require('../../../data/gender-data').data;
+
   .form-elements
     .container
       section.form-elements__inputs
         .form-elements__fields
           .form-elements__text-field
-            +default-text-field({label:'text field', subLabel:'default', name:"email", placeholder:"Email", type:'email'})
+            +default-text-field({
+              label:'text field',
+              subLabel:'default',
+              name:'email',
+              placeholder:'Email',
+              type:'email'
+            })
           .form-elements__text-field
-            +default-text-field({label:'text field', subLabel:'hover / focus', name:"email", placeholder:"Email", type:'email', value:'This is pretty awesome'})
+            +default-text-field({
+              label:'text field',
+              subLabel:'hover / focus',
+              name:'email',
+              placeholder:'Email',
+              type:'email',
+              value:'This is pretty awesome'
+            })
           .form-elements__dropdown
-            +dropdown({label:'dropdown', type:'guests', data:guestDropdownData.clear})
+            +dropdown({
+              label:'dropdown',
+              type:'guests',
+              data:guestDropdownData.clear
+            })
           .form-elements__masked-text-field
-            +masked-text-field({label:'masked text field', name:"birthday", placeholder:"ДД.ММ.ГГГГ", type:'text'})
+            +masked-text-field({
+              label:'masked text field',
+              name:'birthday',
+              placeholder:'ДД.ММ.ГГГГ',
+              type:'text'
+            })
           .form-elements__range-date
             +range-date({from:'date dropdown', to:'date dropdown'})
           .form-elements__filter-date
-            +filter-date({label:'filter date dropdown', dateFrom:'08.19.2022', dateTo:'08.23.2022'})
+            +filter-date({
+              label:'filter date dropdown',
+              dateFrom:'08.19.2022',
+              dateTo:'08.23.2022'
+            })
           .form-elements__subscribe-field
-            +subscribe-text-field({label:'subscription text field', placeholder:'Email',name:'email'})
+            +subscribe-text-field({
+              label:'subscription text field',
+              placeholder:'Email',
+              name:'email'
+            })
 
         section.form-elements__selections
           .form-elements__checkboxes
-            +checkbox-list({label:'checkbox buttons', items:checkboxData.default })
+            +checkbox-list({
+              label:'checkbox buttons',
+              items:checkboxData.default 
+            })
           .form-elements__radio
             h3.form-elements__selection-label radio button
             +radio-list({items:genderData})
           .form-elements__toggle
             h3.form-elements__selection-label toggle
             .form-elements__toggle-column
-              +toggle({text:'Получать спецпредложения',name:'toggle-offers',state:'checked'})
-              +toggle({text:'Получать спецпредложения',name:'toggle-offers'})
+              +toggle({
+                text:'Получать спецпредложения',
+                name:'toggle-offers',
+                state:'checked'
+              })
+              +toggle({
+                text:'Получать спецпредложения',
+                name:'toggle-offers'
+              })
           .form-elements__like
             h3.form-elements__selection-label like button
             .form-elements__like-row
@@ -94,19 +137,49 @@ block page
 
       section.form-elements__dropdowns
         .form-elements__dropdown.form-elements__dropdown_apartments
-          +dropdown({label:'dropdown',subLabel:'default',size:'md', type:'apartments', data:apartmentsDropdownData})
+          +dropdown({
+            label:'dropdown',
+            subLabel:'default',
+            size:'md',
+            type:'apartments',
+            data:apartmentsDropdownData
+          })
         .form-elements__dropdown.form-elements__dropdown_apartments
-          +dropdown({label:'dropdown',subLabel:'expanded',size:'md', type:'apartments', data:apartmentsDropdownData, state:'opened'})
+          +dropdown({
+            label:'dropdown',
+            subLabel:'expanded',
+            size:'md',
+            type:'apartments',
+            data:apartmentsDropdownData,
+            state:'opened'
+          })
         .form-elements__dropdown.form-elements__dropdown_guests.form-elements__dropdown_cleared
-          +dropdown({label:'dropdown',type:'guests', data:guestDropdownData.clear, state:'opened'})
+          +dropdown({
+            label:'dropdown',
+            type:'guests',
+            data:guestDropdownData.clear,
+            state:'opened'
+          })
         .form-elements__dropdown.form-elements__dropdown_guests
-          +dropdown({label:'dropdown',type:'guests', data:guestDropdownData.withoutChildren, state:'opened'})
+          +dropdown({
+            label:'dropdown',
+            type:'guests',
+            data:guestDropdownData.withoutChildren,
+            state:'opened'
+          })
       section.form-elements__lists
         .form-elements__expand-checkbox
           +expand-list({label:'expandable checkbox list', items:expandListData})
-          +expand-list({label:'expandable checkbox list',state:'opened', items:expandListData})
+            +expand-list({
+              label:'expandable checkbox list',
+              state:'opened',
+              items:expandListData
+            })
         .form-elements__rich-checkbox
-          +rich-checkbox-list({label:'rich checkbox buttons', items:checkboxData.rich})
+          +rich-checkbox-list({
+            label:'rich checkbox buttons',
+            items:checkboxData.rich
+          })
         .form-elements__bullet-list
           h3.form-elements__list-label bullet list
           +bullet-list({items:bulletListData})

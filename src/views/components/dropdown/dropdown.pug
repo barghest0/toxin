@@ -1,13 +1,25 @@
 include ../button/button.pug
 
-mixin dropdown({label='', subLabel='',size='lg', type='guests', data={},state=''}={})
+mixin dropdown(arguments={})
+  -
+    const {
+      label='',
+      subLabel='',
+      size='lg',
+      type='guest',
+      data={}, 
+      state=''
+    } = arguments
+
+  - const classes = state === 'opened' ? 'open' : '';
+
   .dropdown
     .dropdown__labels
       h3.dropdown__label= label
       if subLabel
         h3.dropdown__sub-label= subLabel
     .dropdown__container.dropdown-container.js-dropdown-container(
-      class=state === 'opened' ? 'open' : '',
+      class=classes,
       data-type=type
     )
       .dropdown__field.js-dropdown__field

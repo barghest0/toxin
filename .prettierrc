@@ -5,5 +5,16 @@
   "printWidth": 80,
   "tabWidth": 2,
   "arrowParens": "avoid",
-  "useTabs": false
+  "useTabs": false,
+  "bracketSpacing": true,
+  "overrides": [
+    {
+      "files": "*.pug",
+      "options": {
+        "parser": "pug",
+        "singleQuote": false,
+        "printWidth": 80
+      }
+    }
+  ]
 }

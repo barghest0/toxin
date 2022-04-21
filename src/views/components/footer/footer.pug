@@ -2,95 +2,104 @@ include ../logo/logo.pug
 include ../subscribe-text-field/subscribe-text-field.pug
 
 mixin footer({isSmall=false}={})
-  footer.footer(class=isSmall ? 'footer_hidden' : null)
+  - const classes = isSmall ? 'footer_hidden' : ''
+  - const smClasses = isSmall ? 'footer_sm-inline' : ''
+  footer.footer(class=classes)
     .container
       .footer__top
         .footer__company
           .footer__company-logo
             +logo
-          .footer__company-description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+          .footer__company-description 
+            | Бронирование номеров в лучшем отеле 2019 года 
+            | по версии ассоциации «Отельные взгляды»
         .footer__column 
           h3.footer__column-title Навигация
-          a.footer__column-item(href='/about.html') О нас
-          a.footer__column-item(href='/news.html') Новости
-          a.footer__column-item(href='/support.html') Служба поддержки
-          a.footer__column-item(href='/services.html') Услуги
+          a.footer__column-item(href="/about.html") О нас
+          a.footer__column-item(href="/news.html") Новости
+          a.footer__column-item(href="/support.html") Служба поддержки
+          a.footer__column-item(href="/services.html") Услуги
         .footer__column
           h3.footer__column-title О нас
-          a.footer__column-item(href='/aboutService.html') О сервисе
-          a.footer__column-item(href='/ourTeam.html') Наша команда
-          a.footer__column-item(href='/jobs.html') Вакансии
-          a.footer__column-item(href='/investors.html') Инвесторы
+          a.footer__column-item(href="/aboutService.html") О сервисе
+          a.footer__column-item(href="/ourTeam.html") Наша команда
+          a.footer__column-item(href="/jobs.html") Вакансии
+          a.footer__column-item(href="/investors.html") Инвесторы
         .footer__column
           h3.footer__column-title Служба поддержки
-          a.footer__column-item(href='/agreements.html') Соглашения
-          a.footer__column-item(href='/communities.html') Сообщества
-          a.footer__column-item(href='/connection.html') Связь с нами
+          a.footer__column-item(href="/agreements.html") Соглашения
+          a.footer__column-item(href="/communities.html") Сообщества
+          a.footer__column-item(href="/connection.html") Связь с нами
         .footer__column.footer__column_sm
           h3.footer__column-title Подписка
-          .footer__column-description Получайте специальные предложения и новости сервиса
-          +subscribe-text-field({id:'subscribe-field',name:'email',placeholder:'Email'})
+          .footer__column-description
+            | Получайте специальные предложения и новости сервиса
+          +subscribe-text-field({
+            id:'subscribe-field',
+            name:'email',
+            placeholder:'Email'
+           })
     hr.footer__line
     .container
       .footer__bottom
         .footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
         .footer__messengers
           a.footer__messenger-item(
-            href='https://twitter.com/?',
-            target='_blank',
-            rel='noopener noreferrer'
+            href="https://twitter.com/?",
+            target="_blank",
+            rel="noopener noreferrer"
           )
             img.footer__messenger-image(
-              src='assets/images/twitter.svg',
-              alt='twitter'
+              src="assets/images/twitter.svg",
+              alt="twitter"
             )
           a.footer__messenger-item(
-            href='https://www.facebook.com/',
-            target='_blank',
-            rel='noopener noreferrer'
+            href="https://www.facebook.com/",
+            target="_blank",
+            rel="noopener noreferrer"
           )
             img.footer__messenger-image(
-              src='assets/images/facebook.svg',
-              alt='facebook'
+              src="assets/images/facebook.svg",
+              alt="facebook"
             )
           a.footer__messenger-item(
-            href='https://www.instagram.com/',
-            target='_blank',
-            rel='noopener noreferrer'
+            href="https://www.instagram.com/",
+            target="_blank",
+            rel="noopener noreferrer"
           )
             img.footer__messenger-image(
-              src='assets/images/instagram.svg',
-              alt='instagram'
+              src="assets/images/instagram.svg",
+              alt="instagram"
             )
-  footer.footer.footer_sm(class=isSmall ? 'footer_sm-inline' : '')
+  footer.footer.footer_sm(class=smClasses)
     .footer__company-logo
       +logo
     .footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
     .footer__messengers
       a.footer__messenger-item(
-        href='https://twitter.com/?',
-        target='_blank',
-        rel='noopener noreferrer'
+        href="https://twitter.com/?",
+        target="_blank",
+        rel="noopener noreferrer"
       )
         img.footer__messenger-image(
-          src='assets/images/twitter.svg',
-          alt='twitter'
+          src="assets/images/twitter.svg",
+          alt="twitter"
         )
       a.footer__messenger-item(
-        href='https://www.facebook.com/',
-        target='_blank',
-        rel='noopener noreferrer'
+        href="https://www.facebook.com/",
+        target="_blank",
+        rel="noopener noreferrer"
       )
         img.footer__messenger-image(
-          src='assets/images/facebook.svg',
-          alt='facebook'
+          src="assets/images/facebook.svg",
+          alt="facebook"
         )
       a.footer__messenger-item(
-        href='https://www.instagram.com/',
-        target='_blank',
-        rel='noopener noreferrer'
+        href="https://www.instagram.com/",
+        target="_blank",
+        rel="noopener noreferrer"
       )
         img.footer__messenger-image(
-          src='assets/images/instagram.svg',
-          alt='instagram'
+          src="assets/images/instagram.svg",
+          alt="instagram"
         )

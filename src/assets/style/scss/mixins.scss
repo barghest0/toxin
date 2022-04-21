@@ -40,7 +40,10 @@
   line-height: 1.1;
 }
 
-@mixin main-gradient-to-bottom($color: $main-color, $second-color: $gradient-main-color) {
+@mixin main-gradient-to-bottom(
+  $color: $main-color,
+  $second-color: $gradient-main-color
+) {
   background: linear-gradient(to bottom, $color, $second-color);
 }
 
