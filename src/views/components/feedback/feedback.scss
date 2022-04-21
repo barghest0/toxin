@@ -15,7 +15,7 @@
       @include size(48px);
       border-radius: 50%;
       border: 2px solid $white;
-      box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.1);
+      box-shadow: 0 10px 20px rgba($color: $dark-shade-100, $alpha: 0.1);
       margin-right: 9px;
     }
 

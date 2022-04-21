@@ -195,4 +195,18 @@
       }
     }
   }
+
+  &_md {
+    padding: 10px;
+  }
+
+  &_md &--navigation {
+    margin-bottom: 10px;
+  }
+
+  &_md &-body--cells.-days- {
+    width: 100%;
+    grid-auto-rows: 33px;
+    grid-auto-columns: 33px;
+  }
 }

@@ -38,9 +38,9 @@
       }
     }
 
-    &_profile {
+    &_separated {
       padding-left: 20px;
-      border-left: 1px solid rgba(#1f2041, 0.1);
+      border-left: 1px solid rgba($dark-shade-100, 0.1);
     }
 
     &:hover {
@@ -150,7 +150,7 @@
     }
   }
 
-  &_burger {
+  &_folded {
     height: inherit;
     z-index: inherit;
     background-color: $white;
@@ -161,16 +161,16 @@
     row-gap: 20px;
     padding: 10px;
     border-radius: 0px 0px 0px 7px;
-    box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
+    box-shadow: 0 10px 20px rgba($color: $dark-shade-100, $alpha: 0.05);
   }
 
-  &_burger &__item {
+  &_folded &__item {
     display: flex;
     justify-content: center;
     margin-right: 0;
     width: 300px;
 
-    &_profile {
+    &_separated {
       border-right: none;
       padding-left: 0;
     }

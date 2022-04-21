@@ -13,6 +13,10 @@
     }
   }
 
+  &__label.open + &__items {
+    max-height: 100%;
+  }
+
   &__item {
     margin-bottom: 10px;
   }
@@ -20,9 +24,5 @@
   &__items {
     max-height: 0;
     overflow: hidden;
-
-    &.open {
-      max-height: 100%;
-    }
   }
 }

@@ -34,6 +34,7 @@ class DatepickerFacade {
       buttons: this.buttons,
       isMobile: true,
       dateFormat: 'MM.dd.yyyy',
+      classes: this.$dateTo ? 'air-datepicker_md' : '',
     };
     if (this.datepicker.dataset.dateFrom && this.datepicker.dataset.dateTo) {
       this.setSelectedDates();

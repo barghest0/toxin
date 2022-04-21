@@ -22,18 +22,4 @@
   &.open &__field::after {
     transform: rotate(135deg);
   }
-
-  &__datepicker .air-datepicker {
-    padding: 10px;
-  }
-
-  &__datepicker .air-datepicker--navigation {
-    margin-bottom: 10px;
-  }
-
-  &__datepicker .air-datepicker-body--cells.-days- {
-    width: 100%;
-    grid-auto-rows: 33px;
-    grid-auto-columns: 33px;
-  }
 }

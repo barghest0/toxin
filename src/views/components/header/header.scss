@@ -44,11 +44,10 @@
     }
 
     &-line {
-      position: absolute;
       content: '';
+      position: absolute;
       @include size(30px, 3px);
       position: absolute;
-      content: '';
       @include main-gradient-to-bottom;
       border-radius: 5px;
       top: 5px;
