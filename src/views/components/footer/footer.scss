@@ -7,7 +7,11 @@
   margin: 0 auto;
   @include shadow;
 
-  &_small {
+  &_hidden {
+    display: none;
+  }
+
+  &_sm {
     @include size(100%, 365px);
     display: none;
     border: none;
@@ -24,7 +28,7 @@
     color: $dark-shade-75;
   }
 
-  &_small &__copyright {
+  &_sm &__copyright {
     text-align: center;
     margin-bottom: 25px;
   }
@@ -36,7 +40,7 @@
       text-align: center;
     }
 
-    &_small {
+    &_sm {
       display: flex;
       justify-content: center;
       align-items: center;
