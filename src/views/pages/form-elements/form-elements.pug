@@ -136,7 +136,7 @@ block page
             +pagination
 
       section.form-elements__dropdowns
-        .form-elements__dropdown.form-elements__dropdown_apartments
+        .form-elements__dropdown.form-elements__dropdown_sm
           +dropdown({
             label:'dropdown',
             subLabel:'default',
@@ -144,7 +144,7 @@ block page
             type:'apartments',
             data:apartmentsDropdownData
           })
-        .form-elements__dropdown.form-elements__dropdown_apartments
+        .form-elements__dropdown.form-elements__dropdown_sm
           +dropdown({
             label:'dropdown',
             subLabel:'expanded',
@@ -153,14 +153,14 @@ block page
             data:apartmentsDropdownData,
             state:'opened'
           })
-        .form-elements__dropdown.form-elements__dropdown_guests.form-elements__dropdown_cleared
+        .form-elements__dropdown.form-elements__dropdown_lg
           +dropdown({
             label:'dropdown',
             type:'guests',
             data:guestDropdownData.clear,
             state:'opened'
           })
-        .form-elements__dropdown.form-elements__dropdown_guests
+        .form-elements__dropdown.form-elements__dropdown_lg
           +dropdown({
             label:'dropdown',
             type:'guests',
@@ -170,7 +170,7 @@ block page
       section.form-elements__lists
         .form-elements__expand-checkbox
           +expand-list({label:'expandable checkbox list', items:expandListData})
-            +expand-list({
+          +expand-list({
               label:'expandable checkbox list',
               state:'opened',
               items:expandListData

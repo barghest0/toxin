@@ -46,7 +46,10 @@ block page
               .search-room__slider-description
                | Стоимость за сутки пребывания в номере
             .search-room__filter 
-              +checkbox-list({label:'Правила дома', items:checkboxData.default})
+              +checkbox-list({
+                  label:'Правила дома', 
+                  items:checkboxData.default
+                })
             .search-room__filter 
               +rich-checkbox-list({
                 label:'Доступность',

@@ -172,6 +172,7 @@
     margin-bottom: 160px;
     display: grid;
     grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
+
     @include sm-desktop {
       row-gap: 50px;
       margin: 0 auto;
@@ -187,24 +188,15 @@
   &__dropdown {
     margin-bottom: 20px;
 
-    &_apartments {
+    &_sm {
       grid-column-start: 1;
     }
 
-    &_guests {
+    &_lg {
       grid-row: 1;
-      grid-column-start: 5;
-      @include sm-desktop {
-        grid-column-start: 1;
-        grid-row-start: 2;
-      }
-    }
-
-    &_cleared {
       grid-column-start: 3;
-      @include sm-desktop {
-        grid-column-start: 1;
-        grid-row-start: 3;
+      &:nth-child(4) {
+        grid-column-start: 5;
       }
     }
   }

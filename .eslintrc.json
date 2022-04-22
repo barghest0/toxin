@@ -25,6 +25,7 @@
   },
   "plugins": ["prettier", "pug", "fsd"],
   "rules": {
-    "prettier/prettier": ["error"]
+    "prettier/prettier": ["error"],
+    "template-curly-spacing": ["error", "never"]
   }
 }
