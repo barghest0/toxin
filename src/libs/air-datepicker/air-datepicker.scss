@@ -66,6 +66,8 @@
   }
 
   &-body {
+    max-width: 280px;
+    margin: 0 auto;
     &--day-names {
       margin: 0;
       grid-auto-rows: 40px;
@@ -80,6 +82,9 @@
     }
 
     &--cells {
+      max-height: 200px;
+      max-width: 280px;
+      margin: 0 auto;
       &.-days- {
         grid-auto-rows: 40px;
         grid-auto-columns: 40px;
