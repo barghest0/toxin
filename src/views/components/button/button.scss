@@ -1,30 +1,8 @@
 .button {
   @include size(100%);
-  font-weight: bold;
-  border: none;
-  border-radius: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  cursor: pointer;
-  line-height: 1.2;
-  font-size: $second-font-size;
-  text-transform: uppercase;
-  transition: 0.2s ease-in-out;
-  font-family: inherit;
 
   &_filled {
-    @include main-gradient-to-bottom;
-    color: $white;
-
-    &:hover {
-      opacity: 0.5;
-    }
-
-    &:active {
-      opacity: 1;
-    }
+    @include filled-button;
 
     &.hovered {
       opacity: 0.5;
@@ -32,17 +10,7 @@
   }
 
   &_no-bordered {
-    @include size(inherit);
-    color: $main-color;
-    background-color: transparent;
-
-    &:hover {
-      color: $dark-shade-50;
-    }
-
-    &:active {
-      color: $main-color;
-    }
+    @include no-bordered-button;
 
     &.hovered {
       color: $dark-shade-50;
@@ -50,38 +18,7 @@
   }
 
   &_outlined {
-    color: $main-color;
-    position: relative;
-    border: 2px solid transparent;
-    border-radius: 80px;
-    background-image: linear-gradient(white, white),
-      linear-gradient(to bottom, $main-color, $gradient-main-color);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    transition: all 0.1s linear;
-
-    &:hover {
-      opacity: 0.8;
-      border: 2px solid transparent;
-      background-origin: border-box;
-      background-clip: content-box, border-box;
-      background-image: linear-gradient(white, white),
-        linear-gradient(
-          to bottom,
-          rgba($main-color, 0.5),
-          rgba($gradient-main-color, 0.5)
-        );
-    }
-
-    &:active {
-      opacity: 1;
-      background-image: linear-gradient(white, white),
-        linear-gradient(
-          to bottom,
-          rgba($main-color, 1),
-          rgba($gradient-main-color, 1)
-        );
-    }
+    @include outlined-button;
 
     &.hovered {
       opacity: 0.8;
