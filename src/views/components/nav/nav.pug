@@ -5,12 +5,20 @@ mixin nav({state='no-authorized',name='',burger=false}={})
 
   nav.nav(class=classes)
     a.nav__item(href="/mock-address/change-me") О нас
-    .nav__item.nav__item_list.nav__item_services Услуги
+    .nav__item.nav__item_folded Услуги
+      .nav__list 
+        a.nav__list-item(href="/mock-address/change-me") Услуги
+        a.nav__list-item(href="/mock-address/change-me") Услуги
+        a.nav__list-item(href="/mock-address/change-me") Услуги
     a.nav__item(href="/mock-address/change-me") Вакансии
     a.nav__item(href="/mock-address/change-me") Новости
-    .nav__item.nav__item_list.nav__item_agreements Соглашения
+    .nav__item.nav__item_folded Соглашения
+      .nav__list
+        a.nav__list-item(href="/mock-address/change-me") Соглашения
+        a.nav__list-item(href="/mock-address/change-me") Соглашения
+        a.nav__list-item(href="/mock-address/change-me") Соглашения
     if state === 'authorized'
       a.nav__item.nav__item_separated(href="/mock-address/change-me")= name
     else
-      a.nav__button.nav__button_outlined(href="login.html") Войти
-      a.nav__button.nav__button_filled(href="register.html") Зарегестрироваться
+      a.nav__button.nav__button_outlined(href="login.html" ) Войти
+      a.nav__button.nav__button_filled(href="register.html" ) Зарегистрироваться

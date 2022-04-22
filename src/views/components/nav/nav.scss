@@ -6,6 +6,9 @@
   column-gap: 20px;
   color: $dark-shade-75;
 
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+
   @include sm-desktop {
     column-gap: 15px;
   }
@@ -21,7 +24,7 @@
     transition: all 0.2s linear;
     color: $dark-shade-50;
 
-    &_list {
+    &_folded {
       padding-left: 0;
       display: flex;
       justify-content: center;
@@ -32,6 +35,8 @@
       }
 
       &.open {
+        color: $dark-shade-75;
+
         &::after {
           transform: rotate(135deg);
         }
@@ -44,7 +49,7 @@
     }
 
     &:hover {
-      font-weight: 700;
+      color: $dark-shade-75;
     }
   }
 
@@ -55,18 +60,21 @@
     width: 150px;
     background-color: $white;
     font-weight: normal;
-    box-shadow: 0 10px 20px rgba($color: #1f2041, $alpha: 0.05);
+    @include shadow;
     flex-direction: column;
     z-index: 100;
 
     &-item {
       text-decoration: none;
-      color: inherit;
+      color: $dark-shade-50;
       text-align: center;
       padding: 15px 0px;
+      font-weight: normal;
+      transition: all 0.2s linear;
 
       &:hover {
         background-color: $dark-shade-5;
+        color: $dark-shade-100;
       }
 
       &:not(:last-child) {
@@ -83,11 +91,13 @@
     &_outlined {
       @include size(87px, 34px);
       @include outlined-button;
+      margin: 0 auto;
     }
 
     &_filled {
       @include size(196px, 34px);
       @include filled-button;
+      margin: 0 auto;
     }
   }
 
@@ -102,7 +112,7 @@
     row-gap: 20px;
     padding: 10px;
     border-radius: 0px 0px 0px 7px;
-    box-shadow: 0 10px 20px rgba($color: $dark-shade-100, $alpha: 0.05);
+    @include shadow;
   }
 
   &_folded &__item {

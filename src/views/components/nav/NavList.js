@@ -1,9 +1,4 @@
-import {
-  LIST_SELECTOR,
-  OPENED_CLASS,
-  LIST_CLASS,
-  LIST_ITEM_CLASS,
-} from './constants';
+import { LIST_SELECTOR, OPENED_CLASS } from './constants';
 
 class NavList {
   constructor($container, items) {
@@ -13,22 +8,7 @@ class NavList {
   }
 
   init() {
-    this.createList();
-    this.createLinks();
     this.attachListeners();
-  }
-
-  createList() {
-    this.$container.append(`<div class=${LIST_CLASS}><div>`);
-    this.list = this.$container.find(LIST_SELECTOR);
-  }
-
-  createLinks() {
-    this.items.forEach(item => {
-      this.list.append(
-        `<a href="/mock-addres/change-me" class=${LIST_ITEM_CLASS}>${item.name}</a>`,
-      );
-    });
   }
 
   attachListeners() {
