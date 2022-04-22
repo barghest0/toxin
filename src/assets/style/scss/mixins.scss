@@ -5,6 +5,15 @@
   height: $height;
 }
 
+@mixin container() {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  @include phone {
+    padding: 0 10px;
+  }
+}
+
 @mixin block-label {
   color: $dark-shade-100;
   font-weight: bold;

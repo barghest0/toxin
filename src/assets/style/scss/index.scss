@@ -44,10 +44,5 @@ html {
 }
 
 .container {
-  max-width: 1200px;
-  padding: 0 20px;
-  margin: 0 auto;
-  @include phone {
-    padding: 0 10px;
-  }
+  @include container;
 }

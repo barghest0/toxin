@@ -11,6 +11,10 @@
     display: none;
   }
 
+  &__container {
+    @include container;
+  }
+
   &_sm {
     @include size(100%, 365px);
     display: none;

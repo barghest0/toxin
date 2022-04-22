@@ -3,7 +3,7 @@ include ../nav/nav.pug
 
 mixin header({state='no-authorized',name=''}={})
   header.header(class=`header_${state}`)
-    .container
+    .header__container
       .header__inner(class=`header__inner_${state}`)
         .header__logo
           +logo
