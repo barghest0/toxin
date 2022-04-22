@@ -5,7 +5,7 @@ import {
   LIST_ITEM_CLASS,
 } from './constants';
 
-class NavListModule {
+class NavList {
   constructor($container, items) {
     this.$container = $container;
     this.items = items;
@@ -50,4 +50,4 @@ class NavListModule {
     }
   }
 }
-export default NavListModule;
+export default NavList;

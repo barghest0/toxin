@@ -1,4 +1,4 @@
-import Pagination from './PaginationModule';
+import Pagination from './Pagination';
 import { PAGINATION_SELECTOR, QUANTITY_PAGES } from './constants';
 
 $(PAGINATION_SELECTOR).each(

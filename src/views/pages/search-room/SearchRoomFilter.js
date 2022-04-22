@@ -4,7 +4,7 @@ import {
   OPENED_CLASS,
 } from './constants';
 
-class FilterButton {
+class SearchRoomFilter {
   constructor($button) {
     this.$button = $button;
     this.init();
@@ -44,4 +44,4 @@ class FilterButton {
     this.$background.toggleClass(OPENED_CLASS);
   }
 }
-export default FilterButton;
+export default SearchRoomFilter;

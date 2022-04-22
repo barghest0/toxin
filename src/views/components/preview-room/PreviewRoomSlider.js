@@ -1,6 +1,6 @@
 import SwiperFacade from '../../../libs/swiper/SwiperFacade';
 
-class Slider {
+class PreviewRoomSlider {
   constructor(container) {
     this.container = container;
     this.init();
@@ -11,4 +11,4 @@ class Slider {
   }
 }
 
-export default Slider;
+export default PreviewRoomSlider;

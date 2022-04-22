@@ -19,7 +19,7 @@ const getEntries = pages => {
   const htmlPages = [];
 
   pages.forEach(name => {
-    entries[name] = `${PAGES_DIR}/${name}/${name}.js`;
+    entries[name] = `${PAGES_DIR}/${name}/index.js`;
     htmlPages.push(
       new HtmlWebpackPlugin({
         filename: `${name}.html`,

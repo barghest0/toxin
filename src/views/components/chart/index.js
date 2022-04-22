@@ -1,4 +1,4 @@
-import Chart from './ChartModule';
+import Chart from './Chart';
 import { CONTAINER_SELECTOR } from './constants';
 
 $(CONTAINER_SELECTOR).each(
