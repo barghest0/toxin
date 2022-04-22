@@ -1,4 +1,14 @@
 import ChartFacade from '../../../libs/chart/ChartFacade';
+import {
+  DISAPPOINT_END_COLOR,
+  DISAPPOINT_START_COLOR,
+  GOOD_END_COLOR,
+  GOOD_START_COLOR,
+  GREAT_END_COLOR,
+  GREAT_START_COLOR,
+  SATISFACTORY_END_COLOR,
+  SATISFACTORY_START_COLOR,
+} from './constants';
 
 class Chart {
   constructor(container, votes, labels) {
@@ -26,8 +36,8 @@ class Chart {
       0,
       200,
     );
-    this.disappointColorGradient.addColorStop(0, '#909090');
-    this.disappointColorGradient.addColorStop(1, '#3D4975');
+    this.disappointColorGradient.addColorStop(0, DISAPPOINT_START_COLOR);
+    this.disappointColorGradient.addColorStop(1, DISAPPOINT_END_COLOR);
 
     this.satisfactoryColorGradient = this.context.createLinearGradient(
       0,
@@ -35,16 +45,16 @@ class Chart {
       0,
       200,
     );
-    this.satisfactoryColorGradient.addColorStop(0, '#BC9CFF');
-    this.satisfactoryColorGradient.addColorStop(1, '#8BA4F9');
+    this.satisfactoryColorGradient.addColorStop(0, SATISFACTORY_START_COLOR);
+    this.satisfactoryColorGradient.addColorStop(1, SATISFACTORY_END_COLOR);
 
     this.goodColorGradient = this.context.createLinearGradient(0, 0, 0, 200);
-    this.goodColorGradient.addColorStop(0, '#6FCF97');
-    this.goodColorGradient.addColorStop(1, '#66D2EA');
+    this.goodColorGradient.addColorStop(0, GOOD_START_COLOR);
+    this.goodColorGradient.addColorStop(1, GOOD_END_COLOR);
 
     this.greatColorGradient = this.context.createLinearGradient(0, 0, 0, 200);
-    this.greatColorGradient.addColorStop(0, '#FFE39C');
-    this.greatColorGradient.addColorStop(1, '#FFBA9C');
+    this.greatColorGradient.addColorStop(0, GREAT_START_COLOR);
+    this.greatColorGradient.addColorStop(1, GREAT_END_COLOR);
 
     this.gradients = [
       this.disappointColorGradient,
