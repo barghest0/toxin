@@ -198,6 +198,15 @@
       &:nth-child(4) {
         grid-column-start: 5;
       }
+      @include sm-desktop {
+        grid-row: auto;
+        grid-column: auto;
+
+        &:nth-child(4) {
+          grid-row: auto;
+          grid-column: auto;
+        }
+      }
     }
   }
 
