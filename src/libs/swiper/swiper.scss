@@ -5,6 +5,7 @@
     bottom: 10px !important;
     text-align: right;
     padding-right: 15px;
+    z-index: 200;
 
     &-bullet {
       border: 1.5px solid $white;
@@ -16,6 +17,22 @@
         background-color: $white;
       }
     }
+  }
+
+  &-button-next,
+  &-button-prev {
+    height: 100%;
+    top: 20px;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 40px;
+  }
+
+  &-button-next {
+    right: 0;
+    left: auto;
+    padding-right: 20px;
+    padding-left: 40px;
   }
 
   &-button-next:after,
