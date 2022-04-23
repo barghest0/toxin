@@ -1,2 +1,2 @@
-import './images/avatar.png';
-import './images/avatar2.png';
+import './images/avatar.jpg';
+import './images/avatar2.jpg';
