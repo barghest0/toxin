@@ -72,18 +72,22 @@ mixin booking-card(arguments={})
         .booking-card__service= serviceText
           img(
             src="assets/images/services.svg",
+            class="booking-card__tip"
             weight=20,
             height=20,
             alt="true"
           )
+          .booking-card__tip-text Подсказка
         .booking-card__service-price= servicePriceText
         .booking-card__add-service= addServiceText
           img(
             src="assets/images/services.svg",
+            class="booking-card__tip"
             weight=20,
             height=20,
             alt="services"
           )
+          .booking-card__tip-text Подсказка
         .booking-card__add-service-price= addServicePriceText
       .booking-card__final-cost 
         .booking-card__final-cost-text Итого

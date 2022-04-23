@@ -22,6 +22,7 @@
     grid-template-columns: minmax(195px, 240px) minmax(60px, 1fr);
     grid-row-gap: 10px;
     margin-bottom: 34px;
+    cursor: default;
   }
 
   &__day {
@@ -37,6 +38,7 @@
     @include body-text;
     display: flex;
     justify-content: space-between;
+    position: relative;
 
     &-price {
       @include body-text;
@@ -46,12 +48,37 @@
 
   &__add-service {
     display: flex;
+    position: relative;
     @include body-text;
     line-height: 1.2;
 
     &-price {
       @include body-text;
       justify-self: right;
+    }
+  }
+
+  &__tip {
+    width: 20px;
+    height: 20px;
+
+    &-text {
+      opacity: 0;
+      position: absolute;
+      right: -100px;
+      top: -15px;
+      color: $dark-shade-50;
+      background-color: #f7f7f7;
+      border-radius: 4px;
+      padding: 5px;
+      pointer-events: none;
+      transition: all 0.2s linear;
+      overflow-wrap: break-word;
+      max-width: 100px;
+    }
+
+    &:hover + &-text {
+      opacity: 1;
     }
   }
 
