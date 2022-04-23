@@ -16,7 +16,8 @@ import {
   MIN_COUNT,
   NEWBORNS_SELECTOR,
   OPENED_CLASS,
-  DISABLED_CLASS,
+  INCREMENT_DISABLED_CLASS,
+  DECREMENT_DISABLED_CLASS,
 } from './constants';
 
 class Dropdown {
@@ -89,8 +90,10 @@ class Dropdown {
   checkTotalCount() {
     if (this.totalCount === MIN_COUNT) {
       this.hideClearButton();
+      this.setDefaultFieldText();
     } else {
       this.showClearButton();
+      this.setFieldText();
     }
   }
 
@@ -105,11 +108,13 @@ class Dropdown {
   checkCounters() {
     this.$counters.each((_index, counter) => {
       if (Number(counter.innerHTML) === MIN_COUNT) {
-        this.disableElement($(counter).siblings(DECREMENT_SELECTOR));
+        this.$decrement = $(counter).siblings(DECREMENT_SELECTOR);
+        this.disableDecrement();
       }
 
       if (Number(counter.innerHTML) === MAX_COUNT) {
-        this.disableElement($(counter).siblings(INCREMENT_SELECTOR));
+        this.$increment = $(counter).siblings(INCREMENT_SELECTOR);
+        this.disableIncrement();
       }
     });
   }
@@ -166,19 +171,21 @@ class Dropdown {
   incrementCounter(event) {
     event.stopPropagation();
 
-    const $target = $(event.target);
-    const $counter = $target.siblings(COUNTER_SELECTOR);
-    const decrementElement = $target.siblings(DECREMENT_SELECTOR);
+    this.$increment = $(event.target);
+    this.$decrement = this.$increment.siblings(DECREMENT_SELECTOR);
+
+    const $counter = this.$increment.siblings(COUNTER_SELECTOR);
+
     let counterNumber = Number($counter.text());
 
-    this.enableElement(decrementElement);
+    this.enableDecrement();
 
     $counter.text(counterNumber + 1);
     this.incrementTotalCount();
     counterNumber = Number($counter.text());
 
     if (counterNumber === MAX_COUNT) {
-      this.disableElement($target);
+      this.disableIncrement();
     }
 
     this.checkTotalCount();
@@ -188,27 +195,23 @@ class Dropdown {
   decrementCounter(event) {
     event.stopPropagation();
 
-    const $target = $(event.target);
-    const $counter = $target.siblings(COUNTER_SELECTOR);
-    const incrementElement = $target.siblings(INCREMENT_SELECTOR);
+    this.$decrement = $(event.target);
+    this.$increment = this.$decrement.siblings(INCREMENT_SELECTOR);
+
+    const $counter = this.$increment.siblings(COUNTER_SELECTOR);
     let counterNumber = Number($counter.text());
 
-    this.enableElement(incrementElement);
+    this.enableIncrement();
 
     $counter.text(counterNumber - 1);
     this.decrementTotalCount();
     counterNumber = Number($counter.text());
 
     if (counterNumber === MIN_COUNT) {
-      this.disableElement($target);
+      this.disableDecrement();
     }
 
     this.checkTotalCount();
-    if (this.totalCount === MIN_COUNT) {
-      this.setDefaultFieldText();
-    } else {
-      this.setFieldText();
-    }
   }
 
   setFieldText() {
@@ -248,7 +251,9 @@ class Dropdown {
     const bathrooms = Number(
       this.$container.find(BATHROOMS_SELECTOR).find(COUNTER_SELECTOR).text(),
     );
+
     const text = [];
+
     if (bedrooms) {
       text.push(`${bedrooms} ${this.helper.getBedroomsEnding(bedrooms)}`);
     }
@@ -271,19 +276,26 @@ class Dropdown {
     this.$field.text(textString);
   }
 
-  disableElement($element) {
-    $element.addClass(DISABLED_CLASS);
-    return this;
+  disableDecrement() {
+    this.$decrement.addClass(DECREMENT_DISABLED_CLASS);
   }
 
-  enableElement($element) {
-    $element.removeClass(DISABLED_CLASS);
-    return this;
+  disableIncrement() {
+    this.$increment.addClass(INCREMENT_DISABLED_CLASS);
+  }
+
+  enableDecrement() {
+    this.$decrement.removeClass(DECREMENT_DISABLED_CLASS);
+  }
+
+  enableIncrement() {
+    this.$increment.removeClass(INCREMENT_DISABLED_CLASS);
   }
 
   enableAllIncrements() {
     this.$increments.each((_index, increment) => {
-      this.enableElement($(increment));
+      this.$increment = $(increment);
+      this.enableIncrement();
     });
   }
 

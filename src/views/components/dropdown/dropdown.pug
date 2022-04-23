@@ -11,14 +11,14 @@ mixin dropdown(arguments={})
       state=''
     } = arguments
 
-  - const classes = state === 'opened' ? 'open' : '';
+  - const classes = state === 'opened' ? 'dropdown__container_opened' : '';
 
   .dropdown
     .dropdown__labels
       h3.dropdown__label= label
       if subLabel
         h3.dropdown__sub-label= subLabel
-    .dropdown__container.dropdown-container.js-dropdown-container(
+    .dropdown__container.js-dropdown__container(
       class=classes,
       data-type=type
     )

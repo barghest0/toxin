@@ -88,7 +88,7 @@
         background-color: $dark-shade-5;
       }
 
-      &.disabled {
+      &_disabled {
         opacity: 0.38;
         pointer-events: none;
       }
@@ -103,15 +103,14 @@
     }
   }
 
-  &__container.open &__field {
+  &__container_opened &__field {
     border-color: $dark-shade-50;
+    &::after {
+      transform: rotate(135deg);
+    }
   }
 
-  &__container.open &__field::after {
-    transform: rotate(135deg);
-  }
-
-  &__container.open &__list {
+  &__container_opened &__list {
     display: flex;
     flex-direction: column;
   }
