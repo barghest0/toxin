@@ -9,7 +9,7 @@ const devConfig = merge(baseConfig, {
       directory: baseConfig.externals.path.dist,
       watch: true,
     },
-
+    compress: true,
     port: 8080,
     open: false,
   },

@@ -1,3 +1,4 @@
+import { boundMethod } from 'autobind-decorator';
 import { LIST_SELECTOR, OPENED_CLASS } from './constants';
 
 class NavList {
@@ -12,18 +13,20 @@ class NavList {
   }
 
   attachListeners() {
-    this.$container.on('click', this.handleLinkClick.bind(this));
+    this.$container.on('click', this.handleLinkClick);
     document.addEventListener(
       'click',
-      this.closeDropdownListAfterDocumentClick.bind(this),
+      this.closeDropdownListAfterDocumentClick,
     );
   }
 
+  @boundMethod
   handleLinkClick(event) {
     event.stopPropagation();
     this.$container.toggleClass(OPENED_CLASS);
   }
 
+  @boundMethod
   closeDropdownListAfterDocumentClick(event) {
     if (!event.target.closest(LIST_SELECTOR)) {
       this.$container.removeClass(OPENED_CLASS);

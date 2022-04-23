@@ -1,3 +1,4 @@
+import { boundMethod } from 'autobind-decorator';
 import DatepickerFacade from '../../../libs/air-datepicker/DatepickerFacade';
 import {
   DATEPICKER_SELECTOR,
@@ -44,24 +45,23 @@ class Datepicker {
   }
 
   attachInputsListeners() {
-    this.$dateFrom.on('click', this.openDatepickerAfterInputClick.bind(this));
+    this.$dateFrom.on('click', this.openDatepickerAfterInputClick);
     if (this.$dateTo) {
-      this.$dateTo.on('click', this.openDatepickerAfterInputClick.bind(this));
+      this.$dateTo.on('click', this.openDatepickerAfterInputClick);
     }
   }
 
+  @boundMethod
   openDatepickerAfterInputClick() {
     this.datepicker.classList.toggle(OPENED_CLASS);
     this.$container.toggleClass(OPENED_CLASS);
   }
 
   attachDocumentListener() {
-    document.addEventListener(
-      'click',
-      this.closeDatepickerAfterDocumentClick.bind(this),
-    );
+    document.addEventListener('click', this.closeDatepickerAfterDocumentClick);
   }
 
+  @boundMethod
   closeDatepickerAfterDocumentClick(e) {
     if (!e.target.closest(CONTAINER_SELECTOR)) {
       this.datepicker.classList.remove(OPENED_CLASS);

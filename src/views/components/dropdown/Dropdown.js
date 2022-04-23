@@ -1,3 +1,4 @@
+import { boundMethod } from 'autobind-decorator';
 import DropdownHelper from './DropdownHelper';
 import {
   APPLY_BUTTON_SELECTOR,
@@ -128,16 +129,16 @@ class Dropdown {
   }
 
   attachDropdownListeners() {
-    this.$container.on(
-      'click',
-      this.openDropdownListAfterFieldClick.bind(this),
-    );
+    this.$container.on('click', this.openDropdownListAfterFieldClick);
+
     const stopPropagation = event => {
       event.stopPropagation();
     };
+
     this.$list.on('click', stopPropagation);
   }
 
+  @boundMethod
   openDropdownListAfterFieldClick() {
     this.$container.toggleClass(OPENED_CLASS);
   }
@@ -145,10 +146,11 @@ class Dropdown {
   attachDocumentListener() {
     document.addEventListener(
       'click',
-      this.closeDropdownListAfterDocumentClick.bind(this),
+      this.closeDropdownListAfterDocumentClick,
     );
   }
 
+  @boundMethod
   closeDropdownListAfterDocumentClick(event) {
     if (!event.target.closest(CONTAINER_SELECTOR)) {
       this.$container.removeClass(OPENED_CLASS);
@@ -156,8 +158,8 @@ class Dropdown {
   }
 
   attachToolsListeners() {
-    this.$increments.on('click', this.incrementCounter.bind(this));
-    this.$decrements.on('click', this.decrementCounter.bind(this));
+    this.$increments.on('click', this.incrementCounter);
+    this.$decrements.on('click', this.decrementCounter);
   }
 
   incrementTotalCount() {
@@ -168,6 +170,7 @@ class Dropdown {
     this.totalCount -= 1;
   }
 
+  @boundMethod
   incrementCounter(event) {
     event.stopPropagation();
 
@@ -192,6 +195,7 @@ class Dropdown {
     this.setFieldText();
   }
 
+  @boundMethod
   decrementCounter(event) {
     event.stopPropagation();
 
@@ -300,10 +304,11 @@ class Dropdown {
   }
 
   attachButtonsListeners() {
-    this.$clear.on('click', this.clearDropdown.bind(this));
-    this.$apply.on('click', this.applyDropdown.bind(this));
+    this.$clear.on('click', this.clearDropdown);
+    this.$apply.on('click', this.applyDropdown);
   }
 
+  @boundMethod
   clearDropdown() {
     this.$counters.each(index => {
       this.$counters[index].innerHTML = '0';
@@ -315,6 +320,7 @@ class Dropdown {
     this.setDefaultFieldText();
   }
 
+  @boundMethod
   applyDropdown() {
     this.$container.toggleClass(OPENED_CLASS);
   }

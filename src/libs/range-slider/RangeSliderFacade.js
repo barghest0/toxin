@@ -1,7 +1,5 @@
-import {
-  FIRST_VALUE,
-  SECOND_VALUE,
-} from './constants';
+import { boundMethod } from 'autobind-decorator';
+import { FIRST_VALUE, SECOND_VALUE } from './constants';
 
 class RangeSliderFacade {
   constructor($slider, $startPrice, $endPrice) {
@@ -27,6 +25,7 @@ class RangeSliderFacade {
     };
   }
 
+  @boundMethod
   handleChange({ value }) {
     this.$startPrice.html(`${value[FIRST_VALUE].toLocaleString()} ₽`);
     this.$endPrice.html(`${value[SECOND_VALUE].toLocaleString()} ₽`);
@@ -34,15 +33,16 @@ class RangeSliderFacade {
 
   createSlider() {
     this.slider = this.$slider.slider(this.params);
-    this.slider.subscribe(this.handleChange.bind(this));
+    this.slider.subscribe(this.handleChange);
   }
 
+  @boundMethod
   handleDocumentLoaded() {
     this.createSlider();
   }
 
   attachListeners() {
-    window.addEventListener('load', this.handleDocumentLoaded.bind(this));
+    window.addEventListener('load', this.handleDocumentLoaded);
   }
 }
 

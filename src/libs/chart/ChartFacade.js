@@ -1,3 +1,4 @@
+import { boundMethod } from 'autobind-decorator';
 import { Chart, registerables } from 'chart.js';
 
 import TURNING_POINT from './constants';
@@ -107,6 +108,15 @@ class ChartFacade {
     ];
   }
 
+  createChart() {
+    window.addEventListener('load', this.handleWindowResize);
+  }
+
+  attachListeners() {
+    window.addEventListener('resize', this.checkWindowSize);
+  }
+
+  @boundMethod
   handleWindowResize() {
     this.chart = new Chart(this.container, {
       type: 'doughnut',
@@ -116,14 +126,7 @@ class ChartFacade {
     });
   }
 
-  createChart() {
-    window.addEventListener('load', this.handleWindowResize.bind(this));
-  }
-
-  attachListeners() {
-    window.addEventListener('resize', this.checkWindowSize.bind(this));
-  }
-
+  @boundMethod
   checkWindowSize(event) {
     if (event.target.innerWidth <= TURNING_POINT) {
       this.changeLegendPositionToBottom();

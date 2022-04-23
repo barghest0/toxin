@@ -1,3 +1,4 @@
+import { boundMethod } from 'autobind-decorator';
 import {
   BURGER_SELECTOR,
   BURGER_NAV_SELECTOR,
@@ -21,18 +22,17 @@ class HeaderBurger {
 
   attachListeners() {
     this.$container.on('click', this.handleBurgerClick);
-    document.addEventListener(
-      'click',
-      this.closeBurgerAfterDocumentClick.bind(this),
-    );
+    document.addEventListener('click', this.closeBurgerAfterDocumentClick);
   }
 
+  @boundMethod
   handleBurgerClick(event) {
     this.element = event.currentTarget;
     $(this.element).toggleClass(OPEN_BURGER_CLASS);
     $(BURGER_NAV_SELECTOR).toggleClass(OPEN_BURGER_CLASS);
   }
 
+  @boundMethod
   closeBurgerAfterDocumentClick(event) {
     if (!event.target.closest(BURGER_SELECTOR)) {
       this.$container.removeClass(OPEN_BURGER_CLASS);

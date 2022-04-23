@@ -1,3 +1,4 @@
+import { boundMethod } from 'autobind-decorator';
 import { LIKED_CLASS } from './constants';
 
 class Like {
@@ -14,6 +15,7 @@ class Like {
     this.$container.on('click', this.handleLikeClick);
   }
 
+  @boundMethod
   handleLikeClick(event) {
     this.element = event.target;
     let likes = Number(this.element.innerHTML);

@@ -1,3 +1,4 @@
+import { boundMethod } from 'autobind-decorator';
 import { EXPANDED_CLASS } from './constants';
 
 class ExpandList {
@@ -11,10 +12,11 @@ class ExpandList {
   }
 
   attachListener() {
-    this.$container.on('click', this.clickLabelCallback);
+    this.$container.on('click', this.handleLabelClick);
   }
 
-  clickLabelCallback(event) {
+  @boundMethod
+  handleLabelClick(event) {
     this.$element = $(event.currentTarget);
     this.$element.toggleClass(EXPANDED_CLASS);
   }

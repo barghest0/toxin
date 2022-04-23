@@ -1,3 +1,4 @@
+import { boundMethod } from 'autobind-decorator';
 import {
   BACKGROUND_SELECTOR,
   CLOSE_BUTTON_SELECTOR,
@@ -25,21 +26,24 @@ class SearchRoomFilter {
   }
 
   attachListeners() {
-    this.$button.on('click', this.handleButtonClick.bind(this));
-    this.$background.on('click', this.handleBackgroundClick.bind(this));
-    this.$closeButton.on('click', this.closeButtonClick.bind(this));
+    this.$button.on('click', this.handleButtonClick);
+    this.$background.on('click', this.handleBackgroundClick);
+    this.$closeButton.on('click', this.closeButtonClick);
   }
 
+  @boundMethod
   handleButtonClick() {
     this.$background.toggleClass(OPENED_CLASS);
   }
 
+  @boundMethod
   handleBackgroundClick(event) {
     if (event.target.classList.contains(OPENED_CLASS)) {
       this.$background.removeClass(OPENED_CLASS);
     }
   }
 
+  @boundMethod
   closeButtonClick() {
     this.$background.toggleClass(OPENED_CLASS);
   }
