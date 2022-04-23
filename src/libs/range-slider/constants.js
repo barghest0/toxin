@@ -1,0 +1,5 @@
+const FIRST_VALUE = 0;
+const SECOND_VALUE = 1;
+
+
+export {FIRST_VALUE,SECOND_VALUE}

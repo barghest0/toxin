@@ -1,6 +1,6 @@
 import { Chart, registerables } from 'chart.js';
 
-import { TURNING_POINT } from '../../views/components/chart/constants';
+import TURNING_POINT from './constants';
 
 Chart.register(...registerables);
 

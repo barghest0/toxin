@@ -6,7 +6,7 @@ import {
   APPLY_BUTTON_CLASS,
   OPENED_CLASS,
   BUTTON_SELECTOR,
-} from '../../views/components/datepicker/constants';
+} from './constants';
 
 class DatepickerFacade {
   constructor($container, datepicker, $dateFrom, $dateTo = null) {

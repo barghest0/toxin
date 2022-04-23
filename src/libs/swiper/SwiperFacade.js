@@ -9,7 +9,7 @@ import {
   PAGINATION_SELECTOR,
   PREV_BUTTON_SELECTOR,
   SCROLLBAR_SELECTOR,
-} from '../../views/components/preview-room/constants';
+} from './constants';
 
 class SwiperFacade {
   constructor(container) {

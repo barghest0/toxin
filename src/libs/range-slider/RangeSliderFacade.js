@@ -1,7 +1,7 @@
 import {
   FIRST_VALUE,
   SECOND_VALUE,
-} from '../../views/components/range-slider/constants';
+} from './constants';
 
 class RangeSliderFacade {
   constructor($slider, $startPrice, $endPrice) {
