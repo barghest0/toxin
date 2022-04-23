@@ -82,12 +82,14 @@
     }
 
     &--cells {
-      max-height: 200px;
-      max-width: 280px;
       margin: 0 auto;
       &.-days- {
         grid-auto-rows: 40px;
         grid-auto-columns: 40px;
+        @include sm-phone {
+          grid-auto-rows: 32px;
+          grid-auto-columns: 32px;
+        }
       }
     }
   }

@@ -188,6 +188,11 @@
 
   @content;
 }
+@mixin sm-phone {
+  @media (max-width: 360px) {
+    @content;
+  }
+}
 
 @mixin phone {
   @media (max-width: 420px) {
@@ -206,6 +211,7 @@
     @content;
   }
 }
+
 @mixin tablet-portrait {
   @media (max-width: 768px) {
     @content;
