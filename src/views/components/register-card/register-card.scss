@@ -5,6 +5,8 @@
 @import '../../components/button/button';
 
 .register-card {
+  @include card;
+
   &__title {
     margin-bottom: 20px;
     @include widget-title;

@@ -1,4 +1,3 @@
-include ../card/card.pug
 include ../card-room-info/card-room-info.pug
 include ../rate/rate.pug
 include ../dropdown/dropdown.pug
@@ -15,9 +14,8 @@ mixin preview-room(arguments={})
       price=0,
       reviews=''
     } = arguments
-
-  +card('sm')
-    a.preview-room(href="room.html")
+  .preview-room
+    a.preview-room__link(href="room.html")
       .preview-room__carousel.swiper.js-swiper
         .preview-room__carousel-container.swiper-wrapper.js-swiper-wrapper
           each image in images

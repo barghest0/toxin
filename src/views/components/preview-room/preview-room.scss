@@ -3,10 +3,19 @@
 @import '../../../libs/swiper/swiper';
 
 .preview-room {
-  text-decoration: none;
+  @include card;
   color: $dark-shade-100;
-  background-color: $white;
-  @include size(100%);
+  padding: 0;
+  padding-bottom: 19px;
+
+  @include phone {
+    padding: 0;
+    padding-bottom: 10px;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
 
   &__carousel {
     width: 100%;

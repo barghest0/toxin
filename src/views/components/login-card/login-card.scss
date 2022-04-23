@@ -2,6 +2,8 @@
 @import '../../components/button/button';
 
 .login-card {
+  @include card;
+
   &__title {
     margin-bottom: 20px;
     @include widget-title;

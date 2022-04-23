@@ -5,6 +5,8 @@
 @import '../../components/dropdown/dropdown.scss';
 
 .booking-card {
+  @include card;
+
   &__room-info {
     margin-bottom: 20px;
   }
