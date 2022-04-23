@@ -18,10 +18,7 @@ mixin dropdown(arguments={})
       h3.dropdown__label= label
       if subLabel
         h3.dropdown__sub-label= subLabel
-    .dropdown__container.js-dropdown__container(
-      class=classes,
-      data-type=type
-    )
+    .dropdown__container.js-dropdown__container(class=classes, data-type=type)
       .dropdown__field.js-dropdown__field
       .dropdown__list.js-dropdown__list
         each listItem in data

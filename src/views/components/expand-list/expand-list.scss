@@ -8,12 +8,12 @@
       @include dropdown-arrow(18px, 2px);
     }
 
-    &.open::after {
+    &_opened::after {
       transform: rotate(135deg);
     }
   }
 
-  &__label.open + &__items {
+  &__label_opened + &__items {
     max-height: 100%;
   }
 

@@ -1,7 +1,8 @@
 mixin card-room-info({roomNumber='', isLuxury='', price='', size=''}={})
+  - const blockClasses = `card-room-info_${size}`
   - const classes = `card-room-info__room-number_${size}`
 
-  .card-room-info(class=`card-room-info_${size}`)
+  .card-room-info(class=blockClasses)
     .card-room-info__room
       .card-room-info__room-number-symbol №
       .card-room-info__room-number(class=classes)= roomNumber

@@ -73,7 +73,7 @@
       left: 0;
       top: 0;
 
-      &.active {
+      &_active {
         pointer-events: all;
         width: 100%;
         background-color: $dark-shade-50;
@@ -93,14 +93,14 @@
         }
       }
 
-      &.active &-inner {
+      &_active &-inner {
         transform: translateX(0);
         height: 100vh;
         overflow: auto;
       }
 
       @include phone {
-        &.active &-close {
+        &_active &-close {
           display: block;
         }
       }

@@ -1,7 +1,7 @@
 include ../logo/logo.pug
 include ../nav/nav.pug
 
-mixin header({state='no-authorized',name=''}={})
+mixin header({state='no-authorized', name=''}={})
   header.header(class=`header_${state}`)
     .header__container
       .header__inner(class=`header__inner_${state}`)
@@ -13,4 +13,4 @@ mixin header({state='no-authorized',name=''}={})
           .header__burger-block
             .header__burger-line
           .header__burger-nav.js-header__burger-nav
-            +nav({state,name,burger:true})
+            +nav({state,name, isBurger:true})

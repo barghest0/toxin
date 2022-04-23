@@ -6,9 +6,6 @@
   column-gap: 20px;
   color: $dark-shade-75;
 
-  display: grid;
-  grid-template-columns: repeat(7, auto);
-
   @include sm-desktop {
     column-gap: 15px;
   }
@@ -33,13 +30,15 @@
       &::after {
         @include dropdown-arrow(-8px, -1px, relative);
       }
+    }
 
-      &.open {
-        color: $dark-shade-75;
-
-        &::after {
-          transform: rotate(135deg);
-        }
+    &_folded#{&}_opened {
+      color: $dark-shade-75;
+      &:nth-child(2) {
+        z-index: 400;
+      }
+      &::after {
+        transform: rotate(135deg);
       }
     }
 
@@ -83,7 +82,7 @@
     }
   }
 
-  &__item.open &__list {
+  &__item_opened &__list {
     display: flex;
   }
 

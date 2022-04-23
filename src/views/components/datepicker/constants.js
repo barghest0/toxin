@@ -3,7 +3,7 @@ const DATEPICKER_SELECTOR = '.js-datepicker';
 
 const SINGLE_DATEPICKER = 0;
 
-const OPENED_CLASS = 'open';
+const OPENED_CLASS = 'datepicker_opened';
 
 const DATE_FROM_SELECTOR = '.js-range-date__input_from';
 const DATE_TO_SELECTOR = '.js-range-date__input_to';

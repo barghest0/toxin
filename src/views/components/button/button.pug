@@ -3,7 +3,7 @@ mixin button({text='',type='outlined',isLargest=false,state=''}={})
     const classes = 
       isLargest ?
       `button_largest button_${type}`: 
-      `button_${type} ${state === 'hovered' ? 'hovered' : ''}`;
+      `button_${type} ${state === 'hovered' ? 'button_hovered' : ''}`;
 
     const types = type === 'no-bordered' ? 'button' : 'submit';
 

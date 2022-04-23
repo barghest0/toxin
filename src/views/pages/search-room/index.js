@@ -1,7 +1,6 @@
 import SearchRoomFilter from './SearchRoomFilter';
 import { FILTER_BUTTON_SELECTOR } from './constants';
 import './search-room.scss';
-
 import './images/filter-icon.svg';
 
 import '../../components/dropdown';

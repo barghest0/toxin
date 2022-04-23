@@ -78,7 +78,7 @@
       }
     }
 
-    &.active &-line {
+    &_opened &-line {
       transform: rotate(45deg);
       top: 10px;
 
@@ -97,7 +97,7 @@
       display: none;
     }
 
-    &.active &-nav {
+    &_opened &-nav {
       display: block;
     }
 

@@ -1,7 +1,7 @@
 include ../button/button.pug
 
-mixin nav({state='no-authorized',name='',burger=false}={})
-  - const classes = burger ? 'nav_folded' : ''
+mixin nav({state='no-authorized', name='', isBurger=false}={})
+  - const classes = isBurger ? 'nav_folded' : ''
 
   nav.nav(class=classes)
     a.nav__item(href="/mock-address/change-me") О нас

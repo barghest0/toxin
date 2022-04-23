@@ -3,35 +3,35 @@
 
   &_filled {
     @include filled-button;
+  }
 
-    &.hovered {
-      opacity: 0.5;
-    }
+  &_filled#{&}_hovered {
+    opacity: 0.5;
   }
 
   &_no-bordered {
     @include no-bordered-button;
+  }
 
-    &.hovered {
-      color: $dark-shade-50;
-    }
+  &_no-bordered#{&}_hovered {
+    color: $dark-shade-50;
   }
 
   &_outlined {
     @include outlined-button;
+  }
 
-    &.hovered {
-      opacity: 0.8;
-      border: 2px solid transparent;
-      background-origin: border-box;
-      background-clip: content-box, border-box;
-      background-image: linear-gradient(white, white),
-        linear-gradient(
-          to bottom,
-          rgba($main-color, 0.5),
-          rgba($gradient-main-color, 0.5)
-        );
-    }
+  &_outlined#{&}_hovered {
+    opacity: 0.8;
+    border: 2px solid transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-image: linear-gradient(white, white),
+      linear-gradient(
+        to bottom,
+        rgba($main-color, 0.5),
+        rgba($gradient-main-color, 0.5)
+      );
   }
 
   &_largest {

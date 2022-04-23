@@ -29,7 +29,7 @@ mixin register-card({title='Регистрация аккаунта'}={})
         .register-card__block
           h3.register-card__label Данные для входа в сервис
           .register-card__block-field 
-            +default-text-field({placeholder:'Email',type:'email',name:'email'})
+            +default-text-field({placeholder:'Email', type:'email', name:'email'})
           .register-card__block-field 
             +default-text-field({
                 placeholder:'Пароль',
@@ -37,10 +37,10 @@ mixin register-card({title='Регистрация аккаунта'}={})
                 name:'user-password'
              })
           .register-card__block-field 
-            +toggle({name:'offers',text:'Получать спецпредложения'})
+            +toggle({name:'offers', text:'Получать спецпредложения'})
         .register-card__button 
-          +button({text:'Зарегистрироваться',type:'filled',isLargest:true})
+          +button({text:'Зарегистрироваться', type:'filled', isLargest:true})
       .register-card__profile-action 
         p.register-card__profile-action-text Уже есть аккаунт на Toxin
         .register-card__profile-action-button
-          +button({text:'Войти',type:'outlined'})
+          +button({text:'Войти', type:'outlined'})
