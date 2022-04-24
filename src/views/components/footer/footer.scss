@@ -112,6 +112,7 @@
       transition: all 0.2s linear;
 
       &:hover {
+        font-weight: bold;
         color: $dark-shade-75;
       }
     }

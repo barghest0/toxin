@@ -1,13 +1,19 @@
 .nav {
   height: inherit;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  column-gap: 20px;
   color: $dark-shade-75;
+  display: flex;
 
-  @include sm-desktop {
-    column-gap: 15px;
+  &__links {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    margin-right: 24px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
   }
 
   &__item {
@@ -18,22 +24,35 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
     transition: all 0.2s linear;
     color: $dark-shade-50;
+    padding: 0.6rem 0;
+
+    &::before {
+      content: attr(data-text);
+      font-weight: bold;
+      position: relative;
+      display: block;
+      height: 0;
+      visibility: hidden;
+      overflow: hidden;
+      user-select: none;
+      pointer-events: none;
+    }
 
     &_folded {
-      padding-left: 0;
-      display: flex;
-      justify-content: center;
-      margin-right: 17px;
-
+      padding-right: 17.3px;
       &::after {
-        @include dropdown-arrow(-8px, -1px, relative);
+        align-self: flex-end;
+        @include dropdown-arrow(4px, 12px, absolute);
       }
     }
 
     &_folded#{&}_opened {
-      color: $dark-shade-75;
+      font-weight: bold;
+      z-index: 100;
       &:nth-child(2) {
         z-index: 400;
       }
@@ -48,6 +67,7 @@
     }
 
     &:hover {
+      font-weight: bold;
       color: $dark-shade-75;
     }
   }
@@ -111,6 +131,25 @@
     padding: 10px;
     border-radius: 0px 0px 0px 7px;
     @include shadow;
+  }
+
+  &_folded &__links {
+    margin-right: 0;
+    flex-direction: column;
+  }
+
+  &_folded &__item {
+    &_folded {
+      padding-right: 0;
+      &::after {
+        right: 30px;
+      }
+    }
+  }
+
+  &_folded &__buttons {
+    row-gap: 10px;
+    flex-direction: column;
   }
 
   &_folded &__item {
