@@ -1,7 +1,7 @@
 include ../datepicker/datepicker.pug
 
 mixin range-date({from='Прибытие', to='Выезд', dateFrom='', dateTo=''}={})
-  .range-date.datepicker-container.js-datepicker-container
+  .range-date(data-datepicker="true")
     .range-date__fields
       +text-field({label:from})
         .range-date__field

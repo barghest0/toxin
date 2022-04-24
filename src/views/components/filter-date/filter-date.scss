@@ -6,10 +6,10 @@
   &__input {
     cursor: pointer;
     caret-color: transparent;
-    @include text-field {
-      &::placeholder {
-        color: $dark-shade-75;
-      }
+    @include text-field;
+
+    &::placeholder {
+      color: $dark-shade-75;
     }
   }
 
@@ -17,9 +17,11 @@
     &::after {
       @include dropdown-arrow(18px, 17px);
     }
-  }
 
-  &.open &__field::after {
-    transform: rotate(135deg);
+    &_opened {
+      &::after {
+        transform: rotate(135deg);
+      }
+    }
   }
 }

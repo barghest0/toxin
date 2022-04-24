@@ -32,7 +32,7 @@ mixin filter-date({label='', dateFrom='', dateTo='', placeholder=''}={})
 
 
   +text-field({label})
-    .filter-date.datepicker-container.js-datepicker-container
+    .filter-date(data-datepicker="true")
       .filter-date__field
         input.filter-date__input.js-filter-date__input(
           name=name,
