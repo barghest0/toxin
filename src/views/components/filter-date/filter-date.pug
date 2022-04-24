@@ -16,14 +16,18 @@ mixin filter-date({label='', dateFrom='', dateTo='', placeholder=''}={})
       'Ноя',
       'Дек',
     ];
-    const dateFromObject = new Date(dateFrom)
-    const dateToObject = new Date(dateTo)
 
-    const fromMonth = months[dateFromObject.getMonth()] 
-    const toMonth = months[dateFromObject.getMonth()]
+    const MONTH = 1
+    const DAY = 0
 
-    const shortDateFrom = `${dateFromObject.getDate()} ${fromMonth}`
-    const shortDateTo = `${dateToObject.getDate()} ${toMonth}`
+    const dateFromArray = dateFrom.split('.')
+    const dateToArray = dateTo.split('.')
+
+    const fromMonth = months[Number(dateFromArray[MONTH])-1] 
+    const toMonth = months[Number(dateToArray[MONTH])-1]
+
+    const shortDateFrom = `${dateFromArray[DAY]} ${fromMonth}`
+    const shortDateTo = `${dateToArray[DAY]} ${toMonth}`
 
     const value = 
       dateTo && dateFrom ? 

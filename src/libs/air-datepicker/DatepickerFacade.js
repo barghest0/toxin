@@ -68,12 +68,12 @@ class DatepickerFacade {
 
     const dateFrom = new Date(
       dateFromArray[YEAR],
-      dateFromArray[MONTH],
+      dateFromArray[MONTH] - 1,
       dateFromArray[DAY],
     );
     const dateTo = new Date(
       dateToArray[YEAR],
-      dateToArray[MONTH],
+      dateToArray[MONTH] - 1,
       dateToArray[DAY],
     );
     this.params.selectedDates = [dateFrom, dateTo];
