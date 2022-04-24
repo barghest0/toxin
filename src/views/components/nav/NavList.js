@@ -14,10 +14,7 @@ class NavList {
 
   attachListeners() {
     this.$container.on('click', this.handleLinkClick);
-    document.addEventListener(
-      'click',
-      this.closeDropdownListAfterDocumentClick,
-    );
+    document.addEventListener('click', this.handleDocumentClick);
   }
 
   @boundMethod
@@ -27,8 +24,9 @@ class NavList {
   }
 
   @boundMethod
-  closeDropdownListAfterDocumentClick(event) {
-    if (!event.target.closest(LIST_SELECTOR)) {
+  handleDocumentClick(event) {
+    const isClickedOnNavigation = event.target.closest(LIST_SELECTOR);
+    if (!isClickedOnNavigation) {
       this.$container.removeClass(OPENED_CLASS);
     }
   }

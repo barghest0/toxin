@@ -1,7 +1,13 @@
 import { boundMethod } from 'autobind-decorator';
 import { Chart, registerables } from 'chart.js';
 
-import TURNING_POINT from './constants';
+import {
+  BOTTOM_POSITION,
+  CENTER_ALIGN,
+  END_ALIGN,
+  RIGHT_POSITION,
+  TURNING_POINT,
+} from './constants';
 
 Chart.register(...registerables);
 
@@ -59,9 +65,12 @@ class ChartFacade {
 
       plugins: {
         legend: {
-          position: window.innerWidth >= TURNING_POINT ? 'right' : 'bottom',
+          position:
+            window.innerWidth >= TURNING_POINT
+              ? RIGHT_POSITION
+              : BOTTOM_POSITION,
           doughnutMode: true,
-          align: window.innerWidth >= TURNING_POINT ? 'end' : 'center',
+          align: window.innerWidth >= TURNING_POINT ? END_ALIGN : CENTER_ALIGN,
           reverse: true,
           onClick: false,
           labels: {
@@ -99,7 +108,7 @@ class ChartFacade {
           const y = height / 2;
           const text = 'ГОЛОСОВ';
           ctx.font = 'bold 12px Montserrat';
-          ctx.textAlign = 'center';
+          ctx.textAlign = CENTER_ALIGN;
           ctx.fillText(text, x, y + 20);
           ctx.font = 'bold 24px Montserrat';
           ctx.fillText(this.totalVotes, x, y);
@@ -109,15 +118,15 @@ class ChartFacade {
   }
 
   createChart() {
-    window.addEventListener('load', this.handleWindowResize);
+    window.addEventListener('load', this.handleDocumentLoaded);
   }
 
   attachListeners() {
-    window.addEventListener('resize', this.checkWindowSize);
+    window.addEventListener('resize', this.handleWindowSizeCheck);
   }
 
   @boundMethod
-  handleWindowResize() {
+  handleDocumentLoaded() {
     this.chart = new Chart(this.container, {
       type: 'doughnut',
       data: this.data,
@@ -127,7 +136,7 @@ class ChartFacade {
   }
 
   @boundMethod
-  checkWindowSize(event) {
+  handleWindowSizeCheck(event) {
     if (event.target.innerWidth <= TURNING_POINT) {
       this.changeLegendPositionToBottom();
     } else {
@@ -136,14 +145,14 @@ class ChartFacade {
   }
 
   changeLegendPositionToBottom() {
-    this.chart.options.plugins.legend.position = 'bottom';
-    this.chart.options.plugins.legend.align = 'center';
+    this.chart.options.plugins.legend.position = BOTTOM_POSITION;
+    this.chart.options.plugins.legend.align = CENTER_ALIGN;
     this.chart.update();
   }
 
   changeLegendPositionToRight() {
-    this.chart.options.plugins.legend.position = 'right';
-    this.chart.options.plugins.legend.align = 'end';
+    this.chart.options.plugins.legend.position = RIGHT_POSITION;
+    this.chart.options.plugins.legend.align = END_ALIGN;
     this.chart.update();
   }
 }

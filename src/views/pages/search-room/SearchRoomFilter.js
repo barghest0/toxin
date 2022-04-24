@@ -26,25 +26,27 @@ class SearchRoomFilter {
   }
 
   attachListeners() {
-    this.$button.on('click', this.handleButtonClick);
+    this.$button.on('click', this.handleFilterButtonClick);
     this.$background.on('click', this.handleBackgroundClick);
-    this.$closeButton.on('click', this.closeButtonClick);
+    this.$closeButton.on('click', this.handleCloseButtonClick);
   }
 
   @boundMethod
-  handleButtonClick() {
+  handleFilterButtonClick() {
     this.$background.toggleClass(OPENED_CLASS);
   }
 
   @boundMethod
   handleBackgroundClick(event) {
-    if (event.target.classList.contains(OPENED_CLASS)) {
+    const isClickedOnBackground = event.target.classList.contains(OPENED_CLASS);
+
+    if (isClickedOnBackground) {
       this.$background.removeClass(OPENED_CLASS);
     }
   }
 
   @boundMethod
-  closeButtonClick() {
+  handleCloseButtonClick() {
     this.$background.toggleClass(OPENED_CLASS);
   }
 }

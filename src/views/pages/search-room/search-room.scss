@@ -27,7 +27,6 @@
   }
 
   &__filters {
-    z-index: 1000;
     transition: all 0.3s linear;
 
     &-inner {
@@ -71,7 +70,7 @@
       position: fixed;
       left: 0;
       top: 0;
-
+      z-index: 1000;
       &_active {
         pointer-events: all;
         width: 100%;

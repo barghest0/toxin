@@ -129,7 +129,7 @@ class Dropdown {
   }
 
   attachDropdownListeners() {
-    this.$container.on('click', this.openDropdownListAfterFieldClick);
+    this.$container.on('click', this.handleDropdownClick);
 
     const stopPropagation = event => {
       event.stopPropagation();
@@ -139,27 +139,25 @@ class Dropdown {
   }
 
   @boundMethod
-  openDropdownListAfterFieldClick() {
+  handleDropdownClick() {
     this.$container.toggleClass(OPENED_CLASS);
   }
 
   attachDocumentListener() {
-    document.addEventListener(
-      'click',
-      this.closeDropdownListAfterDocumentClick,
-    );
+    document.addEventListener('click', this.handleDocumentClick);
   }
 
   @boundMethod
-  closeDropdownListAfterDocumentClick(event) {
-    if (!event.target.closest(CONTAINER_SELECTOR)) {
+  handleDocumentClick(event) {
+    const isClickedOnDropdown = event.target.closest(CONTAINER_SELECTOR);
+    if (!isClickedOnDropdown) {
       this.$container.removeClass(OPENED_CLASS);
     }
   }
 
   attachToolsListeners() {
-    this.$increments.on('click', this.incrementCounter);
-    this.$decrements.on('click', this.decrementCounter);
+    this.$increments.on('click', this.handleIncrement);
+    this.$decrements.on('click', this.handleDecrement);
   }
 
   incrementTotalCount() {
@@ -171,7 +169,7 @@ class Dropdown {
   }
 
   @boundMethod
-  incrementCounter(event) {
+  handleIncrement(event) {
     event.stopPropagation();
 
     this.$increment = $(event.target);
@@ -196,7 +194,7 @@ class Dropdown {
   }
 
   @boundMethod
-  decrementCounter(event) {
+  handleDecrement(event) {
     event.stopPropagation();
 
     this.$decrement = $(event.target);
@@ -304,12 +302,12 @@ class Dropdown {
   }
 
   attachButtonsListeners() {
-    this.$clear.on('click', this.clearDropdown);
-    this.$apply.on('click', this.applyDropdown);
+    this.$clear.on('click', this.handleDropdownClear);
+    this.$apply.on('click', this.handleDropdownApply);
   }
 
   @boundMethod
-  clearDropdown() {
+  handleDropdownClear() {
     this.$counters.each(index => {
       this.$counters[index].innerHTML = '0';
     });
@@ -321,7 +319,7 @@ class Dropdown {
   }
 
   @boundMethod
-  applyDropdown() {
+  handleDropdownApply() {
     this.$container.toggleClass(OPENED_CLASS);
   }
 }

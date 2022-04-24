@@ -61,7 +61,6 @@
     font-weight: normal;
     @include shadow;
     flex-direction: column;
-    z-index: 100;
 
     &-item {
       text-decoration: none;
