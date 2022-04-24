@@ -9,6 +9,7 @@ import {
   YEAR,
   MONTH,
   DAY,
+  MIDDLE_DATEPICKER_CLASS,
 } from './constants';
 
 class DatepickerFacade {
@@ -37,7 +38,7 @@ class DatepickerFacade {
       buttons: this.buttons,
       isMobile: true,
       dateFormat: this.isFilterDate() ? 'd MMM' : 'dd.MM.yyyy',
-      classes: this.isFilterDate() ? 'air-datepicker_md' : '',
+      classes: this.setClasses(),
     };
     if (this.datepicker.dataset.dateFrom && this.datepicker.dataset.dateTo) {
       this.setSelectedDates();
@@ -47,6 +48,18 @@ class DatepickerFacade {
     if (this.isFilterDate()) {
       this.setFilterParams();
     }
+  }
+
+  setClasses() {
+    if (this.isFilterDate()) {
+      return MIDDLE_DATEPICKER_CLASS;
+    }
+
+    return '';
+  }
+
+  isInlineDatepicker() {
+    return !this.$dateTo.length && !this.$dateFrom.length;
   }
 
   setSelectedDates() {
@@ -75,7 +88,7 @@ class DatepickerFacade {
   }
 
   isFilterDate() {
-    return !this.$dateTo.length;
+    return !this.$dateTo.length && this.$dateFrom.length;
   }
 
   setFilterParams() {

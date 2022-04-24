@@ -86,7 +86,11 @@
 
     &--cells {
       margin: 0 auto;
-      max-width: 280px;
+
+      &.-days- {
+        grid-auto-rows: 40px;
+      }
+
       &.-months-,
       &.-years- {
         justify-items: center;
@@ -113,6 +117,10 @@
 
       @include sm-phone {
         @include size(40px);
+      }
+
+      &.-selected {
+        border-radius: 50%;
       }
     }
 
@@ -226,9 +234,21 @@
     margin-bottom: 10px;
   }
 
-  &_md &-body--cells.-days- {
-    width: 100%;
-    grid-auto-rows: 33px;
-    grid-auto-columns: 33px;
+  &_md &-body {
+    &--cells.-days- {
+      max-width: 230px;
+      grid-auto-rows: 33px;
+      grid-auto-columns: 33px;
+    }
+
+    &--day-name {
+      height: auto;
+      width: auto;
+    }
+  }
+
+  &_md &-cell {
+    height: 33px;
+    width: 33px;
   }
 }

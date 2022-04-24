@@ -19,12 +19,12 @@
     row-gap: 30px;
 
     @include md-desktop {
-      width: 80%;
       margin: 0 auto;
       grid-template-columns: 1fr 1fr;
 
       @include tablet-portrait {
         grid-template-columns: 1fr;
+        width: 90%;
 
         @include phone {
           width: 100%;
