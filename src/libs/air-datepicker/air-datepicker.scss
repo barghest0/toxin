@@ -77,29 +77,43 @@
       font-weight: bold;
       font-size: 12px;
       color: $main-color;
+      @include size(40px);
 
-      @include size(100%);
+      @include phone {
+        @include size(100%);
+      }
     }
 
     &--cells {
       margin: 0 auto;
-      &.-days- {
-        grid-auto-rows: 40px;
-        grid-auto-columns: 40px;
-        @include sm-phone {
-          grid-auto-rows: 32px;
-          grid-auto-columns: 32px;
-        }
+      max-width: 280px;
+      &.-months-,
+      &.-years- {
+        justify-items: center;
       }
     }
   }
 
   &-cell {
     font-size: 12px;
+    display: grid;
 
     &.-day- {
       color: $dark-shade-50;
-      @include size(100%);
+      height: 40px;
+      @include sm-phone {
+        height: 34px;
+      }
+    }
+
+    &.-month-,
+    &.-year- {
+      color: $dark-shade-50;
+      @include size(60px);
+
+      @include sm-phone {
+        @include size(40px);
+      }
     }
 
     &.-current- {

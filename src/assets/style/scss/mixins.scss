@@ -120,6 +120,9 @@
   font-weight: bold;
   line-height: 1.2;
   font-size: $widget-font-size;
+  @include phone {
+    font-size: $inside-widget-font-size;
+  }
 }
 
 @mixin title-inside-widget {
