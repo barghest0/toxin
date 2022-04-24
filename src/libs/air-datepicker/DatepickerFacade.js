@@ -2,7 +2,14 @@ import AirDatepicker from 'air-datepicker';
 
 import 'air-datepicker/air-datepicker.css';
 
-import { APPLY_BUTTON_CLASS, OPENED_CLASS, BUTTON_SELECTOR } from './constants';
+import {
+  APPLY_BUTTON_CLASS,
+  OPENED_CLASS,
+  BUTTON_SELECTOR,
+  YEAR,
+  MONTH,
+  DAY,
+} from './constants';
 
 class DatepickerFacade {
   constructor($container, datepicker, $dateFrom, $dateTo = null) {
@@ -29,23 +36,34 @@ class DatepickerFacade {
       minDate: new Date(),
       buttons: this.buttons,
       isMobile: true,
-      dateFormat: 'MM.dd.yyyy',
-      classes: !this.$dateTo.length ? 'air-datepicker_md' : '',
+      dateFormat: this.isFilterDate() ? 'd MMM' : 'dd.MM.yyyy',
+      classes: this.isFilterDate() ? 'air-datepicker_md' : '',
     };
     if (this.datepicker.dataset.dateFrom && this.datepicker.dataset.dateTo) {
       this.setSelectedDates();
     }
+
     this.setRangeParams();
-    if (!this.$dateTo.length) {
+    if (this.isFilterDate()) {
       this.setFilterParams();
     }
   }
 
   setSelectedDates() {
-    this.params.selectedDates = [
-      this.datepicker.dataset.dateFrom,
-      this.datepicker.dataset.dateTo,
-    ];
+    const dateFromArray = this.datepicker.dataset.dateFrom.split('.');
+    const dateToArray = this.datepicker.dataset.dateTo.split('.');
+
+    const dateFrom = new Date(
+      dateFromArray[YEAR],
+      dateFromArray[MONTH],
+      dateFromArray[DAY],
+    );
+    const dateTo = new Date(
+      dateToArray[YEAR],
+      dateToArray[MONTH],
+      dateToArray[DAY],
+    );
+    this.params.selectedDates = [dateFrom, dateTo];
   }
 
   setRangeParams() {
@@ -56,8 +74,11 @@ class DatepickerFacade {
     };
   }
 
+  isFilterDate() {
+    return !this.$dateTo.length;
+  }
+
   setFilterParams() {
-    this.params.dateFormat = 'd MMM';
     this.params.onSelect = ({ formattedDate }) => {
       const [from, to] = formattedDate;
       if (from && to) {
