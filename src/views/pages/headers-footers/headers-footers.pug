@@ -7,15 +7,16 @@ block page
   include ../../components/header/header.pug
   include ../../components/footer/footer.pug
   
-  - const navigationData = require('../../../data/navigation-data').data;
+  - const headerNavigation = require('../../../data/header-navigation-data');
+  - const { data: footerNavigation } = require('../../../data/footer-navigation-data')
 
   .headers-footers
     .headers-footers__inner
       .headers-footers__header
-        +header({ links: navigationData })
+        +header({ data: headerNavigation })
       .headers-footers__header
-        +header({ state: 'authorized', name: 'Юлий цезарь', links: navigationData })
+        +header({ state: 'authorized', name: 'Юлий цезарь', data: headerNavigation })
       .headers-footers__footer
-        +footer
+        +footer({ data: footerNavigation })
       .headers-footers__footer-inline 
         +footer({ isSmall: true })

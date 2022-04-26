@@ -1,45 +1,34 @@
 include ../button/button.pug
 
 mixin nav(arguments = {})
-
   -
     const {
       state = 'no-authorized', 
       name = '', 
       isBurger = false,
-      links = []
+      data = []
     } = arguments
+
+    const { links, buttons } = data
 
     const classes = isBurger ? 'nav_folded' : ''
 
   nav.nav(class=classes)
     .nav__links
       each link in links
-        - const { type, text, items } = link
+        - const { type, text, items, href } = link
         if type === "link"
-          a.nav__item(href='123' data-text=text)= text
+          a.nav__item(href=href data-text=text)= text
         if type === "list"
-          .nav__item.nav__item_folded(data-text=text)= text
-            //- .nav__list 
-            //-   each item in items
-            //-     - const { href, text } = item
-            //-     a.nav__list-item(href=href)= text
-
-    //-   .nav__item.nav__item_folded(data-text="Услуги") Услуги
-    //-     .nav__list 
-    //-       a.nav__list-item(href="/mock-address/change-me") Услуги
-    //-       a.nav__list-item(href="/mock-address/change-me") Услуги
-    //-       a.nav__list-item(href="/mock-address/change-me") Услуги
-    //-   a.nav__item(href="/mock-address/change-me" data-text="Вакансии") Вакансии
-    //-   a.nav__item(href="/mock-address/change-me" data-text="Новости") Новости
-    //-   .nav__item.nav__item_folded(data-text="Соглашения") Соглашения
-    //-     .nav__list
-    //-       a.nav__list-item(href="/mock-address/change-me") Соглашения
-    //-       a.nav__list-item(href="/mock-address/change-me") Соглашения
-    //-       a.nav__list-item(href="/mock-address/change-me") Соглашения
-    //- .nav__buttons
-    //-   if state === 'authorized'
-    //-     a.nav__item.nav__item_separated(href="/mock-address/change-me" data-text=name)= name
-    //-   else
-    //-     a.nav__button.nav__button_outlined(href="login.html" ) Войти
-    //-     a.nav__button.nav__button_filled(href="register.html" ) Зарегистрироваться
+          .nav__item.nav__item_folded.js-nav__item_foled(data-text=text)= text
+             .nav__list.js-nav__list 
+               each item in items
+                 - const { href, text } = item
+                 a.nav__item(href=href data-text=text)= text
+    .nav__buttons
+        if state === 'authorized'
+           a.nav__item.nav__item_separated(href="/mock-address/change-me" data-text=name)= name
+        else
+          each button in buttons
+            - const { theme, text } = button
+            a.nav__button(class=`nav__button_${theme}` href=href)= text

@@ -33,6 +33,9 @@ html(lang="en")
     )
     block title
   body 
-    +header
+    - const headerNavigation = require('../../../data/header-navigation-data')
+    - const { data: footerNavigation } = require('../../../data/footer-navigation-data')
+  
+    +header({ data: headerNavigation })
     block page
-    +footer
+    +footer({ data: footerNavigation })
