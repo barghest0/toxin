@@ -6,8 +6,8 @@ block title
 block page
   include ../../components/color/color.pug
 
-  - const darkColors = require('../../../data/colors').dark
-  - const mainColors = require('../../../data/colors').main
+  - const { dark: darkColors } = require('../../../data/colors');
+  - const { main: mainColors } = require('../../../data/colors');
 
   .colors-fonts
     .colors-fonts__container

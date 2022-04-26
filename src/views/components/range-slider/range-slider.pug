@@ -1,4 +1,11 @@
-mixin range-slider({ startPrice = 5000, endPrice = 10000, label = 'Range Slider' } = {})
+mixin range-slider(arguments = {})
+  -
+    const {
+      startPrice = 5000,
+      endPrice = 10000,
+      label = 'Range Slider'
+    } = arguments
+
   .range-slider 
     h3.range-slider__label= label
       .range-slider__price 

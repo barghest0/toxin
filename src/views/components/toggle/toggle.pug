@@ -1,9 +1,10 @@
 mixin toggle({ text = '', name = 'offers', state = '' } = {})
   label.toggle
-    if state === 'checked'
-      input.toggle__input(type="checkbox", name=name, checked=state ? state : null)
-    else
-      input.toggle__input(type="checkbox", name=name)
+    input.toggle__input(
+      type="checkbox",
+      name=name,
+      checked=state ? state : null
+    )
     .toggle__custom-input
       span.toggle__circle
     .toggle__title= text

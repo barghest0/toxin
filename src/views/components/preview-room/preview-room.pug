@@ -29,7 +29,7 @@ mixin preview-room(arguments = {})
         .swiper-button-prev.js-swiper-button-prev
       .preview-room__content 
         .preview-room__info
-          +card-room-info({ roomNumber, isLuxury, price, size:'sm' })
+          +card-room-info({ roomNumber, isLuxury, price, size: 'sm' })
         .preview-room__reviews
           +rate({ name: `${id}-rate`, rate })
           .preview-room__reviews-value

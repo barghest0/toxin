@@ -13,12 +13,12 @@ block page
   include ../../components/preview-room/preview-room.pug
   include ../../components/pagination/pagination.pug
   -
-    const roomsData = require('../../../data/preview-rooms-data').data;
-    const expandData = require('../../../data/expand-list-data').data;
+    const { data: roomsData } = require('../../../data/preview-rooms-data');
+    const { data: expandData } = require('../../../data/expand-list-data');
     const checkboxData = require('../../../data/checkbox-list-data');
     const guestDropdownData = require('../../../data/dropdown-guests-data');
-    const apartmentsDropdownData = 
-      require('../../../data/dropdown-apartments-data').data;
+    const { data: apartmentsDropdownData } = 
+      require('../../../data/dropdown-apartments-data');
 
   .search-room
     .search-room__container
@@ -63,7 +63,10 @@ block page
                 data:  apartmentsDropdownData
               })
             .search-room__filter
-              +expand-list({ label: 'Дополнительные удобства', items: expandData })
+              +expand-list({
+                label: 'Дополнительные удобства',
+                items: expandData
+              })
         .search-room__cards
           h1.search-room__cards-title Номера, которые мы для вас подобрали
           .search-room__cards-inner

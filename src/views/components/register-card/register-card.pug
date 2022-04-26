@@ -5,7 +5,8 @@ include ../masked-text-field/masked-text-field.pug
 include ../radio-list/radio-list.pug
 
 mixin register-card({ title = 'Регистрация аккаунта' } = {})
-  - const genderData = require('../../../data/gender-data').data;
+
+  - const { data: genderData } = require('../../../data/gender-data');
 
   .register-card 
     h1.register-card__title= title

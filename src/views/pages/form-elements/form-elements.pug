@@ -27,13 +27,13 @@ block page
   -
      const guestDropdownData = require('../../../data/dropdown-guests-data');
      const checkboxData = require('../../../data/checkbox-list-data');
-     const apartmentsDropdownData = 
-      require('../../../data/dropdown-apartments-data').data;
-     const expandListData = require('../../../data/expand-list-data').data;
-     const reviewListData = require('../../../data/review-list-data').data;
-     const bulletListData = require('../../../data/bullet-list').data;
-     const feedbackData = require('../../../data/feedback-data');
-     const genderData = require('../../../data/gender-data').data;
+     const { data: apartmentsDropdownData } = 
+      require('../../../data/dropdown-apartments-data');
+     const { data: expandListData } = require('../../../data/expand-list-data');
+     const { data: reviewListData } = require('../../../data/review-list-data');
+     const { data: bulletListData } = require('../../../data/bullet-list');
+     const { man: feedbackData } = require('../../../data/feedback-data');
+     const { data: genderData } = require('../../../data/gender-data');
 
   .form-elements
     .form-elements__container
@@ -92,7 +92,7 @@ block page
             })
           .form-elements__radio
             h3.form-elements__selection-label radio button
-            +radio-list({items: genderData})
+            +radio-list({ items: genderData })
           .form-elements__toggle
             h3.form-elements__selection-label toggle
             .form-elements__toggle-column
@@ -194,4 +194,4 @@ block page
         .form-elements__review-list
           +review-list({ items: reviewListData })
         .form-elements__feedback 
-          +feedback(feedbackData.man)
+          +feedback(feedbackData)
