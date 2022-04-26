@@ -1,6 +1,6 @@
 include ../checkbox/checkbox.pug
 
-mixin checkbox-list({ label = 'checkboxes', items = []} = {})
+mixin checkbox-list({ label = 'checkboxes', items = [] } = {})
   .checkbox-list
     h3.checkbox-list__label= label
     each item in items
