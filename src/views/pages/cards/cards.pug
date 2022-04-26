@@ -19,7 +19,7 @@ block page
     bookingData.guests = guestsDropdownData;
 
   .cards
-    .container
+    .cards__container
       .cards__inner
         .cards__column 
           .cards__search-room-card
@@ -32,7 +32,7 @@ block page
           .cards__login-card
             +login-card
         .cards__column
-          .cards__datepicker.datepicker-container.js-datepicker-container
+          .cards__datepicker(data-datepicker="true")
             +datepicker({
               isInline:true, 
               dateFrom:'19.08.2022', 

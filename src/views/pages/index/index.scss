@@ -1,6 +1,11 @@
 @import '../../../assets/style/scss/index.scss';
 
 .index {
+
+  &__container {
+    @include container;
+  }
+
   &__inner {
     height: 100vh;
     display: flex;

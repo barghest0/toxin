@@ -12,6 +12,10 @@
   padding-bottom: 140px;
   background-color: #f4f4f6;
 
+  &__container {
+    @include container;
+  }
+
   &__inner {
     display: grid;
     grid-template-columns: 380px 380px 320px;

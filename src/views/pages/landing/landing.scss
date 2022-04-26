@@ -4,6 +4,11 @@
 @import '../../components/footer/footer.scss';
 
 .landing {
+
+  &__container {
+    @include container;
+  }
+
   &__intro {
     height: 830px;
     background: url('images/landing-image.jpg') center bottom no-repeat;

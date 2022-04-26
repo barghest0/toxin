@@ -24,6 +24,10 @@
 .form-elements {
   padding: 100px 0;
 
+  &__container {
+    @include container;
+  }
+
   &__inputs {
     display: grid;
     grid-template-columns:
