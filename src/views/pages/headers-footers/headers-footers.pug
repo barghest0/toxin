@@ -6,13 +6,15 @@ block title
 block page
   include ../../components/header/header.pug
   include ../../components/footer/footer.pug
+  //- - const expandListData = require('../../../data/expand-list-data').data;
+
   .headers-footers
     .headers-footers__inner
       .headers-footers__header
         +header
       .headers-footers__header
-        +header({state:'authorized', name:'Юлий цезарь'})
+        +header({ state: 'authorized', name: 'Юлий цезарь' })
       .headers-footers__footer
         +footer
       .headers-footers__footer-inline 
-        +footer({isSmall:true})
+        +footer({ isSmall: true })

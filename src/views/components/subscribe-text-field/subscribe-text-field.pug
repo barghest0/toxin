@@ -1,16 +1,16 @@
 include ../text-field/text-field.pug
 
-mixin subscribe-text-field(arguments={})
+mixin subscribe-text-field(arguments = {})
   -
     const {
-      label='',
-      name='',
-      placeholder='',
-      type='text',
-      value=''
+      label = '',
+      name = '',
+      placeholder = '',
+      type = 'text',
+      value = ''
     } = arguments
 
-  +text-field({label})
+  +text-field({ label })
     .subscribe-text-field
       form.subscribe-text-field__form
         input.subscribe-text-field__input(

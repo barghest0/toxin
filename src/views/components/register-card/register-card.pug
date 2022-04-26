@@ -4,7 +4,7 @@ include ../toggle/toggle.pug
 include ../masked-text-field/masked-text-field.pug
 include ../radio-list/radio-list.pug
 
-mixin register-card({title='Регистрация аккаунта'}={})
+mixin register-card({ title = 'Регистрация аккаунта' } = {})
   - const genderData = require('../../../data/gender-data').data;
 
   .register-card 
@@ -12,33 +12,41 @@ mixin register-card({title='Регистрация аккаунта'}={})
     form.register-card__register-form(action="register.html", method="post") 
       .register-card__block
         .register-card__block-field 
-          +default-text-field({placeholder:'Имя', name:'name'})
+          +default-text-field({ placeholder: 'Имя', name: 'name' })
         .register-card__block-field
-          +default-text-field({placeholder:'Фамилия', name:'surname'})
+          +default-text-field({ placeholder: 'Фамилия', name: 'surname' })
         .register-card__block-field 
-          +radio-list({items:genderData})
+          +radio-list({ items: genderData })
       .register-card__block.register-card__block_sm
         .register-card__block-field
           +masked-text-field({
-              label:'Дата рождения',
-              placeholder:'ДД.ММ.ГГГГ',
-              name:'birthday'
+              label: 'Дата рождения',
+              placeholder: 'ДД.ММ.ГГГГ',
+              name: 'birthday'
           })
       .register-card__block
         h3.register-card__label Данные для входа в сервис
         .register-card__block-field 
-          +default-text-field({placeholder:'Email', type:'email', name:'email'})
+          +default-text-field({ 
+              placeholder: 'Email', 
+              type: 'email', 
+              name: 'email' 
+            })
         .register-card__block-field 
           +default-text-field({
-              placeholder:'Пароль',
-              type:'password',
-              name:'user-password'
+              placeholder: 'Пароль',
+              type: 'password',
+              name: 'user-password'
            })
         .register-card__block-field 
-          +toggle({name:'offers', text:'Получать спецпредложения'})
+          +toggle({ name: 'offers', text: 'Получать спецпредложения' })
       .register-card__button 
-        +button({text:'Зарегистрироваться', type:'filled', isLargest:true})
+        +button({ 
+            text: 'Зарегистрироваться', 
+            type: 'filled', 
+            isLargest: true 
+          })
     .register-card__profile-action 
       p.register-card__profile-action-text Уже есть аккаунт на Toxin
       .register-card__profile-action-button
-        +button({text:'Войти', type:'outlined'})
+        +button({ text: 'Войти', type: 'outlined' })

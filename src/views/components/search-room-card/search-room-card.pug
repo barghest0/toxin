@@ -2,19 +2,19 @@ include ../range-date/range-date.pug
 include ../dropdown/dropdown.pug
 include ../button/button.pug
 
-mixin search-room-card({title='Найдём номера под ваши пожелания'}={})
+mixin search-room-card({ title = 'Найдём номера под ваши пожелания' } = {})
   - const guestsDropdownData = require('../../../data/dropdown-guests-data');
 
   .search-room-card 
     h1.search-room-card__title= title
     form.search-room-card__search-form(action="search-room.html")
       .search-room-card__date 
-        +range-date({from:'Прибытие',to:'Выезд'})
+        +range-date({ from: 'Прибытие', to: 'Выезд' })
       .search-room-card__guests 
         +dropdown({
-            label:'Гости',
-            type:'guests',
-            data:guestsDropdownData.clear
+            label: 'Гости',
+            type: 'guests',
+            data: guestsDropdownData.clear
          })
       .search-room-card__button
-        +button({text:'Подобрать номер', type:'filled', isLargest:true})
+        +button({ text:'Подобрать номер', type:'filled', isLargest:true })

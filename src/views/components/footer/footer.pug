@@ -1,9 +1,10 @@
 include ../logo/logo.pug
 include ../subscribe-text-field/subscribe-text-field.pug
 
-mixin footer({isSmall=false}={})
+mixin footer({ isSmall = false } = {})
   - const classes = isSmall ? 'footer_hidden' : ''
   - const smClasses = isSmall ? 'footer_sm-inline' : ''
+  
   footer.footer(class=classes)
     .footer__container
       .footer__top
@@ -35,9 +36,9 @@ mixin footer({isSmall=false}={})
           .footer__column-description
             | Получайте специальные предложения и новости сервиса
           +subscribe-text-field({
-            id:'subscribe-field',
-            name:'email',
-            placeholder:'Email'
+            id: 'subscribe-field',
+            name: 'email',
+            placeholder: 'Email'
            })
     hr.footer__line
     .footer__container

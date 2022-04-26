@@ -1,16 +1,16 @@
 include ../text-field/text-field.pug
 
-mixin masked-text-field(arguments={})
+mixin masked-text-field(arguments = {})
   -
     const {
-      label='',
-      name='',
-      placeholder='',
-      type='text',
-      value=''
+      label = '',
+      name = '',
+      placeholder = '',
+      type = 'text',
+      value = ''
     } = arguments
 
-  +text-field({label})
+  +text-field({ label })
     .masked-text-field
       input.masked-text-field__input.js-masked-text-field(
         type=type,

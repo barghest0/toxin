@@ -1,7 +1,15 @@
 include ../button/button.pug
 
-mixin nav({state='no-authorized', name='', isBurger=false}={})
-  - const classes = isBurger ? 'nav_folded' : ''
+mixin nav(arguments = {})
+  -
+    const {
+      state = 'no-authorized', 
+      name = '', 
+      isBurger = false,
+      //- links = []
+    } = arguments
+
+    const classes = isBurger ? 'nav_folded' : ''
 
   nav.nav(class=classes)
     .nav__links

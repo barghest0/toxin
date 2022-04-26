@@ -1,6 +1,6 @@
 include ../checkbox/checkbox.pug
 
-mixin expand-list({label='', state='', items={}}={})
+mixin expand-list({ label = '', state = '', items = {} } = {})
   - const classes = state === 'opened' ? 'expand-list__label_opened' : ''
 
   .expand-list
@@ -9,4 +9,4 @@ mixin expand-list({label='', state='', items={}}={})
       each item in items 
         - const { text, state, name } = item;
         .expand-list__item
-          +checkbox({text,state,name})
+          +checkbox({ text, state, name })

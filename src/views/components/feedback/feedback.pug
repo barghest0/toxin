@@ -1,15 +1,15 @@
 include ../like/like.pug
 
-mixin feedback(arguments={})
+mixin feedback(arguments = {})
   -
     const {
-      avatar='',
-      alt='',
-      name='',
-      lastVisit='',
-      likesCount='',
-      comment='',
-      likeState=''
+      avatar = '',
+      alt = '',
+      name = '',
+      lastVisit = '',
+      likesCount = '',
+      comment = '',
+      likeState = ''
     } = arguments
 
   article.feedback
@@ -21,9 +21,9 @@ mixin feedback(arguments={})
     .feedback__content
       .feedback__like
         +like({
-          id:'like-feedback',
-          name:'like-feedback',
-          count:likesCount,
-          state:likeState
+          id: 'like-feedback',
+          name: 'like-feedback',
+          count: likesCount,
+          state: likeState
         })
       p.feedback__comment= comment

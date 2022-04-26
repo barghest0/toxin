@@ -1,9 +1,9 @@
 include ../checkbox/checkbox.pug
 
-mixin checkbox-list({label='checkboxes',items=[]}={})
+mixin checkbox-list({ label = 'checkboxes', items = []} = {})
   .checkbox-list
     h3.checkbox-list__label= label
     each item in items
       - const { text, state, name } = item;
       .checkbox-list__item
-        +checkbox({text,state,name})
+        +checkbox({ text, state, name })

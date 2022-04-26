@@ -1,6 +1,6 @@
 include ../datepicker/datepicker.pug
 
-mixin filter-date({label='', dateFrom='', dateTo='', placeholder=''}={})
+mixin filter-date({ label = '', dateFrom = '', dateTo = '', placeholder = '' } = {})
   -
     const months = [
       'Янв',
@@ -35,7 +35,7 @@ mixin filter-date({label='', dateFrom='', dateTo='', placeholder=''}={})
       'Выберите дату'
 
 
-  +text-field({label})
+  +text-field({ label })
     .filter-date(data-datepicker="true")
       .filter-date__field
         input.filter-date__input.js-filter-date__input(
@@ -45,4 +45,4 @@ mixin filter-date({label='', dateFrom='', dateTo='', placeholder=''}={})
           autocomplete="off"
         )
       .filter-date__datepicker
-        +datepicker({dateFrom,dateTo})
+        +datepicker({ dateFrom, dateTo })

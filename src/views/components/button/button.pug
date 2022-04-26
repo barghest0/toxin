@@ -1,5 +1,12 @@
-mixin button({text='',type='outlined',isLargest=false,state=''}={})
+mixin button(arguments = {})
   -
+    const {
+      text = '',
+      type = 'outlined', 
+      isLargest = false , 
+      state = ''
+    } = arguments
+
     const classes = 
       isLargest ?
       `button_largest button_${type}`: 

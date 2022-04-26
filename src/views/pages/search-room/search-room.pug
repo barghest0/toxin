@@ -30,40 +30,40 @@ block page
             span.search-room__filters-close.js-search-room__filters-close
             .search-room__filter
               +filter-date({
-                label:'Даты пребывания в отеле',
-                dateFrom:'19.08.2022',
-                dateTo:'23.08.2022'
+                label: 'Даты пребывания в отеле',
+                dateFrom: '19.08.2022',
+                dateTo: '23.08.2022'
               })
             .search-room__filter
               +dropdown({
-                label:'Гости',
-                type:'guests',
-                size:'md',
-                data:guestDropdownData.withChildren
+                label: 'Гости',
+                type: 'guests',
+                size: 'md',
+                data: guestDropdownData.withChildren
               })
             .search-room__filter 
-              +range-slider({label:'Диапазон цены'})
+              +range-slider({ label: 'Диапазон цены' })
               .search-room__slider-description
                | Стоимость за сутки пребывания в номере
             .search-room__filter 
               +checkbox-list({
-                  label:'Правила дома', 
-                  items:checkboxData.default
+                  label: 'Правила дома', 
+                  items: checkboxData.default
                 })
             .search-room__filter 
               +rich-checkbox-list({
-                label:'Доступность',
-                items:checkboxData.rich
+                label: 'Доступность',
+                items: checkboxData.rich
               })
             .search-room__filter
               +dropdown({
-                label:'Удобства номера',
-                size:'md',
-                type:'apartments',
-                data: apartmentsDropdownData
+                label: 'Удобства номера',
+                size: 'md',
+                type: 'apartments',
+                data:  apartmentsDropdownData
               })
             .search-room__filter
-              +expand-list({label:'Дополнительные удобства', items:expandData})
+              +expand-list({ label: 'Дополнительные удобства', items: expandData })
         .search-room__cards
           h1.search-room__cards-title Номера, которые мы для вас подобрали
           .search-room__cards-inner

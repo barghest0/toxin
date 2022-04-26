@@ -14,11 +14,11 @@ block page
       .colors-fonts__inner
         .colors-fonts__colors
           each darkColor in darkColors 
-            - const {hex, text, opacity} = darkColor
-            +color({ hex, text, opacity})
+            - const { hex, text, opacity } = darkColor
+            +color({ hex, text, opacity })
           each mainColor in mainColors 
-            - const {hex, text, theme} = mainColor
-            +color({ hex, text, theme})
+            - const { hex, text, theme } = mainColor
+            +color({ hex, text, theme })
         .colors-fonts__fonts
           .colors-fonts__font
             h1.colors-fonts__tag.colors-fonts__tag_type_widget h1

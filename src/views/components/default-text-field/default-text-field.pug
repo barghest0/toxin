@@ -1,17 +1,17 @@
 include ../text-field/text-field.pug
 
-mixin default-text-field(arguments={})
-  - 
+mixin default-text-field(arguments = {})
+  -
     const {
-      label='',
-      subLabel='',
-      name='',
-      placeholder='',
-      type='text', 
-      value=''
+      label = '',
+      subLabel = '',
+      name = '',
+      placeholder = '',
+      type = 'text', 
+      value = ''
     } = arguments
 
-  +text-field({label,subLabel})
+  +text-field({ label, subLabel })
     .default-text-field
       input.default-text-field__input(
         type=type,

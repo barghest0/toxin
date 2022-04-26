@@ -1,17 +1,17 @@
 include ../button/button.pug
 
-mixin dropdown(arguments={})
+mixin dropdown(arguments = {})
   -
     const {
-      label='',
-      subLabel='',
-      size='lg',
-      type='guest',
-      data={}, 
-      state=''
+      label = '',
+      subLabel = '',
+      size = 'lg',
+      type = 'guest',
+      data = {}, 
+      state = ''
     } = arguments
 
-  - const classes = state === 'opened' ? 'dropdown__container_opened' : '';
+    const classes = state === 'opened' ? 'dropdown__container_opened' : '';
 
   .dropdown
     .dropdown__labels
@@ -29,9 +29,9 @@ mixin dropdown(arguments={})
               .dropdown__list-decrement.js-dropdown__list-decrement -
               .dropdown__list-counter.js-dropdown__list-counter= count
               .dropdown__list-increment.js-dropdown__list-increment +
-        if (size==='lg')
+        if (size === 'lg')
           .dropdown__buttons
             .dropdown__clear-button.js-dropdown__clear-button
-              +button({type:'no-bordered',text:'Очистить'}) 
+              +button({ type: 'no-bordered', text: 'Очистить' }) 
             .dropdown__apply-button.js-dropdown__apply-button 
-              +button({type:'no-bordered',text:'Применить'}) 
+              +button({ type: 'no-bordered', text: 'Применить' }) 
