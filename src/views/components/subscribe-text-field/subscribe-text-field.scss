@@ -1,6 +1,9 @@
-@import '../text-field/text-field.scss';
-
 .subscribe-text-field {
+  &__label {
+    @include block-label;
+    margin-bottom: 5px;
+  }
+
   &__form {
     position: relative;
   }

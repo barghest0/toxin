@@ -11,21 +11,23 @@ mixin range-date(arguments = {})
 
   .range-date(data-datepicker="true")
     .range-date__fields
-      +text-field({ label: from })
-        .range-date__field
-          input.range-date__input.js-range-date__input_from.range-date__input_from(
-            name=name,
-            placeholder="ДД.ММ.ГГГГ",
-            autocomplete="off",
-            value=dateFrom
-          )
-      +text-field({label:to})
-        .range-date__field
-          input.range-date__input.js-range-date__input_to.range-date__input_to(
-            name=name,
-            placeholder="ДД.ММ.ГГГГ",
-            autocomplete="off",
-            value=dateTo
-          )
+        .range-date__container
+          .range-date__label=from
+          .range-date__field
+            input.range-date__input.js-range-date__input_from.range-date__input_from(
+              name=name,
+              placeholder="ДД.ММ.ГГГГ",
+              autocomplete="off",
+              value=dateFrom
+            )
+        .range-date__container
+          .range-date__label=to
+          .range-date__field
+            input.range-date__input.js-range-date__input_to.range-date__input_to(
+              name=name,
+              placeholder="ДД.ММ.ГГГГ",
+              autocomplete="off",
+              value=dateTo
+            )
     .range-date__datepicker
       +datepicker({ dateFrom, dateTo })

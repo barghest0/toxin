@@ -20,7 +20,7 @@ mixin nav(arguments = {})
         if type === "link"
           a.nav__item(href=href data-text=text)= text
         if type === "list"
-          .nav__item.nav__item_folded.js-nav__item_foled(data-text=text)= text
+          .nav__item.nav__item_folded.js-nav__item_folded(data-text=text)= text
              .nav__list.js-nav__list 
                each item in items
                  - const { href, text } = item
@@ -30,5 +30,5 @@ mixin nav(arguments = {})
            a.nav__item.nav__item_separated(href="/mock-address/change-me" data-text=name)= name
         else
           each button in buttons
-            - const { theme, text } = button
+            - const { theme, text, href } = button
             a.nav__button(class=`nav__button_${theme}` href=href)= text

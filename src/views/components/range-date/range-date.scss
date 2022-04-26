@@ -1,6 +1,10 @@
-@import '../text-field/text-field.scss';
 .range-date {
   position: relative;
+
+  &__label {
+    @include block-label;
+    margin-bottom: 5px;
+  }
 
   &__fields {
     display: flex;
@@ -12,7 +16,7 @@
     position: relative;
 
     &::after {
-      @include dropdown-arrow(18px, 17px);
+      @include dropdown-arrow(15px, 17px);
     }
 
     &_opened {

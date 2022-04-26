@@ -1,5 +1,3 @@
-include ../text-field/text-field.pug
-
 mixin subscribe-text-field(arguments = {})
   -
     const {
@@ -10,16 +8,16 @@ mixin subscribe-text-field(arguments = {})
       value = ''
     } = arguments
 
-  +text-field({ label })
-    .subscribe-text-field
-      form.subscribe-text-field__form
-        input.subscribe-text-field__input(
-          type="email",
-          name=name,
-          placeholder=placeholder
+  .subscribe-text-field
+    .subscribe-text-field__label= label
+    form.subscribe-text-field__form
+      input.subscribe-text-field__input(
+        type="email",
+        name=name,
+        placeholder=placeholder
+      )
+      button.subscribe-text-field__arrow(type="submit")
+        img.subscribe-text-field__arrow-img(
+          src="assets/images/subscribe-arrow.svg",
+          alt="arrow"
         )
-        button.subscribe-text-field__arrow(type="submit")
-          img.subscribe-text-field__arrow-img(
-            src="assets/images/subscribe-arrow.svg",
-            alt="arrow"
-          )

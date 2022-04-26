@@ -1,7 +1,10 @@
-@import '../text-field/text-field.scss';
-
 .filter-date {
   position: relative;
+
+  &__label {
+    @include block-label;
+    margin-bottom: 5px;
+  }
 
   &__input {
     cursor: pointer;
@@ -14,6 +17,10 @@
   }
 
   &__field {
+    display: flex;
+    align-items: center;
+    position: relative;
+
     &::after {
       @include dropdown-arrow(18px, 17px);
     }
