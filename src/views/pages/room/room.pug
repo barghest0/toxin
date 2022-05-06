@@ -11,11 +11,11 @@ block page
   include ../../components/booking-card/booking-card.pug
   -
      const feedbackData = require('../../../data/feedback-data');
-     const bulletListData = require('../../../data/bullet-list').data;
-     const reviewListData = require('../../../data/review-list-data').data;
-     const bookingData = require('../../../data/booking-data').data;
-     const guestsDropdownData =
-        require('../../../data/dropdown-guests-data').withoutChildren;
+     const { data: bulletListData } = require('../../../data/bullet-list');
+     const { data: reviewListData } = require('../../../data/review-list-data');
+     const { data: bookingData } = require('../../../data/booking-data');
+     const { withoutChildren: guestsDropdownData } =
+        require('../../../data/dropdown-guests-data');
      bookingData.guests = guestsDropdownData;
 
   .room
@@ -35,17 +35,17 @@ block page
           src="assets/images/third-image-room.jpg",
           alt="Room photo"
         )
-    .container
+    .room__container
       .room__inner 
         .room__overview
           .room__reviews
             section.room__about
               h3.room__label Сведения о номере
-              +review-list({items:reviewListData})
+              +review-list({ items: reviewListData })
             section.room__impressions
               h3.room__label Впечатления от номера
               .room__impressions-chart
-                +chart({great:130,good:65,satisfied:65})
+                +chart({ great: 130, good: 65, satisfied: 65 })
           section.room__feedback 
             h3.room__label.room__label_flexed Отзывы посетителей номера
               .room__feedback-count 2 отзыва
@@ -58,7 +58,7 @@ block page
             section.room__rules 
               h3.room__label.room__label_separated Правила
               .room__rules-list 
-                +bullet-list({items:bulletListData})
+                +bullet-list({ items: bulletListData })
             section.room__cancel
               h3.room__label Отмена
               p.room__cancel-text

@@ -1,6 +1,10 @@
-mixin rich-checkbox({text='',subtext='', name='', state=''}={})
+mixin rich-checkbox({ text = '',subtext = '', name = '', state = '' } = {})
   label.rich-checkbox
-    input.rich-checkbox__input(type="checkbox", name=name, checked=state?state:null)
+    input.rich-checkbox__input(
+      type="checkbox",
+      name=name,
+      checked=state ? state : null
+    )
     span.rich-checkbox__custom-input
     .rich-checkbox__titles
       .rich-checkbox__title= text

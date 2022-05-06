@@ -1,6 +1,14 @@
-mixin card-room-info({roomNumber='', isLuxury='', price='', size=''}={})
-  - const blockClasses = `card-room-info_${size}`
-  - const classes = `card-room-info__room-number_${size}`
+mixin card-room-info(arguments = {})
+  -
+    const {
+      roomNumber = '', 
+      isLuxury = '', 
+      price = '', 
+      size = ''
+    } = arguments
+
+    const blockClasses = `card-room-info_${size}`
+    const classes = `card-room-info__room-number_${size}`
 
   .card-room-info(class=blockClasses)
     .card-room-info__room
@@ -9,5 +17,5 @@ mixin card-room-info({roomNumber='', isLuxury='', price='', size=''}={})
       if isLuxury
         .card-room-info__room-luxury Люкс
     .card-room-info__price
-      .card-room-info__price-value #{ price }₽
+      .card-room-info__price-value #{price}₽
       .card-room-info__price-in-time в сутки

@@ -1,9 +1,10 @@
 include ../logo/logo.pug
 include ../subscribe-text-field/subscribe-text-field.pug
 
-mixin footer({isSmall=false}={})
+mixin footer({ isSmall = false, data = [] } = {})
   - const classes = isSmall ? 'footer_hidden' : ''
   - const smClasses = isSmall ? 'footer_sm-inline' : ''
+  
   footer.footer(class=classes)
     .footer__container
       .footer__top
@@ -13,34 +14,24 @@ mixin footer({isSmall=false}={})
           .footer__company-description 
             | Бронирование номеров в лучшем отеле 2019 года 
             | по версии ассоциации «Отельные взгляды»
-        .footer__column 
-          h3.footer__column-title Навигация
-          a.footer__column-item(href="/mock-address/change-me") О нас
-          a.footer__column-item(href="/mock-address/change-me") Новости
-          a.footer__column-item(href="/mock-address/change-me") Служба поддержки
-          a.footer__column-item(href="/mock-address/change-me") Услуги
-        .footer__column
-          h3.footer__column-title О нас
-          a.footer__column-item(href="/mock-address/change-me") О сервисе
-          a.footer__column-item(href="/mock-address/change-me") Наша команда
-          a.footer__column-item(href="/mock-address/change-me") Вакансии
-          a.footer__column-item(href="/mock-address/change-me") Инвесторы
-        .footer__column
-          h3.footer__column-title Служба поддержки
-          a.footer__column-item(href="/mock-address/change-me") Соглашения
-          a.footer__column-item(href="/mock-address/change-me") Сообщества
-          a.footer__column-item(href="/mock-address/change-me") Связь с нами
+        each column in data
+          - const { label, links } = column
+          .footer__column 
+            h3.footer__column-title= label
+            each link in links
+              - const { text, href } = link
+              a.footer__column-item(href=href)=text
         .footer__column.footer__column_sm
           h3.footer__column-title Подписка
           .footer__column-description
             | Получайте специальные предложения и новости сервиса
           +subscribe-text-field({
-            id:'subscribe-field',
-            name:'email',
-            placeholder:'Email'
+            id: 'subscribe-field',
+            name: 'email',
+            placeholder: 'Email'
            })
     hr.footer__line
-    .container
+    .footer__container
       .footer__bottom
         .footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
         .footer__messengers

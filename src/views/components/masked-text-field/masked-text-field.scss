@@ -1,4 +1,9 @@
 .masked-text-field {
+  &__label {
+    @include block-label;
+    margin-bottom: 5px;
+  }
+
   &__input {
     @include text-field;
   }

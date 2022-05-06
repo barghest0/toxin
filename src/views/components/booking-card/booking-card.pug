@@ -3,22 +3,22 @@ include ../card-room-info/card-room-info.pug
 include ../dropdown/dropdown.pug
 include ../button/button.pug
 
-mixin booking-card(arguments={})
+mixin booking-card(arguments = {})
   -
     const {
-      roomNumber='',
-      price='', 
-      isLuxury=false,
-      dateFrom='',
-      dateTo='',
-      days='',
-      servicePrice='',
-      serviceDiscount='',
-      addServicePrice='',
-      addServiceDiscount='',
-      guests=[]
+      roomNumber = '',
+      price = '', 
+      isLuxury = false,
+      dateFrom = '',
+      dateTo = '',
+      days = '',
+      servicePrice = '',
+      serviceDiscount = '',
+      addServicePrice = '',
+      addServiceDiscount = '',
+      guests = []
     } = arguments
-  -
+  
     const daysPrice =
       price * days;
 
@@ -59,11 +59,11 @@ mixin booking-card(arguments={})
 
   .booking-card
     .booking-card__room-info 
-      +card-room-info({roomNumber, price, isLuxury, size:'lg'})
+      +card-room-info({ roomNumber, price, isLuxury, size: 'lg' })
     .booking-card__date 
-      +range-date({from:'Прибытие', to:'Выезд', dateFrom, dateTo})
+      +range-date({ from: 'Прибытие', to: 'Выезд', dateFrom, dateTo })
     .booking-card__guests 
-      +dropdown({label:'Гости',type:'guests', data:guests})
+      +dropdown({ label: 'Гости', type: 'guests', data: guests })
     .booking-card__cost 
       .booking-card__day= dayText
       .booking-card__day-price= dayPriceText
@@ -92,4 +92,4 @@ mixin booking-card(arguments={})
       .booking-card__points
       .booking-card__final-cost-text= finalCostText
     .booking-card__button 
-      +button({text:'Забронировать',type:'filled',isLargest:true})
+      +button({ text: 'Забронировать', type: 'filled', isLargest: true })

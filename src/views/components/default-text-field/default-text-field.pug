@@ -1,21 +1,23 @@
-include ../text-field/text-field.pug
-
-mixin default-text-field(arguments={})
-  - 
+mixin default-text-field(arguments = {})
+  -
     const {
-      label='',
-      subLabel='',
-      name='',
-      placeholder='',
-      type='text', 
-      value=''
+      label = '',
+      subLabel = '',
+      name = '',
+      placeholder = '',
+      type = 'text', 
+      value = ''
     } = arguments
 
-  +text-field({label,subLabel})
-    .default-text-field
-      input.default-text-field__input(
-        type=type,
-        name=name,
-        placeholder=placeholder,
-        value=value
-      )
+  .default-text-field
+    if label
+      .default-text-field__labels
+        .default-text-field__label=label
+        if subLabel
+          .default-text-field__sub-label=subLabel
+    input.default-text-field__input(
+      type=type,
+      name=name,
+      placeholder=placeholder,
+      value=value
+    )

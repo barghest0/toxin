@@ -9,6 +9,11 @@
 @import '../../components/range-date/range-date.scss';
 
 .room {
+
+  &__container {
+    @include container;
+  }
+
   &__label {
     margin-bottom: 20px;
     @include title-inside-widget;

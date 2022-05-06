@@ -3,17 +3,18 @@ include ../rate/rate.pug
 include ../dropdown/dropdown.pug
 include ../button/button.pug
 
-mixin preview-room(arguments={})
+mixin preview-room(arguments = {})
   -
     const {
-      roomNumber='',
-      id='0',
-      images=[],
-      isLuxury=false,
-      rate=0,
-      price=0,
-      reviews=''
+      roomNumber = '',
+      id = '0',
+      images = [],
+      isLuxury = false,
+      rate = 0,
+      price = 0,
+      reviews = ''
     } = arguments
+
   .preview-room
     a.preview-room__link(href="room.html")
       .preview-room__carousel.swiper.js-swiper
@@ -28,9 +29,9 @@ mixin preview-room(arguments={})
         .swiper-button-prev.js-swiper-button-prev
       .preview-room__content 
         .preview-room__info
-          +card-room-info({roomNumber,isLuxury,price,size:'sm'})
+          +card-room-info({ roomNumber, isLuxury, price, size: 'sm' })
         .preview-room__reviews
-          +rate({name:`${id}-rate`,rate})
+          +rate({ name: `${id}-rate`, rate })
           .preview-room__reviews-value
             span.preview-room__reviews-number= reviews
             span.preview-room__reviews-text Отзывов

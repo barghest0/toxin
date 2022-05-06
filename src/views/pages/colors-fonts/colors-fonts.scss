@@ -4,6 +4,16 @@
 .colors-fonts {
   padding: 100px 0;
 
+  &__container {
+    @include container;
+  }
+
+  &__colors{
+    display: flex;
+    flex-direction: column;
+    row-gap:20px;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
