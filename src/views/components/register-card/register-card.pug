@@ -10,7 +10,7 @@ mixin register-card({ title = 'Регистрация аккаунта' } = {})
 
   .register-card 
     h1.register-card__title= title
-    form.register-card__register-form(action="register.html", method="post") 
+    form.register-card__register-form(action="register.html", method="post")
       .register-card__block
         .register-card__block-field 
           +default-text-field({ placeholder: 'Имя', name: 'name' })

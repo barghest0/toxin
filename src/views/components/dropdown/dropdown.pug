@@ -1,6 +1,6 @@
 include ../button/button.pug
 
-mixin dropdown(arguments = {})
+mixin dropdown(props = {})
   -
     const {
       label = '',
@@ -9,16 +9,19 @@ mixin dropdown(arguments = {})
       type = 'guest',
       data = {}, 
       state = ''
-    } = arguments
+    } = props
 
-    const classes = state === 'opened' ? 'dropdown__container_opened' : '';
+    const containerClasses = state === 'opened' ? 'dropdown__container_opened' : '';
 
   .dropdown
     .dropdown__labels
       h3.dropdown__label= label
       if subLabel
         h3.dropdown__sub-label= subLabel
-    .dropdown__container.js-dropdown__container(class=classes, data-type=type)
+    .dropdown__container.js-dropdown__container(
+        class=containerClasses,
+        data-type=type
+      )
       .dropdown__field.js-dropdown__field
       .dropdown__list.js-dropdown__list
         each listItem in data

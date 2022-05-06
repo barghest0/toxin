@@ -1,6 +1,6 @@
 include ../like/like.pug
 
-mixin feedback(arguments = {})
+mixin feedback(props = {})
   -
     const {
       avatar = '',
@@ -10,7 +10,7 @@ mixin feedback(arguments = {})
       likesCount = '',
       comment = '',
       likeState = ''
-    } = arguments
+    } = props
 
   article.feedback
     .feedback__user

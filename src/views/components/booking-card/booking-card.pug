@@ -3,7 +3,7 @@ include ../card-room-info/card-room-info.pug
 include ../dropdown/dropdown.pug
 include ../button/button.pug
 
-mixin booking-card(arguments = {})
+mixin booking-card(props = {})
   -
     const {
       roomNumber = '',
@@ -17,7 +17,7 @@ mixin booking-card(arguments = {})
       addServicePrice = '',
       addServiceDiscount = '',
       guests = []
-    } = arguments
+    } = props
   
     const daysPrice =
       price * days;

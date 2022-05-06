@@ -1,4 +1,4 @@
-mixin default-text-field(arguments = {})
+mixin default-text-field(props = {})
   -
     const {
       label = '',
@@ -7,7 +7,7 @@ mixin default-text-field(arguments = {})
       placeholder = '',
       type = 'text', 
       value = ''
-    } = arguments
+    } = props
 
   .default-text-field
     if label

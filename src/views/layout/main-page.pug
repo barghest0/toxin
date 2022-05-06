@@ -33,8 +33,10 @@ html(lang="en")
     )
     block title
   body 
-    - const headerNavigation = require('../../../data/header-navigation-data')
-    - const { data: footerNavigation } = require('../../../data/footer-navigation-data')
+    - const headerNavigation =
+        require('../../../data/header-navigation-data')
+    - const { data: footerNavigation } = 
+        require('../../../data/footer-navigation-data')
   
     +header({ data: headerNavigation })
     block page

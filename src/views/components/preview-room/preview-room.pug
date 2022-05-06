@@ -3,7 +3,7 @@ include ../rate/rate.pug
 include ../dropdown/dropdown.pug
 include ../button/button.pug
 
-mixin preview-room(arguments = {})
+mixin preview-room(props = {})
   -
     const {
       roomNumber = '',
@@ -13,7 +13,7 @@ mixin preview-room(arguments = {})
       rate = 0,
       price = 0,
       reviews = ''
-    } = arguments
+    } = props
 
   .preview-room
     a.preview-room__link(href="room.html")

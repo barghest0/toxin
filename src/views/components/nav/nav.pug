@@ -1,19 +1,19 @@
 include ../button/button.pug
 
-mixin nav(arguments = {})
+mixin nav(props = {})
   -
     const {
       state = 'no-authorized', 
       name = '', 
       isBurger = false,
-      data = []
-    } = arguments
+      data = {}
+    } = props
 
     const { links, buttons } = data
 
-    const classes = isBurger ? 'nav_folded' : ''
+    const navClasses = isBurger ? 'nav_folded' : ''
 
-  nav.nav(class=classes)
+  nav.nav(class=navClasses)
     .nav__links
       each link in links
         - const { type, text, items, href } = link
@@ -27,7 +27,9 @@ mixin nav(arguments = {})
                  a.nav__item(href=href data-text=text)= text
     .nav__buttons
         if state === 'authorized'
-           a.nav__item.nav__item_separated(href="/mock-address/change-me" data-text=name)= name
+          a.nav__item.nav__item_separated(
+            href="/mock-address/change-me" data-text=name
+          )= name
         else
           each button in buttons
             - const { theme, text, href } = button

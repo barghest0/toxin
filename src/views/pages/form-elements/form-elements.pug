@@ -28,9 +28,11 @@ block page
      const guestDropdownData = require('../../../data/dropdown-guests-data');
      const checkboxData = require('../../../data/checkbox-list-data');
      const { data: apartmentsDropdownData } = 
-      require('../../../data/dropdown-apartments-data');
-     const { data: expandListData } = require('../../../data/expand-list-data');
-     const { data: reviewListData } = require('../../../data/review-list-data');
+        require('../../../data/dropdown-apartments-data');
+     const { data: expandListData } = 
+        require('../../../data/expand-list-data');
+     const { data: reviewListData } = 
+        require('../../../data/review-list-data');
      const { data: bulletListData } = require('../../../data/bullet-list');
      const { man: feedbackData } = require('../../../data/feedback-data');
      const { data: genderData } = require('../../../data/gender-data');
@@ -128,7 +130,11 @@ block page
               +button({ text: 'click me', type: 'outlined', state: 'hovered' })
             .form-elements__buttons.form-elements__buttons_no-bordered
               +button({ text: 'click me', type: 'no-bordered' })
-              +button({ text: 'click me', type: 'no-bordered', state: 'hovered' })
+              +button({ 
+                text: 'click me', 
+                type: 'no-bordered', 
+                state: 'hovered' 
+              })
             .form-elements__buttons.form-elements__buttons_largest
               +button({ 
                   text: 'перейти к оплате', 

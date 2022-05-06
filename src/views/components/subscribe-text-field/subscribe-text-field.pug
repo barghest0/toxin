@@ -1,4 +1,4 @@
-mixin subscribe-text-field(arguments = {})
+mixin subscribe-text-field(props = {})
   -
     const {
       label = '',
@@ -6,7 +6,7 @@ mixin subscribe-text-field(arguments = {})
       placeholder = '',
       type = 'text',
       value = ''
-    } = arguments
+    } = props
 
   .subscribe-text-field
     .subscribe-text-field__label= label

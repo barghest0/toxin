@@ -1,20 +1,21 @@
 include ../datepicker/datepicker.pug
 
-mixin range-date(arguments = {})
+mixin range-date(props = {})
   -
     const { 
       from = 'Прибытие', 
       to = 'Выезд', 
       dateFrom = '', 
       dateTo = '' 
-    } = arguments
+    } = props
 
   .range-date(data-datepicker="true")
     .range-date__fields
         .range-date__container
           .range-date__label=from
           .range-date__field
-            input.range-date__input.js-range-date__input_from.range-date__input_from(
+            input.range-date__input(
+              class="range-date__input_from js-range-date__input_from"
               name=name,
               placeholder="ДД.ММ.ГГГГ",
               autocomplete="off",
@@ -23,7 +24,8 @@ mixin range-date(arguments = {})
         .range-date__container
           .range-date__label=to
           .range-date__field
-            input.range-date__input.js-range-date__input_to.range-date__input_to(
+            input.range-date__input(
+              class="range-date__input_to js-range-date__input_to"
               name=name,
               placeholder="ДД.ММ.ГГГГ",
               autocomplete="off",

@@ -8,14 +8,19 @@ block page
   include ../../components/footer/footer.pug
   
   - const headerNavigation = require('../../../data/header-navigation-data');
-  - const { data: footerNavigation } = require('../../../data/footer-navigation-data')
+  - const { data: footerNavigation } = 
+      require('../../../data/footer-navigation-data')
 
   .headers-footers
     .headers-footers__inner
       .headers-footers__header
         +header({ data: headerNavigation })
       .headers-footers__header
-        +header({ state: 'authorized', name: 'Юлий цезарь', data: headerNavigation })
+        +header({ 
+          state: 'authorized', 
+          name: 'Юлий цезарь', 
+          data: headerNavigation 
+        })
       .headers-footers__footer
         +footer({ data: footerNavigation })
       .headers-footers__footer-inline 

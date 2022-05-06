@@ -2,10 +2,10 @@ include ../logo/logo.pug
 include ../subscribe-text-field/subscribe-text-field.pug
 
 mixin footer({ isSmall = false, data = [] } = {})
-  - const classes = isSmall ? 'footer_hidden' : ''
-  - const smClasses = isSmall ? 'footer_sm-inline' : ''
+  - const footerClasses = isSmall ? 'footer_hidden' : ''
+  - const smFooterClasses = isSmall ? 'footer_sm-inline' : ''
   
-  footer.footer(class=classes)
+  footer.footer(class=footerClasses)
     .footer__container
       .footer__top
         .footer__company
@@ -62,7 +62,7 @@ mixin footer({ isSmall = false, data = [] } = {})
               src="assets/images/instagram.svg",
               alt="instagram"
             )
-  footer.footer.footer_sm(class=smClasses)
+  footer.footer.footer_sm(class=smFooterClasses)
     .footer__company-logo
       +logo
     .footer__copyright Copyright © 2018 Toxin отель. Все права защищены.

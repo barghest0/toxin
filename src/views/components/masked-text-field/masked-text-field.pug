@@ -1,4 +1,4 @@
-mixin masked-text-field(arguments = {})
+mixin masked-text-field(props = {})
   -
     const {
       label = '',
@@ -6,7 +6,7 @@ mixin masked-text-field(arguments = {})
       placeholder = '',
       type = 'text',
       value = ''
-    } = arguments
+    } = props
 
   .masked-text-field
     .masked-text-field__label= label

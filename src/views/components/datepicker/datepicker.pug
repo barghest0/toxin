@@ -1,8 +1,8 @@
 mixin datepicker({ isInline = false, dateFrom = '', dateTo = '' } = {})
-  - const classes = isInline ? 'datepicker_inline' : null;
+  - const datepickerClasses = isInline ? 'datepicker_inline' : null;
 
   .datepicker.js-datepicker(
-    class=classes,
+    class=datepickerClasses,
     data-date-from=dateFrom,
     data-date-to=dateTo
   )

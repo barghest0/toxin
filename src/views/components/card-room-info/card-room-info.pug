@@ -1,19 +1,19 @@
-mixin card-room-info(arguments = {})
+mixin card-room-info(props = {})
   -
     const {
       roomNumber = '', 
       isLuxury = '', 
       price = '', 
       size = ''
-    } = arguments
+    } = props
 
-    const blockClasses = `card-room-info_${size}`
-    const classes = `card-room-info__room-number_${size}`
+    const infoClasses = `card-room-info_${size}`
+    const numberClasses = `card-room-info__room-number_${size}`
 
-  .card-room-info(class=blockClasses)
+  .card-room-info(class=infoClasses)
     .card-room-info__room
       .card-room-info__room-number-symbol №
-      .card-room-info__room-number(class=classes)= roomNumber
+      .card-room-info__room-number(class=numberClasses)= roomNumber
       if isLuxury
         .card-room-info__room-luxury Люкс
     .card-room-info__price
