@@ -33,11 +33,14 @@ html(lang="en")
     )
     block title
   body 
-    - const headerNavigation =
-        require('../../../data/header-navigation-data')
-    - const { data: footerNavigation } = 
-        require('../../../data/footer-navigation-data')
+    -
+      const headerNavigation =
+          require('../../../data/header-navigation-data')
+      const { data: footerNavigation } = 
+          require('../../../data/footer-navigation-data')
+      const { data: footerSocials } =
+          require('../../../data/socials-data')
   
     +header({ data: headerNavigation })
     block page
-    +footer({ data: footerNavigation })
+    +footer({ data: footerNavigation, socials: footerSocials  })

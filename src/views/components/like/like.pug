@@ -1,6 +1,7 @@
 mixin like({ name = '', count = 0, state = '' } = {})
-  - const spanClasses = 
-      state === 'checked' ? 'like__custom-input_active' : '';
+  - 
+    const spanClasses = 
+        state === 'checked' ? 'like__custom-input_active' : '';
 
   label.like
     input.like__input(type="checkbox", name=name, checked=state ? state : null)

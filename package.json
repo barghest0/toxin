@@ -10,11 +10,7 @@
     "lint": "eslint \"src/**/*.js\"",
     "deploy": "gh-pages -d dist"
   },
-  "browserslist": [
-    "> 1%",
-    "last 4 version",
-    "IE 10"
-  ],
+  "browserslist": ["> 1%", "last 4 version", "IE 10"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/barghest0/MetaLampLayoutPratice.git"

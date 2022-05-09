@@ -4,8 +4,9 @@ include ../button/button.pug
 
 mixin search-room-card({ title = 'Найдём номера под ваши пожелания' } = {})
 
-  - const { clear: guestsDropdownData } = 
-      require('../../../data/dropdown-guests-data');
+  - 
+    const { clear: guestsDropdownData } = 
+        require('../../../data/dropdown-guests-data');
 
   .search-room-card 
     h1.search-room-card__title= title

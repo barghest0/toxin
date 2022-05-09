@@ -6,10 +6,13 @@ block title
 block page
   include ../../components/header/header.pug
   include ../../components/footer/footer.pug
-  
-  - const headerNavigation = require('../../../data/header-navigation-data');
-  - const { data: footerNavigation } = 
-      require('../../../data/footer-navigation-data')
+
+  -
+     const headerNavigation = require('../../../data/header-navigation-data')
+     const { data: footerNavigation } = 
+        require('../../../data/footer-navigation-data')
+     const { data: footerSocials } = 
+        require('../../../data/socials-data')
 
   .headers-footers
     .headers-footers__inner
@@ -22,6 +25,6 @@ block page
           data: headerNavigation 
         })
       .headers-footers__footer
-        +footer({ data: footerNavigation })
+        +footer({ data: footerNavigation, socials: footerSocials })
       .headers-footers__footer-inline 
-        +footer({ isSmall: true })
+        +footer({ isSmall: true, socials: footerSocials})

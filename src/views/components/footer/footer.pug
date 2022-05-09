@@ -1,7 +1,8 @@
 include ../logo/logo.pug
 include ../subscribe-text-field/subscribe-text-field.pug
+include ../social/social.pug
 
-mixin footer({ isSmall = false, data = [] } = {})
+mixin footer({ isSmall = false, data = [], socials = [] } = {})
   - const footerClasses = isSmall ? 'footer_hidden' : ''
   - const smFooterClasses = isSmall ? 'footer_sm-inline' : ''
   
@@ -34,63 +35,15 @@ mixin footer({ isSmall = false, data = [] } = {})
     .footer__container
       .footer__bottom
         .footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
-        .footer__messengers
-          a.footer__messenger-item(
-            href="https://twitter.com/?",
-            target="_blank",
-            rel="noopener noreferrer"
-          )
-            img.footer__messenger-image(
-              src="assets/images/twitter.svg",
-              alt="twitter"
-            )
-          a.footer__messenger-item(
-            href="https://www.facebook.com/",
-            target="_blank",
-            rel="noopener noreferrer"
-          )
-            img.footer__messenger-image(
-              src="assets/images/facebook.svg",
-              alt="facebook"
-            )
-          a.footer__messenger-item(
-            href="https://www.instagram.com/",
-            target="_blank",
-            rel="noopener noreferrer"
-          )
-            img.footer__messenger-image(
-              src="assets/images/instagram.svg",
-              alt="instagram"
-            )
+        .footer__socials
+          each socialItem in socials
+            - const { link, image, name } = socialItem
+            +social({ link, image, name })
   footer.footer.footer_sm(class=smFooterClasses)
     .footer__company-logo
       +logo
     .footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
-    .footer__messengers
-      a.footer__messenger-item(
-        href="https://twitter.com/?",
-        target="_blank",
-        rel="noopener noreferrer"
-      )
-        img.footer__messenger-image(
-          src="assets/images/twitter.svg",
-          alt="twitter"
-        )
-      a.footer__messenger-item(
-        href="https://www.facebook.com/",
-        target="_blank",
-        rel="noopener noreferrer"
-      )
-        img.footer__messenger-image(
-          src="assets/images/facebook.svg",
-          alt="facebook"
-        )
-      a.footer__messenger-item(
-        href="https://www.instagram.com/",
-        target="_blank",
-        rel="noopener noreferrer"
-      )
-        img.footer__messenger-image(
-          src="assets/images/instagram.svg",
-          alt="instagram"
-        )
+    .footer__socials
+      each smallSocialItem in socials
+          - const { link, image, name } = smallSocialItem
+          +social({ link, image, name })
