@@ -3,13 +3,13 @@
 @import '../button/button.scss';
 
 .header {
-  z-index: 1000;
+  z-index: 10;
   background-color: $white;
   @include shadow;
   position: relative;
 
   &_authorized {
-    z-index: 900;
+    z-index: 9;
   }
 
   &__container {

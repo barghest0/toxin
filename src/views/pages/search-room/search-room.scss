@@ -14,7 +14,6 @@
 @import '../../components/pagination/pagination.scss';
 
 .search-room {
-
   &__container {
     @include container;
   }
@@ -39,7 +38,7 @@
     }
 
     &-icon {
-      z-index: 90;
+      z-index: 10;
       cursor: pointer;
       position: absolute;
       top: 85px;
@@ -75,7 +74,7 @@
       position: fixed;
       left: 0;
       top: 0;
-      z-index: 1000;
+      z-index: 10;
       &_active {
         pointer-events: all;
         width: 100%;
