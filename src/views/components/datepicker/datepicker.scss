@@ -2,9 +2,12 @@
 
 .datepicker {
   @include size(100%);
+  max-width: 320px;
   z-index: 100;
   position: absolute;
   display: none;
+  left: 50%;
+  transform: translateX(-50%);
 
   &_inline {
     display: block;
