@@ -3,7 +3,7 @@ mixin toggle({ text = '', name = 'offers', state = '' } = {})
     input.toggle__input(
       type="checkbox",
       name=name,
-      checked=state ? state : null
+      checked=state || false
     )
     .toggle__custom-input
       span.toggle__circle

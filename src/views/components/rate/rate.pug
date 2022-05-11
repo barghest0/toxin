@@ -1,4 +1,4 @@
-mixin rate({ name = 'rate', rate = '1' } = {})
+mixin rate({ name = 'rate', rating = '1' } = {})
   - const rateQuantity = [1, 2, 3, 4, 5];
 
   label.rate
@@ -7,5 +7,5 @@ mixin rate({ name = 'rate', rate = '1' } = {})
         type="radio",
         name=name,
         value=value,
-        checked=value === rate ? "checked" : null
+        checked=value === rating
       )

@@ -3,7 +3,7 @@ mixin rich-checkbox({ text = '', subtext = '', name = '', state = '' } = {})
     input.rich-checkbox__input(
       type="checkbox",
       name=name,
-      checked=state ? state : null
+      checked=state || false
     )
     span.rich-checkbox__custom-input
     .rich-checkbox__titles

@@ -3,7 +3,7 @@ mixin checkbox({ text = '', state = '', name = '' } = {})
     input.checkbox__input(
       type="checkbox",
       name=name,
-      checked=state ? state : null
+      checked=state || false
     )
     span.checkbox__custom-input
     .checkbox__title= text
