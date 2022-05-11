@@ -1,0 +1,47 @@
+@import '../../../assets/style/scss/index.scss';
+@import '../../components/header/header.scss';
+@import '../../components/footer/footer.scss';
+
+.error {
+  background: url('./images/error-image.jpg') center bottom no-repeat;
+  background-size: cover;
+
+  &__container {
+    @include container;
+  }
+
+  &__inner {
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__card {
+    padding: 30px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  &__title {
+    font-size: 42px;
+  }
+
+  &__subtitle {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    font-size: 18px;
+    text-decoration: none;
+    color: $main-color;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}

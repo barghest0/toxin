@@ -3,7 +3,7 @@
     {
       "type": "link",
       "text": "О нас",
-      "href": "/mock-address/change-me"
+      "href": "error.html"
     },
     {
       "type": "list",
@@ -11,27 +11,27 @@
       "items": [
         {
           "text": "Услуги",
-          "href": "/mock-address/change-me"
+          "href": "error.html"
         },
         {
           "text": "Услуги",
-          "href": "/mock-address/change-me"
+          "href": "error.html"
         },
         {
           "text": "Услуги",
-          "href": "/mock-address/change-me"
+          "href": "error.html"
         }
       ]
     },
     {
       "type": "link",
       "text": "Вакансии",
-      "href": "/mock-address/change-me"
+      "href": "error.html"
     },
     {
       "type": "link",
       "text": "Новости",
-      "href": "/mock-address/change-me"
+      "href": "error.html"
     },
     {
       "type": "list",
@@ -39,15 +39,15 @@
       "items": [
         {
           "text": "Соглашения",
-          "href": "/mock-address/change-me"
+          "href": "error.html"
         },
         {
           "text": "Соглашения",
-          "href": "/mock-address/change-me"
+          "href": "error.html"
         },
         {
           "text": "Соглашения",
-          "href": "/mock-address/change-me"
+          "href": "error.html"
         }
       ]
     }

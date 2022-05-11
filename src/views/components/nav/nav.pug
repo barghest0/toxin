@@ -28,7 +28,7 @@ mixin nav(props = {})
     .nav__buttons
         if state === 'authorized'
           a.nav__item.nav__item_separated(
-            href="/mock-address/change-me" data-text=name
+            href="error.html" data-text=name
           )= name
         else
           each button in buttons

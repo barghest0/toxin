@@ -3,27 +3,27 @@
     {
       "label": "Навигация",
       "links": [
-        { "text": "О нас", "href": "/mock-address/change-me" },
-        { "text": "Новости", "href": "/mock-address/change-me" },
-        { "text": "Служба поддержки", "href": "/mock-address/change-me" },
-        { "text": "Услуги", "href": "/mock-address/change-me" }
+        { "text": "О нас", "href": "error.html" },
+        { "text": "Новости", "href": "error.html" },
+        { "text": "Служба поддержки", "href": "error.html" },
+        { "text": "Услуги", "href": "error.html" }
       ]
     },
     {
       "label": "О нас",
       "links": [
-        { "text": "О сервисе", "href": "/mock-address/change-me" },
-        { "text": "Наша команда", "href": "/mock-address/change-me" },
-        { "text": "Вакансии", "href": "/mock-address/change-me" },
-        { "text": "Инвесторы", "href": "/mock-address/change-me" }
+        { "text": "О сервисе", "href": "error.html" },
+        { "text": "Наша команда", "href": "error.html" },
+        { "text": "Вакансии", "href": "error.html" },
+        { "text": "Инвесторы", "href": "error.html" }
       ]
     },
     {
       "label": "Служба поддержки",
       "links": [
-        { "text": "Соглашения", "href": "/mock-address/change-me" },
-        { "text": "Сообщества", "href": "/mock-address/change-me" },
-        { "text": "Связь с нами", "href": "/mock-address/change-me" }
+        { "text": "Соглашения", "href": "error.html" },
+        { "text": "Сообщества", "href": "error.html" },
+        { "text": "Связь с нами", "href": "error.html" }
       ]
     }
   ]
