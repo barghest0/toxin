@@ -1,7 +1,6 @@
 .card-room-info {
   display: flex;
   justify-content: space-between;
-  
 
   &__room {
     display: flex;
@@ -9,7 +8,7 @@
 
     &-number {
       @include widget-title;
-      margin-right: 7px;
+      margin-right: 9px;
 
       &_sm {
         @include title-inside-widget;
@@ -21,7 +20,7 @@
         align-items: flex-end;
         font-size: $main-font-size;
         font-weight: bold;
-        margin-right: 5px;
+        margin-right: 4px;
         color: $dark-shade-100;
       }
     }

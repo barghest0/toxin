@@ -17,5 +17,5 @@ mixin card-room-info(props = {})
       if isLuxury
         .card-room-info__room-luxury Люкс
     .card-room-info__price
-      .card-room-info__price-value #{price}₽
+      .card-room-info__price-value #{price.toLocaleString()}₽
       .card-room-info__price-in-time в сутки

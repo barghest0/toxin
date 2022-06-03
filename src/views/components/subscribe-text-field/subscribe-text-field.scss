@@ -1,4 +1,6 @@
 .subscribe-text-field {
+  width: 100%;
+
   &__label {
     @include block-label;
     margin-bottom: 5px;
