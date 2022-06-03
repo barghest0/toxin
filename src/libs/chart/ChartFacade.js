@@ -105,7 +105,7 @@ class ChartFacade {
           ctx.save();
           ctx.fillStyle = '#BC9CFF';
           const x = width / 2;
-          const y = height / 2;
+          const y = height / 2 - 5;
           const text = 'ГОЛОСОВ';
           ctx.font = 'bold 12px Montserrat';
           ctx.textAlign = CENTER_ALIGN;

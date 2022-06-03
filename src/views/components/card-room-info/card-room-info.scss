@@ -10,6 +10,10 @@
       @include widget-title;
       margin-right: 9px;
 
+      &_lg {
+        line-height: 1;
+      }
+
       &_sm {
         @include title-inside-widget;
       }
@@ -26,7 +30,7 @@
     }
 
     &-luxury {
-      line-height: $main-line-height;
+      line-height: 1;
       font-weight: bold;
       font-size: $second-font-size;
       text-transform: uppercase;
@@ -38,7 +42,7 @@
     color: $dark-shade-50;
     display: flex;
     align-items: flex-end;
-    line-height: 1.6;
+    line-height: 1.4;
 
     &-value {
       font-weight: bold;

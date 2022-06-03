@@ -12,7 +12,7 @@ mixin card-room-info(props = {})
 
   .card-room-info(class=infoClasses)
     .card-room-info__room
-      .card-room-info__room-number-symbol №
+      .card-room-info__room-number-symbol(class={numberSymbolClasses}) №
       .card-room-info__room-number(class=numberClasses)= roomNumber
       if isLuxury
         .card-room-info__room-luxury Люкс
