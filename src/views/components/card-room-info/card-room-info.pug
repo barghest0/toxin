@@ -7,12 +7,12 @@ mixin card-room-info(props = {})
       size = ''
     } = props
 
-    const infoClasses = `card-room-info_${size}`
+    const roomClasses = `card-room-info__room_${size}`
     const numberClasses = `card-room-info__room-number_${size}`
 
-  .card-room-info(class=infoClasses)
-    .card-room-info__room
-      .card-room-info__room-number-symbol(class={numberSymbolClasses}) №
+  .card-room-info
+    .card-room-info__room(class=roomClasses)
+      .card-room-info__room-number-symbol №
       .card-room-info__room-number(class=numberClasses)= roomNumber
       if isLuxury
         .card-room-info__room-luxury Люкс

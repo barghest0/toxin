@@ -5,14 +5,16 @@
   &__room {
     display: flex;
     align-items: flex-end;
+    line-height: $main-line-height;
+
+    &_lg {
+      line-height: 1;
+    }
 
     &-number {
       @include widget-title;
       margin-right: 9px;
-
-      &_lg {
-        line-height: 1;
-      }
+      line-height: inherit;
 
       &_sm {
         @include title-inside-widget;
@@ -20,7 +22,7 @@
 
       &-symbol {
         display: flex;
-        line-height: $main-line-height;
+        line-height: inherit;
         align-items: flex-end;
         font-size: $main-font-size;
         font-weight: bold;
