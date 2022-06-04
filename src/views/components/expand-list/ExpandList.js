@@ -1,4 +1,5 @@
 import { boundMethod } from 'autobind-decorator';
+
 import { EXPANDED_CLASS } from './constants';
 
 class ExpandList {

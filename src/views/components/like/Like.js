@@ -1,4 +1,5 @@
 import { boundMethod } from 'autobind-decorator';
+
 import { LIKED_CLASS } from './constants';
 
 class Like {

@@ -1,7 +1,6 @@
-@import '../rich-checkbox/rich-checkbox.scss';
+@import 'components/rich-checkbox/rich-checkbox.scss';
 
 .rich-checkbox-list {
-  
   &__label {
     margin-bottom: 16px;
     @include block-label;

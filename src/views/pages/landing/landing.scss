@@ -1,10 +1,9 @@
-@import '../../../assets/style/scss/index.scss';
-@import '../../components/search-room-card/search-room-card.scss';
-@import '../../components/header/header.scss';
-@import '../../components/footer/footer.scss';
+@import 'rootStyle';
+@import 'components/search-room-card/search-room-card.scss';
+@import 'components/header/header.scss';
+@import 'components/footer/footer.scss';
 
 .landing {
-
   &__container {
     @include container;
   }

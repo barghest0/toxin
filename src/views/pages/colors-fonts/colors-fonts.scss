@@ -1,5 +1,5 @@
-@import '../../../assets/style/scss/index.scss';
-@import '../../components/color/color.scss';
+@import 'rootStyle';
+@import 'components/color/color.scss';
 
 .colors-fonts {
   padding: 100px 0;
@@ -8,10 +8,10 @@
     @include container;
   }
 
-  &__colors{
+  &__colors {
     display: flex;
     flex-direction: column;
-    row-gap:20px;
+    row-gap: 20px;
   }
 
   &__inner {

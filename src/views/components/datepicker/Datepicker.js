@@ -1,5 +1,7 @@
 import { boundMethod } from 'autobind-decorator';
-import DatepickerFacade from '../../../libs/air-datepicker/DatepickerFacade';
+
+import DatepickerFacade from 'libs/air-datepicker/DatepickerFacade';
+
 import {
   DATEPICKER_SELECTOR,
   CONTAINER_SELECTOR,

@@ -1,6 +1,6 @@
-@import '../../../assets/style/scss/index.scss';
-@import '../../components/header/header.scss';
-@import '../../components/footer/footer.scss';
+@import 'rootStyle';
+@import 'components/header/header.scss';
+@import 'components/footer/footer.scss';
 
 .error {
   background: url('./images/error-image.jpg') center bottom no-repeat;

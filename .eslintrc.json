@@ -20,6 +20,16 @@
     "import/resolver": {
       "node": {
         "extensions": [".js", ".ts"]
+      },
+      "alias": {
+        "map": [
+          ["src", "./src/"],
+          ["libs", "./src/libs/"],
+          ["vendor", "./src/vendor/"],
+          ["components", "./src/views/components/"],
+          ["data", "./src/data"]
+        ],
+        "extensions": [".js"]
       }
     },
     "import/ignore": ["swiper"]

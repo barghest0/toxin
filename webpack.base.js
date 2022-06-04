@@ -46,6 +46,15 @@ module.exports = {
     clean: true,
   },
 
+  resolve: {
+    alias: {
+      components: path.join(__dirname, './src/views/components'),
+      assets: path.join(__dirname, './src/assets'),
+      libs: path.join(__dirname, './src/libs'),
+      rootStyle: path.join(__dirname, './src/assets/style/scss/index.scss'),
+    },
+  },
+
   externals: {
     path: PATHS,
   },

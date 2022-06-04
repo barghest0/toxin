@@ -1,4 +1,5 @@
 import { boundMethod } from 'autobind-decorator';
+
 import {
   BURGER_SELECTOR,
   BURGER_NAV_SELECTOR,

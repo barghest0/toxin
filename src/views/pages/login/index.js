@@ -1,3 +1,3 @@
-import './login.scss';
+import 'components/header';
 
-import '../../components/header';
+import './login.scss';

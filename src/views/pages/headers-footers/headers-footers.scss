@@ -1,7 +1,7 @@
-@import '../../../assets/style/scss/index.scss';
-@import '../../components/button/button.scss';
-@import '../../components/footer/footer.scss';
-@import '../../components/header/header.scss';
+@import 'rootStyle';
+@import 'components/button/button.scss';
+@import 'components/footer/footer.scss';
+@import 'components/header/header.scss';
 
 .headers-footers {
   padding: 100px 0;

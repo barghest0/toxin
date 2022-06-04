@@ -10,7 +10,11 @@
     "lint": "eslint \"src/**/*.js\"",
     "deploy": "gh-pages -d dist"
   },
-  "browserslist": ["> 1%", "last 4 version", "IE 10"],
+  "browserslist": [
+    "> 1%",
+    "last 4 version",
+    "IE 10"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/barghest0/MetaLampLayoutPratice.git"
@@ -33,6 +37,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-fsd": "^1.0.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -51,6 +56,7 @@
     "air-datepicker": "^3.1.1",
     "autobind-decorator": "^2.4.0",
     "autoprefixer": "^10.4.4",
+    "babel-plugin-module-resolver": "^4.1.0",
     "chart.js": "^3.7.1",
     "copy-webpack-plugin": "^10.2.4",
     "css-mqpacker": "^7.0.0",

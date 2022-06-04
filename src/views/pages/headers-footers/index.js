@@ -1,3 +1,3 @@
-import './headers-footers.scss';
+import 'components/header';
 
-import '../../components/header';
+import './headers-footers.scss';

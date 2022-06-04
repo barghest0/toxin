@@ -1,7 +1,7 @@
-@import '../../components/button/button';
-@import '../../components/card-room-info/card-room-info';
-@import '../../components/datepicker/datepicker';
-@import '../../components/dropdown/dropdown.scss';
+@import 'components/button/button';
+@import 'components/card-room-info/card-room-info';
+@import 'components/datepicker/datepicker';
+@import 'components/dropdown/dropdown.scss';
 
 .booking-card {
   @include card;

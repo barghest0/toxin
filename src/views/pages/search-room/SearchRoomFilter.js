@@ -1,4 +1,5 @@
 import { boundMethod } from 'autobind-decorator';
+
 import {
   BACKGROUND_SELECTOR,
   CLOSE_BUTTON_SELECTOR,

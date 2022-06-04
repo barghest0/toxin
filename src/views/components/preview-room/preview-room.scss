@@ -1,6 +1,6 @@
-@import '../../components/rate/rate';
-@import '../../components/card-room-info/card-room-info';
-@import '../../../libs/swiper/swiper';
+@import 'components/rate/rate';
+@import 'components/card-room-info/card-room-info';
+@import 'libs/swiper/swiper';
 
 .preview-room {
   @include card;

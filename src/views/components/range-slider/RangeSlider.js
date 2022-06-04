@@ -1,6 +1,7 @@
-import RangeSliderFacade from '../../../libs/range-slider/RangeSliderFacade';
-import '../../../vendor/range-slider/range-slider';
-import '../../../vendor/range-slider/range-slider.css';
+import RangeSliderFacade from 'libs/range-slider/RangeSliderFacade';
+import 'vendor/range-slider/range-slider';
+import 'vendor/range-slider/range-slider.css';
+
 import {
   END_PRICE_SELECTOR,
   RANGE_SLIDER_SELECTOR,

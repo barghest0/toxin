@@ -1,4 +1,5 @@
-import ChartFacade from '../../../libs/chart/ChartFacade';
+import ChartFacade from 'libs/chart/ChartFacade';
+
 import {
   DISAPPOINT_END_COLOR,
   DISAPPOINT_START_COLOR,

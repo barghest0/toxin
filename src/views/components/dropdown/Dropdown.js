@@ -1,4 +1,5 @@
 import { boundMethod } from 'autobind-decorator';
+
 import DropdownHelper from './DropdownHelper';
 import {
   APPLY_BUTTON_SELECTOR,

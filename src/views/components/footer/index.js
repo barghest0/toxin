@@ -1,3 +1,3 @@
-import '../logo';
-import '../subscribe-text-field';
-import '../social';
+import 'components/logo';
+import 'components/subscribe-text-field';
+import 'components/social';

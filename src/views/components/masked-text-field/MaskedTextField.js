@@ -1,6 +1,6 @@
-import { MASK } from './constants';
+import MaskedTextFieldFacade from 'libs/masked-text-field/MaskedTextFieldFacade';
 
-import MaskedTextFieldFacade from '../../../libs/masked-text-field/MaskedTextFieldFacade';
+import { MASK } from './constants';
 
 class MaskedTextField {
   constructor($container, mask) {

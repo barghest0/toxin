@@ -1,8 +1,8 @@
-@import '../range-date/range-date.scss';
-@import '../dropdown/dropdown.scss';
-@import '../datepicker/datepicker.scss';
-@import '../button/button.scss';
-@import '../default-text-field/default-text-field.scss';
+@import 'components/range-date/range-date.scss';
+@import 'components/dropdown/dropdown.scss';
+@import 'components/datepicker/datepicker.scss';
+@import 'components/button/button.scss';
+@import 'components/default-text-field/default-text-field.scss';
 
 .search-room-card {
   @include card;

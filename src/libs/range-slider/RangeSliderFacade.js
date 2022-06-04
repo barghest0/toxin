@@ -1,4 +1,5 @@
 import { boundMethod } from 'autobind-decorator';
+
 import { FIRST_VALUE, SECOND_VALUE } from './constants';
 
 class RangeSliderFacade {

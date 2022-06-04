@@ -1,4 +1,5 @@
 import { boundMethod } from 'autobind-decorator';
+
 import { LIST_SELECTOR, OPENED_CLASS } from './constants';
 
 class NavList {

@@ -1,11 +1,11 @@
-@import '../../../assets/style/scss/index.scss';
-@import '../../components/datepicker/datepicker.scss';
-@import '../../components/search-room-card/search-room-card.scss';
-@import '../../components/booking-card/booking-card.scss';
-@import '../../components/login-card/login-card.scss';
-@import '../../components/register-card/register-card.scss';
-@import '../../components/card-room-info/card-room-info';
-@import '../../components/preview-room/preview-room';
+@import 'rootStyle';
+@import 'components/datepicker/datepicker.scss';
+@import 'components/search-room-card/search-room-card.scss';
+@import 'components/booking-card/booking-card.scss';
+@import 'components/login-card/login-card.scss';
+@import 'components/register-card/register-card.scss';
+@import 'components/card-room-info/card-room-info';
+@import 'components/preview-room/preview-room';
 
 .cards {
   padding: 100px 0;

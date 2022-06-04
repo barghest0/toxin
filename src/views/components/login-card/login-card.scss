@@ -1,5 +1,5 @@
-@import '../../components/default-text-field/default-text-field';
-@import '../../components/button/button';
+@import 'components/default-text-field/default-text-field';
+@import 'components/button/button';
 
 .login-card {
   @include card;

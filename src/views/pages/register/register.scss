@@ -1,10 +1,9 @@
-@import '../../../assets/style/scss/index.scss';
-@import '../../components/header/header';
-@import '../../components/register-card/register-card';
-@import '../../components/footer/footer';
+@import 'rootStyle';
+@import 'components/header/header';
+@import 'components/register-card/register-card';
+@import 'components/footer/footer';
 
 .register {
-
   &__container {
     @include container;
   }

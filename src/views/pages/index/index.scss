@@ -1,7 +1,6 @@
-@import '../../../assets/style/scss/index.scss';
+@import 'rootStyle';
 
 .index {
-
   &__container {
     @include container;
   }

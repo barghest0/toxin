@@ -1,7 +1,8 @@
-@import '../../../assets/style/scss/index.scss';
-@import '../../components/header/header';
-@import '../../components/login-card/login-card';
-@import '../../components/footer/footer';
+@import 'rootStyle';
+@import 'components/header/header';
+@import 'components/login-card/login-card';
+@import 'components/footer/footer';
+
 .login {
   &__container {
     @include container;
