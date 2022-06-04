@@ -23,14 +23,31 @@
     @include block-sub-label;
   }
 
-  &__field {
+  &__text-field {
     @include text-field;
     display: flex;
     align-items: center;
     cursor: pointer;
     border-radius: 4px 4px 0 0;
+  }
+
+  &__field {
+    position: relative;
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 44px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
     &::after {
-      @include dropdown-arrow(18px, 17px);
+      @include dropdown-arrow;
     }
   }
 
@@ -103,8 +120,11 @@
     }
   }
 
-  &__container_opened &__field {
+  &__container_opened &__text-field {
     border-color: $dark-shade-50;
+  }
+
+  &__container_opened &__arrow {
     &::after {
       transform: rotate(135deg);
     }

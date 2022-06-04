@@ -44,5 +44,6 @@ mixin filter-date({ label = '', dateFrom = '', dateTo = '', placeholder = '' } =
         value=value,
         autocomplete="off"
       )
+      .filter-date__arrow
     .filter-date__datepicker
       +datepicker({ dateFrom, dateTo })

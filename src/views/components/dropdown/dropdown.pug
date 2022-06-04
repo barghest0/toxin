@@ -22,7 +22,9 @@ mixin dropdown(props = {})
         class=containerClasses,
         data-type=type
       )
-      .dropdown__field.js-dropdown__field
+      .dropdown__field
+        .dropdown__text-field.js-dropdown__text-field
+        .dropdown__arrow
       .dropdown__list.js-dropdown__list
         each listItem in data
           - const { name, title, count } = listItem;

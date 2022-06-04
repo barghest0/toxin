@@ -21,6 +21,7 @@ mixin range-date(props = {})
               autocomplete="off",
               value=dateFrom
             )
+            .range-date__arrow
         .range-date__container
           .range-date__label=to
           .range-date__field
@@ -31,5 +32,6 @@ mixin range-date(props = {})
               autocomplete="off",
               value=dateTo
             )
+            .range-date__arrow
     .range-date__datepicker
       +datepicker({ dateFrom, dateTo })

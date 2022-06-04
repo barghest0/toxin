@@ -14,15 +14,28 @@
 
   &__field {
     position: relative;
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 44px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    pointer-events: none;
 
     &::after {
-      @include dropdown-arrow(15px, 17px);
+      @include dropdown-arrow;
     }
+  }
 
-    &_opened {
-      &::after {
-        transform: rotate(135deg);
-      }
+  &__field_opened &__arrow {
+    &::after {
+      transform: rotate(135deg);
     }
   }
 

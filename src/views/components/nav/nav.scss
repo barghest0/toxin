@@ -17,6 +17,7 @@
   }
 
   &__item {
+    $parent: &;
     cursor: pointer;
     font-weight: normal;
     position: relative;
@@ -29,6 +30,19 @@
     transition: all 0.2s linear;
     color: $dark-shade-50;
     padding: 0.6rem 0;
+
+    &-arrow {
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      cursor: pointer;
+
+      &::after {
+        @include dropdown-arrow;
+      }
+    }
 
     &::before {
       content: attr(data-text);
@@ -44,10 +58,6 @@
 
     &_folded {
       padding-right: 17.3px;
-      &::after {
-        align-self: flex-end;
-        @include dropdown-arrow(4px, 12px, absolute);
-      }
     }
 
     &_folded#{&}_opened {
@@ -56,7 +66,7 @@
       &:nth-child(2) {
         z-index: 400;
       }
-      &::after {
+      #{$parent}-arrow::after {
         transform: rotate(135deg);
       }
     }
@@ -130,7 +140,12 @@
     row-gap: 20px;
     padding: 10px;
     border-radius: 0px 0px 0px 7px;
+    width: 300px;
     @include shadow;
+  }
+
+  &_folded &__item-arrow {
+    right: 10px;
   }
 
   &_folded &__links {
@@ -141,9 +156,6 @@
   &_folded &__item {
     &_folded {
       padding-right: 0;
-      &::after {
-        right: 30px;
-      }
     }
   }
 
@@ -156,15 +168,16 @@
     display: flex;
     justify-content: center;
     margin-right: 0;
-    width: 300px;
 
     &_separated {
       border-right: none;
       padding-left: 0;
     }
+  }
 
+  &_folded {
     @include phone {
-      width: calc(100vw - 20px);
+      width: 100vw;
     }
   }
 }

@@ -14,10 +14,14 @@
     @include size(44px);
     position: absolute;
     right: 0;
+    top: 0;
     background: transparent;
     outline: none;
     border: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__input {

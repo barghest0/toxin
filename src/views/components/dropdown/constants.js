@@ -8,7 +8,7 @@ const DECREMENT_DISABLED_CLASS = 'dropdown__list-decrement_disabled';
 
 const CONTAINER_SELECTOR = '.js-dropdown__container';
 const LIST_SELECTOR = '.js-dropdown__list';
-const FIELD_SELECTOR = '.js-dropdown__field';
+const FIELD_SELECTOR = '.js-dropdown__text-field';
 
 const LIST_ITEM_SELECTOR = '.js-dropdown__list-item';
 const LIST_ITEM_TITLE_SELECTOR = '.js-dropdown__list-item-title';

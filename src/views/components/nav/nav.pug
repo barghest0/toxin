@@ -25,6 +25,7 @@ mixin nav(props = {})
                each item in items
                  - const { href, text } = item
                  a.nav__item(href=href data-text=text)= text
+             .nav__item-arrow
     .nav__buttons
         if state === 'authorized'
           a.nav__item.nav__item_separated(

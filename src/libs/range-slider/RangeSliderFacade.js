@@ -18,7 +18,7 @@ class RangeSliderFacade {
     this.params = {
       isRange: true,
       min: 0,
-      max: 15000,
+      max: 16000,
       step: 100,
       hasScale: false,
       hasTips: false,

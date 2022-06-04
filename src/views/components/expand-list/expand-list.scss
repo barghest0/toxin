@@ -1,15 +1,29 @@
 .expand-list {
-  
   &__label {
     position: relative;
     margin-bottom: 17px;
     cursor: pointer;
-    @include block-label;
-    &::after {
-      @include dropdown-arrow(18px, 2px);
-    }
 
-    &_opened::after {
+    &-text {
+      @include block-label;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    width: 44px;
+    justify-content: center;
+
+    &::after {
+      @include dropdown-arrow;
+    }
+  }
+
+  &__label_opened &__arrow {
+    &::after {
       transform: rotate(135deg);
     }
   }
