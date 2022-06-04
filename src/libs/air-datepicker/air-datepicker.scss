@@ -1,7 +1,7 @@
 .air-datepicker {
   font-family: Montserrat, Arial sans-serif;
   position: absolute;
-  margin-top: 5px;
+  margin: 5px auto;
   width: 100%;
   box-sizing: border-box;
   padding: 20px;
@@ -228,6 +228,7 @@
 
   &_md {
     padding: 10px;
+    max-width: 266px;
   }
 
   &_md &--navigation {
@@ -236,9 +237,8 @@
 
   &_md &-body {
     &--cells.-days- {
-      max-width: 230px;
       grid-auto-rows: 33px;
-      grid-auto-columns: 33px;
+      grid-auto-columns: 35px;
     }
 
     &--day-name {
@@ -249,6 +249,6 @@
 
   &_md &-cell {
     height: 33px;
-    width: 33px;
+    width: 35px;
   }
 }
