@@ -50,7 +50,10 @@ module.exports = {
     alias: {
       components: path.join(__dirname, './src/views/components'),
       assets: path.join(__dirname, './src/assets'),
+      data: path.join(__dirname, './src/data'),
       libs: path.join(__dirname, './src/libs'),
+      vendor: path.join(__dirname, './src/vendor'),
+      layout: path.join(__dirname, './src/views/layout'),
       rootStyle: path.join(__dirname, './src/assets/style/scss/index.scss'),
     },
   },
@@ -83,7 +86,7 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        use: ['pug-loader'],
+        use: ['@webdiscus/pug-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,

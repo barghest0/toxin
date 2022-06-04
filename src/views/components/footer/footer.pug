@@ -1,6 +1,6 @@
-include ../logo/logo.pug
-include ../subscribe-text-field/subscribe-text-field.pug
-include ../social/social.pug
+include components/logo/logo.pug
+include components/subscribe-text-field/subscribe-text-field.pug
+include components/social/social.pug
 
 mixin footer({ isSmall = false, data = [], socials = [] } = {})
   - const footerClasses = isSmall ? 'footer_hidden' : ''

@@ -1,23 +1,22 @@
-extends ../../layout/main-page.pug
+extends layout/main-page.pug
 
 block title
   title Room
 
 block page
-  include ../../components/review-list/review-list.pug
-  include ../../components/chart/chart.pug
-  include ../../components/feedback/feedback.pug
-  include ../../components/bullet-list/bullet-list.pug
-  include ../../components/booking-card/booking-card.pug
+  include components/review-list/review-list.pug
+  include components/chart/chart.pug
+  include components/feedback/feedback.pug
+  include components/bullet-list/bullet-list.pug
+  include components/booking-card/booking-card.pug
 
   -
-     const feedbackData = require('../../../data/feedback-data');
-     const { data: bulletListData } = require('../../../data/bullet-list');
-     const { data: reviewListData } = 
-        require('../../../data/review-list-data');
-     const { data: bookingData } = require('../../../data/booking-data');
+     const feedbackData = require('data/feedback-data');
+     const { data: bulletListData } = require('data/bullet-list');
+     const { data: reviewListData } = require('data/review-list-data');
+     const { data: bookingData } = require('data/booking-data');
      const { withoutChildren: guestsDropdownData } =
-        require('../../../data/dropdown-guests-data');
+        require('data/dropdown-guests-data');
      bookingData.guests = guestsDropdownData;
 
   .room

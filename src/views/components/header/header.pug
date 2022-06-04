@@ -1,5 +1,5 @@
-include ../logo/logo.pug
-include ../nav/nav.pug
+include components/logo/logo.pug
+include components/nav/nav.pug
 
 mixin header({ state = 'no-authorized', name = '', data = [] } = {})
   header.header(class=`header_${state}`)

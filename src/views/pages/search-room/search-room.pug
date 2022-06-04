@@ -1,25 +1,25 @@
-extends ../../layout/main-page.pug
+extends layout/main-page.pug
 
 block title
   title Search room
 
 block page
-  include ../../components/range-slider/range-slider.pug
-  include ../../components/checkbox-list/checkbox-list.pug
-  include ../../components/dropdown/dropdown.pug
-  include ../../components/rich-checkbox-list/rich-checkbox-list.pug
-  include ../../components/filter-date/filter-date.pug
-  include ../../components/expand-list/expand-list.pug
-  include ../../components/preview-room/preview-room.pug
-  include ../../components/pagination/pagination.pug
+  include components/range-slider/range-slider.pug
+  include components/checkbox-list/checkbox-list.pug
+  include components/dropdown/dropdown.pug
+  include components/rich-checkbox-list/rich-checkbox-list.pug
+  include components/filter-date/filter-date.pug
+  include components/expand-list/expand-list.pug
+  include components/preview-room/preview-room.pug
+  include components/pagination/pagination.pug
 
   -
-    const { data: roomsData } = require('../../../data/preview-rooms-data');
-    const { data: expandData } = require('../../../data/expand-list-data');
-    const checkboxData = require('../../../data/checkbox-list-data');
-    const guestDropdownData = require('../../../data/dropdown-guests-data');
+    const { data: roomsData } = require('data/preview-rooms-data');
+    const { data: expandData } = require('data/expand-list-data');
+    const checkboxData = require('data/checkbox-list-data');
+    const guestDropdownData = require('data/dropdown-guests-data');
     const { data: apartmentsDropdownData } = 
-      require('../../../data/dropdown-apartments-data');
+      require('data/dropdown-apartments-data');
 
   .search-room
     .search-room__container

@@ -1,12 +1,12 @@
-include ../default-text-field/default-text-field.pug
-include ../button/button.pug
-include ../toggle/toggle.pug
-include ../masked-text-field/masked-text-field.pug
-include ../radio-list/radio-list.pug
+include components/default-text-field/default-text-field.pug
+include components/button/button.pug
+include components/toggle/toggle.pug
+include components/masked-text-field/masked-text-field.pug
+include components/radio-list/radio-list.pug
 
 mixin register-card({ title = 'Регистрация аккаунта' } = {})
 
-  - const { data: genderData } = require('../../../data/gender-data');
+  - const { data: genderData } = require('data/gender-data');
 
   .register-card 
     h1.register-card__title= title

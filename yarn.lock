@@ -1291,6 +1291,16 @@
     "@webassemblyjs/ast" "1.11.1"
     "@xtuc/long" "4.2.2"
 
+"@webdiscus/pug-loader@^2.5.0":
+  "integrity" "sha512-nLj1m+O8GMHCwnL7glMVu1Bki5LJTvWRorkA8S+EBJqVsT2govHvsY/FckchM6NIfGv6pMPe7fVxo6dqxQuCmA=="
+  "resolved" "https://registry.npmjs.org/@webdiscus/pug-loader/-/pug-loader-2.5.0.tgz"
+  "version" "2.5.0"
+  dependencies:
+    "ansis" "^1.3.6"
+    "parse5" "^7.0.0"
+    "pug" ">=3.0.2"
+    "webpack-merge" "^5.8.0"
+
 "@webpack-cli/configtest@^1.1.1":
   "integrity" "sha512-1FBc1f9G4P/AxMqIgfZgeOTuRnwZMten8E7zap5zgpPInnCrP8D4Q81+4CWIch8i/Nf7nXjP0v6CjjbHOrXhKg=="
   "resolved" "https://registry.npmjs.org/@webpack-cli/configtest/-/configtest-1.1.1.tgz"
@@ -1458,6 +1468,11 @@
   "version" "4.3.0"
   dependencies:
     "color-convert" "^2.0.1"
+
+"ansis@^1.3.6":
+  "integrity" "sha512-TMXlWGGK5cOYT//DNX8V4zGnr824j95Oh888GV2J3eVFwKnolgdym9jje9MNLa3a8YNl0MnyX7C5tVj8dw5amA=="
+  "resolved" "https://registry.npmjs.org/ansis/-/ansis-1.3.6.tgz"
+  "version" "1.3.6"
 
 "anymatch@~3.1.2":
   "integrity" "sha512-P43ePfOAIupkguHUycrc4qJ9kz8ZiuOUijaETwX7THt0Y/GNK7v0aa8rY816xWjZ7rJdA5XdMcpVFTKMq+RvWg=="
@@ -2347,6 +2362,11 @@
   "integrity" "sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A=="
   "resolved" "https://registry.npmjs.org/entities/-/entities-2.2.0.tgz"
   "version" "2.2.0"
+
+"entities@^4.3.0":
+  "integrity" "sha512-/iP1rZrSEJ0DTlPiX+jbzlA3eVkY/e8L8SozroF395fIqE3TYF/Nz7YOMAawta+vLmyJ/hkGNNPcSbMADCCXbg=="
+  "resolved" "https://registry.npmjs.org/entities/-/entities-4.3.0.tgz"
+  "version" "4.3.0"
 
 "envinfo@^7.7.3":
   "integrity" "sha512-/o+BXHmB7ocbHEAs6F2EnG0ogybVVUdkRunTT2glZU9XAaGmhqskrvKwqXuDfNjEO0LZKWdejEEpnq8aM0tOaw=="
@@ -4015,6 +4035,13 @@
     "json-parse-even-better-errors" "^2.3.0"
     "lines-and-columns" "^1.1.6"
 
+"parse5@^7.0.0":
+  "integrity" "sha512-y/t8IXSPWTuRZqXc0ajH/UwDj4mnqLEbSttNbThcFhGrZuOyoyvNBO85PBp2jQa55wY9d07PBNjsK8ZP3K5U6g=="
+  "resolved" "https://registry.npmjs.org/parse5/-/parse5-7.0.0.tgz"
+  "version" "7.0.0"
+  dependencies:
+    "entities" "^4.3.0"
+
 "parseurl@~1.3.2", "parseurl@~1.3.3":
   "integrity" "sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ=="
   "resolved" "https://registry.npmjs.org/parseurl/-/parseurl-1.3.3.tgz"
@@ -4534,7 +4561,7 @@
   "resolved" "https://registry.npmjs.org/pug-walk/-/pug-walk-2.0.0.tgz"
   "version" "2.0.0"
 
-"pug@^2.0.0", "pug@^3.0.2":
+"pug@^2.0.0", "pug@^3.0.2", "pug@>=3.0.2":
   "integrity" "sha512-bp0I/hiK1D1vChHh6EfDxtndHji55XP/ZJKwsRqrz6lRia6ZC2OZbdAymlxdVFwd1L70ebrVJw4/eZ79skrIaw=="
   "resolved" "https://registry.npmjs.org/pug/-/pug-3.0.2.tgz"
   "version" "3.0.2"
@@ -5530,7 +5557,7 @@
   "resolved" "https://registry.npmjs.org/webpack-sources/-/webpack-sources-3.2.3.tgz"
   "version" "3.2.3"
 
-"webpack@^4.0.0 || ^5.0.0", "webpack@^4.37.0 || ^5.0.0", "webpack@^5.0.0", "webpack@^5.1.0", "webpack@^5.20.0", "webpack@^5.72.0", "webpack@>=2", "webpack@4.x.x || 5.x.x":
+"webpack@^4.0.0 || ^5.0.0", "webpack@^4.37.0 || ^5.0.0", "webpack@^5.0.0", "webpack@^5.1.0", "webpack@^5.20.0", "webpack@^5.72.0", "webpack@>=2", "webpack@>=5.32.0", "webpack@4.x.x || 5.x.x":
   "integrity" "sha512-qmSmbspI0Qo5ld49htys8GY9XhS9CGqFoHTsOVAnjBdg0Zn79y135R+k4IR4rKK6+eKaabMhJwiVB7xw0SJu5w=="
   "resolved" "https://registry.npmjs.org/webpack/-/webpack-5.72.0.tgz"
   "version" "5.72.0"

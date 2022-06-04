@@ -1,41 +1,39 @@
-extends ../../layout/ui-kit-page.pug
+extends layout/ui-kit-page.pug
 
 block title
   title Form elements
 
 block page
-  include ../../components/default-text-field/default-text-field.pug
-  include ../../components/dropdown/dropdown.pug
-  include ../../components/masked-text-field/masked-text-field.pug
-  include ../../components/range-date/range-date.pug
-  include ../../components/filter-date/filter-date.pug
-  include ../../components/subscribe-text-field/subscribe-text-field.pug
-  include ../../components/checkbox-list/checkbox-list.pug
-  include ../../components/radio-list/radio-list.pug
-  include ../../components/toggle/toggle.pug
-  include ../../components/like/like.pug
-  include ../../components/rate/rate.pug
-  include ../../components/range-slider/range-slider.pug
-  include ../../components/button/button.pug
-  include ../../components/pagination/pagination.pug
-  include ../../components/expand-list/expand-list.pug
-  include ../../components/rich-checkbox-list/rich-checkbox-list.pug
-  include ../../components/bullet-list/bullet-list.pug
-  include ../../components/review-list/review-list.pug
-  include ../../components/feedback/feedback.pug
+  include components/default-text-field/default-text-field.pug
+  include components/dropdown/dropdown.pug
+  include components/masked-text-field/masked-text-field.pug
+  include components/range-date/range-date.pug
+  include components/filter-date/filter-date.pug
+  include components/subscribe-text-field/subscribe-text-field.pug
+  include components/checkbox-list/checkbox-list.pug
+  include components/radio-list/radio-list.pug
+  include components/toggle/toggle.pug
+  include components/like/like.pug
+  include components/rate/rate.pug
+  include components/range-slider/range-slider.pug
+  include components/button/button.pug
+  include components/pagination/pagination.pug
+  include components/expand-list/expand-list.pug
+  include components/rich-checkbox-list/rich-checkbox-list.pug
+  include components/bullet-list/bullet-list.pug
+  include components/review-list/review-list.pug
+  include components/feedback/feedback.pug
 
   -
-     const guestDropdownData = require('../../../data/dropdown-guests-data');
-     const checkboxData = require('../../../data/checkbox-list-data');
+     const guestDropdownData = require('data/dropdown-guests-data');
+     const checkboxData = require('data/checkbox-list-data');
      const { data: apartmentsDropdownData } = 
-        require('../../../data/dropdown-apartments-data');
-     const { data: expandListData } = 
-        require('../../../data/expand-list-data');
-     const { data: reviewListData } = 
-        require('../../../data/review-list-data');
-     const { data: bulletListData } = require('../../../data/bullet-list');
-     const { man: feedbackData } = require('../../../data/feedback-data');
-     const { data: genderData } = require('../../../data/gender-data');
+        require('data/dropdown-apartments-data');
+     const { data: expandListData } = require('data/expand-list-data');
+     const { data: reviewListData } = require('data/review-list-data');
+     const { data: bulletListData } = require('data/bullet-list');
+     const { man: feedbackData } = require('data/feedback-data');
+     const { data: genderData } = require('data/gender-data');
 
   .form-elements
     .form-elements__container

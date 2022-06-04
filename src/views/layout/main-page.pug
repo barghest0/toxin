@@ -1,5 +1,5 @@
-include ../components/header/header.pug
-include ../components/footer/footer.pug
+include components/header/header.pug
+include components/footer/footer.pug
 
 doctype html
 html(lang="en")
@@ -35,11 +35,11 @@ html(lang="en")
   body 
     -
       const headerNavigation =
-          require('../../../data/header-navigation-data')
+          require('data/header-navigation-data')
       const { data: footerNavigation } = 
-          require('../../../data/footer-navigation-data')
+          require('data/footer-navigation-data')
       const { data: footerSocials } =
-          require('../../../data/socials-data')
+          require('data/socials-data')
   
     +header({ data: headerNavigation })
     block page

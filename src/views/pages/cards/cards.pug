@@ -1,21 +1,21 @@
-extends ../../layout/ui-kit-page.pug
+extends layout/ui-kit-page.pug
 
 block title
   title Cards
 
 block page
-  include ../../components/search-room-card/search-room-card.pug
-  include ../../components/register-card/register-card.pug
-  include ../../components/booking-card/booking-card.pug
-  include ../../components/login-card/login-card.pug
-  include ../../components/datepicker/datepicker.pug
-  include ../../components/preview-room/preview-room.pug
+  include components/search-room-card/search-room-card.pug
+  include components/register-card/register-card.pug
+  include components/booking-card/booking-card.pug
+  include components/login-card/login-card.pug
+  include components/datepicker/datepicker.pug
+  include components/preview-room/preview-room.pug
 
   -
-    const { data: roomsData} = require("../../../data/preview-rooms-data");
-    const { data: bookingData } = require("../../../data/booking-data");
+    const { data: roomsData} = require("data/preview-rooms-data");
+    const { data: bookingData } = require("data/booking-data");
     const { withoutChildren: guestsDropdownData } = 
-       require("../../../data/dropdown-guests-data");
+       require("data/dropdown-guests-data");
     bookingData.guests = guestsDropdownData;
 
   .cards

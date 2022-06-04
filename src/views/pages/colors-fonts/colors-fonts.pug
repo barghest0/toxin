@@ -1,13 +1,13 @@
-extends ../../layout/ui-kit-page.pug
+extends layout/ui-kit-page.pug
 
 block title
   title Colors & fonts
 
 block page
-  include ../../components/color/color.pug
+  include components/color/color.pug
 
-  - const { dark: darkColors } = require('../../../data/colors');
-  - const { main: mainColors } = require('../../../data/colors');
+  - const { dark: darkColors } = require('data/colors');
+  - const { main: mainColors } = require('data/colors');
 
   .colors-fonts
     .colors-fonts__container

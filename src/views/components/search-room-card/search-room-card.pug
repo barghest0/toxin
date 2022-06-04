@@ -1,12 +1,12 @@
-include ../range-date/range-date.pug
-include ../dropdown/dropdown.pug
-include ../button/button.pug
+include components/range-date/range-date.pug
+include components/dropdown/dropdown.pug
+include components/button/button.pug
 
 mixin search-room-card({ title = 'Найдём номера под ваши пожелания' } = {})
 
   - 
     const { clear: guestsDropdownData } = 
-        require('../../../data/dropdown-guests-data');
+        require('data/dropdown-guests-data');
 
   .search-room-card 
     h1.search-room-card__title= title

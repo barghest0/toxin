@@ -1,18 +1,18 @@
-extends ../../layout/ui-kit-page.pug
+extends layout/ui-kit-page.pug
 
 block title
   title Headers & footers
 
 block page
-  include ../../components/header/header.pug
-  include ../../components/footer/footer.pug
+  include components/header/header.pug
+  include components/footer/footer.pug
 
   -
-     const headerNavigation = require('../../../data/header-navigation-data')
+     const headerNavigation = require('data/header-navigation-data')
      const { data: footerNavigation } = 
-        require('../../../data/footer-navigation-data')
+        require('data/footer-navigation-data')
      const { data: footerSocials } = 
-        require('../../../data/socials-data')
+        require('data/socials-data')
 
   .headers-footers
     .headers-footers__inner
