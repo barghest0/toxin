@@ -37,6 +37,8 @@ class DatepickerFacade {
       buttons: this.buttons,
       isMobile: true,
       dateFormat: this.isFilterDate() ? 'd MMM' : 'dd.MM.yyyy',
+      autoClose: false,
+      moveToOtherMonthsOnSelect: false,
       classes: this.setClasses(),
     };
     if (this.datepicker.dataset.dateFrom && this.datepicker.dataset.dateTo) {

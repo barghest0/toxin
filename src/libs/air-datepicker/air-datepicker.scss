@@ -101,10 +101,36 @@
   &-cell {
     font-size: 12px;
     display: grid;
+    pointer-events: all;
 
     &.-day- {
       color: $dark-shade-50;
       height: 40px;
+
+      &.-other-month- {
+        &.-focus- {
+          color: $white;
+        }
+
+        &.-in-range- {
+          color: $dark-shade-50;
+          background-color: transparent;
+
+          &.-focus- {
+            color: $dark-shade-50;
+            font-weight: bold;
+            background-color: transparent;
+          }
+        }
+
+        &.-selected- {
+          @include main-gradient-to-bottom;
+          &.-focus- {
+            @include main-gradient-to-bottom;
+          }
+        }
+      }
+
       @include sm-phone {
         height: 34px;
       }
