@@ -22,15 +22,15 @@
     column-gap: 40px;
     row-gap: 30px;
 
-    @include md-desktop {
+    @include media-breakpoint(xl) {
       margin: 0 auto;
       grid-template-columns: 1fr 1fr;
 
-      @include tablet-portrait {
+      @include media-breakpoint(md) {
         grid-template-columns: 1fr;
         width: 90%;
 
-        @include phone {
+        @include media-breakpoint(sm) {
           width: 100%;
         }
       }
@@ -45,12 +45,16 @@
 
   &__datepicker {
     display: block;
+
+    @include media-breakpoint(md) {
+      padding: 0 15px;
+    }
   }
 
   &__preview-room {
     width: 270px;
 
-    @include md-desktop {
+    @include media-breakpoint(lg) {
       grid-column-start: 2;
     }
   }

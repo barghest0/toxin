@@ -194,12 +194,12 @@
   border-radius: 4px;
   box-shadow: 0 0 25px rgba($color: $black, $alpha: 0.2);
 
-  @include phone {
+  @include media-breakpoint(sm) {
     padding: 5%;
     padding-top: 10%;
   }
 
-  @include sm-phone {
+  @include media-breakpoint(xs) {
     padding: 12px;
     padding-top: 25px;
   }

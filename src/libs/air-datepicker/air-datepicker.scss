@@ -6,6 +6,10 @@
   box-sizing: border-box;
   padding: 20px;
 
+  @include phone {
+    padding: 10px;
+  }
+
   &.-inline- {
     @include shadow;
   }
@@ -68,9 +72,15 @@
   &-body {
     max-width: 280px;
     margin: 0 auto;
+
     &--day-names {
       margin: 0;
       grid-auto-rows: 40px;
+
+      @include sm-phone {
+        grid-template-columns: repeat(7, 35px);
+        justify-content: center;
+      }
     }
 
     &--day-name {
@@ -79,8 +89,9 @@
       color: $main-color;
       @include size(40px);
 
-      @include phone {
-        @include size(100%);
+      @include sm-phone {
+        height: 35px;
+        width: 35px;
       }
     }
 
@@ -89,6 +100,12 @@
 
       &.-days- {
         grid-auto-rows: 40px;
+
+        @include sm-phone {
+          grid-template-columns: repeat(7, 35px);
+          grid-auto-rows: 35px;
+          justify-content: center;
+        }
       }
 
       &.-months-,
@@ -132,7 +149,8 @@
       }
 
       @include sm-phone {
-        height: 34px;
+        height: 35px;
+        width: 35px;
       }
     }
 
@@ -263,7 +281,7 @@
 
   &_md &-body {
     &--cells.-days- {
-      grid-auto-rows: 33px;
+      grid-auto-rows: 35px;
       grid-auto-columns: 35px;
     }
 
@@ -274,7 +292,7 @@
   }
 
   &_md &-cell {
-    height: 33px;
+    height: 35px;
     width: 35px;
   }
 }

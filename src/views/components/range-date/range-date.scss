@@ -7,9 +7,9 @@
   }
 
   &__fields {
-    display: flex;
+    display: grid;
     column-gap: 20px;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
   }
 
   &__field {

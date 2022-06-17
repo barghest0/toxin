@@ -24,7 +24,7 @@
     display: grid;
     grid-template-columns: 266px minmax(10px, 60px) 1fr;
 
-    @include media-breakpoint(sm) {
+    @include media-breakpoint(md) {
       grid-template-columns: 1fr;
       padding-top: 50px;
     }
@@ -38,14 +38,14 @@
     }
 
     &-icon {
-      z-index: 10;
+      z-index: 9;
       cursor: pointer;
       position: absolute;
       top: 85px;
       right: 25px;
       display: none;
 
-      @include sm-tablet-portrait {
+      @include media-breakpoint(md) {
         display: block;
       }
     }
@@ -53,6 +53,11 @@
     &-close {
       cursor: pointer;
       display: none;
+      position: absolute;
+      right: 0;
+      top: 5px;
+      z-index: 15;
+
       &::after,
       &::before {
         content: '';
@@ -64,17 +69,19 @@
         right: 30px;
         @include main-gradient-to-bottom;
       }
+
       &::before {
         transform: rotate(-45deg);
       }
     }
 
-    @include sm-tablet-portrait {
+    @include media-breakpoint(md) {
       pointer-events: none;
       position: fixed;
       left: 0;
       top: 0;
       z-index: 10;
+
       &_active {
         pointer-events: all;
         width: 100%;
@@ -82,14 +89,14 @@
       }
 
       &-inner {
-        transform: translateX(-400px);
+        transform: translateX(-100%);
         width: 400px;
         padding: 20px;
 
-        @include landscape-phone {
-          width: 70%;
+        @include media-breakpoint(md) {
+          width: 60%;
 
-          @include phone {
+          @include media-breakpoint(sm) {
             width: 100%;
           }
         }
@@ -101,7 +108,7 @@
         overflow: auto;
       }
 
-      @include phone {
+      @include media-breakpoint(sm) {
         &_active &-close {
           display: block;
         }
@@ -115,6 +122,7 @@
 
   &__filter {
     margin-bottom: 30px;
+
     &:nth-child(2) {
       margin-bottom: 20px;
     }
