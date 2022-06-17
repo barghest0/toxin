@@ -38,14 +38,14 @@
       minmax(250px, 320px);
     margin-bottom: 70px;
 
-    @include sm-desktop {
+    @include media-breakpoint(lg) {
       row-gap: 50px;
       margin: 0 auto;
       grid-template-columns: 1fr;
       width: 80%;
       margin-bottom: 50px;
 
-      @include phone {
+      @include media-breakpoint(sm) {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -85,15 +85,15 @@
   &__selections {
     grid-column-start: 3;
 
-    @include sm-desktop {
+    @include media-breakpoint(lg) {
       grid-column-start: 1;
       grid-row-start: 2;
     }
   }
 
   &__selection-label {
-    margin-bottom: 16px;
     @include block-label;
+    margin-bottom: 16px;
   }
 
   &__checkboxes {
@@ -106,6 +106,7 @@
 
   &__toggle {
     margin-bottom: 40px;
+
     &-column {
       display: flex;
       flex-direction: column;
@@ -115,6 +116,7 @@
 
   &__like {
     margin-bottom: 40px;
+
     &-row {
       display: flex;
       column-gap: 10px;
@@ -130,15 +132,15 @@
 
   &__other {
     grid-column-start: 5;
-    @include sm-desktop {
+    @include media-breakpoint(lg) {
       grid-column-start: 1;
       grid-row-start: 3;
     }
   }
 
   &__other-label {
-    margin-bottom: 16px;
     @include block-label;
+    margin-bottom: 16px;
   }
 
   &__slider {
@@ -178,13 +180,14 @@
     display: grid;
     grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
 
-    @include sm-desktop {
+    @include media-breakpoint(lg) {
       row-gap: 50px;
       margin: 0 auto;
       margin-bottom: 50px;
       width: 80%;
       grid-template-columns: 1fr;
-      @include phone {
+
+      @include media-breakpoint(sm) {
         width: 100%;
       }
     }
@@ -200,10 +203,12 @@
     &_lg {
       grid-row: 1;
       grid-column-start: 3;
+
       &:nth-child(4) {
         grid-column-start: 5;
       }
-      @include sm-desktop {
+
+      @include media-breakpoint(lg) {
         grid-row: auto;
         grid-column: auto;
 
@@ -219,15 +224,16 @@
     margin-bottom: 40px;
     display: grid;
     grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
-    @include sm-desktop {
+
+    @include media-breakpoint(lg) {
       row-gap: 50px;
       grid-template-columns: 1fr;
     }
   }
 
   &__list-label {
-    margin-bottom: 16px;
     @include block-label;
+    margin-bottom: 16px;
   }
 
   &__expand-checkbox {
@@ -235,14 +241,16 @@
     display: flex;
     flex-direction: column;
     row-gap: 35px;
-    @include sm-desktop {
+
+    @include media-breakpoint(lg) {
       grid-column-start: 1;
     }
   }
 
   &__rich-checkbox {
     grid-column-start: 3;
-    @include sm-desktop {
+
+    @include media-breakpoint(lg) {
       grid-column-start: 1;
       grid-row-start: 2;
     }
@@ -250,7 +258,8 @@
 
   &__bullet-list {
     grid-column-start: 5;
-    @include sm-desktop {
+
+    @include media-breakpoint(lg) {
       grid-column-start: 1;
       grid-row-start: 3;
     }
@@ -259,11 +268,12 @@
   &__reviews {
     display: grid;
     grid-template-columns: 280px minmax(10px, 167px) 1fr;
-    @include tablet-landscape {
+
+    @include media-breakpoint(md) {
       row-gap: 50px;
       grid-template-columns: 1fr;
       width: 80%;
-      @include phone {
+      @include media-breakpoint(sm) {
         width: 100%;
       }
     }
@@ -271,7 +281,8 @@
 
   &__reviews-list {
     grid-column-start: 1;
-    @include tablet-landscape {
+
+    @include media-breakpoint(md) {
       row-gap: 50px;
       grid-column-start: 1;
     }
@@ -279,7 +290,8 @@
 
   &__feedback {
     grid-column-start: 3;
-    @include tablet-landscape {
+
+    @include media-breakpoint(md) {
       row-gap: 50px;
       grid-column-start: 1;
     }

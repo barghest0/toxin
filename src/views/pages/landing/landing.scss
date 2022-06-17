@@ -22,7 +22,7 @@
     grid-template-columns: 380px 1fr minmax(0, 260px);
     grid-template-rows: 374px 1fr;
 
-    @include phone {
+    @include media-breakpoint(sm) {
       grid-template-columns: 1fr;
     }
   }
@@ -35,7 +35,7 @@
     text-align: end;
     color: $dark-shade-75;
 
-    @include tablet-portrait {
+    @include media-breakpoint(md) {
       grid-column-start: 1;
       text-align: start;
     }

@@ -38,7 +38,7 @@
       'main-image second-image-upper'
       'main-image second-image-lower';
 
-    @include tablet-portrait {
+    @include media-breakpoint(md) {
       grid-template-areas: 'main-image main-image';
       grid-template-rows: minmax(min-content, 100px);
     }
@@ -72,7 +72,7 @@
     display: grid;
     grid-template-columns: 1fr minmax(10px, 70px) 380px;
 
-    @include tablet-landscape {
+    @include media-breakpoint(lg) {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 0.3fr;
       padding: 30px 0;
@@ -85,7 +85,7 @@
     height: 512px;
     grid-column-start: 3;
 
-    @include tablet-landscape {
+    @include media-breakpoint(lg) {
       grid-column-start: 1;
       grid-row-start: 2;
       justify-self: center;
@@ -104,20 +104,18 @@
 
   &__reviews {
     display: grid;
-    grid-template-columns: 280px minmax(10px, 80px) 1fr;
+    grid-template-columns: minmax(230px, 280px) minmax(20px, 80px) 1fr;
     grid-area: reviews;
 
-    @include md-desktop {
-      row-gap: 40px;
-      grid-template-columns: 1fr;
-      justify-self: center;
+    @include media-breakpoint(lg) {
+      grid-template-columns: minmax(220px, 1fr) minmax(5px, 80px) 1fr;
 
-      @include tablet-landscape {
-        grid-template-columns: minmax(240px, 1fr) minmax(10px, 80px) 1fr;
+      @include media-breakpoint(sm) {
+        row-gap: 40px;
+        grid-template-columns: 1fr;
+        justify-self: center;
 
-        @include sm-tablet-portrait {
-          grid-template-columns: minmax(240px, 1fr);
-        }
+        grid-template-columns: minmax(240px, 1fr);
       }
     }
   }
@@ -125,18 +123,13 @@
   &__impressions {
     grid-column-start: 3;
 
-    @include md-desktop {
-      grid-column-start: 1;
-      grid-row-start: 2;
+    @include media-breakpoint(lg) {
+      grid-column-start: 3;
+      grid-row-start: 1;
 
-      @include tablet-landscape {
-        grid-column-start: 3;
-        grid-row-start: 1;
-
-        @include sm-tablet-portrait {
-          grid-column-start: 1;
-          grid-row-start: 2;
-        }
+      @include media-breakpoint(sm) {
+        grid-column-start: 1;
+        grid-row-start: 2;
       }
     }
 
@@ -144,7 +137,7 @@
       position: relative;
       left: -23px;
 
-      @include phone {
+      @include media-breakpoint(md) {
         left: -15px;
       }
     }
@@ -173,10 +166,10 @@
     grid-template-columns: 260px minmax(0px, 100px) minmax(340px, 240px);
     grid-area: additions;
 
-    @include sm-tablet-portrait {
+    @include media-breakpoint(md) {
       grid-template-columns: 1fr minmax(0px, 20px) 1fr;
 
-      @include phone {
+      @include media-breakpoint(sm) {
         row-gap: 20px;
         grid-template-columns: 1fr;
       }
@@ -190,7 +183,7 @@
       @include body-text;
     }
 
-    @include phone {
+    @include media-breakpoint(sm) {
       grid-column-start: 1;
       grid-row-start: 2;
     }

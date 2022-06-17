@@ -19,7 +19,7 @@
       width: 768px;
       margin-bottom: 125px;
 
-      @include tablet-portrait {
+      @include media-breakpoint(md) {
         width: 100%;
       }
     }

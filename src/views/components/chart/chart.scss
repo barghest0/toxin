@@ -6,7 +6,7 @@
   text-align: center;
   position: relative;
 
-  @include phone {
+  @include media-breakpoint(md) {
     @include size(320px, 180px);
   }
 }

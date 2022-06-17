@@ -1,4 +1,4 @@
-const TURNING_POINT = 420;
+const TURNING_POINT = 768;
 const BOTTOM_POSITION = 'bottom';
 const RIGHT_POSITION = 'right';
 const CENTER_ALIGN = 'center';
