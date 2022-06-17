@@ -30,3 +30,12 @@ $second-font-size: 12px;
 $html-line-height: 1.3;
 $main-line-height: 1.7;
 $second-line-height: 1.25;
+
+$breakpoints: (
+  xxl: 1440px,
+  xl: 1200px,
+  lg: 992px,
+  md: 768px,
+  sm: 576px,
+  xs: 360px,
+);
