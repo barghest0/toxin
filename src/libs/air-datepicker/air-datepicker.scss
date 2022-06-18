@@ -6,7 +6,7 @@
   box-sizing: border-box;
   padding: 20px;
 
-  @include phone {
+  @include media-breakpoint(sm) {
     padding: 10px;
   }
 
@@ -77,7 +77,7 @@
       margin: 0;
       grid-auto-rows: 40px;
 
-      @include sm-phone {
+      @include media-breakpoint(xs) {
         grid-template-columns: repeat(7, 35px);
         justify-content: center;
       }
@@ -89,7 +89,7 @@
       color: $main-color;
       @include size(40px);
 
-      @include sm-phone {
+      @include media-breakpoint(xs) {
         height: 35px;
         width: 35px;
       }
@@ -101,7 +101,7 @@
       &.-days- {
         grid-auto-rows: 40px;
 
-        @include sm-phone {
+        @include media-breakpoint(xs) {
           grid-template-columns: repeat(7, 35px);
           grid-auto-rows: 35px;
           justify-content: center;
@@ -148,7 +148,7 @@
         }
       }
 
-      @include sm-phone {
+      @include media-breakpoint(xs) {
         height: 35px;
         width: 35px;
       }
@@ -159,11 +159,11 @@
       color: $dark-shade-50;
       @include size(60px);
 
-      @include sm-phone {
+      @include media-breakpoint(xs) {
         @include size(40px);
       }
 
-      &.-selected {
+      &.-selected- {
         border-radius: 50%;
       }
     }

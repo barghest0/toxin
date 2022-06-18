@@ -3,9 +3,9 @@
 @import 'components/button/button.scss';
 
 .header {
+  @include shadow;
   z-index: 10;
   background-color: $white;
-  @include shadow;
   position: relative;
 
   &_authorized {
@@ -33,7 +33,7 @@
 
   &__nav {
     height: 34px;
-    @include tablet-landscape {
+    @include media-breakpoint(lg) {
       display: none;
     }
   }
@@ -48,31 +48,31 @@
     }
 
     &-line {
+      @include size(30px, 3px);
+      @include main-gradient-to-bottom;
       content: '';
       position: absolute;
-      @include size(30px, 3px);
       position: absolute;
-      @include main-gradient-to-bottom;
       border-radius: 5px;
       top: 5px;
       transition: all 0.2s linear;
 
       &::before {
-        position: absolute;
-        content: '';
         @include size(30px, 3px);
         @include main-gradient-to-bottom;
+        position: absolute;
+        content: '';
         border-radius: 5px;
         top: 20px;
         transition: all 0.2s linear;
       }
 
       &::after {
-        content: '';
         @include size(30px, 3px);
+        @include main-gradient-to-bottom;
+        content: '';
         position: absolute;
         top: 10px;
-        @include main-gradient-to-bottom;
         border-radius: 5px;
         transition: all 0.2s linear;
       }
@@ -101,7 +101,7 @@
       display: block;
     }
 
-    @include tablet-landscape {
+    @include media-breakpoint(lg) {
       width: 30px;
       display: flex;
       justify-content: center;

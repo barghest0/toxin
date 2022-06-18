@@ -9,7 +9,7 @@
   max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto;
-  @include phone {
+  @include media-breakpoint(sm) {
     padding: 0 10px;
   }
 }
@@ -82,7 +82,7 @@
   }
 }
 
-@mixin filled-button() {
+@mixin filled-button {
   @include button;
   @include main-gradient-to-bottom;
   color: $white;
@@ -120,7 +120,7 @@
   font-weight: bold;
   line-height: 1.2;
   font-size: $widget-font-size;
-  @include phone {
+  @include media-breakpoint(sm) {
     font-size: $inside-widget-font-size;
   }
 }
@@ -202,53 +202,6 @@
   @include media-breakpoint(xs) {
     padding: 12px;
     padding-top: 25px;
-  }
-}
-
-@mixin sm-phone {
-  @media (max-width: 360px) {
-    @content;
-  }
-}
-
-@mixin phone {
-  @media (max-width: 420px) {
-    @content;
-  }
-}
-
-@mixin landscape-phone {
-  @media (max-width: 500px) {
-    @content;
-  }
-}
-
-@mixin sm-tablet-portrait {
-  @media (max-width: 650px) {
-    @content;
-  }
-}
-
-@mixin tablet-portrait {
-  @media (max-width: 768px) {
-    @content;
-  }
-}
-@mixin tablet-landscape {
-  @media (max-width: 900px) {
-    @content;
-  }
-}
-
-@mixin sm-desktop {
-  @media (max-width: 1024px) {
-    @content;
-  }
-}
-
-@mixin md-desktop {
-  @media (max-width: 1200px) {
-    @content;
   }
 }
 

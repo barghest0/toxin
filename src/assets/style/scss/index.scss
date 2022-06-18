@@ -27,7 +27,7 @@ html {
 
 *::placeholder {
   font-size: $main-font-size;
-  @include phone {
+  @include media-breakpoint(sm) {
     font-size: 12px;
   }
 }
@@ -42,4 +42,3 @@ html {
   @include main-gradient-to-bottom;
   border-radius: 10px;
 }
-

@@ -130,6 +130,7 @@
   }
 
   &_folded {
+    @include shadow;
     height: inherit;
     z-index: inherit;
     background-color: $white;
@@ -141,7 +142,6 @@
     padding: 10px;
     border-radius: 0px 0px 0px 7px;
     width: 300px;
-    @include shadow;
   }
 
   &_folded &__item-arrow {
@@ -176,7 +176,7 @@
   }
 
   &_folded {
-    @include phone {
+    @include media-breakpoint(sm) {
       width: 100vw;
     }
   }

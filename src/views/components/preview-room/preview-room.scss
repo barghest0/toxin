@@ -8,11 +8,11 @@
   padding: 0;
   padding-bottom: 19px;
 
-  @include phone {
+  @include media-breakpoint(sm) {
     padding: 0;
     padding-bottom: 10px;
 
-    @include sm-phone {
+    @include media-breakpoint(xs) {
       padding: 0;
       padding-bottom: 5px;
     }

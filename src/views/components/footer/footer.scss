@@ -37,7 +37,7 @@
     margin-bottom: 25px;
   }
 
-  @include tablet-portrait {
+  @include media-breakpoint(md) {
     display: none;
 
     &__company-logo {
@@ -52,7 +52,7 @@
     }
   }
 
-  @include phone {
+  @include media-breakpoint(sm) {
     height: 200px;
   }
 
@@ -65,7 +65,7 @@
     grid-column-gap: 40px;
     padding: 100px 0;
 
-    @include md-desktop {
+    @include media-breakpoint(xl) {
       padding: 50px 0;
       grid-template-columns: repeat(3, minmax(150px, 1fr));
     }
@@ -76,7 +76,7 @@
     flex-direction: column;
     width: 260px;
 
-    @include md-desktop {
+    @include media-breakpoint(xl) {
       justify-self: center;
       grid-column: 1 / main-end;
     }
@@ -100,9 +100,9 @@
     row-gap: 20px;
 
     &-title {
+      @include block-label;
       text-transform: uppercase;
       margin-top: 3px;
-      @include block-label;
       line-height: 1.3;
     }
 
