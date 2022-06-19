@@ -7,14 +7,6 @@
   margin: 0 auto;
   @include shadow;
 
-  &_hidden {
-    display: none;
-  }
-
-  &__container {
-    @include container;
-  }
-
   &_sm {
     @include size(100%, 365px);
     display: none;
@@ -28,13 +20,25 @@
     }
   }
 
-  &__copyright {
-    color: $dark-shade-75;
-  }
-
   &_sm &__copyright {
     text-align: center;
     margin-bottom: 25px;
+  }
+
+  &_sm &__company-logo {
+    margin-bottom: 20px;
+  }
+
+  &_hidden {
+    display: none;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__copyright {
+    color: $dark-shade-75;
   }
 
   @include media-breakpoint(md) {
@@ -145,6 +149,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 22px;
   }
 }
