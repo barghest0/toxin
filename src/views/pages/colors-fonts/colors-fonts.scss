@@ -2,7 +2,8 @@
 @import 'components/color/color.scss';
 
 .colors-fonts {
-  padding: 100px 0;
+  padding: 145px 0;
+  padding-left: 20px;
 
   &__container {
     @include container;
@@ -23,9 +24,13 @@
 
   &__font {
     display: grid;
-    grid-template-columns: 40px minmax(min-content, 370px);
-    grid-column-gap: 20px;
-    margin-bottom: 40px;
+    grid-template-columns: 40px 370px;
+    grid-column-gap: 30px;
+    margin-bottom: 51px;
+  }
+
+  &__fonts {
+    padding-right: 27px;
   }
 
   &__tag {
@@ -47,12 +52,13 @@
         font-size: $second-font-size;
       }
 
-      &_text {
+      &_body {
         font-size: $main-font-size;
         text-transform: capitalize;
       }
     }
   }
+
   &__text {
     &_type {
       &_widget {
@@ -67,8 +73,9 @@
         @include block-label;
       }
 
-      &_text {
+      &_body {
         @include body-text;
+        max-width: 310px;
       }
     }
   }

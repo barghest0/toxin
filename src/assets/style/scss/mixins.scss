@@ -118,7 +118,7 @@
 @mixin widget-title {
   color: $dark-shade-100;
   font-weight: bold;
-  line-height: 1.2;
+  line-height: $second-line-height;
   font-size: $widget-font-size;
   @include media-breakpoint(sm) {
     font-size: $inside-widget-font-size;
@@ -129,7 +129,7 @@
   color: $dark-shade-100;
   font-weight: bold;
   font-size: $inside-widget-font-size;
-  line-height: 1.1;
+  line-height: $second-line-height;
 }
 
 @mixin main-gradient-to-bottom(

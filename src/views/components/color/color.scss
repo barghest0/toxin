@@ -1,9 +1,10 @@
 .color {
   display: flex;
   align-items: center;
-  
+
   &__title {
     @include title-inside-widget;
+    line-height: 1.5;
   }
 
   &__box {
