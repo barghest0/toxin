@@ -7,7 +7,7 @@
   @include card;
 
   &__room-info {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 
   &__date {
@@ -21,8 +21,8 @@
   &__cost {
     display: grid;
     grid-template-columns: minmax(195px, 240px) minmax(60px, 1fr);
-    grid-row-gap: 10px;
-    margin-bottom: 35px;
+    grid-row-gap: 12px;
+    margin-bottom: 32px;
     cursor: default;
   }
 

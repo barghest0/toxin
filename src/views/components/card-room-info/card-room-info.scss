@@ -14,7 +14,6 @@
     &-number {
       @include widget-title;
       margin-right: 9px;
-      line-height: inherit;
 
       &_sm {
         @include title-inside-widget;
@@ -22,7 +21,7 @@
 
       &-symbol {
         display: flex;
-        line-height: inherit;
+        line-height: 1.7;
         align-items: flex-end;
         font-size: $main-font-size;
         font-weight: bold;
@@ -32,7 +31,7 @@
     }
 
     &-luxury {
-      line-height: 1;
+      line-height: 1.6;
       font-weight: bold;
       font-size: $second-font-size;
       text-transform: uppercase;

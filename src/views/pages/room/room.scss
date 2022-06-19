@@ -68,7 +68,7 @@
   }
 
   &__inner {
-    padding: 72px 0;
+    padding: 70px 0;
     display: grid;
     grid-template-columns: 1fr minmax(10px, 70px) 380px;
 
@@ -99,7 +99,7 @@
       'reviews'
       'feedback'
       'additions';
-    row-gap: 34px;
+    row-gap: 32px;
   }
 
   &__reviews {
