@@ -33,6 +33,10 @@
     }
   }
 
+  &__datepicker {
+    margin-top: 5px;
+  }
+
   &__field_opened &__arrow {
     &::after {
       transform: rotate(135deg);

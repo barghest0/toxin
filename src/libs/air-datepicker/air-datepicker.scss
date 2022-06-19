@@ -1,10 +1,11 @@
 .air-datepicker {
   font-family: Montserrat, Arial sans-serif;
   position: absolute;
-  margin: 5px auto;
+  margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 15px 20px;
+  padding-bottom: 20px;
 
   @include media-breakpoint(sm) {
     padding: 10px;
@@ -20,7 +21,7 @@
   }
 
   &--navigation {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   &-nav {
@@ -66,6 +67,10 @@
     &:hover {
       background-color: transparent;
       color: $main-color;
+    }
+
+    span {
+      font-size: $second-font-size;
     }
   }
 
