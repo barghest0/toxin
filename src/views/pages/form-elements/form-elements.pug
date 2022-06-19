@@ -56,7 +56,7 @@ block page
               type: 'email',
               value: 'This is pretty awesome'
             })
-          .form-elements__dropdown
+          .form-elements__dropdown.form-elements__dropdown_default
             +dropdown({
               label: 'dropdown',
               type: 'guests',
@@ -91,7 +91,7 @@ block page
               items: checkboxData.default 
             })
           .form-elements__radio
-            h3.form-elements__selection-label radio button
+            h3.form-elements__selection-label radio buttons
             +radio-list({ items: genderData })
           .form-elements__toggle
             h3.form-elements__selection-label toggle

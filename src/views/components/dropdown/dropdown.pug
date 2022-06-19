@@ -12,8 +12,9 @@ mixin dropdown(props = {})
     } = props
 
     const containerClasses = state === 'opened' ? 'dropdown__container_opened' : '';
+    const dropdownClasses = size === 'md' ? 'dropdown_md':''
 
-  .dropdown
+  .dropdown(class=dropdownClasses)
     .dropdown__labels
       h3.dropdown__label= label
       if subLabel

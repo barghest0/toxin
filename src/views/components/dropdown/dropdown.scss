@@ -3,6 +3,10 @@
   flex-direction: column;
   position: relative;
 
+  &_md {
+    font-size: $second-font-size;
+  }
+
   &__buttons {
     display: flex;
     justify-content: space-between;

@@ -61,6 +61,10 @@
     margin-bottom: 20px;
   }
 
+  &__dropdown {
+    margin-bottom: 23px;
+  }
+
   &__masked-text-field {
     margin-bottom: 40px;
   }
@@ -70,7 +74,7 @@
   }
 
   &__filter-date {
-    margin-bottom: 41px;
+    margin-bottom: 40px;
     max-width: 266px;
   }
 
@@ -173,7 +177,7 @@
   }
 
   &__dropdowns {
-    margin-bottom: 155px;
+    margin-bottom: 160px;
     display: grid;
     grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
 
@@ -192,10 +196,6 @@
 
   &__dropdown {
     margin-bottom: 20px;
-
-    &_default {
-      margin-bottom: 23px;
-    }
 
     &_sm {
       grid-column-start: 1;
@@ -222,9 +222,9 @@
   }
 
   &__lists {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     display: grid;
-    grid-template-columns: 266px minmax(10px, 180px) 266px minmax(10px, 127px) 260px;
+    grid-template-columns: 266px minmax(10px, 180px) 320px minmax(10px, 70px) 320px;
 
     @include media-breakpoint(lg) {
       row-gap: 50px;
@@ -241,7 +241,7 @@
     grid-column-start: 1;
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 35px;
 
     @include media-breakpoint(lg) {
       grid-column-start: 1;
@@ -291,7 +291,6 @@
 
   &__feedback {
     grid-column-start: 3;
-    padding-top: 10px;
 
     @include media-breakpoint(md) {
       row-gap: 50px;
