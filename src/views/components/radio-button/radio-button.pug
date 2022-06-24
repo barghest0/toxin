@@ -1,0 +1,11 @@
+
+mixin radio-button({ name = '', text = '', state = '' } = {})
+  label.radio-button
+    input.radio-button__input(
+      type="radio",
+      name=name,
+      checked=state || false
+    )
+    .radio-button__custom-input
+      span.radio-button__circle
+    .radio-button__title= text

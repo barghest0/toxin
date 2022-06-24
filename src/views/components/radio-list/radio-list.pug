@@ -1,13 +1,8 @@
+include components/radio-button/radio-button
+
 mixin radio-list({ items = [] } = {})
   .radio-list
     each item in items
-      - const { name, state, text } = item;
-      label.radio-list__item
-        input.radio-list__input(
-          type="radio",
-          name=name,
-          checked=state ? state : null
-        )
-        .radio-list__custom-input
-          span.radio-list__circle
-        .radio-list__title= text
+      .radio-list__item
+        +radio-button(item)
+      
