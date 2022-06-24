@@ -122,22 +122,21 @@ block page
           .form-elements__buttons
             h3.form-elements__other-label buttons
             .form-elements__buttons.form-elements__buttons_small
-              +button({ text: 'click me', type: 'filled' })
-              +button({ text: 'click me', type: 'filled', state: 'hovered' })
-              +button({ text: 'click me', type: 'outlined' })
-              +button({ text: 'click me', type: 'outlined', state: 'hovered' })
+              +button({ text: 'click me',theme: 'filled' })
+              +button({ text: 'click me', theme: 'filled', state: 'hovered' })
+              +button({ text: 'click me', theme: 'outlined' })
+              +button({ text: 'click me', theme: 'outlined', state: 'hovered' })
             .form-elements__buttons.form-elements__buttons_no-bordered
-              +button({ text: 'click me', type: 'no-bordered' })
+              +button({ text: 'click me', theme: 'no-bordered' })
               +button({ 
                 text: 'click me', 
-                type: 'no-bordered', 
+                theme: 'no-bordered', 
                 state: 'hovered' 
               })
             .form-elements__buttons.form-elements__buttons_largest
               +button({ 
                   text: 'перейти к оплате', 
-                  type: 'filled', 
-                  isLargest: true 
+                  theme: 'arrowed', 
                 })
           .form-elements__pagination
             h3.form-elements__other-label pagination

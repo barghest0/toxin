@@ -2,16 +2,12 @@ mixin button(props = {})
   -
     const {
       text = '',
-      type = 'outlined', 
-      isLargest = false , 
+      type = 'button', 
+      theme = 'outlined',
       state = ''
     } = props
 
     const buttonClasses = 
-      isLargest ?
-      `button_largest button_${type}`: 
-      `button_${type} ${state === 'hovered' ? 'button_hovered' : ''}`;
+      `button_${theme} ${state === 'hovered' ? 'button_hovered' : ''}`;
 
-    const buttonType = type === 'no-bordered' ? 'button' : 'submit';
-
-  button.button(class=buttonClasses, type=buttonType)= text
+  button.button(class=buttonClasses, type=type)= text

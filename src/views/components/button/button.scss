@@ -34,7 +34,8 @@
       );
   }
 
-  &_largest {
+  &_arrowed {
+    @include filled-button;
     position: relative;
 
     &::before {
