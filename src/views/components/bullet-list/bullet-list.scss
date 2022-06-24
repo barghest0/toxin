@@ -1,8 +1,6 @@
 .bullet-list {
-  &__list {
-    color: $dark-shade-75;
-    padding-left: 16px;
-  }
+  color: $dark-shade-75;
+  padding-left: 16px;
 
   &__item {
     list-style-image: url('./images/bullet-list-item.svg');

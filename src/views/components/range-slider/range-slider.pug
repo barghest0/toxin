@@ -14,4 +14,4 @@ mixin range-slider(props = {})
         span.range-slider__price-delimiter -
         .range-slider__end-price.js-range-slider__end-price
           | #{endPrice.toLocaleString()}₽
-    .slider.js-slider(data-first-value=startPrice, data-second-value=endPrice)
+    .range-slider__slider.js-range-slider__slider(data-first-value=startPrice, data-second-value=endPrice)
