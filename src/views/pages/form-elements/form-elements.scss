@@ -147,24 +147,26 @@
   &__buttons {
     margin-bottom: 40px;
 
-    &_small {
-      display: grid;
-      grid-template-columns: repeat(2, 100px);
-      grid-template-rows: repeat(2, 45px);
-      row-gap: 30px;
-      column-gap: 20px;
-      margin-bottom: 30px;
-    }
+    &-theme {
+      &_small {
+        display: grid;
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(2, 45px);
+        row-gap: 30px;
+        column-gap: 20px;
+        margin-bottom: 30px;
+      }
 
-    &_no-bordered {
-      display: flex;
-      column-gap: 20px;
-      margin-bottom: 30px;
-    }
+      &_no-bordered {
+        display: flex;
+        column-gap: 20px;
+        margin-bottom: 30px;
+      }
 
-    &_largest {
-      width: 320px;
-      height: 44px;
+      &_arrowed {
+        width: 320px;
+        height: 44px;
+      }
     }
   }
 
