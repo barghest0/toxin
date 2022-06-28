@@ -56,12 +56,12 @@
   "buttons": [
     {
       "text": "Войти",
-      "href": "/login.html",
+      "href": "login.html",
       "theme": "outlined"
     },
     {
       "text": "Зарегистрироваться",
-      "href": "/register.html",
+      "href": "register.html",
       "theme": "filled"
     }
   ]
