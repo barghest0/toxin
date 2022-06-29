@@ -125,11 +125,31 @@
     display: grid;
     pointer-events: all;
 
+    &.-range-to- {
+      &.-range-from- {
+        border-radius: 50%;
+        &::after,
+        &::before {
+          display: none;
+        }
+      }
+    }
+
     &.-day- {
       color: $dark-shade-50;
       height: 40px;
 
+      &.-disabled- {
+        color: $dark-shade-25;
+      }
+
       &.-other-month- {
+        color: $dark-shade-50;
+
+        &.-disabled- {
+          color: $dark-shade-25;
+        }
+
         &.-focus- {
           color: $white;
         }
@@ -179,6 +199,10 @@
       color: $white;
 
       &.-focus- {
+        color: $white;
+      }
+
+      &.-other-month- {
         color: $white;
       }
 

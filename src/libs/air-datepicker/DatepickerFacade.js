@@ -1,3 +1,4 @@
+import { boundMethod } from 'autobind-decorator';
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 
@@ -9,6 +10,9 @@ import {
   MONTH,
   DAY,
   MIDDLE_DATEPICKER_CLASS,
+  FOCUS_CELL_CLASS,
+  RANGE_FROM_CELL_CLASS,
+  RANGE_TO_CELL_CLASS,
 } from './constants';
 
 class DatepickerFacade {
@@ -41,6 +45,7 @@ class DatepickerFacade {
       moveToOtherMonthsOnSelect: false,
       classes: this.setClasses(),
     };
+
     if (this.datepicker.dataset.dateFrom && this.datepicker.dataset.dateTo) {
       this.setSelectedDates();
     }
@@ -81,11 +86,27 @@ class DatepickerFacade {
   }
 
   setRangeParams() {
-    this.params.onSelect = ({ formattedDate }) => {
-      const [from, to] = formattedDate;
-      this.$dateFrom.val(from);
-      this.$dateTo.val(to);
+    this.params.onSelect = params => {
+      this.handleRangeDatepickerSelect(params);
+      const isDateSelected = params.datepicker.selectedDates.length > 0;
+      if (isDateSelected) {
+        this.fixSingleDateAppearance(params);
+      }
     };
+  }
+
+  fixSingleDateAppearance({ date }) {
+    const [from] = date;
+    const year = from.getFullYear();
+    const month = from.getMonth();
+    const day = from.getDate();
+    const selector = `.air-datepicker-cell[data-year=${year}][data-month=${month}][data-date=${day}]`;
+    const $selectedCell = $(selector, this.datepicker.$datepicker);
+
+    if ($selectedCell.hasClass(FOCUS_CELL_CLASS)) {
+      $selectedCell.addClass(RANGE_FROM_CELL_CLASS);
+      $selectedCell.addClass(RANGE_TO_CELL_CLASS);
+    }
   }
 
   isFilterDate() {
@@ -93,14 +114,28 @@ class DatepickerFacade {
   }
 
   setFilterParams() {
-    this.params.onSelect = ({ formattedDate }) => {
-      const [from, to] = formattedDate;
-      if (from && to) {
-        this.$dateFrom.val(`${from} - ${to}`);
-      } else {
-        this.$dateFrom.val(`Выберите дату`);
+    this.params.onSelect = params => {
+      this.handleFilterDatepickerSelect(params);
+      const isDateSelected = params.datepicker.selectedDates.length > 0;
+      if (isDateSelected) {
+        this.fixSingleDateAppearance(params);
       }
     };
+  }
+
+  handleFilterDatepickerSelect({ formattedDate }) {
+    const [from, to] = formattedDate;
+    if (from && to) {
+      this.$dateFrom.val(`${from} - ${to}`);
+    } else {
+      this.$dateFrom.val(`Выберите дату`);
+    }
+  }
+
+  handleRangeDatepickerSelect({ formattedDate }) {
+    const [from, to] = formattedDate;
+    this.$dateFrom.val(from);
+    this.$dateTo.val(to);
   }
 
   createButtons() {
