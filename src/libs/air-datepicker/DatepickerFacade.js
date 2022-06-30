@@ -1,6 +1,6 @@
-import { boundMethod } from 'autobind-decorator';
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
+import { boundMethod } from 'autobind-decorator';
 
 import {
   APPLY_BUTTON_CLASS,
@@ -43,16 +43,12 @@ class DatepickerFacade {
       dateFormat: this.isFilterDate() ? 'd MMM' : 'dd.MM.yyyy',
       autoClose: false,
       moveToOtherMonthsOnSelect: false,
+      onSelect: this.handleCellSelect,
       classes: this.setClasses(),
     };
 
     if (this.datepicker.dataset.dateFrom && this.datepicker.dataset.dateTo) {
       this.setSelectedDates();
-    }
-
-    this.setRangeParams();
-    if (this.isFilterDate()) {
-      this.setFilterParams();
     }
   }
 
@@ -85,42 +81,8 @@ class DatepickerFacade {
     this.params.selectedDates = [dateFrom, dateTo];
   }
 
-  setRangeParams() {
-    this.params.onSelect = params => {
-      this.handleRangeDatepickerSelect(params);
-      const isDateSelected = params.datepicker.selectedDates.length > 0;
-      if (isDateSelected) {
-        this.fixSingleDateAppearance(params);
-      }
-    };
-  }
-
-  fixSingleDateAppearance({ date }) {
-    const [from] = date;
-    const year = from.getFullYear();
-    const month = from.getMonth();
-    const day = from.getDate();
-    const selector = `.air-datepicker-cell[data-year=${year}][data-month=${month}][data-date=${day}]`;
-    const $selectedCell = $(selector, this.datepicker.$datepicker);
-
-    if ($selectedCell.hasClass(FOCUS_CELL_CLASS)) {
-      $selectedCell.addClass(RANGE_FROM_CELL_CLASS);
-      $selectedCell.addClass(RANGE_TO_CELL_CLASS);
-    }
-  }
-
   isFilterDate() {
     return !this.$dateTo.length && this.$dateFrom.length;
-  }
-
-  setFilterParams() {
-    this.params.onSelect = params => {
-      this.handleFilterDatepickerSelect(params);
-      const isDateSelected = params.datepicker.selectedDates.length > 0;
-      if (isDateSelected) {
-        this.fixSingleDateAppearance(params);
-      }
-    };
   }
 
   handleFilterDatepickerSelect({ formattedDate }) {
@@ -136,6 +98,39 @@ class DatepickerFacade {
     const [from, to] = formattedDate;
     this.$dateFrom.val(from);
     this.$dateTo.val(to);
+  }
+
+  @boundMethod
+  handleCellSelect({ datepicker, formattedDate }) {
+    if (this.isFilterDate()) {
+      this.handleFilterDatepickerSelect({ formattedDate });
+    } else {
+      this.handleRangeDatepickerSelect({ formattedDate });
+    }
+
+    const [fromDate, toDate] = datepicker.selectedDates;
+    const isFromDateSelected = datepicker.selectedDates.length === 1;
+    const isToDateSelected = datepicker.selectedDates.length === 2;
+
+    if (isFromDateSelected) {
+      this.fixSingleDateAppearance(fromDate);
+    }
+    if (isToDateSelected) {
+      this.fixSingleDateAppearance(toDate);
+    }
+  }
+
+  fixSingleDateAppearance(date) {
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const day = date.getDate();
+    const selector = `.air-datepicker-cell[data-year=${year}][data-month=${month}][data-date=${day}]`;
+    const $selectedCell = $(selector, this.datepicker.$datepicker);
+
+    if ($selectedCell.hasClass(FOCUS_CELL_CLASS)) {
+      $selectedCell.addClass(RANGE_FROM_CELL_CLASS);
+      $selectedCell.addClass(RANGE_TO_CELL_CLASS);
+    }
   }
 
   createButtons() {
