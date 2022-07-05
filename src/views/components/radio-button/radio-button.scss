@@ -23,7 +23,7 @@
   }
 
   &__circle {
-    @include size(12px);
+    @include size(13px);
     @include main-gradient-to-bottom;
     border-radius: 50%;
     position: absolute;

@@ -1,6 +1,6 @@
 .toggle {
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
 
   &__input {
     appearance: none;
@@ -38,8 +38,6 @@
   }
 
   &__title {
-    display: flex;
-    align-items: center;
     font-size: $main-font-size;
     color: $dark-shade-75;
   }

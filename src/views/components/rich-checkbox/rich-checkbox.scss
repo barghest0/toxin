@@ -1,11 +1,12 @@
 .rich-checkbox {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
 
   &__input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
   }
 
@@ -25,13 +26,13 @@
   &__title {
     color: $dark-shade-75;
     font-weight: bold;
-    margin-bottom: 5px;
     line-height: $second-line-height;
   }
 
-  &__subtitle {
+  &__description {
     font-size: 12px;
     line-height: $second-line-height;
     color: $dark-shade-50;
+    padding-left: 30px;
   }
 }

@@ -1,9 +1,9 @@
 mixin checkbox({ text = '', state = '', name = '' } = {})
-  label.checkbox
-    input.checkbox__input(
-      type="checkbox",
-      name=name,
-      checked=state || false
-    )
-    span.checkbox__custom-input
-    .checkbox__title= text
+    label.checkbox
+      input.checkbox__input(
+        type="checkbox",
+        name=name,
+        checked=state || false
+      )
+      span.checkbox__custom-input
+      span.checkbox__title= text

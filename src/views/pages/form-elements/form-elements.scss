@@ -104,7 +104,7 @@
     margin-bottom: 46px;
 
     &-column {
-      display: flex;
+      display: inline-flex;
       flex-direction: column;
       row-gap: 17px;
     }
