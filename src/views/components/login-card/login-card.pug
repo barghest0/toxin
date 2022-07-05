@@ -8,15 +8,15 @@ mixin login-card({ title = 'Войти' } = {})
       .login-card__block 
         .login-card__block-field 
           +default-text-field({
-            placeholder:'Email',
-            type:'email',
-            name:'email'
+            placeholder: 'Email',
+            type: 'email',
+            name: 'email'
           })
         .login-card__block-field 
           +default-text-field({
-            placeholder:'Пароль',
-            type:'password',
-            name:'password'
+            placeholder: 'Пароль',
+            type: 'password',
+            name: 'password'
           })
       .login-card__button
         +button({ text: 'Войти', theme: 'arrowed' })
