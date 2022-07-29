@@ -10,7 +10,11 @@
     "lint": "eslint \"src/**/*.js\"",
     "deploy": "gh-pages -d dist"
   },
-  "browserslist": ["> 1%", "last 4 version", "IE 10"],
+  "browserslist": [
+    "> 1%",
+    "last 4 version",
+    "IE 10"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/barghest0/MetaLampLayoutPratice.git"
@@ -22,22 +26,18 @@
     "url": "https://github.com/barghest0/MetaLampLayoutPratice/issues"
   },
   "homepage": "https://github.com/barghest0/MetaLampLayoutPratice#readme",
-
   "dependencies": {
     "@babel/core": "^7.17.9",
     "@babel/plugin-proposal-decorators": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "@webdiscus/pug-loader": "^2.5.0",
-    "babel-loader": "^8.2.4",
-    "css-loader": "^6.7.1",
-    "postcss-loader": "^6.2.1",
-    "resolve-url-loader": "^5.0.0",
-    "sass-loader": "^12.6.0",
     "air-datepicker": "^3.1.1",
     "autobind-decorator": "^2.4.0",
     "autoprefixer": "^10.4.4",
+    "babel-loader": "^8.2.4",
     "chart.js": "^3.7.1",
     "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.7.1",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^5.1.7",
     "html-webpack-plugin": "^5.5.0",
@@ -45,26 +45,28 @@
     "jquery.maskedinput": "^1.4.1",
     "mini-css-extract-plugin": "^2.6.0",
     "paginationjs": "^2.1.5",
+    "postcss-loader": "^6.2.1",
+    "pug-walk": "^2.0.0",
+    "resolve-url-loader": "^5.0.0",
     "sass": "^1.50.0",
+    "sass-loader": "^12.6.0",
     "swiper": "^8.1.0",
     "terser-webpack-plugin": "^5.3.1",
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2",
     "webpack-merge": "^5.8.0"
   },
-
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "babel-eslint": "^10.1.0",
+    "@babel/eslint-parser": "^7.18.9",
+    "eslint": "^8.20.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-alias": "^1.1.2",
-    "eslint-plugin-fsd": "^1.0.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-pug": "^1.2.4",
-    "webpack-dev-server": "^4.8.1",
     "gh-pages": "^3.2.3",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "webpack-dev-server": "^4.8.1"
   }
 }

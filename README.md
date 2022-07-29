@@ -14,7 +14,7 @@
 - Swiper - 7.2.0
 - Paginationjs - 2.1.5
 - Jquery.maskedinput - 1.4.1
-- Eslint(air-bnb, fsd) - 7.32.0
+- Eslint(air-bnb) - 8.20.0
 - [Slider-plugin](https://github.com/barghest0/slider-plugin)
 
 ## Команды
